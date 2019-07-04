@@ -24,7 +24,7 @@ app.use(bodyParser.json())
 
 app.use(express.static(path.join(__dirname + '/public')));
 
-//app.use('/api/', indexRouter)
+app.use('/api/', indexRouter)
 
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname + '/src/public', 'index.html'))
