@@ -3,7 +3,7 @@ const express = require("express")
 const Router = express.Router()
 
 // Import Models
-const Allowance = require("../models").StaticAllowance
+const Allowance = require("../../db/models/").StaticAllowance
 
 var Sequelize = require('sequelize');
 const Op = Sequelize.Op
