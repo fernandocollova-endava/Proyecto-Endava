@@ -3,13 +3,21 @@ const express = require("express")
 const Router = express.Router()
 
 // Import Models
-const Allowance = require("../models").StaticAllowance
+const Allowance = require("../../db/models").StaticAllowance
+const Employee = require("../../db/models").Employee
 
-var Sequelize = require('sequelize');
+// Import Sequilize
+const Sequelize = require('sequelize');
 const Op = Sequelize.Op
 
-Router.get('/',(req, res)=>{
-    res.send('OK - Allowance')
+Router.post('/', (req, res) => {
+    Allowance.findAll({
+        include: [{
+            model: Employee,
+            as: 'employee'
+        }]
+    })
+        .then((data) => res.json(data))
 })
 
 module.exports = Router
