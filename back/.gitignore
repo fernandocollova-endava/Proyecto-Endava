@@ -11,6 +11,12 @@
 # production
 /build
 
+# Bundle
+/src/public/bundle.js
+/src/public/bundle.js.map
+
+
+
 # misc
 .DS_Store
 .env.local
