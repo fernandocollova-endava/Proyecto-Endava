@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router
-const Employee = require("../../db/models/");
+//const Employee = require("../../db/models/");
 var passport = require("../../config/passport");
 
 router.post('/login', passport.authenticate("local"), function(req, res, next) {
