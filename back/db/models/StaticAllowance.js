@@ -1,5 +1,5 @@
-const sequelize = require ("sequelize");
-const db  = require ("../../db")
+const Sequelize = require ("sequelize");
+const db  = require ("../index")
 
 const StaticAllowance = db.define("staticAllowance",{
 
@@ -20,7 +20,7 @@ const StaticAllowance = db.define("staticAllowance",{
         allowNull: false,
     },
     datePayment:{
-        type: sequelize.DATE,
+        type: Sequelize.DATE,
         allowNull:false
     },
 })

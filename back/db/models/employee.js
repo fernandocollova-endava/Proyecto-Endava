@@ -1,5 +1,6 @@
-const sequelize = require ("sequelize");
-const db  = require ("../../db")
+const Sequelize = require ("sequelize");
+const db  = require ("../index")
+
 const crypto = require('crypto');
 
 const Employee = db.define("employee",{
@@ -11,7 +12,7 @@ const Employee = db.define("employee",{
         },
     },
     surname:{
-        type:sequelize.STRING,
+        type:Sequelize.STRING,
         allowNull:false
     },
     email: {
@@ -22,7 +23,7 @@ const Employee = db.define("employee",{
         unique: true
     },
     sector:{
-        type:sequelize.STRING,
+        type:Sequelize.STRING,
         allowNull:false
     }, 
     isAdmin: {
