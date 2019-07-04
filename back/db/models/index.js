@@ -1,5 +1,5 @@
 const Employee = require('./employee')
-const {StaticAllowance, EmployeeAllowence} = require('./StaticAllowance')
+const { StaticAllowance, EmployeeAllowence } = require('./StaticAllowance')
 
 
 // Relación Static - Employee ( Children, Course, Gym )
