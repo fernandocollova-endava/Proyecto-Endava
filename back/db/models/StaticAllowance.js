@@ -8,16 +8,14 @@ const StaticAllowance = db.define("staticAllowance",{
             notEmpty: true,
         },
     },
-    observation:{
-        type: Sequelize.STRING,
-        validate: {
-            notEmpty: true,
-        },
-    },
     fixedAmount:{
         type: Sequelize.INTEGER,
         allowNull: false,
     },
+    limitDay:{
+        type: Sequelize.INTEGER,
+        allowNull: false,
+    }
 })
 
 const EmployeeAllowence = db.define("EmployeeAllowence",{
@@ -29,11 +27,30 @@ const EmployeeAllowence = db.define("EmployeeAllowence",{
         type: Sequelize.INTEGER,
         allowNull: false,
     },
-    datePayment:{
-        type: Sequelize.DATE,
+    paymentDate:{
+        type: Sequelize.DATEONLY,
         allowNull:false
     },
+    observation:{
+        type: Sequelize.STRING,
+        validate: {
+            notEmpty: true,
+        },
+    },
+    receiptPath:{
+        type: Sequelize.STRING,
+        validate: {
+            notEmpty: true,
+        },
+    },
+    status:{
+        type: Sequelize.STRING,
+        validate: {
+            notEmpty: true,
+        },
+    },
 })
+
 
 module.exports= {
     StaticAllowance,
