@@ -3,6 +3,7 @@ const Router = express.Router();
 
 //ROUTER API'S
 Router.use('/allowance', require('./allowance'))
+Router.use('/prueba', require('./borrar'))
 //Router.use('/allowance', require('./allowance'))
 
 

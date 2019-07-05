@@ -8,7 +8,7 @@ Employee.create({
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
-    salt: 'lkjljasda'
+    //salt: 'lkjljasda'
 })
 Employee.create({
     name: 'Lucas',
@@ -17,7 +17,7 @@ Employee.create({
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
-    salt: 'lkjljasda'
+    //salt: 'lkjljasda'
 })
 Employee.create({
     name: 'Sebastian',
@@ -26,7 +26,7 @@ Employee.create({
     sector: 'front',
     "isAdmin": false,
     password: '123',
-    salt: 'lkjljasda'
+    //salt: 'lkjljasda'
 })
 Employee.create({
     name: 'Alejandro',
@@ -35,23 +35,22 @@ Employee.create({
     sector: 'backend',
     "isAdmin": false,
     password: '123',
-    salt: 'lkjljasda'
+    //salt: 'lkjljasda'
 })
-
 
 
 Allowance.create({
     name: 'Gym Allowance',
-    observation: 'Se envia comprobante adjunto',
+    limitDay: 15,
     fixedAmount: 800
 })
 Allowance.create({
     name: 'Course Allowance',
-    observation: 'Se envia comprobante adjunto',
+    limitDay: 15,
     fixedAmount: 10000
 })
 Allowance.create({
     name: 'Child care Allowance',
-    observation: 'Se envia comprobante adjunto',
+    limitDay: 15,
     fixedAmount: 800
 })
