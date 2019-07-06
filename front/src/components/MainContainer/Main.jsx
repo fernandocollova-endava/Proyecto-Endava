@@ -20,7 +20,7 @@ class MainContainer extends React.Component {
       <div>
         <Switch>
           <Route path="/allowance/:name" component={AllowanceContainer}/>} />
-          {/* <Route exact path="/" component={Home}/> */}
+          <Route exact path="/" component={Home}/>
 
           {/* <Route path="/" component={NoFound} /> */}
         </Switch>

@@ -5,7 +5,13 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import Main from "./components/MainContainer/Main";
-///comentemos todo lo que quieran quiero ver si funciona el merge jajaja
+
+
+//Config MDB
+
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
 
 ReactDOM.render(
   <Provider store={store}>

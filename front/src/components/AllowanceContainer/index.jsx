@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { createAllowance } from '../../redux/actions/allowanceActions'
 
+
 class AllowanceContainer extends React.Component {
     constructor(props) {
         super(props);
