@@ -27932,7 +27932,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33130,6 +33130,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -33164,9 +33168,10 @@ function (_React$Component) {
     _this.state = {
       file: null,
       userid: 1,
-      allowanceId: 1,
+      allowanceId: 3,
       employeeAmount: 400,
-      observation: 'lucas'
+      observation: 'lucas',
+      active: ''
     };
     _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
     _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
@@ -33176,20 +33181,32 @@ function (_React$Component) {
   _createClass(ReactUploadImage, [{
     key: "onFormSubmit",
     value: function onFormSubmit(e) {
+      var _this2 = this;
+
       e.preventDefault();
+
+      var _this$state = this.state,
+          file = _this$state.file,
+          rest = _objectWithoutProperties(_this$state, ["file"]);
+
       var formData = new FormData();
-      formData.append('file', this.state.file);
+      formData.append('file', file);
       formData.append('userid', this.state.userid);
       formData.append('allowanceId', this.state.allowanceId);
       formData.append('employeeAmount', this.state.employeeAmount);
-      formData.append('observation', this.state.observation); //const formData = this.state;
-
-      var config = {
+      formData.append('observation', this.state.observation);
+      axios({
+        method: 'POST',
+        data: formData,
+        url: "/api/allowance",
         headers: {
           'content-type': 'multipart/form-data'
         }
-      };
-      axios.post("/api/allowance", formData, config).then(function (response) {
+      }).then(function (response) {
+        _this2.setState({
+          active: response.data
+        });
+
         alert("Se cargo piolasaa");
       })["catch"](function (error) {});
     }
@@ -33227,7 +33244,15 @@ function (_React$Component) {
         onChange: this.onChange
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit"
-      }, "Enviar"));
+      }, "Enviar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.active.split('.')[1] !== 'pdf' && this.state.active.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/assets/receipt/".concat(this.state.active),
+        width: "500px"
+      })), this.state.active.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
+        src: "/assets/receipt/".concat(this.state.active),
+        width: "500",
+        height: "375",
+        type: "application/pdf"
+      }));
     }
   }]);
 

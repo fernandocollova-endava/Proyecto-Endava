@@ -15,12 +15,7 @@ const Op = Sequelize.Op
 
 // Insert static allowance
     Router.post('/', MulterFn.single("file"), (req, res) => {
-        console.log(req.body.userid) // ID Usuario
-        console.log(req.body.allowanceId) // ID Beneficio
-        console.log(req.body.employeeAmount) // Monto que ingreso el usuario
-        console.log(req.body.observation) // Observación del usuario
-        console.log(req.file) // Recibo toda la info del file (By Multer)
-    
+
     // Obtengo el nombre del archivo
     const fileName = req.file.filename; 
 
@@ -52,11 +47,12 @@ const Op = Sequelize.Op
                             receiptPath: fileName,
                             status:'pendiente'
                         }
-                    })
-                    
+                    })   
                 })
+
         })
-        .then(res => res.json(res))
+        .then(() => {
+            res.json(fileName)})
         .catch(err => res.json(err))
 })
 
