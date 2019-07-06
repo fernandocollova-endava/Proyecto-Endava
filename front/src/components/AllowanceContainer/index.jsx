@@ -1,6 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { createAllowance } from '../../redux/actions/allowanceActions'
+import '../../../../back/src/public/styles/app.css';
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
 
 class AllowanceContainer extends React.Component {
     constructor(props) {
