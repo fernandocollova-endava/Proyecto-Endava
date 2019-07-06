@@ -21,7 +21,7 @@ const Op = Sequelize.Op
 
     Allowance.findOne({
         where: {
-            id: req.body.allowanceId
+            name: (req.body.allowanceName).toLowerCase()
         }
     })
         .then((instanceAllowance) => {
@@ -49,9 +49,9 @@ const Op = Sequelize.Op
                         }
                     })   
                 })
-
         })
         .then(() => {
+            // Responde el nombre del archivo..
             res.json(fileName)})
         .catch(err => res.json(err))
 })

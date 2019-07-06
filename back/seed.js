@@ -40,17 +40,17 @@ Employee.create({
 
 
 Allowance.create({
-    name: 'Gym Allowance',
+    name: 'gym',
     limitDay: 15,
     fixedAmount: 800
 })
 Allowance.create({
-    name: 'Course Allowance',
+    name: 'trainning',
     limitDay: 15,
     fixedAmount: 10000
 })
 Allowance.create({
-    name: 'Child care Allowance',
+    name: 'child-care',
     limitDay: 15,
     fixedAmount: 800
 })

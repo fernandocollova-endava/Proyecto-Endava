@@ -27932,7 +27932,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33117,10 +33117,10 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
-/***/ "./src/components/MainContainer/Main.jsx":
-/*!***********************************************!*\
-  !*** ./src/components/MainContainer/Main.jsx ***!
-  \***********************************************/
+/***/ "./src/components/AllowanceContainer/index.jsx":
+/*!*****************************************************!*\
+  !*** ./src/components/AllowanceContainer/index.jsx ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -33128,6 +33128,8 @@ module.exports = function(originalModule) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -33152,23 +33154,21 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
-var ReactUploadImage =
+
+var AllowanceContainer =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(ReactUploadImage, _React$Component);
+  _inherits(AllowanceContainer, _React$Component);
 
-  function ReactUploadImage(props) {
+  function AllowanceContainer(props) {
     var _this;
 
-    _classCallCheck(this, ReactUploadImage);
+    _classCallCheck(this, AllowanceContainer);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ReactUploadImage).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(AllowanceContainer).call(this, props));
     _this.state = {
       file: null,
-      userid: 1,
-      allowanceId: 3,
       employeeAmount: 400,
       observation: 'lucas',
       active: ''
@@ -33178,7 +33178,7 @@ function (_React$Component) {
     return _this;
   }
 
-  _createClass(ReactUploadImage, [{
+  _createClass(AllowanceContainer, [{
     key: "onFormSubmit",
     value: function onFormSubmit(e) {
       var _this2 = this;
@@ -33191,24 +33191,18 @@ function (_React$Component) {
 
       var formData = new FormData();
       formData.append('file', file);
-      formData.append('userid', this.state.userid);
-      formData.append('allowanceId', this.state.allowanceId);
+      formData.append('userid', 3);
+      formData.append('allowanceName', this.props.nameUrl);
       formData.append('employeeAmount', this.state.employeeAmount);
       formData.append('observation', this.state.observation);
-      axios({
-        method: 'POST',
-        data: formData,
-        url: "/api/allowance",
-        headers: {
-          'content-type': 'multipart/form-data'
-        }
-      }).then(function (response) {
+      this.props.createAllowance(formData).then(function (response) {
         _this2.setState({
           active: response.data
         });
 
         alert("Se cargo piolasaa");
-      })["catch"](function (error) {});
+      })["catch"](function (error) {//mensaje de error
+      });
     }
   }, {
     key: "onChange",
@@ -33222,15 +33216,7 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.onFormSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "File Upload ok"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        name: "userid",
-        placeholder: "Usuario id.."
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        name: "allowanceId",
-        placeholder: "Beneficio id.."
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Formulario Reload"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "employeeAmount",
         placeholder: "Monto Beneficio.."
@@ -33256,10 +33242,129 @@ function (_React$Component) {
     }
   }]);
 
-  return ReactUploadImage;
+  return AllowanceContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (ReactUploadImage);
+var mapStateToProps = function mapStateToProps(state, owner) {
+  return {
+    nameUrl: owner.match.params.name // Extrae la url dinamica
+
+  };
+};
+
+var MapDispatchToProps = function MapDispatchToProps(dispatch) {
+  return {
+    createAllowance: function createAllowance(data) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["createAllowance"])(data));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AllowanceContainer));
+
+/***/ }),
+
+/***/ "./src/components/HomeContainer/index.jsx":
+/*!************************************************!*\
+  !*** ./src/components/HomeContainer/index.jsx ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./src/components/MainContainer/Main.jsx":
+/*!***********************************************!*\
+  !*** ./src/components/MainContainer/Main.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../AllowanceContainer/index */ "./src/components/AllowanceContainer/index.jsx");
+/* harmony import */ var _HomeContainer_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../HomeContainer/index */ "./src/components/HomeContainer/index.jsx");
+/* harmony import */ var _HomeContainer_index__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_HomeContainer_index__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../NoFound/index */ "./src/components/NoFound/index.jsx");
+/* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_NoFound_index__WEBPACK_IMPORTED_MODULE_5__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+ // Components
+
+
+
+ // Actions Create
+//import { fetchLoggedUser, logout } from "../../redux/actions/user"
+
+var MainContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(MainContainer, _React$Component);
+
+  function MainContainer() {
+    _classCallCheck(this, MainContainer);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(MainContainer).apply(this, arguments));
+  }
+
+  _createClass(MainContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {// this.props.fetchLoggedUser()
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/allowance/:name",
+        component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_3__["default"]
+      }), "} />"));
+    }
+  }]);
+
+  return MainContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {//fetchLoggedUser: () => dispatch(fetchLoggedUser()),
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(null, mapDispatchToProps)(MainContainer));
+
+/***/ }),
+
+/***/ "./src/components/NoFound/index.jsx":
+/*!******************************************!*\
+  !*** ./src/components/NoFound/index.jsx ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -33294,6 +33399,35 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
   path: "/",
   component: _components_MainContainer_Main__WEBPACK_IMPORTED_MODULE_5__["default"]
 }))), document.getElementById("app"));
+
+/***/ }),
+
+/***/ "./src/redux/actions/allowanceActions.js":
+/*!***********************************************!*\
+  !*** ./src/redux/actions/allowanceActions.js ***!
+  \***********************************************/
+/*! exports provided: createAllowance */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createAllowance", function() { return createAllowance; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+ //import { ADD_ALLOWANCE_TO_DB } from '../../constants';
+
+var createAllowance = function createAllowance(formData) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default()({
+      method: 'POST',
+      data: formData,
+      url: "/api/allowance",
+      headers: {
+        'content-type': 'multipart/form-data'
+      }
+    });
+  };
+};
 
 /***/ }),
 
