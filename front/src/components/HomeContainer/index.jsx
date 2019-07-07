@@ -1,49 +1,74 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBIcon } from 'mdbreact';
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardBody,
+  MDBModalFooter,
+  MDBIcon,
+  MDBCardHeader,
+  MDBBtn,
+  MDBInput
+} from "mdbreact";
+import AnimationPage from './employee'
+import NavbarPage from "./homeAdmin";
+ 
 
 const Home = () => {
   return (
     <MDBContainer>
+      <NavbarPage />
       <MDBRow>
         <MDBCol md="6">
           <MDBCard>
             <MDBCardBody>
+              <MDBCardHeader className="form-header deep-blue-gradient rounded">
+                <h3 className="my-3">
+                  <MDBIcon icon="lock" /> Login:
+                </h3>
+              </MDBCardHeader>
               <form>
-                <p className="h4 text-center py-4">Subscribe</p>
-                <label
-                  htmlFor="defaultFormCardNameEx"
-                  className="grey-text font-weight-light"
-                >
-                  Your name
-                </label>
-                <input
-                  type="text"
-                  id="defaultFormCardNameEx"
-                  className="form-control"
-                />
-                <br />
-                <label
-                  htmlFor="defaultFormCardEmailEx"
-                  className="grey-text font-weight-light"
-                >
-                  Your email
-                </label>
-                <input
-                  type="email"
-                  id="defaultFormCardEmailEx"
-                  className="form-control"
-                />
-                <div className="text-center py-4 mt-3">
-                  <MDBBtn className="btn btn-outline-purple" type="submit">
-                    Send
-                    <MDBIcon far icon="paper-plane" className="ml-2" />
-                  </MDBBtn>
+                <div className="grey-text">
+                  <MDBInput
+                    label="Type your email"
+                    icon="envelope"
+                    group
+                    type="email"
+                    validate
+                    error="wrong"
+                    success="right"
+                  />
+                  <MDBInput
+                    label="Type your password"
+                    icon="lock"
+                    group
+                    type="password"
+                    validate
+                  />
                 </div>
+
+              <div className="text-center mt-4">
+                <MDBBtn
+                  color="light-blue"
+                  className="mb-3"
+                  type="submit"
+                >
+                  Login
+                </MDBBtn>
+              </div>
               </form>
+              <MDBModalFooter>
+                <div className="font-weight-light">
+                  <p>Not a member? Sign Up</p>
+                  <p>Forgot Password?</p>
+                </div>
+              </MDBModalFooter>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
       </MDBRow>
+      <AnimationPage />
     </MDBContainer>
   );
 };
