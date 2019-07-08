@@ -146,6 +146,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "../back/src/public/styles/smartphone.css":
+/*!************************************************!*\
+  !*** ../back/src/public/styles/smartphone.css ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./smartphone.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
@@ -2453,7 +2483,7 @@ module.exports = exports['default'];
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    font-family: robotobold, Arial,sans-serif;\n}", ""]);
+exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n}\n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n.imageLogin {\n    background-image: url('https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx');\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n/* .colorOrange{\n    background-color: #de4121;\n    margin: 0;\n} */", ""]);
 
 
 /***/ }),
@@ -2468,6 +2498,20 @@ exports.push([module.i, "/* Ajustes CSS */\nbody {\n    font-family: robotobold,
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
 exports.push([module.i, "/* https://careers.endava.com/Design/styles/webfonts/ */\n@font-face{\n    font-family:robotobold;\n    src:url('/assets/styles/webfonts/roboto-bold-webfont.eot');\n    src:url('/assets/styles/webfonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.woff2') format('woff2'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.woff') format('woff'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.ttf') format('truetype')    \n}\n\n/* @font-face{font-family:roboto_condensedbold;src:url(webfonts/robotocondensed-bold-webfont.eot);src:url(webfonts/robotocondensed-bold-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/robotocondensed-bold-webfont.woff2) format('woff2'),url(webfonts/robotocondensed-bold-webfont.woff) format('woff'),url(webfonts/robotocondensed-bold-webfont.ttf) format('truetype'),url(webfonts/robotocondensed-bold-webfont.svg#roboto_condensedbold) format('svg');font-weight:700;font-style:normal}@font-face{font-family:robotolight;src:url(webfonts/roboto-light-webfont.eot);src:url(webfonts/roboto-light-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-light-webfont.woff2) format('woff2'),url(webfonts/roboto-light-webfont.woff) format('woff'),url(webfonts/roboto-light-webfont.ttf) format('truetype'),url(webfonts/roboto-light-webfont.svg#robotolight) format('svg');font-weight:400;font-style:normal}@font-face{font-family:robotomedium;src:url(webfonts/roboto-medium-webfont.eot);src:url(webfonts/roboto-medium-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-medium-webfont.woff2) format('woff2'),url(webfonts/roboto-medium-webfont.woff) format('woff'),url(webfonts/roboto-medium-webfont.ttf) format('truetype'),url(webfonts/roboto-medium-webfont.svg#robotomedium) format('svg');font-weight:400;font-style:normal}@font-face{font-family:robotoregular;src:url(webfonts/roboto-regular-webfont.eot);src:url(webfonts/roboto-regular-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-regular-webfont.woff2) format('woff2'),url(webfonts/roboto-regular-webfont.woff) format('woff'),url(webfonts/roboto-regular-webfont.ttf) format('truetype'),url(webfonts/roboto-regular-webfont.svg#robotoregular) format('svg');font-weight:400;font-style:normal}@font-face{font-family:robotolight_italic;src:url(webfonts/roboto-lightitalic-webfont.eot);src:url(webfonts/roboto-lightitalic-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-lightitalic-webfont.woff2) format('woff2'),url(webfonts/roboto-lightitalic-webfont.woff) format('woff'),url(webfonts/roboto-lightitalic-webfont.ttf) format('truetype'),url(webfonts/roboto-lightitalic-webfont.svg#robotolight_italic) format('svg');font-weight:400;font-style:normal}@font-face{font-family:fontendava;src:url(iconfonts/fontendava.eot?y6id76);src:url(iconfonts/fontendava.eot?y6id76#iefix) format('embedded-opentype'),url(iconfonts/fontendava.ttf?y6id76) format('truetype'),url(iconfonts/fontendava.woff?y6id76) format('woff'),url(iconfonts/fontendava.svg?y6id76#fontendava) format('svg');font-weight:400;font-style:normal}[class*=\" fe_\"],[class^=fe_]{font-family:fontendava!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale} */\n", ""]);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    \n}", ""]);
 
 
 /***/ }),
@@ -47822,90 +47866,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AnimationPage = function AnimationPage() {
-  var count = 0;
-
-  var increment = function increment() {
-    count++;
-
-    if (count < 6 || count % 5 === 0) {// console.log(`The MDB logo bounced ${count} times.`);
-    }
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
-    className: "mt-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+    className: "container-banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "flipInY"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/02_MeetEndava_480x500.ashx",
-    className: "img-fluid",
+    className: "img-fluid margenBottomMobile",
     alt: "Imagen endava"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "ENDAVA STORY"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world\u2019s largest banks and payments companies. Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe. Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "mb-4",
-    style: {
-      marginTop: "1vh"
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "bounceInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "A view on mountains.",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(31).jpg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "tada"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "Cottage on a lake surrounded by mountains.",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(32).jpg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "fadeInLeft"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "A boat floating on an ocean",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "mb-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "fadeInRight"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "View on mountains from mountain top.",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "fadeInRight"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "Rocky shore in the morning.",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "fadeInUp",
-    onAnimationEnd: function onAnimationEnd() {
-      return console.log("The last picture has been revealed");
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "Rocky shore in the morning.",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-  })))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Welcome to the allowence empleyee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInDown"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world\u2019s largest banks and payments companies. Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe. Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate.")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AnimationPage);
@@ -48074,10 +48049,12 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_login__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "imageLogin"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_login__WEBPACK_IMPORTED_MODULE_2__["default"], {
         handleChange: this.handleChange,
         handleSubmit: this.handleSubmit
-      });
+      }));
     }
   }]);
 
@@ -48115,14 +48092,16 @@ function login(_ref) {
   var handleChange = _ref.handleChange,
       handleSubmit = _ref.handleSubmit;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardHeader"], {
-    className: "form-header deep-blue-gradient rounded"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "my-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "lock"
-  }), " Login:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    md: "7"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "5"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInLeftBig"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], {
+    className: "transparenciaCard"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "h5 text-center mb-4"
+  }, "LOGIN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: handleSubmit
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grey-text"
@@ -48152,7 +48131,7 @@ function login(_ref) {
     type: "submit"
   }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "font-weight-light"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Not a member? Sign Up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Forgot Password?")))))))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Forgot Password?"))))))))));
 }
 ;
 
@@ -48230,17 +48209,11 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !this.props.user.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        component: _NavBarContainer___WEBPACK_IMPORTED_MODULE_10__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "/login",
         component: _LoginContainer__WEBPACK_IMPORTED_MODULE_8__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
-        from: "/",
-        to: "/login"
-      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "main",
-        className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        component: _NavBarContainer___WEBPACK_IMPORTED_MODULE_10__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "/allowance/:name",
         component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -48249,13 +48222,14 @@ function (_React$Component) {
         path: "/allowance/obra-social",
         component: _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__["default"]
       }), "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        path: "/",
-        component: _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/allowance/search",
         component: _AllowancesListContainer__WEBPACK_IMPORTED_MODULE_9__["default"]
-      }))));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/",
+        component: _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__["default"]
+      })));
     }
   }]);
 
@@ -48374,12 +48348,12 @@ function (_Component) {
       var _this3 = this;
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbar"], {
-        color: "amber lighten-4",
-        style: {
-          marginTop: "20px"
-        },
-        light: true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbarBrand"], null, "MDBNavbar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBHamburgerToggler"], {
+        className: "fixed-top"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbarBrand"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "logo",
+        src: "https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx",
+        alt: "Endava"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBHamburgerToggler"], {
         color: "#d3531a",
         id: "hamburger1",
         onClick: function onClick() {
@@ -48590,6 +48564,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../back/src/public/styles/app.css */ "../back/src/public/styles/app.css");
 /* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../back/src/public/styles/smartphone.css */ "../back/src/public/styles/smartphone.css");
+/* harmony import */ var _back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_10__);
 // el inicio de la app
 
 
@@ -48598,6 +48574,7 @@ __webpack_require__.r(__webpack_exports__);
 
  //Config MDB
 //import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 
 

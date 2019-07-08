@@ -1,4 +1,34 @@
 /* Ajustes CSS */
 body {
-    font-family: robotobold, Arial,sans-serif;
+    margin-top: 100px;
 }
+.navbar {
+    box-shadow:none;
+    margin-bottom: 10px;
+    background-color: rgba(250, 250, 250, 0.9);
+}
+.logo {
+    padding-left: 36px;
+    width: 182px;
+}
+.nav-item:hover {
+    background-color: #ececec;
+    /* transition: all 0.05s ease-in-out */
+}
+.container-banner {
+    margin-right: 10px; 
+    margin-left: 10px;   
+}
+.imageLogin {
+    background-image: url('https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx');
+    width: 100%; 
+    height: 100vh;
+    margin-top: -110px;
+}
+.transparenciaCard {
+    background-color: #ffffffcf;
+}
+/* .colorOrange{
+    background-color: #de4121;
+    margin: 0;
+} */

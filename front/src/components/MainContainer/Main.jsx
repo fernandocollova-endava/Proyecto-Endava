@@ -22,22 +22,16 @@ class MainContainer extends React.Component {
     return (
       <div>
           {
-            !this.props.user.id?
-            <div>
-              <Route path="/login" component={LoginContainer}/>
-              <Redirect from="/" to="/login" />
-            </div>:
-            <div id="main" className="container">
-              <Switch>
+            //(!(this.props.user.id)) && <Redirect to="/login" />
+          }
               <Route component = {NavbarContainer}/>
+              <Switch>
+              <Route path="/login" component={LoginContainer}/>
               <Route path="/allowance/:name" component={AllowanceContainer}/>
               <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
-              <Route path="/" component={Home}/>
               <Route exact path="/allowance/search" component={AllowancesListContainer}/>
-              </Switch>
-            </div>
-                         
-              }
+              <Route exact path="/" component={Home}/>
+              </Switch>                         
       </div>
     )
   }

@@ -45,8 +45,11 @@ class Navbar extends Component {
 
   render() {
     return (
-        <MDBNavbar color="amber lighten-4" style={{ marginTop: "20px" }} light>
-            <MDBNavbarBrand>MDBNavbar</MDBNavbarBrand>
+        <MDBNavbar className="fixed-top">
+            <MDBNavbarBrand>
+            <img className="logo" src="https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx"
+               alt="Endava" />
+            </MDBNavbarBrand>
             <MDBHamburgerToggler
               color="#d3531a"
               id="hamburger1"
