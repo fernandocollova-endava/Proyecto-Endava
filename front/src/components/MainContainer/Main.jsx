@@ -6,6 +6,8 @@ import { connect } from "react-redux";
 import AllowanceContainer from '../AllowanceContainer/index'
 import Home from '../HomeContainer/index'
 import NoFound from '../NoFound/index'  
+import LoginContainer from "../LoginContainer";
+
 
 // Actions Create
 //import { fetchLoggedUser, logout } from "../../redux/actions/user"
@@ -18,8 +20,10 @@ class MainContainer extends React.Component {
   render() {
     return (
       <div>
+        
         <Switch>
           <Route path="/allowance/:name" component={AllowanceContainer}/>} />
+          <Route exact path="/login" component={LoginContainer}/>
           <Route exact path="/" component={Home}/>
 
           {/* <Route path="/" component={NoFound} /> */}

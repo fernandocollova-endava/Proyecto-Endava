@@ -1,28 +1,30 @@
 const express = require('express');
 const app = express();
-
 const bodyParser = require('body-parser')
 const path = require('path');
-
-const db = require('./db/index')
+const db = require('./db/models/index').db
 const indexRouter = require('./src/routes/index')
+const cookieParser = require('cookie-parser');
+const session = require("express-session");
+const passport = require("./config/passport");
 
-// const cookieParser = require('cookie-parser');
-// const session = require("express-session");
-
-// Requiring passport as we've configured it
-// const passport = require("./config/passport");
-
-// // SESSION
-// app.use(session({ secret: "amaSon" }));
-// app.use(passport.initialize());
-// app.use(passport.session());
-
-// app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json())
+// MIDDLEWARES
 
 app.use('/assets', express.static(path.join(__dirname + '/src/public')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+//Passport middleware
+app.use(session({ secret: "endava", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use((req, res, next) => {
+    app.locals.user = req.user;
+    next()
+})
+
 
 app.use('/api', indexRouter)
 
