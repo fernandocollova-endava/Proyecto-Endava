@@ -4,41 +4,50 @@ import { connect } from "react-redux";
 
 // Components
 import AllowanceContainer from '../AllowanceContainer/index'
+import {fetchLoggedUser} from '../../redux/actions/user'
 import Home from '../HomeContainer/index'
 import NoFound from '../NoFound/index'  
 import LoginContainer from "../LoginContainer";
-
-
-// Actions Create
-//import { fetchLoggedUser, logout } from "../../redux/actions/user"
+import AllowancesListContainer from "../AllowancesListContainer";
+import NavbarContainer from "../NavBarContainer/"
 
 class MainContainer extends React.Component {
   componentDidMount() {
-    // this.props.fetchLoggedUser()
+    this.props.fetchLoggedUser()
   }
 
   render() {
-    return (
+    return ( 
       <div>
-        
-        <Switch>
-          <Route path="/allowance/:name" component={AllowanceContainer}/>} />
-          <Route exact path="/login" component={LoginContainer}/>
-          <Route exact path="/" component={Home}/>
-
-          {/* <Route path="/" component={NoFound} /> */}
-        </Switch>
+          {
+            this.props.user.id?
+            <div id="main" className="container">
+              <Switch>
+              <Route component = {NavbarContainer}/>
+              <Route path="/allowance/:name" component={AllowanceContainer}/>
+              <Route path="/" component={Home}/>
+              <Route exact path="/allowance/search" component={AllowancesListContainer}/>
+              </Switch>
+            </div>:
+               <Route exact path="/login" component={LoginContainer}/>
+              }
       </div>
-    )
-  }
+     
+      )
+    }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    user: state.user.user
+  }
+}
 const mapDispatchToProps = function (dispatch) {
   return {
-    //fetchLoggedUser: () => dispatch(fetchLoggedUser()),
+    fetchLoggedUser: () => dispatch(fetchLoggedUser()),
   };
 };
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(MainContainer);
