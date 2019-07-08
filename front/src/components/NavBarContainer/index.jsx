@@ -9,14 +9,20 @@ import {
   MDBContainer,
   MDBHamburgerToggler
 } from "mdbreact";
+import {connect} from "react-redux"
+import {logout, fetchLoggedUser} from "../../redux/actions/user"
 
-class NavbarPage extends Component {
+class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       collapse1: false,
       collapseID: ""
     };
+    this.handleLogOut = this.handleLogOut.bind(this);
+  }
+  componentDidMount(){
+    this.props.fetchLoggedUser()
   }
  
   toggleCollapse(collapseID) {
@@ -31,10 +37,18 @@ class NavbarPage extends Component {
       [collapseId]: !this.state[collapseId]
     });
   }
+  handleLogOut() {
+    this.props.logout().then(res => {
+      if (res === "logoutOK") this.props.history.push("/login");
+    });
+  }
+
 
   render() {
     return (
+      
       <MDBContainer>
+        {console.log('so el user logueado',this.props.user)}
         <MDBNavbar color="amber lighten-4" style={{ marginTop: "20px" }} light>
           <MDBContainer>
             <MDBNavbarBrand>MDBNavbar</MDBNavbarBrand>
@@ -55,7 +69,10 @@ class NavbarPage extends Component {
                   <MDBNavLink to="#!">Profile</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink to="#!" onClick= {this.props.handleLogOut}>Logout</MDBNavLink>
+                  <MDBNavLink to="/allowance/search">historial de reintegros</MDBNavLink>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink to="#!" onClick= {this.handleLogOut}>Logout</MDBNavLink>
                 </MDBNavItem>
                 {this.props.user.isAdmin == true? 
                 <MDBNavItem>
@@ -71,5 +88,13 @@ class NavbarPage extends Component {
     );
   }
 }
-
-export default NavbarPage;
+const mapStateToProps = function(state) {
+  return {
+    user: state.user.user
+  };
+};
+const mapDispatchToProps = dispatch => ({
+  fetchLoggedUser: ()=> dispatch(fetchLoggedUser()),
+  logout: () => dispatch(logout())
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

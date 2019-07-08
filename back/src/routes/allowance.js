@@ -56,6 +56,17 @@ const Op = Sequelize.Op
         .catch(err => res.json(err))
 })
 
+Router.get("/api/alowance/search/:id", function(req, res){
+    console.log("so el req paramssssssss", req.params.userid )
+    Allowance.findAll({
+        where:{
+            employeeId:req.params.userid
+        }
+    }).then(allowanceList =>{
+        res.send(allowanceList)
+    })
+})
+
 
 function paymentDateFn(date, limitDate) {
     let valDate = (date.getDay() <= limitDate)? 1 : 2;
