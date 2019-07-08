@@ -3,16 +3,18 @@ var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
 //
 //We will need the models folder to check passport agains
-var User = require('../db/models/index').Employee
+var User = require('../db/models').Employee
 
 // In order to help keep authentication state across HTTP requests,
 // Sequelize needs to serialize and deserialize the user
 // Just consider this part boilerplate needed to make it all work
 passport.serializeUser(function(user, done) {
+    
     done(null, user.id);
 });
 //
 passport.deserializeUser(function(id, done) {
+    console.log('eso en el ID en el deserealize', id )
     User.findByPk(id)
         .then(user => {
             done(null, user);
@@ -35,6 +37,7 @@ passport.use(new LocalStrategy(
                 email: email
             }
         }).then(function(dbUser) {
+
             // If there's no user with the given email
             if (!dbUser) {
                 return done(null, false, {

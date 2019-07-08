@@ -1,76 +1,47 @@
 import React from "react";
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBModalFooter,
-  MDBIcon,
-  MDBCardHeader,
-  MDBBtn,
-  MDBInput
-} from "mdbreact";
-import AnimationPage from './employee'
+import AnimationPage from "./employee";
 import NavbarPage from "./homeAdmin";
- 
+import { connect } from "react-redux";
+import { fetchLoggedUser, logout } from "../../redux/actions/user";
 
-const Home = () => {
-  return (
-    <MDBContainer>
-      <NavbarPage />
-      <MDBRow>
-        <MDBCol md="6">
-          <MDBCard>
-            <MDBCardBody>
-              <MDBCardHeader className="form-header deep-blue-gradient rounded">
-                <h3 className="my-3">
-                  <MDBIcon icon="lock" /> Login:
-                </h3>
-              </MDBCardHeader>
-              <form>
-                <div className="grey-text">
-                  <MDBInput
-                    label="Type your email"
-                    icon="envelope"
-                    group
-                    type="email"
-                    validate
-                    error="wrong"
-                    success="right"
-                  />
-                  <MDBInput
-                    label="Type your password"
-                    icon="lock"
-                    group
-                    type="password"
-                    validate
-                  />
-                </div>
+class HomeContainer extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
 
-              <div className="text-center mt-4">
-                <MDBBtn
-                  color="light-blue"
-                  className="mb-3"
-                  type="submit"
-                >
-                  Login
-                </MDBBtn>
-              </div>
-              </form>
-              <MDBModalFooter>
-                <div className="font-weight-light">
-                  <p>Not a member? Sign Up</p>
-                  <p>Forgot Password?</p>
-                </div>
-              </MDBModalFooter>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>
-      <AnimationPage />
-    </MDBContainer>
-  );
+    this.handleLogOut = this.handleLogOut.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.fetchLoggedUser();
+  }
+  handleLogOut() {
+    this.props.logout().then(res => {
+      console.log(res);
+      if (res === "logoutOK") this.props.history.push("/login");
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <NavbarPage handleLogOut={this.handleLogOut} user={this.props.user} />
+        <AnimationPage />
+      </div>
+    );
+  }
+}
+const mapStateToProps = function(state) {
+  return {
+    user: state.user.user
+  };
 };
+const mapDispatchToProps = dispatch => ({
+  fetchLoggedUser: () => dispatch(fetchLoggedUser()),
+  logout: () => dispatch(logout())
+});
 
-export default Home;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HomeContainer);

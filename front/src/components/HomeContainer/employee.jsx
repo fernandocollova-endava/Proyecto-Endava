@@ -9,7 +9,7 @@ const AnimationPage = () =>  {
   const increment = () => {
     count++;
     if (count < 6 || count % 5 === 0) {
-      console.log(`The MDB logo bounced ${count} times.`);
+      // console.log(`The MDB logo bounced ${count} times.`);
     }
   };
 
