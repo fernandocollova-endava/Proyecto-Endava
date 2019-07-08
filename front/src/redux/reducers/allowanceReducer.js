@@ -1,14 +1,14 @@
-//import { RECEIVE_STATUSES,  } from '../../constants'
+import { RECEIVE_ALLOWANCES,  } from '../../constants'
 
 const initialState = {
-    list: [],
+    allowanceList: [],
 };
 
 export default (state = initialState, action) => {
     switch (action.type) {
         
-        // case RECEIVE_SALE:
-        //     return Object.assign({}, state, { selectedSale: action.sale });
+        case RECEIVE_ALLOWANCES:
+        return {...state, allowanceList: [...action.allowanceList] };
 
         default:
             return state;
