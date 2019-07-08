@@ -4,9 +4,11 @@ import { connect } from "react-redux";
 
 // Components
 import AllowanceContainer from '../AllowanceContainer/index'
-import {fetchLoggedUser} from '../../redux/actions/user'
+import { fetchLoggedUser } from '../../redux/actions/user'
 import Home from '../HomeContainer/index'
 import ObraSocialContainer from '../ObraSocialContainer/index'
+import NoFound from '../NoFound/index'
+
 import LoginContainer from "../LoginContainer";
 import AllowancesListContainer from "../AllowancesListContainer";
 import NavbarContainer from "../NavBarContainer/"
@@ -17,31 +19,25 @@ class MainContainer extends React.Component {
   }
 
   render() {
-    return ( 
+    return (
       <div>
           {
-            !this.props.user.id?
-            <div>
-              <Route path="/login" component={LoginContainer}/>
-              <Redirect from="/" to="/login" />
-            </div>:
-            <div id="main" className="container">
-              <Switch>
+            //(!(this.props.user.id)) && <Redirect to="/login" />
+          }
               <Route component = {NavbarContainer}/>
+              <Switch>
+              <Route path="/login" component={LoginContainer}/>
               <Route path="/allowance/:name" component={AllowanceContainer}/>
               <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
-              <Route path="/" component={Home}/>
               <Route exact path="/allowance/search" component={AllowancesListContainer}/>
-              </Switch>
-            </div>
-                         
-              }
+              <Route exact path="/" component={Home}/>
+              </Switch>                         
       </div>
-      )
-    }
+    )
+  }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, owner) => {
   return {
     user: state.user.user
   }

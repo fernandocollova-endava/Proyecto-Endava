@@ -7,8 +7,7 @@ import {
   MDBCard,
   MDBCardBody,
   MDBModalFooter,
-  MDBIcon,
-  MDBCardHeader,
+  MDBAnimation,
   MDBBtn,
   MDBInput
 } from "mdbreact";
@@ -17,16 +16,16 @@ import {
 export default function login({handleChange, handleSubmit}) {
   return (
     <div>
-       <MDBContainer>
+      <MDBContainer>
       <MDBRow>
-        <MDBCol md="6">
-          <MDBCard>
+      <MDBCol md="7">
+      </MDBCol>
+        <MDBCol md="5">
+        <br/>
+        <MDBAnimation type="fadeInLeftBig">
+          <MDBCard className="transparenciaCard">
             <MDBCardBody>
-              <MDBCardHeader className="form-header deep-blue-gradient rounded">
-                <h3 className="my-3">
-                  <MDBIcon icon="lock" /> Login:
-                </h3>
-              </MDBCardHeader>
+            <p className="h5 text-center mb-4">LOGIN</p>
               <form onSubmit= {handleSubmit}>
                 <div className="grey-text">
                   <MDBInput
@@ -64,12 +63,12 @@ export default function login({handleChange, handleSubmit}) {
               </form>
               <MDBModalFooter>
                 <div className="font-weight-light">
-                  <p>Not a member? Sign Up</p>
                   <p>Forgot Password?</p>
                 </div>
               </MDBModalFooter>
             </MDBCardBody>
           </MDBCard>
+          </MDBAnimation>
         </MDBCol>
       </MDBRow>
     </MDBContainer>

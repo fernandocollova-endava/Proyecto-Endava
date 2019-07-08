@@ -1,0 +1,14 @@
+@media screen and (max-device-width : 480px) {
+    .logo {
+        padding-left: 2px;
+        width: 122px;
+    }
+    .container-banner {
+        margin-right: 5px; 
+        margin-left: 5px;   
+    }
+    .margenBottomMobile {
+        margin-bottom: 15px;
+    }
+    
+}
