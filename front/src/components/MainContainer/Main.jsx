@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 // Components
 import AllowanceContainer from '../AllowanceContainer/index'
 import Home from '../HomeContainer/index'
+import ObraSocialContainer from '../ObraSocialContainer/index'
 import NoFound from '../NoFound/index'  
 
 // Actions Create
@@ -19,6 +20,7 @@ class MainContainer extends React.Component {
     return (
       <div>
         <Switch>
+          <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} />
           <Route path="/allowance/:name" component={AllowanceContainer}/>} />
           <Route exact path="/" component={Home}/>
 
