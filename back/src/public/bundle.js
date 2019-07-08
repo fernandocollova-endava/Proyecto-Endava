@@ -40136,7 +40136,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48135,8 +48135,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../AllowanceContainer/index */ "./src/components/AllowanceContainer/index.jsx");
 /* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
 /* harmony import */ var _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../HomeContainer/index */ "./src/components/HomeContainer/index.jsx");
-/* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../NoFound/index */ "./src/components/NoFound/index.jsx");
-/* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_NoFound_index__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ObraSocialContainer/index */ "./src/components/ObraSocialContainer/index.jsx");
 /* harmony import */ var _LoginContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../LoginContainer */ "./src/components/LoginContainer/index.jsx");
 /* harmony import */ var _AllowancesListContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AllowancesListContainer */ "./src/components/AllowancesListContainer/index.jsx");
 /* harmony import */ var _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../NavBarContainer/ */ "./src/components/NavBarContainer/index.jsx");
@@ -48189,7 +48188,13 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.user.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !this.props.user.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/login",
+        component: _LoginContainer__WEBPACK_IMPORTED_MODULE_7__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+        from: "/",
+        to: "/login"
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main",
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
@@ -48198,17 +48203,17 @@ function (_React$Component) {
         path: "/allowance/:name",
         component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_3__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/allowance/obra-social",
+        component: _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__["default"]
+      }), "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "/",
         component: _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/allowance/search",
         component: _AllowancesListContainer__WEBPACK_IMPORTED_MODULE_8__["default"]
-      }))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/login",
-        component: _LoginContainer__WEBPACK_IMPORTED_MODULE_7__["default"]
-      }));
+      }))));
     }
   }]);
 
@@ -48383,17 +48388,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Navbar));
-
-/***/ }),
-
-/***/ "./src/components/NoFound/index.jsx":
-/*!******************************************!*\
-  !*** ./src/components/NoFound/index.jsx ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
 
 /***/ }),
 
@@ -48599,6 +48593,7 @@ var createAllowance = function createAllowance(formData) {
 };
 var fetchAllowances = function fetchAllowances(userId) {
   return function (dispatch) {
+    console.log("enre al AXIOSSSSSSSSSSS");
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/alowance/search/:".concat(userId)).then(function (res) {
       return res.data;
     }).then(function (allowanceList) {
@@ -48635,6 +48630,7 @@ var receiveLoggedUser = function receiveLoggedUser(loggedUser) {
   };
 };
 var userLogout = function userLogout() {
+  console.log("enbre al logouuuuuuu");
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_1__["USER_LOGOUT"]
   };
