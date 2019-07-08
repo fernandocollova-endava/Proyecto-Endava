@@ -15,23 +15,23 @@ const AnimationPage = () =>  {
 
   return (
     <MDBContainer className="mt-5">
-      <MDBRow>
-        <MDBCol md="4">
-          <img src="https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/02_MeetEndava_480x500.ashx"
-               className="img-fluid" 
-               alt="Imagen endava"/>
-        </MDBCol>
-        <MDBCol md="8">
-          <h1>ENDAVA STORY</h1>
-          <p>
-            We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world’s largest banks and payments companies.
-            Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe. 
-            Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate.
-          </p>
-        </MDBCol>
+      
+      <MDBRow center>
+        <MDBAnimation type="jello" infinite onAnimationIteration={increment}>
+          <img
+            alt=""
+            className="img-fluid"
+            src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png"
+          />
+        </MDBAnimation>
+        <br />
       </MDBRow>
 
-      <MDBRow className="mb-4" style={{ marginTop: "1vh" }}>
+      <MDBRow center className="mt-5">
+        <h4>&#8659; Scroll down &#8659;</h4>
+      </MDBRow>
+
+      <MDBRow className="mb-4" style={{ marginTop: "100vh" }}>
         <MDBCol md="4">
           <MDBAnimation reveal type="bounceInUp">
             <img

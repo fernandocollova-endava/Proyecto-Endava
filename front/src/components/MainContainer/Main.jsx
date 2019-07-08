@@ -23,7 +23,7 @@ class MainContainer extends React.Component {
       <div>
         <Switch>
           <Route exact path="/login" component={LoginContainer}/>
-          {(!(this.props.UserId.hasOwnProperty('id')))&&<Redirect to='/login'/>}
+          {/* {(!(this.props.UserId.hasOwnProperty('id')))&&<Redirect to='/login'/>} */}
           <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} />
           <Route path="/allowance/:name" component={AllowanceContainer}/>} />
           <Route exact path="/" component={Home}/>
@@ -41,7 +41,6 @@ const mapDispatchToProps = function (dispatch) {
   };
 };
 const mapStateToProps = (state, owner)=>{
-  console.log(state)
   return {
     UserId: state.user.user
   }
