@@ -1,10 +1,11 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 // Components
 import AllowanceContainer from '../AllowanceContainer/index'
 import Home from '../HomeContainer/index'
+import ObraSocialContainer from '../ObraSocialContainer/index'
 import NoFound from '../NoFound/index'  
 import LoginContainer from "../LoginContainer";
 
@@ -20,10 +21,11 @@ class MainContainer extends React.Component {
   render() {
     return (
       <div>
-        
         <Switch>
-          <Route path="/allowance/:name" component={AllowanceContainer}/>} />
           <Route exact path="/login" component={LoginContainer}/>
+          {(!(this.props.UserId.hasOwnProperty('id')))&&<Redirect to='/login'/>}
+          <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} />
+          <Route path="/allowance/:name" component={AllowanceContainer}/>} />
           <Route exact path="/" component={Home}/>
 
           {/* <Route path="/" component={NoFound} /> */}
@@ -38,7 +40,14 @@ const mapDispatchToProps = function (dispatch) {
     //fetchLoggedUser: () => dispatch(fetchLoggedUser()),
   };
 };
+const mapStateToProps = (state, owner)=>{
+  console.log(state)
+  return {
+    UserId: state.user.user
+  }
+}
+
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(MainContainer);
