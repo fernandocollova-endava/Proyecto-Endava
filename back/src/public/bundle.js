@@ -40224,7 +40224,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47671,7 +47671,7 @@ function (_React$Component) {
 
       var formData = new FormData();
       formData.append('file', file);
-      formData.append('userid', 3);
+      formData.append('userid', 1);
       formData.append('allowanceName', this.props.nameUrl);
       formData.append('employeeAmount', this.state.employeeAmount);
       formData.append('observation', this.state.observation);
