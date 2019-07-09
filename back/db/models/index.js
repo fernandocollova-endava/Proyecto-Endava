@@ -1,24 +1,29 @@
-const Employee = require("./employee");
 const db = require('../index');
+
+const Employee = require("./employee");
 const {
-  StaticAllowance,
-  EmployeeAllowence,
-  AllowanceStatus
+  Allowance, // Tabla de reintegros
+  AllowanceDetail, // Tabla de detalles ( relacionados a empleados many-to-many)
+  Employee_Allowance // Tabla de relación ( Empleado vs Reintegros)
 } = require("./StaticAllowance");
 
 // Relación Static - Employee ( Child care, Course, Gym )
-Employee.belongsToMany(StaticAllowance, {
+Employee.belongsToMany(Allowance, {
   as: "allowance",
-  through: EmployeeAllowence,
+  through: Employee_Allowance,
   onDelete: "CASCADE",
   onUpdate: "CASCADE"
 });
-StaticAllowance.belongsToMany(Employee, {
+
+Allowance.belongsToMany(Employee, {
   as: "employee",
-  through: EmployeeAllowence,
+  through: Employee_Allowance,
   onDelete: "CASCADE",
   onUpdate: "CASCADE"
 });
+
+//AllowanceDetail.belongsToMany(EmployeeAllowence, {as: "emPall",through: 'detailAllowance'})
+AllowanceDetail.belongsTo(Employee_Allowance, { as: "employeeAllowence" })
 
 // Relación BookAllowance - Employe ( Prorrateo; Fecha; Monto ingresado, otorgado, remanente.)
 // Employee.belongsToMany(StaticAllowance, { as: "allowance", through: 'EmployeeAllowence', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
@@ -26,6 +31,8 @@ StaticAllowance.belongsToMany(Employee, {
 
 module.exports = {
   Employee,
-  StaticAllowance,
+  Allowance,
+  Employee_Allowance,
+  AllowanceDetail,
   db
 };

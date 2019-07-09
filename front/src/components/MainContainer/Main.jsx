@@ -4,41 +4,41 @@ import { connect } from "react-redux";
 
 // Components
 import AllowanceContainer from '../AllowanceContainer/index'
-import {fetchLoggedUser} from '../../redux/actions/user'
+import { fetchLoggedUser } from '../../redux/actions/user'
 import Home from '../HomeContainer/index'
 import ObraSocialContainer from '../ObraSocialContainer/index'
-import NoFound from '../NoFound/index'  
+import NoFound from '../NoFound/index'
+
 import LoginContainer from "../LoginContainer";
 import AllowancesListContainer from "../AllowancesListContainer";
 import NavbarContainer from "../NavBarContainer/"
-
+import FooterContainer from "../FooterContainer"
 class MainContainer extends React.Component {
   componentDidMount() {
     this.props.fetchLoggedUser()
   }
 
   render() {
-    return ( 
+    return (
       <div>
           {
-            this.props.user.id?
-            <div id="main" className="container">
-              <Switch>
+            //(!(this.props.user.id)) && <Redirect to="/login" />
+          }
               <Route component = {NavbarContainer}/>
-              <Route path="/allowance/:name" component={AllowanceContainer}/>
-               <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
-              <Route path="/" component={Home}/>
-              <Route exact path="/allowance/search" component={AllowancesListContainer}/>
-              </Switch>
-            </div>:
-               <Route exact path="/login" component={LoginContainer}/>
-              }
+              <Switch>
+                <Route path="/login" component={LoginContainer}/>
+                <Route path="/allowance/:name" component={AllowanceContainer}/>
+                <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
+                <Route exact path="/allowance/search" component={AllowancesListContainer}/>
+                <Route exact path="/" component={Home}/>
+              </Switch>        
+              <Route component = {FooterContainer}/>             
       </div>
-      )
-    }
+    )
+  }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, owner) => {
   return {
     user: state.user.user
   }
@@ -48,12 +48,6 @@ const mapDispatchToProps = function (dispatch) {
     fetchLoggedUser: () => dispatch(fetchLoggedUser()),
   };
 };
-const mapStateToProps = (state, owner)=>{
-  return {
-    UserId: state.user.user
-  }
-}
-
 export default connect(
   mapStateToProps,
   mapDispatchToProps

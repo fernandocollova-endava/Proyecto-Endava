@@ -6,7 +6,6 @@ import {
   MDBNavItem,
   MDBNavLink,
   MDBCollapse,
-  MDBContainer,
   MDBHamburgerToggler
 } from "mdbreact";
 import {connect} from "react-redux"
@@ -46,12 +45,11 @@ class Navbar extends Component {
 
   render() {
     return (
-      
-      <MDBContainer>
-        {console.log('so el user logueado',this.props.user)}
-        <MDBNavbar color="amber lighten-4" style={{ marginTop: "20px" }} light>
-          <MDBContainer>
-            <MDBNavbarBrand>MDBNavbar</MDBNavbarBrand>
+        <MDBNavbar className="fixed-top">
+            <MDBNavbarBrand>
+            <img className="logo" src="https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx"
+               alt="Endava" />
+            </MDBNavbarBrand>
             <MDBHamburgerToggler
               color="#d3531a"
               id="hamburger1"
@@ -82,9 +80,7 @@ class Navbar extends Component {
                 }
               </MDBNavbarNav>
             </MDBCollapse>
-          </MDBContainer>
         </MDBNavbar>
-      </MDBContainer>
     );
   }
 }

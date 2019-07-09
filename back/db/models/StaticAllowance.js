@@ -1,7 +1,7 @@
 const Sequelize = require ("sequelize");
 const db  = require ("../index")
 
-const StaticAllowance = db.define("staticAllowance",{
+const Allowance = db.define("allowance",{
     name: {
         type: Sequelize.STRING,
         validate: {
@@ -15,10 +15,22 @@ const StaticAllowance = db.define("staticAllowance",{
     limitDay:{
         type: Sequelize.INTEGER,
         allowNull: false,
+    },
+    imgUrl:{
+        type: Sequelize.TEXT,
+        allowNull: false,
+    },
+    completeName:{
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    active:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
     }
 })
 
-const EmployeeAllowence = db.define("EmployeeAllowence",{
+const AllowanceDetail = db.define("AllowanceDetail",{
     amount:{
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -50,9 +62,16 @@ const EmployeeAllowence = db.define("EmployeeAllowence",{
         },
     },
 })
-
+const Employee_Allowance = db.define("employee_allowance",{
+    id:{
+        type: Sequelize.INTEGER,
+        primaryKey:true,
+        autoIncrement:true
+    }
+})
 
 module.exports= {
-    StaticAllowance,
-    EmployeeAllowence
+    Allowance,
+    AllowanceDetail,
+    Employee_Allowance
 };

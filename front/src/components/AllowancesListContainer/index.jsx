@@ -3,8 +3,6 @@ import {connect} from "react-redux";
 import AllowanceList from "./allowanceList";
 import {fetchAllowances} from "../../redux/actions/allowanceActions"
 
-
-
 class AllowanceListContainer extends React.Component {
   constructor(){
     super()
