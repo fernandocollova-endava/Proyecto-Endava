@@ -9,6 +9,7 @@ export const receiveAllowances = function(allowanceList) {
 };
 
 export const createAllowance = formData => dispatch => {
+  console.log('so form daa del axios', formData)
   return axios({
     method: "POST",
     data: formData,
@@ -19,7 +20,7 @@ export const createAllowance = formData => dispatch => {
   });
 };
 export const fetchAllowances = userId => dispatch => {
-  console.log("enre al AXIOSSSSSSSSSSS")
+  console.log("enre al AXIOSSSSSSSSSSS", userId)
   return axios
     .get(`/api/alowance/search/:${userId}`)
     .then(res => res.data)

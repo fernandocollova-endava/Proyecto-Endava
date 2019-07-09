@@ -19,6 +19,11 @@ const StaticAllowance = db.define("staticAllowance",{
 })
 
 const EmployeeAllowence = db.define("EmployeeAllowence",{
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
     amount:{
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -52,7 +57,27 @@ const EmployeeAllowence = db.define("EmployeeAllowence",{
 })
 
 
-module.exports= {
-    StaticAllowance,
-    EmployeeAllowence
-};
+// const AllowanceDetail = db.define("allowanceDetail", {
+
+//     price: {
+//       type: Sequelize.INTEGER,
+//       validate: {
+//         notEmpty: true,
+//         isNumeric: true
+//       }
+//     },
+//     quantity: {
+//       type: Sequelize.INTEGER,
+//       validate: {
+//         notEmpty: true,
+//         isNumeric: true
+//       }
+//     }
+//   });
+  
+
+  module.exports= {
+      StaticAllowance,
+      EmployeeAllowence,
+    //   AllowanceDetail
+  };

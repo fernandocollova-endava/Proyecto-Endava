@@ -15,7 +15,7 @@ const Op = Sequelize.Op
 
 // Insert static allowance
     Router.post('/', MulterFn.single("file"), (req, res) => {
-
+        console.log("soo req del back allowance", req.body)
     // Obtengo el nombre del archivo
     const fileName = req.file.filename; 
 
@@ -36,18 +36,28 @@ const Op = Sequelize.Op
                         instanceAllowance.dataValues.createdAt, //Fecha creacion
                         instanceAllowance.dataValues.limitDay
                     )
-
+                    instanceAllowance.create({
+                        amount: instanceAllowance.dataValues.fixedAmount,
+                        employeeAmount: req.body.employeeAmount,
+                        paymentDate: paymentDate,
+                        observation: req.body.observation,
+                        receiptPath: fileName,
+                        status:'pendiente',
+                        employeeId: employee.id,
+                        staticAllowanceId : instanceAllowance.id
+                        
+                    })
                     // Inserta en la instancia de allowance la instancia de employee
-                    instanceAllowance.addEmployee(employee, {
-                        through: {
-                            amount: instanceAllowance.dataValues.fixedAmount,
-                            employeeAmount: req.body.employeeAmount,
-                            paymentDate: paymentDate,
-                            observation: req.body.observation,
-                            receiptPath: fileName,
-                            status:'pendiente'
-                        }
-                    })   
+                    // instanceAllowance.addEmployee(employee, {
+                    //     through: {
+                    //         amount: instanceAllowance.dataValues.fixedAmount,
+                    //         employeeAmount: req.body.employeeAmount,
+                    //         paymentDate: paymentDate,
+                    //         observation: req.body.observation,
+                    //         receiptPath: fileName,
+                    //         status:'pendiente'
+                    //     }
+                    // })   
                 })
         })
         .then(() => {

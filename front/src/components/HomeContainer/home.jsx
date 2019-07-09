@@ -1,21 +1,19 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBAnimation } from "mdbreact";
+import{connect} from "react-redux"
+import {Link } from "react-router-dom"
 
+class Home extends React.Component {
+  constructor(){
+    super()
+    this.state = { }
 
-const AnimationPage = () =>  {
-
-  let count = 0;
-
-  const increment = () => {
-    count++;
-    if (count < 6 || count % 5 === 0) {
-      // console.log(`The MDB logo bounced ${count} times.`);
-    }
-  };
-
-  return (
+  }
+ 
+  render(){
+    return (
     <MDBContainer className="mt-5">
-      
+{/*       
       <MDBRow center>
         <MDBAnimation type="jello" infinite onAnimationIteration={increment}>
           <img
@@ -25,7 +23,7 @@ const AnimationPage = () =>  {
           />
         </MDBAnimation>
         <br />
-      </MDBRow>
+      </MDBRow> */}
 
       <MDBRow center className="mt-5">
         <h4>&#8659; Scroll down &#8659;</h4>
@@ -33,13 +31,16 @@ const AnimationPage = () =>  {
 
       <MDBRow className="mb-4" style={{ marginTop: "100vh" }}>
         <MDBCol md="4">
+          <Link to = "/allowance/gym">
           <MDBAnimation reveal type="bounceInUp">
             <img
-              alt="A view on mountains."
-              className="img-fluid"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(31).jpg"
-            />
+             alt="A view on mountains."
+             className="img-fluid"
+             src="https://i.blogs.es/16febd/gimnasio/450_1000.jpg" 
+             name="gym"
+             />
           </MDBAnimation>
+        </Link>
         </MDBCol>
         <MDBCol md="4">
           <MDBAnimation reveal type="tada">
@@ -47,7 +48,7 @@ const AnimationPage = () =>  {
               alt="Cottage on a lake surrounded by mountains."
               className="img-fluid"
               src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(32).jpg"
-            />
+              />
           </MDBAnimation>
         </MDBCol>
         <MDBCol md="4">
@@ -56,7 +57,7 @@ const AnimationPage = () =>  {
               alt="A boat floating on an ocean"
               className="img-fluid"
               src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
-            />
+              />
           </MDBAnimation>
         </MDBCol>
       </MDBRow>
@@ -68,7 +69,7 @@ const AnimationPage = () =>  {
               alt="View on mountains from mountain top."
               className="img-fluid"
               src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-            />
+              />
           </MDBAnimation>
         </MDBCol>
         <MDBCol md="4">
@@ -77,7 +78,7 @@ const AnimationPage = () =>  {
               alt="Rocky shore in the morning."
               className="img-fluid"
               src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg"
-            />
+              />
           </MDBAnimation>
         </MDBCol>
         <MDBCol md="4">
@@ -87,7 +88,7 @@ const AnimationPage = () =>  {
             onAnimationEnd={() =>
               console.log("The last picture has been revealed")
             }
-          >
+            >
             <img
               alt="Rocky shore in the morning."
               className="img-fluid"
@@ -100,4 +101,17 @@ const AnimationPage = () =>  {
   );
 };
 
-export default AnimationPage;
+}
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.user.user
+  }
+}
+const mapDispatchToProps = function (dispatch) {
+  return {
+    fetchLoggedUser: () => dispatch(fetchLoggedUser()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

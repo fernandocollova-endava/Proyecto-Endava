@@ -40136,7 +40136,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47561,12 +47561,14 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(AllowanceContainer).call(this, props));
     _this.state = {
       file: null,
-      employeeAmount: 400,
-      observation: 'lucas',
+      employeeAmount: 0,
+      observation: '',
       active: ''
     };
     _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
     _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
+    _this.onObservationChange = _this.onObservationChange.bind(_assertThisInitialized(_this));
+    _this.onAmountChange = _this.onAmountChange.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -47599,23 +47601,42 @@ function (_React$Component) {
   }, {
     key: "onChange",
     value: function onChange(e) {
+      console.log("so eeeeeee", e.target);
       this.setState({
         file: e.target.files[0]
       });
     }
   }, {
+    key: "onObservationChange",
+    value: function onObservationChange(e) {
+      console.log('so e del obervaion', e.target.value);
+      this.setState({
+        observation: e.target.value
+      });
+    }
+  }, {
+    key: "onAmountChange",
+    value: function onAmountChange(e) {
+      console.log("so e del amoun", e.target.value);
+      this.setState({
+        employeeAmount: e.target.value
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.onFormSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Formulario Reload"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "employeeAmount",
-        placeholder: "Monto Beneficio.."
+        placeholder: "Monto Beneficio..",
+        onChange: this.onAmountChange
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "observation",
-        placeholder: "Observacion.."
+        placeholder: "Observacion..",
+        onChange: this.onObservationChange
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "file",
         name: "file",
@@ -47630,7 +47651,7 @@ function (_React$Component) {
         width: "500",
         height: "375",
         type: "application/pdf"
-      }));
+      })));
     }
   }]);
 
@@ -47652,7 +47673,53 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AllowanceContainer));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AllowanceContainer)); // constructor(props) {
+//     super(props);
+//     this.state = {
+//         file: null,
+//         employeeAmount: 400,
+//         observation: 'lucas',
+//         active: ''
+//     };
+//     this.onFormSubmit = this.onFormSubmit.bind(this);
+//     this.onChange = this.onChange.bind(this);
+// }
+// onChange(){
+// }
+// onFormSubmit(e) {
+//     e.preventDefault();
+//     const { file, ...rest } = this.state
+//     const formData = new FormData();
+//     formData.append('file', file);
+//     formData.append('userid', 3);
+//     formData.append('allowanceName', this.props.nameUrl);
+//     formData.append('employeeAmount', this.state.employeeAmount);
+//     formData.append('observation', this.state.observation);
+//     this.props.createAllowance(formData)
+//         .then((response) => {
+//             this.setState({ active: response.data });
+//             alert("Se cargo piolasaa");
+//         }).catch((error) => {
+//             //mensaje de error
+//         });
+// }
+// onChange(e) {
+//     console.log('sooo eeee', e.target.value)
+//     this.setState({ 
+//         file: e.target.files[0],
+//         employeeAmount:e.target.name,
+//         observation: e.target.name,
+//     });
+// }
+// render() {
+//     return (
+//         <div>
+//         <form onSubmit={this.onFormSubmit}>
+//         <h1>Formulario Reload</h1>
+//         <input type="text" name="employeeAmount" placeholder="Monto Beneficio.." onChange={this.onChange}/><br />
+//         <input type="text" name="observation" placeholder="Observacion.."onChange={this.onChange} /><br />
+//         <input type="file" name="file" onChange={this.onChange} />
+//         <button type="submit">Enviar</button>
 
 /***/ }),
 
@@ -47736,7 +47803,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("so lis de allowances", this.props.allowanceList), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
@@ -47774,102 +47841,153 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
-var AnimationPage = function AnimationPage() {
-  var count = 0;
 
-  var increment = function increment() {
-    count++;
 
-    if (count < 6 || count % 5 === 0) {// console.log(`The MDB logo bounced ${count} times.`);
+
+var Home =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Home, _React$Component);
+
+  function Home() {
+    var _this;
+
+    _classCallCheck(this, Home);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this));
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Home, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
+        className: "mt-5"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+        center: true,
+        className: "mt-5"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "\u21D3 Scroll down \u21D3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+        className: "mb-4",
+        style: {
+          marginTop: "100vh"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+        md: "4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/allowance/gym"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+        reveal: true,
+        type: "bounceInUp"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        alt: "A view on mountains.",
+        className: "img-fluid",
+        src: "https://i.blogs.es/16febd/gimnasio/450_1000.jpg",
+        name: "gym"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+        md: "4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+        reveal: true,
+        type: "tada"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        alt: "Cottage on a lake surrounded by mountains.",
+        className: "img-fluid",
+        src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(32).jpg"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+        md: "4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+        reveal: true,
+        type: "fadeInLeft"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        alt: "A boat floating on an ocean",
+        className: "img-fluid",
+        src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+        className: "mb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+        md: "4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+        reveal: true,
+        type: "fadeInRight"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        alt: "View on mountains from mountain top.",
+        className: "img-fluid",
+        src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+        md: "4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+        reveal: true,
+        type: "fadeInRight"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        alt: "Rocky shore in the morning.",
+        className: "img-fluid",
+        src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+        md: "4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+        reveal: true,
+        type: "fadeInUp",
+        onAnimationEnd: function onAnimationEnd() {
+          return console.log("The last picture has been revealed");
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        alt: "Rocky shore in the morning.",
+        className: "img-fluid",
+        src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
+      })))));
     }
+  }]);
+
+  return Home;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    user: state.user.user
   };
-
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
-    className: "mt-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    center: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "jello",
-    infinite: true,
-    onAnimationIteration: increment
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/logo/mdb-transparent-250px.png"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    center: true,
-    className: "mt-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "\u21D3 Scroll down \u21D3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "mb-4",
-    style: {
-      marginTop: "100vh"
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "bounceInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "A view on mountains.",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(31).jpg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "tada"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "Cottage on a lake surrounded by mountains.",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(32).jpg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "fadeInLeft"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "A boat floating on an ocean",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "mb-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "fadeInRight"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "View on mountains from mountain top.",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "fadeInRight"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "Rocky shore in the morning.",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    reveal: true,
-    type: "fadeInUp",
-    onAnimationEnd: function onAnimationEnd() {
-      return console.log("The last picture has been revealed");
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    alt: "Rocky shore in the morning.",
-    className: "img-fluid",
-    src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-  })))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (AnimationPage);
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchLoggedUser: function (_fetchLoggedUser) {
+      function fetchLoggedUser() {
+        return _fetchLoggedUser.apply(this, arguments);
+      }
+
+      fetchLoggedUser.toString = function () {
+        return _fetchLoggedUser.toString();
+      };
+
+      return fetchLoggedUser;
+    }(function () {
+      return dispatch(fetchLoggedUser());
+    })
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Home));
 
 /***/ }),
 
@@ -48012,6 +48130,14 @@ function (_React$Component) {
   }
 
   _createClass(LoginContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (this.props.user.id) {
+        console.log("enreeeeee", this.props.user);
+        this.props.history.push("/");
+      }
+    }
+  }, {
     key: "handleChange",
     value: function handleChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
@@ -48045,6 +48171,12 @@ function (_React$Component) {
   return LoginContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    user: state.user.user
+  };
+};
+
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     logginUser: function logginUser(data) {
@@ -48053,7 +48185,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, mapDispatchToProps)(LoginContainer));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(LoginContainer));
 
 /***/ }),
 
@@ -48137,7 +48269,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../HomeContainer/index */ "./src/components/HomeContainer/index.jsx");
 /* harmony import */ var _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ObraSocialContainer/index */ "./src/components/ObraSocialContainer/index.jsx");
 /* harmony import */ var _LoginContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../LoginContainer */ "./src/components/LoginContainer/index.jsx");
-/* harmony import */ var _AllowancesListContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AllowancesListContainer */ "./src/components/AllowancesListContainer/index.jsx");
+/* harmony import */ var _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AllowancesListContainer/index */ "./src/components/AllowancesListContainer/index.jsx");
 /* harmony import */ var _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../NavBarContainer/ */ "./src/components/NavBarContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -48175,53 +48307,82 @@ function (_React$Component) {
   _inherits(MainContainer, _React$Component);
 
   function MainContainer() {
+    var _this;
+
     _classCallCheck(this, MainContainer);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(MainContainer).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(MainContainer).call(this));
+    _this.state = {
+      loading: true
+    };
+    return _this;
   }
 
   _createClass(MainContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchLoggedUser();
+      var _this2 = this;
+
+      this.props.fetchLoggedUser().then(function () {
+        _this2.setState({
+          loading: false
+        });
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !this.props.user.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        path: "/login",
-        component: _LoginContainer__WEBPACK_IMPORTED_MODULE_7__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
-        from: "/",
-        to: "/login"
-      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "main",
-        className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        component: _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        path: "/allowance/:name",
-        component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_3__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/allowance/obra-social",
-        component: _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__["default"]
-      }), "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        path: "/",
-        component: _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/allowance/search",
-        component: _AllowancesListContainer__WEBPACK_IMPORTED_MODULE_8__["default"]
-      }))));
+      if (this.state.loading) {
+        return 'loading';
+      }
+
+      return (// <div>
+        //   <Switch>
+        //    <Route path="/login" component={LoginContainer}/>
+        //   {this.props.user.id? <Route component = {NavbarContainer}/>: null}
+        //   {/* <Route exact path="/allowance/search" component={AllowancesListContainer}/> */}
+        //   {/* <Route exact path="/allowance/:name" component={AllowanceContainer}/>
+        //   <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>}  */}
+        //   <Route path="/" component={Home}/>
+        //   </Switch>
+        // </div>
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+          component: _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__["default"]
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+          exact: true,
+          path: "/allowance/obra-social",
+          component: _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__["default"]
+        }), "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+          exact: true,
+          path: "/allowance/search",
+          component: _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_8__["default"]
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+          path: "/allowance/:name",
+          component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_3__["default"]
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+          exact: true,
+          path: "/",
+          component: _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__["default"]
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+          from: "/login",
+          to: "/"
+        }))), ":", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          id: "main",
+          className: "container"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+          path: "/login",
+          component: _LoginContainer__WEBPACK_IMPORTED_MODULE_7__["default"]
+        })))
+      );
     }
   }]);
 
   return MainContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(state) {
+var mapStateToProps = function mapStateToProps(state, own) {
   return {
+    location: own.location.pathname,
     user: state.user.user
   };
 };
@@ -48331,7 +48492,7 @@ function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, console.log('so el user logueado', this.props.user), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbar"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbar"], {
         color: "amber lighten-4",
         style: {
           marginTop: "20px"
@@ -48581,6 +48742,7 @@ var receiveAllowances = function receiveAllowances(allowanceList) {
 };
 var createAllowance = function createAllowance(formData) {
   return function (dispatch) {
+    console.log('so form daa del axios', formData);
     return axios__WEBPACK_IMPORTED_MODULE_0___default()({
       method: "POST",
       data: formData,
@@ -48593,7 +48755,7 @@ var createAllowance = function createAllowance(formData) {
 };
 var fetchAllowances = function fetchAllowances(userId) {
   return function (dispatch) {
-    console.log("enre al AXIOSSSSSSSSSSS");
+    console.log("enre al AXIOSSSSSSSSSSS", userId);
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/alowance/search/:".concat(userId)).then(function (res) {
       return res.data;
     }).then(function (allowanceList) {
@@ -48630,7 +48792,6 @@ var receiveLoggedUser = function receiveLoggedUser(loggedUser) {
   };
 };
 var userLogout = function userLogout() {
-  console.log("enbre al logouuuuuuu");
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_1__["USER_LOGOUT"]
   };

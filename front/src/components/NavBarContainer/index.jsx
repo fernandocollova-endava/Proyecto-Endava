@@ -48,7 +48,7 @@ class Navbar extends Component {
     return (
       
       <MDBContainer>
-        {console.log('so el user logueado',this.props.user)}
+        {/* {console.log('so el user logueado',this.props.user)} */}
         <MDBNavbar color="amber lighten-4" style={{ marginTop: "20px" }} light>
           <MDBContainer>
             <MDBNavbarBrand>MDBNavbar</MDBNavbarBrand>

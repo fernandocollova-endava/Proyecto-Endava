@@ -10,7 +10,7 @@ export const receiveLoggedUser = loggedUser => ({
 });
 
 export const userLogout = function() {
-  console.log("enbre al logouuuuuuu")
+ 
   return {
     type: USER_LOGOUT
   };
