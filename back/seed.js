@@ -1,4 +1,4 @@
-const Allowance = require("./db/models").StaticAllowance
+const Allowance = require("./db/models").Allowance
 const Employee = require("./db/models").Employee
 
 Employee.create({
@@ -42,15 +42,41 @@ Employee.create({
 Allowance.create({
     name: 'gym',
     limitDay: 15,
-    fixedAmount: 800
+    fixedAmount: 800,
+    imgUrl:'https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/ServicesInnerPages/Smart-Automation/Smart-Automation-Whitepaper/AutomationWP_V2_Hero_Mobile_480x500.ashx',
+    completeName:'Gym Allowance',
+    active:true
+    
 })
 Allowance.create({
     name: 'trainning',
     limitDay: 15,
-    fixedAmount: 10000
+    fixedAmount: 10000,
+    imgUrl:'https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/02_MeetEndava_480x500.ashx',
+    completeName:'Trainning Allowance',
+    active:true
 })
 Allowance.create({
     name: 'child-care',
     limitDay: 15,
-    fixedAmount: 800
+    fixedAmount: 800,
+    imgUrl:'https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/05_MeetEndava_480x500.ashx',
+    completeName:'Child Care Allowance',
+    active:true
+})
+Allowance.create({
+    name: 'book',
+    limitDay: 15,
+    fixedAmount: 800,
+    imgUrl:'https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/ImagesWithOurPeople/Desktop/Inner_650x650_47.ashx',
+    completeName:'Book Allowance',
+    active:true
+})
+Allowance.create({
+    name: 'borrador',
+    limitDay: 15,
+    fixedAmount: 800,
+    imgUrl:'https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/ServicesInnerPages/Smart-Automation/Smart-Automation-Whitepaper/AutomationWP_V2_Hero_Mobile_480x500.ashx',
+    completeName:'Gym Allowance',
+    active:false
 })

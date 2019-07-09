@@ -116,6 +116,66 @@ if(false) {}
 
 /***/ }),
 
+/***/ "../back/src/public/styles/fonts.css":
+/*!*******************************************!*\
+  !*** ../back/src/public/styles/fonts.css ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./fonts.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/fonts.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "../back/src/public/styles/smartphone.css":
+/*!************************************************!*\
+  !*** ../back/src/public/styles/smartphone.css ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./smartphone.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
@@ -2423,7 +2483,35 @@ module.exports = exports['default'];
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n    background-color:#99cc00;\n    padding:10px;\n}", ""]);
+exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n}\n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n.imageLogin {\n    background-image: url('https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx');\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:210px;\n}\n.TextParrafo {\n    text-align: center\n}\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 300px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: contain;\n    max-height: 284px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    font-family: 'Open Sans';\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 70%;\n    font-size: 1.4vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n    \n  }\n ", ""]);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/fonts.css":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/fonts.css ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "/* https://careers.endava.com/Design/styles/webfonts/ */\n@font-face{\n    font-family:robotobold;\n    src:url('/assets/styles/webfonts/roboto-bold-webfont.eot');\n    src:url('/assets/styles/webfonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.woff2') format('woff2'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.woff') format('woff'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.ttf') format('truetype')    \n}\n\n/* @font-face{font-family:roboto_condensedbold;src:url(webfonts/robotocondensed-bold-webfont.eot);src:url(webfonts/robotocondensed-bold-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/robotocondensed-bold-webfont.woff2) format('woff2'),url(webfonts/robotocondensed-bold-webfont.woff) format('woff'),url(webfonts/robotocondensed-bold-webfont.ttf) format('truetype'),url(webfonts/robotocondensed-bold-webfont.svg#roboto_condensedbold) format('svg');font-weight:700;font-style:normal}@font-face{font-family:robotolight;src:url(webfonts/roboto-light-webfont.eot);src:url(webfonts/roboto-light-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-light-webfont.woff2) format('woff2'),url(webfonts/roboto-light-webfont.woff) format('woff'),url(webfonts/roboto-light-webfont.ttf) format('truetype'),url(webfonts/roboto-light-webfont.svg#robotolight) format('svg');font-weight:400;font-style:normal}@font-face{font-family:robotomedium;src:url(webfonts/roboto-medium-webfont.eot);src:url(webfonts/roboto-medium-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-medium-webfont.woff2) format('woff2'),url(webfonts/roboto-medium-webfont.woff) format('woff'),url(webfonts/roboto-medium-webfont.ttf) format('truetype'),url(webfonts/roboto-medium-webfont.svg#robotomedium) format('svg');font-weight:400;font-style:normal}@font-face{font-family:robotoregular;src:url(webfonts/roboto-regular-webfont.eot);src:url(webfonts/roboto-regular-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-regular-webfont.woff2) format('woff2'),url(webfonts/roboto-regular-webfont.woff) format('woff'),url(webfonts/roboto-regular-webfont.ttf) format('truetype'),url(webfonts/roboto-regular-webfont.svg#robotoregular) format('svg');font-weight:400;font-style:normal}@font-face{font-family:robotolight_italic;src:url(webfonts/roboto-lightitalic-webfont.eot);src:url(webfonts/roboto-lightitalic-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-lightitalic-webfont.woff2) format('woff2'),url(webfonts/roboto-lightitalic-webfont.woff) format('woff'),url(webfonts/roboto-lightitalic-webfont.ttf) format('truetype'),url(webfonts/roboto-lightitalic-webfont.svg#robotolight_italic) format('svg');font-weight:400;font-style:normal}@font-face{font-family:fontendava;src:url(iconfonts/fontendava.eot?y6id76);src:url(iconfonts/fontendava.eot?y6id76#iefix) format('embedded-opentype'),url(iconfonts/fontendava.ttf?y6id76) format('truetype'),url(iconfonts/fontendava.woff?y6id76) format('woff'),url(iconfonts/fontendava.svg?y6id76#fontendava) format('svg');font-weight:400;font-style:normal}[class*=\" fe_\"],[class^=fe_]{font-family:fontendava!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale} */\n", ""]);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    \n}", ""]);
 
 
 /***/ }),
@@ -47573,6 +47661,11 @@ function (_React$Component) {
   }
 
   _createClass(AllowanceContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log("me moneeeeeeeeeee");
+    }
+  }, {
     key: "onFormSubmit",
     value: function onFormSubmit(e) {
       var _this2 = this;
@@ -47585,7 +47678,7 @@ function (_React$Component) {
 
       var formData = new FormData();
       formData.append('file', file);
-      formData.append('userid', 3);
+      formData.append('userid', 1);
       formData.append('allowanceName', this.props.nameUrl);
       formData.append('employeeAmount', this.state.employeeAmount);
       formData.append('observation', this.state.observation);
@@ -47609,7 +47702,6 @@ function (_React$Component) {
   }, {
     key: "onObservationChange",
     value: function onObservationChange(e) {
-      console.log('so e del obervaion', e.target.value);
       this.setState({
         observation: e.target.value
       });
@@ -47617,7 +47709,6 @@ function (_React$Component) {
   }, {
     key: "onAmountChange",
     value: function onAmountChange(e) {
-      console.log("so e del amoun", e.target.value);
       this.setState({
         employeeAmount: e.target.value
       });
@@ -47673,53 +47764,7 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AllowanceContainer)); // constructor(props) {
-//     super(props);
-//     this.state = {
-//         file: null,
-//         employeeAmount: 400,
-//         observation: 'lucas',
-//         active: ''
-//     };
-//     this.onFormSubmit = this.onFormSubmit.bind(this);
-//     this.onChange = this.onChange.bind(this);
-// }
-// onChange(){
-// }
-// onFormSubmit(e) {
-//     e.preventDefault();
-//     const { file, ...rest } = this.state
-//     const formData = new FormData();
-//     formData.append('file', file);
-//     formData.append('userid', 3);
-//     formData.append('allowanceName', this.props.nameUrl);
-//     formData.append('employeeAmount', this.state.employeeAmount);
-//     formData.append('observation', this.state.observation);
-//     this.props.createAllowance(formData)
-//         .then((response) => {
-//             this.setState({ active: response.data });
-//             alert("Se cargo piolasaa");
-//         }).catch((error) => {
-//             //mensaje de error
-//         });
-// }
-// onChange(e) {
-//     console.log('sooo eeee', e.target.value)
-//     this.setState({ 
-//         file: e.target.files[0],
-//         employeeAmount:e.target.name,
-//         observation: e.target.name,
-//     });
-// }
-// render() {
-//     return (
-//         <div>
-//         <form onSubmit={this.onFormSubmit}>
-//         <h1>Formulario Reload</h1>
-//         <input type="text" name="employeeAmount" placeholder="Monto Beneficio.." onChange={this.onChange}/><br />
-//         <input type="text" name="observation" placeholder="Observacion.."onChange={this.onChange} /><br />
-//         <input type="file" name="file" onChange={this.onChange} />
-//         <button type="submit">Enviar</button>
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AllowanceContainer));
 
 /***/ }),
 
@@ -47829,6 +47874,49 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./src/components/FooterContainer/index.jsx":
+/*!**************************************************!*\
+  !*** ./src/components/FooterContainer/index.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+
+var FooterPage = function FooterPage() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFooter"], {
+    color: "blue",
+    className: "font-small pt-4 mt-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
+    fluid: true,
+    className: "text-center text-md-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "6"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "title"
+  }, "Footer Content"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Here you can use rows and columns here to organize your footer content.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "6"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "title"
+  }, "Links")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-copyright text-center py-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
+    fluid: true
+  }, "\xA9 ", new Date().getFullYear(), " Copyright: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.MDBootstrap.com"
+  }, " MDBootstrap.com "))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FooterPage);
+
+/***/ }),
+
 /***/ "./src/components/HomeContainer/home.jsx":
 /*!***********************************************!*\
   !*** ./src/components/HomeContainer/home.jsx ***!
@@ -47840,154 +47928,61 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
 
 
 
 
-
-
-var Home =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(Home, _React$Component);
-
-  function Home() {
-    var _this;
-
-    _classCallCheck(this, Home);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this));
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(Home, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
-        className: "mt-5"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-        center: true,
-        className: "mt-5"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "\u21D3 Scroll down \u21D3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-        className: "mb-4",
-        style: {
-          marginTop: "100vh"
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-        md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        to: "/allowance/gym"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-        reveal: true,
-        type: "bounceInUp"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        alt: "A view on mountains.",
-        className: "img-fluid",
-        src: "https://i.blogs.es/16febd/gimnasio/450_1000.jpg",
-        name: "gym"
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-        md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-        reveal: true,
-        type: "tada"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        alt: "Cottage on a lake surrounded by mountains.",
-        className: "img-fluid",
-        src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(32).jpg"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-        md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-        reveal: true,
-        type: "fadeInLeft"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        alt: "A boat floating on an ocean",
-        className: "img-fluid",
-        src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-        className: "mb-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-        md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-        reveal: true,
-        type: "fadeInRight"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        alt: "View on mountains from mountain top.",
-        className: "img-fluid",
-        src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-        md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-        reveal: true,
-        type: "fadeInRight"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        alt: "Rocky shore in the morning.",
-        className: "img-fluid",
-        src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-        md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-        reveal: true,
-        type: "fadeInUp",
-        onAnimationEnd: function onAnimationEnd() {
-          return console.log("The last picture has been revealed");
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        alt: "Rocky shore in the morning.",
-        className: "img-fluid",
-        src: "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-      })))));
-    }
-  }]);
-
-  return Home;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    user: state.user.user
-  };
+var AnimationPage = function AnimationPage(_ref) {
+  var cardList = _ref.cardList;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+    className: "container-banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    type: "flipInY"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/02_MeetEndava_480x500.ashx",
+    className: "img-fluid margenBottomMobile",
+    alt: "Imagen endava"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Welcome to the allowence empleyee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "TextParrafo"
+  }, "We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world\u2019s largest banks and payments companies. Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe. Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+    className: "container-banner marginDemo"
+  }, cardList && cardList.map(function (card, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+      md: "3"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+      reveal: true,
+      type: i % 2 == 0 ? 'fadeInUp' : 'fadeInDown'
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
+      className: "Card-Img"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container-IMG"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "div-img"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/alowance/".concat(card.name)
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: card.imgUrl,
+      className: "img-fluid margenBottomMobile img",
+      alt: "Imagen logo ".concat(card.name)
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "text btnModule btn btn-info btn-md"
+    }, "Ingresar ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-angle-double-right"
+    })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "titleModule"
+    }, card.completeName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
+  })));
 };
 
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    fetchLoggedUser: function (_fetchLoggedUser) {
-      function fetchLoggedUser() {
-        return _fetchLoggedUser.apply(this, arguments);
-      }
-
-      fetchLoggedUser.toString = function () {
-        return _fetchLoggedUser.toString();
-      };
-
-      return fetchLoggedUser;
-    }(function () {
-      return dispatch(fetchLoggedUser());
-    })
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Home));
+/* harmony default export */ __webpack_exports__["default"] = (AnimationPage);
 
 /***/ }),
 
@@ -48003,9 +47998,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ "./src/components/HomeContainer/home.jsx");
-/* harmony import */ var _NavBarContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavBarContainer */ "./src/components/NavBarContainer/index.jsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48041,14 +48037,31 @@ function (_React$Component) {
     _classCallCheck(this, HomeContainer);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(HomeContainer).call(this));
-    _this.state = {};
+    _this.state = {
+      cardList: []
+    };
     return _this;
   }
 
   _createClass(HomeContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.get('/api/allowance/list').then(function (cardList) {
+        console.log(cardList);
+
+        _this2.setState({
+          cardList: cardList.data
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log(this.state.cardList, "sooo card lis"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        cardList: this.state.cardList
+      }));
     }
   }]);
 
@@ -48058,12 +48071,12 @@ function (_React$Component) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     logout: function logout() {
-      return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_4__["logout"])());
+      return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_3__["logout"])());
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(null, mapDispatchToProps)(HomeContainer));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(null, mapDispatchToProps)(HomeContainer));
 
 /***/ }),
 
@@ -48161,10 +48174,12 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_login__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "imageLogin"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_login__WEBPACK_IMPORTED_MODULE_2__["default"], {
         handleChange: this.handleChange,
         handleSubmit: this.handleSubmit
-      });
+      }));
     }
   }]);
 
@@ -48208,14 +48223,16 @@ function login(_ref) {
   var handleChange = _ref.handleChange,
       handleSubmit = _ref.handleSubmit;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardHeader"], {
-    className: "form-header deep-blue-gradient rounded"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "my-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "lock"
-  }), " Login:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    md: "7"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "5"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInLeftBig"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], {
+    className: "transparenciaCard"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "h5 text-center mb-4"
+  }, "LOGIN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: handleSubmit
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grey-text"
@@ -48245,7 +48262,7 @@ function login(_ref) {
     type: "submit"
   }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "font-weight-light"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Not a member? Sign Up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Forgot Password?")))))))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Forgot Password?"))))))))));
 }
 ;
 
@@ -48268,9 +48285,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
 /* harmony import */ var _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../HomeContainer/index */ "./src/components/HomeContainer/index.jsx");
 /* harmony import */ var _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ObraSocialContainer/index */ "./src/components/ObraSocialContainer/index.jsx");
-/* harmony import */ var _LoginContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../LoginContainer */ "./src/components/LoginContainer/index.jsx");
-/* harmony import */ var _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AllowancesListContainer/index */ "./src/components/AllowancesListContainer/index.jsx");
-/* harmony import */ var _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../NavBarContainer/ */ "./src/components/NavBarContainer/index.jsx");
+/* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../NoFound/index */ "./src/components/NoFound/index.jsx");
+/* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_NoFound_index__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _LoginContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../LoginContainer */ "./src/components/LoginContainer/index.jsx");
+/* harmony import */ var _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../AllowancesListContainer/index */ "./src/components/AllowancesListContainer/index.jsx");
+/* harmony import */ var _NavBarContainer___WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../NavBarContainer/ */ "./src/components/NavBarContainer/index.jsx");
+/* harmony import */ var _FooterContainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../FooterContainer */ "./src/components/FooterContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48292,6 +48312,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
  // Components
+
+
 
 
 
@@ -48336,44 +48358,35 @@ function (_React$Component) {
         return 'loading';
       }
 
-      return (// <div>
-        //   <Switch>
-        //    <Route path="/login" component={LoginContainer}/>
-        //   {this.props.user.id? <Route component = {NavbarContainer}/>: null}
-        //   {/* <Route exact path="/allowance/search" component={AllowancesListContainer}/> */}
-        //   {/* <Route exact path="/allowance/:name" component={AllowanceContainer}/>
-        //   <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>}  */}
-        //   <Route path="/" component={Home}/>
-        //   </Switch>
-        // </div>
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-          component: _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__["default"]
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-          exact: true,
-          path: "/allowance/obra-social",
-          component: _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__["default"]
-        }), "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-          exact: true,
-          path: "/allowance/search",
-          component: _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_8__["default"]
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-          path: "/allowance/:name",
-          component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_3__["default"]
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-          exact: true,
-          path: "/",
-          component: _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__["default"]
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
-          from: "/login",
-          to: "/"
-        }))), ":", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "main",
-          className: "container"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-          path: "/login",
-          component: _LoginContainer__WEBPACK_IMPORTED_MODULE_7__["default"]
-        })))
-      );
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.user.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        component: _NavBarContainer___WEBPACK_IMPORTED_MODULE_10__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/allowance/:name",
+        component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_3__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/allowance/obra-social",
+        component: _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__["default"]
+      }), "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/allowance/search",
+        component: _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_9__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/",
+        component: _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+        from: "/login",
+        to: "/"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        component: _FooterContainer__WEBPACK_IMPORTED_MODULE_11__["default"]
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "main",
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/login",
+        component: _LoginContainer__WEBPACK_IMPORTED_MODULE_8__["default"]
+      })));
     }
   }]);
 
@@ -48492,13 +48505,13 @@ function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbar"], {
-        color: "amber lighten-4",
-        style: {
-          marginTop: "20px"
-        },
-        light: true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbarBrand"], null, "MDBNavbar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBHamburgerToggler"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbar"], {
+        className: "fixed-top"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbarBrand"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "logo",
+        src: "https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx",
+        alt: "Endava"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBHamburgerToggler"], {
         color: "#d3531a",
         id: "hamburger1",
         onClick: function onClick() {
@@ -48524,7 +48537,7 @@ function (_Component) {
         onClick: this.handleLogOut
       }, "Logout")), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
         to: "#!"
-      }, "Admin Panel")) : null)))));
+      }, "Admin Panel")) : null)));
     }
   }]);
 
@@ -48549,6 +48562,17 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Navbar));
+
+/***/ }),
+
+/***/ "./src/components/NoFound/index.jsx":
+/*!******************************************!*\
+  !*** ./src/components/NoFound/index.jsx ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -48694,8 +48718,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_css_only_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(bootstrap_css_only_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! mdbreact/dist/css/mdb.css */ "./node_modules/mdbreact/dist/css/mdb.css");
 /* harmony import */ var mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../back/src/public/styles/app.css */ "../back/src/public/styles/app.css");
-/* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../back/src/public/styles/fonts.css */ "../back/src/public/styles/fonts.css");
+/* harmony import */ var _back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../back/src/public/styles/app.css */ "../back/src/public/styles/app.css");
+/* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../back/src/public/styles/smartphone.css */ "../back/src/public/styles/smartphone.css");
+/* harmony import */ var _back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_10__);
 // el inicio de la app
 
 
@@ -48704,6 +48732,8 @@ __webpack_require__.r(__webpack_exports__);
 
  //Config MDB
 //import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
 
 
 

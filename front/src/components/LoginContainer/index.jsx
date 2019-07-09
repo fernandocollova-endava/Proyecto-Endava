@@ -41,7 +41,10 @@ handleSubmit(e){
 
   render() {
     return (
-      <Login handleChange = {this.handleChange} handleSubmit = {this.handleSubmit}/>
+      <div className="imageLogin">
+      <br/><br/><br/><br/>
+        <Login handleChange = {this.handleChange} handleSubmit = {this.handleSubmit}/>
+      </div>
     );
   }
 }

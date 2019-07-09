@@ -12,7 +12,9 @@ import Main from "./components/MainContainer/Main";
 //import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-import "../../back/src/public/styles/app.css"; 
+import "../../back/src/public/styles/fonts.css";
+import "../../back/src/public/styles/app.css";
+import "../../back/src/public/styles/smartphone.css";
 
 ReactDOM.render(
   <Provider store={store}>
