@@ -12,7 +12,7 @@ import NoFound from '../NoFound/index'
 import LoginContainer from "../LoginContainer";
 import AllowancesListContainer from "../AllowancesListContainer";
 import NavbarContainer from "../NavBarContainer/"
-
+import FooterContainer from "../FooterContainer"
 class MainContainer extends React.Component {
   componentDidMount() {
     this.props.fetchLoggedUser()
@@ -26,12 +26,13 @@ class MainContainer extends React.Component {
           }
               <Route component = {NavbarContainer}/>
               <Switch>
-              <Route path="/login" component={LoginContainer}/>
-              <Route path="/allowance/:name" component={AllowanceContainer}/>
-              <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
-              <Route exact path="/allowance/search" component={AllowancesListContainer}/>
-              <Route exact path="/" component={Home}/>
-              </Switch>                         
+                <Route path="/login" component={LoginContainer}/>
+                <Route path="/allowance/:name" component={AllowanceContainer}/>
+                <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
+                <Route exact path="/allowance/search" component={AllowancesListContainer}/>
+                <Route exact path="/" component={Home}/>
+              </Switch>        
+              <Route component = {FooterContainer}/>             
       </div>
     )
   }
