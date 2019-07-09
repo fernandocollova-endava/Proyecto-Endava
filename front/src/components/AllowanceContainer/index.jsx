@@ -8,13 +8,18 @@ class AllowanceContainer extends React.Component {
         super(props);
         this.state = {
             file: null,
-            employeeAmount: 400,
-            observation: 'lucas',
+            employeeAmount: 0,
+            observation: '',
             active: ''
         };
         this.onFormSubmit = this.onFormSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
+        this.onObservationChange =  this.onObservationChange.bind(this)
+        this.onAmountChange =  this.onAmountChange.bind(this)
     }
+  componentDidMount(){
+      console.log("me moneeeeeeeeeee")
+  }
     onFormSubmit(e) {
         e.preventDefault();
         const { file, ...rest } = this.state
@@ -34,30 +39,48 @@ class AllowanceContainer extends React.Component {
             });
     }
     onChange(e) {
-        this.setState({ file: e.target.files[0] });
+        console.log("so eeeeeee", e.target)
+        this.setState({ 
+            file: e.target.files[0]
+        });
+    }
+    onObservationChange(e){
+ 
+        this.setState({ 
+            observation: e.target.value,
+        })
+    }
+    onAmountChange(e){
+      
+        this.setState({ 
+            employeeAmount: e.target.value,
+            })
     }
 
     render() {
         return (
-            <form onSubmit={this.onFormSubmit}>
-                <h1>Formulario Reload</h1>
-                <input type="text" name="employeeAmount" placeholder="Monto Beneficio.." /><br />
-                <input type="text" name="observation" placeholder="Observacion.." /><br />
-                <input type="file" name="file" onChange={this.onChange} />
-                <button type="submit">Enviar</button>
+            <div>
 
-                {/* Visualización de archivo cargado */}
-                <p>
-                    {((this.state.active).split('.')[1] !== 'pdf' &&
-                        (this.state.active).split('.')[1] !== undefined) &&
-                        <img src={`/assets/receipt/${this.state.active}`} width="500px" />}
-                </p>
-                {
-                    ((this.state.active).split('.')[1] === 'pdf') &&
-                    <embed src={`/assets/receipt/${this.state.active}`} width="500" height="375"
-                        type="application/pdf"></embed>
-                }
-            </form>
+            <form onSubmit={this.onFormSubmit}>
+            <h1>Formulario Reload</h1>
+            <input type="text" name="employeeAmount" placeholder="Monto Beneficio.." onChange={this.onAmountChange} /><br />
+            <input type="text" name="observation" placeholder="Observacion.."onChange={this.onObservationChange}/><br />
+            <input type="file" name="file" onChange={this.onChange} />
+            <button type="submit">Enviar</button>
+
+            {/* Visualización de archivo cargado */}
+            <p>
+                {((this.state.active).split('.')[1] !== 'pdf' &&
+                    (this.state.active).split('.')[1] !== undefined) &&
+                    <img src={`/assets/receipt/${this.state.active}`} width="500px" />}
+            </p>
+            {
+                ((this.state.active).split('.')[1] === 'pdf') &&
+                <embed src={`/assets/receipt/${this.state.active}`} width="500" height="375"
+                    type="application/pdf"></embed>
+            }
+        </form>
+</div>
         )
     }
 }
@@ -77,3 +100,5 @@ export default connect(
     mapStateToProps,
     MapDispatchToProps
 )(AllowanceContainer)
+
+

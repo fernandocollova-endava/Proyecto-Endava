@@ -29,9 +29,9 @@ Employee.create({
     //salt: 'lkjljasda'
 })
 Employee.create({
-    name: 'Alejandro',
+    name: 'juan',
     surname: 'Villareal',
-    email: 'alejandro.villareal@endava.com',
+    email: 'ale@endava.com',
     sector: 'backend',
     "isAdmin": false,
     password: '123',

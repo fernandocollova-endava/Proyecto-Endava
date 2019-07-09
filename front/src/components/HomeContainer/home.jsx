@@ -35,7 +35,7 @@ const AnimationPage = ({cardList}) => {
                 <MDBCard className="Card-Img">
                   <div className="container-IMG">
                     <div className="div-img" >
-                    <Link to={`/alowence/${card.name}`} >
+                    <Link to={`/alowance/${card.name}`} >
                       <img src={card.imgUrl}
                         className="img-fluid margenBottomMobile img"
                         alt={`Imagen logo ${card.name}`} />

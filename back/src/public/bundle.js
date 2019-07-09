@@ -47649,16 +47649,23 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(AllowanceContainer).call(this, props));
     _this.state = {
       file: null,
-      employeeAmount: 400,
-      observation: 'lucas',
+      employeeAmount: 0,
+      observation: '',
       active: ''
     };
     _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
     _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
+    _this.onObservationChange = _this.onObservationChange.bind(_assertThisInitialized(_this));
+    _this.onAmountChange = _this.onAmountChange.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(AllowanceContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log("me moneeeeeeeeeee");
+    }
+  }, {
     key: "onFormSubmit",
     value: function onFormSubmit(e) {
       var _this2 = this;
@@ -47687,23 +47694,40 @@ function (_React$Component) {
   }, {
     key: "onChange",
     value: function onChange(e) {
+      console.log("so eeeeeee", e.target);
       this.setState({
         file: e.target.files[0]
       });
     }
   }, {
+    key: "onObservationChange",
+    value: function onObservationChange(e) {
+      this.setState({
+        observation: e.target.value
+      });
+    }
+  }, {
+    key: "onAmountChange",
+    value: function onAmountChange(e) {
+      this.setState({
+        employeeAmount: e.target.value
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.onFormSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Formulario Reload"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "employeeAmount",
-        placeholder: "Monto Beneficio.."
+        placeholder: "Monto Beneficio..",
+        onChange: this.onAmountChange
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "observation",
-        placeholder: "Observacion.."
+        placeholder: "Observacion..",
+        onChange: this.onObservationChange
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "file",
         name: "file",
@@ -47718,7 +47742,7 @@ function (_React$Component) {
         width: "500",
         height: "375",
         type: "application/pdf"
-      }));
+      })));
     }
   }]);
 
@@ -47824,7 +47848,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("so lis de allowances", this.props.allowanceList), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
@@ -47943,7 +47967,7 @@ var AnimationPage = function AnimationPage(_ref) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "div-img"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/alowence/".concat(card.name)
+      to: "/alowance/".concat(card.name)
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: card.imgUrl,
       className: "img-fluid margenBottomMobile img",
@@ -48035,7 +48059,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log(this.state.cardList, "sooo card lis"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home__WEBPACK_IMPORTED_MODULE_1__["default"], {
         cardList: this.state.cardList
       }));
     }
@@ -48119,6 +48143,14 @@ function (_React$Component) {
   }
 
   _createClass(LoginContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (this.props.user.id) {
+        console.log("enreeeeee", this.props.user);
+        this.props.history.push("/");
+      }
+    }
+  }, {
     key: "handleChange",
     value: function handleChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
@@ -48154,6 +48186,12 @@ function (_React$Component) {
   return LoginContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    user: state.user.user
+  };
+};
+
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     logginUser: function logginUser(data) {
@@ -48162,7 +48200,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, mapDispatchToProps)(LoginContainer));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(LoginContainer));
 
 /***/ }),
 
@@ -48250,7 +48288,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../NoFound/index */ "./src/components/NoFound/index.jsx");
 /* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_NoFound_index__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _LoginContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../LoginContainer */ "./src/components/LoginContainer/index.jsx");
-/* harmony import */ var _AllowancesListContainer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../AllowancesListContainer */ "./src/components/AllowancesListContainer/index.jsx");
+/* harmony import */ var _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../AllowancesListContainer/index */ "./src/components/AllowancesListContainer/index.jsx");
 /* harmony import */ var _NavBarContainer___WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../NavBarContainer/ */ "./src/components/NavBarContainer/index.jsx");
 /* harmony import */ var _FooterContainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../FooterContainer */ "./src/components/FooterContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -48291,25 +48329,38 @@ function (_React$Component) {
   _inherits(MainContainer, _React$Component);
 
   function MainContainer() {
+    var _this;
+
     _classCallCheck(this, MainContainer);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(MainContainer).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(MainContainer).call(this));
+    _this.state = {
+      loading: true
+    };
+    return _this;
   }
 
   _createClass(MainContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchLoggedUser();
+      var _this2 = this;
+
+      this.props.fetchLoggedUser().then(function () {
+        _this2.setState({
+          loading: false
+        });
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      if (this.state.loading) {
+        return 'loading';
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.user.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         component: _NavBarContainer___WEBPACK_IMPORTED_MODULE_10__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        path: "/login",
-        component: _LoginContainer__WEBPACK_IMPORTED_MODULE_8__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "/allowance/:name",
         component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_3__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
@@ -48319,22 +48370,32 @@ function (_React$Component) {
       }), "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/allowance/search",
-        component: _AllowancesListContainer__WEBPACK_IMPORTED_MODULE_9__["default"]
+        component: _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_9__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/",
         component: _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+        from: "/login",
+        to: "/"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         component: _FooterContainer__WEBPACK_IMPORTED_MODULE_11__["default"]
-      }));
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "main",
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/login",
+        component: _LoginContainer__WEBPACK_IMPORTED_MODULE_8__["default"]
+      })));
     }
   }]);
 
   return MainContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(state, owner) {
+var mapStateToProps = function mapStateToProps(state, own) {
   return {
+    location: own.location.pathname,
     user: state.user.user
   };
 };
@@ -48711,6 +48772,7 @@ var receiveAllowances = function receiveAllowances(allowanceList) {
 };
 var createAllowance = function createAllowance(formData) {
   return function (dispatch) {
+    console.log('so form daa del axios', formData);
     return axios__WEBPACK_IMPORTED_MODULE_0___default()({
       method: "POST",
       data: formData,
@@ -48723,7 +48785,7 @@ var createAllowance = function createAllowance(formData) {
 };
 var fetchAllowances = function fetchAllowances(userId) {
   return function (dispatch) {
-    console.log("enre al AXIOSSSSSSSSSSS");
+    console.log("enre al AXIOSSSSSSSSSSS", userId);
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/alowance/search/:".concat(userId)).then(function (res) {
       return res.data;
     }).then(function (allowanceList) {
@@ -48760,7 +48822,6 @@ var receiveLoggedUser = function receiveLoggedUser(loggedUser) {
   };
 };
 var userLogout = function userLogout() {
-  console.log("enbre al logouuuuuuu");
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_1__["USER_LOGOUT"]
   };

@@ -9,13 +9,13 @@ class AllowanceListContainer extends React.Component {
     this.state = {}
   }
   componentDidMount(){
+ 
     this.props.fetchAllowances(this.props.user.id)
 
   }
   render() {
     return (
       <div>
-        {console.log("so lis de allowances", this.props.allowanceList)}
         <AllowanceList/>
       </div>
     );
