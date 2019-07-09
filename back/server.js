@@ -22,10 +22,8 @@ app.use(passport.session());
 
 app.use((req, res, next) => {
     app.locals.user = req.user;
-    next()
+    next()  
 })
-
-
 app.use('/api', indexRouter)
 
 app.get('/*', function (req, res) {

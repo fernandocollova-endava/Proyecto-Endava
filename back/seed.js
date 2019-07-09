@@ -1,4 +1,4 @@
-const Allowance = require("./db/models").StaticAllowance
+const Allowance = require("./db/models").Allowance
 const Employee = require("./db/models").Employee
 
 Employee.create({
