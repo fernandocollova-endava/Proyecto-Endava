@@ -1,26 +1,35 @@
 import React from "react";
 import AnimationPage from "./home";
-import NavBarContainer from "../NavBarContainer";
 import { connect } from "react-redux";
-import { fetchLoggedUser, logout } from "../../redux/actions/user";
+import { logout } from "../../redux/actions/user";
+import Axios from "axios";
 
 class HomeContainer extends React.Component {
   constructor() {
     super();
-    this.state = {};
-
+    this.state = {
+      cardList:[]
+    };
+  }
+  componentDidMount(){
+    Axios.get('/api/allowance/list')
+      .then(cardList=>{
+        console.log(cardList)
+          this.setState({cardList:cardList.data})
+      })
   }
   render() {
     return (
       <div>
-        <AnimationPage />
+        <AnimationPage 
+        cardList = {this.state.cardList}
+        />
       </div>
     );
   }
 }
 
 const mapDispatchToProps = dispatch => ({
- 
   logout: () => dispatch(logout())
 });
 

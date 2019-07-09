@@ -33,12 +33,21 @@ body {
     text-align: center;
     font-size: 22px;
     padding-bottom: 15px;
-    margin-top:-20px;
-    font-family: robotobold;
+    margin-top:-40px;
+    font-family: robotobold;  
 }
+
 .btnModule {
     padding-bottom: 15px;
-    margin-top:-25px;
+    width: 80px;
+    border-radius: 10em;
+}
+
+.marginDemo {
+    margin-top:140px;
+}
+.TextParrafo {
+    text-align: center
 }
 
   /* === FICHA EFECT IMG + TEXT === */
@@ -67,6 +76,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    object-fit: contain;
+    max-height: 284px;
     transform: translate(0px, 0px) scale(1);
     -webkit-transform: translate(0px, 0px) scale(1);
     -moz-transform: translate(0px, 0px) scale(1);
@@ -81,9 +92,10 @@ body {
     font-family: 'Open Sans';
     position: relative;
     z-index: -1;
-    display: block;
     bottom: 72px;
-    width: 100%;
+    width: 70%;
+    font-size: 1.4vw;
+    display: block;
     text-align: center;
     transform: translate(0px, 0px) scale(1);
     -webkit-transform: translate(0px, 0px) scale(1);
@@ -102,6 +114,6 @@ body {
     -o-transform: translate(0px, -30px) scale(0.5);
     -ms-transform: translate(0px, -30px) scale(0.5);
     border-radius: 50%;
+    
   }
  
-

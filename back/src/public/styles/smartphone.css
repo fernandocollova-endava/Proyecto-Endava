@@ -10,5 +10,15 @@
     .margenBottomMobile {
         margin-bottom: 15px;
     }
+    .marginDemo {
+        margin-top:4px;
+    }
+    .btnModule {
+        margin-top:-35px;
+    }
+    .titleModule {
+        padding-bottom: 15px;
+        margin-top:-30px;
+    }
     
 }

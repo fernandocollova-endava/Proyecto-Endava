@@ -36,7 +36,8 @@ const Op = Sequelize.Op
                         instanceAllowance.dataValues.createdAt, //Fecha creacion
                         instanceAllowance.dataValues.limitDay
                     )
-
+                    // FIND INSTANCE
+                    
                     // Inserta en la instancia de allowance la instancia de employee
                     instanceAllowance.addEmployee(employee, {
                         through: {
@@ -47,6 +48,7 @@ const Op = Sequelize.Op
                             receiptPath: fileName,
                             status:'pendiente'
                         }
+                        
                     })   
                 })
         })
@@ -67,6 +69,17 @@ Router.get("/api/alowance/search/:id", function(req, res){
     })
 })
 
+// Ruta para extracción de los beneficios activos
+Router.get("/list/", function(req, res){
+    Allowance.findAll({
+        where:{
+            active:true
+        },
+        attributes: ['name', 'imgUrl','completeName']
+    }).then(allowanceList =>{
+        res.send(allowanceList)
+    })
+})
 
 function paymentDateFn(date, limitDate) {
     let valDate = (date.getDay() <= limitDate)? 1 : 2;

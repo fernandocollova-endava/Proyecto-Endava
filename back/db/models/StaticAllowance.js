@@ -15,6 +15,18 @@ const StaticAllowance = db.define("staticAllowance",{
     limitDay:{
         type: Sequelize.INTEGER,
         allowNull: false,
+    },
+    imgUrl:{
+        type: Sequelize.TEXT,
+        allowNull: false,
+    },
+    completeName:{
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    active:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
     }
 })
 
