@@ -76,7 +76,7 @@ Router.post('/', MulterFn.single("file"), (req, res) => {
         .catch(err => res.json(err))
 })
 
-Router.get("/api/alowance/search/:id", function (req, res) {
+Router.get("/search/:id", function (req, res) {
     console.log("so el req paramssssssss", req.params.userid)
     Allowance.findAll({
         where: {

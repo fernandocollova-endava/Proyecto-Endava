@@ -14,7 +14,7 @@ passport.serializeUser(function(user, done) {
 });
 //
 passport.deserializeUser(function(id, done) {
-    console.log('eso en el ID en el deserealize', id )
+  
     User.findByPk(id)
         .then(user => {
             done(null, user);

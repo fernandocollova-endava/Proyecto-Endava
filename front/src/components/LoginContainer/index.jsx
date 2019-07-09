@@ -14,6 +14,12 @@ class LoginContainer extends React.Component {
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
 }
+componentDidMount(){
+  if (this.props.user.id) {
+    console.log("enreeeeee", this.props.user)
+     this.props.history.push("/")
+  } 
+}
 
 handleChange(e){
 
@@ -42,6 +48,11 @@ handleSubmit(e){
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    user: state.user.user
+  }
+}
 const mapDispatchToProps = (dispatch) => (
   {
       logginUser: (data) => dispatch(logginUser(data))
@@ -49,4 +60,4 @@ const mapDispatchToProps = (dispatch) => (
 
 
 
-export default connect(null, mapDispatchToProps)(LoginContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);
