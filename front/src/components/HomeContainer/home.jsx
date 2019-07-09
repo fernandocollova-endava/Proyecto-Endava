@@ -15,7 +15,7 @@ const AnimationPage = ({cardList}) => {
           </MDBAnimation>
         </MDBCol>
         <MDBCol md="8">
-          <h1>Welcome to the allowence empleyee</h1>
+          <h1>Welcome to the Endava..</h1>
           <MDBAnimation type="fadeInUp">
             <p className="TextParrafo">
               We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world’s largest banks and payments companies.
