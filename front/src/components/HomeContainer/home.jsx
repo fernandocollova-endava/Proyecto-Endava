@@ -47,7 +47,7 @@ const AnimationPage = ({ cardList }) => {
                           alt={`Imagen logo ${card.name}`} />
                         <center>
                           <span
-                            className="text btnModule btn btn-info btn-md">
+                            className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">
                             Ingresar <i className="fas fa-angle-double-right"></i></span>
                         </center>
                       </Link>

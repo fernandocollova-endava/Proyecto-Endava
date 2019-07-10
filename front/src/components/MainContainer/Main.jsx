@@ -43,7 +43,6 @@ class MainContainer extends React.Component {
         {
           this.props.user.id ?
             <div>
-              {console.log("ok", this.props.user.id)}
               <Route component={NavbarContainer} />
               <Switch>
                 <Route exact path="/allowance/obra-social" component={ObraSocialContainer} />}
