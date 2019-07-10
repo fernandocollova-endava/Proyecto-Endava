@@ -35,9 +35,9 @@ Router.post('/', MulterFn.single("file"), (req, res) => {
                 .then(employeeInstance => { // Instancia del Empleado
                     // Inserta en la instancia de allowance la instancia de employee
                     // Genera la relacion empleado vs reintegro (Employee_Allowance)
-                    allowanceInstance.addEmployee(employeeInstance)
-
-                }).then(() => {
+                   return allowanceInstance.addEmployee(employeeInstance) 
+                //para que el otro .then se una debo retornar comntenido
+                }).then((data) => { // el .then debe tener info a pesar de no usarla, sino se ejecuta lo siguiente y no espera
                     // Realizamos un findOne para poder obtener la instancia promisificada de (Employee_Allowance)
                     Employee_Allowance.findOne({
                         where: {

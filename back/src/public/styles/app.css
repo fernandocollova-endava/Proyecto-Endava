@@ -36,7 +36,10 @@ body {
     margin-top:-40px;
     font-family: robotobold;  
 }
-
+.bannerAllowance{
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
 .btnModule {
     padding-bottom: 15px;
     width: 80px;
@@ -44,7 +47,7 @@ body {
 }
 
 .marginDemo {
-    margin-top:210px;
+    margin-top:10px;
 }
 .TextParrafo {
     text-align: center
@@ -94,7 +97,7 @@ body {
     z-index: -1;
     bottom: 72px;
     width: 70%;
-    font-size: 1.4vw;
+    font-size: 1.1vw;
     display: block;
     text-align: center;
     transform: translate(0px, 0px) scale(1);

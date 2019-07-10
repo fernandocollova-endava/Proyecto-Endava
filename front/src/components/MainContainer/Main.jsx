@@ -13,21 +13,22 @@ import LoginContainer from "../LoginContainer";
 import AllowancesListContainer from "../AllowancesListContainer/index";
 import NavbarContainer from "../NavBarContainer/"
 import FooterContainer from "../FooterContainer"
+
 class MainContainer extends React.Component {
-  constructor(){
+  constructor() {
     super()
-    this.state ={
+    this.state = {
       loading: true
     }
   }
   componentDidMount() {
     this.props.fetchLoggedUser()
-    .then(()=>{
+      .then(() => {
 
-      this.setState({
-        loading:false
+        this.setState({
+          loading: false
+        })
       })
-    })
   }
 
   render() {
@@ -35,29 +36,30 @@ class MainContainer extends React.Component {
     if (this.state.loading) {
       return 'loading'
     }
-    return ( 
-    
-   
+    return (
+
+
       <div>
-          {
-            this.props.user.id ?
+        {
+          this.props.user.id ?
             <div>
-              <Route component = {NavbarContainer}/>
+              {console.log("ok", this.props.user.id)}
+              <Route component={NavbarContainer} />
               <Switch>
-              <Route path="/allowance/:name" component={AllowanceContainer}/>
-              <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
-              <Route exact path="/allowance/search" component={AllowancesListContainer}/>
-              <Route exact path="/" component={Home}/>
-              <Redirect from="/login" to="/" />
+                <Route exact path="/allowance/obra-social" component={ObraSocialContainer} />}
+                <Route exact path="/allowance/search" component={AllowancesListContainer} />
+                <Route path="/allowance/:name" component={AllowanceContainer} />
+                <Route exact path="/" component={Home} />
+                <Redirect from="/login" to="/" />
               </Switch>
-              <Route component = {FooterContainer}/>
-            </div>: 
-              <div id="main" className="container">
-               <Route path="/login" component={LoginContainer}/>
-               {/* <Redirect from="/"  component={LoginContainer} /> */}
+              <Route component={FooterContainer} />
+            </div> :
+            <div>
+              <Route path="/login" component={LoginContainer} />
+              <Redirect to="/login" />
             </div>
-                         
-               } 
+
+        }
       </div>
     )
   }
