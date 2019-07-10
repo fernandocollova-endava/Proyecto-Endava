@@ -25,7 +25,7 @@ class AllowanceContainer extends React.Component {
         const { file, ...rest } = this.state
         const formData = new FormData();
         formData.append('file', file);
-        formData.append('userid', 1);
+        formData.append('userid', 2);
         formData.append('allowanceName', this.props.nameUrl);
         formData.append('employeeAmount', this.state.employeeAmount);
         formData.append('observation', this.state.observation);

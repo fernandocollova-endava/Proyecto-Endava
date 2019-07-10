@@ -16,7 +16,6 @@ class LoginContainer extends React.Component {
 }
 componentDidMount(){
   if (this.props.user.id) {
-    console.log("enreeeeee", this.props.user)
      this.props.history.push("/")
   } 
 }
@@ -30,7 +29,6 @@ handleChange(e){
 handleSubmit(e){
   e.preventDefault();
   // if(!validate(this.state)){
-  //   console.log(validate(this.state), "soooo validaeeeeeeee")
     this.props.logginUser(this.state)
     .then(()=>this.props.history.push("/"))
     .catch(() => this.setState({ error: true }))

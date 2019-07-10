@@ -3,18 +3,20 @@ import { Link } from "react-router-dom"
 import { MDBCard, MDBCardBody, MDBRow, MDBCol, MDBAnimation } from "mdbreact";
 
 
-const AnimationPage = ({cardList}) => {
+const AnimationPage = ({ cardList }) => {
   return (
     <>
+      <MDBAnimation type="fadeInUp">
+        <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/Be-Connected/FinalImages/InnerComunities/Hero_Desktop_ICTHub.ashx"
+          className="img-fluid bannerAllowance"
+          alt="Imagen endava" />
+      </MDBAnimation>
+
       <MDBRow className="container-banner">
-        <MDBCol md="3">
-          <MDBAnimation type="flipInY">
-            <img src="https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/02_MeetEndava_480x500.ashx"
-              className="img-fluid margenBottomMobile"
-              alt="Imagen endava" />
-          </MDBAnimation>
+        <MDBCol md="1">
+
         </MDBCol>
-        <MDBCol md="8">
+        <MDBCol md="10">
           <h1>Welcome to the Endava..</h1>
           <MDBAnimation type="fadeInUp">
             <p className="TextParrafo">
@@ -24,26 +26,30 @@ const AnimationPage = ({cardList}) => {
             </p>
           </MDBAnimation>
         </MDBCol>
+        <MDBCol md="1">
+
+        </MDBCol>
+
       </MDBRow>
 
       {/* FICHAS / MODULOS */}
       <MDBRow className="container-banner marginDemo">
         {
-          cardList && cardList.map((card,i) => (
+          cardList && cardList.map((card, i) => (
             <MDBCol md="3">
-              <MDBAnimation reveal type={((i%2==0)?'fadeInUp':'fadeInDown')}>
+              <MDBAnimation reveal type={((i % 2 == 0) ? 'fadeInUp' : 'fadeInDown')}>
                 <MDBCard className="Card-Img">
                   <div className="container-IMG">
                     <div className="div-img" >
-                    <Link to={`/alowance/${card.name}`} >
-                      <img src={card.imgUrl}
-                        className="img-fluid margenBottomMobile img"
-                        alt={`Imagen logo ${card.name}`} />
-                      <center>
-                        <span
-                        className="text btnModule btn btn-info btn-md">
-                        Ingresar <i className="fas fa-angle-double-right"></i></span>
-                      </center>
+                      <Link to={`/allowance/${card.name}`} >
+                        <img src={card.imgUrl}
+                          className="img-fluid margenBottomMobile img"
+                          alt={`Imagen logo ${card.name}`} />
+                        <center>
+                          <span
+                            className="text btnModule btn btn-info btn-md">
+                            Ingresar <i className="fas fa-angle-double-right"></i></span>
+                        </center>
                       </Link>
                     </div>
                   </div>
