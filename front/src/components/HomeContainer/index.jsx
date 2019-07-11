@@ -21,7 +21,6 @@ class HomeContainer extends React.Component {
   render() {
     return (
       <div>
-        {console.log(this.state.cardList, "sooo card lis")}
         <AnimationPage 
         cardList = {this.state.cardList}
         />

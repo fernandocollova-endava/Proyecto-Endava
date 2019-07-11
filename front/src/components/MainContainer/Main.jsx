@@ -45,7 +45,7 @@ class MainContainer extends React.Component {
               <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
               <Route exact path="/allowance/search" component={AllowancesListContainer}/>
               <Route exact path="/allowance/:name" component={AllowanceContainer}/>
-              <Route exact path="/login/passwordExpired" component={UpdatePassContainer}/>
+              <Route exact path="/login/expired" component={UpdatePassContainer}/>
              
               <Route exact path="/" component={Home}/>
               <Redirect from="/login" to="/" />
