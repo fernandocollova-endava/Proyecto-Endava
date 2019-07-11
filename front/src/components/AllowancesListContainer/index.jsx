@@ -23,15 +23,29 @@ class AllowanceListContainer extends React.Component {
   this.props.fetchAllowances(this.props.user.id, allowanceId)
   }
   render() {
+    // Condicional para redefinir los objetos
+    let val = this.props.allowanceList;
+    val = val.map(a=> {
+      return {
+        name:a.allowance.name,
+        amount:a.amount,
+        limitAmount:a.limitAmount,
+        employeeAmount:a.employeeAmount,
+        paymentDate:a.paymentDate,
+        status:a.status
+      }
+    } )
+
     return (
       <div>
-        <AllowanceList handleClick = {this.handleClick} allowanceList = {this.props.allowanceList} adminAllowances = {this.props.adminAllowances}/>
+        <AllowanceList handleClick = {this.handleClick} allowanceList = {val} adminAllowances = {this.props.adminAllowances}/>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
+  
   return {
     allowanceList : state.allowance.allowanceList,
     user: state.user.user,

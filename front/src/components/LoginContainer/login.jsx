@@ -52,6 +52,7 @@ export default function login({handleChange, handleSubmit}) {
                     validate
                     onChange = {handleChange}
                   />
+                  <label><input type="checkbox" id="cbox1" value="false" /> Remember me</label>
                 </div>
 
               <div className="text-center mt-4">
