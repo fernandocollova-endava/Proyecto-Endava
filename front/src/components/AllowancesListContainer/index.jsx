@@ -25,7 +25,6 @@ class AllowanceListContainer extends React.Component {
   render() {
     return (
       <div>
-        {console.log("so allowanse lissssss", this.props.adminAllowances)}
         <AllowanceList handleClick = {this.handleClick} allowanceList = {this.props.allowanceList} adminAllowances = {this.props.adminAllowances}/>
       </div>
     );

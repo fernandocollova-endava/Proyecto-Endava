@@ -1,72 +1,59 @@
 import React from "react";
+import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
 
 export default function updatePass({handleChange,handleSubmit}) {
 
   return (
     <div>
        <div>
-      <MDBContainer>
-      <MDBRow>
-      <MDBCol md="7">
-      </MDBCol>
-        <MDBCol md="5">
-        <br/>
-        <MDBAnimation type="fadeInLeftBig">
-          <MDBCard className="transparenciaCard">
-            <MDBCardBody>
-            <p className="h5 text-center mb-4">LOGIN</p>
-              <form onSubmit= {handleSubmit}>
-                <div className="grey-text">
-                <MDBInput
-                    label="Type your old password"
-                    icon="lock"
-                    group
-                    name= "Oldpassword"
-                    type="password"
-                    validate
-                    onChange = {handleChange}
-                  />
-                <MDBInput
-                    label="Type your new password"
-                    icon="lock"
-                    group
-                    name= "password"
-                    type="password"
-                    validate
-                    onChange = {handleChange}
-                  />
-                  <MDBInput
-                    label="Repet your new password"
-                    icon="lock"
-                    group
-                    name= "password"
-                    type="password"
-                    validate
-                    onChange = {handleChange}
-                  />
-                </div>
-
-              <div className="text-center mt-4">
-                <MDBBtn
-                  color="light-blue"
-                  className="mb-3"
-                  type="submit"
-                >
-                  Login
-                </MDBBtn>
-              </div>
-              </form>
-              <MDBModalFooter>
-                <div className="font-weight-light">
-                  <p>Forgot Password?</p>
-                </div>
-              </MDBModalFooter>
-            </MDBCardBody>
-          </MDBCard>
-          </MDBAnimation>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
+       <MDBContainer>
+        {/* BUTTON */}
+        <MDBBtn color="info" onClick={this.toggle}>Click</MDBBtn>
+        {/* MODAL */}
+        <MDBModal isOpen={this.state.modal} toggle={this.toggle}    >
+          <MDBModalHeader toggle={this.toggle}>MDBModal title</MDBModalHeader>
+          <MDBModalBody>
+          <form onSubmit= {handleSubmit}>
+            <div className="grey-text">
+              
+            <MDBInput
+                label="Your current password "
+                icon="lock"
+                group
+                type="password"
+                validate
+                onChange = {handleChange}
+              />
+              <MDBInput
+                label="Your new password"
+                icon="lock"
+                group
+                type="password"
+                validate
+                onChange = {handleChange}
+              />
+              <MDBInput
+                label="Confirm your new password"
+                icon="exclamation-triangle"
+                group
+                type="text"
+                validate
+                error="wrong"
+                success="right"
+                onChange = {handleChange}
+              />
+            </div>
+            <div className="text-center">
+            <MDBBtn  type="submit" color="primary">Save changes</MDBBtn>
+            </div>
+          </form>
+          </MDBModalBody>
+          <MDBModalFooter>
+            <MDBBtn color="secondary" onClick={this.toggle}>Close</MDBBtn>
+            
+          </MDBModalFooter>
+        </MDBModal>
+      </MDBContainer>
       
     </div>
     </div>

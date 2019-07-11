@@ -7,21 +7,35 @@ import {
   MDBDropdownItem
 } from "mdbreact";
 
-export default function allowanceList({ allowanceList, adminAllowances, handleClick }) {
+export default function allowanceList({
+  allowanceList,
+  adminAllowances,
+  handleClick
+}) {
   return (
     <div>
-
       <MDBDropdown>
         <MDBDropdownToggle caret color="primary">
           Allowances
         </MDBDropdownToggle>
         <MDBDropdownMenu basic>
-        {
-                        adminAllowances && adminAllowances.map(item=> (
-                          <button onClick = {() => {handleClick(item.id)}}><MDBDropdownItem>  {item.name}</MDBDropdownItem></button> 
-                        ))
-                    }
-          
+          <button
+            onClick={() => {
+              handleClick();
+            }}
+          >
+            <MDBDropdownItem> All </MDBDropdownItem>
+          </button>
+          {adminAllowances &&
+            adminAllowances.map(item => (
+              <button
+                onClick={() => {
+                  handleClick(item.id);
+                }}
+              >
+                <MDBDropdownItem> {item.name}</MDBDropdownItem>
+              </button>
+            ))}
         </MDBDropdownMenu>
       </MDBDropdown>
       {/* <div>

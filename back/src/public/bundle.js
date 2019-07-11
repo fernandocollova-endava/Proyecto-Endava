@@ -40224,7 +40224,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47732,12 +47732,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        modal: this.state.modal,
-        toggle: this.toggle,
-        textMsj: this.state.textMsj,
-        titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBAnimation"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBAnimation"], {
         type: "fadeInUp"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx",
@@ -47876,12 +47871,16 @@ function allowanceList(_ref) {
     color: "primary"
   }, "Allowances"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBDropdownMenu"], {
     basic: true
-  }, adminAllowances && adminAllowances.map(function (item) {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      handleClick();
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBDropdownItem"], null, " All ")), adminAllowances && adminAllowances.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onClick: function onClick() {
         handleClick(item.id);
       }
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBDropdownItem"], null, "  ", item.name));
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBDropdownItem"], null, " ", item.name));
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), allowanceList && allowanceList.map(function (Allowance) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Name: ".concat(Allowance.allowance.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Amount: ".concat(Allowance.amount)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Creation Date: ".concat(Allowance.createdAt))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
   }));
@@ -47956,7 +47955,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("so allowanse lissssss", this.props.adminAllowances), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
         handleClick: this.handleClick,
         allowanceList: this.props.allowanceList,
         adminAllowances: this.props.adminAllowances
@@ -48177,7 +48176,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log(this.state.cardList, "sooo card lis"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home__WEBPACK_IMPORTED_MODULE_1__["default"], {
         cardList: this.state.cardList
       }));
     }
@@ -48293,7 +48292,7 @@ function (_React$Component) {
         if (user.passwordChanged == false) {
           console.log("enre a ese iffffffff");
 
-          _this2.props.history.push("/passwordExpired");
+          _this2.props.history.push("/login/expired");
         } else _this2.props.history.push("/");
       })["catch"](function () {
         _this2.setState({
@@ -48522,7 +48521,7 @@ function (_React$Component) {
         component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_4__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
-        path: "/login/passwordExpired",
+        path: "/login/expired",
         component: _UpdatePassContainer__WEBPACK_IMPORTED_MODULE_11__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
@@ -48907,19 +48906,19 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(UpdatePassContainer).call(this));
     _this.state = {
       oldPassword: "",
-      password: ""
+      password: "",
+      modal: false
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(UpdatePassContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      if (this.props.user.id) {
-        this.props.history.push("/");
-      }
+      console.log("me momeneeee");
     }
   }, {
     key: "handleChange",
@@ -48946,13 +48945,22 @@ function (_React$Component) {
       }); // }
     }
   }, {
+    key: "toggle",
+    value: function toggle() {
+      this.setState({
+        modal: !this.state.modal
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "imageLogin"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UpdatePassContainer_updatePass__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        handleChange: this.handleChange,
-        handleSubmit: this.handleSubmit
+        modal: this.state.modal,
+        toggle: this.toggle,
+        handleSubmit: this.handleSubmit,
+        handleChange: this.handleChange
       }));
     }
   }]);
@@ -48993,57 +49001,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return updatePass; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
 
 function updatePass(_ref) {
   var handleChange = _ref.handleChange,
       handleSubmit = _ref.handleSubmit;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBRow, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBCol, {
-    md: "7"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBCol, {
-    md: "5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBAnimation, {
-    type: "fadeInLeftBig"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBCard, {
-    className: "transparenciaCard"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBCardBody, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "h5 text-center mb-4"
-  }, "LOGIN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    color: "info",
+    onClick: this.toggle
+  }, "Click"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
+    isOpen: this.state.modal,
+    toggle: this.toggle
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
+    toggle: this.toggle
+  }, "MDBModal title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: handleSubmit
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grey-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBInput, {
-    label: "Type your old password",
+    label: "Your current password ",
     icon: "lock",
     group: true,
-    name: "Oldpassword",
     type: "password",
     validate: true,
     onChange: handleChange
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBInput, {
-    label: "Type your new password",
+    label: "Your new password",
     icon: "lock",
     group: true,
-    name: "password",
     type: "password",
     validate: true,
     onChange: handleChange
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBInput, {
-    label: "Repet your new password",
-    icon: "lock",
+    label: "Confirm your new password",
+    icon: "exclamation-triangle",
     group: true,
-    name: "password",
-    type: "password",
+    type: "text",
     validate: true,
+    error: "wrong",
+    success: "right",
     onChange: handleChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-center mt-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBBtn, {
-    color: "light-blue",
-    className: "mb-3",
-    type: "submit"
-  }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBModalFooter, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "font-weight-light"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Forgot Password?")))))))))));
+    className: "text-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    type: "submit",
+    color: "primary"
+  }, "Save changes")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    color: "secondary",
+    onClick: this.toggle
+  }, "Close"))))));
 }
 ;
 
