@@ -8,6 +8,7 @@ Employee.create({
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
+    passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -17,6 +18,7 @@ Employee.create({
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
+    passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -26,15 +28,17 @@ Employee.create({
     sector: 'front',
     "isAdmin": false,
     password: '123',
+    passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
-    name: 'Alejandro',
+    name: 'juan',
     surname: 'Villareal',
-    email: 'alejandro.villareal@endava.com',
+    email: 'ale@endava.com',
     sector: 'backend',
     "isAdmin": false,
     password: '123',
+    passwordChanged: false
     //salt: 'lkjljasda'
 })
 
@@ -49,11 +53,11 @@ Allowance.create({
     
 })
 Allowance.create({
-    name: 'trainning',
+    name: 'training',
     limitDay: 15,
     fixedAmount: 10000,
     imgUrl:'https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/02_MeetEndava_480x500.ashx',
-    completeName:'Trainning Allowance',
+    completeName:'Training Allowance',
     active:true
 })
 Allowance.create({

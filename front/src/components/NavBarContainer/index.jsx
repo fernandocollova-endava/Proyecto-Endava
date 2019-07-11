@@ -9,6 +9,7 @@ import {
   MDBHamburgerToggler
 } from "mdbreact";
 import {connect} from "react-redux"
+import { Link } from "react-router-dom"
 import {logout, fetchLoggedUser} from "../../redux/actions/user"
 
 class Navbar extends Component {
@@ -47,8 +48,11 @@ class Navbar extends Component {
     return (
         <MDBNavbar className="fixed-top">
             <MDBNavbarBrand>
-            <img className="logo" src="https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx"
-               alt="Endava" />
+              <Link to="/">
+                <img className="logo" 
+                  src="https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx"
+                  alt="Endava" />
+              </Link>
             </MDBNavbarBrand>
             <MDBHamburgerToggler
               color="#d3531a"
@@ -74,7 +78,7 @@ class Navbar extends Component {
                 </MDBNavItem>
                 {this.props.user.isAdmin == true? 
                 <MDBNavItem>
-                  <MDBNavLink to="#!">Admin Panel</MDBNavLink>
+                  <MDBNavLink to="/admin/panel">Admin Panel</MDBNavLink>
                 </MDBNavItem>
                 :null
                 }

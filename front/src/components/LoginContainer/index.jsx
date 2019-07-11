@@ -1,52 +1,100 @@
 import React from "react";
-import {connect } from "react-redux";
+import { connect } from "react-redux";
 import Login from "./login";
-import {logginUser} from "../../redux/actions/user"
-import validate from "../../auxFunctions/auxFunctions"
- 
+import { loginUser } from "../../redux/actions/user";
+import validate from "../../auxFunctions/auxFunctions";
+import UpdatePassContainer from "../UpdatePassContainer";
+
+import { logginUser } from "../../redux/actions/user";
+import ModalAviso from "../ModalContainer/modalAviso";
+
 class LoginContainer extends React.Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      modal: false,
+      textMsj: "",
+      titleMsj: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-}
+  componentDidMount() {
+    if (this.props.user.id) {
+      this.props.history.push("/");
+    }
+  }
 
-handleChange(e){
-
+  handleChange(e) {
     this.setState({
-      [e.target.name]:e.target.value
-    })
-}
-handleSubmit(e){
-  e.preventDefault();
-  // if(!validate(this.state)){
-  //   console.log(validate(this.state), "soooo validaeeeeeeee")
-    this.props.logginUser(this.state)
-    .then(()=>this.props.history.push("/"))
-    .catch(() => this.setState({ error: true }))
-    
-  // }
-}
+      [e.target.name]: e.target.value
+    });
+  }
+  handleSubmit(e) {
+    e.preventDefault();
+    // if(!validate(this.state)){
+    //   console.log(validate(this.state), "soooo validaeeeeeeee")
+    this.props
+      .loginUser(this.state)
+      .then(user => {
+        if (user.passwordChanged == false) {
+          this.props.history.push("/login/expired");
+        } else this.props.history.push("/");
+      })
+      .catch(() => {
+        this.setState({
+          error: true,
+          modal: true,
+          textMsj: "Please verify your username or  password..",
+          titleMsj: "Error"
+        });
+      });
 
+    // }
+  }
+  // TOGGLE de MODAL
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
 
   render() {
     return (
-      <div className="imageLogin">
-      <br/><br/><br/><br/>
-        <Login handleChange = {this.handleChange} handleSubmit = {this.handleSubmit}/>
-      </div>
+      <>
+        <ModalAviso
+          modal={this.state.modal}
+          toggle={this.toggle}
+          textMsj={this.state.textMsj}
+          titleMsj={this.state.titleMsj}
+        />
+        <div className="imageLogin">
+          <br />
+          <br />
+          <br />
+          <br />
+          <Login
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
+          />
+        </div>
+      </>
     );
   }
 }
-const mapDispatchToProps = (dispatch) => (
-  {
-      logginUser: (data) => dispatch(logginUser(data))
-  })
+const mapStateToProps = state => {
+  return {
+    user: state.user.user
+  };
+};
+const mapDispatchToProps = dispatch => ({
+  loginUser: data => dispatch(loginUser(data))
+});
 
-
-
-export default connect(null, mapDispatchToProps)(LoginContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginContainer);
