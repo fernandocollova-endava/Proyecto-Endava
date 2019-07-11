@@ -47732,8 +47732,20 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("so pending del index", this.props.pendingAllowances), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        allowanceList: this.props.pendingAllowances
+      // Condicional para redefinir los objetos
+      var val = this.props.pendingAllowances;
+      val = val.map(function (a) {
+        return {
+          name: a.allowance.name,
+          amount: a.amount,
+          limitAmount: a.limitAmount,
+          employeeAmount: a.employeeAmount,
+          paymentDate: a.paymentDate,
+          status: a.status
+        };
+      });
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        allowanceList: val
       }));
     }
   }]);
@@ -48078,7 +48090,7 @@ function allowanceList(_ref) {
     rows: allowanceList
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "1"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)));
+  }))));
 }
 
 /***/ }),
@@ -48959,7 +48971,10 @@ function (_Component) {
       }, "My Allowances")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
         onClick: this.handleLogOut
       }, "Logout")), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
-        to: "/admin/panel"
+        to: "/admin/panel",
+        onClick: function onClick() {
+          return _this3.toggleSingleCollapse("collapse1");
+        }
       }, "Admin Panel")) : null)));
     }
   }]);
