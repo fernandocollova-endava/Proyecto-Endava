@@ -23,7 +23,9 @@ class AllowanceContainer extends React.Component {
         this.onAmountChange = this.onAmountChange.bind(this)
         this.toggle = this.toggle.bind(this)
     }
-
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
     onFormSubmit(e) {
         e.preventDefault();
         const { file, ...rest } = this.state
@@ -65,7 +67,12 @@ class AllowanceContainer extends React.Component {
     render() {
         return (
             <>
-            
+            <ModalAviso
+          modal={this.state.modal}
+          toggle={this.toggle}
+          textMsj={this.state.textMsj}
+          titleMsj={this.state.titleMsj}
+      />
                 <MDBAnimation type="fadeInUp">
                     <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx"
                         className="img-fluid bannerAllowance"
@@ -76,7 +83,7 @@ class AllowanceContainer extends React.Component {
                     <MDBCol md="1">
 
                     </MDBCol>
-                    <MDBCol md="10">
+                    <MDBCol md="10"> 
                         <h1 className="upperCaseFonts">{`Manage your ${this.props.nameUrl} allowance refunds`}</h1>
                         <MDBAnimation type="fadeInUp">
                             <p className="TextParrafo">
