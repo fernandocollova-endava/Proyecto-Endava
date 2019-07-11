@@ -12,20 +12,20 @@ import FooterContainer from "../FooterContainer"
 import UpdatePassContainer from "../UpdatePassContainer"
 
 class MainContainer extends React.Component {
-  constructor(){
+  constructor() {
     super()
-    this.state ={
+    this.state = {
       loading: true
     }
   }
   componentDidMount() {
     this.props.fetchLoggedUser()
-    .then(()=>{
+      .then(() => {
 
-      this.setState({
-        loading:false
+        this.setState({
+          loading: false
+        })
       })
-    })
   }
 
   render() {
@@ -33,14 +33,14 @@ class MainContainer extends React.Component {
     if (this.state.loading) {
       return 'loading'
     }
-    return ( 
-    
-   
+    return (
+
+
       <div>
-          {
-            this.props.user.id ?
+        {
+          this.props.user.id ?
             <div>
-              <Route component = {NavbarContainer}/>
+              <Route component={NavbarContainer} />
               <Switch>
               <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
               <Route exact path="/allowance/search" component={AllowancesListContainer}/>

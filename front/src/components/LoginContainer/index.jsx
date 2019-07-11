@@ -5,15 +5,21 @@ import {loginUser} from "../../redux/actions/user"
 import validate from "../../auxFunctions/auxFunctions"
 import UpdatePassContainer from "../UpdatePassContainer"
  
+import {logginUser} from "../../redux/actions/user"
+import ModalAviso from "../ModalContainer/modalAviso" 
+
 class LoginContainer extends React.Component {
   constructor(){
     super()
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      modal: false,
+      textMsj: '', titleMsj: ''
   }
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.toggle = this.toggle.bind(this)
 }
 componentDidMount(){
   if (this.props.user.id) {
@@ -38,19 +44,34 @@ handleSubmit(e){
           console.log("enre a ese iffffffff")
           this.props.history.push("/passwordExpired")
         }else this.props.history.push("/")
+    }).catch(() => {
+      this.setState({ error: true,
+        modal: true, textMsj: 'Please verify your username or  password..', titleMsj: 'Error'  })
     })
-    .catch(() => this.setState({ error: true }))
     
   // }
 }
-
+// TOGGLE de MODAL
+toggle() {
+  this.setState({
+      modal: !this.state.modal
+  });
+}
 
   render() {
     return (
+      <>
+      <ModalAviso
+          modal={this.state.modal}
+          toggle={this.toggle}
+          textMsj={this.state.textMsj}
+          titleMsj={this.state.titleMsj}
+      />
       <div className="imageLogin">
       <br/><br/><br/><br/>
         <Login handleChange = {this.handleChange} handleSubmit = {this.handleSubmit}/>
       </div>
+      </>
     );
   }
 }

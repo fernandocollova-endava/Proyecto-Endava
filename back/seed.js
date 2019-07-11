@@ -53,11 +53,11 @@ Allowance.create({
     
 })
 Allowance.create({
-    name: 'trainning',
+    name: 'training',
     limitDay: 15,
     fixedAmount: 10000,
     imgUrl:'https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/02_MeetEndava_480x500.ashx',
-    completeName:'Trainning Allowance',
+    completeName:'Training Allowance',
     active:true
 })
 Allowance.create({
