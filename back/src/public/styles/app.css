@@ -2,28 +2,14 @@
 body {
     margin-top: 100px;
 }
-.navbar {
-    box-shadow:none;
-    margin-bottom: 10px;
-    background-color: rgba(250, 250, 250, 0.9);
-}
-.logo {
-    padding-left: 36px;
-    width: 182px;
-}
-.logoLogin{
-  width: 182px;
-}
-.nav-item:hover {
-    background-color: #ececec;
-    /* transition: all 0.05s ease-in-out */
-}
 .container-banner {
     margin-right: 10px; 
     margin-left: 10px;   
 }
 .imageLogin {
-    background-image: url('https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx');
+  background-image: url('/assets/img/PeopleSocializing.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
     width: 100%; 
     height: 100vh;
     margin-top: -110px;
@@ -93,7 +79,32 @@ body {
 .TextParrafo {
     text-align: center
 }
+ 
+/* === MENU  === */
+  /* ========================================= */
+ 
+.navbar {
+    box-shadow:none;
+    margin-bottom: 10px;
+    background-color: rgba(250, 250, 250, 0.9);
+}
+.logo {
+    padding-left: 36px;
+    width: 182px;
+}
+.logoLogin{
+  width: 182px;
+}
+.nav-item:hover {
+    background-color: #ececec;
+    /* transition: all 0.05s ease-in-out */
+}
 
+.transparentMenu {
+  height: 1000px;
+  max-height: 100%;
+  background-color: #9e9e9e0a;
+}
   /* === FICHA EFECT IMG + TEXT === */
   /* ========================================= */
   .Card-Img {
