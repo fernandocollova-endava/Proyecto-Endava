@@ -47727,12 +47727,25 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchPendingAllowances();
+      window.scrollTo(0, 0);
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("so pending del index", this.props.pendingAllowances), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        allowanceList: this.props.pendingAllowances
+      // Condicional para redefinir los objetos
+      var val = this.props.pendingAllowances;
+      val = val.map(function (a) {
+        return {
+          name: a.allowance.name,
+          amount: a.amount,
+          limitAmount: a.limitAmount,
+          employeeAmount: a.employeeAmount,
+          paymentDate: a.paymentDate,
+          status: a.status
+        };
+      });
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        allowanceList: val
       }));
     }
   }]);
@@ -47830,6 +47843,11 @@ function (_React$Component) {
   }
 
   _createClass(AllowanceContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
     key: "onFormSubmit",
     value: function onFormSubmit(e) {
       var _this2 = this;
@@ -48072,7 +48090,7 @@ function allowanceList(_ref) {
     rows: allowanceList
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "1"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)));
+  }))));
 }
 
 /***/ }),
@@ -48866,6 +48884,7 @@ function (_Component) {
       collapseID: ""
     };
     _this.handleLogOut = _this.handleLogOut.bind(_assertThisInitialized(_this));
+    _this.closeCollapse = _this.closeCollapse.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -48873,6 +48892,7 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchLoggedUser();
+      window.scrollTo(0, 0);
     }
   }, {
     key: "toggleCollapse",
@@ -48899,6 +48919,11 @@ function (_Component) {
       });
     }
   }, {
+    key: "closeCollapse",
+    value: function closeCollapse(collapseId) {
+      this.setState(_objectSpread({}, this.state, _defineProperty({}, collapseId, false)));
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this3 = this;
@@ -48908,7 +48933,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbarBrand"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/",
         onClick: function onClick() {
-          return _this3.toggleSingleCollapse("collapse1");
+          return _this3.closeCollapse("collapse1");
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "logo",
@@ -48946,7 +48971,10 @@ function (_Component) {
       }, "My Allowances")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
         onClick: this.handleLogOut
       }, "Logout")), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
-        to: "/admin/panel"
+        to: "/admin/panel",
+        onClick: function onClick() {
+          return _this3.toggleSingleCollapse("collapse1");
+        }
       }, "Admin Panel")) : null)));
     }
   }]);

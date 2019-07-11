@@ -180,6 +180,9 @@ Router.get("/list/", function (req, res) {
     where: {
       active: true
     },
+    order: [
+      ['id', 'ASC']
+    ],
     attributes: ["name", "imgUrl", "completeName"]
   }).then(allowanceList => {
     res.send(allowanceList);

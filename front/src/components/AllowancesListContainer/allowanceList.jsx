@@ -65,20 +65,6 @@ export default function allowanceList({
           </MDBCol>
         </MDBRow>
 
-        <hr />
-        {/* {allowanceList &&
-          allowanceList.map(Allowance => {
-            return (
-              <div>
-                <ul>
-                  <li>{`Name: ${Allowance.allowance.name}`}</li>
-                  <li>{`Amount: ${Allowance.amount}`}</li>
-                  <li>{`Creation Date: ${Allowance.createdAt}`}</li>
-                </ul>
-                <hr />
-              </div>
-            );
-          })} */}
       </div>
     </>
   )

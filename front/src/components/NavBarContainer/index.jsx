@@ -20,9 +20,11 @@ class Navbar extends Component {
       collapseID: ""
     };
     this.handleLogOut = this.handleLogOut.bind(this);
+    this.closeCollapse = this.closeCollapse.bind(this)
   }
   componentDidMount(){
     this.props.fetchLoggedUser()
+    window.scrollTo(0, 0)
   }
  
   toggleCollapse(collapseID) {
@@ -42,7 +44,12 @@ class Navbar extends Component {
     this.props.logout().then(res => {
       if (res === "logoutOK") this.props.history.push("/login");
     });
-
+  }
+  closeCollapse(collapseId) {
+    this.setState({
+      ...this.state,
+      [collapseId]: false
+    });
   }
 
 
@@ -50,7 +57,7 @@ class Navbar extends Component {
     return (
         <MDBNavbar className="fixed-top">
             <MDBNavbarBrand>
-              <Link to="/" onClick={() => this.toggleSingleCollapse("collapse1")}>
+              <Link to="/" onClick={() => this.closeCollapse("collapse1")}>
               
                 <img className="logo" 
                   src="https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx"
@@ -76,7 +83,7 @@ class Navbar extends Component {
                 </MDBNavItem>
                 {this.props.user.isAdmin == true? 
                 <MDBNavItem>
-                  <MDBNavLink to="/admin/panel">Admin Panel</MDBNavLink>
+                  <MDBNavLink to="/admin/panel"  onClick={() => this.toggleSingleCollapse("collapse1")}>Admin Panel</MDBNavLink>
                 </MDBNavItem>
                 :null
                 }
