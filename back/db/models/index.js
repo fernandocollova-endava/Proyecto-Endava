@@ -23,7 +23,8 @@ Allowance.belongsToMany(Employee, {
 });
 
 //AllowanceDetail.belongsToMany(EmployeeAllowence, {as: "emPall",through: 'detailAllowance'})
-AllowanceDetail.belongsTo(Employee_Allowance, { as: "employeeAllowence" })
+AllowanceDetail.belongsTo(Employee_Allowance, { as: "employeeAllowance" })
+AllowanceDetail.belongsTo(Allowance, { as: "allowance" })
 
 // Relación BookAllowance - Employe ( Prorrateo; Fecha; Monto ingresado, otorgado, remanente.)
 // Employee.belongsToMany(StaticAllowance, { as: "allowance", through: 'EmployeeAllowence', onDelete: 'CASCADE', onUpdate: 'CASCADE' })

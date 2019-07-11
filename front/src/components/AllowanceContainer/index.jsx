@@ -180,8 +180,8 @@ class AllowanceContainer extends React.Component {
 }
 const mapStateToProps = (state, owner) => {
     return {
-        nameUrl: owner.match.params.name, // Extrae la url dinamica
-        user: state.user.user // Setea el user
+         user: state.user.user,
+         nameUrl: owner.match.params.name // Extrae la url dinamica
     }
 }
 

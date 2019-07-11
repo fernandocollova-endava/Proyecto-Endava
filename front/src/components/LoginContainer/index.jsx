@@ -1,6 +1,10 @@
 import React from "react";
 import {connect } from "react-redux";
 import Login from "./login";
+import {loginUser} from "../../redux/actions/user"
+import validate from "../../auxFunctions/auxFunctions"
+import UpdatePassContainer from "../UpdatePassContainer"
+ 
 import {logginUser} from "../../redux/actions/user"
 import ModalAviso from "../ModalContainer/modalAviso" 
 
@@ -32,9 +36,15 @@ handleChange(e){
 handleSubmit(e){
   e.preventDefault();
   // if(!validate(this.state)){
-    this.props.logginUser(this.state)
-    .then(()=> this.props.history.push("/"))
-    .catch(() => {
+  //   console.log(validate(this.state), "soooo validaeeeeeeee")
+    this.props.loginUser(this.state)
+    .then((user)=>{
+       
+        if (user.passwordChanged == false) {
+          console.log("enre a ese iffffffff")
+          this.props.history.push("/passwordExpired")
+        }else this.props.history.push("/")
+    }).catch(() => {
       this.setState({ error: true,
         modal: true, textMsj: 'Please verify your username or  password..', titleMsj: 'Error'  })
     })
@@ -72,7 +82,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => (
   {
-      logginUser: (data) => dispatch(logginUser(data))
+      loginUser: (data) => dispatch(loginUser(data))
   })
 
 
