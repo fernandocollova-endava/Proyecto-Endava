@@ -15,12 +15,11 @@ const Employee_Allowance = require("../../db/models/").Employee_Allowance;
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
-Router.get("/", function (req, res) {
-  console.log("enre al ROUERRRRRRRRRRRRRR");
+Router.get("/", function(req, res) {
   Allowance.findAll().then(adminAllowances => res.send(adminAllowances));
 });
 
-// Insert static allowance
+// Insert allowance
 Router.post("/", MulterFn.single("file"), (req, res) => {
   // Obtengo el nombre del archivo
   const fileName = req.file.filename;
@@ -55,10 +54,6 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
             }
           }).then(Employee_Allowance_Instance => {
             // Instancia de Employee_Allowance
-            console.log(
-              "so la allowance insancie",
-              Employee_Allowance_Instance
-            );
             let paymentDate = paymentDateFn(
               allowanceInstance.dataValues.createdAt, //Fecha creacion
               allowanceInstance.dataValues.limitDay
@@ -162,6 +157,20 @@ Router.get("/search/", function (req, res) {
           res.send(alloResponse);
         });
     });
+  });
+});
+Router.get("/search/all", function(req, res) {
+  AllowanceDetail.findAll({
+    where: {
+      status: "pendiente"
+    },
+    include: [
+      {
+        model: Allowance,
+        as: "allowance"
+      }
+    ]
+  }).then(allowanceList => { res.send(allowanceList);
   });
 });
 
