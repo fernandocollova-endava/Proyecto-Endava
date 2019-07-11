@@ -25,7 +25,7 @@ class AllowanceContainer extends React.Component {
         const { file, ...rest } = this.state
         const formData = new FormData();
         formData.append('file', file);
-        formData.append('userid', 1);
+        formData.append('userid', this.props.user.id);
         formData.append('allowanceName', this.props.nameUrl);
         formData.append('employeeAmount', this.state.employeeAmount);
         formData.append('observation', this.state.observation);
@@ -86,6 +86,7 @@ class AllowanceContainer extends React.Component {
 }
 const mapStateToProps = (state, owner) => {
     return {
+         user: state.user.user,
          nameUrl: owner.match.params.name // Extrae la url dinamica
     }
 }

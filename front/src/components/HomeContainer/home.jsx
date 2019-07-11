@@ -15,7 +15,7 @@ const AnimationPage = ({cardList}) => {
           </MDBAnimation>
         </MDBCol>
         <MDBCol md="8">
-          <h1>Welcome to the allowence empleyee</h1>
+          <h1>Welcome to the allowance employee</h1>
           <MDBAnimation type="fadeInUp">
             <p className="TextParrafo">
               We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world’s largest banks and payments companies.
@@ -35,7 +35,7 @@ const AnimationPage = ({cardList}) => {
                 <MDBCard className="Card-Img">
                   <div className="container-IMG">
                     <div className="div-img" >
-                    <Link to={`/alowance/${card.name}`} >
+                    <Link to={`/allowance/${card.name}`} >
                       <img src={card.imgUrl}
                         className="img-fluid margenBottomMobile img"
                         alt={`Imagen logo ${card.name}`} />

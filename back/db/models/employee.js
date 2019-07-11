@@ -35,6 +35,9 @@ const Employee = db.define("employee",{
             notEmpty: true,
         }
     },
+    passwordChanged: {
+        type: Sequelize.BOOLEAN,
+    },
     salt: {
         type: Sequelize.STRING,
     }

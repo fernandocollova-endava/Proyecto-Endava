@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ADD_ALLOWANCE_TO_DB, RECEIVE_ALLOWANCES } from "../../constants";
+import { ADD_ALLOWANCE_TO_DB, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES } from "../../constants";
 
 export const receiveAllowances = function(allowanceList) {
   return {
@@ -7,9 +7,14 @@ export const receiveAllowances = function(allowanceList) {
     allowanceList
   };
 };
+export const receiveAdminAllowances = function(adminAllowances) {
+  return {
+    type: RECEIVE_ADMIN_ALLOWANCES,
+    adminAllowances
+  };
+};
 
 export const createAllowance = formData => dispatch => {
-  console.log('so form daa del axios', formData)
   return axios({
     method: "POST",
     data: formData,
@@ -19,10 +24,27 @@ export const createAllowance = formData => dispatch => {
     }
   });
 };
-export const fetchAllowances = userId => dispatch => {
-  console.log("enre al AXIOSSSSSSSSSSS", userId)
+export const fetchAllowances = (userId, allowanceId) => dispatch => {
+ 
   return axios
-    .get(`/api/alowance/search/:${userId}`)
+    .get("/api/allowance/search", {
+      params:{
+        allowanceId: allowanceId,
+        userId: userId
+      }
+    })
     .then(res => res.data)
     .then(allowanceList => dispatch(receiveAllowances(allowanceList)));
 };
+export const fetchAdminAllowances =() => dispatch =>{
+  
+  return axios.get('/api/allowance/')
+  .then(res => res.data)
+  .then(adminAllowances =>{
+
+    console.log("SOOOOOo", adminAllowances)
+    dispatch(receiveAdminAllowances(adminAllowances))
+  
+  })
+
+}

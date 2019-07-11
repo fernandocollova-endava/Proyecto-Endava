@@ -8,6 +8,7 @@ Employee.create({
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
+    passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -17,6 +18,7 @@ Employee.create({
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
+    passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -26,6 +28,7 @@ Employee.create({
     sector: 'front',
     "isAdmin": false,
     password: '123',
+    passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -35,6 +38,7 @@ Employee.create({
     sector: 'backend',
     "isAdmin": false,
     password: '123',
+    passwordChanged: false
     //salt: 'lkjljasda'
 })
 

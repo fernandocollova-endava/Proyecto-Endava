@@ -1,8 +1,9 @@
 import React from "react";
 import {connect } from "react-redux";
 import Login from "./login";
-import {logginUser} from "../../redux/actions/user"
+import {loginUser} from "../../redux/actions/user"
 import validate from "../../auxFunctions/auxFunctions"
+import UpdatePassContainer from "../UpdatePassContainer"
  
 class LoginContainer extends React.Component {
   constructor(){
@@ -16,7 +17,6 @@ class LoginContainer extends React.Component {
 }
 componentDidMount(){
   if (this.props.user.id) {
-    console.log("enreeeeee", this.props.user)
      this.props.history.push("/")
   } 
 }
@@ -31,8 +31,14 @@ handleSubmit(e){
   e.preventDefault();
   // if(!validate(this.state)){
   //   console.log(validate(this.state), "soooo validaeeeeeeee")
-    this.props.logginUser(this.state)
-    .then(()=>this.props.history.push("/"))
+    this.props.loginUser(this.state)
+    .then((user)=>{
+       
+        if (user.passwordChanged == false) {
+          console.log("enre a ese iffffffff")
+          this.props.history.push("/passwordExpired")
+        }else this.props.history.push("/")
+    })
     .catch(() => this.setState({ error: true }))
     
   // }
@@ -55,7 +61,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => (
   {
-      logginUser: (data) => dispatch(logginUser(data))
+      loginUser: (data) => dispatch(loginUser(data))
   })
 
 

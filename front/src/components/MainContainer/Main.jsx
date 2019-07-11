@@ -1,18 +1,16 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-
-// Components
-import AllowanceContainer from '../AllowanceContainer/index'
 import { fetchLoggedUser } from '../../redux/actions/user'
+import AllowanceContainer from '../AllowanceContainer/index'
 import Home from '../HomeContainer/index'
 import ObraSocialContainer from '../ObraSocialContainer/index'
-import NoFound from '../NoFound/index'
-
 import LoginContainer from "../LoginContainer";
 import AllowancesListContainer from "../AllowancesListContainer/index";
 import NavbarContainer from "../NavBarContainer/"
 import FooterContainer from "../FooterContainer"
+import UpdatePassContainer from "../UpdatePassContainer"
+
 class MainContainer extends React.Component {
   constructor(){
     super()
@@ -44,20 +42,22 @@ class MainContainer extends React.Component {
             <div>
               <Route component = {NavbarContainer}/>
               <Switch>
-              <Route path="/allowance/:name" component={AllowanceContainer}/>
               <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
               <Route exact path="/allowance/search" component={AllowancesListContainer}/>
+              <Route exact path="/allowance/:name" component={AllowanceContainer}/>
+              <Route exact path="/login/passwordExpired" component={UpdatePassContainer}/>
+             
               <Route exact path="/" component={Home}/>
               <Redirect from="/login" to="/" />
               </Switch>
               <Route component = {FooterContainer}/>
             </div>: 
-              <div id="main" className="container">
+              <div>
                <Route path="/login" component={LoginContainer}/>
-               {/* <Redirect from="/"  component={LoginContainer} /> */}
+               <Redirect from="/" to="/login" component={LoginContainer} />
             </div>
                          
-               } 
+               }  
       </div>
     )
   }
