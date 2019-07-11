@@ -40224,7 +40224,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47597,6 +47597,130 @@ module.exports = validate; // (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).
 
 /***/ }),
 
+/***/ "./src/components/AdminHomeContainer/AdminPanel.jsx":
+/*!**********************************************************!*\
+  !*** ./src/components/AdminHomeContainer/AdminPanel.jsx ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AdminPanel; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function AdminPanel(_ref) {
+  var pendingAllowances = _ref.pendingAllowances;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null) // {console.log("so pending allowances",pendingAllowances )}
+  // <div>
+  //   <ul>
+  // {
+  //    pendingAllowances && pendingAllowances.map((allowance)=>{
+  //     <li>{allowance.allowance.name}</li>
+  //     <li>{allowance.employeeAmount}</li>
+  //     <li>{allowance.observation}</li>
+  //     <li>{allowance.paymentDate}</li>
+  //     <li>{allowance.status}</li>
+  //   })
+  // } 
+  // </ul>
+  // </div>
+  ;
+}
+;
+
+/***/ }),
+
+/***/ "./src/components/AdminHomeContainer/index.jsx":
+/*!*****************************************************!*\
+  !*** ./src/components/AdminHomeContainer/index.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _AdminHomeContainer_AdminPanel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AdminHomeContainer/AdminPanel */ "./src/components/AdminHomeContainer/AdminPanel.jsx");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../AllowancesListContainer/allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var AdminHomeContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(AdminHomeContainer, _React$Component);
+
+  function AdminHomeContainer() {
+    var _this;
+
+    _classCallCheck(this, AdminHomeContainer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminHomeContainer).call(this));
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(AdminHomeContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchPendingAllowances();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("so pending del index", this.props.pendingAllowances), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        allowanceList: this.props.pendingAllowances
+      }));
+    }
+  }]);
+
+  return AdminHomeContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    pendingAllowances: state.allowance.pendingAllowances
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchPendingAllowances: function fetchPendingAllowances() {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchPendingAllowances"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(AdminHomeContainer));
+
+/***/ }),
+
 /***/ "./src/components/AllowanceContainer/index.jsx":
 /*!*****************************************************!*\
   !*** ./src/components/AllowanceContainer/index.jsx ***!
@@ -48166,8 +48290,6 @@ function (_React$Component) {
       var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_4___default.a.get('/api/allowance/list').then(function (cardList) {
-        console.log(cardList);
-
         _this2.setState({
           cardList: cardList.data
         });
@@ -48259,8 +48381,8 @@ function (_React$Component) {
       email: "",
       password: "",
       modal: false,
-      textMsj: '',
-      titleMsj: ''
+      textMsj: "",
+      titleMsj: ""
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -48290,16 +48412,14 @@ function (_React$Component) {
 
       this.props.loginUser(this.state).then(function (user) {
         if (user.passwordChanged == false) {
-          console.log("enre a ese iffffffff");
-
           _this2.props.history.push("/login/expired");
         } else _this2.props.history.push("/");
       })["catch"](function () {
         _this2.setState({
           error: true,
           modal: true,
-          textMsj: 'Please verify your username or  password..',
-          titleMsj: 'Error'
+          textMsj: "Please verify your username or  password..",
+          titleMsj: "Error"
         });
       }); // }
     } // TOGGLE de MODAL
@@ -48439,6 +48559,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../NavBarContainer/ */ "./src/components/NavBarContainer/index.jsx");
 /* harmony import */ var _FooterContainer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../FooterContainer */ "./src/components/FooterContainer/index.jsx");
 /* harmony import */ var _UpdatePassContainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../UpdatePassContainer */ "./src/components/UpdatePassContainer/index.jsx");
+/* harmony import */ var _AdminHomeContainer_index__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../AdminHomeContainer/index */ "./src/components/AdminHomeContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48456,6 +48577,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -48523,6 +48645,10 @@ function (_React$Component) {
         exact: true,
         path: "/login/expired",
         component: _UpdatePassContainer__WEBPACK_IMPORTED_MODULE_11__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/admin/panel",
+        component: _AdminHomeContainer_index__WEBPACK_IMPORTED_MODULE_12__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/",
@@ -48726,7 +48852,7 @@ function (_Component) {
         to: "#!",
         onClick: this.handleLogOut
       }, "Logout")), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
-        to: "#!"
+        to: "/admin/panel"
       }, "Admin Panel")) : null)));
     }
   }]);
@@ -48906,20 +49032,16 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(UpdatePassContainer).call(this));
     _this.state = {
       oldPassword: "",
-      password: "",
-      modal: false
+      password: ""
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
-    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(UpdatePassContainer, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log("me momeneeee");
-    }
+    value: function componentDidMount() {}
   }, {
     key: "handleChange",
     value: function handleChange(e) {
@@ -48935,30 +49057,17 @@ function (_React$Component) {
         error: true
       });
       this.props.updatePass(this.state.password, this.props.user.id).then(function (user) {
-        console.log(user, "password cambiado correcamene");
-
         _this2.props.history.push("/");
       })["catch"](function () {
         return _this2.setState({
           error: true
         });
-      }); // }
-    }
-  }, {
-    key: "toggle",
-    value: function toggle() {
-      this.setState({
-        modal: !this.state.modal
       });
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "imageLogin"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UpdatePassContainer_updatePass__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        modal: this.state.modal,
-        toggle: this.toggle,
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UpdatePassContainer_updatePass__WEBPACK_IMPORTED_MODULE_3__["default"], {
         handleSubmit: this.handleSubmit,
         handleChange: this.handleChange
       }));
@@ -49007,50 +49116,44 @@ __webpack_require__.r(__webpack_exports__);
 function updatePass(_ref) {
   var handleChange = _ref.handleChange,
       handleSubmit = _ref.handleSubmit;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    color: "info",
-    onClick: this.toggle
-  }, "Click"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
-    isOpen: this.state.modal,
-    toggle: this.toggle
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
-    toggle: this.toggle
-  }, "MDBModal title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: handleSubmit
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grey-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBInput, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "You must change your password before logging on the first time. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "4"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
     label: "Your current password ",
     icon: "lock",
     group: true,
     type: "password",
+    name: "oldPassword",
     validate: true,
     onChange: handleChange
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBInput, {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
     label: "Your new password",
     icon: "lock",
     group: true,
     type: "password",
+    name: "password",
     validate: true,
     onChange: handleChange
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBInput, {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
     label: "Confirm your new password",
     icon: "exclamation-triangle",
     group: true,
     type: "text",
     validate: true,
     error: "wrong",
-    success: "right",
-    onChange: handleChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    success: "right"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     type: "submit",
     color: "primary"
-  }, "Save changes")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    color: "secondary",
-    onClick: this.toggle
-  }, "Close"))))));
+  }, "Save changes")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    color: "secondary"
+  }, "Close"))));
 }
 ;
 
@@ -49060,7 +49163,7 @@ function updatePass(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49069,6 +49172,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "USER_LOGOUT", function() { return USER_LOGOUT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALLOWANCES", function() { return RECEIVE_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ADMIN_ALLOWANCES", function() { return RECEIVE_ADMIN_ALLOWANCES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PENDING_ALLOWANCES", function() { return RECEIVE_PENDING_ALLOWANCES; });
 // Allowance ===>
 //export const ADD_ALLOWANCE_TO_DB = "ADD_ALLOWANCE_TO_DB";
 //User
@@ -49077,6 +49181,7 @@ var USER_LOGOUT = " USER_LOGOUT"; //Allowances
 
 var RECEIVE_ALLOWANCES = "RECEIVE_ALLOWANCES";
 var RECEIVE_ADMIN_ALLOWANCES = "ECEIVE_ADMIN_ALLOWANCES";
+var RECEIVE_PENDING_ALLOWANCES = "RECEIVE_PENDING_ALLOWANCES";
 
 /***/ }),
 
@@ -49134,16 +49239,18 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*!***********************************************!*\
   !*** ./src/redux/actions/allowanceActions.js ***!
   \***********************************************/
-/*! exports provided: receiveAllowances, receiveAdminAllowances, createAllowance, fetchAllowances, fetchAdminAllowances */
+/*! exports provided: receiveAllowances, receiveAdminAllowances, receivePendingAllowances, createAllowance, fetchAllowances, fetchAdminAllowances, fetchPendingAllowances */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAllowances", function() { return receiveAllowances; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAdminAllowances", function() { return receiveAdminAllowances; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receivePendingAllowances", function() { return receivePendingAllowances; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createAllowance", function() { return createAllowance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllowances", function() { return fetchAllowances; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAdminAllowances", function() { return fetchAdminAllowances; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchPendingAllowances", function() { return fetchPendingAllowances; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
@@ -49159,6 +49266,12 @@ var receiveAdminAllowances = function receiveAdminAllowances(adminAllowances) {
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_ADMIN_ALLOWANCES"],
     adminAllowances: adminAllowances
+  };
+};
+var receivePendingAllowances = function receivePendingAllowances(pendingAllowances) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_PENDING_ALLOWANCES"],
+    pendingAllowances: pendingAllowances
   };
 };
 var createAllowance = function createAllowance(formData) {
@@ -49189,11 +49302,19 @@ var fetchAllowances = function fetchAllowances(userId, allowanceId) {
 };
 var fetchAdminAllowances = function fetchAdminAllowances() {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/allowance/').then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/").then(function (res) {
       return res.data;
     }).then(function (adminAllowances) {
-      console.log("SOOOOOo", adminAllowances);
       dispatch(receiveAdminAllowances(adminAllowances));
+    });
+  };
+};
+var fetchPendingAllowances = function fetchPendingAllowances() {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/search/all").then(function (res) {
+      return res.data;
+    }).then(function (pendingAllowances) {
+      dispatch(receivePendingAllowances(pendingAllowances));
     });
   };
 };
@@ -49251,9 +49372,12 @@ var logout = function logout() {
     });
   };
 };
-var updatePass = function updatePass(password, user) {
+var updatePass = function updatePass(password, userId) {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/employee/password/update", password, user).then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/employee/password/update", {
+      password: password,
+      userId: userId
+    }).then(function (res) {
       return res.data;
     }).then(function (answer) {
       dispatch(userLogout());
@@ -49298,7 +49422,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = {
   allowanceList: [],
-  adminAllowances: []
+  adminAllowances: [],
+  pendingAllowances: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -49313,6 +49438,11 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ADMIN_ALLOWANCES"]:
       return _objectSpread({}, state, {
         adminAllowances: _toConsumableArray(action.adminAllowances)
+      });
+
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PENDING_ALLOWANCES"]:
+      return _objectSpread({}, state, {
+        pendingAllowances: _toConsumableArray(action.pendingAllowances)
       });
 
     default:

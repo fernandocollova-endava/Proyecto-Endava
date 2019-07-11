@@ -14,7 +14,7 @@ class HomeContainer extends React.Component {
   componentDidMount(){
     Axios.get('/api/allowance/list')
       .then(cardList=>{
-        console.log(cardList)
+
           this.setState({cardList:cardList.data})
       })
   }

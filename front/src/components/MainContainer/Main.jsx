@@ -10,6 +10,7 @@ import AllowancesListContainer from "../AllowancesListContainer/index";
 import NavbarContainer from "../NavBarContainer/"
 import FooterContainer from "../FooterContainer"
 import UpdatePassContainer from "../UpdatePassContainer"
+import AdminHomeContainer from "../AdminHomeContainer/index"
 
 class MainContainer extends React.Component {
   constructor() {
@@ -46,7 +47,8 @@ class MainContainer extends React.Component {
               <Route exact path="/allowance/search" component={AllowancesListContainer}/>
               <Route exact path="/allowance/:name" component={AllowanceContainer}/>
               <Route exact path="/login/expired" component={UpdatePassContainer}/>
-             
+              <Route exact path="/admin/panel" component={AdminHomeContainer}/>
+              
               <Route exact path="/" component={Home}/>
               <Redirect from="/login" to="/" />
               </Switch>
