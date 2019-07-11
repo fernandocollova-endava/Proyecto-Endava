@@ -83,7 +83,7 @@ class Navbar extends Component {
                 </MDBNavItem>
                 {this.props.user.isAdmin == true? 
                 <MDBNavItem>
-                  <MDBNavLink to="/admin/panel">Admin Panel</MDBNavLink>
+                  <MDBNavLink to="/admin/panel"  onClick={() => this.toggleSingleCollapse("collapse1")}>Admin Panel</MDBNavLink>
                 </MDBNavItem>
                 :null
                 }
