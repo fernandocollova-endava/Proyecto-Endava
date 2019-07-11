@@ -4,7 +4,7 @@ const router = express.Router()
 var passport = require("../../config/passport");
 
 router.post('/login', passport.authenticate("local"), function(req, res, next) {
-    console.log("so el emploeeee", req.body)
+   
     res.send(req.user)
 })
 router.get('/logout', function(req, res) {
@@ -16,6 +16,8 @@ router.get('/logged', function(req, res, next) {
     // console.log(req.user, 'SOY EL REQ.USER')
     res.send(req.user)
 })
-
+router.post("/password/update", function(req, res, next){
+    console.log('so reee.bo del user udae', req.body)
+})
 
 module.exports = router;
