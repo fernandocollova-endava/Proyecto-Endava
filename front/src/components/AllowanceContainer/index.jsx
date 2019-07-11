@@ -23,7 +23,9 @@ class AllowanceContainer extends React.Component {
         this.onAmountChange = this.onAmountChange.bind(this)
         this.toggle = this.toggle.bind(this)
     }
-
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
     onFormSubmit(e) {
         e.preventDefault();
         const { file, ...rest } = this.state

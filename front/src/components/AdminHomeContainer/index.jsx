@@ -11,7 +11,9 @@ class AdminHomeContainer extends React.Component {
   }
   componentDidMount() {
     this.props.fetchPendingAllowances()
+    window.scrollTo(0, 0)
   }
+
   render() {
     return (
       <div>
