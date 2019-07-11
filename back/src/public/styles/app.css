@@ -1,37 +1,49 @@
 /* Ajustes CSS */
 body {
     margin-top: 100px;
-}
-.navbar {
-    box-shadow:none;
-    margin-bottom: 10px;
-    background-color: rgba(250, 250, 250, 0.9);
-}
-.logo {
-    padding-left: 36px;
-    width: 182px;
-}
-.logoLogin{
-  width: 182px;
-}
-.nav-item:hover {
-    background-color: #ececec;
-    /* transition: all 0.05s ease-in-out */
+    font-family: robotoregular,Arial,sans-serif;
 }
 .container-banner {
     margin-right: 10px; 
     margin-left: 10px;   
 }
+
+ /* LOGIN  */
+ /* ============================ */
 .imageLogin {
-    background-image: url('https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx');
+  background-image: url('/assets/img/PeopleSocializing_min.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
     width: 100%; 
     height: 100vh;
     margin-top: -110px;
     /* filter: grayscale(90%); */
 }
+
+.grey-text{
+  padding: 0 30px; 
+}
+.md-form .prefix {
+  top: 0.75rem;
+  font-size: 1.75rem;
+}
+
+/* FONTS */
+/* ======================================= */
 .upperCaseFonts {
   text-transform: uppercase;
 }
+.fontLigth {
+  font-family: robotolight,Arial,sans-serif;
+  color: #000;
+}
+.blue {
+  background-color: #285078 !important
+}
+/* GENERAL  */
+/* ========================================== */
+
+
 .btnAllowance {
   margin-top: -50px;
 }
@@ -91,9 +103,35 @@ body {
     margin-top:10px;
 }
 .TextParrafo {
-    text-align: center
+    text-align: center;
+    font-family: robotolight,Arial,sans-serif;
+}
+ 
+/* === MENU  === */
+  /* ========================================= */
+ 
+.navbar {
+    box-shadow:none;
+    margin-bottom: 10px;
+    background-color: rgba(250, 250, 250, 0.9);
+}
+.logo {
+    padding-left: 36px;
+    width: 182px;
+}
+.logoLogin{
+  width: 182px;
+}
+.nav-item:hover {
+    background-color: #ececec;
+    /* transition: all 0.05s ease-in-out */
 }
 
+.transparentMenu {
+  height: 1000px;
+  max-height: 100%;
+  background-color: #9e9e9e0a;
+}
   /* === FICHA EFECT IMG + TEXT === */
   /* ========================================= */
   .Card-Img {

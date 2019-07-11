@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import {
-  MDBNavbar,
+  MDBNavbar,MDBIcon,
   MDBNavbarBrand,
   MDBNavbarNav,
   MDBNavItem,
   MDBNavLink,
   MDBCollapse,
-  MDBHamburgerToggler
+  MDBNavbarToggler
 } from "mdbreact";
 import {connect} from "react-redux"
 import { Link } from "react-router-dom"
@@ -38,9 +38,11 @@ class Navbar extends Component {
     });
   }
   handleLogOut() {
+    this.toggleSingleCollapse("collapse1")
     this.props.logout().then(res => {
       if (res === "logoutOK") this.props.history.push("/login");
     });
+
   }
 
 
@@ -48,33 +50,29 @@ class Navbar extends Component {
     return (
         <MDBNavbar className="fixed-top">
             <MDBNavbarBrand>
-              <Link to="/">
+              <Link to="/" onClick={() => this.toggleSingleCollapse("collapse1")}>
+              
                 <img className="logo" 
                   src="https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx"
                   alt="Endava" />
               </Link>
             </MDBNavbarBrand>
-            <MDBHamburgerToggler
-              color="#d3531a"
-              id="hamburger1"
-              onClick={() => this.toggleSingleCollapse("collapse1")}
-            />
+            <MDBNavbarToggler onClick={() => this.toggleSingleCollapse("collapse1")}>
+            <MDBIcon icon="bars" size="2x"/>
+            </MDBNavbarToggler>
             <MDBCollapse isOpen={this.state.collapse1} navbar>
               <MDBNavbarNav left>
                 <MDBNavItem active>
-                  <MDBNavLink to="#!">Home</MDBNavLink>
+                  <MDBNavLink to="/" onClick={() => this.toggleSingleCollapse("collapse1")}>Home</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink to="#!">Link</MDBNavLink>
+                  <MDBNavLink to="/profile" onClick={() => this.toggleSingleCollapse("collapse1")}>Profile</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink to="#!">Profile</MDBNavLink>
+                  <MDBNavLink to="/allowance/search" onClick={() => this.toggleSingleCollapse("collapse1")}>My Allowances</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink to="/allowance/search">historial de reintegros</MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink to="#!" onClick= {this.handleLogOut}>Logout</MDBNavLink>
+                  <MDBNavLink onClick= {this.handleLogOut}>Logout</MDBNavLink>
                 </MDBNavItem>
                 {this.props.user.isAdmin == true? 
                 <MDBNavItem>

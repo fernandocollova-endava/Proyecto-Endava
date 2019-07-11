@@ -58,10 +58,17 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
               allowanceInstance.dataValues.createdAt, //Fecha creacion
               allowanceInstance.dataValues.limitDay
             );
+
+            // Calculo de total reintegro:
+            var totalAmount = allowanceInstance.dataValues.fixedAmount;
+            var totalEmployeeAmount = req.body.employeeAmount
+            var totalAmount = (totalEmployeeAmount > totalAmount) ? totalAmount : totalEmployeeAmount;
+
             // Genero un nuevo registro de detalle en la tabla final AllowanceDetail
             AllowanceDetail.create({
-              amount: allowanceInstance.dataValues.fixedAmount,
-              employeeAmount: req.body.employeeAmount,
+              amount: totalAmount,
+              employeeAmount: totalEmployeeAmount,
+              limitAmount: totalAmount,
               paymentDate: paymentDate,
               observation: req.body.observation,
               receiptPath: fileName,
@@ -90,7 +97,7 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
 });
 
 //Ruta para busqueda + filtro de todos los beneficios de un empleado
-Router.get("/search/", function(req, res) {
+Router.get("/search/", function (req, res) {
   Employee.findOne({
     where: {
       id: req.query.userId
@@ -111,40 +118,44 @@ Router.get("/search/", function(req, res) {
       }
       !req.query.allowanceId //pregunto si existe allowanceId, para poder filtrar por allowance de ser necesario
         ? AllowanceDetail.findAll({
-            where: {
-              employeeAllowanceId: {
-                [Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
-              }
-            },
-            include: [
-              //le incluyo el campo Allowance, para eso primero uve que esablecerle una relacion AllowanceDeail
-              //ademas de setearle al allowanceDetail el Allowance
-              {
-                model: Allowance,
-                as: "allowance"
-              }
-            ]
-          }).then(alloResponse => {
-            res.send(alloResponse);
-          })
+          where: {
+            employeeAllowanceId: {
+              [Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
+            } 
+          },
+          include: [
+            //le incluyo el campo Allowance, para eso primero uve que esablecerle una relacion AllowanceDeail
+            //ademas de setearle al allowanceDetail el Allowance
+            {
+              model: Allowance,
+              as: "allowance",
+              attributes: ['name'] 
+            }
+          ],
+          attributes: ['amount','employeeAmount', 'limitAmount', 'paymentDate', 'status']
+        }).then(alloResponse => {
+          res.send(alloResponse);
+        })
         : AllowanceDetail.findAll({
-            where: {
-              employeeAllowanceId: {
-                [Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
-              }
-            },
-            include: [
-              {
-                model: Allowance,
-                as: "allowance",
-                where: {
-                  id: req.query.allowanceId // esto me filtra por allowance
-                }
-              }
-            ]
-          }).then(alloResponse => {
-            res.send(alloResponse);
-          });
+          where: {
+            employeeAllowanceId: {
+              [Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
+            }
+          },
+          attributes: ['amount', 'employeeAmount','limitAmount', 'paymentDate', 'status'],
+          include: [
+            {
+              model: Allowance,
+              as: "allowance",
+              where: {
+                id: req.query.allowanceId // esto me filtra por allowance
+              },
+              attributes: ['name']
+            }
+          ] 
+        }).then(alloResponse => {
+          res.send(alloResponse);
+        });
     });
   });
 });
@@ -164,7 +175,7 @@ Router.get("/search/all", function(req, res) {
 });
 
 // Ruta para extracción de los beneficios activos
-Router.get("/list/", function(req, res) {
+Router.get("/list/", function (req, res) {
   Allowance.findAll({
     where: {
       active: true
