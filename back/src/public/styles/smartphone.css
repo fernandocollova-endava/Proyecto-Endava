@@ -21,9 +21,14 @@
         margin-top:-30px;
     }
     .imageLogin {
-        background-image: url('https://careers.endava.com/en/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_480x500_resized.ashx');
+        background-image: url('/assets/img/PeopleSocializing_min.jpg');
     }
     .div-img .text {
         font-size: 2.6vw;
       }
+
+      .maxHeigthNav{
+        max-height: none;
+       
+    }
 }
