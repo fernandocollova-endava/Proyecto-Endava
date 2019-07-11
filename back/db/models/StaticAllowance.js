@@ -39,6 +39,10 @@ const AllowanceDetail = db.define("AllowanceDetail",{
         type: Sequelize.INTEGER,
         allowNull: false,
     },
+    limitAmount:{
+        type: Sequelize.INTEGER,
+        allowNull: false,
+    },
     paymentDate:{
         type: Sequelize.DATEONLY,
         allowNull:false
