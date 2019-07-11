@@ -2,7 +2,7 @@ import React from "react";
 import AnimationPage from "./home";
 import { connect } from "react-redux";
 import { logout } from "../../redux/actions/user";
-import Axios from "axios";
+import { fetchAdminAllowances } from "../../redux/actions/allowanceActions"
 
 class HomeContainer extends React.Component {
   constructor() {
@@ -12,28 +12,31 @@ class HomeContainer extends React.Component {
     };
   }
   componentDidMount(){
-    Axios.get('/api/allowance/list')
-      .then(cardList=>{
-
-          this.setState({cardList:cardList.data})
-      })
+    this.props.fetchAdminAllowances()
   }
   render() {
     return (
       <div>
+        {console.log("so admin aloooo", this.props.adminAllowances)}
         <AnimationPage 
-        cardList = {this.state.cardList}
+        cardList = {this.props.adminAllowances}
         />
       </div>
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
 
+    adminAllowances: state.allowance.adminAllowances
+  }
+}
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
+  logout: () => dispatch(logout()),
+  fetchAdminAllowances: () => dispatch(fetchAdminAllowances())
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(HomeContainer);
