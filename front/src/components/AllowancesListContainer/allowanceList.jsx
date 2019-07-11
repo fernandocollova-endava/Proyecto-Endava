@@ -7,6 +7,7 @@ import {
   MDBDropdownItem
 } from "mdbreact";
 
+
 export default function allowanceList({
   allowanceList,
   adminAllowances,
@@ -14,6 +15,7 @@ export default function allowanceList({
 }) {
   return (
     <div>
+     
       <MDBDropdown>
         <MDBDropdownToggle caret color="primary">
           Allowances

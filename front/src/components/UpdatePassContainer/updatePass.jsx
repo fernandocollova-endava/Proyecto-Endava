@@ -1,26 +1,29 @@
 import React from "react";
-import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
+import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter, MDBInput, MDBRow, MDBCol} from 'mdbreact';
 
-export default function updatePass({handleChange,handleSubmit}) {
+export default function updatePass({ handleChange,handleSubmit}) {
 
   return (
     <div>
        <div>
+         
        <MDBContainer>
-        {/* BUTTON */}
-        <MDBBtn color="info" onClick={this.toggle}>Click</MDBBtn>
         {/* MODAL */}
-        <MDBModal isOpen={this.state.modal} toggle={this.toggle}    >
-          <MDBModalHeader toggle={this.toggle}>MDBModal title</MDBModalHeader>
-          <MDBModalBody>
+    <br/><br/>
+          < >
           <form onSubmit= {handleSubmit}>
             <div className="grey-text">
-              
+              <h3>You must change your password before logging on the first time. </h3>
+              <MDBRow>
+                
+               <MDBCol md="4">  
+               </MDBCol> 
             <MDBInput
                 label="Your current password "
                 icon="lock"
                 group
                 type="password"
+                name = "oldPassword"
                 validate
                 onChange = {handleChange}
               />
@@ -29,6 +32,7 @@ export default function updatePass({handleChange,handleSubmit}) {
                 icon="lock"
                 group
                 type="password"
+                name="password"
                 validate
                 onChange = {handleChange}
               />
@@ -40,19 +44,16 @@ export default function updatePass({handleChange,handleSubmit}) {
                 validate
                 error="wrong"
                 success="right"
-                onChange = {handleChange}
               />
+            </MDBRow>
             </div>
             <div className="text-center">
             <MDBBtn  type="submit" color="primary">Save changes</MDBBtn>
             </div>
           </form>
-          </MDBModalBody>
-          <MDBModalFooter>
-            <MDBBtn color="secondary" onClick={this.toggle}>Close</MDBBtn>
-            
-          </MDBModalFooter>
-        </MDBModal>
+          </>
+            <MDBBtn color="secondary" >Close</MDBBtn>
+
       </MDBContainer>
       
     </div>

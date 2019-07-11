@@ -9,17 +9,17 @@ class UpdatePassContainer extends React.Component {
     this.state = {
       oldPassword: "",
       password: "",
-      modal: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.toggle = this.toggle.bind(this);
+   
   }
   componentDidMount() {
-  console.log("me momeneeee")
+  
   }
 
   handleChange(e) {
+  
     this.setState({
       [e.target.name]: e.target.value
     });
@@ -31,25 +31,17 @@ class UpdatePassContainer extends React.Component {
     this.props
       .updatePass(this.state.password, this.props.user.id)
       .then(user => {
-        console.log(user, "password cambiado correcamene");
         this.props.history.push("/");
       })
       .catch(() => this.setState({ error: true }));
 
-    // }
   }
-  toggle() {
-    this.setState({
-      modal: !this.state.modal
-    });
-  }
+  
 
   render() {
     return (
-      <div className="imageLogin">
+      <div >
         <UpdatePass
-          modal={this.state.modal}
-          toggle={this.toggle}
           handleSubmit = {this.handleSubmit}
           handleChange = {this.handleChange}
         />
