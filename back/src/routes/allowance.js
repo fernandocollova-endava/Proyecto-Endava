@@ -16,7 +16,15 @@ const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
 Router.get("/", function(req, res) {
-  Allowance.findAll().then(adminAllowances => res.send(adminAllowances));
+  Allowance.findAll({
+    where: {
+      active: true
+    },
+    order: [["id", "asc"]],
+    attributes: ["name", "imgUrl", "completeName"]
+  }).then(allowanceList => {
+    res.send(allowanceList);
+  });
 });
 
 // Insert allowance
@@ -159,21 +167,23 @@ Router.get("/search/all", function(req, res) {
         as: "allowance"
       }
     ]
-  }).then(allowanceList => { res.send(allowanceList);
-  });
-});
-
-// Ruta para extracción de los beneficios activos
-Router.get("/list/", function(req, res) {
-  Allowance.findAll({
-    where: {
-      active: true
-    },
-    attributes: ["name", "imgUrl", "completeName"]
   }).then(allowanceList => {
     res.send(allowanceList);
   });
 });
+
+// Ruta para extracción de los beneficios activos
+// Router.get("/list/", function(req, res) {
+//   Allowance.findAll({
+//     where: {
+//       active: true
+//     },
+//     order: [[id, asc]],
+//     attributes: ["name", "imgUrl", "completeName"]
+//   }).then(allowanceList => {
+//     res.send(allowanceList);
+//   });
+// });
 
 function paymentDateFn(date, limitDate) {
   let valDate = date.getDay() <= limitDate ? 1 : 2;
