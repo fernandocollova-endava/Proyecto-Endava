@@ -42,7 +42,7 @@ handleSubmit(e){
        
         if (user.passwordChanged == false) {
           console.log("enre a ese iffffffff")
-          this.props.history.push("/passwordExpired")
+          this.props.history.push("/login/expired")
         }else this.props.history.push("/")
     }).catch(() => {
       this.setState({ error: true,
