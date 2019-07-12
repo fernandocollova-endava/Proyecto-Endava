@@ -30,7 +30,7 @@ class MainContainer extends React.Component {
   }
 
   render() {
-
+    console.log("sooo user del main", this.props.user)
     if (this.state.loading) {
       return 'loading'
     }

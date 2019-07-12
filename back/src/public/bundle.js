@@ -48171,7 +48171,6 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchAllowances(this.props.user.id);
-      this.props.fetchAdminAllowances();
     }
   }, {
     key: "handleClick",
@@ -48244,9 +48243,6 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
     fetchAllowances: function fetchAllowances(data, allowanceId) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowances"])(data, allowanceId));
-    },
-    fetchAdminAllowances: function fetchAdminAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAdminAllowances"])());
     }
   };
 };
@@ -48385,8 +48381,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ "./src/components/HomeContainer/home.jsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48422,29 +48417,21 @@ function (_React$Component) {
     _classCallCheck(this, HomeContainer);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(HomeContainer).call(this));
-    _this.state = {
-      cardList: []
-    };
+    _this.state = {};
     return _this;
   }
 
   _createClass(HomeContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this2 = this;
-
       window.scrollTo(0, 0);
-      axios__WEBPACK_IMPORTED_MODULE_4___default.a.get('/api/allowance/list').then(function (cardList) {
-        _this2.setState({
-          cardList: cardList.data
-        });
-      });
+      this.props.fetchAdminAllowances();
     }
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        cardList: this.state.cardList
+        cardList: this.props.adminAllowances
       }));
     }
   }]);
@@ -48452,15 +48439,25 @@ function (_React$Component) {
   return HomeContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    user: state.user.user,
+    adminAllowances: state.allowance.adminAllowances
+  };
+};
+
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     logout: function logout() {
       return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_3__["logout"])());
+    },
+    fetchAdminAllowances: function fetchAdminAllowances() {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAdminAllowances"])());
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(null, mapDispatchToProps)(HomeContainer));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(HomeContainer));
 
 /***/ }),
 
@@ -48772,6 +48769,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log("sooo user del main", this.props.user);
+
       if (this.state.loading) {
         return 'loading';
       }
@@ -49212,7 +49211,9 @@ function (_React$Component) {
 
   _createClass(UpdatePassContainer, [{
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      console.log("so user", this.props.user);
+    }
   }, {
     key: "handleChange",
     value: function handleChange(e) {
@@ -49227,7 +49228,9 @@ function (_React$Component) {
       if (this.state.oldPassword == this.state.password) this.setState({
         error: true
       });
-      this.props.updatePass(this.state.password, this.props.user.id).then(function (user) {
+      this.props.updatePass(this.state.password, this.props.user.id).then(function (data) {
+        console.log('so daaaaa', data);
+
         _this2.props.history.push("/");
       })["catch"](function () {
         return _this2.setState({
@@ -49550,9 +49553,6 @@ var updatePass = function updatePass(password, userId) {
       userId: userId
     }).then(function (res) {
       return res.data;
-    }).then(function (answer) {
-      dispatch(userLogout());
-      return answer;
     });
   };
 };

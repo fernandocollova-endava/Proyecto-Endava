@@ -15,11 +15,9 @@ class AllowanceListContainer extends React.Component {
   }
 
   componentDidMount() {
-
     this.props.fetchAllowances(this.props.user.id)
-    this.props.fetchAdminAllowances()
-
   }
+
   handleClick(allowanceId) {
     this.props.fetchAllowances(this.props.user.id, allowanceId)
   }
@@ -66,15 +64,16 @@ const mapStateToProps = (state) => {
     allowanceList: state.allowance.allowanceList,
     user: state.user.user,
     adminAllowances: state.allowance.adminAllowances
-  }
-}
+  };
+};
 
-const MapDispatchToProps = (dispatch) => {
+const MapDispatchToProps = dispatch => {
   return {
-    fetchAllowances: (data, allowanceId) => dispatch(fetchAllowances(data, allowanceId)),
-    fetchAdminAllowances: () => dispatch(fetchAdminAllowances())
-  }
-}
+    fetchAllowances: (data, allowanceId) => dispatch(fetchAllowances(data, allowanceId))
+  };
+};
 
-
-export default connect(mapStateToProps, MapDispatchToProps)(AllowanceListContainer);
+export default connect(
+  mapStateToProps,
+  MapDispatchToProps
+)(AllowanceListContainer);
