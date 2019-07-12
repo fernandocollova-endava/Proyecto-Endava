@@ -21,7 +21,7 @@ Router.get("/", function(req, res) {
       active: true
     },
     order: [["id", "asc"]],
-    attributes: ["name", "imgUrl", "completeName"]
+    attributes: ["name", "imgUrl", "completeName","id"]
   }).then(allowanceList => {
     res.send(allowanceList);
   });

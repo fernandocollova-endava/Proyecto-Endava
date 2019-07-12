@@ -48084,7 +48084,7 @@ function allowanceList(_ref) {
     md: "9"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
+  }, allowanceList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there are no results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
     btn: true,
     fixed: true,
     responsive: true

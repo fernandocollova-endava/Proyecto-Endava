@@ -24,7 +24,7 @@ Employee.create({
 Employee.create({
     name: 'Agustin',
     surname: 'Pardo',
-    email: 'a.pardo@endava.com',
+    email: 'agustin.pardo@endava.com',
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
