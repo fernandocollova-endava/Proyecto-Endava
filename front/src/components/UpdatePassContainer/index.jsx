@@ -15,7 +15,7 @@ class UpdatePassContainer extends React.Component {
    
   }
   componentDidMount() {
-  
+    console.log("so user", this.props.user)
   }
 
   handleChange(e) {
@@ -30,7 +30,8 @@ class UpdatePassContainer extends React.Component {
       this.setState({ error: true });
     this.props
       .updatePass(this.state.password, this.props.user.id)
-      .then(user => {
+      .then(data => {
+        console.log('so daaaaa', data)
         this.props.history.push("/");
       })
       .catch(() => this.setState({ error: true }));

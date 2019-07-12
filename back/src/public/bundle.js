@@ -40224,7 +40224,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48383,6 +48383,9 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchAdminAllowances();
+      {
+        console.log("so user del home", this.props.user);
+      }
     }
   }, {
     key: "render",
@@ -48398,6 +48401,7 @@ function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
+    user: state.user.user,
     adminAllowances: state.allowance.adminAllowances
   };
 };
@@ -48725,6 +48729,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log("sooo user del main", this.props.user);
+
       if (this.state.loading) {
         return 'loading';
       }
@@ -49164,7 +49170,9 @@ function (_React$Component) {
 
   _createClass(UpdatePassContainer, [{
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      console.log("so user", this.props.user);
+    }
   }, {
     key: "handleChange",
     value: function handleChange(e) {
@@ -49179,7 +49187,9 @@ function (_React$Component) {
       if (this.state.oldPassword == this.state.password) this.setState({
         error: true
       });
-      this.props.updatePass(this.state.password, this.props.user.id).then(function (user) {
+      this.props.updatePass(this.state.password, this.props.user.id).then(function (data) {
+        console.log('so daaaaa', data);
+
         _this2.props.history.push("/");
       })["catch"](function () {
         return _this2.setState({
@@ -49502,9 +49512,6 @@ var updatePass = function updatePass(password, userId) {
       userId: userId
     }).then(function (res) {
       return res.data;
-    }).then(function (answer) {
-      dispatch(userLogout());
-      return answer;
     });
   };
 };
