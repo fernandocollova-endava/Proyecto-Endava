@@ -44,6 +44,9 @@ table.table td {
 .blue {
   background-color: #285078 !important
 }
+.textAlert {
+  font-size: 13px;
+}
 /* GENERAL  */
 /* ========================================== */
 

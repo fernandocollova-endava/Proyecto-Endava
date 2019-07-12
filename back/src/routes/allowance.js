@@ -68,15 +68,15 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
             );
 
             // Calculo de total reintegro:
-            var totalAmount = allowanceInstance.dataValues.fixedAmount;
+            var totalAmountFixed = allowanceInstance.dataValues.fixedAmount; //800
             var totalEmployeeAmount = req.body.employeeAmount
-            var totalAmount = (totalEmployeeAmount > totalAmount) ? totalAmount : totalEmployeeAmount;
+            var totalAmount = (totalEmployeeAmount > totalAmountFixed) ? totalAmountFixed : totalEmployeeAmount;
 
             // Genero un nuevo registro de detalle en la tabla final AllowanceDetail
             AllowanceDetail.create({
               amount: totalAmount,
               employeeAmount: totalEmployeeAmount,
-              limitAmount: totalAmount,
+              limitAmount: totalAmountFixed,
               paymentDate: paymentDate,
               observation: req.body.observation,
               receiptPath: fileName,

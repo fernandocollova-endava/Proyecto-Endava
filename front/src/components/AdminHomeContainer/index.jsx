@@ -3,17 +3,25 @@ import { connect } from 'react-redux'
 import AdminPanel from '../AdminHomeContainer/AdminPanel'
 import { fetchPendingAllowances } from '../../redux/actions/allowanceActions'
 import AllowanceList from "../AllowancesListContainer/allowanceList"
+import { MDBBtn } from "mdbreact";
 
 class AdminHomeContainer extends React.Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      activeFile: ''
+    }
+    this.viewFile = this.viewFile.bind(this)
   }
   componentDidMount() {
     this.props.fetchPendingAllowances()
     window.scrollTo(0, 0)
   }
-
+  viewFile(file) {
+    this.setState({
+      activeFile: file
+    })
+  }
   render() {
     // Condicional para redefinir los objetos
     let val = this.props.pendingAllowances;
@@ -36,7 +44,8 @@ class AdminHomeContainer extends React.Component {
     })
     return (
       <div>
-        <AllowanceList allowanceList={val} />
+        <AllowanceList allowanceList={val} 
+        activeFile={this.state.activeFile}/>
         {/* <AdminPanel pendingAllowances= {this.props.pendingAllowances}/> */}
       </div>
     )
