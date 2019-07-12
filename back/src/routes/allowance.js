@@ -170,7 +170,7 @@ Router.get("/search/", function (req, res) {
 Router.get("/search/all", function(req, res) {
   AllowanceDetail.findAll({
     where: {
-      status: "pendiente"
+      status: "pending"
     },
     include: [
       {
