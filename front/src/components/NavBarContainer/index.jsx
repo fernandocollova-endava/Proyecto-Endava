@@ -64,7 +64,7 @@ class Navbar extends Component {
                   alt="Endava" />
               </Link>
             </MDBNavbarBrand>
-            <MDBNavbarToggler onClick={() => this.toggleSingleCollapse("collapse1")}>
+            <MDBNavbarToggler right onClick={() => this.toggleSingleCollapse("collapse1")}>
             <MDBIcon icon="bars" size="2x"/>
             </MDBNavbarToggler>
             <MDBCollapse isOpen={this.state.collapse1} navbar>

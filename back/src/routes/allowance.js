@@ -72,7 +72,7 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
               paymentDate: paymentDate,
               observation: req.body.observation,
               receiptPath: fileName,
-              status: "pendiente"
+              status: "pending"
             }).then(AllowanceDetail_Instance => {
               // Instancia de la creación del registro final
               //ASIGNA
@@ -132,7 +132,7 @@ Router.get("/search/", function (req, res) {
               attributes: ['name'] 
             }
           ],
-          attributes: ['amount','employeeAmount', 'limitAmount', 'paymentDate', 'status']
+          attributes: ['amount','employeeAmount', 'limitAmount', 'paymentDate', 'status', 'receiptPath']
         }).then(alloResponse => {
           res.send(alloResponse);
         })
@@ -142,7 +142,7 @@ Router.get("/search/", function (req, res) {
               [Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
             }
           },
-          attributes: ['amount', 'employeeAmount','limitAmount', 'paymentDate', 'status'],
+          attributes: ['amount', 'employeeAmount','limitAmount', 'paymentDate', 'status', 'receiptPath'],
           include: [
             {
               model: Allowance,

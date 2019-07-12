@@ -14,7 +14,7 @@ const columnsAllowance= [
     field: 'limitAmount'
   },
   {
-    label: 'Employee Amount',
+    label: 'Emp. Amount',
     field: 'employeeAmount'
   },  
   {
@@ -25,6 +25,11 @@ const columnsAllowance= [
   {
     label: 'Status',
     field: 'status'
+  }
+  ,
+  {
+    label: 'File',
+    field: 'file'
   }
   
 ];

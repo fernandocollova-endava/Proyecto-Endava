@@ -12,6 +12,7 @@ class HomeContainer extends React.Component {
     };
   }
   componentDidMount(){
+    window.scrollTo(0, 0)
     Axios.get('/api/allowance/list')
       .then(cardList=>{
 
