@@ -7,18 +7,15 @@ import { fetchAdminAllowances } from "../../redux/actions/allowanceActions"
 class HomeContainer extends React.Component {
   constructor() {
     super();
-    this.state = {
-      cardList:[]
-    };
+    this.state = {};
   }
   componentDidMount(){
+    window.scrollTo(0, 0)
     this.props.fetchAdminAllowances()
-    {console.log("so user del home", this.props.user)}
   }
   render() {
     return (
       <div>
-        {console.log("so admin aloooo", this.props.adminAllowances)}
         <AnimationPage 
         cardList = {this.props.adminAllowances}
         />
