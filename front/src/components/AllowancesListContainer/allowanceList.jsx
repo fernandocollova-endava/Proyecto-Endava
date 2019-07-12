@@ -47,17 +47,17 @@ export default function allowanceList({
               ))}
           </MDBDropdownMenu>
         </MDBDropdown>
-
         <hr />
         <MDBRow className="container-banner">
           
           <MDBCol md="9">
             
-            <MDBAnimation type="fadeInUp">
+            <MDBAnimation type="fadeInUp">              
+              {(allowanceList.length == 0)? <label>Sorry, there are no results for your selection... <br/><br/></label>:
               <MDBTable btn fixed responsive>
                 <MDBTableHead columns={columnsAllowance} />
                 <MDBTableBody rows={allowanceList} />
-              </MDBTable>
+              </MDBTable>}
             </MDBAnimation>
           </MDBCol>
           <MDBCol md="1">

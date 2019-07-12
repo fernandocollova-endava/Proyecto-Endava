@@ -47735,16 +47735,36 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       // Condicional para redefinir los objetos
       var val = this.props.pendingAllowances;
+      var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
       val = val.map(function (a) {
+        var split = a.paymentDate.split('-');
         return {
-          name: a.allowance.name,
+          name: a.allowance.name.toUpperCase(),
           amount: a.amount,
           limitAmount: a.limitAmount,
           employeeAmount: a.employeeAmount,
-          paymentDate: a.paymentDate,
-          status: a.status
+          paymentDate: "".concat(Month[Number(split[1])], "-").concat(split[0]),
+          status: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+            className: a.status
+          }, a.status),
+          file: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MDBBtn, {
+            className: "mb-3 btnEv-red rounded mb-0 border-0",
+            onClick: function onClick() {
+              return _this2.viewFile(a.receiptPath);
+            },
+            color: "default",
+            rounded: true,
+            size: "sm"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+            key: "cell3",
+            className: "far fa-file-pdf",
+            size: "2x",
+            "aria-hidden": "true"
+          }), " View ")
         };
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -48084,7 +48104,7 @@ function allowanceList(_ref) {
     md: "9"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
+  }, allowanceList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there are no results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
     btn: true,
     fixed: true,
     responsive: true

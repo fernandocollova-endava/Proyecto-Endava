@@ -21,7 +21,7 @@ Router.get("/", function(req, res) {
       active: true
     },
     order: [["id", "asc"]],
-    attributes: ["name", "imgUrl", "completeName"]
+    attributes: ["name", "imgUrl", "completeName","id"]
   }).then(allowanceList => {
     res.send(allowanceList);
   });
@@ -170,7 +170,7 @@ Router.get("/search/", function (req, res) {
 Router.get("/search/all", function(req, res) {
   AllowanceDetail.findAll({
     where: {
-      status: "pendiente"
+      status: "pending"
     },
     include: [
       {

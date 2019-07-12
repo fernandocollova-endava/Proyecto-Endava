@@ -17,14 +17,21 @@ class AdminHomeContainer extends React.Component {
   render() {
     // Condicional para redefinir los objetos
     let val = this.props.pendingAllowances;
+    let Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    
     val = val.map(a => {
+      let split = (a.paymentDate).split('-')
       return {
-        name: a.allowance.name,
+        name: (a.allowance.name).toUpperCase(),
         amount: a.amount,
         limitAmount: a.limitAmount,
         employeeAmount: a.employeeAmount,
-        paymentDate: a.paymentDate,
-        status: a.status
+        paymentDate: `${Month[Number(split[1])]}-${split[0]}`,
+        status: <label className={a.status}>{a.status}</label>,
+        file: <MDBBtn
+          className="mb-3 btnEv-red rounded mb-0 border-0"
+          onClick={() => this.viewFile(a.receiptPath)}
+          color="default" rounded size="sm"><i key="cell3" className="far fa-file-pdf" size="2x" aria-hidden="true"></i> View </MDBBtn>
       }
     })
     return (
@@ -42,6 +49,5 @@ const mapStateToProps = function (state) {
 };
 const mapDispatchToProps = dispatch => ({
   fetchPendingAllowances: () => dispatch(fetchPendingAllowances()),
-
 });
 export default connect(mapStateToProps, mapDispatchToProps)(AdminHomeContainer);
