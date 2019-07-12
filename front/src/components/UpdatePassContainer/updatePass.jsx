@@ -45,7 +45,9 @@ export default function updatePass({ handleChange, handleSubmit }) {
                       success="right"
                     />
                     <div className="text-center">
-                      <MDBBtn type="submit" color="primary">Save changes</MDBBtn>
+                      <MDBBtn type="submit" 
+                      className="mb-3 btnEv-red rounded mb-0 border-0"
+                      >Save changes</MDBBtn>
                     </div>
                   </MDBCol>
                   <MDBCol md="5">

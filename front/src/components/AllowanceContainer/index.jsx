@@ -65,6 +65,11 @@ class AllowanceContainer extends React.Component {
         });
     }
     render() {
+        
+        let maxAmount = this.props.listAllowance.find((allow)=>{ 
+            return allow.name === this.props.nameUrl;
+        });
+
         return (
             <>
             <ModalAviso
@@ -107,7 +112,9 @@ class AllowanceContainer extends React.Component {
                             <MDBCard>
                                 <MDBCardBody>
                                     <form onSubmit={this.onFormSubmit}>
-                                        <p className="h4 text-center py-4">Submit your receipt</p>
+                                        <p className="h4 text-center py-4">Submit your receipt 
+                                        <label className="maxAmount"> {`(Max Amount $${maxAmount.fixedAmount})`}</label></p>
+                                            
                                         <div className="grey-text">
                                             <MDBInput
                                                 label="Amount allowance..." icon="hand-holding-usd"
@@ -184,10 +191,11 @@ class AllowanceContainer extends React.Component {
     }
 }
 const mapStateToProps = (state, owner) => {
-    
+    console.log("fixedAmount",state.allowance.adminAllowances)
     return {
          user: state.user.user,
-         nameUrl: owner.match.params.name // Extrae la url dinamica
+         nameUrl: owner.match.params.name, // Extrae la url dinamica
+         listAllowance:state.allowance.adminAllowances
     }
 }
 

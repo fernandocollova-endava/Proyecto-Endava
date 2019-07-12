@@ -23,6 +23,7 @@ body {
 .grey-text{
   padding: 0 30px; 
 }
+
 table.table td {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
@@ -40,12 +41,29 @@ table.table td {
 .fontLigth {
   font-family: robotolight,Arial,sans-serif;
   color: #000;
+  margin-top: 10px;
 }
 .blue {
   background-color: #285078 !important
 }
 .textAlert {
   font-size: 13px;
+}
+.fontEmphasis {
+  font-size: 26px;
+  color: #de411b;
+}
+
+.strongEmphasis {
+  font-size: 20px;
+  font-weight: 900;
+}
+.maxAmount {
+  font-size: 14px;
+  color: #48545B;
+  text-align: center;
+  margin-top: 5px;
+  display: block;
 }
 /* GENERAL  */
 /* ========================================== */
@@ -122,7 +140,7 @@ table.table td {
     margin-top:10px;
 }
 .TextParrafo {
-    text-align: center;
+    text-align: left;
     font-family: robotolight,Arial,sans-serif;
 }
  
