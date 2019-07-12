@@ -17,12 +17,21 @@ const AnimationPage = ({ cardList }) => {
 
         </MDBCol>
         <MDBCol md="10">
-          <h1 className="fontLight upperCaseFonts">Welcome the allowance employee</h1>
+          <h1 className="fontLight upperCaseFonts">Allowance Management Site</h1>
           <MDBAnimation type="fadeInUp">
             <p className="TextParrafo">
-              We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world’s largest banks and payments companies.
-              Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe.
-              Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate.
+              Now you can <strong className="fontEmphasis">manage the benefits </strong>you already knew from 
+              this agile and easy going 
+              site. No matter where or when, you can access them from your <strong className="strongEmphasis">mobile or desktop</strong>.
+                Just apply for the benefit you want by uploading a file or completing a SIMPLE 
+                form and that’s it! <strong className="fontEmphasis">Enjoying</strong> all your employee benefits has never been so  <strong className="fontEmphasis">EASY</strong>!
+                <br/>
+                Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us.
+              
+              {/* We began our <strong className="fontEmphasis">journey as a consulting</strong> firm delivering real transformation through IT strategy and architecture services for some of the world’s largest banks and payments companies.
+              
+              Over the past 18 years, <strong className="strongEmphasis"> we marked important</strong> milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe.
+              Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate. */}
             </p>
           </MDBAnimation>
         </MDBCol>
@@ -48,7 +57,7 @@ const AnimationPage = ({ cardList }) => {
                         <center>
                           <span
                             className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">
-                            Ingresar <i className="fas fa-angle-double-right"></i></span>
+                            Enter <i className="fas fa-angle-double-right"></i></span>
                         </center>
                       </Link>
                     </div>

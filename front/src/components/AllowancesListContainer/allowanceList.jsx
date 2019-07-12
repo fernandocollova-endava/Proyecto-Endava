@@ -52,7 +52,7 @@ export default function allowanceList({
         <hr />
         <MDBRow className="container-banner">
           
-          <MDBCol md="9">
+          <MDBCol md="7">
             
             <MDBAnimation type="fadeInUp">              
               {(allowanceList.length == 0)? <label>Sorry, there are no results for your selection... <br/><br/></label>:
@@ -62,7 +62,7 @@ export default function allowanceList({
               </MDBTable>}
             </MDBAnimation>
           </MDBCol>
-          <MDBCol md="1">
+          <MDBCol md="5">
           <label>preview:</label>
             <MDBAnimation type="fadeInUp">
               {/* Visualización de archivo cargado */}

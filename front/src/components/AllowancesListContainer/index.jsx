@@ -20,6 +20,9 @@ class AllowanceListContainer extends React.Component {
 
   handleClick(allowanceId) {
     this.props.fetchAllowances(this.props.user.id, allowanceId)
+    this.setState({
+      activeFile: ''
+    })
   }
   viewFile(file) {
     this.setState({
