@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import AllowanceList from "./allowanceList";
 import { fetchAllowances, fetchAdminAllowances } from "../../redux/actions/allowanceActions"
 import { MDBBtn } from "mdbreact";
-
+​
 class AllowanceListContainer extends React.Component {
   constructor() {
     super()
@@ -13,11 +13,11 @@ class AllowanceListContainer extends React.Component {
     this.viewFile = this.viewFile.bind(this)
     this.handleClick = this.handleClick.bind(this)
   }
-
+​
   componentDidMount() {
     this.props.fetchAllowances(this.props.user.id)
   }
-
+​
   handleClick(allowanceId) {
     this.props.fetchAllowances(this.props.user.id, allowanceId)
     this.setState({
@@ -29,7 +29,7 @@ class AllowanceListContainer extends React.Component {
       activeFile: file
     })
   }
-
+​
   render() {
     // Condicional para redefinir los objetos
     let val = this.props.allowanceList;
@@ -49,7 +49,7 @@ class AllowanceListContainer extends React.Component {
           color="default" rounded size="sm"><i key="cell3" className="far fa-file-pdf" size="2x" aria-hidden="true"></i> View </MDBBtn>
       }
     })
-
+​
     return (
       <div>
         <AllowanceList
@@ -61,7 +61,7 @@ class AllowanceListContainer extends React.Component {
     );
   }
 }
-
+​
 const mapStateToProps = (state) => {
   return {
     allowanceList: state.allowance.allowanceList,
@@ -69,13 +69,13 @@ const mapStateToProps = (state) => {
     adminAllowances: state.allowance.adminAllowances
   };
 };
-
+​
 const MapDispatchToProps = dispatch => {
   return {
     fetchAllowances: (data, allowanceId) => dispatch(fetchAllowances(data, allowanceId))
   };
 };
-
+​
 export default connect(
   mapStateToProps,
   MapDispatchToProps

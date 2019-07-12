@@ -14,6 +14,7 @@ export default function allowanceList({
 }) {
   return (
     <>
+    {console.log("so admin alo", adminAllowances)}
       <MDBAnimation type="fadeInUp">
         <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx"
           className="img-fluid bannerAllowance"
@@ -37,6 +38,7 @@ export default function allowanceList({
             </button>
             {adminAllowances &&
               adminAllowances.map(item => (
+
                 <button
                   onClick={() => {
                     handleClick(item.id);
