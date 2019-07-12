@@ -2,29 +2,49 @@ const Allowance = require("./db/models").Allowance
 const Employee = require("./db/models").Employee
 
 Employee.create({
-    name: 'Agustin',
-    surname: 'Pardo',
-    email: 'agustin.pardo@endava.com',
+    name: 'Maria',
+    surname: 'Gonzalez',
+    email: 'm.gonzalez@endava.com',
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
-    passwordChanged: true
+    passwordChanged: false
+    //salt: 'lkjljasda'
+})
+Employee.create({
+    name: 'Juan',
+    surname: 'Perez',
+    email: 'j.perez@endava.com',
+    sector: 'fullStack',
+    "isAdmin": true,
+    password: '123',
+    passwordChanged: false
+    //salt: 'lkjljasda'
+})
+Employee.create({
+    name: 'Agustin',
+    surname: 'Pardo',
+    email: 'a.pardo@endava.com',
+    sector: 'fullStack',
+    "isAdmin": true,
+    password: '123',
+    passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
     name: 'Lucas',
     surname: 'Aguirre',
-    email: 'lucas.aguirre@endava.com',
+    email: 'l.aguirre@endava.com',
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
-    passwordChanged: true
+    passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
     name: 'Sebastian',
     surname: 'Kjolhede',
-    email: 'sebastian.kjolhede@endava.com',
+    email: 's.kol@endava.com',
     sector: 'front',
     "isAdmin": false,
     password: '123',
@@ -32,9 +52,9 @@ Employee.create({
     //salt: 'lkjljasda'
 })
 Employee.create({
-    name: 'juan',
-    surname: 'Villareal',
-    email: 'ale@endava.com',
+    name: 'Alejandro',
+    surname: 'Villa',
+    email: 'a.villa@endava.com',
     sector: 'backend',
     "isAdmin": false,
     password: '123',

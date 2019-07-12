@@ -13,6 +13,7 @@ class HomeContainer extends React.Component {
   }
   componentDidMount(){
     this.props.fetchAdminAllowances()
+    {console.log("so user del home", this.props.user)}
   }
   render() {
     return (
@@ -27,7 +28,7 @@ class HomeContainer extends React.Component {
 }
 const mapStateToProps = (state) => {
   return {
-
+    user: state.user.user,
     adminAllowances: state.allowance.adminAllowances
   }
 }

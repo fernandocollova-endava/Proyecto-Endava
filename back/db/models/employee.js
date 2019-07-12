@@ -68,7 +68,8 @@ Employee.prototype.updatePassword = function(password) { //creo un nuevo meodo d
   Employee.update(
     { password: newPass, passwordChanged: true }, // el update lo realizo aca, no en la ruta. 
     { where: { id: this.id } }                  //
-  );
+  )
+  return 'ok'
 };
 
 
