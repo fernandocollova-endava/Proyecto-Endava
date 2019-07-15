@@ -14,7 +14,6 @@ export default function allowanceList({
 }) {
   return (
     <>
-    {console.log("so admin alo", adminAllowances)}
       <MDBAnimation type="fadeInUp">
         <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx"
           className="img-fluid bannerAllowance"
@@ -51,8 +50,9 @@ export default function allowanceList({
         </MDBDropdown>
         <hr />
         <MDBRow className="container-banner">
-          
-          <MDBCol md="7">
+          <MDBCol md="1">
+          </MDBCol>
+          <MDBCol md="10">
             
             <MDBAnimation type="fadeInUp">              
               {(allowanceList.length == 0)? <label>Sorry, there are no results for your selection... <br/><br/></label>:
@@ -62,7 +62,7 @@ export default function allowanceList({
               </MDBTable>}
             </MDBAnimation>
           </MDBCol>
-          <MDBCol md="5">
+          <MDBCol md="1">
           <label>preview:</label>
             <MDBAnimation type="fadeInUp">
               {/* Visualización de archivo cargado */}

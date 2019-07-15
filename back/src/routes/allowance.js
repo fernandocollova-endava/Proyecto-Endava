@@ -17,15 +17,31 @@ const Op = Sequelize.Op;
 
 Router.get("/", function(req, res) {
   Allowance.findAll({
-    where: {
-      active: true
-    },
+    where: { active: true },
     order: [["id", "asc"]],
     attributes: ["name", "imgUrl", "completeName","id", "fixedAmount"]
   }).then(allowanceList => {
     res.send(allowanceList);
   });
 });
+
+Router.get("/admin", function(req, res) {
+  AllowanceDetail.findAll({
+    include: [
+      {
+        model: Employee,
+        as: "employeeDetail",
+      },
+      {
+        model: Allowance,
+        as: "allowanceDetail",
+      }
+    ]
+  }).then(allowanceList => {  
+    res.json(allowanceList);
+  });
+});
+
 
 // Insert allowance
 Router.post("/", MulterFn.single("file"), (req, res) => {
@@ -90,7 +106,10 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
               AllowanceDetail_Instance.setEmployeeAllowance(
                 Employee_Allowance_Instance
               );
-              AllowanceDetail_Instance.setAllowance(
+              AllowanceDetail_Instance.setEmployeeDetail(
+                Employee_Allowance_Instance.employeeId
+              );
+              AllowanceDetail_Instance.setAllowanceDetail(
                 Employee_Allowance_Instance.allowanceId
               );
             });
@@ -136,7 +155,7 @@ Router.get("/search/", function (req, res) {
             //ademas de setearle al allowanceDetail el Allowance
             {
               model: Allowance,
-              as: "allowance",
+              as: "allowanceDetail",
               attributes: ['name'] 
             }
           ],
@@ -154,7 +173,7 @@ Router.get("/search/", function (req, res) {
           include: [
             {
               model: Allowance,
-              as: "allowance",
+              as: "allowanceDetail",
               where: {
                 id: req.query.allowanceId // esto me filtra por allowance
               },
@@ -175,7 +194,7 @@ Router.get("/search/all", function(req, res) {
     include: [
       {
         model: Allowance,
-        as: "allowance"
+        as: "allowanceDetail"
       }
     ]
   }).then(allowanceList => {

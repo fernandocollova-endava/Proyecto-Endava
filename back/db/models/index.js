@@ -24,11 +24,9 @@ Allowance.belongsToMany(Employee, {
 
 //AllowanceDetail.belongsToMany(EmployeeAllowence, {as: "emPall",through: 'detailAllowance'})
 AllowanceDetail.belongsTo(Employee_Allowance, { as: "employeeAllowance" })
-AllowanceDetail.belongsTo(Allowance, { as: "allowance" })
+AllowanceDetail.belongsTo(Allowance, { as: "allowanceDetail" })
+AllowanceDetail.belongsTo(Employee, { as: "employeeDetail" })
 
-// Relación BookAllowance - Employe ( Prorrateo; Fecha; Monto ingresado, otorgado, remanente.)
-// Employee.belongsToMany(StaticAllowance, { as: "allowance", through: 'EmployeeAllowence', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-// StaticAllowance.belongsToMany(Employee, { as: "employee", through: 'EmployeeAllowence', onDelete: 'CASCADE', onUpdate: 'CASCADE' })
 
 module.exports = {
   Employee,
