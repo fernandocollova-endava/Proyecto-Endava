@@ -4,6 +4,7 @@ import { createAllowance } from '../../redux/actions/allowanceActions'
 import { MDBCard, MDBInput, MDBCardBody, MDBRow, MDBCol, MDBAnimation, MDBIcon, MDBBtn } from "mdbreact";
 
 import ModalAviso from "../ModalContainer/modalAviso"
+import { openCloseNavBar } from "../../redux/actions/navbar"
 
 class AllowanceContainer extends React.Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class AllowanceContainer extends React.Component {
     }
     componentDidMount() {
         window.scrollTo(0, 0)
+        this.props.openCloseNavBar(false)
     }
     onFormSubmit(e) {
         e.preventDefault();
@@ -40,6 +42,7 @@ class AllowanceContainer extends React.Component {
             .then((response) => {
                 this.setState({ active: response.data, modal: true, textMsj: 'The file has been successfully sent', titleMsj: 'Success' });
             }).catch((error) => {
+                console.dir(error)
                 this.setState({ modal: true, textMsj: 'An error occurred while sending the file..', titleMsj: 'Error' });
             });
     }
@@ -201,7 +204,8 @@ const mapStateToProps = (state, owner) => {
 
 const MapDispatchToProps = (dispatch) => {
     return {
-        createAllowance: (data) => dispatch(createAllowance(data))
+        createAllowance: (data) => dispatch(createAllowance(data)),
+        openCloseNavBar: (val) => dispatch(openCloseNavBar(val))
     }
 }
 

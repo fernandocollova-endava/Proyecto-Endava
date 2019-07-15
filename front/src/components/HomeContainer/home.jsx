@@ -11,7 +11,7 @@ const AnimationPage = ({ cardList }) => {
           className="img-fluid bannerAllowance"
           alt="Imagen endava" />
       </MDBAnimation>
-
+     
       <MDBRow className="container-banner">
         <MDBCol md="1">
 
@@ -48,15 +48,16 @@ const AnimationPage = ({ cardList }) => {
             <MDBCol md="3">
               <MDBAnimation reveal type={((i % 2 == 0) ? 'fadeInUp' : 'fadeInDown')}>
                 <MDBCard className="Card-Img">
-                  <div className="container-IMG">
+                  <div className="container-IMG" key={card.name}>
                     <div className="div-img" >
                       <Link to={`/allowance/${card.name}`} >
                         <img src={card.imgUrl}
                           className="img-fluid margenBottomMobile img"
                           alt={`Imagen logo ${card.name}`} />
-                        <center>
-                          <span
+                        <center >
+                          <span 
                             className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">
+                            {/* <img src={`/assets/img/${card.name}.png`} width="30px"/> */}
                             Enter <i className="fas fa-angle-double-right"></i></span>
                         </center>
                       </Link>

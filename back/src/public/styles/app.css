@@ -169,6 +169,8 @@ table.table td {
   max-height: 100%;
   background-color: #9e9e9e0a;
 }
+
+
   /* === FICHA EFECT IMG + TEXT === */
   /* ========================================= */
   .Card-Img {
@@ -233,6 +235,5 @@ table.table td {
     -o-transform: translate(0px, -30px) scale(0.5);
     -ms-transform: translate(0px, -30px) scale(0.5);
     border-radius: 50%;
-    
   }
  

@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { logginUser, updatePass } from "../../redux/actions/user";
 import UpdatePass from "../UpdatePassContainer/updatePass";
+import { openCloseNavBar } from "../../redux/actions/navbar"
 
 class UpdatePassContainer extends React.Component {
   constructor() {
@@ -15,7 +16,7 @@ class UpdatePassContainer extends React.Component {
    
   }
   componentDidMount() {
-    console.log("so user", this.props.user)
+    this.props.openCloseNavBar(false)
   }
 
   handleChange(e) {
@@ -57,7 +58,8 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => ({
   logginUser: data => dispatch(logginUser(data)),
-  updatePass: (password, user) => dispatch(updatePass(password, user))
+  updatePass: (password, user) => dispatch(updatePass(password, user)),
+  openCloseNavBar: (val) => dispatch(openCloseNavBar(val))
 });
 
 export default connect(
