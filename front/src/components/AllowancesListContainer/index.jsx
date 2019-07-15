@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import AllowanceList from "./allowanceList";
 import { fetchAllowances } from "../../redux/actions/allowanceActions"
 import { MDBBtn } from "mdbreact";
+import { openCloseNavBar } from "../../redux/actions/navbar"
 
 class AllowanceListContainer extends React.Component {
   constructor() {
@@ -16,6 +17,7 @@ class AllowanceListContainer extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllowances(this.props.user.id)
+    this.props.openCloseNavBar(false)
   }
 
   handleClick(allowanceId) {
@@ -72,9 +74,10 @@ const mapStateToProps = (state) => {
 
 const MapDispatchToProps = dispatch => {
   return {
-    fetchAllowances: (data, allowanceId) => dispatch(fetchAllowances(data, allowanceId))
+    fetchAllowances: (data, allowanceId) => dispatch(fetchAllowances(data, allowanceId)),
+    openCloseNavBar: (val) => dispatch(openCloseNavBar(val))
   };
-};
+}
 export default connect(
   mapStateToProps,
   MapDispatchToProps
