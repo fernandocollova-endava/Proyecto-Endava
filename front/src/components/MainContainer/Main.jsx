@@ -30,7 +30,6 @@ class MainContainer extends React.Component {
   }
 
   render() {
-
     if (this.state.loading) {
       return 'loading'
     }

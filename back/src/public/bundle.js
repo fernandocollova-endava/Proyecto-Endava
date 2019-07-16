@@ -146,6 +146,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "../back/src/public/styles/sidebar.css":
+/*!*********************************************!*\
+  !*** ../back/src/public/styles/sidebar.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./sidebar.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/sidebar.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "../back/src/public/styles/smartphone.css":
 /*!************************************************!*\
   !*** ../back/src/public/styles/smartphone.css ***!
@@ -2483,7 +2513,7 @@ module.exports = exports['default'];
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n}\n.blue {\n  background-color: #285078 !important\n}\n/* GENERAL  */\n/* ========================================== */\n\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n.bannerAllowance{\n  margin-top: -20px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: center;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 300px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: contain;\n    max-height: 284px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n    \n  }\n ", ""]);
+exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n\n/* GENERAL  */\n/* ========================================== */\n\n.minHeight {\n  min-height: 200px;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.1rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -20px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 300px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n ", ""]);
 
 
 /***/ }),
@@ -2502,6 +2532,20 @@ exports.push([module.i, "/* https://careers.endava.com/Design/styles/webfonts/ *
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/sidebar.css":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/sidebar.css ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height: 100%; /* 100% Full-height */\n    width: 0; /* 0 width - change this with JavaScript */\n    position: fixed; /* Stay in place */\n    z-index: 100000; /* Stay on top */\n    top: 0;\n    right: 0;\n    background-color: #de411b;\n    overflow-x: hidden; /* Disable horizontal scroll */\n    padding-top: 60px; /* Place content 60px from the top */\n    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */\n}\n \n/* The navigation menu links */\n.sidenav a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s\n}\n \n/* When you mouse over the navigation links, change their color */\n.sidenav a:hover, .offcanvas a:focus{\n    color: #f1f1f1;\n}\n \n/* Position and style the close button (top right corner) */\n.sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n}\n \n\nbody {\n  overflow-x: hidden;\n}\n \n/* Add a black background color to the top navigation */\n.topnav {\n    background-color: #DE411B;\n    overflow: hidden;\n}\n \n/* Style the links inside the navigation bar */\n.topnav a {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n \n/* Change the color of links on hover */\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n \n/* Add a color to the active/current link */\n.topnav a.active {\n    background-color: #4CAF50;\n    color: white;\n}\n\n\n#sideNavigation {\n  padding-bottom: 25px;\n  font-family: robotobold,Arial,sans-serif;\n  font-weight: 400;\n  font-size: 26px;\n  color: #fff;\n}\n.item {\n    color:white\n  }\n\n.item:hover, .itemActive {\n  text-decoration: underline white;\n  opacity: .45; \n  transition: opacity .3s ease-out; \n}", ""]);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css":
 /*!**************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css ***!
@@ -2511,7 +2555,7 @@ exports.push([module.i, "/* https://careers.endava.com/Design/styles/webfonts/ *
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n      .maxHeigthNav{\n        max-height: none;\n       \n    }\n}", ""]);
+exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n       \n    }\n}", ""]);
 
 
 /***/ }),
@@ -47589,6 +47633,9 @@ module.exports = function(originalModule) {
 // VARIABLES CONSTRUCTORAS DE ENCABEZADO DE TABLA:
 // *ALLOWANCE
 var columnsAllowance = [{
+  label: 'User',
+  field: 'user'
+}, {
   label: 'Name',
   field: 'name'
 }, {
@@ -47598,7 +47645,7 @@ var columnsAllowance = [{
   label: 'Limit',
   field: 'limitAmount'
 }, {
-  label: 'Employee Amount',
+  label: 'Emp. Amount',
   field: 'employeeAmount'
 }, {
   label: 'Date',
@@ -47607,6 +47654,9 @@ var columnsAllowance = [{
 }, {
   label: 'Status',
   field: 'status'
+}, {
+  label: 'File',
+  field: 'file'
 }];
 var rows_outline_btn = [{
   'id': 1,
@@ -47634,41 +47684,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./src/components/AdminHomeContainer/AdminPanel.jsx":
-/*!**********************************************************!*\
-  !*** ./src/components/AdminHomeContainer/AdminPanel.jsx ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AdminPanel; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function AdminPanel(_ref) {
-  var pendingAllowances = _ref.pendingAllowances;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null) // {console.log("so pending allowances",pendingAllowances )}
-  // <div>
-  //   <ul>
-  // {
-  //    pendingAllowances && pendingAllowances.map((allowance)=>{
-  //     <li>{allowance.allowance.name}</li>
-  //     <li>{allowance.employeeAmount}</li>
-  //     <li>{allowance.observation}</li>
-  //     <li>{allowance.paymentDate}</li>
-  //     <li>{allowance.status}</li>
-  //   })
-  // } 
-  // </ul>
-  // </div>
-  ;
-}
-;
-
-/***/ }),
-
 /***/ "./src/components/AdminHomeContainer/index.jsx":
 /*!*****************************************************!*\
   !*** ./src/components/AdminHomeContainer/index.jsx ***!
@@ -47681,9 +47696,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _AdminHomeContainer_AdminPanel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AdminHomeContainer/AdminPanel */ "./src/components/AdminHomeContainer/AdminPanel.jsx");
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../AllowancesListContainer/allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../AllowancesListContainer/allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47694,13 +47710,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -47719,7 +47736,10 @@ function (_React$Component) {
     _classCallCheck(this, AdminHomeContainer);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminHomeContainer).call(this));
-    _this.state = {};
+    _this.state = {
+      activeFile: ''
+    };
+    _this.viewFile = _this.viewFile.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -47728,24 +47748,53 @@ function (_React$Component) {
     value: function componentDidMount() {
       this.props.fetchPendingAllowances();
       window.scrollTo(0, 0);
+      this.props.openCloseNavBar(false);
+    }
+  }, {
+    key: "viewFile",
+    value: function viewFile(file) {
+      this.setState({
+        activeFile: file
+      });
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       // Condicional para redefinir los objetos
       var val = this.props.pendingAllowances;
+      var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
       val = val.map(function (a) {
+        var split = a.paymentDate.split('-');
         return {
-          name: a.allowance.name,
+          name: a.allowanceDetail.name.toUpperCase(),
           amount: a.amount,
           limitAmount: a.limitAmount,
           employeeAmount: a.employeeAmount,
-          paymentDate: a.paymentDate,
-          status: a.status
+          paymentDate: "".concat(Month[Number(split[1])], "-").concat(split[0]),
+          status: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+            className: a.status
+          }, a.status),
+          file: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBBtn"], {
+            className: "mb-3 btnEv-red rounded mb-0 border-0",
+            onClick: function onClick() {
+              return _this2.viewFile(a.receiptPath);
+            },
+            color: "default",
+            rounded: true,
+            size: "sm"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+            key: "cell3",
+            className: "far fa-file-pdf",
+            size: "2x",
+            "aria-hidden": "true"
+          }), " View ")
         };
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        allowanceList: val
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        allowanceList: val,
+        activeFile: this.state.activeFile
       }));
     }
   }]);
@@ -47762,7 +47811,10 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchPendingAllowances: function fetchPendingAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchPendingAllowances"])());
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchPendingAllowances"])());
+    },
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     }
   };
 };
@@ -47786,6 +47838,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
 /* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -47807,6 +47860,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -47846,6 +47900,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       window.scrollTo(0, 0);
+      this.props.openCloseNavBar(false);
     }
   }, {
     key: "onFormSubmit",
@@ -47872,6 +47927,8 @@ function (_React$Component) {
           titleMsj: 'Success'
         });
       })["catch"](function (error) {
+        console.dir(error);
+
         _this2.setState({
           modal: true,
           textMsj: 'An error occurred while sending the file..',
@@ -47911,6 +47968,11 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
+      var maxAmount = this.props.listAllowance.find(function (allow) {
+        return allow.name === _this3.props.nameUrl;
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__["default"], {
         modal: this.state.modal,
         toggle: this.toggle,
@@ -47948,7 +48010,9 @@ function (_React$Component) {
         onSubmit: this.onFormSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "h4 text-center py-4"
-      }, "Submit your receipt"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Submit your receipt", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "maxAmount"
+      }, " ", "(Max Amount $".concat(maxAmount.fixedAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "grey-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBInput"], {
         label: "Amount allowance...",
@@ -47992,7 +48056,9 @@ function (_React$Component) {
         type: "submit"
       }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBIcon"], {
         icon: "angle-right"
-      })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBCol"], {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "textAlert"
+      }, "*Please note that only jpg, png and PDF files up to 10MB are accepted.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBCol"], {
         md: "6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "preview:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.active.split('.')[1] !== 'pdf' && this.state.active.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/assets/receipt/".concat(this.state.active),
@@ -48012,8 +48078,9 @@ function (_React$Component) {
 var mapStateToProps = function mapStateToProps(state, owner) {
   return {
     user: state.user.user,
-    nameUrl: owner.match.params.name // Extrae la url dinamica
-
+    nameUrl: owner.match.params.name,
+    // Extrae la url dinamica
+    listAllowance: state.allowance.adminAllowances
   };
 };
 
@@ -48021,6 +48088,9 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
     createAllowance: function createAllowance(data) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["createAllowance"])(data));
+    },
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     }
   };
 };
@@ -48050,17 +48120,21 @@ __webpack_require__.r(__webpack_exports__);
 function allowanceList(_ref) {
   var allowanceList = _ref.allowanceList,
       adminAllowances = _ref.adminAllowances,
-      handleClick = _ref.handleClick;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+      handleClick = _ref.handleClick,
+      activeFile = _ref.activeFile;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "upperCaseFonts"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx",
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/About/News/2019/Endava-Opens-Two-New-Software-Centres-In-Timisoara-And-Brasov/480x500.ashx",
     className: "img-fluid bannerAllowance",
-    alt: "Imagen endava"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdown"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdownToggle"], {
+    alt: "Imagen endava",
+    width: "100px"
+  })), "Requests"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdown"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdownToggle"], {
     caret: true,
     color: "primary"
-  }, "Allowances"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdownMenu"], {
+  }, "Select Allowances"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdownMenu"], {
     basic: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
@@ -48073,24 +48147,34 @@ function allowanceList(_ref) {
       }
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdownItem"], null, " ", item.name));
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "container-banner"
+    className: "container-banner minHeight"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "1"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "upperCaseFonts"
-  }, "Requests"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    md: "10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
-    btn: true
+  }, allowanceList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there are no results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
+    btn: true,
+    fixed: true,
+    responsive: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableHead"], {
     columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__["columnsAllowance"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableBody"], {
     rows: allowanceList
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "1"
-  }))));
+    md: "0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "preview:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, activeFile.split('.')[1] !== 'pdf' && activeFile.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/assets/receipt/".concat(activeFile),
+    width: "100%"
+  })), activeFile.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
+    src: "/assets/receipt/".concat(activeFile),
+    width: "100%",
+    height: "400px",
+    type: "application/pdf"
+  }))))));
 }
 
 /***/ }),
@@ -48109,6 +48193,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _allowanceList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
 /* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48132,6 +48218,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
 var AllowanceListContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -48143,7 +48231,10 @@ function (_React$Component) {
     _classCallCheck(this, AllowanceListContainer);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(AllowanceListContainer).call(this));
-    _this.state = {};
+    _this.state = {
+      activeFile: ''
+    };
+    _this.viewFile = _this.viewFile.bind(_assertThisInitialized(_this));
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -48152,29 +48243,61 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchAllowances(this.props.user.id);
-      this.props.fetchAdminAllowances();
+      this.props.openCloseNavBar(false);
     }
   }, {
     key: "handleClick",
     value: function handleClick(allowanceId) {
       this.props.fetchAllowances(this.props.user.id, allowanceId);
+      this.setState({
+        activeFile: ''
+      });
+    }
+  }, {
+    key: "viewFile",
+    value: function viewFile(file) {
+      this.setState({
+        activeFile: file
+      });
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       // Condicional para redefinir los objetos
       var val = this.props.allowanceList;
+      var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
       val = val.map(function (a) {
+        var split = a.paymentDate.split('-');
         return {
-          name: a.allowance.name,
+          name: a.allowanceDetail.name.toUpperCase(),
+          user: a.employeeDetail.name,
           amount: a.amount,
           limitAmount: a.limitAmount,
           employeeAmount: a.employeeAmount,
-          paymentDate: a.paymentDate,
-          status: a.status
+          paymentDate: "".concat(Month[Number(split[1])], "-").concat(split[0]),
+          status: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+            className: a.status
+          }, a.status),
+          file: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBBtn"], {
+            className: "mb-3 btnEv-red rounded mb-0 border-0",
+            onClick: function onClick() {
+              return _this2.viewFile(a.receiptPath);
+            },
+            color: "default",
+            rounded: true,
+            size: "sm"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+            key: "cell3",
+            className: "far fa-file-pdf",
+            size: "2x",
+            "aria-hidden": "true"
+          }), " View ")
         };
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        activeFile: this.state.activeFile,
         handleClick: this.handleClick,
         allowanceList: val,
         adminAllowances: this.props.adminAllowances
@@ -48198,8 +48321,8 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     fetchAllowances: function fetchAllowances(data, allowanceId) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowances"])(data, allowanceId));
     },
-    fetchAdminAllowances: function fetchAdminAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAdminAllowances"])());
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     }
   };
 };
@@ -48281,14 +48404,22 @@ var AnimationPage = function AnimationPage(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "1"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
-    md: "8"
+    md: "10"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "fontLight upperCaseFonts"
-  }, "Welcome to the allowance employee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+  }, "Allowance Management Site"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     type: "fadeInUp"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "TextParrafo"
-  }, "We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world\u2019s largest banks and payments companies. Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe. Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+  }, "Now you can ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "fontEmphasis"
+  }, "manage the benefits "), "you already knew from this agile and easy going site. No matter where or when, you can access them from your ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "strongEmphasis"
+  }, "mobile or desktop"), ". Just apply for the benefit you want by uploading a file or completing a SIMPLE form and that\u2019s it! ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "fontEmphasis"
+  }, "Enjoying"), " all your employee benefits has never been so  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "fontEmphasis"
+  }, "EASY"), "!", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "1"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
     className: "container-banner marginDemo"
@@ -48297,22 +48428,27 @@ var AnimationPage = function AnimationPage(_ref) {
       md: "3"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
       reveal: true,
-      type: i % 2 == 0 ? 'fadeInUp' : 'fadeInDown'
+      delay: "".concat(i * 100, "ms"),
+      type: "fadeInLeftBig"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
       className: "Card-Img"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "container-IMG"
+      className: "container-IMG",
+      key: card.name
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "div-img"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/allowance/".concat(card.name)
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "ajustImg"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: card.imgUrl,
+      src: "/assets/img/".concat(card.name, "_IMG.png") //{card.imgUrl}
+      ,
       className: "img-fluid margenBottomMobile img",
       alt: "Imagen logo ".concat(card.name)
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
-    }, "Ingresar ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-angle-double-right"
     })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "titleModule"
@@ -48338,8 +48474,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ "./src/components/HomeContainer/home.jsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48364,6 +48500,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var HomeContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -48375,28 +48512,22 @@ function (_React$Component) {
     _classCallCheck(this, HomeContainer);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(HomeContainer).call(this));
-    _this.state = {
-      cardList: []
-    };
+    _this.state = {};
     return _this;
   }
 
   _createClass(HomeContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this2 = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_4___default.a.get('/api/allowance/list').then(function (cardList) {
-        _this2.setState({
-          cardList: cardList.data
-        });
-      });
+      window.scrollTo(0, 0);
+      this.props.openCloseNavBar(false);
+      this.props.fetchAdminAllowances();
     }
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_home__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        cardList: this.state.cardList
+        cardList: this.props.adminAllowances
       }));
     }
   }]);
@@ -48404,15 +48535,28 @@ function (_React$Component) {
   return HomeContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    user: state.user.user,
+    adminAllowances: state.allowance.adminAllowances
+  };
+};
+
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     logout: function logout() {
       return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_3__["logout"])());
+    },
+    fetchAdminAllowances: function fetchAdminAllowances() {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAdminAllowances"])());
+    },
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(null, mapDispatchToProps)(HomeContainer));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(HomeContainer));
 
 /***/ }),
 
@@ -48840,11 +48984,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -48868,6 +49009,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Navbar =
 /*#__PURE__*/
 function (_Component) {
@@ -48879,12 +49021,10 @@ function (_Component) {
     _classCallCheck(this, Navbar);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Navbar).call(this, props));
-    _this.state = {
-      collapse1: false,
-      collapseID: ""
-    };
+    _this.state = {};
     _this.handleLogOut = _this.handleLogOut.bind(_assertThisInitialized(_this));
     _this.closeCollapse = _this.closeCollapse.bind(_assertThisInitialized(_this));
+    _this.openNavbar = _this.openNavbar.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -48895,96 +49035,91 @@ function (_Component) {
       window.scrollTo(0, 0);
     }
   }, {
-    key: "toggleCollapse",
-    value: function toggleCollapse(collapseID) {
-      this.setState(function (prevState) {
-        return {
-          collapseID: prevState.collapseID !== collapseID ? collapseID : ""
-        };
-      });
-    }
-  }, {
-    key: "toggleSingleCollapse",
-    value: function toggleSingleCollapse(collapseId) {
-      this.setState(_objectSpread({}, this.state, _defineProperty({}, collapseId, !this.state[collapseId])));
-    }
-  }, {
     key: "handleLogOut",
     value: function handleLogOut() {
       var _this2 = this;
 
-      this.toggleSingleCollapse("collapse1");
+      this.props.openCloseNavBar(false);
       this.props.logout().then(function (res) {
         if (res === "logoutOK") _this2.props.history.push("/login");
       });
     }
   }, {
+    key: "openNavbar",
+    value: function openNavbar() {
+      this.props.openCloseNavBar(true);
+    }
+  }, {
     key: "closeCollapse",
-    value: function closeCollapse(collapseId) {
-      this.setState(_objectSpread({}, this.state, _defineProperty({}, collapseId, false)));
+    value: function closeCollapse() {
+      this.props.openCloseNavBar(false);
     }
   }, {
     key: "render",
     value: function render() {
       var _this3 = this;
 
+      var location = this.props.location;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbar"], {
         className: "fixed-top"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbarBrand"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/",
         onClick: function onClick() {
-          return _this3.closeCollapse("collapse1");
+          return _this3.closeCollapse();
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "logo",
         src: "https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx",
         alt: "Endava"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbarToggler"], {
+        right: true,
         onClick: function onClick() {
-          return _this3.toggleSingleCollapse("collapse1");
+          return _this3.openNavbar();
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
         icon: "bars",
         size: "2x"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCollapse"], {
-        isOpen: this.state.collapse1,
-        navbar: true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavbarNav"], {
-        left: true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], {
-        active: true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
-        to: "/",
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "sideNavigation",
+        style: {
+          width: this.props.navWidth ? 300 : 0
+        },
+        className: "upperCaseFonts sidenav"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "closebtn",
         onClick: function onClick() {
-          return _this3.toggleSingleCollapse("collapse1");
+          return _this3.closeCollapse();
         }
-      }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
-        to: "/profile",
-        onClick: function onClick() {
-          return _this3.toggleSingleCollapse("collapse1");
-        }
-      }, "Profile")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
-        to: "/allowance/search",
-        onClick: function onClick() {
-          return _this3.toggleSingleCollapse("collapse1");
-        }
-      }, "My Allowances")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+      }, " \xD7 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location == "/" && "itemActive"),
+        to: "/"
+      }, " Home "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location == "/profile" && "itemActive"),
+        to: "/profile"
+      }, " Profile "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location == "/allowance/search" && "itemActive"),
+        to: "/allowance/search"
+      }, " My Allowances "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location == "/discipline-event" && "itemActive"),
+        to: "/discipline-event"
+      }, " Discipline Event "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item",
         onClick: this.handleLogOut
-      }, "Logout")), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
-        to: "/admin/panel",
-        onClick: function onClick() {
-          return _this3.toggleSingleCollapse("collapse1");
-        }
-      }, "Admin Panel")) : null)));
+      }, " Logout "), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location == "/admin/panel" && "itemActive"),
+        to: "/admin/panel"
+      }, " Admin Panel ") : null));
     }
   }]);
 
   return Navbar;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-var mapStateToProps = function mapStateToProps(state) {
+var mapStateToProps = function mapStateToProps(state, own) {
   return {
-    user: state.user.user
+    user: state.user.user,
+    navWidth: state.nav.status,
+    location: own.location.pathname
   };
 };
 
@@ -48995,6 +49130,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     logout: function logout() {
       return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_4__["logout"])());
+    },
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     }
   };
 };
@@ -49116,6 +49254,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
 /* harmony import */ var _UpdatePassContainer_updatePass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../UpdatePassContainer/updatePass */ "./src/components/UpdatePassContainer/updatePass.jsx");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -49135,6 +49274,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -49163,7 +49303,9 @@ function (_React$Component) {
 
   _createClass(UpdatePassContainer, [{
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      this.props.openCloseNavBar(false);
+    }
   }, {
     key: "handleChange",
     value: function handleChange(e) {
@@ -49178,7 +49320,9 @@ function (_React$Component) {
       if (this.state.oldPassword == this.state.password) this.setState({
         error: true
       });
-      this.props.updatePass(this.state.password, this.props.user.id).then(function (user) {
+      this.props.updatePass(this.state.password, this.props.user.id).then(function (data) {
+        console.log('so daaaaa', data);
+
         _this2.props.history.push("/");
       })["catch"](function () {
         return _this2.setState({
@@ -49212,6 +49356,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     updatePass: function updatePass(password, user) {
       return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_2__["updatePass"])(password, user));
+    },
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__["openCloseNavBar"])(val));
     }
   };
 };
@@ -49243,8 +49390,10 @@ function updatePass(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grey-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "You must change your password before logging on the first time. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    md: "1"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "6"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
     label: "Your current password ",
     icon: "lock",
     group: true,
@@ -49264,18 +49413,18 @@ function updatePass(_ref) {
     label: "Confirm your new password",
     icon: "exclamation-triangle",
     group: true,
-    type: "text",
+    type: "password",
     validate: true,
     error: "wrong",
     success: "right"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     type: "submit",
-    color: "primary"
-  }, "Save changes")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    color: "secondary"
-  }, "Close"))));
+    className: "mb-3 btnEv-red rounded mb-0 border-0"
+  }, "Save changes"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "5"
+  }))))))));
 }
 ;
 
@@ -49285,7 +49434,7 @@ function updatePass(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, SET_OPEN_CLOSE_NAVBAR */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49295,6 +49444,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALLOWANCES", function() { return RECEIVE_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ADMIN_ALLOWANCES", function() { return RECEIVE_ADMIN_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PENDING_ALLOWANCES", function() { return RECEIVE_PENDING_ALLOWANCES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_OPEN_CLOSE_NAVBAR", function() { return SET_OPEN_CLOSE_NAVBAR; });
 // Allowance ===>
 //export const ADD_ALLOWANCE_TO_DB = "ADD_ALLOWANCE_TO_DB";
 //User
@@ -49303,7 +49453,9 @@ var USER_LOGOUT = " USER_LOGOUT"; //Allowances
 
 var RECEIVE_ALLOWANCES = "RECEIVE_ALLOWANCES";
 var RECEIVE_ADMIN_ALLOWANCES = "ECEIVE_ADMIN_ALLOWANCES";
-var RECEIVE_PENDING_ALLOWANCES = "RECEIVE_PENDING_ALLOWANCES";
+var RECEIVE_PENDING_ALLOWANCES = "RECEIVE_PENDING_ALLOWANCES"; // NavBar 
+
+var SET_OPEN_CLOSE_NAVBAR = "SET_OPEN_CLOSE_NAVBAR";
 
 /***/ }),
 
@@ -49334,6 +49486,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../back/src/public/styles/smartphone.css */ "../back/src/public/styles/smartphone.css");
 /* harmony import */ var _back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _back_src_public_styles_sidebar_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../back/src/public/styles/sidebar.css */ "../back/src/public/styles/sidebar.css");
+/* harmony import */ var _back_src_public_styles_sidebar_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_sidebar_css__WEBPACK_IMPORTED_MODULE_11__);
 // el inicio de la app
 
 
@@ -49342,6 +49496,7 @@ __webpack_require__.r(__webpack_exports__);
 
  //Config MDB
 //import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 
 
@@ -49433,11 +49588,40 @@ var fetchAdminAllowances = function fetchAdminAllowances() {
 };
 var fetchPendingAllowances = function fetchPendingAllowances() {
   return function (dispatch) {
+    console.log("entre");
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/search/all").then(function (res) {
       return res.data;
     }).then(function (pendingAllowances) {
+      console.log(pendingAllowances, "ACTO");
       dispatch(receivePendingAllowances(pendingAllowances));
     });
+  };
+};
+
+/***/ }),
+
+/***/ "./src/redux/actions/navbar.js":
+/*!*************************************!*\
+  !*** ./src/redux/actions/navbar.js ***!
+  \*************************************/
+/*! exports provided: setOpenCloseNavBar, openCloseNavBar */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setOpenCloseNavBar", function() { return setOpenCloseNavBar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openCloseNavBar", function() { return openCloseNavBar; });
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
+
+var setOpenCloseNavBar = function setOpenCloseNavBar(val) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_0__["SET_OPEN_CLOSE_NAVBAR"],
+    val: val
+  };
+};
+var openCloseNavBar = function openCloseNavBar(val) {
+  return function (dispatch) {
+    dispatch(setOpenCloseNavBar(val));
   };
 };
 
@@ -49501,9 +49685,6 @@ var updatePass = function updatePass(password, userId) {
       userId: userId
     }).then(function (res) {
       return res.data;
-    }).then(function (answer) {
-      dispatch(userLogout());
-      return answer;
     });
   };
 };
@@ -49586,13 +49767,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _allowanceReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./allowanceReducer */ "./src/redux/reducers/allowanceReducer.js");
 /* harmony import */ var _user_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user-reducer */ "./src/redux/reducers/user-reducer.js");
+/* harmony import */ var _navbarReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navbarReducer */ "./src/redux/reducers/navbarReducer.js");
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   allowance: _allowanceReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  user: _user_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
+  user: _user_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
+  nav: _navbarReducer__WEBPACK_IMPORTED_MODULE_3__["default"]
 }));
+
+/***/ }),
+
+/***/ "./src/redux/reducers/navbarReducer.js":
+/*!*********************************************!*\
+  !*** ./src/redux/reducers/navbarReducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
+
+var initialState = {
+  status: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["SET_OPEN_CLOSE_NAVBAR"]:
+      return Object.assign({}, state, {
+        status: action.val
+      });
+
+    default:
+      return state;
+  }
+});
 
 /***/ }),
 

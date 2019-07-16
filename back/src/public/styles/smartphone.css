@@ -27,6 +27,9 @@
         font-size: 2.6vw;
       }
 
+    .grey-text{
+        padding: 0 10px; 
+    }
       .maxHeigthNav{
         max-height: none;
        

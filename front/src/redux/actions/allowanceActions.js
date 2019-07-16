@@ -54,10 +54,12 @@ export const fetchAdminAllowances = () => dispatch => {
     });
 };
 export const fetchPendingAllowances = () => dispatch => {
+  console.log("entre")
   return axios
     .get("/api/allowance/search/all")
     .then(res => res.data)
     .then(pendingAllowances => {
+      console.log(pendingAllowances,"ACTO")
       dispatch(receivePendingAllowances(pendingAllowances));
     });
 };

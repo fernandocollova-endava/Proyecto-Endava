@@ -23,6 +23,11 @@ body {
 .grey-text{
   padding: 0 30px; 
 }
+
+table.table td {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
 .md-form .prefix {
   top: 0.75rem;
   font-size: 1.75rem;
@@ -36,14 +41,62 @@ body {
 .fontLigth {
   font-family: robotolight,Arial,sans-serif;
   color: #000;
+  margin-top: 10px;
 }
 .blue {
   background-color: #285078 !important
 }
+.textAlert {
+  font-size: 13px;
+}
+.fontEmphasis {
+  font-size: 26px;
+  color: #de411b;
+}
+
+.strongEmphasis {
+  font-size: 20px;
+  font-weight: 900;
+}
+.maxAmount {
+  font-size: 14px;
+  color: #48545B;
+  text-align: center;
+  margin-top: 5px;
+  display: block;
+}
+/* TABLA  */
+/* ========================================== */
+table.table th {
+  width: 108px;
+  text-align: center;
+  font-weight: bold;
+  font-family: roboto_condensedbold,Arial,sans-serif;
+}
+table.table td {
+  padding: 0px !important;
+  text-align: center;
+}
+
 /* GENERAL  */
 /* ========================================== */
 
-
+.minHeight {
+  min-height: 200px;
+}
+.pending {
+  background-color: #9BB4BE !important;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: roboto_condensedbold,Arial,sans-serif;
+    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 0.1rem 0.54rem;
+    font-size: 0.81rem;
+    border: solid 1px #9BB4BE !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius: 5px !important;
+}
 .btnAllowance {
   margin-top: -50px;
 }
@@ -89,6 +142,11 @@ body {
     margin-top:-40px;
     font-family: robotobold;  
 }
+
+.card:hover{
+  color:#48584B;
+  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
 .bannerAllowance{
   margin-top: -20px;
   margin-bottom: 10px;
@@ -103,7 +161,7 @@ body {
     margin-top:10px;
 }
 .TextParrafo {
-    text-align: center;
+    text-align: left;
     font-family: robotolight,Arial,sans-serif;
 }
  
@@ -132,11 +190,16 @@ body {
   max-height: 100%;
   background-color: #9e9e9e0a;
 }
+
+
   /* === FICHA EFECT IMG + TEXT === */
   /* ========================================= */
   .Card-Img {
     z-index: -2;
     min-height: 300px;
+  }
+  .ajustImg {
+    min-height: 188px;
   }
   .container-IMG {
     position: relative;
@@ -158,8 +221,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    object-fit: contain;
-    max-height: 284px;
+    object-fit: cover;
+    min-height: 264px;
     transform: translate(0px, 0px) scale(1);
     -webkit-transform: translate(0px, 0px) scale(1);
     -moz-transform: translate(0px, 0px) scale(1);
@@ -196,6 +259,5 @@ body {
     -o-transform: translate(0px, -30px) scale(0.5);
     -ms-transform: translate(0px, -30px) scale(0.5);
     border-radius: 50%;
-    
   }
  

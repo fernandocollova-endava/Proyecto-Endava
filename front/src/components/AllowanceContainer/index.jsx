@@ -4,6 +4,7 @@ import { createAllowance } from '../../redux/actions/allowanceActions'
 import { MDBCard, MDBInput, MDBCardBody, MDBRow, MDBCol, MDBAnimation, MDBIcon, MDBBtn } from "mdbreact";
 
 import ModalAviso from "../ModalContainer/modalAviso"
+import { openCloseNavBar } from "../../redux/actions/navbar"
 
 class AllowanceContainer extends React.Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class AllowanceContainer extends React.Component {
     }
     componentDidMount() {
         window.scrollTo(0, 0)
+        this.props.openCloseNavBar(false)
     }
     onFormSubmit(e) {
         e.preventDefault();
@@ -40,6 +42,7 @@ class AllowanceContainer extends React.Component {
             .then((response) => {
                 this.setState({ active: response.data, modal: true, textMsj: 'The file has been successfully sent', titleMsj: 'Success' });
             }).catch((error) => {
+                console.dir(error)
                 this.setState({ modal: true, textMsj: 'An error occurred while sending the file..', titleMsj: 'Error' });
             });
     }
@@ -65,6 +68,11 @@ class AllowanceContainer extends React.Component {
         });
     }
     render() {
+        
+        let maxAmount = this.props.listAllowance.find((allow)=>{ 
+            return allow.name === this.props.nameUrl;
+        });
+
         return (
             <>
             <ModalAviso
@@ -107,7 +115,9 @@ class AllowanceContainer extends React.Component {
                             <MDBCard>
                                 <MDBCardBody>
                                     <form onSubmit={this.onFormSubmit}>
-                                        <p className="h4 text-center py-4">Submit your receipt</p>
+                                        <p className="h4 text-center py-4">Submit your receipt 
+                                        <label className="maxAmount"> {`(Max Amount $${maxAmount.fixedAmount})`}</label></p>
+                                            
                                         <div className="grey-text">
                                             <MDBInput
                                                 label="Amount allowance..." icon="hand-holding-usd"
@@ -134,6 +144,7 @@ class AllowanceContainer extends React.Component {
                                                 error="wrong"
                                                 success="right"
                                             />
+                                            
                                             <MDBInput
                                                 icon="file-signature"
                                                 group
@@ -144,7 +155,7 @@ class AllowanceContainer extends React.Component {
                                                 validate
                                                 error="wrong"
                                                 success="right"
-                                            />
+                                            /> 
                                         </div>
                                         <div className="text-center py-4 mt-3">
                                             <MDBBtn
@@ -153,8 +164,11 @@ class AllowanceContainer extends React.Component {
                                                 type="submit"
                                             >
                                                 Send form <MDBIcon icon="angle-right" />
+                                                
                                             </MDBBtn>
+                                            
                                         </div>
+                                        <i className="textAlert">*Please note that only jpg, png and PDF files up to 10MB are accepted.</i>
                                     </form>
                                 </MDBCardBody>
                             </MDBCard>
@@ -182,13 +196,15 @@ class AllowanceContainer extends React.Component {
 const mapStateToProps = (state, owner) => {
     return {
          user: state.user.user,
-         nameUrl: owner.match.params.name // Extrae la url dinamica
+         nameUrl: owner.match.params.name, // Extrae la url dinamica
+         listAllowance:state.allowance.adminAllowances
     }
 }
 
 const MapDispatchToProps = (dispatch) => {
     return {
-        createAllowance: (data) => dispatch(createAllowance(data))
+        createAllowance: (data) => dispatch(createAllowance(data)),
+        openCloseNavBar: (val) => dispatch(openCloseNavBar(val))
     }
 }
 

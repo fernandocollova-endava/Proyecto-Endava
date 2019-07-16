@@ -44,11 +44,7 @@ export const updatePass = (password, userId) => dispatch => {
   return axios
     .post("/api/employee/password/update", {password:password, userId:userId})
     .then(res => res.data)
-    .then(answer => {
-  
-      dispatch(userLogout());
-      return answer;
-    });
+
 };
 
 export const fetchLoggedUser = () => dispatch => {

@@ -53,6 +53,9 @@ const AllowanceDetail = db.define("AllowanceDetail",{
             notEmpty: true,
         },
     },
+    adminComment:{
+        type: Sequelize.STRING,
+    },
     receiptPath:{
         type: Sequelize.STRING,
         validate: {
@@ -66,16 +69,9 @@ const AllowanceDetail = db.define("AllowanceDetail",{
         },
     },
 })
-const Employee_Allowance = db.define("employee_allowance",{
-    id:{
-        type: Sequelize.INTEGER,
-        primaryKey:true,
-        autoIncrement:true
-    }
-})
 
 module.exports= {
     Allowance,
     AllowanceDetail,
-    Employee_Allowance
+    //Employee_Allowance
 };

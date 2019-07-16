@@ -17,8 +17,8 @@ router.post("/password/update", function(req, res, next) {
 
   Employee.findByPk(req.body.userId)
   .then(employee=>{
-    employee.updatePassword(req.body.password) //llamo a un metodo de instancia presente en el modelo
+  res.send(employee.updatePassword(req.body.password))//llamo a un metodo de instancia presente en el modelo
   })
-});
+})
 
 module.exports = router;
