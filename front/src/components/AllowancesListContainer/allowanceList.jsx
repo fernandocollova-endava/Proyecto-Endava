@@ -19,12 +19,12 @@ export default function allowanceList({
       {/* LISTADO  */}
       <div>
       <h1 className="upperCaseFonts">
-      <MDBAnimation type="fadeInUp">
+      {/* <MDBAnimation type="fadeInUp">
         <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/About/News/2019/Endava-Opens-Two-New-Software-Centres-In-Timisoara-And-Brasov/480x500.ashx"
           className="img-fluid bannerAllowance"
           alt="Imagen endava"
           width="100px" />
-      </MDBAnimation>
+      </MDBAnimation> */}
       Requests</h1>
         <MDBDropdown>
           <MDBDropdownToggle caret color="primary">
