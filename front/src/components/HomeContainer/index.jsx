@@ -14,6 +14,7 @@ class HomeContainer extends React.Component {
     window.scrollTo(0, 0)
     this.props.openCloseNavBar(false)
     this.props.fetchAdminAllowances()
+    
   }
   render() {
     return (

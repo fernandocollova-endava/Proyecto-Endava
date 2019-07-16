@@ -14,16 +14,18 @@ export default function allowanceList({
 }) {
   return (
     <>
-    {console.log("so admin alo", adminAllowances)}
-      <MDBAnimation type="fadeInUp">
-        <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx"
-          className="img-fluid bannerAllowance"
-          alt="Imagen endava" />
-      </MDBAnimation>
-      <hr />
+      
+      
       {/* LISTADO  */}
       <div>
-      <h1 className="upperCaseFonts">Requests</h1>
+      <h1 className="upperCaseFonts">
+      <MDBAnimation type="fadeInUp">
+        <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/About/News/2019/Endava-Opens-Two-New-Software-Centres-In-Timisoara-And-Brasov/480x500.ashx"
+          className="img-fluid bannerAllowance"
+          alt="Imagen endava"
+          width="100px" />
+      </MDBAnimation>
+      Requests</h1>
         <MDBDropdown>
           <MDBDropdownToggle caret color="primary">
             Select Allowances
@@ -43,16 +45,17 @@ export default function allowanceList({
                   onClick={() => {
                     handleClick(item.id);
                   }}
-                >
-                  <MDBDropdownItem> {item.name}</MDBDropdownItem>
+                > 
+                <MDBDropdownItem> {item.name}</MDBDropdownItem>
                 </button>
               ))}
           </MDBDropdownMenu>
         </MDBDropdown>
         <hr />
-        <MDBRow className="container-banner">
-          
-          <MDBCol md="7">
+        <MDBRow className="container-banner minHeight">
+          <MDBCol md="1">
+          </MDBCol>
+          <MDBCol md="10">
             
             <MDBAnimation type="fadeInUp">              
               {(allowanceList.length == 0)? <label>Sorry, there are no results for your selection... <br/><br/></label>:
@@ -62,7 +65,7 @@ export default function allowanceList({
               </MDBTable>}
             </MDBAnimation>
           </MDBCol>
-          <MDBCol md="5">
+          <MDBCol md="0">
           <label>preview:</label>
             <MDBAnimation type="fadeInUp">
               {/* Visualización de archivo cargado */}

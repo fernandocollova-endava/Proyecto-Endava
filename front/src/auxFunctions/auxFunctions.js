@@ -2,6 +2,10 @@
 // *ALLOWANCE
 const columnsAllowance= [
   {
+    label: 'User',
+    field: 'user'
+  },
+  {
     label: 'Name',
     field: 'name'
   },
@@ -25,8 +29,7 @@ const columnsAllowance= [
   {
     label: 'Status',
     field: 'status'
-  }
-  ,
+  },
   {
     label: 'File',
     field: 'file'
