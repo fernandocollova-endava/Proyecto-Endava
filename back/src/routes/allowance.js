@@ -141,8 +141,8 @@ Router.get("/search/all", function (req, res) {
         as: "allowanceDetail"
       },
       {
-        model: Allowance,
-        as: "allowanceDetail",
+        model: Employee,
+        as: "employeeDetail",
       }
     ]
   }).then(allowanceList => {
