@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  MDBDropdown, MDBDropdownToggle, MDBTableBody, MDBTableHead,MDBBtn, 
+  MDBDropdown, MDBDropdownToggle, MDBTableBody, MDBTableHead,MDBInputGroup, 
   MDBDropdownMenu, MDBDropdownItem, MDBTable, MDBAnimation, MDBRow, MDBCol
 } from "mdbreact";
 
@@ -18,18 +18,13 @@ export default function allowanceList({
       
       {/* LISTADO  */}
       <div>
-      <h1 className="upperCaseFonts">
-      {/* <MDBAnimation type="fadeInUp">
-        <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/About/News/2019/Endava-Opens-Two-New-Software-Centres-In-Timisoara-And-Brasov/480x500.ashx"
-          className="img-fluid bannerAllowance"
-          alt="Imagen endava"
-          width="100px" />
-      </MDBAnimation> */}
-      Requests</h1>
-        <MDBDropdown>
+      <table>
+        <tr>
+          <td><h1 className="upperCaseFonts">Requests</h1></td>
+          <td><MDBDropdown>
           <MDBDropdownToggle caret color="primary">
-            Select Allowances
-        </MDBDropdownToggle>
+              Select Allowances
+          </MDBDropdownToggle>
           <MDBDropdownMenu basic>
             <button
               onClick={() => {
@@ -50,7 +45,11 @@ export default function allowanceList({
                 </button>
               ))}
           </MDBDropdownMenu>
-        </MDBDropdown>
+        </MDBDropdown></td>
+        </tr>
+      </table>
+        
+        
         <hr />
         <MDBRow className="container-banner minHeight">
           <MDBCol md="1">
