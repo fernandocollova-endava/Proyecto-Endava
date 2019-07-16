@@ -40,7 +40,7 @@ class AllowanceListContainer extends React.Component {
       let split = (a.paymentDate).split('-')
       return {
         name: (a.allowanceDetail.name).toUpperCase(),
-        user:a.employeeDetail.name,
+        user:(a.employeeDetail.name).toUpperCase(),
         amount: a.amount,
         limitAmount: a.limitAmount,
         employeeAmount: a.employeeAmount,

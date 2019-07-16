@@ -47769,6 +47769,7 @@ function (_React$Component) {
         var split = a.paymentDate.split('-');
         return {
           name: a.allowanceDetail.name.toUpperCase(),
+          user: a.employeeDetail.name.toUpperCase(),
           amount: a.amount,
           limitAmount: a.limitAmount,
           employeeAmount: a.employeeAmount,
@@ -48122,9 +48123,9 @@ function allowanceList(_ref) {
       adminAllowances = _ref.adminAllowances,
       handleClick = _ref.handleClick,
       activeFile = _ref.activeFile;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "upperCaseFonts"
-  }, "Requests"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdown"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdownToggle"], {
+  }, "Requests")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdown"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdownToggle"], {
     caret: true,
     color: "primary"
   }, "Select Allowances"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdownMenu"], {
@@ -48139,7 +48140,7 @@ function allowanceList(_ref) {
         handleClick(item.id);
       }
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBDropdownItem"], null, " ", item.name));
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner minHeight"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "1"
@@ -48265,7 +48266,7 @@ function (_React$Component) {
         var split = a.paymentDate.split('-');
         return {
           name: a.allowanceDetail.name.toUpperCase(),
-          user: a.employeeDetail.name,
+          user: a.employeeDetail.name.toUpperCase(),
           amount: a.amount,
           limitAmount: a.limitAmount,
           employeeAmount: a.employeeAmount,
