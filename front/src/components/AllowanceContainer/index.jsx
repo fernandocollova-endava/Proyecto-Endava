@@ -194,7 +194,6 @@ class AllowanceContainer extends React.Component {
     }
 }
 const mapStateToProps = (state, owner) => {
-    console.log("fixedAmount",state.allowance.adminAllowances)
     return {
          user: state.user.user,
          nameUrl: owner.match.params.name, // Extrae la url dinamica

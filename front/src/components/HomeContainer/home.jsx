@@ -46,14 +46,17 @@ const AnimationPage = ({ cardList }) => {
         {
           cardList && cardList.map((card, i) => (
             <MDBCol md="3">
-              <MDBAnimation reveal type={((i % 2 == 0) ? 'fadeInUp' : 'fadeInDown')}>
+              {/* <MDBAnimation reveal type={((i % 2 == 0) ? 'fadeInUp' : 'fadeInDown')}> */}
+              <MDBAnimation reveal delay={`${(i*100)}ms`} type='fadeInLeftBig'>
                 <MDBCard className="Card-Img">
                   <div className="container-IMG" key={card.name}>
                     <div className="div-img" >
                       <Link to={`/allowance/${card.name}`} >
-                        <img src={card.imgUrl}
+                        <div className="ajustImg">
+                        <img src={`/assets/img/${card.name}_IMG.png`} //{card.imgUrl}
                           className="img-fluid margenBottomMobile img"
                           alt={`Imagen logo ${card.name}`} />
+                        </div>
                         <center >
                           <span 
                             className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">

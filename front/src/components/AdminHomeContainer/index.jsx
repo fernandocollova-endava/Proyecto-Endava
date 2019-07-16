@@ -31,7 +31,7 @@ class AdminHomeContainer extends React.Component {
     val = val.map(a => {
       let split = (a.paymentDate).split('-')
       return {
-        name: (a.allowance.name).toUpperCase(),
+        name: (a.allowanceDetail.name).toUpperCase(),
         amount: a.amount,
         limitAmount: a.limitAmount,
         employeeAmount: a.employeeAmount,

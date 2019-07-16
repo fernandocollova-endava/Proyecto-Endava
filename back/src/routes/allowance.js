@@ -9,23 +9,22 @@ const MulterFn = require("../functions/multer");
 const Allowance = require("../../db/models").Allowance;
 const Employee = require("../../db/models").Employee;
 const AllowanceDetail = require("../../db/models").AllowanceDetail;
-const Employee_Allowance = require("../../db/models/").Employee_Allowance;
 
 // Import Sequilize
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
-Router.get("/", function(req, res) {
+Router.get("/", function (req, res) {
   Allowance.findAll({
     where: { active: true },
     order: [["id", "asc"]],
-    attributes: ["name", "imgUrl", "completeName","id", "fixedAmount"]
+    attributes: ["name", "imgUrl", "completeName", "id", "fixedAmount"]
   }).then(allowanceList => {
     res.send(allowanceList);
   });
 });
 
-Router.get("/admin", function(req, res) {
+Router.get("/admin", function (req, res) {
   AllowanceDetail.findAll({
     include: [
       {
@@ -37,7 +36,7 @@ Router.get("/admin", function(req, res) {
         as: "allowanceDetail",
       }
     ]
-  }).then(allowanceList => {  
+  }).then(allowanceList => {
     res.json(allowanceList);
   });
 });
@@ -64,55 +63,36 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
           // Instancia del Empleado
           // Inserta en la instancia de allowance la instancia de employee
           // Genera la relacion empleado vs reintegro (Employee_Allowance)
-          return allowanceInstance.addEmployee(employeeInstance);
-          //IMP en este caso, retorno la relacion, luego al punto then siguiente
-          //le paso data (cualquier cosa, no importa que no la use), porque sino le paso nada,
-          //ese punto then continua, no espera mi resolucion & si sigue la ejecucion!!!
-        })
-        .then(data => {
-          // Realizamos un findOne para poder obtener la instancia promisificada de (Employee_Allowance)
-          Employee_Allowance.findOne({
-            where: {
-              employeeId: req.body.userid,
-              allowanceId: allowanceInstance.id
-            }
-          }).then(Employee_Allowance_Instance => {
-            // Instancia de Employee_Allowance
-            let paymentDate = paymentDateFn(
-              allowanceInstance.dataValues.createdAt, //Fecha creacion
-              allowanceInstance.dataValues.limitDay
+
+          let paymentDate = paymentDateFn(
+            allowanceInstance.dataValues.createdAt, //Fecha creacion
+            allowanceInstance.dataValues.limitDay
+          );
+
+          // Calculo de total reintegro:
+          var totalAmountFixed = allowanceInstance.dataValues.fixedAmount;
+          var totalEmployeeAmount = req.body.employeeAmount
+          var totalAmount = (totalEmployeeAmount > totalAmountFixed) ? totalAmountFixed : totalEmployeeAmount;
+
+          // Genero un nuevo registro de detalle en la tabla final AllowanceDetail
+          AllowanceDetail.create({
+            amount: totalAmount,
+            employeeAmount: totalEmployeeAmount,
+            limitAmount: totalAmountFixed,
+            paymentDate: paymentDate,
+            observation: req.body.observation,
+            receiptPath: fileName,
+            status: "pending"
+          }).then(AllowanceDetail_Instance => {
+
+            // Instancia de la creación del registro final Empleado
+            AllowanceDetail_Instance.setEmployeeDetail(
+              employeeInstance.id
             );
-
-            // Calculo de total reintegro:
-            var totalAmountFixed = allowanceInstance.dataValues.fixedAmount; //800
-            var totalEmployeeAmount = req.body.employeeAmount
-            var totalAmount = (totalEmployeeAmount > totalAmountFixed) ? totalAmountFixed : totalEmployeeAmount;
-
-            // Genero un nuevo registro de detalle en la tabla final AllowanceDetail
-            AllowanceDetail.create({
-              amount: totalAmount,
-              employeeAmount: totalEmployeeAmount,
-              limitAmount: totalAmountFixed,
-              paymentDate: paymentDate,
-              observation: req.body.observation,
-              receiptPath: fileName,
-              status: "pending"
-            }).then(AllowanceDetail_Instance => {
-              // Instancia de la creación del registro final
-              //ASIGNA
-              // Employee_Allowance_Instance (EB)
-              // AllowanceDetail_Instance (BD)
-
-              AllowanceDetail_Instance.setEmployeeAllowance(
-                Employee_Allowance_Instance
-              );
-              AllowanceDetail_Instance.setEmployeeDetail(
-                Employee_Allowance_Instance.employeeId
-              );
-              AllowanceDetail_Instance.setAllowanceDetail(
-                Employee_Allowance_Instance.allowanceId
-              );
-            });
+            // Instancia de la creación del registro final Beneficio
+            AllowanceDetail_Instance.setAllowanceDetail(
+              allowanceInstance.id
+            );
           });
         });
     })
@@ -125,68 +105,32 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
 
 //Ruta para busqueda + filtro de todos los beneficios de un empleado
 Router.get("/search/", function (req, res) {
-  Employee.findOne({
-    where: {
-      id: req.query.userId
-    }
-  }).then(employee => {
-    Employee_Allowance.findAll({
-      where: {
-        employeeId: employee.id
+  let query = (req.query.allowanceId) ? { id: req.query.allowanceId } : {}
+  AllowanceDetail.findAll({
+    attributes: ['amount', 'employeeAmount', 'limitAmount', 'paymentDate', 'status', 'receiptPath', 'adminComment', 'id'],
+    include: [
+      {
+        model: Employee,
+        as: "employeeDetail",
+        attributes: ['name'],
+        where: {
+          id: req.query.userId
+          //[Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
+        }
+      },
+      {
+        model: Allowance,
+        as: "allowanceDetail",
+        where: query,
       }
-    }).then(employee_allowances => {
-      //recibo arra& con la list a emp-allo
-
-      var arraIds = []; //guardo solo los id
-      var arraAllo = [];
-      for (let i = 0; i < employee_allowances.length; i++) {
-        arraIds.push(employee_allowances[i].id);
-        arraAllo.push(employee_allowances[i].allowanceId);
-      }
-      !req.query.allowanceId //pregunto si existe allowanceId, para poder filtrar por allowance de ser necesario
-        ? AllowanceDetail.findAll({
-          where: {
-            employeeAllowanceId: {
-              [Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
-            } 
-          },
-          include: [
-            //le incluyo el campo Allowance, para eso primero uve que esablecerle una relacion AllowanceDeail
-            //ademas de setearle al allowanceDetail el Allowance
-            {
-              model: Allowance,
-              as: "allowanceDetail",
-              attributes: ['name'] 
-            }
-          ],
-          attributes: ['amount','employeeAmount', 'limitAmount', 'paymentDate', 'status', 'receiptPath']
-        }).then(alloResponse => {
-          res.send(alloResponse);
-        })
-        : AllowanceDetail.findAll({
-          where: {
-            employeeAllowanceId: {
-              [Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
-            }
-          },
-          attributes: ['amount', 'employeeAmount','limitAmount', 'paymentDate', 'status', 'receiptPath'],
-          include: [
-            {
-              model: Allowance,
-              as: "allowanceDetail",
-              where: {
-                id: req.query.allowanceId // esto me filtra por allowance
-              },
-              attributes: ['name']
-            }
-          ] 
-        }).then(alloResponse => {
-          res.send(alloResponse);
-        });
-    });
+    ]
+  }).then(allowanceList => {
+    res.json(allowanceList);
   });
 });
-Router.get("/search/all", function(req, res) {
+
+
+Router.get("/search/all", function (req, res) {
   AllowanceDetail.findAll({
     where: {
       status: "pending"
@@ -201,19 +145,6 @@ Router.get("/search/all", function(req, res) {
     res.send(allowanceList);
   });
 });
-
-// Ruta para extracción de los beneficios activos
-// Router.get("/list/", function(req, res) {
-//   Allowance.findAll({
-//     where: {
-//       active: true
-//     },
-//     order: [[id, asc]],
-//     attributes: ["name", "imgUrl", "completeName"]
-//   }).then(allowanceList => {
-//     res.send(allowanceList);
-//   });
-// });
 
 function paymentDateFn(date, limitDate) {
   let valDate = date.getDay() <= limitDate ? 1 : 2;
