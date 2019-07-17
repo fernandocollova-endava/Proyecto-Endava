@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
     storage,
-    limits: { fileSize: 1000000 }, // Tamaño maximo de bytes tolerables
+    limits: { fileSize: 10000000000 }, // 1000000 Tamaño maximo de bytes tolerables
     fileFilter: function (req, file, cb) { // filtra las extensiones aceptadas
         var filetypes = /jpeg|png|pdf|jpg|gif/;
         var mimetype = filetypes.test(file.mimetype);

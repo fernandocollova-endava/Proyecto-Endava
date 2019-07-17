@@ -32,6 +32,8 @@
     }
       .maxHeigthNav{
         max-height: none;
-       
+    }
+    .widthTable {
+        width: 100%
     }
 }
