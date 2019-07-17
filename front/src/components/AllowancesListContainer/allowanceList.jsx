@@ -48,7 +48,7 @@ export default function allowanceList({
          
           <MDBCol md="12">
             <MDBAnimation type="fadeInUp">
-              {(allowanceList.length == 0) ? <label>Sorry, there are no results for your selection... <br /><br /></label> :
+              {(allowanceList.length == 0) ? <label>Sorry, there aren't results for your selection... <br /><br /></label> :
                 <MDBTable btn fixed responsive className="paddingTable">
                   <MDBTableHead columns={columnsAllowance} />
                   <MDBTableBody rows={allowanceList} />

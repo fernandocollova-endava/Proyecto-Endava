@@ -123,6 +123,9 @@ Router.get("/search/", function (req, res) {
         as: "allowanceDetail",
         where: query,
       }
+    ],
+    order: [
+      ['id', 'DESC'], 
     ]
   }).then(allowanceList => {
     res.json(allowanceList);
@@ -205,7 +208,7 @@ Router.get("/findActive/:id", function (req, res) {
   });
 });
 
-// RUTA PARA BUSCAR EL ALLOWANCE ACTIVO (CONSULTADO)
+// RUTA PARA ELIMINAR EL ALLOWANCE ACTIVO (CONSULTADO)
 Router.delete("/:id/delete", function (req, res) {
   AllowanceDetail.destroy({
     where: {
@@ -214,6 +217,22 @@ Router.delete("/:id/delete", function (req, res) {
   })
   .then(resp => {
     res.sendStatus(204)
+  });
+});
+
+// RUTA PARA MODIFICAR EL ESTADO EL ALLOWANCE
+Router.put("/:id/edit", function (req, res) {
+  AllowanceDetail.update(
+    {
+      status: req.body.status,
+      adminComment: req.body.observation
+    },
+    {where: {
+      id:req.params.id
+    }}
+  )
+  .then(resp => {
+    res.sendStatus(201)
   });
 });
 

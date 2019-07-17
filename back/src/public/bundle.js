@@ -2513,7 +2513,7 @@ module.exports = exports['default'];
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n/* GENERAL  */\n/* ========================================== */\n.parrafoModal {\n  margin-top:-10px;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.aproved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 300px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n ", ""]);
+exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n/* GENERAL  */\n/* ========================================== */\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.aproved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 300px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n\n  /* RADIO BUTTONS */\n\n.modalForm h2 {\n    font-size: 16px;\n    color: #c31900;\n    margin-bottom: 20px;\n    margin-left: 20px;\n}\n\n.modalForm > div {\n    padding: 20px 0;\n    border-bottom: 1px solid #ccc;\n}\n\n.modalForm label {\n    display: inline-block;\n    cursor: pointer;\n    color: #c31900;\n    position: relative;\n    padding: 5px 15px 5px 37px;\n    font-size: 1em;\n    border-radius: 5px;\n    -webkit-transition: all .3s ease;\n    -o-transition: all .3s ease;\n    transition: all .3s ease;\n}\n\n.modalForm label:hover {\n    background: rgba(0, 116, 217, 0.1);\n}\n\n.modalForm label:before {\n    content: \"\";\n    display: inline-block;\n    width: 17px;\n    height: 17px;\n    position: absolute;\n    left: 15px;\n    border-radius: 50%;\n    background: none;\n    border: 3px solid #c31903;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n\n}\n\n.modalForm input[type=\"radio\"] {\n    display: none;\n}\n\n.modalForm input[type=\"radio\"]:checked + label:before {\n    display: none;\n}\n\n.modalForm input[type=\"radio\"]:checked + label {\n    padding: 5px 15px;\n    background: #c31900;\n    border-radius: 5px;\n    color: #fff;\n}\n ", ""]);
 
 
 /***/ }),
@@ -48148,7 +48148,7 @@ function allowanceList(_ref) {
     md: "12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
-  }, allowanceList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there are no results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
+  }, allowanceList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
     btn: true,
     fixed: true,
     responsive: true,
@@ -48180,6 +48180,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
 /* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
 /* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48207,6 +48208,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var AllowanceListContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -48221,24 +48223,31 @@ function (_React$Component) {
     _this.state = {
       modal: false,
       modalAviso: false,
+      modalBoolean: false,
       activeAllowance: {},
       history: [],
       activeItem: "1",
-      allowanceType: ""
+      allowanceType: "",
+      titleBoolean: '',
+      msjSave: ''
     };
     _this.toggleDetails = _this.toggleDetails.bind(_assertThisInitialized(_this));
+    _this.toggleBoolean = _this.toggleBoolean.bind(_assertThisInitialized(_this));
     _this.togglePanel = _this.togglePanel.bind(_assertThisInitialized(_this));
     _this.viewDetails = _this.viewDetails.bind(_assertThisInitialized(_this));
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     _this.toggleAviso = _this.toggleAviso.bind(_assertThisInitialized(_this));
     _this.deleteAllowance = _this.deleteAllowance.bind(_assertThisInitialized(_this));
+    _this.actionOk = _this.actionOk.bind(_assertThisInitialized(_this));
+    _this.handleSaveConfirm = _this.handleSaveConfirm.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(AllowanceListContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchAllowances(this.props.user.id);
+      this.props.fetchAllowances(this.props.user.id); // llamar a adminAllowances
+
       this.props.openCloseNavBar(false);
     } // FUNCION PARA FILTRAR POR ALLOWANCE
 
@@ -48269,7 +48278,8 @@ function (_React$Component) {
     value: function toggleDetails() {
       this.setState({
         modal: !this.state.modal,
-        activeItem: "1"
+        activeItem: "1",
+        msjSave: ''
       });
     } // TOGGLE MODAL AVISO
 
@@ -48277,7 +48287,16 @@ function (_React$Component) {
     key: "toggleAviso",
     value: function toggleAviso() {
       this.setState({
-        modalAviso: !this.state.modalAviso
+        modalAviso: !this.state.modalAviso,
+        msjSave: ''
+      });
+    } // TOGGLE MODAL BOOLEAN
+
+  }, {
+    key: "toggleBoolean",
+    value: function toggleBoolean() {
+      this.setState({
+        modalBoolean: !this.state.modalBoolean
       });
     } // TOGGLE PARA NAVEGAR ENTRE EL PANEL DEL MODAL
 
@@ -48292,10 +48311,23 @@ function (_React$Component) {
   }, {
     key: "deleteAllowance",
     value: function deleteAllowance(id) {
+      this.setState({
+        titleBoolean: "Are you sure you want to delete the information?",
+        modalBoolean: true,
+        data: {
+          id: id
+        }
+      });
+    } // FUNCION PARA EJECUTAR LA ACCION GENERICA DEL MODAL BOOLEAN
+
+  }, {
+    key: "actionOk",
+    value: function actionOk(data) {
       var _this3 = this;
 
-      this.props.deleteAllowance(id).then(function () {
+      this.props.deleteAllowance(data.id).then(function () {
         _this3.setState({
+          modalBoolean: false,
           modalAviso: true,
           textMsj: "The request has been successfully eliminated...",
           titleMsj: "Success"
@@ -48304,6 +48336,7 @@ function (_React$Component) {
         _this3.props.fetchAllowances(_this3.props.user.id, _this3.state.allowanceType);
       })["catch"](function () {
         _this3.setState({
+          modalBoolean: false,
           modalAviso: true,
           textMsj: "Ups!, an error occurred while processing the request...",
           titleMsj: "Error"
@@ -48311,9 +48344,27 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "handleSaveConfirm",
+    value: function handleSaveConfirm(e) {
+      var _this4 = this;
+
+      e.preventDefault();
+      this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
+        _this4.setState({
+          msjSave: 'Saved!'
+        });
+
+        _this4.props.fetchAllowances(_this4.props.user.id, _this4.state.allowanceType);
+      })["catch"](function () {
+        _this4.setState({
+          msjSave: 'Error!'
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this4 = this;
+      var _this5 = this;
 
       // Condicional para redefinir los objetos
       var val = this.props.allowanceList;
@@ -48333,7 +48384,7 @@ function (_React$Component) {
           file: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBBtn"], {
             className: "mb-3 btnEv-red rounded mb-0 border-0",
             onClick: function onClick() {
-              return _this4.viewDetails(a.id, a.allowanceDetail.id);
+              return _this5.viewDetails(a.id, a.allowanceDetail.id);
             },
             color: "default",
             rounded: true,
@@ -48346,7 +48397,7 @@ function (_React$Component) {
           }), " Details "),
           "delete": react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, a.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
             onClick: function onClick() {
-              return _this4.deleteAllowance(a.id);
+              return _this5.deleteAllowance(a.id);
             },
             className: "greyColor cursorPointer"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -48364,12 +48415,20 @@ function (_React$Component) {
         togglePanel: this.togglePanel,
         activeItem: this.state.activeItem,
         activeAllowance: this.props.activeAllowance,
-        history: this.props.history
+        history: this.props.history,
+        handleSaveConfirm: this.handleSaveConfirm,
+        msjSave: this.state.msjSave
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__["default"], {
         modal: this.state.modalAviso,
         toggle: this.toggleAviso,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        modalBoolean: this.state.modalBoolean,
+        toggleBoolean: this.toggleBoolean,
+        actionOk: this.actionOk,
+        titleBoolean: this.state.titleBoolean,
+        data: this.state.data
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
         handleClick: this.handleClick,
         allowanceList: val,
@@ -48407,7 +48466,11 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     },
     deleteAllowance: function deleteAllowance(id) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["deleteAllowance"])(id));
-    } // Elimina detalle 
+    },
+    // Elimina detalle 
+    editStatusAllowance: function editStatusAllowance(id, status, observation) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["editStatusAllowance"])(id, status, observation));
+    } // Switch State
 
   };
 };
@@ -49051,6 +49114,56 @@ function ModalAviso(_ref) {
 
 /***/ }),
 
+/***/ "./src/components/ModalContainer/modalBoolean.jsx":
+/*!********************************************************!*\
+  !*** ./src/components/ModalContainer/modalBoolean.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ModalAviso; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+function ModalAviso(_ref) {
+  var modalBoolean = _ref.modalBoolean,
+      toggleBoolean = _ref.toggleBoolean,
+      data = _ref.data,
+      titleBoolean = _ref.titleBoolean,
+      actionOk = _ref.actionOk;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
+    isOpen: modalBoolean,
+    toggle: toggleBoolean,
+    size: "md"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
+    toggle: toggleBoolean
+  }, "Confirm"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: {
+      fontSize: 17
+    }
+  }, titleBoolean), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "aproved btnModalB",
+    style: {
+      padding: "12px 29px"
+    },
+    onClick: function onClick() {
+      return actionOk(data);
+    }
+  }, "YES"), "\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "rejected btnModalB",
+    style: {
+      padding: "12px 29px"
+    },
+    onClick: toggleBoolean
+  }, "NO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))));
+}
+
+/***/ }),
+
 /***/ "./src/components/ModalContainer/modalDetail.jsx":
 /*!*******************************************************!*\
   !*** ./src/components/ModalContainer/modalDetail.jsx ***!
@@ -49071,6 +49184,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function ModalDetails(_ref) {
   var modal = _ref.modal,
+      msjSave = _ref.msjSave,
+      handleSaveConfirm = _ref.handleSaveConfirm,
       toggleDetails = _ref.toggleDetails,
       activeAllowance = _ref.activeAllowance,
       history = _ref.history,
@@ -49093,21 +49208,27 @@ function ModalDetails(_ref) {
       return togglePanel("1");
     },
     role: "tab"
-  }, "Details")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    "class": "far fa-list-alt"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "DETAILS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
     to: "#",
     className: activeItem === "2" ? "active" : "",
     onClick: function onClick() {
       return togglePanel("2");
     },
     role: "tab"
-  }, "History")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    "class": "fas fa-history"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "HISTORY"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
     to: "#",
     className: activeItem === "3" ? "active" : "",
     onClick: function onClick() {
       return togglePanel("3");
     },
     role: "tab"
-  }, "Admin"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    "class": "fas fa-user-edit"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "ADMIN")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
     activeItem: activeItem
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
     tabId: "1",
@@ -49172,7 +49293,68 @@ function ModalDetails(_ref) {
     role: "tabpanel"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "mt-2"
-  }, "ADMIN")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Please select the state to modify: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "User: ", activeAllowance.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: handleSaveConfirm
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "hidden",
+    name: "id",
+    value: activeAllowance.id
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    action: "",
+    "class": "modalForm"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "radio"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    defaultChecked: activeAllowance.status === 'aproved',
+    name: "status",
+    value: "aproved",
+    id: "aproved"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    "for": "aproved"
+  }, "APROVED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    defaultChecked: activeAllowance.status === 'rejected',
+    name: "status",
+    value: "rejected",
+    id: "rejected"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    "for": "rejected"
+  }, "REJECTED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    defaultChecked: activeAllowance.status === 'pending',
+    name: "status",
+    value: "pending",
+    id: "pending"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    "for": "pending"
+  }, "PENDING"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-group",
+    style: {
+      marginTop: -20
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-group-prepend"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "input-group-text",
+    id: "basic-addon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-comment-alt prefix"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    autoComplete: "off",
+    name: "observation",
+    defaultValue: activeAllowance.adminComment,
+    required: true,
+    className: "form-control",
+    placeholder: "Observation...",
+    "aria-describedby": "basic-addon"
+  })), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "mb-3 btnEv-blue rounded mb-0 border-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    "class": "fas fa-edit"
+  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     className: "mb-3 btnEv-red rounded mb-0 border-0",
     onClick: toggleDetails
   }, "Close"))));
@@ -49731,7 +49913,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*!***********************************************!*\
   !*** ./src/redux/actions/allowanceActions.js ***!
   \***********************************************/
-/*! exports provided: receiveAllowances, receiveAdminAllowances, receivePendingAllowances, receiveActiveAllowances, receiveHistoryAllowances, createAllowance, fetchAllowances, fetchAdminAllowances, fetchPendingAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance */
+/*! exports provided: receiveAllowances, receiveAdminAllowances, receivePendingAllowances, receiveActiveAllowances, receiveHistoryAllowances, createAllowance, fetchAllowances, fetchAdminAllowances, fetchPendingAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49748,6 +49930,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllowanceActive", function() { return fetchAllowanceActive; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllowanceHistory", function() { return fetchAllowanceHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteAllowance", function() { return deleteAllowance; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editStatusAllowance", function() { return editStatusAllowance; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
@@ -49845,6 +50028,15 @@ var fetchAllowanceHistory = function fetchAllowanceHistory(employeeId, allowance
 var deleteAllowance = function deleteAllowance(id) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/allowance/".concat(id, "/delete"));
+  };
+}; // Modifica estado (ADMIN)
+
+var editStatusAllowance = function editStatusAllowance(id, status, observation) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/allowance/".concat(id, "/edit"), {
+      status: status,
+      observation: observation
+    });
   };
 };
 

@@ -7,32 +7,32 @@ import {
   RECEIVE_HISTORY_ALLOWANCES
 } from "../../constants";
 
-export const receiveAllowances = function(allowanceList) {
+export const receiveAllowances = function (allowanceList) {
   return {
     type: RECEIVE_ALLOWANCES,
     allowanceList
   };
 };
-export const receiveAdminAllowances = function(adminAllowances) {
+export const receiveAdminAllowances = function (adminAllowances) {
   return {
     type: RECEIVE_ADMIN_ALLOWANCES,
     adminAllowances
   };
 };
 
-export const receivePendingAllowances = function(pendingAllowances){
+export const receivePendingAllowances = function (pendingAllowances) {
   return {
     type: RECEIVE_PENDING_ALLOWANCES,
     pendingAllowances
   };
 }
-export const receiveActiveAllowances = (activeAllowances)=>{
+export const receiveActiveAllowances = (activeAllowances) => {
   return {
     type: RECEIVE_ACTIVE_ALLOWANCES,
     activeAllowances
   };
 }
-export const receiveHistoryAllowances = (historyAllowances)=>{
+export const receiveHistoryAllowances = (historyAllowances) => {
   return {
     type: RECEIVE_HISTORY_ALLOWANCES,
     historyAllowances
@@ -100,3 +100,8 @@ export const deleteAllowance = (id) => dispatch => {
     .delete(`/api/allowance/${id}/delete`)
 };
 
+// Modifica estado (ADMIN)
+export const editStatusAllowance = (id, status, observation) => dispatch => {
+  return axios
+    .put(`/api/allowance/${id}/edit`, { status, observation })
+};
