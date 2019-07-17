@@ -1,18 +1,30 @@
 import React from "react";
 import { connect } from "react-redux";
 import AllowanceList from "./allowanceList";
-import { fetchAllowances } from "../../redux/actions/allowanceActions"
+import { fetchAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance } from "../../redux/actions/allowanceActions"
 import { MDBBtn } from "mdbreact";
 import { openCloseNavBar } from "../../redux/actions/navbar"
+import ModalDetails from '../ModalContainer/modalDetail'
+import ModalAviso from '../ModalContainer/modalAviso'
 
 class AllowanceListContainer extends React.Component {
   constructor() {
     super()
     this.state = {
-      activeFile: ''
-    }
-    this.viewFile = this.viewFile.bind(this)
+      modal: false,
+      modalAviso: false,
+      activeAllowance: {},
+      history: [],
+      activeItem: "1",
+      allowanceType: ""
+    };
+
+    this.toggleDetails = this.toggleDetails.bind(this);
+    this.togglePanel = this.togglePanel.bind(this);
+    this.viewDetails = this.viewDetails.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    this.toggleAviso = this.toggleAviso.bind(this)
+    this.deleteAllowance = this.deleteAllowance.bind(this)
   }
 
   componentDidMount() {
@@ -20,16 +32,64 @@ class AllowanceListContainer extends React.Component {
     this.props.openCloseNavBar(false)
   }
 
-  handleClick(allowanceId) {
-    this.props.fetchAllowances(this.props.user.id, allowanceId)
+  // FUNCION PARA FILTRAR POR ALLOWANCE
+  handleClick(e) {
+    this.props.fetchAllowances(this.props.user.id, e.target.value)
     this.setState({
-      activeFile: ''
+      allowanceType:e.target.value
     })
   }
-  viewFile(file) {
+
+  // FUNCION DE CONSULTA HISTORIAL / DETALLE
+  viewDetails(id, allowanceId) {
+    this.props.fetchAllowanceActive(id)
+    this.props.fetchAllowanceHistory(this.props.user.id, allowanceId)
+      .then(() => {
+        this.setState({
+          modal: true,
+        });
+      })
+  }
+
+  // TOGGLE MODAL HISTORIAL / DETALLE
+  toggleDetails() {
     this.setState({
-      activeFile: file
-    })
+      modal: !this.state.modal,
+      activeItem: "1"
+    });
+  }
+
+  // TOGGLE MODAL AVISO
+  toggleAviso() {
+    this.setState({
+      modalAviso: !this.state.modalAviso
+    });
+  }
+
+  // TOGGLE PARA NAVEGAR ENTRE EL PANEL DEL MODAL
+  togglePanel(id) {
+    this.setState({
+      activeItem: id
+    });
+  }
+  // FUNCION PARA ELIMINAR UN BENEFICIO ENVIADO ( SOLO SI AUN ESTA PENDIENTE)
+  deleteAllowance(id) {
+    this.props.deleteAllowance(id)
+      .then(() => {
+        this.setState({
+          modalAviso: true,
+          textMsj: "The request has been successfully eliminated...",
+          titleMsj: "Success"
+        })
+        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType)
+      })
+      .catch(() => {
+        this.setState({
+          modalAviso: true,
+          textMsj: "Ups!, an error occurred while processing the request...",
+          titleMsj: "Error"
+        })
+      })
   }
 
   render() {
@@ -39,8 +99,8 @@ class AllowanceListContainer extends React.Component {
     val = val.map(a => {
       let split = (a.paymentDate).split('-')
       return {
-        name: (a.allowanceDetail.name).toUpperCase(),
-        user:(a.employeeDetail.name).toUpperCase(),
+        type: (a.allowanceDetail.name).toUpperCase(),
+        name: (a.employeeDetail.name).toUpperCase(),
         amount: a.amount,
         limitAmount: a.limitAmount,
         employeeAmount: a.employeeAmount,
@@ -48,18 +108,36 @@ class AllowanceListContainer extends React.Component {
         status: <label className={a.status}>{a.status}</label>,
         file: <MDBBtn
           className="mb-3 btnEv-red rounded mb-0 border-0"
-          onClick={() => this.viewFile(a.receiptPath)}
-          color="default" rounded size="sm"><i key="cell3" className="far fa-file-pdf" size="2x" aria-hidden="true"></i> View </MDBBtn>
+          onClick={() => this.viewDetails(a.id, a.allowanceDetail.id)}
+          color="default" rounded size="sm"><i key="cell3" className="far fa-file-pdf" size="2x" aria-hidden="true"></i> Details </MDBBtn>,
+        delete: <>{(a.status === 'pending') ?
+          <span onClick={() => this.deleteAllowance(a.id)}
+            className="greyColor cursorPointer" ><i key="cell1" className="far fa-trash-alt iconAllowance " style={({ fontSize: 20 })}></i> Delete </span> : "-"}
+        </>
       }
     })
 
     return (
       <div>
+        <ModalDetails
+          modal={this.state.modal}
+          toggleDetails={this.toggleDetails}
+          togglePanel={this.togglePanel}
+          activeItem={this.state.activeItem}
+          activeAllowance={this.props.activeAllowance}
+          history={this.props.history}
+        />
+        <ModalAviso
+          modal={this.state.modalAviso}
+          toggle={this.toggleAviso}
+          textMsj={this.state.textMsj}
+          titleMsj={this.state.titleMsj}
+        />
         <AllowanceList
-          activeFile={this.state.activeFile}
           handleClick={this.handleClick}
           allowanceList={val}
-          adminAllowances={this.props.adminAllowances} />
+          adminAllowances={this.props.adminAllowances}
+        />
       </div>
     );
   }
@@ -69,14 +147,19 @@ const mapStateToProps = (state) => {
   return {
     allowanceList: state.allowance.allowanceList,
     user: state.user.user,
-    adminAllowances: state.allowance.adminAllowances
+    adminAllowances: state.allowance.adminAllowances,
+    activeAllowance: state.allowance.activeAllowances,
+    history: state.allowance.historyAllowances
   };
 };
 
 const MapDispatchToProps = dispatch => {
   return {
     fetchAllowances: (data, allowanceId) => dispatch(fetchAllowances(data, allowanceId)),
-    openCloseNavBar: (val) => dispatch(openCloseNavBar(val))
+    openCloseNavBar: (val) => dispatch(openCloseNavBar(val)),
+    fetchAllowanceActive: (id) => dispatch(fetchAllowanceActive(id)),
+    fetchAllowanceHistory: (employeeId, allowanceId) => dispatch(fetchAllowanceHistory(employeeId, allowanceId)),
+    deleteAllowance: (id) => dispatch(deleteAllowance(id)) // Elimina detalle 
   };
 }
 export default connect(

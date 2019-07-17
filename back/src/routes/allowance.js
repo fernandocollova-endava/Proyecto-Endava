@@ -129,6 +129,37 @@ Router.get("/search/", function (req, res) {
   });
 });
 
+// Ruta fetch history employee / allowance ( limit 10 )
+Router.get("/history/:employeeId/:allowanceId", function (req, res) {
+
+  AllowanceDetail.findAll({
+    attributes: ['paymentDate','amount', 'limitAmount', 'employeeAmount', 'status'],
+    include: [
+      {
+        model: Employee,
+        as: "employeeDetail",
+        attributes: [],
+        where: {
+          id: req.params.employeeId
+        }
+      },
+      {
+        model: Allowance,
+        as: "allowanceDetail",
+        where: {
+          id: req.params.allowanceId
+        },
+        attributes: []
+      }
+    ],
+    limit: 10,
+    order: [
+          ['id', 'DESC'], 
+    ],
+  }).then(allowanceList => {
+    res.json(allowanceList);
+  });
+});
 
 Router.get("/search/all", function (req, res) {
   AllowanceDetail.findAll({
@@ -147,6 +178,42 @@ Router.get("/search/all", function (req, res) {
     ]
   }).then(allowanceList => {
     res.send(allowanceList);
+  });
+});
+
+// RUTA PARA BUSCAR EL ALLOWANCE ACTIVO (CONSULTADO)
+Router.get("/findActive/:id", function (req, res) {
+  AllowanceDetail.findOne({
+    attributes: ['amount', 'observation', 'employeeAmount', 'limitAmount', 'paymentDate', 'status', 'receiptPath', 'adminComment', 'id'],
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: Allowance,
+        as: "allowanceDetail",
+        attributes: ['name'],
+      },
+      {
+        model: Employee,
+        as: "employeeDetail",
+        attributes: ['name'],
+      }
+    ]
+  }).then(allowanceList => {
+    res.send(allowanceList);
+  });
+});
+
+// RUTA PARA BUSCAR EL ALLOWANCE ACTIVO (CONSULTADO)
+Router.delete("/:id/delete", function (req, res) {
+  AllowanceDetail.destroy({
+    where: {
+        id:req.params.id
+    }
+  })
+  .then(resp => {
+    res.sendStatus(204)
   });
 });
 

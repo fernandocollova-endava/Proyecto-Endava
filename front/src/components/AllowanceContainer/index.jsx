@@ -81,7 +81,7 @@ class AllowanceContainer extends React.Component {
           textMsj={this.state.textMsj}
           titleMsj={this.state.titleMsj}
       />
-                <MDBAnimation type="fadeInUp">
+                {/* <MDBAnimation type="fadeInUp">
                     <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx"
                         className="img-fluid bannerAllowance"
                         alt="Imagen endava" />
@@ -105,7 +105,9 @@ class AllowanceContainer extends React.Component {
 
                     </MDBCol>
                 </MDBRow>
-                <hr />
+                 */}
+                <h1 className="upperCaseFonts">{`Manage your ${this.props.nameUrl} allowance refunds`}</h1>
+                <hr />        
                 {/* FORMULARIO  */}
                 <MDBRow className="container-banner">
                     <MDBCol md="1">
