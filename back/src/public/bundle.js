@@ -48218,8 +48218,8 @@ function (_React$Component) {
   _createClass(AllowanceListContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser); // llamar a adminAllowances
-
+      this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
+      this.props.fetchAdminAllowances();
       this.props.openCloseNavBar(false);
     }
   }, {
@@ -48425,8 +48425,11 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     // Elimina detalle 
     editStatusAllowance: function editStatusAllowance(id, status, observation) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["editStatusAllowance"])(id, status, observation));
-    } // Switch State
-
+    },
+    // Switch State
+    fetchAdminAllowances: function fetchAdminAllowances() {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAdminAllowances"])());
+    }
   };
 };
 
