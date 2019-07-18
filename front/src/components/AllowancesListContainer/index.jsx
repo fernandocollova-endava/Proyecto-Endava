@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import AllowanceList from "./allowanceList";
-import { fetchAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance } from "../../redux/actions/allowanceActions"
+import { fetchAdminAllowances, fetchAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance } from "../../redux/actions/allowanceActions"
 import { openCloseNavBar } from "../../redux/actions/navbar"
 import ModalDetails from '../ModalContainer/modalDetail'
 import ModalAviso from '../ModalContainer/modalAviso'
@@ -38,7 +38,7 @@ class AllowanceListContainer extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
-    // llamar a adminAllowances
+    this.props.fetchAdminAllowances()
     this.props.openCloseNavBar(false)
   }
   componentDidUpdate(prevProps, prevState) {
@@ -218,7 +218,8 @@ const MapDispatchToProps = dispatch => {
     fetchAllowanceActive: (id) => dispatch(fetchAllowanceActive(id)),
     fetchAllowanceHistory: (employeeId, allowanceId) => dispatch(fetchAllowanceHistory(employeeId, allowanceId)),
     deleteAllowance: (id) => dispatch(deleteAllowance(id)), // Elimina detalle 
-    editStatusAllowance: (id, status, observation) => dispatch(editStatusAllowance(id, status, observation)) // Switch State
+    editStatusAllowance: (id, status, observation) => dispatch(editStatusAllowance(id, status, observation)), // Switch State
+    fetchAdminAllowances: () => dispatch (fetchAdminAllowances())
   };
 }
 export default connect(
