@@ -76,11 +76,11 @@ class AllowanceContainer extends React.Component {
         return (
             <>
             <ModalAviso
-          modal={this.state.modal}
-          toggle={this.toggle}
-          textMsj={this.state.textMsj}
-          titleMsj={this.state.titleMsj}
-      />
+                modal={this.state.modal}
+                toggle={this.toggle}
+                textMsj={this.state.textMsj}
+                titleMsj={this.state.titleMsj}
+            />
                 {/* <MDBAnimation type="fadeInUp">
                     <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx"
                         className="img-fluid bannerAllowance"
