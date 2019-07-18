@@ -106,7 +106,9 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
 //Ruta para busqueda + filtro de todos los beneficios de un empleado
 Router.get("/search/", function (req, res) {
   let queryAllowance = (req.query.allowanceId) ? { id: req.query.allowanceId } : {} // Consulta si hay filtro de beneficios
-  let queryEmployee = (req.query.allUser == "true") ? {} : { id: req.query.userId }// Consulta si hay filtro de empleados
+  let queryEmployee = (req.query.allUser == "true") ? 
+       {id: {[Op.ne]:req.query.userId}} // Trae todos los usuarios excepto el propio
+      : { id: req.query.userId }// Consulta si hay filtro de empleados
   let queryStatus = (req.query.status) ? { status: req.query.status } : {} // Consulta si hay filtro de status
 
   AllowanceDetail.findAll({
@@ -201,6 +203,19 @@ Router.delete("/:id/delete", function (req, res) {
       res.sendStatus(204)
     });
 });
+
+// COUNT 
+// Products.findOne({
+//   attributes: [
+//       [Sequelize.fn('min', Sequelize.col('precio')), 'min'],
+//       [Sequelize.fn('max', Sequelize.col('precio')), 'max'],
+//       [Sequelize.fn('count', Sequelize.col('precio')), 'count']
+//   ],
+//   where: objFilter
+// })
+//   .then(data => {
+//       res.json(data)
+//   })
 
 // RUTA PARA MODIFICAR EL ESTADO EL ALLOWANCE
 Router.put("/:id/edit", function (req, res) {
