@@ -13,7 +13,7 @@ router.get("/logout", function(req, res) {
 router.get("/logged", function(req, res, next) {
   res.send(req.user);
 });
-router.post("/password/update", function(req, res, next) {
+router.post("/password/update", function(req, res, error) {
 
   Employee.findByPk(req.body.userId)
   .then(employee=>{

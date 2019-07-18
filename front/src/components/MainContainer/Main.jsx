@@ -11,6 +11,7 @@ import NavbarContainer from "../NavBarContainer/"
 import FooterContainer from "../FooterContainer"
 import UpdatePassContainer from "../UpdatePassContainer"
 import AdminHomeContainer from "../AdminHomeContainer/index"
+import DisciplineEvent from "../DisciplineEventContainer/index"
 
 class MainContainer extends React.Component {
   constructor() {
@@ -20,6 +21,7 @@ class MainContainer extends React.Component {
     }
   }
   componentDidMount() {
+  
     this.props.fetchLoggedUser()
       .then(() => {
 
@@ -42,13 +44,14 @@ class MainContainer extends React.Component {
             <div>
               <Route component={NavbarContainer} />
               <Switch>
-                <Route exact path="/allowance/obra-social" component={ObraSocialContainer} />}
-              <Route exact path="/allowance/search" component={AllowancesListContainer} />
-                <Route exact path="/allowance/:name" component={AllowanceContainer} />
-                <Route exact path="/login/expired" component={UpdatePassContainer} />
-                <Route exact path="/admin/panel" component={AllowancesListContainer} />
+                <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
+                <Route exact path="/allowance/search" component={AllowancesListContainer}/>
+                <Route exact path="/allowance/:name" component={AllowanceContainer}/>
+                <Route exact path="/login/expired" component={UpdatePassContainer}/>
+                <Route exact path="/admin/panel" component={AllowancesListContainer}/> 
+                <Route exact path="/discipline-event/new" component={DisciplineEvent}/> 
 
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={Home}/>
                 <Redirect from="/login" to="/" />
               </Switch>
               <Route component={FooterContainer} />
