@@ -10,7 +10,7 @@ import AllowancesListContainer from "../AllowancesListContainer/index";
 import NavbarContainer from "../NavBarContainer/"
 import FooterContainer from "../FooterContainer"
 import UpdatePassContainer from "../UpdatePassContainer"
-import AdminHomeContainer from "../AdminHomeContainer/index"
+import DisciplineEvent from "../DisciplineEventContainer/index"
 
 class MainContainer extends React.Component {
   constructor() {
@@ -20,6 +20,7 @@ class MainContainer extends React.Component {
     }
   }
   componentDidMount() {
+  
     this.props.fetchLoggedUser()
       .then(() => {
 
@@ -34,31 +35,30 @@ class MainContainer extends React.Component {
       return 'loading'
     }
     return (
-
-
       <div>
         {
           this.props.user.id ?
             <div>
               <Route component={NavbarContainer} />
               <Switch>
-              <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
-              <Route exact path="/allowance/search" component={AllowancesListContainer}/>
-              <Route exact path="/allowance/:name" component={AllowanceContainer}/>
-              <Route exact path="/login/expired" component={UpdatePassContainer}/>
-              <Route exact path="/admin/panel" component={AdminHomeContainer}/>
-              
-              <Route exact path="/" component={Home}/>
-              <Redirect from="/login" to="/" />
+                <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
+                <Route exact path="/allowance/search" component={AllowancesListContainer}/>
+                <Route exact path="/allowance/:name" component={AllowanceContainer}/>
+                <Route exact path="/login/expired" component={UpdatePassContainer}/>
+                <Route exact path="/admin/panel" component={AllowancesListContainer}/> 
+                <Route exact path="/discipline-event/new" component={DisciplineEvent}/> 
+
+                <Route exact path="/" component={Home}/>
+                <Redirect from="/login" to="/" />
               </Switch>
-              <Route component = {FooterContainer}/>
-            </div>: 
-              <div>
-               <Route path="/login" component={LoginContainer}/>
-               <Redirect from="/" to="/login" component={LoginContainer} />
+              <Route component={FooterContainer} />
+            </div> :
+            <div>
+              <Route path="/login" component={LoginContainer} />
+              <Redirect from="/" to="/login" component={LoginContainer} />
             </div>
-                         
-               }  
+
+        }
       </div>
     )
   }

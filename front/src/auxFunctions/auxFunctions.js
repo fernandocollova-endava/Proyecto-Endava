@@ -38,8 +38,25 @@ const columnsAllowance = [
     label: 'Option',
     field: 'delete'
   }
-
+  
 ];
+const columnsEvents = [
+  {
+    label: 'Topic',
+    field: 'topic'
+  },
+  {
+    label: 'Date',
+    field: 'date'
+  },
+  {
+    label: 'Status',
+    field: 'status'
+  },
+  
+  
+];
+
 const columnsAllowanceDetail = [
   {
     label: 'Date',
@@ -67,6 +84,7 @@ const columnsAllowanceDetail = [
 
 module.exports = {
   columnsAllowance,
+  columnsEvents,
   columnsAllowanceDetail
 };
 

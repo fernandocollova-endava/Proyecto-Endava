@@ -10,6 +10,7 @@ export default function allowanceList({
   allowanceList,
   adminAllowances,
   handleClick,
+  handleFilterStatus
 }) {
   return (
     <>
@@ -19,7 +20,7 @@ export default function allowanceList({
           <MDBCol md="2">
             <h1 className="upperCaseFonts">Requests</h1>
           </MDBCol>
-          <MDBCol md="4">
+          <MDBCol md="5">
             <MDBFormInline className="md-form">
               <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp;
               <select className="browser-default custom-select" name="allowance" onChange={handleClick}>
@@ -30,9 +31,17 @@ export default function allowanceList({
                     <option className="capitalizeName" key={item.id} value={item.id}>{item.name}</option>
                   ))}
               </select>
+              <select className="browser-default custom-select" name="status" onChange={handleFilterStatus}>
+                <option>Status...</option>
+                <option value="">All</option>
+                <option value="pending">Pending</option>
+                <option value="aproved">Aproved</option>
+                <option value="rejected">Rejected</option>                
+              </select>
             </MDBFormInline>
+            
           </MDBCol>
-          <MDBCol md="3">
+          <MDBCol md="2">
 
           </MDBCol>
           <MDBCol md="3">

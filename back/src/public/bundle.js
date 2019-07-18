@@ -47661,6 +47661,16 @@ var columnsAllowance = [{
   label: 'Option',
   field: 'delete'
 }];
+var columnsEvents = [{
+  label: 'Topic',
+  field: 'topic'
+}, {
+  label: 'Date',
+  field: 'date'
+}, {
+  label: 'Status',
+  field: 'status'
+}];
 var columnsAllowanceDetail = [{
   label: 'Date',
   field: 'paymentDate',
@@ -47680,148 +47690,70 @@ var columnsAllowanceDetail = [{
 }];
 module.exports = {
   columnsAllowance: columnsAllowance,
+  columnsEvents: columnsEvents,
   columnsAllowanceDetail: columnsAllowanceDetail
 }; // (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(values.email)
 
 /***/ }),
 
-/***/ "./src/components/AdminHomeContainer/index.jsx":
-/*!*****************************************************!*\
-  !*** ./src/components/AdminHomeContainer/index.jsx ***!
-  \*****************************************************/
-/*! exports provided: default */
+/***/ "./src/auxFunctions/auxParser.js":
+/*!***************************************!*\
+  !*** ./src/auxFunctions/auxParser.js ***!
+  \***************************************/
+/*! exports provided: parserRow */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parserRow", function() { return parserRow; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../AllowancesListContainer/allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
 
 
-
-
-
-
-
-
-var AdminHomeContainer =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(AdminHomeContainer, _React$Component);
-
-  function AdminHomeContainer() {
-    var _this;
-
-    _classCallCheck(this, AdminHomeContainer);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminHomeContainer).call(this));
-    _this.state = {
-      activeFile: ''
+var parserRow = function parserRow(arr, deleteAllowance, viewDetails, allUser) {
+  var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return arr.map(function (a) {
+    var split = a.paymentDate.split('-');
+    return {
+      type: a.allowanceDetail.name.toUpperCase(),
+      name: a.employeeDetail.name.toUpperCase(),
+      amount: a.amount,
+      limitAmount: a.limitAmount,
+      employeeAmount: a.employeeAmount,
+      paymentDate: "".concat(Month[Number(split[1])], "-").concat(split[0]),
+      status: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: a.status
+      }, a.status),
+      file: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+        className: "mb-3 btnEv-red rounded mb-0 border-0",
+        onClick: function onClick() {
+          return viewDetails(a.id, a.allowanceDetail.id);
+        },
+        color: "default",
+        rounded: true,
+        size: "sm"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        key: "cell3",
+        className: "far fa-file-pdf",
+        size: "2x",
+        "aria-hidden": "true"
+      }), " Details "),
+      "delete": react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, a.status === 'pending' && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        onClick: function onClick() {
+          return deleteAllowance(a.id);
+        },
+        className: "greyColor cursorPointer"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        key: "cell1",
+        className: "far fa-trash-alt iconAllowance ",
+        style: {
+          fontSize: 20
+        }
+      }), " Delete ") : "-")
     };
-    _this.viewFile = _this.viewFile.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(AdminHomeContainer, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.fetchPendingAllowances();
-      window.scrollTo(0, 0);
-      this.props.openCloseNavBar(false);
-    }
-  }, {
-    key: "viewFile",
-    value: function viewFile(file) {
-      this.setState({
-        activeFile: file
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      // Condicional para redefinir los objetos
-      var val = this.props.pendingAllowances;
-      var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-      val = val.map(function (a) {
-        var split = a.paymentDate.split('-');
-        return {
-          name: a.allowanceDetail.name.toUpperCase(),
-          user: a.employeeDetail.name.toUpperCase(),
-          amount: a.amount,
-          limitAmount: a.limitAmount,
-          employeeAmount: a.employeeAmount,
-          paymentDate: "".concat(Month[Number(split[1])], "-").concat(split[0]),
-          status: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-            className: a.status
-          }, a.status),
-          file: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBBtn"], {
-            className: "mb-3 btnEv-red rounded mb-0 border-0",
-            onClick: function onClick() {
-              return _this2.viewFile(a.receiptPath);
-            },
-            color: "default",
-            rounded: true,
-            size: "sm"
-          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-            key: "cell3",
-            className: "far fa-file-pdf",
-            size: "2x",
-            "aria-hidden": "true"
-          }), " View ")
-        };
-      });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        allowanceList: val,
-        activeFile: this.state.activeFile
-      }));
-    }
-  }]);
-
-  return AdminHomeContainer;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    pendingAllowances: state.allowance.pendingAllowances
-  };
+  });
 };
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    fetchPendingAllowances: function fetchPendingAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchPendingAllowances"])());
-    },
-    openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
-    }
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(AdminHomeContainer));
 
 /***/ }),
 
@@ -47866,9 +47798,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+ // import { TesseractWorker } from "tesseract.js";
 
 
-
+ // const worker = new TesseractWorker();
 
 var AllowanceContainer =
 /*#__PURE__*/
@@ -47884,11 +47817,11 @@ function (_React$Component) {
     _this.state = {
       file: null,
       employeeAmount: 0,
-      observation: '',
-      active: '',
+      observation: "",
+      active: "",
       modal: false,
-      textMsj: '',
-      titleMsj: ''
+      textMsj: "",
+      titleMsj: ""
     };
     _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
     _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
@@ -47915,7 +47848,35 @@ function (_React$Component) {
           file = _this$state.file,
           rest = _objectWithoutProperties(_this$state, ["file"]);
 
-      var formData = new FormData();
+      var formData = new FormData(); // worker
+      //   .recognize(this.state.file)
+      //   .progress(p => {
+      //   })
+      //   .then(({ text }) => {
+      //     var textLow = text
+      //     textLow.toUpperCase()
+      //     var index = text.indexOf("TOTAL" || "Total");
+      //     var regex = /(\d+)/g;
+      //     var firstString = text.substring(index, (index + 60));
+      //     var numbers = firstString.match(regex);
+      //     for (let i = 0; i < numbers.length; i++) {
+      //       // if (parseInt(numbers[i]) == this.state.employeeAmount) {
+      //       // }
+      //       worker.terminate();
+      //     }
+      //   });
+      // }
+      // var finalNumber = stringResult.match(regex)[0];
+      // if (finalNumber.length) {
+      //   if (parseInt(finalNumber) != this.state.employeeAmount) {
+      //     console.log(
+      //       "el impore no es correc",
+      //       parseInt(finalNumber),
+      //       " el sae",
+      //       this.state.employeeAmount
+      //     );
+      //   } else console.log("odo bieeeeeen");
+
       formData.append('file', file);
       formData.append('userid', this.props.user.id);
       formData.append('allowanceName', this.props.nameUrl);
@@ -47929,8 +47890,6 @@ function (_React$Component) {
           titleMsj: 'Success'
         });
       })["catch"](function (error) {
-        console.dir(error);
-
         _this2.setState({
           modal: true,
           textMsj: 'An error occurred while sending the file..',
@@ -47980,9 +47939,7 @@ function (_React$Component) {
         toggle: this.toggle,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "upperCaseFonts"
-      }, "Manage your ".concat(this.props.nameUrl, " allowance refunds")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBRow"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBRow"], {
         className: "container-banner"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBCol"], {
         md: "1"
@@ -48104,7 +48061,8 @@ __webpack_require__.r(__webpack_exports__);
 function allowanceList(_ref) {
   var allowanceList = _ref.allowanceList,
       adminAllowances = _ref.adminAllowances,
-      handleClick = _ref.handleClick;
+      handleClick = _ref.handleClick,
+      handleFilterStatus = _ref.handleFilterStatus;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -48112,7 +48070,7 @@ function allowanceList(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "upperCaseFonts"
   }, "Requests")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
+    md: "5"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
     className: "md-form"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
@@ -48129,8 +48087,20 @@ function allowanceList(_ref) {
       key: item.id,
       value: item.id
     }, item.name);
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "3"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    className: "browser-default custom-select",
+    name: "status",
+    onChange: handleFilterStatus
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Status..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: ""
+  }, "All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "pending"
+  }, "Pending"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "aproved"
+  }, "Aproved"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "rejected"
+  }, "Rejected")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "2"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
@@ -48176,11 +48146,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _allowanceList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
 /* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
+/* harmony import */ var _auxFunctions_auxParser__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../auxFunctions/auxParser */ "./src/auxFunctions/auxParser.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48226,10 +48196,11 @@ function (_React$Component) {
       modalBoolean: false,
       activeAllowance: {},
       history: [],
-      activeItem: "1",
-      allowanceType: "",
+      activeItem: '1',
+      allowanceType: '',
       titleBoolean: '',
-      msjSave: ''
+      msjSave: '',
+      allowanceStatus: ''
     };
     _this.toggleDetails = _this.toggleDetails.bind(_assertThisInitialized(_this));
     _this.toggleBoolean = _this.toggleBoolean.bind(_assertThisInitialized(_this));
@@ -48240,23 +48211,41 @@ function (_React$Component) {
     _this.deleteAllowance = _this.deleteAllowance.bind(_assertThisInitialized(_this));
     _this.actionOk = _this.actionOk.bind(_assertThisInitialized(_this));
     _this.handleSaveConfirm = _this.handleSaveConfirm.bind(_assertThisInitialized(_this));
+    _this.handleFilterStatus = _this.handleFilterStatus.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(AllowanceListContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchAllowances(this.props.user.id); // llamar a adminAllowances
+      this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser); // llamar a adminAllowances
 
       this.props.openCloseNavBar(false);
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (prevProps.allUser !== this.props.allUser) {
+        console.log(true);
+        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
+      }
     } // FUNCION PARA FILTRAR POR ALLOWANCE
 
   }, {
     key: "handleClick",
     value: function handleClick(e) {
-      this.props.fetchAllowances(this.props.user.id, e.target.value);
+      this.props.fetchAllowances(this.props.user.id, e.target.value, this.state.allowanceStatus, this.props.allUser);
       this.setState({
         allowanceType: e.target.value
+      });
+    } // FUNCION PARA FILTRAR POR STATUS
+
+  }, {
+    key: "handleFilterStatus",
+    value: function handleFilterStatus(e) {
+      this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, e.target.value, this.props.allUser);
+      this.setState({
+        allowanceStatus: e.target.value
       });
     } // FUNCION DE CONSULTA HISTORIAL / DETALLE
 
@@ -48333,7 +48322,7 @@ function (_React$Component) {
           titleMsj: "Success"
         });
 
-        _this3.props.fetchAllowances(_this3.props.user.id, _this3.state.allowanceType);
+        _this3.props.fetchAllowances(_this3.props.user.id, _this3.state.allowanceType, _this3.state.allowanceStatus, _this3.props.allUser);
       })["catch"](function () {
         _this3.setState({
           modalBoolean: false,
@@ -48354,62 +48343,23 @@ function (_React$Component) {
           msjSave: 'Saved!'
         });
 
-        _this4.props.fetchAllowances(_this4.props.user.id, _this4.state.allowanceType);
+        _this4.props.fetchAllowances(_this4.props.user.id, _this4.state.allowanceType, _this4.state.allowanceStatus, _this4.props.allUser);
       })["catch"](function () {
         _this4.setState({
-          msjSave: 'Error!'
+          msjSave: 'Ups!, an error occurred while processing the request...'
         });
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this5 = this;
-
       // Condicional para redefinir los objetos
-      var val = this.props.allowanceList;
-      var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-      val = val.map(function (a) {
-        var split = a.paymentDate.split('-');
-        return {
-          type: a.allowanceDetail.name.toUpperCase(),
-          name: a.employeeDetail.name.toUpperCase(),
-          amount: a.amount,
-          limitAmount: a.limitAmount,
-          employeeAmount: a.employeeAmount,
-          paymentDate: "".concat(Month[Number(split[1])], "-").concat(split[0]),
-          status: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-            className: a.status
-          }, a.status),
-          file: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBBtn"], {
-            className: "mb-3 btnEv-red rounded mb-0 border-0",
-            onClick: function onClick() {
-              return _this5.viewDetails(a.id, a.allowanceDetail.id);
-            },
-            color: "default",
-            rounded: true,
-            size: "sm"
-          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-            key: "cell3",
-            className: "far fa-file-pdf",
-            size: "2x",
-            "aria-hidden": "true"
-          }), " Details "),
-          "delete": react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, a.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-            onClick: function onClick() {
-              return _this5.deleteAllowance(a.id);
-            },
-            className: "greyColor cursorPointer"
-          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-            key: "cell1",
-            className: "far fa-trash-alt iconAllowance ",
-            style: {
-              fontSize: 20
-            }
-          }), " Delete ") : "-")
-        };
-      });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      var val = Object(_auxFunctions_auxParser__WEBPACK_IMPORTED_MODULE_8__["parserRow"])(this.props.allowanceList, // Se envia el listado a depurar
+      this.deleteAllowance, // Se envia la funcion para eliminar (onClick)
+      this.viewDetails, // Se envia la funcion para mostrar el modal (onClick)
+      this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
+      );
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
         togglePanel: this.togglePanel,
@@ -48417,13 +48367,14 @@ function (_React$Component) {
         activeAllowance: this.props.activeAllowance,
         history: this.props.history,
         handleSaveConfirm: this.handleSaveConfirm,
-        msjSave: this.state.msjSave
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        msjSave: this.state.msjSave,
+        allUser: this.props.allUser
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__["default"], {
         modal: this.state.modalAviso,
         toggle: this.toggleAviso,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__["default"], {
         modalBoolean: this.state.modalBoolean,
         toggleBoolean: this.toggleBoolean,
         actionOk: this.actionOk,
@@ -48431,6 +48382,7 @@ function (_React$Component) {
         data: this.state.data
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
         handleClick: this.handleClick,
+        handleFilterStatus: this.handleFilterStatus,
         allowanceList: val,
         adminAllowances: this.props.adminAllowances
       }));
@@ -48440,23 +48392,26 @@ function (_React$Component) {
   return AllowanceListContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(state) {
+var mapStateToProps = function mapStateToProps(state, owner) {
   return {
     allowanceList: state.allowance.allowanceList,
     user: state.user.user,
     adminAllowances: state.allowance.adminAllowances,
     activeAllowance: state.allowance.activeAllowances,
-    history: state.allowance.historyAllowances
+    history: state.allowance.historyAllowances,
+    // allUser => Consulta si la ruta ingresada es "/admin/panel", de ser correcto permite en el back mostrar u ocultar uno o todos los usuarios.
+    allUser: owner.match.path == "/admin/panel" // true o false
+
   };
 };
 
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
-    fetchAllowances: function fetchAllowances(data, allowanceId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowances"])(data, allowanceId));
+    fetchAllowances: function fetchAllowances(userId, allowanceId, status, allUser) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowances"])(userId, allowanceId, status, allUser));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__["openCloseNavBar"])(val));
     },
     fetchAllowanceActive: function fetchAllowanceActive(id) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceActive"])(id));
@@ -48476,6 +48431,247 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AllowanceListContainer));
+
+/***/ }),
+
+/***/ "./src/components/DisciplineEventContainer/disciplineEvents.jsx":
+/*!**********************************************************************!*\
+  !*** ./src/components/DisciplineEventContainer/disciplineEvents.jsx ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DisciplineEvent; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function DisciplineEvent(_ref) {
+  var onFormSubmit = _ref.onFormSubmit,
+      onChange = _ref.onChange,
+      eventList = _ref.eventList;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+    className: "container-banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "1"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "upperCaseFonts"
+  }, "Share your knowledge and empower your professional activity."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "TextParrafo"
+  }, "We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world\u2019s largest banks and payments companies. Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe. Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "1"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+    className: "container-banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "1"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: onFormSubmit
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "h4 text-center py-4"
+  }, "Send us your topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "grey-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    label: "Event name",
+    icon: "book",
+    group: true,
+    required: true,
+    autoComplete: "off",
+    validate: true,
+    name: "topic",
+    onChange: onChange,
+    error: "wrong",
+    success: "right"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    label: "Description...",
+    icon: "comment-alt",
+    required: true,
+    group: true,
+    autoComplete: "off",
+    type: "textarea",
+    name: "observation",
+    onChange: onChange,
+    validate: true,
+    error: "wrong",
+    success: "right"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    icon: "calendar-alt",
+    group: true,
+    type: "date",
+    name: "date",
+    onChange: onChange,
+    required: true
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text-center py-4 mt-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    color: "light-blue",
+    className: "mb-3 btnEv-red rounded mb-0 border-0 btnAllowance",
+    type: "submit"
+  }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
+    icon: "angle-right"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "textAlert"
+  }, "*Please note that only jpg, png and PDF files up to 10MB are accepted.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "6"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, !eventList.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there are no results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
+    btn: true,
+    fixed: true,
+    responsive: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableHead"], {
+    columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__["columnsEvents"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableBody"], {
+    rows: eventList
+  }))))));
+}
+
+/***/ }),
+
+/***/ "./src/components/DisciplineEventContainer/index.jsx":
+/*!***********************************************************!*\
+  !*** ./src/components/DisciplineEventContainer/index.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/disciplineEvents */ "./src/redux/actions/disciplineEvents.js");
+/* harmony import */ var _DisciplineEventContainer_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../DisciplineEventContainer/disciplineEvents */ "./src/components/DisciplineEventContainer/disciplineEvents.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var DisciplineEventContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(DisciplineEventContainer, _React$Component);
+
+  function DisciplineEventContainer(props) {
+    var _this;
+
+    _classCallCheck(this, DisciplineEventContainer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(DisciplineEventContainer).call(this, props));
+    _this.state = {
+      topic: "",
+      observation: "",
+      date: "",
+      eventList: []
+    };
+    _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
+    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(DisciplineEventContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log("entreeeeee");
+      window.scrollTo(0, 0);
+      this.props.fetchDisciplineEvents(this.props.user.id);
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps.eventList.length != this.props.eventList.length) {
+        this.props.fetchDisciplineEvents(this.props.user.id);
+      }
+    }
+  }, {
+    key: "onFormSubmit",
+    value: function onFormSubmit(e) {
+      var _this2 = this;
+
+      e.preventDefault();
+      this.props.createDisciplineEvents(this.state, this.props.user).then(function () {
+        return _this2.props.fetchDisciplineEvents(_this2.props.user.id);
+      });
+    }
+  }, {
+    key: "onChange",
+    value: function onChange(e) {
+      this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      console.log("soy event del render", this.props.eventList);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DisciplineEventContainer_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        onChange: this.onChange,
+        onFormSubmit: this.onFormSubmit,
+        eventList: this.props.eventList
+      }));
+    }
+  }]);
+
+  return DisciplineEventContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state, owner) {
+  return {
+    user: state.user.user,
+    nameUrl: owner.match.params.name,
+    // Extrae la url dinamica
+    listAllowance: state.allowance.adminAllowances,
+    eventList: state.event.eventList
+  };
+};
+
+var MapDispatchToProps = function MapDispatchToProps(dispatch) {
+  return {
+    createDisciplineEvents: function createDisciplineEvents(data, user) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["createDisciplineEvents"])(data, user));
+    },
+    fetchDisciplineEvents: function fetchDisciplineEvents(user) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchDisciplineEvents"])(user));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(DisciplineEventContainer));
 
 /***/ }),
 
@@ -48770,10 +48966,12 @@ function (_React$Component) {
       password: "",
       modal: false,
       textMsj: "",
-      titleMsj: ""
+      titleMsj: "",
+      value: false
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.onChangeRemember = _this.onChangeRemember.bind(_assertThisInitialized(_this));
     _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -48781,8 +48979,17 @@ function (_React$Component) {
   _createClass(LoginContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      if (this.props.user.id) {
-        this.props.history.push("/");
+      var cookieEmail = this.getCookie();
+
+      if (cookieEmail) {
+        this.setState({
+          email: cookieEmail,
+          value: true
+        }); // }
+
+        if (this.props.user.id) {
+          this.props.history.push("/");
+        }
       }
     }
   }, {
@@ -48796,6 +49003,14 @@ function (_React$Component) {
       var _this2 = this;
 
       e.preventDefault();
+
+      if (this.state.value == true) {
+        var username = this.state.email;
+        this.setCookie(username);
+      } else {
+        this.deleteCookie(username);
+      }
+
       this.props.loginUser(this.state).then(function (user) {
         if (user.passwordChanged == false) {
           _this2.props.history.push("/login/expired");
@@ -48808,6 +49023,45 @@ function (_React$Component) {
           titleMsj: "Error"
         });
       }); // }
+    }
+  }, {
+    key: "onChangeRemember",
+    value: function onChangeRemember(e) {
+      this.setState(function (_ref) {
+        var value = _ref.value;
+        return {
+          value: !value
+        };
+      } // siempre que quiero usar cambios de estados dentro de un set state, se usa asi
+      );
+    }
+  }, {
+    key: "setCookie",
+    value: function setCookie(username) {
+      var d = new Date();
+      d.setTime(d.getTime() + 7 * 24 * 60 * 60 * 1000); //setea duracion por ej, de 7 dias
+
+      var expires = " expires= " + d.toUTCString();
+      document.cookie = "=" + username + expires;
+    }
+  }, {
+    key: "deleteCookie",
+    value: function deleteCookie() {
+      var d = new Date();
+      d.setTime(d.getTime() - 1 * 24 * 60 * 60 * 1000); // setea al dia de ayer su expiracion
+
+      var expires = "expires=" + d.toUTCString();
+      window.document.cookie = "= " + "; " + expires;
+    }
+  }, {
+    key: "getCookie",
+    value: function getCookie() {
+      var cookieUser = document.cookie;
+      var userName = cookieUser.slice(0, cookieUser.indexOf(".com") + 4);
+
+      if (userName.length) {
+        return userName;
+      }
     } // TOGGLE de MODAL
 
   }, {
@@ -48829,7 +49083,11 @@ function (_React$Component) {
         className: "imageLogin"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_login__WEBPACK_IMPORTED_MODULE_2__["default"], {
         handleChange: this.handleChange,
-        handleSubmit: this.handleSubmit
+        handleSubmit: this.handleSubmit,
+        onChangeRemember: this.onChangeRemember,
+        value: this.state.value,
+        userCookie: this.state.email,
+        checkImputValue: this.state.checkImputValue
       })));
     }
   }]);
@@ -48872,7 +49130,11 @@ __webpack_require__.r(__webpack_exports__);
 
 function login(_ref) {
   var handleChange = _ref.handleChange,
-      handleSubmit = _ref.handleSubmit;
+      handleSubmit = _ref.handleSubmit,
+      onChangeRemember = _ref.onChangeRemember,
+      userCookie = _ref.userCookie,
+      value = _ref.value,
+      checkImputValue = _ref.checkImputValue;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "7"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -48896,6 +49158,7 @@ function login(_ref) {
     icon: "envelope",
     group: true,
     name: "email",
+    value: userCookie,
     type: "email",
     validate: true,
     error: "wrong",
@@ -48910,9 +49173,13 @@ function login(_ref) {
     validate: true,
     onChange: handleChange
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    checked: value,
     type: "checkbox",
     id: "cbox1",
-    value: "false"
+    value: true,
+    onChange: function onChange(e) {
+      onChangeRemember(e);
+    }
   }), " Remember me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center mt-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
@@ -48949,7 +49216,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../NavBarContainer/ */ "./src/components/NavBarContainer/index.jsx");
 /* harmony import */ var _FooterContainer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../FooterContainer */ "./src/components/FooterContainer/index.jsx");
 /* harmony import */ var _UpdatePassContainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../UpdatePassContainer */ "./src/components/UpdatePassContainer/index.jsx");
-/* harmony import */ var _AdminHomeContainer_index__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../AdminHomeContainer/index */ "./src/components/AdminHomeContainer/index.jsx");
+/* harmony import */ var _DisciplineEventContainer_index__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../DisciplineEventContainer/index */ "./src/components/DisciplineEventContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -49038,7 +49305,11 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/admin/panel",
-        component: _AdminHomeContainer_index__WEBPACK_IMPORTED_MODULE_12__["default"]
+        component: _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_8__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/discipline-event/new",
+        component: _DisciplineEventContainer_index__WEBPACK_IMPORTED_MODULE_12__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/",
@@ -49185,6 +49456,7 @@ __webpack_require__.r(__webpack_exports__);
 function ModalDetails(_ref) {
   var modal = _ref.modal,
       msjSave = _ref.msjSave,
+      allUser = _ref.allUser,
       handleSaveConfirm = _ref.handleSaveConfirm,
       toggleDetails = _ref.toggleDetails,
       activeAllowance = _ref.activeAllowance,
@@ -49219,7 +49491,8 @@ function ModalDetails(_ref) {
     role: "tab"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     "class": "fas fa-history"
-  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "HISTORY"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "HISTORY"))), allUser && // Si 
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
     to: "#",
     className: activeItem === "3" ? "active" : "",
     onClick: function onClick() {
@@ -49485,22 +49758,37 @@ function (_Component) {
         }
       }, " \xD7 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/" && "itemActive"),
-        to: "/"
+        to: "/",
+        onClick: function onClick() {
+          return _this3.closeCollapse();
+        }
       }, " Home "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/profile" && "itemActive"),
-        to: "/profile"
+        to: "/profile",
+        onClick: function onClick() {
+          return _this3.closeCollapse();
+        }
       }, " Profile "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/allowance/search" && "itemActive"),
-        to: "/allowance/search"
+        to: "/allowance/search",
+        onClick: function onClick() {
+          return _this3.closeCollapse();
+        }
       }, " My Allowances "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        className: "item ".concat(location == "/discipline-event" && "itemActive"),
-        to: "/discipline-event"
+        className: "item ".concat(location == "/discipline-event/new" && "itemActive"),
+        to: "/discipline-event/new",
+        onClick: function onClick() {
+          return _this3.closeCollapse();
+        }
       }, " Discipline Event "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item",
         onClick: this.handleLogOut
       }, " Logout "), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/admin/panel" && "itemActive"),
-        to: "/admin/panel"
+        to: "/admin/panel",
+        onClick: function onClick() {
+          return _this3.closeCollapse();
+        }
       }, " Admin Panel ") : null));
     }
   }]);
@@ -49647,7 +49935,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
 /* harmony import */ var _UpdatePassContainer_updatePass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../UpdatePassContainer/updatePass */ "./src/components/UpdatePassContainer/updatePass.jsx");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -49674,6 +49963,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var UpdatePassContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -49686,11 +49976,16 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(UpdatePassContainer).call(this));
     _this.state = {
-      oldPassword: "",
-      password: ""
+      password: "",
+      passwordConfirm: "",
+      modal: false,
+      textMsj: "",
+      titleMsj: "",
+      value: false
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -49710,17 +50005,30 @@ function (_React$Component) {
       var _this2 = this;
 
       e.preventDefault();
-      if (this.state.oldPassword == this.state.password) this.setState({
-        error: true
-      });
-      this.props.updatePass(this.state.password, this.props.user.id).then(function (data) {
-        console.log('so daaaaa', data);
 
-        _this2.props.history.push("/");
-      })["catch"](function () {
-        return _this2.setState({
-          error: true
+      if (this.state.passwordConfirm != this.state.password) {
+        this.setState({
+          error: true,
+          modal: true,
+          textMsj: "Your password/confirm password fields do not match",
+          titleMsj: "Error"
         });
+      } else {
+        this.props.updatePass(this.state.password, this.props.user.id).then(function (data) {
+          _this2.props.history.push("/");
+        })["catch"](function () {
+          return _this2.setState({
+            error: true
+          });
+        });
+      }
+    } // TOGGLE de MODAL
+
+  }, {
+    key: "toggle",
+    value: function toggle() {
+      this.setState({
+        modal: !this.state.modal
       });
     }
   }, {
@@ -49729,6 +50037,11 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UpdatePassContainer_updatePass__WEBPACK_IMPORTED_MODULE_3__["default"], {
         handleSubmit: this.handleSubmit,
         handleChange: this.handleChange
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        modal: this.state.modal,
+        toggle: this.toggle,
+        textMsj: this.state.textMsj,
+        titleMsj: this.state.titleMsj
       }));
     }
   }]);
@@ -49751,7 +50064,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
       return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_2__["updatePass"])(password, user));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     }
   };
 };
@@ -49787,14 +50100,6 @@ function updatePass(_ref) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    label: "Your current password ",
-    icon: "lock",
-    group: true,
-    type: "password",
-    name: "oldPassword",
-    validate: true,
-    onChange: handleChange
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
     label: "Your new password",
     icon: "lock",
     group: true,
@@ -49807,9 +50112,11 @@ function updatePass(_ref) {
     icon: "exclamation-triangle",
     group: true,
     type: "password",
+    name: "passwordConfirm",
     validate: true,
     error: "wrong",
-    success: "right"
+    success: "right",
+    onChange: handleChange
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
@@ -49827,7 +50134,7 @@ function updatePass(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, SET_OPEN_CLOSE_NAVBAR */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, SET_OPEN_CLOSE_NAVBAR */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49837,6 +50144,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALLOWANCES", function() { return RECEIVE_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ADMIN_ALLOWANCES", function() { return RECEIVE_ADMIN_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PENDING_ALLOWANCES", function() { return RECEIVE_PENDING_ALLOWANCES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_EVENT_LIST", function() { return RECEIVE_EVENT_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ACTIVE_ALLOWANCES", function() { return RECEIVE_ACTIVE_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HISTORY_ALLOWANCES", function() { return RECEIVE_HISTORY_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_OPEN_CLOSE_NAVBAR", function() { return SET_OPEN_CLOSE_NAVBAR; });
@@ -49848,7 +50156,9 @@ var USER_LOGOUT = " USER_LOGOUT"; //Allowances
 
 var RECEIVE_ALLOWANCES = "RECEIVE_ALLOWANCES";
 var RECEIVE_ADMIN_ALLOWANCES = "ECEIVE_ADMIN_ALLOWANCES";
-var RECEIVE_PENDING_ALLOWANCES = "RECEIVE_PENDING_ALLOWANCES";
+var RECEIVE_PENDING_ALLOWANCES = "RECEIVE_PENDING_ALLOWANCES"; // DisciplineEvents
+
+var RECEIVE_EVENT_LIST = "RECEIVE_EVENT_LIST";
 var RECEIVE_ACTIVE_ALLOWANCES = "RECEIVE_ACTIVE_ALLOWANCES";
 var RECEIVE_HISTORY_ALLOWANCES = "RECEIVE_HISTORY_ALLOWANCES"; // NavBar 
 
@@ -49978,12 +50288,14 @@ var createAllowance = function createAllowance(formData) {
     });
   };
 };
-var fetchAllowances = function fetchAllowances(userId, allowanceId) {
+var fetchAllowances = function fetchAllowances(userId, allowanceId, status, allUser) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/search", {
       params: {
         allowanceId: allowanceId,
-        userId: userId
+        userId: userId,
+        status: status,
+        allUser: allUser
       }
     }).then(function (res) {
       return res.data;
@@ -50036,6 +50348,53 @@ var editStatusAllowance = function editStatusAllowance(id, status, observation) 
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/allowance/".concat(id, "/edit"), {
       status: status,
       observation: observation
+    });
+  };
+};
+
+/***/ }),
+
+/***/ "./src/redux/actions/disciplineEvents.js":
+/*!***********************************************!*\
+  !*** ./src/redux/actions/disciplineEvents.js ***!
+  \***********************************************/
+/*! exports provided: receiveEventList, createDisciplineEvents, fetchDisciplineEvents */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveEventList", function() { return receiveEventList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDisciplineEvents", function() { return createDisciplineEvents; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDisciplineEvents", function() { return fetchDisciplineEvents; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
+
+
+var receiveEventList = function receiveEventList(eventList) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_EVENT_LIST"],
+    eventList: eventList
+  };
+};
+var createDisciplineEvents = function createDisciplineEvents(data, user) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/disciplineEvent", {
+      data: data,
+      user: user
+    }).then(function (eventList) {
+      return eventList;
+    }); //retorno el axios y el el container, realizado el ingreso vuelvo a ejecutar el fetch
+  };
+};
+var fetchDisciplineEvents = function fetchDisciplineEvents(userId) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/".concat(userId)).then(function (res) {
+      return res.data;
+    }).then(function (eventList) {
+      console.log("soy la event list del axios", eventList);
+      dispatch(receiveEventList(eventList));
+      return eventList;
     });
   };
 };
@@ -50127,6 +50486,8 @@ var updatePass = function updatePass(password, userId) {
       userId: userId
     }).then(function (res) {
       return res.data;
+    })["catch"](function (error) {
+      return console.log(error);
     });
   };
 };
@@ -50222,6 +50583,41 @@ var initialState = {
 
 /***/ }),
 
+/***/ "./src/redux/reducers/disciplineEvent-reducer.js":
+/*!*******************************************************!*\
+  !*** ./src/redux/reducers/disciplineEvent-reducer.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var initialState = {
+  eventList: []
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_EVENT_LIST"]:
+      return _objectSpread({}, state, {
+        eventList: action.eventList
+      });
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
 /***/ "./src/redux/reducers/index.js":
 /*!*************************************!*\
   !*** ./src/redux/reducers/index.js ***!
@@ -50234,7 +50630,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _allowanceReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./allowanceReducer */ "./src/redux/reducers/allowanceReducer.js");
 /* harmony import */ var _user_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user-reducer */ "./src/redux/reducers/user-reducer.js");
-/* harmony import */ var _navbarReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navbarReducer */ "./src/redux/reducers/navbarReducer.js");
+/* harmony import */ var _disciplineEvent_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./disciplineEvent-reducer */ "./src/redux/reducers/disciplineEvent-reducer.js");
+/* harmony import */ var _navbarReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./navbarReducer */ "./src/redux/reducers/navbarReducer.js");
+
 
 
 
@@ -50242,7 +50640,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   allowance: _allowanceReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   user: _user_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
-  nav: _navbarReducer__WEBPACK_IMPORTED_MODULE_3__["default"]
+  event: _disciplineEvent_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+  nav: _navbarReducer__WEBPACK_IMPORTED_MODULE_4__["default"]
 }));
 
 /***/ }),

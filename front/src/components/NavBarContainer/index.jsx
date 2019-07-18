@@ -53,13 +53,13 @@ class Navbar extends Component {
         <div id="sideNavigation" style={({ width: (this.props.navWidth) ? 300 : 0 })} className="upperCaseFonts sidenav">
           <Link className="closebtn" onClick={() => this.closeCollapse()}> &times; </Link>
           <hr />
-          <Link className={`item ${(location == "/") && "itemActive"}`} to="/" > Home </Link>
-          <Link className={`item ${(location == "/profile") && "itemActive"}`} to="/profile"> Profile </Link>
-          <Link className={`item ${(location == "/allowance/search") && "itemActive"}`} to="/allowance/search"> My Allowances </Link>
-          <Link className={`item ${(location == "/discipline-event") && "itemActive"}`} to="/discipline-event"> Discipline Event </Link>
+          <Link className={`item ${(location == "/") && "itemActive"}`} to="/" onClick={() => this.closeCollapse()}> Home </Link>
+          <Link className={`item ${(location == "/profile") && "itemActive"}`} to="/profile" onClick={() => this.closeCollapse()}> Profile </Link>
+          <Link className={`item ${(location == "/allowance/search") && "itemActive"}`} to="/allowance/search" onClick={() => this.closeCollapse()}> My Allowances </Link>
+          <Link className={`item ${(location == "/discipline-event/new") && "itemActive"}`} to="/discipline-event/new" onClick={() => this.closeCollapse()}> Discipline Event </Link>
           <Link className="item" onClick={this.handleLogOut}> Logout </Link>
           {this.props.user.isAdmin == true ?
-            <Link className={`item ${(location == "/admin/panel") && "itemActive"}`} to="/admin/panel"> Admin Panel </Link>
+            <Link className={`item ${(location == "/admin/panel") && "itemActive"}`} to="/admin/panel" onClick={() => this.closeCollapse()}> Admin Panel </Link>
             : null
           }
         </div>
