@@ -33,6 +33,22 @@ const columnsAllowance= [
   }
   
 ];
+const columnsEvents = [
+  {
+    label: 'Topic',
+    field: 'topic'
+  },
+  {
+    label: 'Date',
+    field: 'date'
+  },
+  {
+    label: 'Status',
+    field: 'status'
+  },
+  
+  
+];
 
 const rows_outline_btn = [
   {
@@ -56,7 +72,8 @@ const rows_outline_btn = [
 ];
 module.exports = {
   columnsAllowance,
-  rows_outline_btn
+  rows_outline_btn,
+  columnsEvents
 };
 
 

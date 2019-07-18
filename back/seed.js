@@ -1,7 +1,9 @@
 const Allowance = require("./db/models").Allowance
 const Employee = require("./db/models").Employee
 
-Employee.create({
+Employee.create(
+    
+    {
     name: 'Maria',
     surname: 'Gonzalez',
     email: 'm.gonzalez@endava.com',
@@ -21,7 +23,8 @@ Employee.create({
     passwordChanged: false
     //salt: 'lkjljasda'
 })
-Employee.create({
+Employee.create(
+    {
     name: 'Agustin',
     surname: 'Pardo',
     email: 'agustin.pardo@endava.com',

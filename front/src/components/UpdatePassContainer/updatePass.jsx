@@ -17,15 +17,7 @@ export default function updatePass({ handleChange, handleSubmit }) {
                   <MDBCol md="1">
                   </MDBCol>
                   <MDBCol md="6">
-                    <MDBInput
-                      label="Your current password "
-                      icon="lock"
-                      group
-                      type="password"
-                      name="oldPassword"
-                      validate
-                      onChange={handleChange}
-                    />
+
                     <MDBInput
                       label="Your new password"
                       icon="lock"
@@ -40,9 +32,11 @@ export default function updatePass({ handleChange, handleSubmit }) {
                       icon="exclamation-triangle"
                       group
                       type="password"
+                      name="passwordConfirm"
                       validate
                       error="wrong"
                       success="right"
+                      onChange={handleChange}
                     />
                     <div className="text-center">
                       <MDBBtn type="submit" 

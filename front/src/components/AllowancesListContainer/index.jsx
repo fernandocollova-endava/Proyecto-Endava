@@ -17,6 +17,7 @@ class AllowanceListContainer extends React.Component {
   componentDidMount() {
     this.props.fetchAllowances(this.props.user.id)
   }
+ 
 
   handleClick(allowanceId) {
     this.props.fetchAllowances(this.props.user.id, allowanceId)
