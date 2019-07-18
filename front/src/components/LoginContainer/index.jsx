@@ -35,8 +35,7 @@ class LoginContainer extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    // if(!validate(this.state)){
-    //   console.log(validate(this.state), "soooo validaeeeeeeee")
+    
     this.props
       .loginUser(this.state)
       .then(user => {

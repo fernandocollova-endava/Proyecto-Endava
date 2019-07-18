@@ -17,8 +17,8 @@ const AnimationPage = ({ cardList }) => {
 
         </MDBCol>
         <MDBCol md="10">
-          <h1 className="fontLight upperCaseFonts">Allowance Management Site</h1>
           <MDBAnimation type="fadeInUp">
+          <h1 className="fontLight upperCaseFonts">Allowance Management Site</h1>
             <p className="TextParrafo">
               Now you can <strong className="fontEmphasis">manage the benefits </strong>you already knew from 
               this agile and easy going 
@@ -36,9 +36,7 @@ const AnimationPage = ({ cardList }) => {
           </MDBAnimation>
         </MDBCol>
         <MDBCol md="1">
-
         </MDBCol>
-
       </MDBRow>
 
       {/* FICHAS / MODULOS */}
@@ -46,14 +44,15 @@ const AnimationPage = ({ cardList }) => {
         {
           cardList && cardList.map((card, i) => (
             <MDBCol md="3">
-              {/* <MDBAnimation reveal type={((i % 2 == 0) ? 'fadeInUp' : 'fadeInDown')}> */}
-              <MDBAnimation reveal delay={`${(i*100)}ms`} type='fadeInLeftBig'>
+              {/* delay proporciona un delay multiplicado por i ( posicion del array )
+                generando un efecto de cadena en la animacion.. reveal*/}
+              <MDBAnimation delay={`${(i*100)}ms`} type='fadeInLeftBig'>
                 <MDBCard className="Card-Img">
                   <div className="container-IMG" key={card.name}>
                     <div className="div-img" >
                       <Link to={`/allowance/${card.name}`} >
                         <div className="ajustImg">
-                        <img src={`/assets/img/${card.name}_IMG.png`} //{card.imgUrl}
+                        <img src={`/assets/img/${card.name}_IMG_min.png`} //{card.imgUrl}
                           className="img-fluid margenBottomMobile img"
                           alt={`Imagen logo ${card.name}`} />
                         </div>
