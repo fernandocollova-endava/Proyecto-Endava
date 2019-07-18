@@ -1,11 +1,10 @@
 // Middleware express
 const express = require("express");
 const Router = express.Router();
-// const fs = require("fs");
-// var readdir = require("fs-readdir-promise");
+
 // Funciones adicionales
 const MulterFn = require("../functions/multer");
-// const { TesseractWorker } = require("tesseract.js");
+
 // Import Models
 const Allowance = require("../../db/models").Allowance;
 const Employee = require("../../db/models").Employee;
@@ -166,25 +165,6 @@ Router.get("/history/:employeeId/:allowanceId", function (req, res) {
   });
 });
 
-Router.get("/search/all", function (req, res) {
-  AllowanceDetail.findAll({
-    where: {
-      status: "pending"
-    },
-    include: [
-      {
-        model: Allowance,
-        as: "allowanceDetail"
-      },
-      {
-        model: Employee,
-        as: "employeeDetail",
-      }
-    ]
-  }).then(allowanceList => {
-    res.send(allowanceList);
-  });
-});
 
 // RUTA PARA BUSCAR EL ALLOWANCE ACTIVO (CONSULTADO)
 Router.get("/findActive/:id", function (req, res) {

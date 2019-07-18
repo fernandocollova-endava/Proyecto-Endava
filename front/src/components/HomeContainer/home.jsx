@@ -27,11 +27,6 @@ const AnimationPage = ({ cardList }) => {
                 form and that’s it! <strong className="fontEmphasis">Enjoying</strong> all your employee benefits has never been so  <strong className="fontEmphasis">EASY</strong>!
                 <br/>
                 Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us.
-              
-              {/* We began our <strong className="fontEmphasis">journey as a consulting</strong> firm delivering real transformation through IT strategy and architecture services for some of the world’s largest banks and payments companies.
-              
-              Over the past 18 years, <strong className="strongEmphasis"> we marked important</strong> milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe.
-              Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate. */}
             </p>
           </MDBAnimation>
         </MDBCol>

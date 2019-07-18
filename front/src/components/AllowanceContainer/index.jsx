@@ -11,12 +11,11 @@ import {
   MDBIcon,
   MDBBtn
 } from "mdbreact";
-import { TesseractWorker } from "tesseract.js";
+// import { TesseractWorker } from "tesseract.js";
 import ModalAviso from "../ModalContainer/modalAviso";
 import { openCloseNavBar } from "../../redux/actions/navbar"
 
-const worker = new TesseractWorker();
-
+// const worker = new TesseractWorker();
 
 class AllowanceContainer extends React.Component {
   constructor(props) {
@@ -45,33 +44,26 @@ class AllowanceContainer extends React.Component {
     const { file, ...rest } = this.state;
     const formData = new FormData();
 
-    worker
-      .recognize(this.state.file)
-      .progress(p => {
-        console.log("progress", p);
-      })
-      .then(({ text }) => {
-        console.dir(text)
-        var textLow = text
-        textLow.toUpperCase()
-        console.log("lower", text)
-        var index = text.indexOf("TOTAL" || "Total");
-        var regex = /(\d+)/g;
-        console.log("so index", index)
-        var firstString = text.substring(index, (index + 60));
-        console.log("so firstString ", firstString)
-        var numbers = firstString.match(regex);
-        console.log("so totalList ", numbers)
+    // worker
+    //   .recognize(this.state.file)
+    //   .progress(p => {
+    //   })
+    //   .then(({ text }) => {
+    //     var textLow = text
+    //     textLow.toUpperCase()
+    //     var index = text.indexOf("TOTAL" || "Total");
+    //     var regex = /(\d+)/g;
+    //     var firstString = text.substring(index, (index + 60));
+    //     var numbers = firstString.match(regex);
 
-        for (let i = 0; i < numbers.length; i++) {
-          console.log("enre al for", numbers[i])
-          if (parseInt(numbers[i]) == this.state.employeeAmount) {
-            console.log("el impore  es correc", parseInt(numbers[i]));
-          }
-          worker.terminate();
-        }
+    //     for (let i = 0; i < numbers.length; i++) {
+    //       // if (parseInt(numbers[i]) == this.state.employeeAmount) {
+  
+    //       // }
+    //       worker.terminate();
+    //     }
 
-      });
+    //   });
     // }
     // var finalNumber = stringResult.match(regex)[0];
 
@@ -95,7 +87,6 @@ class AllowanceContainer extends React.Component {
       .then((response) => {
         this.setState({ active: response.data, modal: true, textMsj: 'The file has been successfully sent', titleMsj: 'Success' });
       }).catch((error) => {
-        console.dir(error)
         this.setState({ modal: true, textMsj: 'An error occurred while sending the file..', titleMsj: 'Error' });
       });
   }
@@ -144,8 +135,7 @@ class AllowanceContainer extends React.Component {
                 <MDBCardBody>
                   <form onSubmit={this.onFormSubmit}>
                     <p className="h4 text-center py-4">Submit your receipt
-                                        <label className="maxAmount"> {`(Max Amount $${maxAmount.fixedAmount})`}</label></p>
-
+                        <label className="maxAmount"> {`(Max Amount $${maxAmount.fixedAmount})`}</label></p>
                     <div className="grey-text">
                       <MDBInput
                         label="Amount allowance..." icon="hand-holding-usd"
@@ -192,7 +182,6 @@ class AllowanceContainer extends React.Component {
                         type="submit"
                       >
                         Send form <MDBIcon icon="angle-right" />
-
                       </MDBBtn>
 
                     </div>
