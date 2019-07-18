@@ -47757,146 +47757,6 @@ var parserRow = function parserRow(arr, deleteAllowance, viewDetails, allUser) {
 
 /***/ }),
 
-/***/ "./src/components/AdminHomeContainer/index.jsx":
-/*!*****************************************************!*\
-  !*** ./src/components/AdminHomeContainer/index.jsx ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../AllowancesListContainer/allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-
-
-
-var AdminHomeContainer =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(AdminHomeContainer, _React$Component);
-
-  function AdminHomeContainer() {
-    var _this;
-
-    _classCallCheck(this, AdminHomeContainer);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminHomeContainer).call(this));
-    _this.state = {
-      activeFile: ''
-    };
-    _this.viewFile = _this.viewFile.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(AdminHomeContainer, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.fetchPendingAllowances();
-      window.scrollTo(0, 0);
-      this.props.openCloseNavBar(false);
-    }
-  }, {
-    key: "viewFile",
-    value: function viewFile(file) {
-      this.setState({
-        activeFile: file
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      // Condicional para redefinir los objetos
-      var val = this.props.pendingAllowances;
-      var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-      val = val.map(function (a) {
-        var split = a.paymentDate.split('-');
-        return {
-          name: a.allowanceDetail.name.toUpperCase(),
-          user: a.employeeDetail.name.toUpperCase(),
-          amount: a.amount,
-          limitAmount: a.limitAmount,
-          employeeAmount: a.employeeAmount,
-          paymentDate: "".concat(Month[Number(split[1])], "-").concat(split[0]),
-          status: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-            className: a.status
-          }, a.status),
-          file: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBBtn"], {
-            className: "mb-3 btnEv-red rounded mb-0 border-0",
-            onClick: function onClick() {
-              return _this2.viewFile(a.receiptPath);
-            },
-            color: "default",
-            rounded: true,
-            size: "sm"
-          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-            key: "cell3",
-            className: "far fa-file-pdf",
-            size: "2x",
-            "aria-hidden": "true"
-          }), " View ")
-        };
-      });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_allowanceList__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        allowanceList: val,
-        activeFile: this.state.activeFile
-      }));
-    }
-  }]);
-
-  return AdminHomeContainer;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    pendingAllowances: state.allowance.pendingAllowances
-  };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    fetchPendingAllowances: function fetchPendingAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchPendingAllowances"])());
-    },
-    openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
-    }
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(AdminHomeContainer));
-
-/***/ }),
-
 /***/ "./src/components/AllowanceContainer/index.jsx":
 /*!*****************************************************!*\
   !*** ./src/components/AllowanceContainer/index.jsx ***!
@@ -47911,9 +47771,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'tesseract.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -47939,11 +47798,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+ // import { TesseractWorker } from "tesseract.js";
 
 
-
-
-var worker = new !(function webpackMissingModule() { var e = new Error("Cannot find module 'tesseract.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();
+ // const worker = new TesseractWorker();
 
 var AllowanceContainer =
 /*#__PURE__*/
@@ -47990,33 +47848,24 @@ function (_React$Component) {
           file = _this$state.file,
           rest = _objectWithoutProperties(_this$state, ["file"]);
 
-      var formData = new FormData();
-      worker.recognize(this.state.file).progress(function (p) {
-        console.log("progress", p);
-      }).then(function (_ref) {
-        var text = _ref.text;
-        console.dir(text);
-        var textLow = text;
-        textLow.toUpperCase();
-        console.log("lower", text);
-        var index = text.indexOf("TOTAL" || false);
-        var regex = /(\d+)/g;
-        console.log("so index", index);
-        var firstString = text.substring(index, index + 60);
-        console.log("so firstString ", firstString);
-        var numbers = firstString.match(regex);
-        console.log("so totalList ", numbers);
-
-        for (var i = 0; i < numbers.length; i++) {
-          console.log("enre al for", numbers[i]);
-
-          if (parseInt(numbers[i]) == _this2.state.employeeAmount) {
-            console.log("el impore  es correc", parseInt(numbers[i]));
-          }
-
-          worker.terminate();
-        }
-      }); // }
+      var formData = new FormData(); // worker
+      //   .recognize(this.state.file)
+      //   .progress(p => {
+      //   })
+      //   .then(({ text }) => {
+      //     var textLow = text
+      //     textLow.toUpperCase()
+      //     var index = text.indexOf("TOTAL" || "Total");
+      //     var regex = /(\d+)/g;
+      //     var firstString = text.substring(index, (index + 60));
+      //     var numbers = firstString.match(regex);
+      //     for (let i = 0; i < numbers.length; i++) {
+      //       // if (parseInt(numbers[i]) == this.state.employeeAmount) {
+      //       // }
+      //       worker.terminate();
+      //     }
+      //   });
+      // }
       // var finalNumber = stringResult.match(regex)[0];
       // if (finalNumber.length) {
       //   if (parseInt(finalNumber) != this.state.employeeAmount) {
@@ -48041,8 +47890,6 @@ function (_React$Component) {
           titleMsj: 'Success'
         });
       })["catch"](function (error) {
-        console.dir(error);
-
         _this2.setState({
           modal: true,
           textMsj: 'An error occurred while sending the file..',
@@ -48087,7 +47934,7 @@ function (_React$Component) {
       var maxAmount = this.props.listAllowance.find(function (allow) {
         return allow.name === _this3.props.nameUrl;
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__["default"], {
         modal: this.state.modal,
         toggle: this.toggle,
         textMsj: this.state.textMsj,
@@ -48184,7 +48031,7 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["createAllowance"])(data));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     }
   };
 };
@@ -48611,13 +48458,7 @@ function DisciplineEvent(_ref) {
   var onFormSubmit = _ref.onFormSubmit,
       onChange = _ref.onChange,
       eventList = _ref.eventList;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx",
-    className: "img-fluid bannerAllowance",
-    alt: "Imagen endava"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "1"
@@ -49375,8 +49216,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../NavBarContainer/ */ "./src/components/NavBarContainer/index.jsx");
 /* harmony import */ var _FooterContainer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../FooterContainer */ "./src/components/FooterContainer/index.jsx");
 /* harmony import */ var _UpdatePassContainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../UpdatePassContainer */ "./src/components/UpdatePassContainer/index.jsx");
-/* harmony import */ var _AdminHomeContainer_index__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../AdminHomeContainer/index */ "./src/components/AdminHomeContainer/index.jsx");
-/* harmony import */ var _DisciplineEventContainer_index__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../DisciplineEventContainer/index */ "./src/components/DisciplineEventContainer/index.jsx");
+/* harmony import */ var _DisciplineEventContainer_index__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../DisciplineEventContainer/index */ "./src/components/DisciplineEventContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -49394,7 +49234,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -49470,7 +49309,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/discipline-event/new",
-        component: _DisciplineEventContainer_index__WEBPACK_IMPORTED_MODULE_13__["default"]
+        component: _DisciplineEventContainer_index__WEBPACK_IMPORTED_MODULE_12__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/",

@@ -21,14 +21,6 @@ export default function DisciplineEvent ({onFormSubmit, onChange, eventList}) {
     return (
       <>
       {/* {evenList && console.log("soy las events", evenList)} */}
-        <MDBAnimation type="fadeInUp">
-          <img
-            src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx"
-            className="img-fluid bannerAllowance"
-            alt="Imagen endava"
-          />
-        </MDBAnimation>
-
         <MDBRow className="container-banner">
           <MDBCol md="1" />
           <MDBCol md="10">

@@ -1,5 +1,4 @@
 const db = require("../index");
-
 const Employee = require("./employee");
 const DisciplineEvent = require("./disciplineEvent");
 const {
@@ -8,6 +7,8 @@ const {
 } = require("./StaticAllowance");
 
 // Relación Static - Employee ( Child care, Course, Gym )
+AllowanceDetail.belongsTo(Allowance, { as: "allowanceDetail" })
+AllowanceDetail.belongsTo(Employee, { as: "employeeDetail" })
 
 Employee.belongsToMany(DisciplineEvent, {
   through: "employee-discipline",
@@ -17,8 +18,6 @@ DisciplineEvent.belongsToMany(Employee, {
   through: "employee-discipline",
   as: "employee"
 });
-AllowanceDetail.belongsTo(Allowance, { as: "allowanceDetail" })
-AllowanceDetail.belongsTo(Employee, { as: "employeeDetail" })
 
 
 module.exports = {

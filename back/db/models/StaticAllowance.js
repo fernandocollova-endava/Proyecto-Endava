@@ -72,6 +72,5 @@ const AllowanceDetail = db.define("AllowanceDetail",{
 
 module.exports= {
     Allowance,
-    AllowanceDetail,
-    //Employee_Allowance
+    AllowanceDetail
 };

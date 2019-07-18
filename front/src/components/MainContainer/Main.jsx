@@ -10,7 +10,6 @@ import AllowancesListContainer from "../AllowancesListContainer/index";
 import NavbarContainer from "../NavBarContainer/"
 import FooterContainer from "../FooterContainer"
 import UpdatePassContainer from "../UpdatePassContainer"
-import AdminHomeContainer from "../AdminHomeContainer/index"
 import DisciplineEvent from "../DisciplineEventContainer/index"
 
 class MainContainer extends React.Component {
@@ -36,8 +35,6 @@ class MainContainer extends React.Component {
       return 'loading'
     }
     return (
-
-
       <div>
         {
           this.props.user.id ?
