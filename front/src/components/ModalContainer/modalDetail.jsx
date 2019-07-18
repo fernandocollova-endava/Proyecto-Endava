@@ -5,7 +5,7 @@ import {
 } from 'mdbreact';
 import { columnsAllowanceDetail } from '../../auxFunctions/auxFunctions'
 
-export default function ModalDetails({ modal, msjSave, handleSaveConfirm, toggleDetails, activeAllowance, history, togglePanel, activeItem }) {
+export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfirm, toggleDetails, activeAllowance, history, togglePanel, activeItem }) {
     return (
         <MDBContainer>
             {/* MODAL */}
@@ -25,11 +25,15 @@ export default function ModalDetails({ modal, msjSave, handleSaveConfirm, toggle
                             <i class="fas fa-history"></i> <strong>HISTORY</strong>
                         </MDBNavLink>
                         </MDBNavItem>
-                        <MDBNavItem>
-                            <MDBNavLink to="#" className={activeItem === "3" ? "active" : ""} onClick={() => togglePanel("3")} role="tab" >
-                            <i class="fas fa-user-edit"></i> <strong>ADMIN</strong>
-                        </MDBNavLink>
-                        </MDBNavItem>
+                        {
+                            (allUser)&& // Si 
+                                <MDBNavItem>
+                                    <MDBNavLink to="#" className={activeItem === "3" ? "active" : ""} onClick={() => togglePanel("3")} role="tab" >
+                                        <i class="fas fa-user-edit"></i> <strong>ADMIN</strong>
+                                    </MDBNavLink>
+                                </MDBNavItem>
+                        }
+                        
                     </MDBNav>
                     <MDBTabContent activeItem={activeItem} >
                         <MDBTabPane tabId="1" role="tabpanel">

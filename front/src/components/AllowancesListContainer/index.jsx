@@ -2,11 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import AllowanceList from "./allowanceList";
 import { fetchAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance } from "../../redux/actions/allowanceActions"
-import { MDBBtn } from "mdbreact";
 import { openCloseNavBar } from "../../redux/actions/navbar"
 import ModalDetails from '../ModalContainer/modalDetail'
 import ModalAviso from '../ModalContainer/modalAviso'
 import ModalBoolean from '../ModalContainer/modalBoolean'
+import { parserRow } from '../../auxFunctions/auxParser'
 
 class AllowanceListContainer extends React.Component {
   constructor() {
@@ -17,10 +17,11 @@ class AllowanceListContainer extends React.Component {
       modalBoolean: false,
       activeAllowance: {},
       history: [],
-      activeItem: "1",
-      allowanceType: "",
+      activeItem: '1',
+      allowanceType: '',
       titleBoolean: '',
-      msjSave:''
+      msjSave: '',
+      allowanceStatus: ''
     };
 
     this.toggleDetails = this.toggleDetails.bind(this)
@@ -32,20 +33,33 @@ class AllowanceListContainer extends React.Component {
     this.deleteAllowance = this.deleteAllowance.bind(this)
     this.actionOk = this.actionOk.bind(this)
     this.handleSaveConfirm = this.handleSaveConfirm.bind(this)
+    this.handleFilterStatus = this.handleFilterStatus.bind(this)
   }
 
   componentDidMount() {
-    this.props.fetchAllowances(this.props.user.id)
+    this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
     // llamar a adminAllowances
     this.props.openCloseNavBar(false)
   }
- 
-
+  componentDidUpdate(prevProps, prevState) {
+      if (prevProps.allUser !== this.props.allUser) {
+          console.log(true);
+          this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
+      }
+  }
   // FUNCION PARA FILTRAR POR ALLOWANCE
   handleClick(e) {
-    this.props.fetchAllowances(this.props.user.id, e.target.value)
+    this.props.fetchAllowances(this.props.user.id, e.target.value, this.state.allowanceStatus, this.props.allUser)
     this.setState({
       allowanceType: e.target.value
+    })
+  }
+
+  // FUNCION PARA FILTRAR POR STATUS
+  handleFilterStatus(e) {
+    this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, e.target.value, this.props.allUser)
+    this.setState({
+      allowanceStatus: e.target.value
     })
   }
 
@@ -65,7 +79,7 @@ class AllowanceListContainer extends React.Component {
     this.setState({
       modal: !this.state.modal,
       activeItem: "1",
-      msjSave:''
+      msjSave: ''
     });
   }
 
@@ -73,7 +87,7 @@ class AllowanceListContainer extends React.Component {
   toggleAviso() {
     this.setState({
       modalAviso: !this.state.modalAviso,
-      msjSave:''
+      msjSave: ''
     });
   }
 
@@ -90,6 +104,7 @@ class AllowanceListContainer extends React.Component {
       activeItem: id
     });
   }
+
   // FUNCION PARA ELIMINAR UN BENEFICIO ENVIADO ( SOLO SI AUN ESTA PENDIENTE)
   deleteAllowance(id) {
     this.setState({
@@ -110,7 +125,7 @@ class AllowanceListContainer extends React.Component {
           textMsj: "The request has been successfully eliminated...",
           titleMsj: "Success"
         })
-        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType)
+        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
       })
       .catch(() => {
         this.setState({
@@ -124,44 +139,28 @@ class AllowanceListContainer extends React.Component {
   handleSaveConfirm(e) {
     e.preventDefault()
     this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value)
-      .then(()=>{
+      .then(() => {
         this.setState({
-          msjSave:'Saved!'
+          msjSave: 'Saved!'
         })
-        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType)
+        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
       })
-      .catch(()=>{
+      .catch(() => {
         this.setState({
-          msjSave:'Error!'
+          msjSave: 'Ups!, an error occurred while processing the request...'
         })
       })
 
   }
   render() {
+
     // Condicional para redefinir los objetos
-    let val = this.props.allowanceList;
-    let Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    val = val.map(a => {
-      let split = (a.paymentDate).split('-')
-      return {
-        type: (a.allowanceDetail.name).toUpperCase(),
-        name: (a.employeeDetail.name).toUpperCase(),
-        amount: a.amount,
-        limitAmount: a.limitAmount,
-        employeeAmount: a.employeeAmount,
-        paymentDate: `${Month[Number(split[1])]}-${split[0]}`,
-        status: <label className={a.status}>{a.status}</label>,
-        file: <MDBBtn
-          className="mb-3 btnEv-red rounded mb-0 border-0"
-          onClick={() => this.viewDetails(a.id, a.allowanceDetail.id)}
-          color="default" rounded size="sm"><i key="cell3" className="far fa-file-pdf" size="2x" aria-hidden="true"></i> Details </MDBBtn>,
-        delete: <>{(a.status === 'pending') ?
-          <span onClick={() => this.deleteAllowance(a.id)}
-            className="greyColor cursorPointer" ><i key="cell1" className="far fa-trash-alt iconAllowance " style={({ fontSize: 20 })}></i> Delete </span>
-          : "-"}
-        </>
-      }
-    })
+    let val = parserRow(
+      this.props.allowanceList, // Se envia el listado a depurar
+      this.deleteAllowance, // Se envia la funcion para eliminar (onClick)
+      this.viewDetails,  // Se envia la funcion para mostrar el modal (onClick)
+      this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
+    )
 
     return (
       <div>
@@ -173,7 +172,8 @@ class AllowanceListContainer extends React.Component {
           activeAllowance={this.props.activeAllowance}
           history={this.props.history}
           handleSaveConfirm={this.handleSaveConfirm}
-          msjSave = {this.state.msjSave}
+          msjSave={this.state.msjSave}
+          allUser = {this.props.allUser}
         />
         <ModalAviso
           modal={this.state.modalAviso}
@@ -190,6 +190,7 @@ class AllowanceListContainer extends React.Component {
         />
         <AllowanceList
           handleClick={this.handleClick}
+          handleFilterStatus={this.handleFilterStatus}
           allowanceList={val}
           adminAllowances={this.props.adminAllowances}
         />
@@ -198,19 +199,21 @@ class AllowanceListContainer extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, owner) => {
   return {
     allowanceList: state.allowance.allowanceList,
     user: state.user.user,
     adminAllowances: state.allowance.adminAllowances,
     activeAllowance: state.allowance.activeAllowances,
-    history: state.allowance.historyAllowances
+    history: state.allowance.historyAllowances,
+    // allUser => Consulta si la ruta ingresada es "/admin/panel", de ser correcto permite en el back mostrar u ocultar uno o todos los usuarios.
+    allUser:(owner.match.path == "/admin/panel") // true o false
   };
 };
 
 const MapDispatchToProps = dispatch => {
   return {
-    fetchAllowances: (data, allowanceId) => dispatch(fetchAllowances(data, allowanceId)),
+    fetchAllowances: (userId, allowanceId, status, allUser) => dispatch(fetchAllowances(userId, allowanceId, status, allUser)),
     openCloseNavBar: (val) => dispatch(openCloseNavBar(val)),
     fetchAllowanceActive: (id) => dispatch(fetchAllowanceActive(id)),
     fetchAllowanceHistory: (employeeId, allowanceId) => dispatch(fetchAllowanceHistory(employeeId, allowanceId)),
