@@ -7312,7 +7312,9 @@ div.dataTables_wrapper span.select-info, div.dataTables_wrapper span.select-item
 
 .opacity-100 {
   opacity: 1; }
-  .btnEv-red {
+
+/* ENDAVA FONT */
+.btnEv-red {
     background-color: #DE411B !important;
       color: white;
       text-transform: uppercase;
@@ -7324,4 +7326,4 @@ div.dataTables_wrapper span.select-info, div.dataTables_wrapper span.select-item
       border:solid 1px #DE411B !important;
       transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       border-radius: 5px !important;
-  }
+}

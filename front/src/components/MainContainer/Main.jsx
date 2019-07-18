@@ -32,7 +32,6 @@ class MainContainer extends React.Component {
   }
 
   render() {
-
     if (this.state.loading) {
       return 'loading'
     }
@@ -50,7 +49,7 @@ class MainContainer extends React.Component {
               <Route exact path="/allowance/:name" component={AllowanceContainer}/>
               <Route exact path="/login/expired" component={UpdatePassContainer}/>
               <Route exact path="/admin/panel" component={AdminHomeContainer}/> 
-              <Route exact path="/disciplineEvent/new" component={DisciplineEvent}/> 
+              <Route exact path="/discipline-event/new" component={DisciplineEvent}/> 
 
               <Route exact path="/" component={Home}/>
               <Redirect from="/login" to="/" />

@@ -3,6 +3,7 @@ import AnimationPage from "./home";
 import { connect } from "react-redux";
 import { logout } from "../../redux/actions/user";
 import { fetchAdminAllowances } from "../../redux/actions/allowanceActions"
+import { openCloseNavBar } from "../../redux/actions/navbar"
 
 class HomeContainer extends React.Component {
   constructor() {
@@ -11,7 +12,9 @@ class HomeContainer extends React.Component {
   }
   componentDidMount(){
     window.scrollTo(0, 0)
+    this.props.openCloseNavBar(false)
     this.props.fetchAdminAllowances()
+    
   }
   render() {
     return (
@@ -31,7 +34,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  fetchAdminAllowances: () => dispatch(fetchAdminAllowances())
+  fetchAdminAllowances: () => dispatch(fetchAdminAllowances()),
+  openCloseNavBar: (val) => dispatch(openCloseNavBar(val))
 });
 
 export default connect(

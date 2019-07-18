@@ -1,6 +1,10 @@
 // VARIABLES CONSTRUCTORAS DE ENCABEZADO DE TABLA:
 // *ALLOWANCE
-const columnsAllowance= [
+const columnsAllowance = [
+  {
+    label: 'Type',
+    field: 'type'
+  },
   {
     label: 'Name',
     field: 'name'
@@ -16,7 +20,7 @@ const columnsAllowance= [
   {
     label: 'Emp. Amount',
     field: 'employeeAmount'
-  },  
+  },
   {
     label: 'Date',
     field: 'paymentDate',
@@ -25,11 +29,14 @@ const columnsAllowance= [
   {
     label: 'Status',
     field: 'status'
-  }
-  ,
+  },
   {
-    label: 'File',
+    label: 'Info',
     field: 'file'
+  },
+  {
+    label: 'Option',
+    field: 'delete'
   }
   
 ];
@@ -50,30 +57,35 @@ const columnsEvents = [
   
 ];
 
-const rows_outline_btn = [
+const columnsAllowanceDetail = [
   {
-    'id': 1,
-    'first': 'hola',//<MDBBtn color="purple" outline size="sm">Button</MDBBtn>,
-    'last': 'Otto',
-    'handle': '@mdo'
+    label: 'Date',
+    field: 'paymentDate',
+    sort: 'asc'
   },
   {
-    'id': 2,
-    'first': 'Jacob',
-    'last': 'hola',//<MDBBtn color="purple" outline size="sm">Button</MDBBtn>,
-    'handle': '@fat'
+    label: 'Amount',
+    field: 'amount'
   },
   {
-    'id': 3,
-    'first': 'Larry',
-    'last': 'the Bird',
-    'handle': 'hola',//<MDBBtn color="purple" outline size="sm">Button</MDBBtn>
+    label: 'Limit',
+    field: 'limitAmount'
+  },
+  {
+    label: 'Emp. Amount',
+    field: 'employeeAmount'
+  },
+  {
+    label: 'Status',
+    field: 'status'
   }
+
 ];
+
 module.exports = {
   columnsAllowance,
-  rows_outline_btn,
-  columnsEvents
+  columnsEvents,
+  columnsAllowanceDetail
 };
 
 

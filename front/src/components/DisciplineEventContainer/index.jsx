@@ -21,6 +21,7 @@ class DisciplineEventContainer extends React.Component {
     this.onChange = this.onChange.bind(this);
   }
   componentDidMount() {
+    console.log("entreeeeee")
     window.scrollTo(0, 0);
     this.props.fetchDisciplineEvents(this.props.user.id)
 

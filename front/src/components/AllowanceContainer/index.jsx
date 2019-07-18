@@ -12,10 +12,11 @@ import {
   MDBBtn
 } from "mdbreact";
 import { TesseractWorker } from "tesseract.js";
+import ModalAviso from "../ModalContainer/modalAviso";
+import { openCloseNavBar } from "../../redux/actions/navbar"
 
 const worker = new TesseractWorker();
 
-import ModalAviso from "../ModalContainer/modalAviso";
 
 class AllowanceContainer extends React.Component {
   constructor(props) {
@@ -36,8 +37,9 @@ class AllowanceContainer extends React.Component {
     this.toggle = this.toggle.bind(this);
   }
   componentDidMount() {
-    window.scrollTo(0, 0);
-  }
+    window.scrollTo(0, 0)
+    this.props.openCloseNavBar(false)
+}
   onFormSubmit(e) {
     e.preventDefault();
     const { file, ...rest } = this.state;
@@ -82,32 +84,21 @@ class AllowanceContainer extends React.Component {
           //       this.state.employeeAmount
           //     );
           //   } else console.log("odo bieeeeeen");
-          
 
-    formData.append("file", file);
-    formData.append("userid", this.props.user.id);
-    formData.append("allowanceName", this.props.nameUrl);
-    formData.append("employeeAmount", this.state.employeeAmount);
-    formData.append("observation", this.state.observation);
+        formData.append('file', file);
+        formData.append('userid', this.props.user.id);
+        formData.append('allowanceName', this.props.nameUrl);
+        formData.append('employeeAmount', this.state.employeeAmount);
+        formData.append('observation', this.state.observation);
 
-    this.props
-      .createAllowance(formData)
-      .then(response => {
-        this.setState({
-          active: response.data,
-          modal: true,
-          textMsj: "The file has been successfully sent",
-          titleMsj: "Success"
-        });
-      })
-      .catch(error => {
-        this.setState({
-          modal: true,
-          textMsj: "An error occurred while sending the file..",
-          titleMsj: "Error"
-        });
-      });
-  }
+        this.props.createAllowance(formData)
+            .then((response) => {
+                this.setState({ active: response.data, modal: true, textMsj: 'The file has been successfully sent', titleMsj: 'Success' });
+            }).catch((error) => {
+                console.dir(error)
+                this.setState({ modal: true, textMsj: 'An error occurred while sending the file..', titleMsj: 'Error' });
+            });
+    }
   onChange(e) {
     this.setState({
       file: e.target.files[0]
@@ -141,14 +132,12 @@ class AllowanceContainer extends React.Component {
           toggle={this.toggle}
           textMsj={this.state.textMsj}
           titleMsj={this.state.titleMsj}
-        />
-        <MDBAnimation type="fadeInUp">
-          <img
-            src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx"
-            className="img-fluid bannerAllowance"
-            alt="Imagen endava"
-          />
-        </MDBAnimation>
+      />
+                {/* <MDBAnimation type="fadeInUp">
+                    <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/MeetEndava/MeetEndava_1920x650_resized.ashx"
+                        className="img-fluid bannerAllowance"
+                        alt="Imagen endava" />
+                </MDBAnimation>
 
         <MDBRow className="container-banner">
           <MDBCol md="1" />
@@ -174,120 +163,110 @@ class AllowanceContainer extends React.Component {
           <MDBCol md="1" />
         </MDBRow>
         <hr />
-        {/* FORMULARIO  */}
-        <MDBRow className="container-banner">
-          <MDBCol md="1" />
-          <MDBCol md="4">
-            <MDBAnimation type="fadeInUp">
-              <MDBCard>
-                <MDBCardBody>
-                  <form onSubmit={this.onFormSubmit}>
-                    <p className="h4 text-center py-4">
-                      Submit your receipt
-                      <label className="maxAmount">
-                        {" "}
-                        {`(Max Amount $${maxAmount.fixedAmount})`}
-                      </label>
-                    </p>
-
-                    <div className="grey-text">
-                      <MDBInput
-                        label="Amount allowance..."
-                        icon="hand-holding-usd"
-                        group
-                        required
-                        autoComplete="off"
-                        type="number"
-                        validate
-                        name="employeeAmount"
-                        onChange={this.onAmountChange}
-                        error="wrong"
-                        success="right"
-                      />
-                      <MDBInput
-                        label="Observation..."
-                        icon="comment-alt"
-                        required
-                        group
-                        autoComplete="off"
-                        type="text"
-                        name="observation"
-                        onChange={this.onObservationChange}
-                        validate
-                        error="wrong"
-                        success="right"
-                      />
-
-                      <MDBInput
-                        icon="file-signature"
-                        group
-                        type="file"
-                        name="file"
-                        onChange={this.onChange}
-                        required
-                        validate
-                        error="wrong"
-                        success="right"
-                      />
-                    </div>
-                    <div className="text-center py-4 mt-3">
-                      <MDBBtn
-                        color="light-blue"
-                        className="mb-3 btnEv-red rounded mb-0 border-0 btnAllowance"
-                        type="submit"
-                      >
-                        Send form <MDBIcon icon="angle-right" />
-                      </MDBBtn>
-                    </div>
-                    <i className="textAlert">
-                      *Please note that only jpg, png and PDF files up to 10MB
-                      are accepted.
-                    </i>
-                  </form>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBAnimation>
-          </MDBCol>
-          <MDBCol md="6">
-            <label>preview:</label>
-            {/* Visualización de archivo cargado */}
-            <p>
-              {this.state.active.split(".")[1] !== "pdf" &&
-                this.state.active.split(".")[1] !== undefined && (
-                  <img
-                    src={`/assets/receipt/${this.state.active}`}
-                    width="100%"
-                  />
-                )}
-            </p>
-            {this.state.active.split(".")[1] === "pdf" && (
-              <embed
-                src={`/assets/receipt/${this.state.active}`}
-                width="100%"
-                height="400px"
-                type="application/pdf"
-              />
-            )}
-          </MDBCol>
-        </MDBRow>
-      </>
-    );
-  }
+     
+                <h1 className="upperCaseFonts">{`Manage your ${this.props.nameUrl} allowance refunds`}</h1>
+                <hr />        
+                {/* FORMULARIO  */}
+                <MDBRow className="container-banner">
+                    <MDBCol md="1">
+                    </MDBCol>
+                    <MDBCol md="4">
+                        <MDBAnimation type="fadeInUp">
+                            <MDBCard>
+                                <MDBCardBody>
+                                    <form onSubmit={this.onFormSubmit}>
+                                        <p className="h4 text-center py-4">Submit your receipt 
+                                        <label className="maxAmount"> {`(Max Amount $${maxAmount.fixedAmount})`}</label></p>
+                                            
+                                        <div className="grey-text">
+                                            <MDBInput
+                                                label="Amount allowance..." icon="hand-holding-usd"
+                                                group
+                                                required
+                                                autoComplete="off"
+                                                type="number"
+                                                validate
+                                                name="employeeAmount"
+                                                onChange={this.onAmountChange}
+                                                error="wrong"
+                                                success="right"
+                                            />
+                                            <MDBInput
+                                                label="Observation..."
+                                                icon="comment-alt"
+                                                required
+                                                group
+                                                autoComplete="off"
+                                                type="text"
+                                                name="observation"
+                                                onChange={this.onObservationChange}
+                                                validate
+                                                error="wrong"
+                                                success="right"
+                                            />
+                                            
+                                            <MDBInput
+                                                icon="file-signature"
+                                                group
+                                                type="file"
+                                                name="file"
+                                                onChange={this.onChange}
+                                                required
+                                                validate
+                                                error="wrong"
+                                                success="right"
+                                            /> 
+                                        </div>
+                                        <div className="text-center py-4 mt-3">
+                                            <MDBBtn
+                                                color="light-blue"
+                                                className="mb-3 btnEv-red rounded mb-0 border-0 btnAllowance"
+                                                type="submit"
+                                            >
+                                                Send form <MDBIcon icon="angle-right" />
+                                                
+                                            </MDBBtn>
+                                            
+                                        </div>
+                                        <i className="textAlert">*Please note that only jpg, png and PDF files up to 10MB are accepted.</i>
+                                    </form>
+                                </MDBCardBody>
+                            </MDBCard>
+                        </MDBAnimation>
+                    </MDBCol>
+                    <MDBCol md="6">
+                        <label>preview:</label>
+                        {/* Visualización de archivo cargado */}
+                        <p>
+                            {((this.state.active).split('.')[1] !== 'pdf' &&
+                                (this.state.active).split('.')[1] !== undefined) &&
+                                <img src={`/assets/receipt/${this.state.active}`} width="100%" />}
+                        </p>
+                        {
+                            ((this.state.active).split('.')[1] === 'pdf') &&
+                            <embed src={`/assets/receipt/${this.state.active}`} width="100%" height="400px"
+                                type="application/pdf"></embed>
+                        }
+                    </MDBCol>
+                </MDBRow>
+            </>
+        )
+    }
 }
 const mapStateToProps = (state, owner) => {
-  console.log("fixedAmount", state.allowance.adminAllowances);
-  return {
-    user: state.user.user,
-    nameUrl: owner.match.params.name, // Extrae la url dinamica
-    listAllowance: state.allowance.adminAllowances
-  };
-};
+    return {
+         user: state.user.user,
+         nameUrl: owner.match.params.name, // Extrae la url dinamica
+         listAllowance:state.allowance.adminAllowances
+    }
+}
 
-const MapDispatchToProps = dispatch => {
-  return {
-    createAllowance: data => dispatch(createAllowance(data))
-  };
-};
+const MapDispatchToProps = (dispatch) => {
+    return {
+        createAllowance: (data) => dispatch(createAllowance(data)),
+        openCloseNavBar: (val) => dispatch(openCloseNavBar(val))
+    }
+}
 
 export default connect(
   mapStateToProps,

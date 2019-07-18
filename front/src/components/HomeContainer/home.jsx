@@ -11,14 +11,14 @@ const AnimationPage = ({ cardList }) => {
           className="img-fluid bannerAllowance"
           alt="Imagen endava" />
       </MDBAnimation>
-
+     
       <MDBRow className="container-banner">
         <MDBCol md="1">
 
         </MDBCol>
         <MDBCol md="10">
-          <h1 className="fontLight upperCaseFonts">Allowance Management Site</h1>
           <MDBAnimation type="fadeInUp">
+          <h1 className="fontLight upperCaseFonts">Allowance Management Site</h1>
             <p className="TextParrafo">
               Now you can <strong className="fontEmphasis">manage the benefits </strong>you already knew from 
               this agile and easy going 
@@ -36,9 +36,7 @@ const AnimationPage = ({ cardList }) => {
           </MDBAnimation>
         </MDBCol>
         <MDBCol md="1">
-
         </MDBCol>
-
       </MDBRow>
 
       {/* FICHAS / MODULOS */}
@@ -46,17 +44,22 @@ const AnimationPage = ({ cardList }) => {
         {
           cardList && cardList.map((card, i) => (
             <MDBCol md="3">
-              <MDBAnimation reveal type={((i % 2 == 0) ? 'fadeInUp' : 'fadeInDown')}>
+              {/* delay proporciona un delay multiplicado por i ( posicion del array )
+                generando un efecto de cadena en la animacion.. reveal*/}
+              <MDBAnimation delay={`${(i*100)}ms`} type='fadeInLeftBig'>
                 <MDBCard className="Card-Img">
-                  <div className="container-IMG">
+                  <div className="container-IMG" key={card.name}>
                     <div className="div-img" >
                       <Link to={`/allowance/${card.name}`} >
-                        <img src={card.imgUrl}
+                        <div className="ajustImg">
+                        <img src={`/assets/img/${card.name}_IMG_min.png`} //{card.imgUrl}
                           className="img-fluid margenBottomMobile img"
                           alt={`Imagen logo ${card.name}`} />
-                        <center>
-                          <span
+                        </div>
+                        <center >
+                          <span 
                             className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">
+                            {/* <img src={`/assets/img/${card.name}.png`} width="30px"/> */}
                             Enter <i className="fas fa-angle-double-right"></i></span>
                         </center>
                       </Link>

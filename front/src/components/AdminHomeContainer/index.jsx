@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import AdminPanel from '../AdminHomeContainer/AdminPanel'
 import { fetchPendingAllowances } from '../../redux/actions/allowanceActions'
 import AllowanceList from "../AllowancesListContainer/allowanceList"
 import { MDBBtn } from "mdbreact";
+import { openCloseNavBar } from "../../redux/actions/navbar"
 
 class AdminHomeContainer extends React.Component {
   constructor() {
@@ -16,6 +16,7 @@ class AdminHomeContainer extends React.Component {
   componentDidMount() {
     this.props.fetchPendingAllowances()
     window.scrollTo(0, 0)
+    this.props.openCloseNavBar(false)
   }
   viewFile(file) {
     this.setState({
@@ -30,7 +31,8 @@ class AdminHomeContainer extends React.Component {
     val = val.map(a => {
       let split = (a.paymentDate).split('-')
       return {
-        name: (a.allowance.name).toUpperCase(),
+        name: (a.allowanceDetail.name).toUpperCase(),
+        user:(a.employeeDetail.name).toUpperCase(),
         amount: a.amount,
         limitAmount: a.limitAmount,
         employeeAmount: a.employeeAmount,
@@ -58,5 +60,6 @@ const mapStateToProps = function (state) {
 };
 const mapDispatchToProps = dispatch => ({
   fetchPendingAllowances: () => dispatch(fetchPendingAllowances()),
+  openCloseNavBar: (val) => dispatch(openCloseNavBar(val))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(AdminHomeContainer);
