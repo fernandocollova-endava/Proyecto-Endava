@@ -1,37 +1,90 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { createAllowance } from '../../redux/actions/allowanceActions'
-import { MDBCard, MDBInput, MDBCardBody, MDBRow, MDBCol, MDBAnimation, MDBIcon, MDBBtn } from "mdbreact";
-
-import ModalAviso from "../ModalContainer/modalAviso"
+import React from "react";
+import { connect } from "react-redux";
+import { createAllowance } from "../../redux/actions/allowanceActions";
+import {
+  MDBCard,
+  MDBInput,
+  MDBCardBody,
+  MDBRow,
+  MDBCol,
+  MDBAnimation,
+  MDBIcon,
+  MDBBtn
+} from "mdbreact";
+import { TesseractWorker } from "tesseract.js";
+import ModalAviso from "../ModalContainer/modalAviso";
 import { openCloseNavBar } from "../../redux/actions/navbar"
 
-class AllowanceContainer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            file: null,
-            employeeAmount: 0,
-            observation: '',
-            active: '',
-            modal: false,
-            textMsj: '', titleMsj: ''
+const worker = new TesseractWorker();
 
-        };
-        this.onFormSubmit = this.onFormSubmit.bind(this);
-        this.onChange = this.onChange.bind(this);
-        this.onObservationChange = this.onObservationChange.bind(this)
-        this.onAmountChange = this.onAmountChange.bind(this)
-        this.toggle = this.toggle.bind(this)
-    }
-    componentDidMount() {
-        window.scrollTo(0, 0)
-        this.props.openCloseNavBar(false)
-    }
-    onFormSubmit(e) {
-        e.preventDefault();
-        const { file, ...rest } = this.state
-        const formData = new FormData();
+
+class AllowanceContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      file: null,
+      employeeAmount: 0,
+      observation: "",
+      active: "",
+      modal: false,
+      textMsj: "",
+      titleMsj: ""
+    };
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+    this.onChange = this.onChange.bind(this);
+    this.onObservationChange = this.onObservationChange.bind(this);
+    this.onAmountChange = this.onAmountChange.bind(this);
+    this.toggle = this.toggle.bind(this);
+  }
+  componentDidMount() {
+    window.scrollTo(0, 0)
+    this.props.openCloseNavBar(false)
+}
+  onFormSubmit(e) {
+    e.preventDefault();
+    const { file, ...rest } = this.state;
+    const formData = new FormData();
+
+    worker
+      .recognize(this.state.file)
+      .progress(p => {
+        console.log("progress", p);
+      })
+      .then(({ text }) => {
+        console.dir(text)
+        var textLow = text
+        textLow.toUpperCase()
+        console.log("lower", text)
+        var index = text.indexOf("TOTAL" || "Total");
+        var regex = /(\d+)/g;
+        console.log("so index", index)
+        var firstString = text.substring(index, (index+60));
+        console.log("so firstString ", firstString)
+        var numbers = firstString.match(regex);
+        console.log("so totalList ", numbers)
+
+        for (let i = 0; i < numbers.length; i++) {
+          console.log("enre al for", numbers[i] )
+         if (parseInt(numbers[i])== this.state.employeeAmount) {
+            console.log("el impore  es correc", parseInt(numbers[i]));
+          } 
+          worker.terminate();
+        }
+          
+      });
+        // }
+          // var finalNumber = stringResult.match(regex)[0];
+
+          // if (finalNumber.length) {
+          //   if (parseInt(finalNumber) != this.state.employeeAmount) {
+          //     console.log(
+          //       "el impore no es correc",
+          //       parseInt(finalNumber),
+          //       " el sae",
+          //       this.state.employeeAmount
+          //     );
+          //   } else console.log("odo bieeeeeen");
+
         formData.append('file', file);
         formData.append('userid', this.props.user.id);
         formData.append('allowanceName', this.props.nameUrl);
@@ -46,36 +99,35 @@ class AllowanceContainer extends React.Component {
                 this.setState({ modal: true, textMsj: 'An error occurred while sending the file..', titleMsj: 'Error' });
             });
     }
-    onChange(e) {
-        this.setState({
-            file: e.target.files[0]
-        });
-    }
-    onObservationChange(e) {
-        this.setState({
-            observation: e.target.value,
-        })
-    }
-    onAmountChange(e) {
-        this.setState({
-            employeeAmount: e.target.value,
-        })
-    }
-    // TOGGLE de MODAL
-    toggle() {
-        this.setState({
-            modal: !this.state.modal
-        });
-    }
-    render() {
-        
-        let maxAmount = this.props.listAllowance.find((allow)=>{ 
-            return allow.name === this.props.nameUrl;
-        });
+  onChange(e) {
+    this.setState({
+      file: e.target.files[0]
+    });
+  }
+  onObservationChange(e) {
+    this.setState({
+      observation: e.target.value
+    });
+  }
+  onAmountChange(e) {
+    this.setState({
+      employeeAmount: e.target.value
+    });
+  }
+  // TOGGLE de MODAL
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+  render() {
+    let maxAmount = this.props.listAllowance.find(allow => {
+      return allow.name === this.props.nameUrl;
+    });
 
-        return (
-            <>
-            <ModalAviso
+    return (
+      <>
+        <ModalAviso
           modal={this.state.modal}
           toggle={this.toggle}
           textMsj={this.state.textMsj}
@@ -87,25 +139,31 @@ class AllowanceContainer extends React.Component {
                         alt="Imagen endava" />
                 </MDBAnimation>
 
-                <MDBRow className="container-banner">
-                    <MDBCol md="1">
-
-                    </MDBCol>
-                    <MDBCol md="10"> 
-                        <h1 className="upperCaseFonts">{`Manage your ${this.props.nameUrl} allowance refunds`}</h1>
-                        <MDBAnimation type="fadeInUp">
-                            <p className="TextParrafo">
-                                We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world’s largest banks and payments companies.
-                                Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe.
-                                Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate.
-                    </p>
-                        </MDBAnimation>
-                    </MDBCol>
-                    <MDBCol md="1">
-
-                    </MDBCol>
-                </MDBRow>
-                 */}
+        <MDBRow className="container-banner">
+          <MDBCol md="1" />
+          <MDBCol md="10">
+            <h1 className="upperCaseFonts">{`Manage your ${
+              this.props.nameUrl
+            } allowance refunds`}</h1>
+            <MDBAnimation type="fadeInUp">
+              <p className="TextParrafo">
+                We began our journey as a consulting firm delivering real
+                transformation through IT strategy and architecture services for
+                some of the world’s largest banks and payments companies. Over
+                the past 18 years, we marked important milestones towards
+                becoming global through opening delivery centres and offices in
+                North and Latin America, as well as Western and Central Europe.
+                Our guiding philosophy has always been the same: We focus on
+                helping people to be successful. The people who work for us, the
+                people who engage with us, and the people who use the systems
+                and applications we design, build, and operate.
+              </p>
+            </MDBAnimation>
+          </MDBCol>
+          <MDBCol md="1" />
+        </MDBRow>
+        <hr />
+     
                 <h1 className="upperCaseFonts">{`Manage your ${this.props.nameUrl} allowance refunds`}</h1>
                 <hr />        
                 {/* FORMULARIO  */}
@@ -211,8 +269,6 @@ const MapDispatchToProps = (dispatch) => {
 }
 
 export default connect(
-    mapStateToProps,
-    MapDispatchToProps
-)(AllowanceContainer)
-
-
+  mapStateToProps,
+  MapDispatchToProps
+)(AllowanceContainer);

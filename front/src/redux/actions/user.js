@@ -44,6 +44,7 @@ export const updatePass = (password, userId) => dispatch => {
   return axios
     .post("/api/employee/password/update", {password:password, userId:userId})
     .then(res => res.data)
+    .catch(error=>console.log(error))
 
 };
 

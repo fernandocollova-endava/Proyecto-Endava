@@ -36,7 +36,7 @@ export default (state = initialState, action) => {
         case RECEIVE_HISTORY_ALLOWANCES:
             return {...state, historyAllowances: [...action.historyAllowances] }; 
 
-        default:
-            return state;
-    }
+    default:
+      return state;
+  }
 };

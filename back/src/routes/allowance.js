@@ -1,15 +1,15 @@
 // Middleware express
 const express = require("express");
 const Router = express.Router();
-
+// const fs = require("fs");
+// var readdir = require("fs-readdir-promise");
 // Funciones adicionales
 const MulterFn = require("../functions/multer");
-
+// const { TesseractWorker } = require("tesseract.js");
 // Import Models
 const Allowance = require("../../db/models").Allowance;
 const Employee = require("../../db/models").Employee;
 const AllowanceDetail = require("../../db/models").AllowanceDetail;
-
 // Import Sequilize
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
@@ -45,8 +45,9 @@ Router.get("/admin", function (req, res) {
 // Insert allowance
 Router.post("/", MulterFn.single("file"), (req, res) => {
   // Obtengo el nombre del archivo
+ 
   const fileName = req.file.filename;
-
+  
   Allowance.findOne({
     where: {
       name: req.body.allowanceName.toLowerCase()

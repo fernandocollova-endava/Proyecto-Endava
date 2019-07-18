@@ -54,9 +54,9 @@ class Navbar extends Component {
           <Link className="closebtn" onClick={() => this.closeCollapse()}> &times; </Link>
           <hr />
           <Link className={`item ${(location == "/") && "itemActive"}`} to="/" > Home </Link>
-          <Link className={`item ${(location == "/profile") && "itemActive"}`} to="/profile"> Profile </Link>
+          <Link className={`item ${(location == "/profile") && "itemActive"}`} to="/profile"> Profile </Link>  
           <Link className={`item ${(location == "/allowance/search") && "itemActive"}`} to="/allowance/search"> My Allowances </Link>
-          <Link className={`item ${(location == "/discipline-event") && "itemActive"}`} to="/discipline-event"> Discipline Event </Link>
+          <Link className={`item ${(location == "/discipline-event/new") && "itemActive"}`} to="/discipline-event/new"> Discipline Event </Link>
           <Link className="item" onClick={this.handleLogOut}> Logout </Link>
           {this.props.user.isAdmin == true ?
             <Link className={`item ${(location == "/admin/panel") && "itemActive"}`} to="/admin/panel"> Admin Panel </Link>

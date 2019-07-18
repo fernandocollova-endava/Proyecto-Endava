@@ -39,6 +39,7 @@ class AllowanceListContainer extends React.Component {
     // llamar a adminAllowances
     this.props.openCloseNavBar(false)
   }
+ 
 
   // FUNCION PARA FILTRAR POR ALLOWANCE
   handleClick(e) {

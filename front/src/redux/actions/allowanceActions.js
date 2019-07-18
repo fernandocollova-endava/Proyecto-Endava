@@ -49,6 +49,7 @@ export const createAllowance = formData => dispatch => {
     }
   });
 };
+
 export const fetchAllowances = (userId, allowanceId) => dispatch => {
   return axios
     .get("/api/allowance/search", {
