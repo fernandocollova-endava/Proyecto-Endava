@@ -105,27 +105,29 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
 
 //Ruta para busqueda + filtro de todos los beneficios de un empleado
 Router.get("/search/", function (req, res) {
-  let query = (req.query.allowanceId) ? { id: req.query.allowanceId } : {}
+  let queryAllowance = (req.query.allowanceId) ? { id: req.query.allowanceId } : {} // Consulta si hay filtro de beneficios
+  let queryEmployee = (req.query.allUser == "true") ? {} : { id: req.query.userId }// Consulta si hay filtro de empleados
+  let queryStatus = (req.query.status) ? { status: req.query.status } : {} // Consulta si hay filtro de status
+
   AllowanceDetail.findAll({
     attributes: ['amount', 'employeeAmount', 'limitAmount', 'paymentDate', 'status', 'receiptPath', 'adminComment', 'id'],
+    where: queryStatus,
     include: [
       {
         model: Employee,
         as: "employeeDetail",
         attributes: ['name'],
-        where: {
-          id: req.query.userId
-          //[Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
-        }
+        where: queryEmployee
+        //[Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
       },
       {
         model: Allowance,
         as: "allowanceDetail",
-        where: query,
+        where: queryAllowance,
       }
     ],
     order: [
-      ['id', 'DESC'], 
+      ['id', 'DESC'],
     ]
   }).then(allowanceList => {
     res.json(allowanceList);
@@ -134,9 +136,8 @@ Router.get("/search/", function (req, res) {
 
 // Ruta fetch history employee / allowance ( limit 10 )
 Router.get("/history/:employeeId/:allowanceId", function (req, res) {
-
   AllowanceDetail.findAll({
-    attributes: ['paymentDate','amount', 'limitAmount', 'employeeAmount', 'status'],
+    attributes: ['paymentDate', 'amount', 'limitAmount', 'employeeAmount', 'status'],
     include: [
       {
         model: Employee,
@@ -157,7 +158,7 @@ Router.get("/history/:employeeId/:allowanceId", function (req, res) {
     ],
     limit: 10,
     order: [
-          ['id', 'DESC'], 
+      ['id', 'DESC'],
     ],
   }).then(allowanceList => {
     res.json(allowanceList);
@@ -212,12 +213,12 @@ Router.get("/findActive/:id", function (req, res) {
 Router.delete("/:id/delete", function (req, res) {
   AllowanceDetail.destroy({
     where: {
-        id:req.params.id
+      id: req.params.id
     }
   })
-  .then(resp => {
-    res.sendStatus(204)
-  });
+    .then(resp => {
+      res.sendStatus(204)
+    });
 });
 
 // RUTA PARA MODIFICAR EL ESTADO EL ALLOWANCE
@@ -227,13 +228,15 @@ Router.put("/:id/edit", function (req, res) {
       status: req.body.status,
       adminComment: req.body.observation
     },
-    {where: {
-      id:req.params.id
-    }}
+    {
+      where: {
+        id: req.params.id
+      }
+    }
   )
-  .then(resp => {
-    res.sendStatus(201)
-  });
+    .then(resp => {
+      res.sendStatus(201)
+    });
 });
 
 function paymentDateFn(date, limitDate) {
