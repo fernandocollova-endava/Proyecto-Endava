@@ -7,6 +7,7 @@ Employee.create(
     {
     name: 'Maria',
     surname: 'Gonzalez',
+    avatar: "img",
     email: 'm.gonzalez@endava.com',
     sector: 'fullStack',
     "isAdmin": true,
@@ -17,6 +18,7 @@ Employee.create(
 Employee.create({
     name: 'Juan',
     surname: 'Perez',
+    avatar: "img",
     email: 'j.perez@endava.com',
     sector: 'fullStack',
     "isAdmin": true,
@@ -28,6 +30,7 @@ Employee.create(
     {
     name: 'Agustin',
     surname: 'Pardo',
+    avatar: "img",
     email: 'agustin.pardo@endava.com',
     sector: 'fullStack',
     "isAdmin": true,
@@ -48,6 +51,7 @@ Employee.create({
 Employee.create({
     name: 'Sebastian',
     surname: 'Kjolhede',
+    avatar: "img",
     email: 's.kol@endava.com',
     sector: 'front',
     "isAdmin": false,
@@ -58,6 +62,7 @@ Employee.create({
 Employee.create({
     name: 'Alejandro',
     surname: 'Villa',
+    avatar: "img",
     email: 'a.villa@endava.com',
     sector: 'backend',
     "isAdmin": false,
