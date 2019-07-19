@@ -139,16 +139,40 @@ table.table td {
 }
 /* GENERAL  */
 /* ========================================== */
+.imgStyle {
+  object-fit: cover;
+    min-height: 192px;
+    max-height: 100%;
+    background-color: grey;
+    width: 100%;
+    border-radius: 10px;
+}
 .imgProfile {
-  position: absolute;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #9bb4be;
+  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);
+box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);
+}
+.imgProfile:hover {
+  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
+-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
+box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
 }
 .iconEditImg{
-  position: absolute; 
   /* con position absolute defino la posicion, en relacion al padre */
-  bottom: 0;
-  right: 0;
-  background-color: red;
-  padding: 10px
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ffaba6;
+    padding: 11px 16px;
+    border-radius: 5px;
+    border: 1px solid #ababab;
+}
+.iconEditImg:hover {
+  background-color: #ffe6e5;
+  cursor:pointer;
 }
 .parrafoModal {
   margin-top:-10px;
