@@ -4,34 +4,37 @@ import { MDBBtn, MDBRow, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCa
 export default function Profile({ user, handClick }) {
   return (
     <MDBRow className="container-banner">
+    
       <MDBCol md="1">
 
       </MDBCol>
       <MDBCol md="8" >
+      Profile:
         <MDBCard>
           <MDBCardBody>
             <MDBRow className="container-banner">
-              <MDBCol md="4">
+              <MDBCol md="3">
                 <div className="imgProfile">
-                  <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
+                  <MDBCardImage className="img-fluid z-depth-3 imgStyle" src={`/assets/img/profile/${user.avatar}`} waves />
                 </div>
                 <span className="iconEditImg">
-                  hola
+                <i class="far fa-edit"></i>
                 </span>
               </MDBCol>
-              <MDBCol md="8" >
+              <MDBCol md="9" >
                 <MDBCardTitle><h3> {user.name} {user.surname}</h3></MDBCardTitle>
                 <h5>Sector: {user.sector}</h5>
                 <MDBCardText>
                   Some quick example text to build on the card title and make
                   up the bulk of the card&apos;s content.
                 </MDBCardText>
-                <MDBBtn onClick={handClick}>Edit</MDBBtn>
+                <MDBBtn className="mb-3 btnEv-blue rounded mb-0 border-0" onClick={handClick}>Edit</MDBBtn>
               </MDBCol>
             </MDBRow>
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     </MDBRow>
   )
 }
