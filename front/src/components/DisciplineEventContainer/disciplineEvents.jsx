@@ -13,34 +13,42 @@ import {
   MDBTableBody
 } from "mdbreact";
 
-import ModalAviso from "../ModalContainer/modalAviso";
+// import ModalAviso from "../ModalContainer/modalAviso";
 import { columnsEvents } from "../../auxFunctions/auxFunctions";
 
-export default function DisciplineEvent({ onFormSubmit, onChange, eventList, handleClick, techList }) {
+export default function DisciplineEvent({
+  onFormSubmit,
+  onChange,
+  eventList,
+  handleClick,
+  techList
+}) {
   return (
     <>
       {/* {evenList && console.log("soy las events", evenList)} */}
-        <MDBRow className="container-banner">
-          <MDBCol md="1" />
-          <MDBCol md="10">
-            <h1 className="upperCaseFonts">Share your knowledge and empower your professional activity.</h1>
-            <MDBAnimation type="fadeInUp">
-              <p className="TextParrafo">
-                We began our journey as a consulting firm delivering real
-                transformation through IT strategy and architecture services for
-                some of the world’s largest banks and payments companies. Over
-                the past 18 years, we marked important milestones towards
-                becoming global through opening delivery centres and offices in
-                North and Latin America, as well as Western and Central Europe.
-                Our guiding philosophy has always been the same: We focus on
-                helping people to be successful. The people who work for us, the
-                people who engage with us, and the people who use the systems
-                and applications we design, build, and operate.
-              </p>
-            </MDBAnimation>
-          </MDBCol>
-          <MDBCol md="1" />
-        </MDBRow>
+      <MDBRow className="container-banner">
+        <MDBCol md="1" />
+        <MDBCol md="10">
+          <h1 className="upperCaseFonts">
+            Share your knowledge and empower your professional activity.
+          </h1>
+          <MDBAnimation type="fadeInUp">
+            <p className="TextParrafo">
+              We began our journey as a consulting firm delivering real
+              transformation through IT strategy and architecture services for
+              some of the world’s largest banks and payments companies. Over the
+              past 18 years, we marked important milestones towards becoming
+              global through opening delivery centres and offices in North and
+              Latin America, as well as Western and Central Europe. Our guiding
+              philosophy has always been the same: We focus on helping people to
+              be successful. The people who work for us, the people who engage
+              with us, and the people who use the systems and applications we
+              design, build, and operate.
+            </p>
+          </MDBAnimation>
+        </MDBCol>
+        <MDBCol md="1" />
+      </MDBRow>
       <hr />
       {/* FORMULARIO  */}
       <MDBRow className="container-banner">
@@ -50,7 +58,21 @@ export default function DisciplineEvent({ onFormSubmit, onChange, eventList, han
             <MDBCard>
               <MDBCardBody>
                 <form onSubmit={onFormSubmit}>
-               <p className="h4 text-center py-4">Send us your topic</p>
+                  <p className="h4 text-center py-4">Send us your topic</p>
+                  <select
+                    className="browser-default custom-select"
+                    name="allowance"
+                    onChange={handleClick}
+                  >
+                    <option>Choose your Technologie...</option>
+                    {techList &&
+                      techList.map(tech => (
+                        <option className="capitalizeName" value={tech.name}>
+                          {tech.name}
+                        </option>
+                      ))}
+                      <option value="Otros">Otros...</option>
+                  </select>
 
                   <div className="grey-text">
                     <MDBInput
@@ -65,22 +87,25 @@ export default function DisciplineEvent({ onFormSubmit, onChange, eventList, han
                       error="wrong"
                       success="right"
                     />
-                    <select
-                      className="browser-default custom-select"
-                      name="allowance"
-                      onChange={handleClick}
-                    >
-                      <option>Choose your allowance...</option>
-                      <option value="">All</option>
-                      {techList &&
-                        techList.map(tech => (
-                          <option
-                            className="capitalizeName"
-                          >
-                            {tech.name}
-                          </option>
-                        ))}
-                    </select>
+                    <MDBInput
+                      icon="calendar-alt"
+                      group
+                      type="date"
+                      name="date"
+                      onChange={onChange}
+                      required
+                    />
+                    <MDBInput
+                      icon="clock"
+                      group
+                      type="time"
+                      name="time"
+                      max="19:30:00"
+                      min="10:00:00"
+                      step="10"
+                      onChange={onChange}
+                      required
+                    />
                     <MDBInput
                       label="Description..."
                       icon="comment-alt"
@@ -94,27 +119,6 @@ export default function DisciplineEvent({ onFormSubmit, onChange, eventList, han
                       error="wrong"
                       success="right"
                     />
-
-                    <MDBInput
-                      icon="calendar-alt"
-                      group
-                      type="date"
-                      name="date"
-                      onChange={onChange}
-                      required
-                    />
-                    <MDBInput
-                      icon="calendar-alt"
-                      group
-                      type="time"
-                      name="time"
-                      max="19:30:00"
-                      min="10:00:00"
-                      step="1"
-                      onChange={onChange}
-                      required
-                    />
-                    <label>Event schedule </label>
                   </div>
                   <br />
                   <br />
@@ -134,6 +138,8 @@ export default function DisciplineEvent({ onFormSubmit, onChange, eventList, han
         </MDBCol>
 
         <MDBCol md="6">
+          {/* FORMULARIO  */}
+
           <MDBAnimation type="fadeInUp">
             {!eventList.length ? (
               <label>
@@ -148,7 +154,9 @@ export default function DisciplineEvent({ onFormSubmit, onChange, eventList, han
             )}
           </MDBAnimation>
         </MDBCol>
+        <MDBCol md="1" />
       </MDBRow>
+      <hr />
 
       {/* ----------------------------------------------------- */}
     </>
