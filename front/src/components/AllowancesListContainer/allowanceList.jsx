@@ -1,7 +1,7 @@
 import React from 'react'
 import {
  MDBTableBody, MDBTableHead, MDBIcon, MDBFormInline,
-   MDBTable, MDBAnimation, MDBRow, MDBCol
+   MDBTable, MDBAnimation, MDBRow, MDBCol, MDBAlert
 } from "mdbreact";
 
 import { columnsAllowance } from '../../auxFunctions/auxFunctions'
@@ -10,7 +10,8 @@ export default function allowanceList({
   allowanceList,
   adminAllowances,
   handleClick,
-  handleFilterStatus
+  handleFilterStatus,
+  alertPending
 }) {
   return (
     <>
@@ -53,6 +54,19 @@ export default function allowanceList({
         </MDBRow>
 
         <hr />
+        { (alertPending)?<>
+        <div style={({maxWidth:406, position: "fixed", bottom: 0})}>
+          <MDBAnimation type="heartBeat">
+          <MDBAlert color="success" >
+            <p>
+              <strong>Hello!</strong> You have {alertPending} allowance pending response...
+            </p>            
+          </MDBAlert>
+          
+        <hr/>
+        </MDBAnimation>
+        </div>
+        </> :''}
         <MDBRow className="container-banner minHeight">
          
           <MDBCol md="12">

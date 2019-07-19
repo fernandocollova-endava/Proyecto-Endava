@@ -204,18 +204,6 @@ Router.delete("/:id/delete", function (req, res) {
     });
 });
 
-// COUNT 
-// Products.findOne({
-//   attributes: [
-//       [Sequelize.fn('min', Sequelize.col('precio')), 'min'],
-//       [Sequelize.fn('max', Sequelize.col('precio')), 'max'],
-//       [Sequelize.fn('count', Sequelize.col('precio')), 'count']
-//   ],
-//   where: objFilter
-// })
-//   .then(data => {
-//       res.json(data)
-//   })
 
 // RUTA PARA MODIFICAR EL ESTADO EL ALLOWANCE
 Router.put("/:id/edit", function (req, res) {
@@ -235,6 +223,28 @@ Router.put("/:id/edit", function (req, res) {
     });
 });
 
+// COUNT CANTIDAD DE ALLOWANCE PENDIENTES DE APROBACION
+Router.get("/count", function(req,res){
+  AllowanceDetail.findAll({
+    attributes: [],
+    where: {
+      status:'pending',
+    },
+    include: [
+      {
+        model: Employee,
+        as: "employeeDetail",
+        attributes: [],
+        where:{
+          id: {[Op.ne]:req.query.userId}
+        }
+      }
+    ]
+  })
+    .then(data => {
+        res.json(data.length)
+    })
+})
 function paymentDateFn(date, limitDate) {
   let valDate = date.getDay() <= limitDate ? 1 : 2;
   return new Date(date.getFullYear(), date.getMonth() + valDate, 1);

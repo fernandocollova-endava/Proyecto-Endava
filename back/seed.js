@@ -41,8 +41,7 @@ Employee.create(
 Employee.create({
     name: 'Lucas',
     surname: 'Aguirre',
-    avatar: "img",
-    email: 'l.aguirre@endava.com',
+    email: 'lucas.aguirre@endava.com',
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
@@ -120,8 +119,72 @@ Technologies.create({
     name: 'Javascript',
     imagen:"javascript.png"
 })
-
 Technologies.create({
-    name: 'Javascript',
-    imagen:"javascript.png"
+    name: 'Node Js',
+    imagen:"nodejs.png"
 })
+Technologies.create({
+    name: 'HTML 5',
+    imagen:"html.png"
+})
+Technologies.create({
+    name: 'CSS 3',
+    imagen:"css3.png"
+})
+Technologies.create({
+    name: 'Bootstrap',
+    imagen:"bootstrap.png"
+})
+Technologies.create({
+    name: 'Angular',
+    imagen:"angular.png"
+})
+Technologies.create({
+    name: 'Vue',
+    imagen:"vue.png"
+})
+Technologies.create({
+    name: 'React',
+    imagen:"react.png"
+})
+Technologies.create({
+    name: 'Java',
+    imagen:"java.png"
+})
+Technologies.create({
+    name: 'PHP',
+    imagen:"php.png"
+})
+Technologies.create({
+    name: 'Coworking',
+    imagen:"coworking.png"
+})
+Technologies.create({
+    name: 'JQuery',
+    imagen:"jquery.png"
+})
+Technologies.create({
+    name: 'MySql',
+    imagen:"mysql.png"
+})
+Technologies.create({
+    name: 'Python',
+    imagen:"python.jpg"
+})
+Technologies.create({
+    name: 'Sass',
+    imagen:"sass.png"
+})
+Technologies.create({
+    name: 'Scrum',
+    imagen:"Scrum.png"
+})
+Technologies.create({
+    name: 'Mongodb',
+    imagen:"mongodb.png"
+})
+Technologies.create({
+    name: 'Scrum',
+    imagen:"Scrum.png"
+})
+
