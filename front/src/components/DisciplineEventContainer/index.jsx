@@ -2,7 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import {
   createDisciplineEvents,
-  fetchDisciplineEvents
+  fetchDisciplineEvents,
+  fetchTechonogies
 } from "../../redux/actions/disciplineEvents";
 import DisciplineEvent from "../DisciplineEventContainer/disciplineEvents";
 import ModalAviso from "../ModalContainer/modalAviso";
@@ -14,7 +15,8 @@ class DisciplineEventContainer extends React.Component {
       topic: "",
       observation: "",
       date: "",
-      time:"",
+      time: "",
+      techName: "",
       eventList: []
     };
 
@@ -22,24 +24,28 @@ class DisciplineEventContainer extends React.Component {
     this.onChange = this.onChange.bind(this);
   }
   componentDidMount() {
-    console.log("entreeeeee")
+    console.log("entreeeeee");
     window.scrollTo(0, 0);
-    this.props.fetchDisciplineEvents(this.props.user.id)
-
+    this.props.fetchDisciplineEvents(this.props.user.id);
+    this.props.fetchTechonogies();
   }
 
   componentDidUpdate(prevProps) {
-
     if (prevProps.eventList.length != this.props.eventList.length) {
-
-      this.props.fetchDisciplineEvents(this.props.user.id)
+      this.props.fetchDisciplineEvents(this.props.user.id);
     }
   }
   onFormSubmit(e) {
     e.preventDefault();
 
-    this.props.createDisciplineEvents(this.state, this.props.user)
-    .then(()=> this.props.fetchDisciplineEvents((this.props.user.id)))
+    this.props
+      .createDisciplineEvents(this.state, this.props.user)
+      .then(() => this.props.fetchDisciplineEvents(this.props.user.id));
+  }
+  onClick(e){
+    this.setState({
+      techName:e.target.value
+    })
   }
   onChange(e) {
     this.setState({
@@ -48,7 +54,6 @@ class DisciplineEventContainer extends React.Component {
   }
 
   render() {
-    console.log("soy event del render", this.props.eventList)
     return (
       <div>
         {/* {console.log(this.state.eventList, "soy los eventos del loco")} */}
@@ -56,6 +61,7 @@ class DisciplineEventContainer extends React.Component {
           onChange={this.onChange}
           onFormSubmit={this.onFormSubmit}
           eventList={this.props.eventList}
+          techList= {this.props.techList}
         />
       </div>
     );
@@ -66,7 +72,8 @@ const mapStateToProps = (state, owner) => {
     user: state.user.user,
     nameUrl: owner.match.params.name, // Extrae la url dinamica
     listAllowance: state.allowance.adminAllowances,
-    eventList: state.event.eventList
+    eventList: state.event.eventList,
+    techList: state.event.techList
   };
 };
 
@@ -74,7 +81,8 @@ const MapDispatchToProps = dispatch => {
   return {
     createDisciplineEvents: (data, user) =>
       dispatch(createDisciplineEvents(data, user)),
-    fetchDisciplineEvents: user => dispatch(fetchDisciplineEvents(user))
+    fetchDisciplineEvents: user => dispatch(fetchDisciplineEvents(user)),
+    fetchTechonogies: () => dispatch(fetchTechonogies())
   };
 };
 

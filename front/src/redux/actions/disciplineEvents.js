@@ -1,5 +1,5 @@
 import axios from "axios";
-import {RECEIVE_EVENT_LIST} from "../../constants";
+import {RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST} from "../../constants";
 
 export const receiveEventList = function(eventList) {
   
@@ -8,6 +8,15 @@ export const receiveEventList = function(eventList) {
     eventList
   };
 };
+
+export const receiveTechList = function(techList) {
+  
+  return {
+    type: RECEIVE_TECH_LIST,
+    techList
+  };
+};
+
 
 export const createDisciplineEvents = (data, user) => dispatch => {
 
@@ -21,9 +30,16 @@ export const fetchDisciplineEvents = userId => dispatch => {
     .get(`/api/disciplineEvent/${ userId }`)
     .then(res => res.data)
     .then(eventList => {
-      console.log("soy la event list del axios", eventList)
       dispatch(receiveEventList(eventList))
       return eventList
     
     });
-};
+}; 
+
+export const fetchTechonogies = dispatch => {
+  console.log("entre al axiossssssss")
+  return axios.get("/api/disciplineEvent/technologies")
+  .then(techList => {
+    console.log("resssssss", techList)
+    dispatch(receiveTechList(techList))})
+}

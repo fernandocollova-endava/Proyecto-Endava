@@ -48574,7 +48574,9 @@ __webpack_require__.r(__webpack_exports__);
 function DisciplineEvent(_ref) {
   var onFormSubmit = _ref.onFormSubmit,
       onChange = _ref.onChange,
-      eventList = _ref.eventList;
+      eventList = _ref.eventList,
+      handleClick = _ref.handleClick,
+      techList = _ref.techList;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -48614,7 +48616,17 @@ function DisciplineEvent(_ref) {
     onChange: onChange,
     error: "wrong",
     success: "right"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    className: "browser-default custom-select",
+    name: "allowance",
+    onChange: handleClick
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Choose your allowance..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: ""
+  }, "All"), techList && techList.map(function (tech) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      className: "capitalizeName"
+    }, tech.name);
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
     label: "Description...",
     icon: "comment-alt",
     required: true,
@@ -48651,9 +48663,7 @@ function DisciplineEvent(_ref) {
     type: "submit"
   }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
     icon: "angle-right"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "textAlert"
-  }, "*Please note that only jpg, png and PDF files up to 10MB are accepted.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
@@ -48728,6 +48738,7 @@ function (_React$Component) {
       observation: "",
       date: "",
       time: "",
+      techName: "",
       eventList: []
     };
     _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
@@ -48741,6 +48752,7 @@ function (_React$Component) {
       console.log("entreeeeee");
       window.scrollTo(0, 0);
       this.props.fetchDisciplineEvents(this.props.user.id);
+      this.props.fetchTechonogies();
     }
   }, {
     key: "componentDidUpdate",
@@ -48760,6 +48772,13 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "onClick",
+    value: function onClick(e) {
+      this.setState({
+        techName: e.target.value
+      });
+    }
+  }, {
     key: "onChange",
     value: function onChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
@@ -48767,11 +48786,11 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log("soy event del render", this.props.eventList);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DisciplineEventContainer_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__["default"], {
         onChange: this.onChange,
         onFormSubmit: this.onFormSubmit,
-        eventList: this.props.eventList
+        eventList: this.props.eventList,
+        techList: this.props.techList
       }));
     }
   }]);
@@ -48785,7 +48804,8 @@ var mapStateToProps = function mapStateToProps(state, owner) {
     nameUrl: owner.match.params.name,
     // Extrae la url dinamica
     listAllowance: state.allowance.adminAllowances,
-    eventList: state.event.eventList
+    eventList: state.event.eventList,
+    techList: state.event.techList
   };
 };
 
@@ -48796,6 +48816,9 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     },
     fetchDisciplineEvents: function fetchDisciplineEvents(user) {
       return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchDisciplineEvents"])(user));
+    },
+    fetchTechonogies: function fetchTechonogies() {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchTechonogies"])());
     }
   };
 };
@@ -50656,7 +50679,7 @@ function updatePass(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, SET_OPEN_CLOSE_NAVBAR */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50666,9 +50689,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALLOWANCES", function() { return RECEIVE_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ADMIN_ALLOWANCES", function() { return RECEIVE_ADMIN_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PENDING_ALLOWANCES", function() { return RECEIVE_PENDING_ALLOWANCES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_EVENT_LIST", function() { return RECEIVE_EVENT_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ACTIVE_ALLOWANCES", function() { return RECEIVE_ACTIVE_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HISTORY_ALLOWANCES", function() { return RECEIVE_HISTORY_ALLOWANCES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_EVENT_LIST", function() { return RECEIVE_EVENT_LIST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TECH_LIST", function() { return RECEIVE_TECH_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_OPEN_CLOSE_NAVBAR", function() { return SET_OPEN_CLOSE_NAVBAR; });
 // Allowance ===>
 //export const ADD_ALLOWANCE_TO_DB = "ADD_ALLOWANCE_TO_DB";
@@ -50678,11 +50702,12 @@ var USER_LOGOUT = " USER_LOGOUT"; //Allowances
 
 var RECEIVE_ALLOWANCES = "RECEIVE_ALLOWANCES";
 var RECEIVE_ADMIN_ALLOWANCES = "ECEIVE_ADMIN_ALLOWANCES";
-var RECEIVE_PENDING_ALLOWANCES = "RECEIVE_PENDING_ALLOWANCES"; // DisciplineEvents
+var RECEIVE_PENDING_ALLOWANCES = "RECEIVE_PENDING_ALLOWANCES";
+var RECEIVE_ACTIVE_ALLOWANCES = "RECEIVE_ACTIVE_ALLOWANCES";
+var RECEIVE_HISTORY_ALLOWANCES = "RECEIVE_HISTORY_ALLOWANCES"; // DisciplineEvents
 
 var RECEIVE_EVENT_LIST = "RECEIVE_EVENT_LIST";
-var RECEIVE_ACTIVE_ALLOWANCES = "RECEIVE_ACTIVE_ALLOWANCES";
-var RECEIVE_HISTORY_ALLOWANCES = "RECEIVE_HISTORY_ALLOWANCES"; // NavBar 
+var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST"; // NavBar 
 
 var SET_OPEN_CLOSE_NAVBAR = "SET_OPEN_CLOSE_NAVBAR";
 
@@ -50880,14 +50905,16 @@ var editStatusAllowance = function editStatusAllowance(id, status, observation) 
 /*!***********************************************!*\
   !*** ./src/redux/actions/disciplineEvents.js ***!
   \***********************************************/
-/*! exports provided: receiveEventList, createDisciplineEvents, fetchDisciplineEvents */
+/*! exports provided: receiveEventList, receiveTechList, createDisciplineEvents, fetchDisciplineEvents, fetchTechonogies */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveEventList", function() { return receiveEventList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveTechList", function() { return receiveTechList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDisciplineEvents", function() { return createDisciplineEvents; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDisciplineEvents", function() { return fetchDisciplineEvents; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTechonogies", function() { return fetchTechonogies; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
@@ -50897,6 +50924,12 @@ var receiveEventList = function receiveEventList(eventList) {
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_EVENT_LIST"],
     eventList: eventList
+  };
+};
+var receiveTechList = function receiveTechList(techList) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_TECH_LIST"],
+    techList: techList
   };
 };
 var createDisciplineEvents = function createDisciplineEvents(data, user) {
@@ -50914,11 +50947,17 @@ var fetchDisciplineEvents = function fetchDisciplineEvents(userId) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/".concat(userId)).then(function (res) {
       return res.data;
     }).then(function (eventList) {
-      console.log("soy la event list del axios", eventList);
       dispatch(receiveEventList(eventList));
       return eventList;
     });
   };
+};
+var fetchTechonogies = function fetchTechonogies(dispatch) {
+  console.log("entre al axiossssssss");
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/technologies").then(function (techList) {
+    console.log("resssssss", techList);
+    dispatch(receiveTechList(techList));
+  });
 };
 
 /***/ }),
@@ -51123,7 +51162,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var initialState = {
-  eventList: []
+  eventList: [],
+  techList: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -51133,6 +51173,11 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_EVENT_LIST"]:
       return _objectSpread({}, state, {
         eventList: action.eventList
+      });
+
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TECH_LIST"]:
+      return _objectSpread({}, state, {
+        eventList: action.techList
       });
 
     default:

@@ -2,6 +2,7 @@ const express = require("express");
 const Router = express.Router();
 const DisciplineEvent = require("../../db/models").DisciplineEvent;
 const Employee = require("../../db/models/").Employee;
+const Technologies = require("../../db/models/").Technologies;
 
 Router.post("/", function(req, res) {
   Employee.findOne({
@@ -22,6 +23,11 @@ Router.post("/", function(req, res) {
       .then(employeeEvent => res.send(employeeEvent));
   });
 });
+Router.get("/technologies", function(req, res){
+  Technologies.findAll()
+  .then(techList=>res.send(techList))
+})
+
 Router.get("/:id", function(req, res) {
   Employee.findOne({
     // 1) primero traigo el empleado
