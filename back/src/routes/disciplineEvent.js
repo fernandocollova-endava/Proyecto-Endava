@@ -12,6 +12,7 @@ Router.post("/", function(req, res) {
     DisciplineEvent.create({
       topic: req.body.data.topic,
       date: req.body.data.date,
+      time: req.body.data.time,
       description: req.body.data.observation,
       status: "pending"
     })
@@ -43,7 +44,7 @@ Router.get("/:id", function(req, res) {
         }
 
       ],
-      attributes:["topic", "status", "date"]
+      attributes:["topic", "status", "date", "time"]
     }).then(eventList => res.send(eventList));
   });
 });

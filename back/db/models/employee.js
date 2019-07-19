@@ -21,6 +21,10 @@ const Employee = db.define("employee", {
     },
     unique: true
   },
+  avatar:{
+    type: Sequelize.TEXT,
+    defaultValue:"avatarDefault.jpg"
+},
   sector: {
     type: Sequelize.STRING,
     allowNull: false
