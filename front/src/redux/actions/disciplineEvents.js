@@ -10,7 +10,7 @@ export const receiveEventList = function(eventList) {
 };
 
 export const receiveTechList = function(techList) {
-  
+
   return {
     type: RECEIVE_TECH_LIST,
     techList
@@ -36,10 +36,11 @@ export const fetchDisciplineEvents = userId => dispatch => {
     });
 }; 
 
-export const fetchTechonogies = dispatch => {
-  console.log("entre al axiossssssss")
+export const fetchTechonogies =()=> dispatch => {
   return axios.get("/api/disciplineEvent/technologies")
-  .then(techList => {
-    console.log("resssssss", techList)
-    dispatch(receiveTechList(techList))})
-}
+  .then(res => res.data)
+  .then(techList => dispatch(receiveTechList(techList)))
+
+  }
+    
+

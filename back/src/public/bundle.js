@@ -48607,11 +48607,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__);
 
-
+ // import ModalAviso from "../ModalContainer/modalAviso";
 
 
 function DisciplineEvent(_ref) {
@@ -48646,100 +48645,48 @@ function DisciplineEvent(_ref) {
     onSubmit: onFormSubmit
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "h4 text-center py-4"
-  }, "Send us your topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grey-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    label: "Event name",
-    icon: "book",
-    group: true,
-    required: true,
-    autoComplete: "off",
-    validate: true,
-    name: "topic",
-    onChange: onChange,
-    error: "wrong",
-    success: "right"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    label: "Description...",
-    icon: "comment-alt",
-    required: true,
-    group: true,
-    autoComplete: "off",
-    type: "textarea",
-    name: "observation",
-    onChange: onChange,
-    validate: true,
-    error: "wrong",
-    success: "right"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    icon: "calendar-alt",
-    group: true,
-    type: "date",
-    name: "date",
-    onChange: onChange,
-    required: true
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    icon: "calendar-alt",
-    group: true,
-    type: "time",
-    name: "time",
-    max: "19:30:00",
-    min: "10:00:00",
-    step: "1",
-    onChange: onChange,
-    required: true
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Event schedule ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-center py-4 mt-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    color: "light-blue",
-    className: "mb-3 btnEv-red rounded mb-0 border-0 btnAllowance",
-    type: "submit"
-  }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "angle-right"
-  })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "TextParrafo"
-  }, "We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world\u2019s largest banks and payments companies. Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe. Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "1"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "container-banner"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "1"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    onSubmit: onFormSubmit
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "h4 text-center py-4"
-  }, "Send us your topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grey-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    label: "Event name",
-    icon: "book",
-    group: true,
-    required: true,
-    autoComplete: "off",
-    validate: true,
-    name: "topic",
-    onChange: onChange,
-    error: "wrong",
-    success: "right"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+  }, "Send us your topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     className: "browser-default custom-select",
     name: "allowance",
     onChange: handleClick
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Choose your allowance..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: ""
-  }, "All"), techList && techList.map(function (tech) {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Choose your Technologie..."), techList && techList.map(function (tech) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-      className: "capitalizeName"
+      className: "capitalizeName",
+      value: tech.name
     }, tech.name);
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "Otros"
+  }, "Otros...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "grey-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    label: "Event name",
+    icon: "book",
+    group: true,
+    required: true,
+    autoComplete: "off",
+    validate: true,
+    name: "topic",
+    onChange: onChange,
+    error: "wrong",
+    success: "right"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    icon: "calendar-alt",
+    group: true,
+    type: "date",
+    name: "date",
+    onChange: onChange,
+    required: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    icon: "clock",
+    group: true,
+    type: "time",
+    name: "time",
+    max: "19:30:00",
+    min: "10:00:00",
+    step: "10",
+    onChange: onChange,
+    required: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
     label: "Description...",
     icon: "comment-alt",
     required: true,
@@ -48751,24 +48698,7 @@ function DisciplineEvent(_ref) {
     validate: true,
     error: "wrong",
     success: "right"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    icon: "calendar-alt",
-    group: true,
-    type: "date",
-    name: "date",
-    onChange: onChange,
-    required: true
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    icon: "calendar-alt",
-    group: true,
-    type: "time",
-    name: "time",
-    max: "19:30:00",
-    min: "10:00:00",
-    step: "1",
-    onChange: onChange,
-    required: true
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Event schedule ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center py-4 mt-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     color: "light-blue",
@@ -48785,11 +48715,13 @@ function DisciplineEvent(_ref) {
     fixed: true,
     responsive: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableHead"], {
-    columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__["columnsEvents"]
+    columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__["columnsEvents"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableBody"], {
     className: "eventFont",
     rows: eventList
-  }))))));
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "1"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
 }
 
 /***/ }),
@@ -48856,13 +48788,13 @@ function (_React$Component) {
     };
     _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
     _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
+    _this.onClick = _this.onClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(DisciplineEventContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log("entreeeeee");
       window.scrollTo(0, 0);
       this.props.fetchDisciplineEvents(this.props.user.id);
       this.props.fetchTechonogies();
@@ -48903,7 +48835,8 @@ function (_React$Component) {
         onChange: this.onChange,
         onFormSubmit: this.onFormSubmit,
         eventList: this.props.eventList,
-        techList: this.props.techList
+        techList: this.props.techList,
+        handleClick: this.onClick
       }));
     }
   }]);
@@ -51088,12 +51021,14 @@ var fetchDisciplineEvents = function fetchDisciplineEvents(userId) {
     });
   };
 };
-var fetchTechonogies = function fetchTechonogies(dispatch) {
-  console.log("entre al axiossssssss");
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/technologies").then(function (techList) {
-    console.log("resssssss", techList);
-    dispatch(receiveTechList(techList));
-  });
+var fetchTechonogies = function fetchTechonogies() {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/technologies").then(function (res) {
+      return res.data;
+    }).then(function (techList) {
+      return dispatch(receiveTechList(techList));
+    });
+  };
 };
 
 /***/ }),
@@ -51313,7 +51248,7 @@ var initialState = {
 
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TECH_LIST"]:
       return _objectSpread({}, state, {
-        eventList: action.techList
+        techList: action.techList
       });
 
     default:
