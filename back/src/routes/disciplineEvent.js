@@ -24,7 +24,11 @@ Router.post("/", function(req, res) {
   });
 });
 Router.get("/technologies", function(req, res){
-  Technologies.findAll()
+
+  Technologies.findAll({
+    order:[["name","ASC"]]
+
+  })
   .then(techList=>res.send(techList))
 })
 

@@ -22,9 +22,9 @@ class DisciplineEventContainer extends React.Component {
 
     this.onFormSubmit = this.onFormSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
+    this.onClick = this.onClick.bind(this)
   }
   componentDidMount() {
-    console.log("entreeeeee");
     window.scrollTo(0, 0);
     this.props.fetchDisciplineEvents(this.props.user.id);
     this.props.fetchTechonogies();
@@ -43,6 +43,7 @@ class DisciplineEventContainer extends React.Component {
       .then(() => this.props.fetchDisciplineEvents(this.props.user.id));
   }
   onClick(e){
+  
     this.setState({
       techName:e.target.value
     })
@@ -56,18 +57,20 @@ class DisciplineEventContainer extends React.Component {
   render() {
     return (
       <div>
-        {/* {console.log(this.state.eventList, "soy los eventos del loco")} */}
+        
         <DisciplineEvent
           onChange={this.onChange}
           onFormSubmit={this.onFormSubmit}
           eventList={this.props.eventList}
           techList= {this.props.techList}
+          handleClick= {this.onClick}
         />
       </div>
     );
   }
 }
 const mapStateToProps = (state, owner) => {
+  
   return {
     user: state.user.user,
     nameUrl: owner.match.params.name, // Extrae la url dinamica
