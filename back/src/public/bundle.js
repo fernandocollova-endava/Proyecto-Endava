@@ -2513,7 +2513,7 @@ module.exports = exports['default'];
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n/* GENERAL  */\n/* ========================================== */\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.aproved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 300px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n\n  /* RADIO BUTTONS */\n\n.modalForm h2 {\n    font-size: 16px;\n    color: #c31900;\n    margin-bottom: 20px;\n    margin-left: 20px;\n}\n\n.modalForm > div {\n    padding: 20px 0;\n    border-bottom: 1px solid #ccc;\n}\n\n.modalForm label {\n    display: inline-block;\n    cursor: pointer;\n    color: #c31900;\n    position: relative;\n    padding: 5px 15px 5px 37px;\n    font-size: 1em;\n    border-radius: 5px;\n    -webkit-transition: all .3s ease;\n    -o-transition: all .3s ease;\n    transition: all .3s ease;\n}\n\n.modalForm label:hover {\n    background: rgba(0, 116, 217, 0.1);\n}\n\n.modalForm label:before {\n    content: \"\";\n    display: inline-block;\n    width: 17px;\n    height: 17px;\n    position: absolute;\n    left: 15px;\n    border-radius: 50%;\n    background: none;\n    border: 3px solid #c31903;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n\n}\n\n.modalForm input[type=\"radio\"] {\n    display: none;\n}\n\n.modalForm input[type=\"radio\"]:checked + label:before {\n    display: none;\n}\n\n.modalForm input[type=\"radio\"]:checked + label {\n    padding: 5px 15px;\n    background: #c31900;\n    border-radius: 5px;\n    color: #fff;\n}\n ", ""]);
+exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n/* GENERAL  */\n/* ========================================== */\n.imgProfile {\n  position: absolute;\n}\n.iconEditImg{\n  position: absolute; \n  /* con position absolute defino la posicion, en relacion al padre */\n  bottom: 0;\n  right: 0;\n  background-color: red;\n  padding: 10px\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.aproved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 300px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n\n  /* RADIO BUTTONS */\n\n.modalForm h2 {\n    font-size: 16px;\n    color: #c31900;\n    margin-bottom: 20px;\n    margin-left: 20px;\n}\n\n.modalForm > div {\n    padding: 20px 0;\n    border-bottom: 1px solid #ccc;\n}\n\n.modalForm label {\n    display: inline-block;\n    cursor: pointer;\n    color: #c31900;\n    position: relative;\n    padding: 5px 15px 5px 37px;\n    font-size: 1em;\n    border-radius: 5px;\n    -webkit-transition: all .3s ease;\n    -o-transition: all .3s ease;\n    transition: all .3s ease;\n}\n\n.modalForm label:hover {\n    background: rgba(0, 116, 217, 0.1);\n}\n\n.modalForm label:before {\n    content: \"\";\n    display: inline-block;\n    width: 17px;\n    height: 17px;\n    position: absolute;\n    left: 15px;\n    border-radius: 50%;\n    background: none;\n    border: 3px solid #c31903;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n\n}\n\n.modalForm input[type=\"radio\"] {\n    display: none;\n}\n\n.modalForm input[type=\"radio\"]:checked + label:before {\n    display: none;\n}\n\n.modalForm input[type=\"radio\"]:checked + label {\n    padding: 5px 15px;\n    background: #c31900;\n    border-radius: 5px;\n    color: #fff;\n}\n ", ""]);
 
 
 /***/ }),
@@ -47665,11 +47665,14 @@ var columnsEvents = [{
   label: 'Topic',
   field: 'topic'
 }, {
+  label: 'Status',
+  field: 'status'
+}, {
   label: 'Date',
   field: 'date'
 }, {
-  label: 'Status',
-  field: 'status'
+  label: 'Time',
+  field: 'time'
 }];
 var columnsAllowanceDetail = [{
   label: 'Date',
@@ -48562,7 +48565,17 @@ function DisciplineEvent(_ref) {
     name: "date",
     onChange: onChange,
     required: true
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    icon: "calendar-alt",
+    group: true,
+    type: "time",
+    name: "time",
+    max: "19:30:00",
+    min: "10:00:00",
+    step: "1",
+    onChange: onChange,
+    required: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Event schedule ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center py-4 mt-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     color: "light-blue",
@@ -48581,6 +48594,7 @@ function DisciplineEvent(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableHead"], {
     columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__["columnsEvents"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableBody"], {
+    className: "eventFont",
     rows: eventList
   }))))));
 }
@@ -48643,6 +48657,7 @@ function (_React$Component) {
       topic: "",
       observation: "",
       date: "",
+      time: "",
       eventList: []
     };
     _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
@@ -49260,7 +49275,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../NavBarContainer/ */ "./src/components/NavBarContainer/index.jsx");
 /* harmony import */ var _FooterContainer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../FooterContainer */ "./src/components/FooterContainer/index.jsx");
 /* harmony import */ var _UpdatePassContainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../UpdatePassContainer */ "./src/components/UpdatePassContainer/index.jsx");
-/* harmony import */ var _DisciplineEventContainer_index__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../DisciplineEventContainer/index */ "./src/components/DisciplineEventContainer/index.jsx");
+/* harmony import */ var _DisciplineEventContainer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../DisciplineEventContainer */ "./src/components/DisciplineEventContainer/index.jsx");
+/* harmony import */ var _ProfileContainer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../ProfileContainer */ "./src/components/ProfileContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -49278,6 +49294,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -49353,7 +49370,11 @@ function (_React$Component) {
       }), "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/discipline-event/new",
-        component: _DisciplineEventContainer_index__WEBPACK_IMPORTED_MODULE_12__["default"]
+        component: _DisciplineEventContainer__WEBPACK_IMPORTED_MODULE_12__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/profile",
+        component: _ProfileContainer__WEBPACK_IMPORTED_MODULE_13__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/",
@@ -49674,6 +49695,69 @@ function ModalDetails(_ref) {
   }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     className: "mb-3 btnEv-red rounded mb-0 border-0",
     onClick: toggleDetails
+  }, "Close"))));
+}
+
+/***/ }),
+
+/***/ "./src/components/ModalContainer/modalUser.jsx":
+/*!*****************************************************!*\
+  !*** ./src/components/ModalContainer/modalUser.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ModalUser; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+function ModalUser(_ref) {
+  var modal = _ref.modal,
+      toggle = _ref.toggle,
+      handleSubmit = _ref.handleSubmit,
+      user = _ref.user,
+      handleChange = _ref.handleChange;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
+    isOpen: modal,
+    toggle: toggle
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
+    toggle: toggle
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "tittleModalUser"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
+    far: true,
+    icon: "address-card"
+  }), " ", user.name, " ", user.surname), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "emailModalUser"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
+    far: true,
+    icon: "envelope"
+  }), " ", user.email)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Change your password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: handleSubmit
+    /*Envio a data a updatear*/
+
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    icon: "lock",
+    group: true,
+    name: "newPassword",
+    type: "password",
+    validate: true,
+    error: "wrong",
+    success: "right",
+    onChange: handleChange
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    color: "light-blue",
+    className: "mb-3 btnEv-red rounded mb-0 border-0",
+    type: "submit",
+    onClick: toggle //llamo al boton de cierre de ese modal, a la vez que confirmo el submit
+
+  }, "Save"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    color: "secondary",
+    onClick: toggle
   }, "Close"))));
 }
 
@@ -50093,6 +50177,198 @@ function obraSocial(_ref) {
       color: "white"
     }
   }, "Send")))))))));
+}
+
+/***/ }),
+
+/***/ "./src/components/ProfileContainer/index.jsx":
+/*!***************************************************!*\
+  !*** ./src/components/ProfileContainer/index.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
+/* harmony import */ var _profile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./profile */ "./src/components/ProfileContainer/profile.jsx");
+/* harmony import */ var _ModalContainer_modalUser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalUser */ "./src/components/ModalContainer/modalUser.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+
+var ProfileContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ProfileContainer, _React$Component);
+
+  function ProfileContainer(props) {
+    var _this;
+
+    _classCallCheck(this, ProfileContainer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProfileContainer).call(this, props));
+    _this.state = {
+      msjSave: "",
+      titleMsj: "",
+      modalUser: false,
+      modal: false,
+      newPassword: ""
+    };
+    _this.toggleModalUser = _this.toggleModalUser.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.handClick = _this.handClick.bind(_assertThisInitialized(_this));
+    _this.toggleModal = _this.toggleModal.bind(_assertThisInitialized(_this));
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(ProfileContainer, [{
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      var _this2 = this;
+
+      e.preventDefault();
+      this.props.updatePass(this.state.newPassword, this.props.user.id).then(function (response) {
+        //recibo data ok y despliego modal
+        _this2.setState({
+          modal: true,
+          msjSave: "The password has been changed successfully.",
+          titleMsj: 'Success'
+        });
+      });
+    }
+  }, {
+    key: "handClick",
+    value: function handClick() {
+      this.setState({
+        modalUser: !this.state.modalUser
+      });
+    }
+  }, {
+    key: "handleChange",
+    value: function handleChange(e) {
+      this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: "toggleModalUser",
+    value: function toggleModalUser() {
+      this.setState({
+        modalUser: !this.state.modalUser
+      });
+    }
+  }, {
+    key: "toggleModal",
+    value: function toggleModal() {
+      this.setState({
+        modal: !this.state.modal,
+        msjSave: ""
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_profile__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        user: this.props.user,
+        handClick: this.handClick
+      }), ";", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalUser__WEBPACK_IMPORTED_MODULE_4__["default"] //Modal para visualizar/editar data del user
+      , {
+        modal: this.state.modalUser,
+        toggle: this.toggleModalUser,
+        handleSubmit: this.handleSubmit,
+        user: this.props.user,
+        handleChange: this.handleChange
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"] //Modal de confirmacion de cambio de clave Ok
+      , {
+        toggle: this.toggleModal,
+        modal: this.state.modal,
+        textMsj: this.state.msjSave,
+        titleMsj: this.state.titleMsj
+      }));
+    }
+  }]);
+
+  return ProfileContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    user: state.user.user
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    updatePass: function updatePass(pass, userId) {
+      return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_2__["updatePass"])(pass, userId));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(ProfileContainer));
+
+/***/ }),
+
+/***/ "./src/components/ProfileContainer/profile.jsx":
+/*!*****************************************************!*\
+  !*** ./src/components/ProfileContainer/profile.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Profile; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+function Profile(_ref) {
+  var user = _ref.user,
+      handClick = _ref.handClick;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], {
+    style: {
+      width: "22rem"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "imgProfile"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardImage"], {
+    className: "img-fluid ",
+    src: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
+    waves: true
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "iconEditImg"
+  }, "hola"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardTitle"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, " ", user.name, " ", user.surname)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Sector: ", user.sector), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], null, "Some quick example text to build on the card title and make up the bulk of the card's content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    onClick: handClick
+  }, "Edit"))));
 }
 
 /***/ }),
@@ -50673,6 +50949,8 @@ var updatePass = function updatePass(password, userId) {
       userId: userId
     }).then(function (res) {
       return res.data;
+    }).then(function (passConfirm) {
+      return passConfirm;
     })["catch"](function (error) {
       return console.log(error);
     });
@@ -50683,7 +50961,7 @@ var fetchLoggedUser = function fetchLoggedUser() {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/employee/logged").then(function (res) {
       return res.data;
     }).then(function (user) {
-      dispatch(receiveLoggedUser(user));
+      return dispatch(receiveLoggedUser(user));
     });
   };
 };

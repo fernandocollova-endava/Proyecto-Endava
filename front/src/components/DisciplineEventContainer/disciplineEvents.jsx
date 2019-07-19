@@ -90,6 +90,18 @@ export default function DisciplineEvent ({onFormSubmit, onChange, eventList}) {
                         onChange={onChange}
                         required
                       />
+                      <MDBInput
+                        icon="calendar-alt"
+                        group
+                        type="time"
+                        name="time"
+                        max="19:30:00"
+                        min="10:00:00" step="1"
+                        onChange={onChange}
+                        required
+                      />  
+                      <label>Event schedule </label>
+                   
                     </div>
                     <br/><br/>
                     <div className="text-center py-4 mt-3">
@@ -106,19 +118,21 @@ export default function DisciplineEvent ({onFormSubmit, onChange, eventList}) {
               </MDBCard>
             </MDBAnimation>
           </MDBCol>
+       
           <MDBCol md="6">
           <MDBAnimation type="fadeInUp">
            
            {(!eventList.length)? <label>Sorry, there are no results for your selection... <br/><br/></label>:
            <MDBTable btn fixed responsive>
              <MDBTableHead columns={columnsEvents} />
-             <MDBTableBody rows={eventList} />
+             <MDBTableBody className="eventFont" rows={eventList} />
            </MDBTable>}
 
                         
          </MDBAnimation>
           </MDBCol>
-        </MDBRow>
+          </MDBRow>
+      
 
         {/* ----------------------------------------------------- */}
 

@@ -25,5 +25,6 @@ module.exports = {
   Allowance,
   AllowanceDetail,
   DisciplineEvent,
+  Technologies,
   db
 };

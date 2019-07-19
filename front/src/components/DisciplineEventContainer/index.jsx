@@ -14,6 +14,7 @@ class DisciplineEventContainer extends React.Component {
       topic: "",
       observation: "",
       date: "",
+      time:"",
       eventList: []
     };
 
