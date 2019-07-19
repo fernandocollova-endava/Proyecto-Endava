@@ -42,11 +42,11 @@ class MainContainer extends React.Component {
             <div>
               <Route component={NavbarContainer} />
               <Switch>
-                <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
                 <Route exact path="/allowance/search" component={AllowancesListContainer}/>
                 <Route exact path="/allowance/:name" component={AllowanceContainer}/>
                 <Route exact path="/login/expired" component={UpdatePassContainer}/>
                 <Route exact path="/admin/panel" component={AllowancesListContainer}/> 
+                <Route exact path="/health-care" component={ObraSocialContainer }/>} 
                 <Route exact path="/discipline-event/new" component={DisciplineEvent}/> 
                 <Route exact path="/profile" component={ProfileContainer}/> 
 
