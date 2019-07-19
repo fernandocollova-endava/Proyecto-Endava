@@ -48062,7 +48062,8 @@ function allowanceList(_ref) {
   var allowanceList = _ref.allowanceList,
       adminAllowances = _ref.adminAllowances,
       handleClick = _ref.handleClick,
-      handleFilterStatus = _ref.handleFilterStatus;
+      handleFilterStatus = _ref.handleFilterStatus,
+      alertPending = _ref.alertPending;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -48112,7 +48113,17 @@ function allowanceList(_ref) {
     type: "text",
     placeholder: "Search",
     "aria-label": "Search"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      maxWidth: 406,
+      position: "fixed",
+      bottom: 0
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "heartBeat"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAlert"], {
+    color: "success"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Hello!"), " You have ", alertPending, " allowance pending response...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)))) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner minHeight"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "12"
@@ -48200,7 +48211,8 @@ function (_React$Component) {
       allowanceType: '',
       titleBoolean: '',
       msjSave: '',
-      allowanceStatus: ''
+      allowanceStatus: '',
+      alertPending: 0
     };
     _this.toggleDetails = _this.toggleDetails.bind(_assertThisInitialized(_this));
     _this.toggleBoolean = _this.toggleBoolean.bind(_assertThisInitialized(_this));
@@ -48218,16 +48230,41 @@ function (_React$Component) {
   _createClass(AllowanceListContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
       this.props.fetchAdminAllowances();
-      this.props.openCloseNavBar(false);
+      this.props.openCloseNavBar(false); // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
+
+      if (this.props.user.isAdmin && this.props.allUser) {
+        this.props.fetchCountPending(this.props.user.id).then(function (count) {
+          _this2.setState({
+            alertPending: count.data
+          }); // Guarda cantidad de pendientes 
+
+        });
+      }
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
+      var _this3 = this;
+
       if (prevProps.allUser !== this.props.allUser) {
-        console.log(true);
         this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
+        this.setState({
+          alertPending: 0
+        }); // Resetea el estado a cero
+        // Si es admin y si esta en la ruta panel consulta la cantidad..
+
+        if (this.props.user.isAdmin && this.props.allUser) {
+          this.props.fetchCountPending(this.props.user.id).then(function (count) {
+            _this3.setState({
+              alertPending: count.data
+            }); // Guarda cantidad de pendientes 
+
+          });
+        }
       }
     } // FUNCION PARA FILTRAR POR ALLOWANCE
 
@@ -48252,11 +48289,11 @@ function (_React$Component) {
   }, {
     key: "viewDetails",
     value: function viewDetails(id, allowanceId) {
-      var _this2 = this;
+      var _this4 = this;
 
       this.props.fetchAllowanceActive(id);
       this.props.fetchAllowanceHistory(this.props.user.id, allowanceId).then(function () {
-        _this2.setState({
+        _this4.setState({
           modal: true
         });
       });
@@ -48312,40 +48349,41 @@ function (_React$Component) {
   }, {
     key: "actionOk",
     value: function actionOk(data) {
-      var _this3 = this;
+      var _this5 = this;
 
       this.props.deleteAllowance(data.id).then(function () {
-        _this3.setState({
+        _this5.setState({
           modalBoolean: false,
           modalAviso: true,
           textMsj: "The request has been successfully eliminated...",
           titleMsj: "Success"
         });
 
-        _this3.props.fetchAllowances(_this3.props.user.id, _this3.state.allowanceType, _this3.state.allowanceStatus, _this3.props.allUser);
+        _this5.props.fetchAllowances(_this5.props.user.id, _this5.state.allowanceType, _this5.state.allowanceStatus, _this5.props.allUser);
       })["catch"](function () {
-        _this3.setState({
+        _this5.setState({
           modalBoolean: false,
           modalAviso: true,
           textMsj: "Ups!, an error occurred while processing the request...",
           titleMsj: "Error"
         });
       });
-    }
+    } // Funcion para updatear el status de los beneficios
+
   }, {
     key: "handleSaveConfirm",
     value: function handleSaveConfirm(e) {
-      var _this4 = this;
+      var _this6 = this;
 
       e.preventDefault();
       this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
-        _this4.setState({
+        _this6.setState({
           msjSave: 'Saved!'
         });
 
-        _this4.props.fetchAllowances(_this4.props.user.id, _this4.state.allowanceType, _this4.state.allowanceStatus, _this4.props.allUser);
+        _this6.props.fetchAllowances(_this6.props.user.id, _this6.state.allowanceType, _this6.state.allowanceStatus, _this6.props.allUser);
       })["catch"](function () {
-        _this4.setState({
+        _this6.setState({
           msjSave: 'Ups!, an error occurred while processing the request...'
         });
       });
@@ -48381,6 +48419,7 @@ function (_React$Component) {
         titleBoolean: this.state.titleBoolean,
         data: this.state.data
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        alertPending: this.state.alertPending,
         handleClick: this.handleClick,
         handleFilterStatus: this.handleFilterStatus,
         allowanceList: val,
@@ -48429,7 +48468,11 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     // Switch State
     fetchAdminAllowances: function fetchAdminAllowances() {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAdminAllowances"])());
-    }
+    },
+    fetchCountPending: function fetchCountPending(userId) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
+    } // Consulta cantidad de allowance pendientes
+
   };
 };
 
@@ -48527,9 +48570,7 @@ function DisciplineEvent(_ref) {
     type: "submit"
   }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
     icon: "angle-right"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "textAlert"
-  }, "*Please note that only jpg, png and PDF files up to 10MB are accepted.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
@@ -50358,7 +50399,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*!***********************************************!*\
   !*** ./src/redux/actions/allowanceActions.js ***!
   \***********************************************/
-/*! exports provided: receiveAllowances, receiveAdminAllowances, receivePendingAllowances, receiveActiveAllowances, receiveHistoryAllowances, createAllowance, fetchAllowances, fetchAdminAllowances, fetchPendingAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance */
+/*! exports provided: receiveAllowances, receiveAdminAllowances, receivePendingAllowances, receiveActiveAllowances, receiveHistoryAllowances, createAllowance, fetchAllowances, fetchAdminAllowances, fetchPendingAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance, fetchCountPending */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50376,6 +50417,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllowanceHistory", function() { return fetchAllowanceHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteAllowance", function() { return deleteAllowance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editStatusAllowance", function() { return editStatusAllowance; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCountPending", function() { return fetchCountPending; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
@@ -50483,6 +50525,16 @@ var editStatusAllowance = function editStatusAllowance(id, status, observation) 
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/allowance/".concat(id, "/edit"), {
       status: status,
       observation: observation
+    });
+  };
+}; // 
+
+var fetchCountPending = function fetchCountPending(userId) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/count", {
+      params: {
+        userId: userId
+      }
     });
   };
 };
