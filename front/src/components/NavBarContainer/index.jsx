@@ -48,6 +48,7 @@ class Navbar extends Component {
           </Link>
         </MDBNavbarBrand>
         <MDBNavbarToggler right onClick={() => this.openNavbar()}>
+          <img src={`/assets/img/profile/${this.props.user.avatar}`} class="float-left imgProfileNav" alt="Avatar profile"></img>
           <MDBIcon icon="bars" size="2x" />
         </MDBNavbarToggler>
         <div id="sideNavigation" style={({ width: (this.props.navWidth) ? 300 : 0 })} className="upperCaseFonts sidenav">
