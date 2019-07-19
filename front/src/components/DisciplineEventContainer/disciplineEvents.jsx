@@ -113,10 +113,6 @@ export default function DisciplineEvent ({onFormSubmit, onChange, eventList}) {
                         Send form <MDBIcon icon="angle-right" />
                       </MDBBtn>
                     </div>
-                    <i className="textAlert">
-                      *Please note that only jpg, png and PDF files up to 10MB
-                      are accepted.
-                    </i>
                   </form>
                 </MDBCardBody>
               </MDBCard>

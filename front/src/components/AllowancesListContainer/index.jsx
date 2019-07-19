@@ -1,7 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import AllowanceList from "./allowanceList";
-import { fetchAdminAllowances, fetchAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance } from "../../redux/actions/allowanceActions"
+import {
+  fetchAdminAllowances, fetchAllowances, fetchAllowanceActive, fetchAllowanceHistory,
+  deleteAllowance, editStatusAllowance, fetchCountPending
+} from "../../redux/actions/allowanceActions"
 import { openCloseNavBar } from "../../redux/actions/navbar"
 import ModalDetails from '../ModalContainer/modalDetail'
 import ModalAviso from '../ModalContainer/modalAviso'
@@ -21,7 +24,8 @@ class AllowanceListContainer extends React.Component {
       allowanceType: '',
       titleBoolean: '',
       msjSave: '',
-      allowanceStatus: ''
+      allowanceStatus: '',
+      alertPending: 0
     };
 
     this.toggleDetails = this.toggleDetails.bind(this)
@@ -40,12 +44,27 @@ class AllowanceListContainer extends React.Component {
     this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
     this.props.fetchAdminAllowances()
     this.props.openCloseNavBar(false)
+    // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
+    if (this.props.user.isAdmin && this.props.allUser) {
+      this.props.fetchCountPending(this.props.user.id)
+        .then(count => {
+          this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes 
+        })
+    }
   }
   componentDidUpdate(prevProps, prevState) {
-      if (prevProps.allUser !== this.props.allUser) {
-          console.log(true);
-          this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
+    if (prevProps.allUser !== this.props.allUser) {
+      this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
+      this.setState({ alertPending: 0 }) // Resetea el estado a cero
+
+      // Si es admin y si esta en la ruta panel consulta la cantidad..
+      if (this.props.user.isAdmin && this.props.allUser) {
+        this.props.fetchCountPending(this.props.user.id)
+          .then(count => {
+            this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes 
+          })
       }
+    }
   }
   // FUNCION PARA FILTRAR POR ALLOWANCE
   handleClick(e) {
@@ -136,6 +155,7 @@ class AllowanceListContainer extends React.Component {
         })
       })
   }
+  // Funcion para updatear el status de los beneficios
   handleSaveConfirm(e) {
     e.preventDefault()
     this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value)
@@ -164,17 +184,17 @@ class AllowanceListContainer extends React.Component {
 
     return (
       <div>
-          <ModalDetails
-            modal={this.state.modal}
-            toggleDetails={this.toggleDetails}
-            togglePanel={this.togglePanel}
-            activeItem={this.state.activeItem}
-            activeAllowance={this.props.activeAllowance}
-            history={this.props.history}
-            handleSaveConfirm={this.handleSaveConfirm}
-            msjSave={this.state.msjSave}
-            allUser = {this.props.allUser}
-          />
+        <ModalDetails
+          modal={this.state.modal}
+          toggleDetails={this.toggleDetails}
+          togglePanel={this.togglePanel}
+          activeItem={this.state.activeItem}
+          activeAllowance={this.props.activeAllowance}
+          history={this.props.history}
+          handleSaveConfirm={this.handleSaveConfirm}
+          msjSave={this.state.msjSave}
+          allUser={this.props.allUser}
+        />
         <ModalAviso
           modal={this.state.modalAviso}
           toggle={this.toggleAviso}
@@ -189,6 +209,7 @@ class AllowanceListContainer extends React.Component {
           data={this.state.data}
         />
         <AllowanceList
+          alertPending={this.state.alertPending}
           handleClick={this.handleClick}
           handleFilterStatus={this.handleFilterStatus}
           allowanceList={val}
@@ -207,7 +228,7 @@ const mapStateToProps = (state, owner) => {
     activeAllowance: state.allowance.activeAllowances,
     history: state.allowance.historyAllowances,
     // allUser => Consulta si la ruta ingresada es "/admin/panel", de ser correcto permite en el back mostrar u ocultar uno o todos los usuarios.
-    allUser:(owner.match.path == "/admin/panel") // true o false
+    allUser: (owner.match.path == "/admin/panel") // true o false
   };
 };
 
@@ -219,7 +240,8 @@ const MapDispatchToProps = dispatch => {
     fetchAllowanceHistory: (employeeId, allowanceId) => dispatch(fetchAllowanceHistory(employeeId, allowanceId)),
     deleteAllowance: (id) => dispatch(deleteAllowance(id)), // Elimina detalle 
     editStatusAllowance: (id, status, observation) => dispatch(editStatusAllowance(id, status, observation)), // Switch State
-    fetchAdminAllowances: () => dispatch (fetchAdminAllowances())
+    fetchAdminAllowances: () => dispatch(fetchAdminAllowances()),
+    fetchCountPending: (userId) => dispatch(fetchCountPending(userId)) // Consulta cantidad de allowance pendientes
   };
 }
 export default connect(

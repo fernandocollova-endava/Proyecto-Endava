@@ -1,6 +1,7 @@
 const db = require("../index");
 const Employee = require("./employee");
 const DisciplineEvent = require("./disciplineEvent");
+const Technologies = require('./technologies'); // Tabla de opciones para los eventos
 const {
   Allowance, // Tabla de reintegros
   AllowanceDetail, // Tabla de detalles ( relacionados a empleados )

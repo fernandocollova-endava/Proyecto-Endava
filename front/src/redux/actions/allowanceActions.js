@@ -107,3 +107,13 @@ export const editStatusAllowance = (id, status, observation) => dispatch => {
   return axios
     .put(`/api/allowance/${id}/edit`, { status, observation })
 };
+
+// 
+export const fetchCountPending = (userId) => dispatch => {
+  return axios
+    .get(`/api/allowance/count`,{
+      params: {
+        userId
+      }
+    })
+};
