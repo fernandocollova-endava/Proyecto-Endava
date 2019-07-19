@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize")
 const db = require ("../index")
+const moment = require ("moment")
 
 const DisciplineEvent = db.define('disciplineEvent', {
   
@@ -11,8 +12,21 @@ const DisciplineEvent = db.define('disciplineEvent', {
   },
   date: {
     type: Sequelize.DATEONLY,
-    allowNull: false,
     defaultValue: Sequelize.NOW
+  },
+  time:{
+
+    type: Sequelize.TIME,
+      // get: function() {
+      //     let time = this.getDataValue('CreateTime')
+  
+      //     if (moment(time, moment.ISO_8601, true).isValid()) {
+      //       console.log("es time", time)
+      //         return moment(this.getDataValue('CreateTime')).format('HH:mm:ss')
+      //     } else {
+      //         return time
+      //     }
+      // }
   },
   description:{
     type: Sequelize.STRING,

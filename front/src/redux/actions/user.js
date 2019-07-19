@@ -44,6 +44,9 @@ export const updatePass = (password, userId) => dispatch => {
   return axios
     .post("/api/employee/password/update", {password:password, userId:userId})
     .then(res => res.data)
+    .then(passConfirm =>{
+      return passConfirm
+    })
     .catch(error=>console.log(error))
 
 };
@@ -52,7 +55,5 @@ export const fetchLoggedUser = () => dispatch => {
   return axios
     .get("/api/employee/logged")
     .then(res => res.data)
-    .then(user => {
-      dispatch(receiveLoggedUser(user));
-    });
+    .then(user => dispatch(receiveLoggedUser(user)));
 };

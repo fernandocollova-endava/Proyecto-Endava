@@ -1,5 +1,6 @@
 const Allowance = require("./db/models").Allowance
 const Employee = require("./db/models").Employee
+const Technologies = require ("./db/models").Technologies
 
 Employee.create(
     
@@ -106,4 +107,15 @@ Allowance.create({
     imgUrl:'https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/ServicesInnerPages/Smart-Automation/Smart-Automation-Whitepaper/AutomationWP_V2_Hero_Mobile_480x500.ashx',
     completeName:'Gym Allowance',
     active:false
+})
+
+
+Technologies.create({
+    name: 'Javascript',
+    imagen:"javascript.png"
+})
+
+Technologies.create({
+    name: 'Javascript',
+    imagen:"javascript.png"
 })

@@ -10,7 +10,8 @@ import AllowancesListContainer from "../AllowancesListContainer/index";
 import NavbarContainer from "../NavBarContainer/"
 import FooterContainer from "../FooterContainer"
 import UpdatePassContainer from "../UpdatePassContainer"
-import DisciplineEvent from "../DisciplineEventContainer/index"
+import DisciplineEvent from "../DisciplineEventContainer"
+import ProfileContainer from "../ProfileContainer"
 
 class MainContainer extends React.Component {
   constructor() {
@@ -47,6 +48,7 @@ class MainContainer extends React.Component {
                 <Route exact path="/admin/panel" component={AllowancesListContainer}/> 
                 <Route exact path="/health-care" component={ObraSocialContainer }/>} 
                 <Route exact path="/discipline-event/new" component={DisciplineEvent}/> 
+                <Route exact path="/profile" component={ProfileContainer}/> 
 
                 <Route exact path="/" component={Home}/>
                 <Redirect from="/login" to="/" />

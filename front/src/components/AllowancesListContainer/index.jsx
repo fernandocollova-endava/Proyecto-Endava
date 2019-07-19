@@ -164,17 +164,17 @@ class AllowanceListContainer extends React.Component {
 
     return (
       <div>
-        <ModalDetails
-          modal={this.state.modal}
-          toggleDetails={this.toggleDetails}
-          togglePanel={this.togglePanel}
-          activeItem={this.state.activeItem}
-          activeAllowance={this.props.activeAllowance}
-          history={this.props.history}
-          handleSaveConfirm={this.handleSaveConfirm}
-          msjSave={this.state.msjSave}
-          allUser = {this.props.allUser}
-        />
+          <ModalDetails
+            modal={this.state.modal}
+            toggleDetails={this.toggleDetails}
+            togglePanel={this.togglePanel}
+            activeItem={this.state.activeItem}
+            activeAllowance={this.props.activeAllowance}
+            history={this.props.history}
+            handleSaveConfirm={this.handleSaveConfirm}
+            msjSave={this.state.msjSave}
+            allUser = {this.props.allUser}
+          />
         <ModalAviso
           modal={this.state.modalAviso}
           toggle={this.toggleAviso}

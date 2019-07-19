@@ -46,12 +46,16 @@ const columnsEvents = [
     field: 'topic'
   },
   {
+    label: 'Status',
+    field: 'status'
+  },
+  {
     label: 'Date',
     field: 'date'
   },
   {
-    label: 'Status',
-    field: 'status'
+    label: 'Time',
+    field: 'time'
   },
   
   

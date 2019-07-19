@@ -35,6 +35,24 @@ table.table td {
 
 /* FONTS */
 /* ======================================= */
+.eventFont{
+  font-family: robotolight,Arial,sans-serif;
+  font-size: 10px;
+
+}
+.tittleModalUser{
+  font-family: roboto_condensedbold,Arial,sans-serif;
+  font-size: 26px;
+  display: block
+}
+.emailModalUser{
+  font-family: robotolight,Arial,sans-serif;
+  font-size: 16px;
+  color:#233237;
+  position: relative;
+  top: -5px;
+  margin-left: 21 px
+}
 .upperCaseFonts {
   text-transform: uppercase;
 }
@@ -121,6 +139,17 @@ table.table td {
 }
 /* GENERAL  */
 /* ========================================== */
+.imgProfile {
+  position: absolute;
+}
+.iconEditImg{
+  position: absolute; 
+  /* con position absolute defino la posicion, en relacion al padre */
+  bottom: 0;
+  right: 0;
+  background-color: red;
+  padding: 10px
+}
 .parrafoModal {
   margin-top:-10px;
 }
