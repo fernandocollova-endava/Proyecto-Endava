@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import { MDBCard, MDBCardBody, MDBRow, MDBCol, MDBAnimation } from "mdbreact";
+import CarouselPage from "./CarouselPage";
 
 
 const AnimationPage = ({ cardList }) => {
   return (
     <>
       <MDBAnimation type="fadeInUp">
-        <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/Be-Connected/FinalImages/InnerComunities/Hero_Desktop_ICTHub.ashx"
+        <CarouselPage />
+        {/* <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/Be-Connected/FinalImages/InnerComunities/Hero_Desktop_ICTHub.ashx"
           className="img-fluid bannerAllowance"
-          alt="Imagen endava" />
+          alt="Imagen endava" /> */}
       </MDBAnimation>
      
       <MDBRow className="container-banner">
@@ -38,7 +40,7 @@ const AnimationPage = ({ cardList }) => {
       <MDBRow className="container-banner marginDemo">
         {
           cardList && cardList.map((card, i) => (
-            <MDBCol md="3">
+            <MDBCol md="3" key={i}>
               {/* delay proporciona un delay multiplicado por i ( posicion del array )
                 generando un efecto de cadena en la animacion.. reveal*/}
               <MDBAnimation delay={`${(i*100)}ms`} type='fadeInLeftBig'>

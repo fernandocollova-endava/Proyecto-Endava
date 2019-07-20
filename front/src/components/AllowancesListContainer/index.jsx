@@ -54,14 +54,20 @@ class AllowanceListContainer extends React.Component {
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.allUser !== this.props.allUser) {
-      this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
-      this.setState({ alertPending: 0 }) // Resetea el estado a cero
+      
+      this.setState({ 
+        alertPending: 0, // Resetea el estado a cero
+        allowanceType:'', // Resetea el select de type
+        allowanceStatus:'' // Resetea el select de Status
+       },()=>{
+        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
+       }) 
 
       // Si es admin y si esta en la ruta panel consulta la cantidad..
       if (this.props.user.isAdmin && this.props.allUser) {
         this.props.fetchCountPending(this.props.user.id)
           .then(count => {
-            this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes 
+            this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes
           })
       }
     }
@@ -85,12 +91,16 @@ class AllowanceListContainer extends React.Component {
   // FUNCION DE CONSULTA HISTORIAL / DETALLE
   viewDetails(id, allowanceId) {
     this.props.fetchAllowanceActive(id)
-    this.props.fetchAllowanceHistory(this.props.user.id, allowanceId)
-      .then(() => {
-        this.setState({
-          modal: true,
-        });
+      .then(data => {
+        let idUserHistory = data.activeAllowances.employeeDetail.id // Retorna el id del usuario del detalle seleccionado
+        this.props.fetchAllowanceHistory(idUserHistory, allowanceId)
+          .then(() => {
+            this.setState({
+              modal: true,
+            });
+          })
       })
+
   }
 
   // TOGGLE MODAL HISTORIAL / DETALLE
@@ -213,6 +223,8 @@ class AllowanceListContainer extends React.Component {
           handleClick={this.handleClick}
           handleFilterStatus={this.handleFilterStatus}
           allowanceList={val}
+          allowanceType={this.state.allowanceType}
+          allowanceStatus={this.state.allowanceStatus}
           adminAllowances={this.props.adminAllowances}
         />
       </div>
