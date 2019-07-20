@@ -56,7 +56,12 @@ class Navbar extends Component {
         <div id="sideNavigation" style={({ width: (this.props.navWidth) ? 300 : 0 })} className="upperCaseFonts sidenav">
           <span className="nameFontSidebar">
             Welcome <br />
-            <i className="fas fa-heart"> </i> {this.props.user.name}
+            {
+              (this.props.user.isAdmin)?
+              <i className="fas fa-user-tie iconAvatar"></i>:
+              <i className="far fa-user iconAvatar"></i>
+            }
+            {this.props.user.name}
           </span>
           <span className="closebtn" onClick={() => this.closeCollapse()}> &times; </span>
           <hr />
