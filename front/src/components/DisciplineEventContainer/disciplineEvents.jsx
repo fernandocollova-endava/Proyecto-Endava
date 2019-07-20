@@ -67,7 +67,7 @@ export default function DisciplineEvent({
               <MDBCardBody>
                 <form onSubmit={onFormSubmit}>
                   <p className="h4 text-center py-4">Send us your topic</p>
-                  <select
+                  <select required
                     className="browser-default custom-select"
                     name="allowance"
                     onChange={handleClick}
