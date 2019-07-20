@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { fetchLoggedUser } from '../../redux/actions/user'
 import AllowanceContainer from '../AllowanceContainer/index'
 import Home from '../HomeContainer/index'
-import ObraSocialContainer from '../ObraSocialContainer/index'
+import HealthCareContainer from '../healthCareContainer/index'
 import LoginContainer from "../LoginContainer";
 import AllowancesListContainer from "../AllowancesListContainer/index";
 import NavbarContainer from "../NavBarContainer/"
@@ -46,7 +46,7 @@ class MainContainer extends React.Component {
                 <Route exact path="/allowance/:name" component={AllowanceContainer}/>
                 <Route exact path="/login/expired" component={UpdatePassContainer}/>
                 <Route exact path="/admin/panel" component={AllowancesListContainer}/> 
-                <Route exact path="/health-care" component={ObraSocialContainer }/>} 
+                <Route exact path="/health-care" component={HealthCareContainer }/>} 
                 <Route exact path="/discipline-event/new" component={DisciplineEvent}/> 
                 <Route exact path="/profile" component={ProfileContainer}/> 
 

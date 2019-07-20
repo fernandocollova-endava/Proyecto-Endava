@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MDBNavbar, MDBIcon, MDBNavbarBrand, MDBNavbarToggler } from "mdbreact";
+import { MDBNavbar, MDBIcon, MDBNavbarBrand, MDBNavbarToggler, MDBAnimation } from "mdbreact";
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 import { logout, fetchLoggedUser } from "../../redux/actions/user"
@@ -48,18 +48,24 @@ class Navbar extends Component {
           </Link>
         </MDBNavbarBrand>
         <MDBNavbarToggler right onClick={() => this.openNavbar()}>
-          <img src={`/assets/img/profile/${this.props.user.avatar}`} class="float-left imgProfileNav" alt="Avatar profile"></img>
-          <MDBIcon icon="bars" size="2x" />
+          <MDBAnimation type="flipInY">
+            <img src={`/assets/img/profile/${this.props.user.avatar}`} className="float-left imgProfileNav" alt="Avatar profile"></img>
+            <MDBIcon icon="bars" size="2x" />
+          </MDBAnimation>
         </MDBNavbarToggler>
         <div id="sideNavigation" style={({ width: (this.props.navWidth) ? 300 : 0 })} className="upperCaseFonts sidenav">
-          <Link className="closebtn" onClick={() => this.closeCollapse()}> &times; </Link>
+          <span className="nameFontSidebar">
+            Welcome <br />
+            <i className="fas fa-heart"> </i> {this.props.user.name}
+          </span>
+          <span className="closebtn" onClick={() => this.closeCollapse()}> &times; </span>
           <hr />
           <Link className={`item ${(location == "/") && "itemActive"}`} to="/" onClick={() => this.closeCollapse()}> Home </Link>
           <Link className={`item ${(location == "/profile") && "itemActive"}`} to="/profile" onClick={() => this.closeCollapse()}> Profile </Link>
           <Link className={`item ${(location == "/allowance/search") && "itemActive"}`} to="/allowance/search" onClick={() => this.closeCollapse()}> My Allowances </Link>
           <Link className={`item ${(location == "/discipline-event/new") && "itemActive"}`} to="/discipline-event/new" onClick={() => this.closeCollapse()}> Discipline Event </Link>
           <Link className={`item ${(location == "/health-care") && "itemActive"}`} to="/health-care" onClick={() => this.closeCollapse()}> Health care </Link>
-          <Link className="item" onClick={this.handleLogOut}> Logout </Link>
+          <span className="item" onClick={this.handleLogOut}> Logout </span>
           {this.props.user.isAdmin == true ?
             <Link className={`item ${(location == "/admin/panel") && "itemActive"}`} to="/admin/panel" onClick={() => this.closeCollapse()}> Admin Panel </Link>
             : null

@@ -84,7 +84,7 @@ export const fetchAllowanceActive = (id) => dispatch => {
   return axios
     .get(`/api/allowance/findActive/${id}`)
     .then(activeAllowances => {
-      dispatch(receiveActiveAllowances(activeAllowances.data));
+     return dispatch(receiveActiveAllowances(activeAllowances.data));
     });
 };
 

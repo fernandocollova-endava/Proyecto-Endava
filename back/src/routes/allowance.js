@@ -184,7 +184,7 @@ Router.get("/findActive/:id", function (req, res) {
       {
         model: Employee,
         as: "employeeDetail",
-        attributes: ['name'],
+        attributes: ['name','id'],
       }
     ]
   }).then(allowanceList => {

@@ -124,7 +124,7 @@ class AllowanceContainer extends React.Component {
           textMsj={this.state.textMsj}
           titleMsj={this.state.titleMsj}
         />
-
+        <h3 className="upperCaseFonts marginTextLeft" >Manage your {this.props.nameUrl} allowance.</h3>
         {/* FORMULARIO  */}
         <MDBRow className="container-banner">
           <MDBCol md="1">
