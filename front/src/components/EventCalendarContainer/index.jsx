@@ -1,31 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
-import {
-  createDisciplineEvents,
-  fetchDisciplineEvents,
-  fetchTechonogies
-} from "../../redux/actions/disciplineEvents";
-import DisciplineEvent from "../DisciplineEventContainer/disciplineEvents";
+import {fetchDisciplineEvents} from "../../redux/actions/disciplineEvents";
+import EventCalendar from "../EventCalendarContainer/eventCalendar";
 import ModalAviso from "../ModalContainer/modalAviso";
 
 class DisciplineEventContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      topic: "",
-      observation: "",
-      date: "",
-      time: "",
-      techName: "",
       eventList: [],
       modal: false,
       textMsj: "",
       titleMsj: "",
-
     };
 
-    this.onFormSubmit = this.onFormSubmit.bind(this);
-    this.onChange = this.onChange.bind(this);
     this.onClick = this.onClick.bind(this)
     this.onKeyDown = this.onKeyDown.bind(this);
     this.toggle = this.toggle.bind(this);
@@ -33,29 +21,12 @@ class DisciplineEventContainer extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchDisciplineEvents(this.props.user.id);
-    this.props.fetchTechonogies();
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.eventList.length != this.props.eventList.length) {
       this.props.fetchDisciplineEvents(this.props.user.id);
     }
-  }
-
-  onFormSubmit(e) {
-    e.preventDefault();
-    this.props
-      .createDisciplineEvents(this.state, this.props.user)
-      .then(() => 
-        {
-          this.setState({
-            modal: true,
-            textMsj: "The event has been successfully sent",
-            titleMsj: "Success"
-          })
-          this.props.fetchDisciplineEvents(this.props.user.id)
-        }
-      );
   }
   onClick(e) {
     this.setState({
@@ -71,16 +42,6 @@ class DisciplineEventContainer extends React.Component {
       });
     }
   }
-  onChange(e) {
-    let data =
-      (e.target.name === 'time' && (e.target.value).length == 2) ?
-        e.target.value + ':'
-        : e.target.value
-    
-    this.setState({
-      [e.target.name]: data
-    });
-  }
   // TOGGLE de MODAL
   toggle() {
     this.setState({
@@ -90,13 +51,11 @@ class DisciplineEventContainer extends React.Component {
   render() {
     return (
       <div>
-        <DisciplineEvent
-          onChange={this.onChange}
-          onFormSubmit={this.onFormSubmit}
+        {console.log("soy eventList",this.props.eventList)}
+        {/* <h2>holaaaaaaaaaaaa</h2> */}
+        <EventCalendar
           eventList={this.props.eventList}
-          techList={this.props.techList}
           handleClick={this.onClick}
-          clockValue={this.state.time}
           onKeyDown={this.onKeyDown}
         />
         <ModalAviso
@@ -122,10 +81,8 @@ const mapStateToProps = (state, owner) => {
 
 const MapDispatchToProps = dispatch => {
   return {
-    createDisciplineEvents: (data, user) =>
-      dispatch(createDisciplineEvents(data, user)),
     fetchDisciplineEvents: user => dispatch(fetchDisciplineEvents(user)),
-    fetchTechonogies: () => dispatch(fetchTechonogies())
+  
   };
 };
 

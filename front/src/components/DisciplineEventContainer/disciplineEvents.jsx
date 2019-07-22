@@ -69,7 +69,7 @@ export default function DisciplineEvent({
                   <p className="h4 text-center py-4">Send us your topic</p>
                   <select required
                     className="browser-default custom-select"
-                    name="allowance"
+                    name="techName"
                     onChange={handleClick}
                   >
                     <option>Choose your Technologie...</option>

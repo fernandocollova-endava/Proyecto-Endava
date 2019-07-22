@@ -42,4 +42,8 @@
     .HideMobile {
         display: none;
     }
+    .timeline__year{
+        margin-bottom: 50px
+    
+      }
 }
