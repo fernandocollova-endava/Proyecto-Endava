@@ -13,7 +13,7 @@ import {
   MDBTableBody
 } from "mdbreact";
 
-// import ModalAviso from "../ModalContainer/modalAviso";
+
 import { columnsEvents } from "../../auxFunctions/auxFunctions";
 
 export default function DisciplineEvent({
@@ -21,14 +21,16 @@ export default function DisciplineEvent({
   onChange,
   eventList,
   handleClick,
-  techList
+  techList,
+  clockValue,
+  onKeyDown
 }) {
   return (
     <>
       {/* {evenList && console.log("soy las events", evenList)} */}
       <MDBRow className="container-banner">
-        <MDBCol md="1" />
-        <MDBCol md="10">
+
+        <MDBCol md="9">
           <h1 className="upperCaseFonts">
             Share your knowledge and empower your professional activity.
           </h1>
@@ -47,9 +49,15 @@ export default function DisciplineEvent({
             </p>
           </MDBAnimation>
         </MDBCol>
-        <MDBCol md="1" />
+        <MDBCol md="3">
+          <MDBAnimation type="fadeInDown">
+            <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Increasing-Efficiency-through-Digital-Evolution/480.ashx" width="100%" />
+          </MDBAnimation>
+        </MDBCol>
+
       </MDBRow>
       <hr />
+
       {/* FORMULARIO  */}
       <MDBRow className="container-banner">
         <MDBCol md="1" />
@@ -59,7 +67,7 @@ export default function DisciplineEvent({
               <MDBCardBody>
                 <form onSubmit={onFormSubmit}>
                   <p className="h4 text-center py-4">Send us your topic</p>
-                  <select
+                  <select required
                     className="browser-default custom-select"
                     name="allowance"
                     onChange={handleClick}
@@ -71,10 +79,10 @@ export default function DisciplineEvent({
                           {tech.name}
                         </option>
                       ))}
-                      <option value="Otros">Otros...</option>
+                    <option value="Otros">Other...</option>
                   </select>
 
-                  <div className="grey-text">
+                  <div className="grey-text" >
                     <MDBInput
                       label="Event name"
                       icon="book"
@@ -98,12 +106,14 @@ export default function DisciplineEvent({
                     <MDBInput
                       icon="clock"
                       group
-                      type="time"
+                      type="text"
+                      autoComplete="off"
+                      label="Time HH:MM (16:20)"
+                      value={clockValue}
                       name="time"
-                      max="19:30:00"
-                      min="10:00:00"
-                      step="10"
+                      onKeyDown={onKeyDown}
                       onChange={onChange}
+                      maxLength={5}
                       required
                     />
                     <MDBInput
@@ -120,8 +130,7 @@ export default function DisciplineEvent({
                       success="right"
                     />
                   </div>
-                  <br />
-                  <br />
+
                   <div className="text-center py-4 mt-3">
                     <MDBBtn
                       color="light-blue"
@@ -137,7 +146,7 @@ export default function DisciplineEvent({
           </MDBAnimation>
         </MDBCol>
 
-        <MDBCol md="6">
+        <MDBCol md="7">
           {/* FORMULARIO  */}
 
           <MDBAnimation type="fadeInUp">
@@ -147,11 +156,30 @@ export default function DisciplineEvent({
                 <br />
               </label>
             ) : (
-              <MDBTable btn fixed responsive>
-                <MDBTableHead columns={columnsEvents} />
-                <MDBTableBody className="eventFont" rows={eventList} />
-              </MDBTable>
-            )}
+                <div className="table-responsive">
+                  <table className="table btn-table table-fixed">
+                    <thead>
+                      <tr>
+                        <th style={({width:240})}>Topic</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {eventList && eventList.map((item, i) => (
+                        <tr style={({ height: 32 })} key={i}>
+                          <td className="upperCaseFonts">{item.topic}</td>
+                          <td className={`${item.status} whiteBorder`}>{item.status}</td>
+                          <td>{item.date}</td>
+                          <td>{item.time}</td>
+                        </tr>
+                      ))}
+
+                    </tbody>
+                  </table>
+                </div>
+              )}
           </MDBAnimation>
         </MDBCol>
         <MDBCol md="1" />

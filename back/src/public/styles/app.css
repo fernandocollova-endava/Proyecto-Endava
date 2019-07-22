@@ -122,6 +122,10 @@ table.table td {
 .greenColor:hover {
   color: #16cc40
 }
+.iconAvatar {
+  font-size: 22px;
+  margin-right: 7px;
+}
 /* TABLA  */
 /* ========================================== */
 table.table th {
@@ -136,6 +140,9 @@ table.table td {
 }
 .widthTable {
   width: 95%
+}
+.whiteBorder{
+  border: 1px solid white !important
 }
 /* GENERAL  */
 /* ========================================== */
@@ -202,7 +209,7 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
     border-radius: 5px !important;
 }
 
-.aproved {
+.approved {
   background-color: #0AC3E6 !important;
     color: white;
     text-transform: uppercase;
@@ -366,7 +373,7 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
   /* ========================================= */
   .Card-Img {
     z-index: -2;
-    min-height: 300px;
+    min-height: 396px;
   }
   .ajustImg {
     min-height: 188px;
@@ -430,66 +437,15 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
     -ms-transform: translate(0px, -30px) scale(0.5);
     border-radius: 50%;
   }
-
-  /* RADIO BUTTONS */
-
-.modalForm h2 {
-    font-size: 16px;
-    color: #c31900;
-    margin-bottom: 20px;
-    margin-left: 20px;
+.radioBoton {
+  margin-bottom: 28px;
+  font-size: 18px;
+  margin-left: 10px;
+  cursor:pointer
 }
-
-.modalForm > div {
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc;
+.whiteFont {
+  color:white !important;
 }
-
-.modalForm label {
-    display: inline-block;
-    cursor: pointer;
-    color: #c31900;
-    position: relative;
-    padding: 5px 15px 5px 37px;
-    font-size: 1em;
-    border-radius: 5px;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+.whiteFont:hover {
+  color:white !important;
 }
-
-.modalForm label:hover {
-    background: rgba(0, 116, 217, 0.1);
-}
-
-.modalForm label:before {
-    content: "";
-    display: inline-block;
-    width: 17px;
-    height: 17px;
-    position: absolute;
-    left: 15px;
-    border-radius: 50%;
-    background: none;
-    border: 3px solid #c31903;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: roboto_condensedbold,Arial,sans-serif;
-
-}
-
-.modalForm input[type="radio"] {
-    display: none;
-}
-
-.modalForm input[type="radio"]:checked + label:before {
-    display: none;
-}
-
-.modalForm input[type="radio"]:checked + label {
-    padding: 5px 15px;
-    background: #c31900;
-    border-radius: 5px;
-    color: #fff;
-}
- 

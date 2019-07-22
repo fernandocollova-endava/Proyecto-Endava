@@ -11,7 +11,9 @@ export default function allowanceList({
   adminAllowances,
   handleClick,
   handleFilterStatus,
-  alertPending
+  alertPending,
+  allowanceType,
+  allowanceStatus
 }) {
   return (
     <>
@@ -24,19 +26,19 @@ export default function allowanceList({
           <MDBCol md="5">
             <MDBFormInline className="md-form">
               <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp;
-              <select className="browser-default custom-select" name="allowance" onChange={handleClick}>
-                <option>Choose your allowance...</option>
+              <select value={allowanceType} className="browser-default custom-select" name="allowance" onChange={handleClick}>
+                <option value="">Choose your allowance...</option>
                 <option value="">All</option>
                 {adminAllowances &&
                   adminAllowances.map(item => (
                     <option className="capitalizeName" key={item.id} value={item.id}>{item.name}</option>
                   ))}
               </select>
-              <select className="browser-default custom-select" name="status" onChange={handleFilterStatus}>
-                <option>Status...</option>
+              <select  value={allowanceStatus} className="browser-default custom-select" name="status" onChange={handleFilterStatus}>
+                <option value="">Status...</option>
                 <option value="">All</option>
                 <option value="pending">Pending</option>
-                <option value="aproved">Aproved</option>
+                <option value="approved">Approved</option>
                 <option value="rejected">Rejected</option>                
               </select>
             </MDBFormInline>
@@ -78,7 +80,6 @@ export default function allowanceList({
                 </MDBTable>}
             </MDBAnimation>
           </MDBCol>
-          
         </MDBRow>
       </div>
     </>

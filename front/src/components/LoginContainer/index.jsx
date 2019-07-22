@@ -109,10 +109,12 @@ class LoginContainer extends React.Component {
           titleMsj={this.state.titleMsj}
         />
         <div className="imageLogin">
-          <br />
-          <br />
-          <br />
-          <br />
+            <br />
+          <div className="HideMobile">
+            <br />
+            <br />
+            <br />
+          </div>
           <Login
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}

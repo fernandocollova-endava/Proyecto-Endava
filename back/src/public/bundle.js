@@ -2513,7 +2513,7 @@ module.exports = exports['default'];
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n/* GENERAL  */\n/* ========================================== */\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.aproved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 300px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n\n  /* RADIO BUTTONS */\n\n.modalForm h2 {\n    font-size: 16px;\n    color: #c31900;\n    margin-bottom: 20px;\n    margin-left: 20px;\n}\n\n.modalForm > div {\n    padding: 20px 0;\n    border-bottom: 1px solid #ccc;\n}\n\n.modalForm label {\n    display: inline-block;\n    cursor: pointer;\n    color: #c31900;\n    position: relative;\n    padding: 5px 15px 5px 37px;\n    font-size: 1em;\n    border-radius: 5px;\n    -webkit-transition: all .3s ease;\n    -o-transition: all .3s ease;\n    transition: all .3s ease;\n}\n\n.modalForm label:hover {\n    background: rgba(0, 116, 217, 0.1);\n}\n\n.modalForm label:before {\n    content: \"\";\n    display: inline-block;\n    width: 17px;\n    height: 17px;\n    position: absolute;\n    left: 15px;\n    border-radius: 50%;\n    background: none;\n    border: 3px solid #c31903;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n\n}\n\n.modalForm input[type=\"radio\"] {\n    display: none;\n}\n\n.modalForm input[type=\"radio\"]:checked + label:before {\n    display: none;\n}\n\n.modalForm input[type=\"radio\"]:checked + label {\n    padding: 5px 15px;\n    background: #c31900;\n    border-radius: 5px;\n    color: #fff;\n}\n ", ""]);
+exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}", ""]);
 
 
 /***/ }),
@@ -2541,7 +2541,7 @@ exports.push([module.i, "/* https://careers.endava.com/Design/styles/webfonts/ *
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height: 100%; /* 100% Full-height */\n    width: 0; /* 0 width - change this with JavaScript */\n    position: fixed; /* Stay in place */\n    z-index: 100000; /* Stay on top */\n    top: 0;\n    right: 0;\n    background-color: #de411b;\n    overflow-x: hidden; /* Disable horizontal scroll */\n    padding-top: 60px; /* Place content 60px from the top */\n    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */\n}\n \n/* The navigation menu links */\n.sidenav a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s\n}\n \n/* When you mouse over the navigation links, change their color */\n.sidenav a:hover, .offcanvas a:focus{\n    color: #f1f1f1;\n}\n \n/* Position and style the close button (top right corner) */\n.sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n}\n \n\nbody {\n  overflow-x: hidden;\n}\n \n/* Add a black background color to the top navigation */\n.topnav {\n    background-color: #DE411B;\n    overflow: hidden;\n}\n \n/* Style the links inside the navigation bar */\n.topnav a {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n \n/* Change the color of links on hover */\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n \n/* Add a color to the active/current link */\n.topnav a.active {\n    background-color: #4CAF50;\n    color: white;\n}\n\n\n#sideNavigation {\n  padding-bottom: 25px;\n  font-family: robotobold,Arial,sans-serif;\n  font-weight: 400;\n  font-size: 26px;\n  color: #fff;\n}\n.item {\n    color:white\n  }\n\n.item:hover, .itemActive {\n  text-decoration: underline white;\n  opacity: .45; \n  transition: opacity .3s ease-out; \n}\n.imgProfileNav {\n    border-radius: 50%;\n    width: 40px;\n    margin-right: 12px;\n    z-index: 100001;\n    position: relative;\n}", ""]);
+exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height: 100%; /* 100% Full-height */\n    width: 0; /* 0 width - change this with JavaScript */\n    position: fixed; /* Stay in place */\n    z-index: 100000; /* Stay on top */\n    top: 0;\n    right: 0;\n    background-color: #de411b;\n    overflow-x: hidden; /* Disable horizontal scroll */\n    padding-top: 60px; /* Place content 60px from the top */\n    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */\n}\n \n/* The navigation menu links */\n.sidenav a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s\n}\n.sidenav span {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s;\n    cursor:pointer;\n}\n \n/* When you mouse over the navigation links, change their color */\n.sidenav a:hover, .offcanvas a:focus{\n    color: #f1f1f1;\n}\n \n/* Position and style the close button (top right corner) */\n.sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n    cursor:pointer;\n}\n.nameFontSidebar {\n    font-size: 16px !important;\n    top: 9px;\n    left: -16px;\n    position: absolute;\n    color: #f3d3d39c !important\n}\n\nbody {\n  overflow-x: hidden;\n}\n \n/* Add a black background color to the top navigation */\n.topnav {\n    background-color: #DE411B;\n    overflow: hidden;\n}\n \n/* Style the links inside the navigation bar */\n.topnav a {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n.topnav span {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n    cursor:pointer;\n}\n \n/* Change the color of links on hover */\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n\n.topnav span:hover {\n    background-color: #ddd;\n    color: black;\n}\n/* Add a color to the active/current link */\n.topnav a.active {\n    background-color: #4CAF50;\n    color: white;\n}\n\n\n#sideNavigation {\n  padding-bottom: 25px;\n  font-family: robotobold,Arial,sans-serif;\n  font-weight: 400;\n  font-size: 26px;\n  color: #fff;\n}\n.item {\n    color:white\n  }\n\n.item:hover, .itemActive {\n  text-decoration: underline white;\n  opacity: .45; \n  transition: opacity .3s ease-out; \n}\n.imgProfileNav {\n    border-radius: 50%;\n    width: 40px;\n    margin-right: 12px;\n    z-index: 100001;\n    position: relative;\n}", ""]);
 
 
 /***/ }),
@@ -2555,7 +2555,7 @@ exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height:
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n}", ""]);
+exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n    .bannerAllowance{\n        margin-top: -30px;        \n    }\n    .HideMobile {\n        display: none;\n    }\n}", ""]);
 
 
 /***/ }),
@@ -40379,7 +40379,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47785,27 +47785,9 @@ var columnsEvents = [{
   label: 'Time',
   field: 'time'
 }];
-var columnsAllowanceDetail = [{
-  label: 'Date',
-  field: 'paymentDate',
-  sort: 'asc'
-}, {
-  label: 'Amount',
-  field: 'amount'
-}, {
-  label: 'Limit',
-  field: 'limitAmount'
-}, {
-  label: 'Emp. Amount',
-  field: 'employeeAmount'
-}, {
-  label: 'Status',
-  field: 'status'
-}];
 module.exports = {
   columnsAllowance: columnsAllowance,
-  columnsEvents: columnsEvents,
-  columnsAllowanceDetail: columnsAllowanceDetail
+  columnsEvents: columnsEvents
 }; // (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(values.email)
 
 /***/ }),
@@ -48053,7 +48035,9 @@ function (_React$Component) {
         toggle: this.toggle,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBRow"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "upperCaseFonts marginTextLeft"
+      }, "Manage your ", this.props.nameUrl, " allowance."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBRow"], {
         className: "container-banner"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBCol"], {
         md: "1"
@@ -48177,7 +48161,9 @@ function allowanceList(_ref) {
       adminAllowances = _ref.adminAllowances,
       handleClick = _ref.handleClick,
       handleFilterStatus = _ref.handleFilterStatus,
-      alertPending = _ref.alertPending;
+      alertPending = _ref.alertPending,
+      allowanceType = _ref.allowanceType,
+      allowanceStatus = _ref.allowanceStatus;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -48191,10 +48177,13 @@ function allowanceList(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
     icon: "angle-double-right"
   }), " \xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    value: allowanceType,
     className: "browser-default custom-select",
     name: "allowance",
     onChange: handleClick
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Choose your allowance..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: ""
+  }, "Choose your allowance..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: ""
   }, "All"), adminAllowances && adminAllowances.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
@@ -48203,16 +48192,19 @@ function allowanceList(_ref) {
       value: item.id
     }, item.name);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    value: allowanceStatus,
     className: "browser-default custom-select",
     name: "status",
     onChange: handleFilterStatus
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Status..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: ""
+  }, "Status..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: ""
   }, "All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "pending"
   }, "Pending"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "aproved"
-  }, "Aproved"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "approved"
+  }, "Approved"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "rejected"
   }, "Rejected")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "2"
@@ -48365,17 +48357,22 @@ function (_React$Component) {
       var _this3 = this;
 
       if (prevProps.allUser !== this.props.allUser) {
-        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
         this.setState({
-          alertPending: 0
-        }); // Resetea el estado a cero
-        // Si es admin y si esta en la ruta panel consulta la cantidad..
+          alertPending: 0,
+          // Resetea el estado a cero
+          allowanceType: '',
+          // Resetea el select de type
+          allowanceStatus: '' // Resetea el select de Status
+
+        }, function () {
+          _this3.props.fetchAllowances(_this3.props.user.id, _this3.state.allowanceType, _this3.state.allowanceStatus, _this3.props.allUser);
+        }); // Si es admin y si esta en la ruta panel consulta la cantidad..
 
         if (this.props.user.isAdmin && this.props.allUser) {
           this.props.fetchCountPending(this.props.user.id).then(function (count) {
             _this3.setState({
               alertPending: count.data
-            }); // Guarda cantidad de pendientes 
+            }); // Guarda cantidad de pendientes
 
           });
         }
@@ -48405,10 +48402,13 @@ function (_React$Component) {
     value: function viewDetails(id, allowanceId) {
       var _this4 = this;
 
-      this.props.fetchAllowanceActive(id);
-      this.props.fetchAllowanceHistory(this.props.user.id, allowanceId).then(function () {
-        _this4.setState({
-          modal: true
+      this.props.fetchAllowanceActive(id).then(function (data) {
+        var idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
+
+        _this4.props.fetchAllowanceHistory(idUserHistory, allowanceId).then(function () {
+          _this4.setState({
+            modal: true
+          });
         });
       });
     } // TOGGLE MODAL HISTORIAL / DETALLE
@@ -48537,6 +48537,8 @@ function (_React$Component) {
         handleClick: this.handleClick,
         handleFilterStatus: this.handleFilterStatus,
         allowanceList: val,
+        allowanceType: this.state.allowanceType,
+        allowanceStatus: this.state.allowanceStatus,
         adminAllowances: this.props.adminAllowances
       }));
     }
@@ -48610,7 +48612,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
 /* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__);
 
- // import ModalAviso from "../ModalContainer/modalAviso";
 
 
 function DisciplineEvent(_ref) {
@@ -48618,13 +48619,13 @@ function DisciplineEvent(_ref) {
       onChange = _ref.onChange,
       eventList = _ref.eventList,
       handleClick = _ref.handleClick,
-      techList = _ref.techList;
+      techList = _ref.techList,
+      clockValue = _ref.clockValue,
+      onKeyDown = _ref.onKeyDown;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "1"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "10"
+    md: "9"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "upperCaseFonts"
   }, "Share your knowledge and empower your professional activity."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
@@ -48632,8 +48633,13 @@ function DisciplineEvent(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "TextParrafo"
   }, "We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world\u2019s largest banks and payments companies. Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe. Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "1"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+    md: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInDown"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Increasing-Efficiency-through-Digital-Evolution/480.ashx",
+    width: "100%"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "1"
@@ -48646,6 +48652,7 @@ function DisciplineEvent(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "h4 text-center py-4"
   }, "Send us your topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    required: true,
     className: "browser-default custom-select",
     name: "allowance",
     onChange: handleClick
@@ -48656,7 +48663,7 @@ function DisciplineEvent(_ref) {
     }, tech.name);
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "Otros"
-  }, "Otros...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Other...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grey-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
     label: "Event name",
@@ -48679,12 +48686,14 @@ function DisciplineEvent(_ref) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
     icon: "clock",
     group: true,
-    type: "time",
+    type: "text",
+    autoComplete: "off",
+    label: "Time HH:MM (16:20)",
+    value: clockValue,
     name: "time",
-    max: "19:30:00",
-    min: "10:00:00",
-    step: "10",
+    onKeyDown: onKeyDown,
     onChange: onChange,
+    maxLength: 5,
     required: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
     label: "Description...",
@@ -48698,7 +48707,7 @@ function DisciplineEvent(_ref) {
     validate: true,
     error: "wrong",
     success: "right"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center py-4 mt-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     color: "light-blue",
@@ -48707,19 +48716,29 @@ function DisciplineEvent(_ref) {
   }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
     icon: "angle-right"
   })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "6"
+    md: "7"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
-  }, !eventList.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there are no results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
-    btn: true,
-    fixed: true,
-    responsive: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableHead"], {
-    columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__["columnsEvents"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableBody"], {
-    className: "eventFont",
-    rows: eventList
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, !eventList.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there are no results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    className: "table btn-table table-fixed"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+    style: {
+      width: 240
+    }
+  }, "Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Time"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, eventList && eventList.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      style: {
+        height: 32
+      },
+      key: i
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, item.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "".concat(item.status, " whiteBorder")
+    }, item.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.time));
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "1"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
 }
@@ -48784,11 +48803,16 @@ function (_React$Component) {
       date: "",
       time: "",
       techName: "",
-      eventList: []
+      eventList: [],
+      modal: false,
+      textMsj: "",
+      titleMsj: ""
     };
     _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
     _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
     _this.onClick = _this.onClick.bind(_assertThisInitialized(_this));
+    _this.onKeyDown = _this.onKeyDown.bind(_assertThisInitialized(_this));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -48813,7 +48837,13 @@ function (_React$Component) {
 
       e.preventDefault();
       this.props.createDisciplineEvents(this.state, this.props.user).then(function () {
-        return _this2.props.fetchDisciplineEvents(_this2.props.user.id);
+        _this2.setState({
+          modal: true,
+          textMsj: "The event has been successfully sent",
+          titleMsj: "Success"
+        });
+
+        _this2.props.fetchDisciplineEvents(_this2.props.user.id);
       });
     }
   }, {
@@ -48824,9 +48854,29 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "onKeyDown",
+    value: function onKeyDown(e) {
+      var text = this.state.time;
+
+      if (e.keyCode === 8 && text[text.length - 1] == ':') {
+        this.setState({
+          time: text.slice(0, -1)
+        });
+      }
+    }
+  }, {
     key: "onChange",
     value: function onChange(e) {
-      this.setState(_defineProperty({}, e.target.name, e.target.value));
+      var data = e.target.name === 'time' && e.target.value.length == 2 ? e.target.value + ':' : e.target.value;
+      this.setState(_defineProperty({}, e.target.name, data));
+    } // TOGGLE de MODAL
+
+  }, {
+    key: "toggle",
+    value: function toggle() {
+      this.setState({
+        modal: !this.state.modal
+      });
     }
   }, {
     key: "render",
@@ -48836,7 +48886,14 @@ function (_React$Component) {
         onFormSubmit: this.onFormSubmit,
         eventList: this.props.eventList,
         techList: this.props.techList,
-        handleClick: this.onClick
+        handleClick: this.onClick,
+        clockValue: this.state.time,
+        onKeyDown: this.onKeyDown
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        modal: this.state.modal,
+        toggle: this.toggle,
+        textMsj: this.state.textMsj,
+        titleMsj: this.state.titleMsj
       }));
     }
   }]);
@@ -48916,6 +48973,54 @@ var FooterPage = function FooterPage() {
 
 /***/ }),
 
+/***/ "./src/components/HomeContainer/CarouselPage.jsx":
+/*!*******************************************************!*\
+  !*** ./src/components/HomeContainer/CarouselPage.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+
+var CarouselPage = function CarouselPage() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCarousel"], {
+    activeItem: 1,
+    length: 3,
+    showControls: false,
+    showIndicators: false,
+    className: "z-depth-1 bannerAllowance",
+    interval: 6000
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCarouselInner"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCarouselItem"], {
+    itemId: "1"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBView"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "d-block w-100",
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/Be-Connected/FinalImages/InnerComunities/Hero_Desktop_ICTHub.ashx",
+    alt: "First slide"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCarouselItem"], {
+    itemId: "2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBView"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "d-block w-100",
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Automation/Automation_Hero-Desktop-1_1920x650.ashx",
+    alt: "Second slide"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCarouselItem"], {
+    itemId: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBView"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "d-block w-100",
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Industries/RetailTrends/Landing_page_1_Hero_Desktop_1920x650.ashx",
+    alt: "Third slide"
+  })))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CarouselPage);
+
+/***/ }),
+
 /***/ "./src/components/HomeContainer/home.jsx":
 /*!***********************************************!*\
   !*** ./src/components/HomeContainer/home.jsx ***!
@@ -48929,6 +49034,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var _CarouselPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CarouselPage */ "./src/components/HomeContainer/CarouselPage.jsx");
+
 
 
 
@@ -48937,11 +49044,7 @@ var AnimationPage = function AnimationPage(_ref) {
   var cardList = _ref.cardList;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/Be-Connected/FinalImages/InnerComunities/Hero_Desktop_ICTHub.ashx",
-    className: "img-fluid bannerAllowance",
-    alt: "Imagen endava"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CarouselPage__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "1"
@@ -48967,7 +49070,8 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "container-banner marginDemo"
   }, cardList && cardList.map(function (card, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
-      md: "3"
+      md: "3",
+      key: i
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
       delay: "".concat(i * 100, "ms"),
       type: "fadeInLeftBig"
@@ -49274,7 +49378,9 @@ function (_React$Component) {
         titleMsj: this.state.titleMsj
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "imageLogin"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_login__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "HideMobile"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_login__WEBPACK_IMPORTED_MODULE_2__["default"], {
         handleChange: this.handleChange,
         handleSubmit: this.handleSubmit,
         onChangeRemember: this.onChangeRemember,
@@ -49403,7 +49509,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
 /* harmony import */ var _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../AllowanceContainer/index */ "./src/components/AllowanceContainer/index.jsx");
 /* harmony import */ var _HomeContainer_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../HomeContainer/index */ "./src/components/HomeContainer/index.jsx");
-/* harmony import */ var _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ObraSocialContainer/index */ "./src/components/ObraSocialContainer/index.jsx");
+/* harmony import */ var _healthCareContainer_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../healthCareContainer/index */ "./src/components/healthCareContainer/index.jsx");
 /* harmony import */ var _LoginContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../LoginContainer */ "./src/components/LoginContainer/index.jsx");
 /* harmony import */ var _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AllowancesListContainer/index */ "./src/components/AllowancesListContainer/index.jsx");
 /* harmony import */ var _NavBarContainer___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../NavBarContainer/ */ "./src/components/NavBarContainer/index.jsx");
@@ -49500,7 +49606,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/health-care",
-        component: _ObraSocialContainer_index__WEBPACK_IMPORTED_MODULE_6__["default"]
+        component: _healthCareContainer_index__WEBPACK_IMPORTED_MODULE_6__["default"]
       }), "}", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/discipline-event/new",
@@ -49647,9 +49753,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__);
-
 
 
 function ModalDetails(_ref) {
@@ -49680,7 +49783,7 @@ function ModalDetails(_ref) {
     },
     role: "tab"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "far fa-list-alt"
+    className: "far fa-list-alt"
   }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "DETAILS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
     to: "#",
     className: activeItem === "2" ? "active" : "",
@@ -49689,7 +49792,7 @@ function ModalDetails(_ref) {
     },
     role: "tab"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fas fa-history"
+    className: "fas fa-history"
   }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "HISTORY"))), allUser && // Si 
   react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
     to: "#",
@@ -49699,13 +49802,13 @@ function ModalDetails(_ref) {
     },
     role: "tab"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fas fa-user-edit"
+    className: "fas fa-user-edit"
   }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "ADMIN")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
     activeItem: activeItem
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
     tabId: "1",
     role: "tabpanel"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mt-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
@@ -49748,22 +49851,27 @@ function ModalDetails(_ref) {
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
     tabId: "2",
     role: "tabpanel"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mt-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
-    btn: true,
-    fixed: true,
-    responsive: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableHead"], {
-    columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__["columnsAllowanceDetail"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableBody"], {
-    rows: history
-  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    className: "table btn-table table-fixed"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, history && history.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      style: {
+        height: 32
+      },
+      key: i
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: item.status
+    }, item.status));
+  }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
     tabId: "3",
     role: "tabpanel"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mt-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Please select the state to modify: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "User: ", activeAllowance.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: handleSaveConfirm
@@ -49773,34 +49881,28 @@ function ModalDetails(_ref) {
     value: activeAllowance.id
   }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     action: "",
-    "class": "modalForm"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "radio"
+    className: "modalForm"
+  }, activeAllowance.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "radio"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "approved radioBoton"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
-    defaultChecked: activeAllowance.status === 'aproved',
+    defaultChecked: activeAllowance.status === 'approved',
     name: "status",
-    value: "aproved",
-    id: "aproved"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "aproved"
-  }, "APROVED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    value: "approved"
+  }), "\xA0APPROVED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "rejected radioBoton"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     defaultChecked: activeAllowance.status === 'rejected',
     name: "status",
-    value: "rejected",
-    id: "rejected"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "rejected"
-  }, "REJECTED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "radio",
-    defaultChecked: activeAllowance.status === 'pending',
-    name: "status",
-    value: "pending",
-    id: "pending"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "pending"
-  }, "PENDING"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    value: "rejected"
+  }), "\xA0REJECTED")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm ".concat(activeAllowance.status)
+  }, activeAllowance.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group",
     style: {
       marginTop: -20
@@ -49821,12 +49923,12 @@ function ModalDetails(_ref) {
     className: "form-control",
     placeholder: "Observation...",
     "aria-describedby": "basic-addon"
-  })), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  })), activeAllowance.status === 'pending' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "mb-3 btnEv-blue rounded mb-0 border-0"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fas fa-edit"
-  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    className: "fas fa-edit"
+  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave)))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     className: "mb-3 btnEv-red rounded mb-0 border-0",
     onClick: toggleDetails
   }, "Close"))));
@@ -50004,20 +50106,28 @@ function (_Component) {
         onClick: function onClick() {
           return _this3.openNavbar();
         }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+        type: "flipInY"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/assets/img/profile/".concat(this.props.user.avatar),
-        "class": "float-left imgProfileNav",
+        className: "float-left imgProfileNav",
         alt: "Avatar profile"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
         icon: "bars",
         size: "2x"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "sideNavigation",
         style: {
           width: this.props.navWidth ? 300 : 0
         },
         className: "upperCaseFonts sidenav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "nameFontSidebar"
+      }, "Welcome ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.props.user.isAdmin ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-user-tie iconAvatar"
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "far fa-user iconAvatar"
+      }), this.props.user.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "closebtn",
         onClick: function onClick() {
           return _this3.closeCollapse();
@@ -50052,7 +50162,7 @@ function (_Component) {
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Health care "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      }, " Health care "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "item",
         onClick: this.handleLogOut
       }, " Logout "), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
@@ -50091,231 +50201,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Navbar));
-
-/***/ }),
-
-/***/ "./src/components/ObraSocialContainer/index.jsx":
-/*!******************************************************!*\
-  !*** ./src/components/ObraSocialContainer/index.jsx ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _obraSocial__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./obraSocial */ "./src/components/ObraSocialContainer/obraSocial.jsx");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-
-var ObraSocialContainer =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(ObraSocialContainer, _React$Component);
-
-  function ObraSocialContainer() {
-    var _this;
-
-    _classCallCheck(this, ObraSocialContainer);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ObraSocialContainer).call(this));
-    _this.state = {
-      collapseID: ""
-    };
-    _this.toggleCollapse = _this.toggleCollapse.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(ObraSocialContainer, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      window.scrollTo(0, 0);
-      this.props.openCloseNavBar(false);
-    }
-  }, {
-    key: "toggleCollapse",
-    value: function toggleCollapse(collapseID) {
-      this.setState(function (prevState) {
-        return {
-          collapseID: prevState.collapseID !== collapseID ? collapseID : ""
-        };
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_obraSocial__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        toggleCollapse: this.toggleCollapse,
-        collapseID: this.state.collapseID,
-        user: this.props.user,
-        email: this.props.email
-      });
-    }
-  }]);
-
-  return ObraSocialContainer;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_2__["openCloseNavBar"])(val));
-    }
-  };
-};
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    user: "".concat(state.user.user.name, " ").concat(state.user.user.surname),
-    email: state.user.user.email
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(ObraSocialContainer));
-
-/***/ }),
-
-/***/ "./src/components/ObraSocialContainer/obraSocial.jsx":
-/*!***********************************************************!*\
-  !*** ./src/components/ObraSocialContainer/obraSocial.jsx ***!
-  \***********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return obraSocial; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-
-
-function obraSocial(_ref) {
-  var toggleCollapse = _ref.toggleCollapse,
-      collapseID = _ref.collapseID,
-      user = _ref.user,
-      email = _ref.email;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
-    fluid: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "upperCaseFonts"
-  }, "Find a health care plan built specially for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "marginTextLeft"
-  }, " Have the solutions on hand to manager health priorities. A health plan made for you and your requirements. "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "1"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardImage"], {
-    className: "img-fluid img-fluid z-depth-2",
-    src: "https://www.telediariodigital.net/wp-content/uploads/2013/10/OSDE.jpg",
-    waves: true
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardTitle"], null, "OSDE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], null, "Some quick example text to build on the card title and make up the bulk of the card's content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    onClick: function onClick() {
-      return toggleCollapse("leftCollapse");
-    }
-  }, "More..")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardImage"], {
-    className: "img-fluid img-fluid z-depth-1",
-    src: "https://www.gmkfreelogos.com/logos/S/img/swiss_medical.gif",
-    waves: true
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardTitle"], null, "SWISS MEDICAL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], null, "Some quick example text to build on the card title and make."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    onClick: function onClick() {
-      return toggleCollapse("rightCollapse");
-    }
-  }, "More..")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "1"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCollapse"], {
-    id: "leftCollapse",
-    isOpen: collapseID
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCollapse"], {
-    id: "rightCollapse",
-    isOpen: collapseID
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "hola Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    onClick: function onClick() {
-      return toggleCollapse("sendForm");
-    },
-    style: {
-      marginBottom: "1rem"
-    },
-    className: "mb-3 btnEv-red rounded mb-0 border-0"
-  }, "Send form")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCollapse"], {
-    id: "sendForm",
-    isOpen: collapseID
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "h5 text-center mb-4"
-  }, "Write to us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grey-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    readOnly: true,
-    label: "Your name",
-    icon: "user",
-    group: true,
-    type: "text",
-    value: user,
-    error: "wrong",
-    success: "right"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    readOnly: true,
-    label: "Your email",
-    icon: "envelope",
-    group: true,
-    type: "email",
-    value: email,
-    error: "wrong",
-    success: "right"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    type: "textarea",
-    rows: "2",
-    label: "Your message",
-    icon: "pencil-alt"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-center"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    outline: true,
-    className: "mb-3 btnEv-blue rounded mb-0 border-0",
-    style: {
-      color: "white"
-    }
-  }, "Send")))))))));
-}
 
 /***/ }),
 
@@ -50731,6 +50616,232 @@ function updatePass(_ref) {
 
 /***/ }),
 
+/***/ "./src/components/healthCareContainer/index.jsx":
+/*!******************************************************!*\
+  !*** ./src/components/healthCareContainer/index.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _obraSocial__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./obraSocial */ "./src/components/healthCareContainer/obraSocial.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+var ObraSocialContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ObraSocialContainer, _React$Component);
+
+  function ObraSocialContainer() {
+    var _this;
+
+    _classCallCheck(this, ObraSocialContainer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ObraSocialContainer).call(this));
+    _this.state = {
+      collapseID: ""
+    };
+    _this.toggleCollapse = _this.toggleCollapse.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(ObraSocialContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+      this.props.openCloseNavBar(false);
+    }
+  }, {
+    key: "toggleCollapse",
+    value: function toggleCollapse(collapseID) {
+      this.setState(function (prevState) {
+        return {
+          collapseID: prevState.collapseID !== collapseID ? collapseID : ""
+        };
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_obraSocial__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        toggleCollapse: this.toggleCollapse,
+        collapseID: this.state.collapseID,
+        user: this.props.user,
+        email: this.props.email
+      });
+    }
+  }]);
+
+  return ObraSocialContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_2__["openCloseNavBar"])(val));
+    }
+  };
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    user: "".concat(state.user.user.name, " ").concat(state.user.user.surname),
+    email: state.user.user.email
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(ObraSocialContainer));
+
+/***/ }),
+
+/***/ "./src/components/healthCareContainer/obraSocial.jsx":
+/*!***********************************************************!*\
+  !*** ./src/components/healthCareContainer/obraSocial.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return obraSocial; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+function obraSocial(_ref) {
+  var toggleCollapse = _ref.toggleCollapse,
+      collapseID = _ref.collapseID,
+      email = _ref.email;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
+    fluid: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "upperCaseFonts"
+  }, "Find a health care plan built specially for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "marginTextLeft"
+  }, " Have the solutions on hand to manager health priorities. A health plan made for you and your requirements. "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "1"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "5"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardImage"], {
+    className: "img-fluid img-fluid z-depth-2",
+    src: "https://www.telediariodigital.net/wp-content/uploads/2013/10/OSDE.jpg",
+    waves: true
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardTitle"], {
+    style: {
+      minHeight: 62
+    }
+  }, "OSDE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], null, "Some quick example text to build on the card title and make up the bulk of the card's content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    onClick: function onClick() {
+      return toggleCollapse("leftCollapse");
+    }
+  }, "More..")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCollapse"], {
+    id: "leftCollapse",
+    isOpen: collapseID
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "5"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardImage"], {
+    className: "img-fluid img-fluid z-depth-1",
+    src: "https://www.gmkfreelogos.com/logos/S/img/swiss_medical.gif",
+    waves: true
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardTitle"], {
+    style: {
+      minHeight: 62
+    }
+  }, "SWISS MEDICAL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], null, "Some quick example text to build on the card title and make."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    onClick: function onClick() {
+      return toggleCollapse("rightCollapse");
+    }
+  }, "More..")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCollapse"], {
+    id: "rightCollapse",
+    isOpen: collapseID
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "hola Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "1"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInLeft"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "upperCaseFonts"
+  }, "Find a health care plan built specially for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "marginTextLeft"
+  }, " Have the solutions on hand to manager health priorities. A health plan made for you and your requirements. "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "7"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "grey-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    className: "browser-default custom-select"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Choose a subject..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1"
+  }, "Option 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2"
+  }, "Option 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "3"
+  }, "Option 3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    readOnly: true,
+    label: "Your email",
+    icon: "envelope",
+    group: true,
+    type: "email",
+    value: email,
+    error: "wrong",
+    success: "right"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    type: "textarea",
+    rows: "2",
+    label: "Your message",
+    icon: "pencil-alt"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    outline: true,
+    className: "mb-3 btnEv-blue rounded mb-0 border-0 whiteFont"
+  }, "Send")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/InsuranceAndHealthcare/make_a_difference-inner_desktop_650x650.ashx",
+    width: "100%"
+  }))))));
+}
+
+/***/ }),
+
 /***/ "./src/constants.js":
 /*!**************************!*\
   !*** ./src/constants.js ***!
@@ -50929,7 +51040,7 @@ var fetchPendingAllowances = function fetchPendingAllowances() {
 var fetchAllowanceActive = function fetchAllowanceActive(id) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/findActive/".concat(id)).then(function (activeAllowances) {
-      dispatch(receiveActiveAllowances(activeAllowances.data));
+      return dispatch(receiveActiveAllowances(activeAllowances.data));
     });
   };
 };
