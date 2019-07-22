@@ -1,6 +1,7 @@
 const db = require("../index");
 const Employee = require("./employee");
 const DisciplineEvent = require("./disciplineEvent");
+const Technologies = require('./technologies'); // Tabla de opciones para los eventos
 const {
   Allowance, // Tabla de reintegros
   AllowanceDetail, // Tabla de detalles ( relacionados a empleados )
@@ -18,12 +19,13 @@ DisciplineEvent.belongsToMany(Employee, {
   through: "employee-discipline",
   as: "employee"
 });
-
+DisciplineEvent.belongsTo(Technologies, {as: "technologie"})
 
 module.exports = {
   Employee,
   Allowance,
   AllowanceDetail,
   DisciplineEvent,
+  Technologies,
   db
 };

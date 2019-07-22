@@ -35,6 +35,24 @@ table.table td {
 
 /* FONTS */
 /* ======================================= */
+.eventFont{
+  font-family: robotolight,Arial,sans-serif;
+  font-size: 10px;
+
+}
+.tittleModalUser{
+  font-family: roboto_condensedbold,Arial,sans-serif;
+  font-size: 26px;
+  display: block
+}
+.emailModalUser{
+  font-family: robotolight,Arial,sans-serif;
+  font-size: 16px;
+  color:#233237;
+  position: relative;
+  top: -5px;
+  margin-left: 21 px
+}
 .upperCaseFonts {
   text-transform: uppercase;
 }
@@ -104,6 +122,10 @@ table.table td {
 .greenColor:hover {
   color: #16cc40
 }
+.iconAvatar {
+  font-size: 22px;
+  margin-right: 7px;
+}
 /* TABLA  */
 /* ========================================== */
 table.table th {
@@ -119,8 +141,46 @@ table.table td {
 .widthTable {
   width: 95%
 }
+.whiteBorder{
+  border: 1px solid white !important
+}
 /* GENERAL  */
 /* ========================================== */
+.imgStyle {
+  object-fit: cover;
+    min-height: 192px;
+    max-height: 100%;
+    background-color: grey;
+    width: 100%;
+    border-radius: 10px;
+}
+.imgProfile {
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #9bb4be;
+  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);
+box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);
+}
+.imgProfile:hover {
+  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
+-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
+box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
+}
+.iconEditImg{
+  /* con position absolute defino la posicion, en relacion al padre */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ffaba6;
+    padding: 11px 16px;
+    border-radius: 5px;
+    border: 1px solid #ababab;
+}
+.iconEditImg:hover {
+  background-color: #ffe6e5;
+  cursor:pointer;
+}
 .parrafoModal {
   margin-top:-10px;
 }
@@ -149,7 +209,7 @@ table.table td {
     border-radius: 5px !important;
 }
 
-.aproved {
+.approved {
   background-color: #0AC3E6 !important;
     color: white;
     text-transform: uppercase;
@@ -313,7 +373,7 @@ table.table td {
   /* ========================================= */
   .Card-Img {
     z-index: -2;
-    min-height: 300px;
+    min-height: 396px;
   }
   .ajustImg {
     min-height: 188px;
@@ -377,66 +437,15 @@ table.table td {
     -ms-transform: translate(0px, -30px) scale(0.5);
     border-radius: 50%;
   }
-
-  /* RADIO BUTTONS */
-
-.modalForm h2 {
-    font-size: 16px;
-    color: #c31900;
-    margin-bottom: 20px;
-    margin-left: 20px;
+.radioBoton {
+  margin-bottom: 28px;
+  font-size: 18px;
+  margin-left: 10px;
+  cursor:pointer
 }
-
-.modalForm > div {
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc;
+.whiteFont {
+  color:white !important;
 }
-
-.modalForm label {
-    display: inline-block;
-    cursor: pointer;
-    color: #c31900;
-    position: relative;
-    padding: 5px 15px 5px 37px;
-    font-size: 1em;
-    border-radius: 5px;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+.whiteFont:hover {
+  color:white !important;
 }
-
-.modalForm label:hover {
-    background: rgba(0, 116, 217, 0.1);
-}
-
-.modalForm label:before {
-    content: "";
-    display: inline-block;
-    width: 17px;
-    height: 17px;
-    position: absolute;
-    left: 15px;
-    border-radius: 50%;
-    background: none;
-    border: 3px solid #c31903;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: roboto_condensedbold,Arial,sans-serif;
-
-}
-
-.modalForm input[type="radio"] {
-    display: none;
-}
-
-.modalForm input[type="radio"]:checked + label:before {
-    display: none;
-}
-
-.modalForm input[type="radio"]:checked + label {
-    padding: 5px 15px;
-    background: #c31900;
-    border-radius: 5px;
-    color: #fff;
-}
- 

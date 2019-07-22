@@ -21,6 +21,15 @@
     display: block;
     transition: 0.3s
 }
+.sidenav span {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f3d3d3;
+    display: block;
+    transition: 0.3s;
+    cursor:pointer;
+}
  
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
@@ -34,8 +43,15 @@
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    cursor:pointer;
 }
- 
+.nameFontSidebar {
+    font-size: 16px !important;
+    top: 9px;
+    left: -16px;
+    position: absolute;
+    color: #f3d3d39c !important
+}
 
 body {
   overflow-x: hidden;
@@ -57,13 +73,27 @@ body {
     text-decoration: none;
     font-size: 17px;
 }
+.topnav span {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor:pointer;
+}
  
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: #ddd;
     color: black;
 }
- 
+
+.topnav span:hover {
+    background-color: #ddd;
+    color: black;
+}
 /* Add a color to the active/current link */
 .topnav a.active {
     background-color: #4CAF50;
@@ -86,4 +116,11 @@ body {
   text-decoration: underline white;
   opacity: .45; 
   transition: opacity .3s ease-out; 
+}
+.imgProfileNav {
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 12px;
+    z-index: 100001;
+    position: relative;
 }

@@ -1,25 +1,26 @@
 const Allowance = require("./db/models").Allowance
 const Employee = require("./db/models").Employee
+const Technologies = require ("./db/models").Technologies
 
 Employee.create(
     
     {
-    name: 'Maria',
-    surname: 'Gonzalez',
-    email: 'm.gonzalez@endava.com',
-    sector: 'fullStack',
+    name: 'Nadia',
+    surname: 'Barrosoda Costa',
+    email: 'nadia.barrosodacosta@endava.com',
+    sector: 'Quality Assurance',
     "isAdmin": true,
-    password: '123',
+    password: '1234',
     passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
-    name: 'Juan',
-    surname: 'Perez',
-    email: 'j.perez@endava.com',
-    sector: 'fullStack',
+    name: 'Nicolas',
+    surname: 'Endava',
+    email: 'nicolas@endava.com',
+    sector: 'UX UI Designer',
     "isAdmin": true,
-    password: '123',
+    password: '1234',
     passwordChanged: false
     //salt: 'lkjljasda'
 })
@@ -28,7 +29,7 @@ Employee.create(
     name: 'Agustin',
     surname: 'Pardo',
     email: 'agustin.pardo@endava.com',
-    sector: 'fullStack',
+    sector: 'FullStack',
     "isAdmin": true,
     password: '123',
     passwordChanged: false
@@ -37,31 +38,71 @@ Employee.create(
 Employee.create({
     name: 'Lucas',
     surname: 'Aguirre',
-    email: 'l.aguirre@endava.com',
-    sector: 'fullStack',
+    email: 'lucas.aguirre@endava.com',
+    sector: 'FullStack',
     "isAdmin": true,
     password: '123',
     passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
-    name: 'Sebastian',
-    surname: 'Kjolhede',
-    email: 's.kol@endava.com',
-    sector: 'front',
-    "isAdmin": false,
-    password: '123',
+    name: 'Adrian',
+    surname: 'Gay Cattaneo',
+    email: 'adrian.gaycattaneo@endava.com',
+    sector: 'Team Leader-Sr Developer',
+    "isAdmin": true,
+    password: '1234',
     passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
-    name: 'Alejandro',
-    surname: 'Villa',
-    email: 'a.villa@endava.com',
-    sector: 'backend',
-    "isAdmin": false,
-    password: '123',
+    name: 'Jose',
+    surname: 'Zambrano',
+    email: 'jose.zambrano@endava.com',
+    sector: 'Scrum Master',
+    "isAdmin": true,
+    password: '1234',
     passwordChanged: false
+    //salt: 'lkjljasda'
+})
+Employee.create({
+    name: 'Analia',
+    surname: 'Endava',
+    email: 'analia@endava.com',
+    sector: 'Quality Assurance',
+    "isAdmin": true,
+    password: '1234',
+    passwordChanged: false
+    //salt: 'lkjljasda'
+})
+Employee.create({
+    name: 'Andrea',
+    surname: 'Endava',
+    email: 'andrea@endava.com',
+    sector: 'Quality Assurance',
+    "isAdmin": true,
+    password: '1234',
+    passwordChanged: false
+    //salt: 'lkjljasda'
+})
+Employee.create({
+    name: 'Eliana',
+    surname: 'Endava',
+    email: 'eliana@endava.com',
+    sector: 'Quality Assurance',
+    "isAdmin": true,
+    password: '1234',
+    passwordChanged: false
+    //salt: 'lkjljasda'
+})
+Employee.create({
+    name: 'Empleado',
+    surname: 'Empleado',
+    email: 'empleado@endava.com',
+    sector: 'Full Stack',
+    "isAdmin": false,
+    password: '1234',
+    passwordChanged: true
     //salt: 'lkjljasda'
 })
 
@@ -107,3 +148,78 @@ Allowance.create({
     completeName:'Gym Allowance',
     active:false
 })
+
+
+Technologies.create({
+    name: 'Javascript',
+    imagen:"javascript.png"
+})
+Technologies.create({
+    name: 'Node Js',
+    imagen:"nodejs.png"
+})
+Technologies.create({
+    name: 'HTML 5',
+    imagen:"html.png"
+})
+Technologies.create({
+    name: 'CSS 3',
+    imagen:"css3.png"
+})
+Technologies.create({
+    name: 'Bootstrap',
+    imagen:"bootstrap.png"
+})
+Technologies.create({
+    name: 'Angular',
+    imagen:"angular.png"
+})
+Technologies.create({
+    name: 'Vue',
+    imagen:"vue.png"
+})
+Technologies.create({
+    name: 'React',
+    imagen:"react.png"
+})
+Technologies.create({
+    name: 'Java',
+    imagen:"java.png"
+})
+Technologies.create({
+    name: 'PHP',
+    imagen:"php.png"
+})
+Technologies.create({
+    name: 'Coworking',
+    imagen:"coworking.png"
+})
+Technologies.create({
+    name: 'JQuery',
+    imagen:"jquery.png"
+})
+Technologies.create({
+    name: 'MySql',
+    imagen:"mysql.png"
+})
+Technologies.create({
+    name: 'Python',
+    imagen:"python.jpg"
+})
+Technologies.create({
+    name: 'Sass',
+    imagen:"sass.png"
+})
+Technologies.create({
+    name: 'Scrum',
+    imagen:"Scrum.png"
+})
+Technologies.create({
+    name: 'Mongodb',
+    imagen:"mongodb.png"
+})
+Technologies.create({
+    name: 'Scrum',
+    imagen:"Scrum.png"
+})
+

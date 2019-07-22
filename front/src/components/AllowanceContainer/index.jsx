@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { createAllowance } from "../../redux/actions/allowanceActions";
+import { createAllowance, sendEmailConfirm } from "../../redux/actions/allowanceActions";
 import {
   MDBCard,
   MDBInput,
@@ -85,6 +85,7 @@ class AllowanceContainer extends React.Component {
 
     this.props.createAllowance(formData)
       .then((response) => {
+        this.props.sendEmailConfirm(this.props.user, this.props.nameUrl)
         this.setState({ active: response.data, modal: true, textMsj: 'The file has been successfully sent', titleMsj: 'Success' });
       }).catch((error) => {
         this.setState({ modal: true, textMsj: 'An error occurred while sending the file..', titleMsj: 'Error' });
@@ -124,7 +125,7 @@ class AllowanceContainer extends React.Component {
           textMsj={this.state.textMsj}
           titleMsj={this.state.titleMsj}
         />
-
+        <h3 className="upperCaseFonts marginTextLeft" >Manage your {this.props.nameUrl} allowance.</h3>
         {/* FORMULARIO  */}
         <MDBRow className="container-banner">
           <MDBCol md="1">
@@ -199,6 +200,7 @@ class AllowanceContainer extends React.Component {
                 (this.state.active).split('.')[1] !== undefined) &&
                 <img src={`/assets/receipt/${this.state.active}`} width="100%" />}
             </p>
+          
             {
               ((this.state.active).split('.')[1] === 'pdf') &&
               <embed src={`/assets/receipt/${this.state.active}`} width="100%" height="400px"
@@ -221,7 +223,8 @@ const mapStateToProps = (state, owner) => {
 const MapDispatchToProps = (dispatch) => {
   return {
     createAllowance: (data) => dispatch(createAllowance(data)),
-    openCloseNavBar: (val) => dispatch(openCloseNavBar(val))
+    openCloseNavBar: (val) => dispatch(openCloseNavBar(val)),
+    sendEmailConfirm: (user,allowance) => dispatch(sendEmailConfirm(user, allowance))
   }
 }
 

@@ -84,7 +84,7 @@ export const fetchAllowanceActive = (id) => dispatch => {
   return axios
     .get(`/api/allowance/findActive/${id}`)
     .then(activeAllowances => {
-      dispatch(receiveActiveAllowances(activeAllowances.data));
+     return dispatch(receiveActiveAllowances(activeAllowances.data));
     });
 };
 
@@ -106,4 +106,20 @@ export const deleteAllowance = (id) => dispatch => {
 export const editStatusAllowance = (id, status, observation) => dispatch => {
   return axios
     .put(`/api/allowance/${id}/edit`, { status, observation })
+};
+
+// 
+export const fetchCountPending = (userId) => dispatch => {
+  return axios
+    .get(`/api/allowance/count`,{
+      params: {
+        userId
+      }
+    })
+};
+
+export const sendEmailConfirm = (userData, allowanceName) => dispatch => {
+  
+  return axios.post("/api/allowance/emailConfirm", { userData: userData, allowanceName: allowanceName })
+      .then(emailConfirm => emailConfirm);
 };

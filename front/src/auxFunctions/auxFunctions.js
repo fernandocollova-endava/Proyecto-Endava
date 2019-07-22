@@ -46,46 +46,26 @@ const columnsEvents = [
     field: 'topic'
   },
   {
+    label: 'Status',
+    field: 'status'
+  },
+  {
     label: 'Date',
     field: 'date'
   },
   {
-    label: 'Status',
-    field: 'status'
+    label: 'Time',
+    field: 'time'
   },
   
   
 ];
 
-const columnsAllowanceDetail = [
-  {
-    label: 'Date',
-    field: 'paymentDate',
-    sort: 'asc'
-  },
-  {
-    label: 'Amount',
-    field: 'amount'
-  },
-  {
-    label: 'Limit',
-    field: 'limitAmount'
-  },
-  {
-    label: 'Emp. Amount',
-    field: 'employeeAmount'
-  },
-  {
-    label: 'Status',
-    field: 'status'
-  }
 
-];
 
 module.exports = {
   columnsAllowance,
-  columnsEvents,
-  columnsAllowanceDetail
+  columnsEvents
 };
 
 

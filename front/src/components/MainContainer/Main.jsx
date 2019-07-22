@@ -4,13 +4,15 @@ import { connect } from "react-redux";
 import { fetchLoggedUser } from '../../redux/actions/user'
 import AllowanceContainer from '../AllowanceContainer/index'
 import Home from '../HomeContainer/index'
-import ObraSocialContainer from '../ObraSocialContainer/index'
+import HealthCareContainer from '../healthCareContainer/index'
 import LoginContainer from "../LoginContainer";
 import AllowancesListContainer from "../AllowancesListContainer/index";
 import NavbarContainer from "../NavBarContainer/"
 import FooterContainer from "../FooterContainer"
 import UpdatePassContainer from "../UpdatePassContainer"
-import DisciplineEvent from "../DisciplineEventContainer/index"
+import DisciplineEvent from "../DisciplineEventContainer"
+import ProfileContainer from "../ProfileContainer"
+import CalendarContainer from "../EventCalendarContainer"
 
 class MainContainer extends React.Component {
   constructor() {
@@ -41,12 +43,14 @@ class MainContainer extends React.Component {
             <div>
               <Route component={NavbarContainer} />
               <Switch>
-                <Route exact path="/allowance/obra-social" component={ObraSocialContainer }/>} 
                 <Route exact path="/allowance/search" component={AllowancesListContainer}/>
                 <Route exact path="/allowance/:name" component={AllowanceContainer}/>
                 <Route exact path="/login/expired" component={UpdatePassContainer}/>
                 <Route exact path="/admin/panel" component={AllowancesListContainer}/> 
+                <Route exact path="/health-care" component={HealthCareContainer }/>} 
                 <Route exact path="/discipline-event/new" component={DisciplineEvent}/> 
+                <Route exact path="/calendar" component={CalendarContainer}/> 
+                <Route exact path="/profile" component={ProfileContainer}/> 
 
                 <Route exact path="/" component={Home}/>
                 <Redirect from="/login" to="/" />
