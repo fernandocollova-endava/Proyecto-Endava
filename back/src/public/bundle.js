@@ -40379,7 +40379,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49210,9 +49210,7 @@ function (_React$Component) {
       }
 
       this.props.loginUser(this.state).then(function (user) {
-        if (user.passwordChanged == false) {
-          _this2.props.history.push("/login/expired");
-        } else _this2.props.history.push("/");
+        if (user.passwordChanged == false) _this2.props.history.push("/login/expired");else _this2.props.history.push("/");
       })["catch"](function () {
         _this2.setState({
           error: true,
@@ -49256,10 +49254,7 @@ function (_React$Component) {
     value: function getCookie() {
       var cookieUser = document.cookie;
       var userName = cookieUser.slice(0, cookieUser.indexOf(".com") + 4);
-
-      if (userName.length) {
-        return userName;
-      }
+      if (userName.length) return userName;
     } // TOGGLE de MODAL
 
   }, {

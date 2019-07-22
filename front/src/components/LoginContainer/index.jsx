@@ -53,9 +53,8 @@ class LoginContainer extends React.Component {
     this.props
       .loginUser(this.state)
       .then(user => {
-        if (user.passwordChanged == false) {
-          this.props.history.push("/login/expired");
-        } else this.props.history.push("/");
+        if (user.passwordChanged == false) this.props.history.push("/login/expired");
+        else this.props.history.push("/");
       })
       .catch(() => {
         this.setState({
@@ -89,9 +88,8 @@ class LoginContainer extends React.Component {
   getCookie() {
     var cookieUser = document.cookie;
     var userName = cookieUser.slice(0, cookieUser.indexOf(".com") + 4);
-    if (userName.length) {
-      return userName;
-    }
+    if (userName.length) return userName;
+    
   }
 
   // TOGGLE de MODAL
