@@ -19,6 +19,7 @@ DisciplineEvent.belongsToMany(Employee, {
   through: "employee-discipline",
   as: "employee"
 });
+DisciplineEvent.belongsTo(Technologies, {as: "technologie"})
 
 module.exports = {
   Employee,

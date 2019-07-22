@@ -5,22 +5,22 @@ const Technologies = require ("./db/models").Technologies
 Employee.create(
     
     {
-    name: 'Maria',
-    surname: 'Gonzalez',
-    email: 'm.gonzalez@endava.com',
-    sector: 'fullStack',
+    name: 'Nadia',
+    surname: 'Barrosoda Costa',
+    email: 'nadia.barrosodacosta@endava.com',
+    sector: 'Quality Assurance',
     "isAdmin": true,
-    password: '123',
+    password: '1234',
     passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
-    name: 'Juan',
-    surname: 'Perez',
-    email: 'j.perez@endava.com',
-    sector: 'fullStack',
+    name: 'Nicolas',
+    surname: 'Endava',
+    email: 'nicolas@endava.com',
+    sector: 'UX UI Designer',
     "isAdmin": true,
-    password: '123',
+    password: '1234',
     passwordChanged: false
     //salt: 'lkjljasda'
 })
@@ -29,7 +29,7 @@ Employee.create(
     name: 'Agustin',
     surname: 'Pardo',
     email: 'agustin.pardo@endava.com',
-    sector: 'fullStack',
+    sector: 'FullStack',
     "isAdmin": true,
     password: '123',
     passwordChanged: false
@@ -39,30 +39,70 @@ Employee.create({
     name: 'Lucas',
     surname: 'Aguirre',
     email: 'lucas.aguirre@endava.com',
-    sector: 'fullStack',
+    sector: 'FullStack',
     "isAdmin": true,
     password: '123',
     passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
-    name: 'Sebastian',
-    surname: 'Kjolhede',
-    email: 's.kol@endava.com',
-    sector: 'front',
-    "isAdmin": false,
-    password: '123',
+    name: 'Adrian',
+    surname: 'Gay Cattaneo',
+    email: 'adrian.gaycattaneo@endava.com',
+    sector: 'Team Leader-Sr Developer',
+    "isAdmin": true,
+    password: '1234',
     passwordChanged: false
     //salt: 'lkjljasda'
 })
 Employee.create({
-    name: 'Alejandro',
-    surname: 'Villa',
-    email: 'a.villa@endava.com',
-    sector: 'backend',
-    "isAdmin": false,
-    password: '123',
+    name: 'Jose',
+    surname: 'Zambrano',
+    email: 'jose.zambrano@endava.com',
+    sector: 'Scrum Master',
+    "isAdmin": true,
+    password: '1234',
     passwordChanged: false
+    //salt: 'lkjljasda'
+})
+Employee.create({
+    name: 'Analia',
+    surname: 'Endava',
+    email: 'analia@endava.com',
+    sector: 'Quality Assurance',
+    "isAdmin": true,
+    password: '1234',
+    passwordChanged: false
+    //salt: 'lkjljasda'
+})
+Employee.create({
+    name: 'Andrea',
+    surname: 'Endava',
+    email: 'andrea@endava.com',
+    sector: 'Quality Assurance',
+    "isAdmin": true,
+    password: '1234',
+    passwordChanged: false
+    //salt: 'lkjljasda'
+})
+Employee.create({
+    name: 'Eliana',
+    surname: 'Endava',
+    email: 'eliana@endava.com',
+    sector: 'Quality Assurance',
+    "isAdmin": true,
+    password: '1234',
+    passwordChanged: false
+    //salt: 'lkjljasda'
+})
+Employee.create({
+    name: 'Empleado',
+    surname: 'Empleado',
+    email: 'empleado@endava.com',
+    sector: 'Full Stack',
+    "isAdmin": false,
+    password: '1234',
+    passwordChanged: true
     //salt: 'lkjljasda'
 })
 
