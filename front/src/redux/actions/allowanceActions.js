@@ -117,3 +117,9 @@ export const fetchCountPending = (userId) => dispatch => {
       }
     })
 };
+
+export const sendEmailConfirm = (userData, allowanceName) => dispatch => {
+  
+  return axios.post("/api/allowance/emailConfirm", { userData: userData, allowanceName: allowanceName })
+      .then(emailConfirm => emailConfirm);
+};

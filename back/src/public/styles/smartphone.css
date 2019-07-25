@@ -43,6 +43,7 @@
         display: none;
     }
 
+
     /* == CALENDARIO == */
     .classDay {
         font-size: 20px;
@@ -60,4 +61,7 @@
         margin-top: 5px;
         display: block;
       }
+      .timeline__year{
+        margin-bottom: 50px
+    }
 }

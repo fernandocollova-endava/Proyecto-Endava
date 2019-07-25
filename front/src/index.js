@@ -14,6 +14,7 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import "../../back/src/public/styles/fonts.css";
 import "../../back/src/public/styles/app.css";
+import "../../back/src/public/styles/eventCalendar.css"
 import "../../back/src/public/styles/smartphone.css";
 import "../../back/src/public/styles/sidebar.css";
 

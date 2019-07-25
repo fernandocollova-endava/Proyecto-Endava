@@ -21,6 +21,7 @@ class DisciplineEventContainer extends React.Component {
       modal: false,
       textMsj: "",
       titleMsj: "",
+
     };
 
     this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -75,7 +76,7 @@ class DisciplineEventContainer extends React.Component {
       (e.target.name === 'time' && (e.target.value).length == 2) ?
         e.target.value + ':'
         : e.target.value
-
+    
     this.setState({
       [e.target.name]: data
     });

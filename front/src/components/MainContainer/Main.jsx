@@ -13,7 +13,8 @@ import UpdatePassContainer from "../UpdatePassContainer"
 import DisciplineEvent from "../DisciplineEventContainer"
 import ProfileContainer from "../ProfileContainer"
 import NoFound from '../NoFound/index'
- import HomeOfficeContainer from '../HomeOfficeContainer/index'
+import HomeOfficeContainer from '../HomeOfficeContainer/index'
+import CalendarContainer from "../EventCalendarContainer"
 
 class MainContainer extends React.Component {
   constructor() {
@@ -51,8 +52,8 @@ class MainContainer extends React.Component {
                 <Route exact path="/admin/panel" component={AllowancesListContainer}/> 
                 <Route exact path="/health-care" component={HealthCareContainer }/>} 
                 <Route exact path="/discipline-event/new" component={DisciplineEvent}/> 
-                <Route exact path="/profile" component={ProfileContainer}/>
-                <Route exact path="/test" component={NoFound }/> 
+                <Route exact path="/calendar" component={CalendarContainer}/> 
+                <Route exact path="/profile" component={ProfileContainer}/> 
 
                 <Route exact path="/" component={Home}/>
                 <Redirect from="/login" to="/" />
