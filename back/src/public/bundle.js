@@ -65653,8 +65653,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
 /* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
 /* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
-!(function webpackMissingModule() { var e = new Error("Cannot find module '../../auxFunctions/auxParser'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var _AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AdminBookContainer/adminBook */ "./src/components/AdminBookContainer/adminBook.jsx");
+/* harmony import */ var _AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../AdminBookContainer/adminBook */ "./src/components/AdminBookContainer/adminBook.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65672,7 +65671,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -65899,7 +65897,7 @@ function (_React$Component) {
         actionOk: this.actionOk,
         titleBoolean: this.state.titleBoolean,
         data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_7__["default"], {
         alertPending: this.state.alertPending,
         handleClick: this.handleClick,
         handleFilterStatus: this.handleFilterStatus,
