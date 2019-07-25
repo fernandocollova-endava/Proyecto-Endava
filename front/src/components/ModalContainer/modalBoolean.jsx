@@ -10,7 +10,7 @@ export default function ModalAviso({ modalBoolean, toggleBoolean, data , titleBo
                 <MDBModalBody>
                 <span style={({fontSize: 17})}>{titleBoolean}</span>
                 <br/><br/>  
-                <><span className="aproved btnModalB" style={({padding: "12px 29px"})} onClick={()=>actionOk(data)}>YES</span>&nbsp;
+                <><span className="approved btnModalB" style={({padding: "12px 29px"})} onClick={()=>actionOk(data)}>YES</span>&nbsp;
                 <span className="rejected btnModalB" style={({padding: "12px 29px"})} onClick={toggleBoolean}>NO</span>
                 <br/><br/>
                 </>

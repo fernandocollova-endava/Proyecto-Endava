@@ -69,6 +69,7 @@ class Navbar extends Component {
           <Link className={`item ${(location == "/profile") && "itemActive"}`} to="/profile" onClick={() => this.closeCollapse()}> Profile </Link>
           <Link className={`item ${(location == "/allowance/search") && "itemActive"}`} to="/allowance/search" onClick={() => this.closeCollapse()}> My Allowances </Link>
           <Link className={`item ${(location == "/discipline-event/new") && "itemActive"}`} to="/discipline-event/new" onClick={() => this.closeCollapse()}> Discipline Event </Link>
+          <Link className={`item ${(location == "/home-office") && "itemActive"}`} to="/home-office" onClick={() => this.closeCollapse()}> Home Office </Link>
           <Link className={`item ${(location == "/health-care") && "itemActive"}`} to="/health-care" onClick={() => this.closeCollapse()}> Health care </Link>
           <Link className={`item ${(location == "/calendar") && "itemActive"}`} to="/calendar" onClick={() => this.closeCollapse()}> Event calendar</Link>
           <Link className={`item ${(location == "/calendar") && "itemActive"}`} to="/admin/book" onClick={() => this.closeCollapse()}> Admin Book Panel</Link>

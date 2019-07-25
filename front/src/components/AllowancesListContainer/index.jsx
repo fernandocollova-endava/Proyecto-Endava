@@ -9,7 +9,6 @@ import { openCloseNavBar } from "../../redux/actions/navbar"
 import ModalDetails from '../ModalContainer/modalDetail'
 import ModalAviso from '../ModalContainer/modalAviso'
 import ModalBoolean from '../ModalContainer/modalBoolean'
-import { parserRow } from '../../auxFunctions/auxParser'
 
 class AllowanceListContainer extends React.Component {
   constructor() {
@@ -54,14 +53,14 @@ class AllowanceListContainer extends React.Component {
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.allUser !== this.props.allUser) {
-      
-      this.setState({ 
+
+      this.setState({
         alertPending: 0, // Resetea el estado a cero
-        allowanceType:'', // Resetea el select de type
-        allowanceStatus:'' // Resetea el select de Status
-       },()=>{
+        allowanceType: '', // Resetea el select de type
+        allowanceStatus: '' // Resetea el select de Status
+      }, () => {
         this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
-       }) 
+      })
 
       // Si es admin y si esta en la ruta panel consulta la cantidad..
       if (this.props.user.isAdmin && this.props.allUser) {
@@ -184,14 +183,6 @@ class AllowanceListContainer extends React.Component {
   }
   render() {
 
-    // Condicional para redefinir los objetos
-    let val = parserRow(
-      this.props.allowanceList, // Se envia el listado a depurar
-      this.deleteAllowance, // Se envia la funcion para eliminar (onClick)
-      this.viewDetails,  // Se envia la funcion para mostrar el modal (onClick)
-      this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
-    )
-
     return (
       <div>
         <ModalDetails
@@ -220,12 +211,15 @@ class AllowanceListContainer extends React.Component {
         />
         <AllowanceList
           alertPending={this.state.alertPending}
-          handleClick={this.handleClick}
-          handleFilterStatus={this.handleFilterStatus}
-          allowanceList={val}
-          allowanceType={this.state.allowanceType}
-          allowanceStatus={this.state.allowanceStatus}
-          adminAllowances={this.props.adminAllowances}
+          handleClick={this.handleClick} // Filtro de tipo de beneficio
+          handleFilterStatus={this.handleFilterStatus} // Filtro de status
+          allowanceList={this.props.allowanceList} // Lista de los beneficios
+          deleteAllowance={this.deleteAllowance} // Se envia la funcion para eliminar (onClick)
+          viewDetails={this.viewDetails}  // Se envia la funcion para mostrar el modal (onClick)
+          allUser={this.props.allUser} // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
+          allowanceType={this.state.allowanceType} // valor de tipo de beneficio
+          allowanceStatus={this.state.allowanceStatus} // valor del status actual
+          adminAllowances={this.props.adminAllowances} // Boolean si es admin o no
         />
       </div>
     );
