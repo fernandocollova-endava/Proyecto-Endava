@@ -1,10 +1,10 @@
 import React from 'react'
 import {
- MDBTableBody, MDBTableHead, MDBIcon, MDBFormInline,
-   MDBTable, MDBAnimation, MDBRow, MDBCol, MDBAlert
+   MDBIcon, MDBFormInline, MDBAnimation, MDBRow, MDBCol, MDBAlert
 } from "mdbreact";
 
 import { columnsAllowance } from '../../auxFunctions/auxFunctions'
+import RowAllowance from './rowAllowance'
 
 export default function allowanceList({
   allowanceList,
@@ -13,7 +13,10 @@ export default function allowanceList({
   handleFilterStatus,
   alertPending,
   allowanceType,
-  allowanceStatus
+  allowanceStatus,
+  deleteAllowance,
+  viewDetails,
+  allUser
 }) {
   return (
     <>
@@ -34,15 +37,15 @@ export default function allowanceList({
                     <option className="capitalizeName" key={item.id} value={item.id}>{item.name}</option>
                   ))}
               </select>
-              <select  value={allowanceStatus} className="browser-default custom-select" name="status" onChange={handleFilterStatus}>
+              <select value={allowanceStatus} className="browser-default custom-select" name="status" onChange={handleFilterStatus}>
                 <option value="">Status...</option>
                 <option value="">All</option>
                 <option value="pending">Pending</option>
                 <option value="approved">Approved</option>
-                <option value="rejected">Rejected</option>                
+                <option value="rejected">Rejected</option>
               </select>
             </MDBFormInline>
-            
+
           </MDBCol>
           <MDBCol md="2">
 
@@ -56,28 +59,50 @@ export default function allowanceList({
         </MDBRow>
 
         <hr />
-        { (alertPending)?<>
-        <div style={({maxWidth:406, position: "fixed", bottom: 0})}>
-          <MDBAnimation type="heartBeat">
-          <MDBAlert color="success" >
-            <p>
-              <strong>Hello!</strong> You have {alertPending} allowance pending response...
-            </p>            
-          </MDBAlert>
-          
-        <hr/>
-        </MDBAnimation>
-        </div>
-        </> :''}
+        {(alertPending) ? <>
+          <div style={({ maxWidth: 406, position: "fixed", bottom: 0 })}>
+            <MDBAnimation type="heartBeat">
+              <MDBAlert color="success" >
+                <p>
+                  <strong>Hello!</strong> You have {alertPending} allowance pending response...
+            </p>
+              </MDBAlert>
+
+              <hr />
+            </MDBAnimation>
+          </div>
+        </> : ''}
         <MDBRow className="container-banner minHeight">
-         
+
           <MDBCol md="12">
             <MDBAnimation type="fadeInUp">
               {(allowanceList.length == 0) ? <label>Sorry, there aren't results for your selection... <br /><br /></label> :
-                <MDBTable btn fixed responsive className="paddingTable">
-                  <MDBTableHead columns={columnsAllowance} />
-                  <MDBTableBody rows={allowanceList} />
-                </MDBTable>}
+                <div class="table-responsive">
+                  <table class="table btn-table table-fixed paddingTable">
+                    <thead class="">
+                      <tr>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Limit</th>
+                        <th>Emp. Amount</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Info</th>
+                        <th>Option</th>
+                      </tr>
+                    </thead>
+                    <RowAllowance
+                      deleteAllowance={deleteAllowance} // Se envia la funcion para eliminar (onClick)
+                      viewDetails={viewDetails}  // Se envia la funcion para mostrar el modal (onClick)
+                      allUser={allUser} // Si es admin o no
+                      allowanceList={allowanceList} // Listado de la consulta
+                    />
+                  </table>
+                </div>
+              }
+
+
             </MDBAnimation>
           </MDBCol>
         </MDBRow>

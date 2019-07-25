@@ -11,7 +11,8 @@ Employee.create(
     sector: 'Quality Assurance',
     "isAdmin": true,
     password: '1234',
-    passwordChanged: false
+    passwordChanged: false,
+    birthdayDate: '2019-07-20'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -21,7 +22,8 @@ Employee.create({
     sector: 'UX UI Designer',
     "isAdmin": true,
     password: '1234',
-    passwordChanged: false
+    passwordChanged: false,
+    birthdayDate: '2019-08-06'
     //salt: 'lkjljasda'
 })
 Employee.create(
@@ -32,8 +34,8 @@ Employee.create(
     sector: 'FullStack',
     "isAdmin": true,
     password: '123',
-    passwordChanged: false
-    //salt: 'lkjljasda'
+    passwordChanged: false,
+    birthdayDate: '2019-08-14'
 })
 Employee.create({
     name: 'Lucas',
@@ -42,8 +44,8 @@ Employee.create({
     sector: 'FullStack',
     "isAdmin": true,
     password: '123',
-    passwordChanged: false
-    //salt: 'lkjljasda'
+    passwordChanged: false,
+    birthdayDate: '2019-09-01'
 })
 Employee.create({
     name: 'Adrian',
@@ -52,7 +54,8 @@ Employee.create({
     sector: 'Team Leader-Sr Developer',
     "isAdmin": true,
     password: '1234',
-    passwordChanged: false
+    passwordChanged: false,
+    birthdayDate: '2019-07-05'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -62,7 +65,8 @@ Employee.create({
     sector: 'Scrum Master',
     "isAdmin": true,
     password: '1234',
-    passwordChanged: false
+    passwordChanged: false,
+    birthdayDate: '2019-03-20'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -72,7 +76,8 @@ Employee.create({
     sector: 'Quality Assurance',
     "isAdmin": true,
     password: '1234',
-    passwordChanged: false
+    passwordChanged: false,
+    birthdayDate: '2019-07-20'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -82,7 +87,8 @@ Employee.create({
     sector: 'Quality Assurance',
     "isAdmin": true,
     password: '1234',
-    passwordChanged: false
+    passwordChanged: false,
+    birthdayDate: '2019-09-20'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -92,7 +98,8 @@ Employee.create({
     sector: 'Quality Assurance',
     "isAdmin": true,
     password: '1234',
-    passwordChanged: false
+    passwordChanged: false,
+    birthdayDate: '2019-07-20'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -102,7 +109,8 @@ Employee.create({
     sector: 'Full Stack',
     "isAdmin": false,
     password: '1234',
-    passwordChanged: true
+    passwordChanged: true,
+    birthdayDate: '2019-07-20'
     //salt: 'lkjljasda'
 })
 
