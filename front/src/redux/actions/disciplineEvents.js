@@ -27,9 +27,14 @@ export const createDisciplineEvents = (data, user) => dispatch => {
 export const fetchDisciplineEvents = userId => dispatch => {
  
   return axios
-    .get(`/api/disciplineEvent/${ userId }`)
+    .get(`/api/disciplineEvent/`, {
+      params: {
+        userId
+      }
+    })
     .then(res => res.data)
     .then(eventList => {
+      console.log("soy eventListAXIOS", eventList)
       dispatch(receiveEventList(eventList))
       return eventList
     

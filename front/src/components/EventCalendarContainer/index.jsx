@@ -20,12 +20,12 @@ class DisciplineEventContainer extends React.Component {
   }
   componentDidMount() {
     window.scrollTo(0, 0);
-    this.props.fetchDisciplineEvents(this.props.user.id);
+    this.props.fetchDisciplineEvents();
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.eventList.length != this.props.eventList.length) {
-      this.props.fetchDisciplineEvents(this.props.user.id);
+      this.props.fetchDisciplineEvents();
     }
   }
   onClick(e) {
