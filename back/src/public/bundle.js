@@ -2543,7 +2543,7 @@ module.exports = exports['default'];
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}", ""]);
+exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}\n\n /* === CALENDAR === */\n .bg-info {\n  background-color: #17a2b8!important;\n}\n.viewEvent {\n  font-size: 12px;\n  background-color: #DE411B;\n  color: white;\n  border-radius: 8px;\n  margin-bottom: 0px;\n  margin-top: 2px;\n  border: 1px solid white;\n}\n.classDay {\n  font-size: 20px;\n  padding: 4px 11px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n.classToday {\n  font-size: 20px;\n  background-color: #d8d8e8;\n  padding: 10px 11px;\n  margin: 0 35px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n#calendar-body > tr {\n  height: 136px;\n}\n#calendar-body td:hover {\n  background-color: #f0f3f3;\n  cursor:pointer;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n.viewHB {\n    background: url(\"/assets/img/backgroundHB.png\") no-repeat center;\n   -webkit-background-size: cover;\n   -moz-background-size: cover;\n   -o-background-size: cover;\n   background-size: cover;\n   max-width: 100% ;\n   text-align: center;\n}\n.textCenter {\n  text-align: center;\n}", ""]);
 
 
 /***/ }),
@@ -2585,7 +2585,7 @@ exports.push([module.i, "/* https://careers.endava.com/Design/styles/webfonts/ *
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height: 100%; /* 100% Full-height */\n    width: 0; /* 0 width - change this with JavaScript */\n    position: fixed; /* Stay in place */\n    z-index: 100000; /* Stay on top */\n    top: 0;\n    right: 0;\n    background-color: #de411b;\n    overflow-x: hidden; /* Disable horizontal scroll */\n    padding-top: 60px; /* Place content 60px from the top */\n    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */\n}\n \n/* The navigation menu links */\n.sidenav a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s\n}\n.sidenav span {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s;\n    cursor:pointer;\n}\n \n/* When you mouse over the navigation links, change their color */\n.sidenav a:hover, .offcanvas a:focus{\n    color: #f1f1f1;\n}\n \n/* Position and style the close button (top right corner) */\n.sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n    cursor:pointer;\n}\n.nameFontSidebar {\n    font-size: 16px !important;\n    top: 9px;\n    left: -16px;\n    position: absolute;\n    color: #f3d3d39c !important\n}\n\nbody {\n  overflow-x: hidden;\n}\n \n/* Add a black background color to the top navigation */\n.topnav {\n    background-color: #DE411B;\n    overflow: hidden;\n}\n \n/* Style the links inside the navigation bar */\n.topnav a {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n.topnav span {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n    cursor:pointer;\n}\n \n/* Change the color of links on hover */\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n\n.topnav span:hover {\n    background-color: #ddd;\n    color: black;\n}\n/* Add a color to the active/current link */\n.topnav a.active {\n    background-color: #4CAF50;\n    color: white;\n}\n\n\n#sideNavigation {\n  padding-bottom: 25px;\n  font-family: robotobold,Arial,sans-serif;\n  font-weight: 400;\n  font-size: 26px;\n  color: #fff;\n}\n.item {\n    color:white\n  }\n\n.item:hover, .itemActive {\n  text-decoration: underline white;\n  opacity: .45; \n  transition: opacity .3s ease-out; \n}\n.imgProfileNav {\n    border-radius: 50%;\n    width: 40px;\n    margin-right: 12px;\n    z-index: 100001;\n    position: relative;\n}", ""]);
+exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height: 100%; /* 100% Full-height */\n    width: 0; /* 0 width - change this with JavaScript */\n    position: fixed; /* Stay in place */\n    z-index: 100000; /* Stay on top */\n    top: 0;\n    right: 0;\n    background-color: #de411b;\n    overflow-x: hidden; /* Disable horizontal scroll */\n    padding-top: 60px; /* Place content 60px from the top */\n    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */\n}\n \n/* The navigation menu links */\n.sidenav a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s\n}\n.sidenav span {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s;\n    cursor:pointer;\n}\n \n/* When you mouse over the navigation links, change their color */\n.sidenav a:hover, .offcanvas a:focus{\n    color: #f1f1f1;\n}\n \n/* Position and style the close button (top right corner) */\n.sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n    cursor:pointer;\n}\n.nameFontSidebar {\n    font-size: 16px !important;\n    top: 9px;\n    left: -16px;\n    position: absolute;\n    color: #f3d3d39c !important\n}\n\nbody {\n  overflow-x: hidden;\n}\n \n/* Add a black background color to the top navigation */\n.topnav {\n    background-color: #DE411B;\n    overflow: hidden;\n}\n \n/* Style the links inside the navigation bar */\n.topnav a {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n.topnav span {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n    cursor:pointer;\n}\n \n/* Change the color of links on hover */\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n\n.topnav span:hover {\n    background-color: #ddd;\n    color: black;\n}\n/* Add a color to the active/current link */\n.topnav a.active {\n    background-color: #4CAF50;\n    color: white;\n}\n\n\n#sideNavigation {\n  padding-bottom: 25px;\n  font-family: robotobold,Arial,sans-serif;\n  font-weight: 400;\n  font-size: 26px;\n  color: #fff;\n}\n.item {\n    color:white\n  }\n\n.item:hover, .itemActive {\n  text-decoration: underline white;\n  opacity: .45; \n  transition: opacity .3s ease-out; \n}\n.imgProfileNav {\n    border-radius: 50%;\n    width: 40px;\n    margin-right: 12px;\n    z-index: 100001;\n    position: relative;\n}\n", ""]);
 
 
 /***/ }),
@@ -2599,7 +2599,11 @@ exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height:
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
+<<<<<<< HEAD
+exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n    .bannerAllowance{\n        margin-top: -30px;        \n    }\n    .HideMobile {\n        display: none;\n    }\n\n    /* == CALENDARIO == */\n    .classDay {\n        font-size: 20px;\n        padding: 4px 11px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .classToday {\n        font-size: 20px;\n        background-color: #d8d8e8;\n        padding: 10px 11px;\n        margin: 0 5px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n}", ""]);
+=======
 exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n    .bannerAllowance{\n        margin-top: -30px;        \n    }\n    .HideMobile {\n        display: none;\n    }\n    .timeline__year{\n        margin-bottom: 50px\n    \n      }\n}", ""]);
+>>>>>>> 5f9351b52db5288b61d4ae9af4975c8b1a73a498
 
 
 /***/ }),
@@ -65506,67 +65510,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./src/auxFunctions/auxParser.js":
-/*!***************************************!*\
-  !*** ./src/auxFunctions/auxParser.js ***!
-  \***************************************/
-/*! exports provided: parserRow */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parserRow", function() { return parserRow; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-
-
-var parserRow = function parserRow(arr, deleteAllowance, viewDetails, allUser) {
-  var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return arr.map(function (a) {
-    var split = a.paymentDate.split('-');
-    return {
-      type: a.allowanceDetail.name.toUpperCase(),
-      name: a.employeeDetail.name.toUpperCase(),
-      amount: a.amount,
-      limitAmount: a.limitAmount,
-      employeeAmount: a.employeeAmount,
-      paymentDate: "".concat(Month[Number(split[1])], "-").concat(split[0]),
-      status: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: a.status
-      }, a.status),
-      file: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-        className: "mb-3 btnEv-red rounded mb-0 border-0",
-        onClick: function onClick() {
-          return viewDetails(a.id, a.allowanceDetail.id);
-        },
-        color: "default",
-        rounded: true,
-        size: "sm"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        key: "cell3",
-        className: "far fa-file-pdf",
-        size: "2x",
-        "aria-hidden": "true"
-      }), " Details "),
-      "delete": react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, a.status === 'pending' && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        onClick: function onClick() {
-          return deleteAllowance(a.id);
-        },
-        className: "greyColor cursorPointer"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        key: "cell1",
-        className: "far fa-trash-alt iconAllowance ",
-        style: {
-          fontSize: 20
-        }
-      }), " Delete ") : "-")
-    };
-  });
-};
-
-/***/ }),
-
 /***/ "./src/components/AllowanceContainer/index.jsx":
 /*!*****************************************************!*\
   !*** ./src/components/AllowanceContainer/index.jsx ***!
@@ -65872,6 +65815,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
 /* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
 /* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _rowAllowance__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./rowAllowance */ "./src/components/AllowancesListContainer/rowAllowance.jsx");
+
 
 
 
@@ -65882,7 +65827,10 @@ function allowanceList(_ref) {
       handleFilterStatus = _ref.handleFilterStatus,
       alertPending = _ref.alertPending,
       allowanceType = _ref.allowanceType,
-      allowanceStatus = _ref.allowanceStatus;
+      allowanceStatus = _ref.allowanceStatus,
+      deleteAllowance = _ref.deleteAllowance,
+      viewDetails = _ref.viewDetails,
+      allUser = _ref.allUser;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -65954,16 +65902,38 @@ function allowanceList(_ref) {
     md: "12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
-  }, allowanceList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
-    btn: true,
-    fixed: true,
-    responsive: true,
-    className: "paddingTable"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableHead"], {
-    columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__["columnsAllowance"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableBody"], {
-    rows: allowanceList
-  })))))));
+  }, allowanceList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    "class": "table btn-table table-fixed paddingTable"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
+    "class": ""
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+    "class": ""
+  }, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+    "class": ""
+  }, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+    "class": ""
+  }, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+    "class": ""
+  }, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+    "class": ""
+  }, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+    "class": ""
+  }, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+    "class": ""
+  }, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+    "class": ""
+  }, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+    "class": ""
+  }, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rowAllowance__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
+    ,
+    viewDetails: viewDetails // Se envia la funcion para mostrar el modal (onClick)
+    ,
+    allUser: allUser,
+    allowanceList: allowanceList
+  }))))))));
 }
 
 /***/ }),
@@ -65986,7 +65956,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
 /* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
 /* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
-/* harmony import */ var _auxFunctions_auxParser__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../auxFunctions/auxParser */ "./src/auxFunctions/auxParser.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66004,7 +65973,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -66224,12 +66192,6 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // Condicional para redefinir los objetos
-      var val = Object(_auxFunctions_auxParser__WEBPACK_IMPORTED_MODULE_8__["parserRow"])(this.props.allowanceList, // Se envia el listado a depurar
-      this.deleteAllowance, // Se envia la funcion para eliminar (onClick)
-      this.viewDetails, // Se envia la funcion para mostrar el modal (onClick)
-      this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
-      );
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
@@ -66253,12 +66215,24 @@ function (_React$Component) {
         data: this.state.data
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
         alertPending: this.state.alertPending,
-        handleClick: this.handleClick,
-        handleFilterStatus: this.handleFilterStatus,
-        allowanceList: val,
-        allowanceType: this.state.allowanceType,
-        allowanceStatus: this.state.allowanceStatus,
-        adminAllowances: this.props.adminAllowances
+        handleClick: this.handleClick // Filtro de tipo de beneficio
+        ,
+        handleFilterStatus: this.handleFilterStatus // Filtro de status
+        ,
+        allowanceList: this.props.allowanceList // Lista de los beneficios
+        ,
+        deleteAllowance: this.deleteAllowance // Se envia la funcion para eliminar (onClick)
+        ,
+        viewDetails: this.viewDetails // Se envia la funcion para mostrar el modal (onClick)
+        ,
+        allUser: this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
+        ,
+        allowanceType: this.state.allowanceType // valor de tipo de beneficio
+        ,
+        allowanceStatus: this.state.allowanceStatus // valor del status actual
+        ,
+        adminAllowances: this.props.adminAllowances // Boolean si es admin o no
+
       }));
     }
   }]);
@@ -66312,6 +66286,58 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AllowanceListContainer));
+
+/***/ }),
+
+/***/ "./src/components/AllowancesListContainer/rowAllowance.jsx":
+/*!*****************************************************************!*\
+  !*** ./src/components/AllowancesListContainer/rowAllowance.jsx ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rowAllowance; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+function rowAllowance(_ref) {
+  var deleteAllowance = _ref.deleteAllowance,
+      viewDetails = _ref.viewDetails,
+      allUser = _ref.allUser,
+      allowanceList = _ref.allowanceList;
+  var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, allowanceList && allowanceList.map(function (row) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.allowanceDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: row.status
+    }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      onClick: function onClick() {
+        return viewDetails(row.id, row.allowanceDetail.id);
+      },
+      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-file-pdf",
+      "aria-hidden": "true"
+    }), " Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Ripple "
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status === 'pending' && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      onClick: function onClick() {
+        return deleteAllowance(row.id);
+      },
+      className: "greyColor cursorPointer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-trash-alt iconAllowance "
+    }), " Delete ") : ''));
+  })));
+}
 
 /***/ }),
 
@@ -67128,6 +67154,460 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./src/components/HomeOfficeContainer/Calendar.jsx":
+/*!*********************************************************!*\
+  !*** ./src/components/HomeOfficeContainer/Calendar.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var _day__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./day */ "./src/components/HomeOfficeContainer/day.jsx");
+
+
+
+
+var Calendar = function Calendar(_ref) {
+  var handleAddHome = _ref.handleAddHome,
+      listHomeOffice = _ref.listHomeOffice,
+      next = _ref.next,
+      previous = _ref.previous,
+      jump = _ref.jump,
+      currentYear = _ref.currentYear,
+      currentMonth = _ref.currentMonth;
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+    className: "container-banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "1"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "fontLight upperCaseFonts"
+  }, "Allowance Management Site"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "TextParrafo"
+  }, "Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "1"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+    className: "container-banner marginDemo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-inline"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-primary btn-block",
+    onClick: previous
+  }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-primary btn-block",
+    onClick: next
+  }, "Next")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "form-inline",
+    onSubmit: jump
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "lead mr-2 ml-2"
+  }, "Jump To: "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    className: "form-control",
+    name: "month"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "0"
+  }, "Jan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1"
+  }, "Feb"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2"
+  }, "Mar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "3"
+  }, "Apr"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "4"
+  }, "May"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "5"
+  }, "Jun"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "6"
+  }, "Jul"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "7"
+  }, "Aug"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "8"
+  }, "Sep"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "9"
+  }, "Oct"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "10"
+  }, "Nov"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "11"
+  }, "Dec")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    className: "form-control",
+    name: "year"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2019"
+  }, "2019"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2020"
+  }, "2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2021"
+  }, "2021"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2022"
+  }, "2022"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2023"
+  }, "2023"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2024"
+  }, "2024"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2025"
+  }, "2025"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2026"
+  }, "2026"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2027"
+  }, "2027"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2028"
+  }, "2028"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2029"
+  }, "2029"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2030"
+  }, "2030")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "9"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "card-header upperCaseFonts textCenter"
+  }, " ", "".concat(months[currentMonth], " - ").concat(currentYear), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    className: "table table-bordered table-responsive-sm",
+    id: "calendar"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Sun"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Mon"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Tue"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Wed"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Thu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Fri"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Sat"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
+    id: "calendar-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_day__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    currentMonth: currentMonth,
+    currentYear: currentYear,
+    handleAddHome: handleAddHome,
+    listHomeOffice: listHomeOffice
+  }))))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Calendar);
+
+/***/ }),
+
+/***/ "./src/components/HomeOfficeContainer/day.jsx":
+/*!****************************************************!*\
+  !*** ./src/components/HomeOfficeContainer/day.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Day; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var Day =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Day, _React$Component);
+
+  function Day() {
+    _classCallCheck(this, Day);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Day).apply(this, arguments));
+  }
+
+  _createClass(Day, [{
+    key: "createTable",
+    value: function createTable(month, year) {
+      var _this = this;
+
+      var firstDay = new Date(year, month).getDay(); // PRIMER DIA DEL MES
+
+      var lastDay = this.daysInMonth(month, year); // ULTIMO DIA DEL MES
+
+      var date = 1; // INICIALIZA EL DIA A 1
+
+      var table = []; // Outer loop to create parent
+
+      for (var i = 0; i < 6; i++) {
+        var children = []; //Inner loop to create children
+
+        for (var j = 0; j < 7; j++) {
+          if (this.isInvisible(i, j, date, firstDay, lastDay)) {
+            children.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+              key: j
+            }));
+          } else {
+            (function () {
+              var id = date; // Guarda el Scope de la instancia
+              // Los eventos consulta solo si this.props.listHome .length es mayor a 0
+
+              children.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+                key: j,
+                onClick: function onClick() {
+                  return _this.props.handleAddHome(id);
+                },
+                className: _this.isHappyBirthday(date) ? 'viewHB' : ''
+              }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+                className: _this.isToday(date, month, year) ? "classToday" : "classDay"
+              }, date), _this.props.listHomeOffice.length ? _this.getUserEvents(date) : ''));
+              date++;
+            })();
+          }
+        } //Create the parent and add the children
+
+
+        if (!(i == 5 && date > lastDay)) {
+          // Si la ultima columna esta vacia no la construye
+          table.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+            key: i
+          }, children));
+        }
+      }
+
+      return table;
+    }
+  }, {
+    key: "daysInMonth",
+    value: function daysInMonth(iMonth, iYear) {
+      // Define el ultimo dia del mes
+      return 32 - new Date(iYear, iMonth, 32).getDate();
+    }
+  }, {
+    key: "isToday",
+    value: function isToday(date, month, year) {
+      var today = new Date(); // Recibe el date actual y retorna si es el dia de hoy (true o false)
+
+      return date === today.getDate() && year === today.getFullYear() && month === today.getMonth();
+    }
+  }, {
+    key: "isInvisible",
+    value: function isInvisible(i, j, date, firstDay, lastDay) {
+      // Si es la primera fila y el dia es menor a el primer dia del mes
+      return i === 0 && j < firstDay || date > lastDay;
+    }
+  }, {
+    key: "getUserEvents",
+    value: function getUserEvents(date) {
+      // Busca los eventos de cada dia
+      var list = this.props.listHomeOffice;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, list && list.map(function (item) {
+        return (// Retorna si el dia coicide con el dia del home office cargado
+          Number(item.date.split('-')[2]) == date && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+            className: "viewEvent"
+          }, "".concat(item.employeeHomeOffice.name, " ").concat(item.employeeHomeOffice.surname[0], "."))
+        );
+      }));
+    }
+  }, {
+    key: "isHappyBirthday",
+    value: function isHappyBirthday(date) {
+      if (date == 14) return true;
+      return false;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.createTable(this.props.currentMonth, this.props.currentYear));
+    }
+  }]);
+
+  return Day;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./src/components/HomeOfficeContainer/index.jsx":
+/*!******************************************************!*\
+  !*** ./src/components/HomeOfficeContainer/index.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Calendar */ "./src/components/HomeOfficeContainer/Calendar.jsx");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _redux_actions_homeOffice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/homeOffice */ "./src/redux/actions/homeOffice.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var HomeOfficeContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(HomeOfficeContainer, _React$Component);
+
+  function HomeOfficeContainer() {
+    var _this;
+
+    _classCallCheck(this, HomeOfficeContainer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(HomeOfficeContainer).call(this));
+    _this.state = {
+      buildRows: [],
+      currentMonth: 0,
+      currentYear: 0
+    };
+    _this.next = _this.next.bind(_assertThisInitialized(_this));
+    _this.previous = _this.previous.bind(_assertThisInitialized(_this));
+    _this.jump = _this.jump.bind(_assertThisInitialized(_this));
+    _this.handleAddHome = _this.handleAddHome.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(HomeOfficeContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+      this.props.openCloseNavBar(false); // POSICIONA AL CALENDARIO A LA FECHA ACTUAL
+
+      var today = new Date();
+      var currentMonth = today.getMonth();
+      var currentYear = today.getFullYear(); // Carga los eventos del mes y año enviado
+
+      this.props.fetchHomeOffice(currentYear, currentMonth, 'fullStack');
+      this.setStateLocal(currentMonth, currentYear);
+    } // AVANZA UN MES
+
+  }, {
+    key: "next",
+    value: function next() {
+      var currentYear = this.state.currentMonth === 11 ? this.state.currentYear + 1 : this.state.currentYear;
+      var currentMonth = (this.state.currentMonth + 1) % 12;
+      this.props.fetchHomeOffice(currentYear, currentMonth, 'fullStack');
+      this.setStateLocal(currentMonth, currentYear);
+    } // RETROCEDE UN MES
+
+  }, {
+    key: "previous",
+    value: function previous() {
+      var currentYear = this.state.currentMonth === 0 ? this.state.currentYear - 1 : this.state.currentYear;
+      var currentMonth = this.state.currentMonth === 0 ? 11 : this.state.currentMonth - 1;
+      this.props.fetchHomeOffice(currentYear, currentMonth, 'fullStack');
+      this.setStateLocal(currentMonth, currentYear);
+    } // MUESTRA EL MES / AÑO SELECCIONADO
+
+  }, {
+    key: "jump",
+    value: function jump() {
+      var currentYear = parseInt(selectYear.value);
+      var currentMonth = parseInt(selectMonth.value);
+    } //FUNCION PARA AGREGAR UN NUEVO HOME OFFICE
+
+  }, {
+    key: "handleAddHome",
+    value: function handleAddHome(day) {
+      var _this2 = this;
+
+      // Setea el mes y dia a dos digitos
+      var month = Number(this.state.currentMonth) + 1 < 10 ? '0' + (Number(this.state.currentMonth) + 1) : Number(this.state.currentMonth) + 1;
+      var newDay = day <= 9 ? '0' + day : day; // Construye la fecha
+
+      var buildDate = "".concat(this.state.currentYear, "-").concat(month, "-").concat(newDay);
+      this.props.addHomeOffice(this.props.idUser, buildDate).then(function () {
+        _this2.props.fetchHomeOffice(_this2.state.currentYear, _this2.state.currentMonth, 'fullStack');
+      });
+    } // FUNCION REUTILIZADA PARA SETEAR LOS ESTADOS (NEXT, PREV, JUMP, CURRENT)
+
+  }, {
+    key: "setStateLocal",
+    value: function setStateLocal(currentMonth, currentYear) {
+      this.setState({
+        currentMonth: currentMonth,
+        currentYear: currentYear
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Calendar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        buildRows: this.state.buildRows,
+        next: this.next,
+        currentMonth: this.state.currentMonth,
+        currentYear: this.state.currentYear,
+        previous: this.previous,
+        jump: this.jump,
+        handleAddHome: this.handleAddHome,
+        listHomeOffice: this.props.listHomeOffice
+      });
+    }
+  }]);
+
+  return HomeOfficeContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    idUser: state.user.user.id,
+    // Extrae el id del usuario conectado.
+    listHomeOffice: state.homeOf.list // Extrae - Consulta los home-office del mes y año enviado
+
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_2__["openCloseNavBar"])(val));
+    },
+    // Agrega un nuevo home office a la bd
+    addHomeOffice: function addHomeOffice(idUser, date) {
+      return dispatch(Object(_redux_actions_homeOffice__WEBPACK_IMPORTED_MODULE_3__["addHomeOffice"])(idUser, date));
+    },
+    // Consulta a la base de datos los eventos del mes y año
+    fetchHomeOffice: function fetchHomeOffice(year, month, sector) {
+      return dispatch(Object(_redux_actions_homeOffice__WEBPACK_IMPORTED_MODULE_3__["fetchHomeOffice"])(year, month, sector));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps, mapDispatchToProps)(HomeOfficeContainer));
+
+/***/ }),
+
 /***/ "./src/components/LoginContainer/index.jsx":
 /*!*************************************************!*\
   !*** ./src/components/LoginContainer/index.jsx ***!
@@ -67440,7 +67920,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _UpdatePassContainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../UpdatePassContainer */ "./src/components/UpdatePassContainer/index.jsx");
 /* harmony import */ var _DisciplineEventContainer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../DisciplineEventContainer */ "./src/components/DisciplineEventContainer/index.jsx");
 /* harmony import */ var _ProfileContainer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../ProfileContainer */ "./src/components/ProfileContainer/index.jsx");
+<<<<<<< HEAD
+/* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../NoFound/index */ "./src/components/NoFound/index.jsx");
+/* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_NoFound_index__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _HomeOfficeContainer_index__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../HomeOfficeContainer/index */ "./src/components/HomeOfficeContainer/index.jsx");
+=======
 /* harmony import */ var _EventCalendarContainer__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../EventCalendarContainer */ "./src/components/EventCalendarContainer/index.jsx");
+>>>>>>> 5f9351b52db5288b61d4ae9af4975c8b1a73a498
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -67475,6 +67961,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5f9351b52db5288b61d4ae9af4975c8b1a73a498
 var MainContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -67518,6 +68008,10 @@ function (_React$Component) {
         component: _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_8__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
+        path: "/home-office",
+        component: _HomeOfficeContainer_index__WEBPACK_IMPORTED_MODULE_15__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
         path: "/allowance/:name",
         component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_4__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
@@ -67544,6 +68038,10 @@ function (_React$Component) {
         exact: true,
         path: "/profile",
         component: _ProfileContainer__WEBPACK_IMPORTED_MODULE_13__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/test",
+        component: _NoFound_index__WEBPACK_IMPORTED_MODULE_14___default.a
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/",
@@ -67651,7 +68149,7 @@ function ModalAviso(_ref) {
       fontSize: 17
     }
   }, titleBoolean), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "aproved btnModalB",
+    className: "approved btnModalB",
     style: {
       padding: "12px 29px"
     },
@@ -68086,6 +68584,12 @@ function (_Component) {
           return _this3.closeCollapse();
         }
       }, " Discipline Event "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location == "/home-office" && "itemActive"),
+        to: "/home-office",
+        onClick: function onClick() {
+          return _this3.closeCollapse();
+        }
+      }, " Home Office "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/health-care" && "itemActive"),
         to: "/health-care",
         onClick: function onClick() {
@@ -68136,6 +68640,17 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Navbar));
+
+/***/ }),
+
+/***/ "./src/components/NoFound/index.jsx":
+/*!******************************************!*\
+  !*** ./src/components/NoFound/index.jsx ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -68781,7 +69296,7 @@ function obraSocial(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68796,6 +69311,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_EVENT_LIST", function() { return RECEIVE_EVENT_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TECH_LIST", function() { return RECEIVE_TECH_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_OPEN_CLOSE_NAVBAR", function() { return SET_OPEN_CLOSE_NAVBAR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HOME_OFFICE_LIST", function() { return RECEIVE_HOME_OFFICE_LIST; });
 // Allowance ===>
 //export const ADD_ALLOWANCE_TO_DB = "ADD_ALLOWANCE_TO_DB";
 //User
@@ -68811,7 +69327,9 @@ var RECEIVE_HISTORY_ALLOWANCES = "RECEIVE_HISTORY_ALLOWANCES"; // DisciplineEven
 var RECEIVE_EVENT_LIST = "RECEIVE_EVENT_LIST";
 var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST"; // NavBar 
 
-var SET_OPEN_CLOSE_NAVBAR = "SET_OPEN_CLOSE_NAVBAR";
+var SET_OPEN_CLOSE_NAVBAR = "SET_OPEN_CLOSE_NAVBAR"; // Home office
+
+var RECEIVE_HOME_OFFICE_LIST = "RECEIVE_HOME_OFFICE_LIST";
 
 /***/ }),
 
@@ -69091,6 +69609,53 @@ var fetchTechonogies = function fetchTechonogies() {
 
 /***/ }),
 
+/***/ "./src/redux/actions/homeOffice.js":
+/*!*****************************************!*\
+  !*** ./src/redux/actions/homeOffice.js ***!
+  \*****************************************/
+/*! exports provided: receiveHomeOffice, fetchHomeOffice, addHomeOffice */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveHomeOffice", function() { return receiveHomeOffice; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchHomeOffice", function() { return fetchHomeOffice; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addHomeOffice", function() { return addHomeOffice; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
+
+
+var receiveHomeOffice = function receiveHomeOffice(homeOfficeList) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_HOME_OFFICE_LIST"],
+    homeOfficeList: homeOfficeList
+  };
+};
+var fetchHomeOffice = function fetchHomeOffice(year, month, sector) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/homeOffice/", {
+      params: {
+        year: year,
+        month: month,
+        sector: sector
+      }
+    }).then(function (homeOfficeList) {
+      return dispatch(receiveHomeOffice(homeOfficeList.data));
+    });
+  };
+};
+var addHomeOffice = function addHomeOffice(idUser, date) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/homeOffice", {
+      idUser: idUser,
+      date: date
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./src/redux/actions/navbar.js":
 /*!*************************************!*\
   !*** ./src/redux/actions/navbar.js ***!
@@ -69316,6 +69881,49 @@ var initialState = {
 
 /***/ }),
 
+/***/ "./src/redux/reducers/homeOfficeReducer.js":
+/*!*************************************************!*\
+  !*** ./src/redux/reducers/homeOfficeReducer.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var initialState = {
+  list: []
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_HOME_OFFICE_LIST"]:
+      return _objectSpread({}, state, {
+        list: _toConsumableArray(action.homeOfficeList)
+      });
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
 /***/ "./src/redux/reducers/index.js":
 /*!*************************************!*\
   !*** ./src/redux/reducers/index.js ***!
@@ -69330,6 +69938,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user-reducer */ "./src/redux/reducers/user-reducer.js");
 /* harmony import */ var _disciplineEvent_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./disciplineEvent-reducer */ "./src/redux/reducers/disciplineEvent-reducer.js");
 /* harmony import */ var _navbarReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./navbarReducer */ "./src/redux/reducers/navbarReducer.js");
+/* harmony import */ var _homeOfficeReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./homeOfficeReducer */ "./src/redux/reducers/homeOfficeReducer.js");
+
 
 
 
@@ -69339,7 +69949,8 @@ __webpack_require__.r(__webpack_exports__);
   allowance: _allowanceReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   user: _user_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
   event: _disciplineEvent_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
-  nav: _navbarReducer__WEBPACK_IMPORTED_MODULE_4__["default"]
+  nav: _navbarReducer__WEBPACK_IMPORTED_MODULE_4__["default"],
+  homeOf: _homeOfficeReducer__WEBPACK_IMPORTED_MODULE_5__["default"]
 }));
 
 /***/ }),

@@ -449,3 +449,54 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
 .whiteFont:hover {
   color:white !important;
 }
+
+ /* === CALENDAR === */
+ .bg-info {
+  background-color: #17a2b8!important;
+}
+.viewEvent {
+  font-size: 12px;
+  background-color: #DE411B;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+  border: 1px solid white;
+}
+.classDay {
+  font-size: 20px;
+  padding: 4px 11px;
+  border-radius: 50%;
+  margin-top: 15px;
+  display: block;
+}
+.classToday {
+  font-size: 20px;
+  background-color: #d8d8e8;
+  padding: 10px 11px;
+  margin: 0 35px;
+  border-radius: 50%;
+  margin-top: 15px;
+  display: block;
+}
+#calendar-body > tr {
+  height: 136px;
+}
+#calendar-body td:hover {
+  background-color: #f0f3f3;
+  cursor:pointer;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.viewHB {
+    background: url("/assets/img/backgroundHB.png") no-repeat center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   max-width: 100% ;
+   text-align: center;
+}
+.textCenter {
+  text-align: center;
+}

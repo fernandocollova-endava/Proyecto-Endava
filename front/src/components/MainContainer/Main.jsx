@@ -12,6 +12,8 @@ import FooterContainer from "../FooterContainer"
 import UpdatePassContainer from "../UpdatePassContainer"
 import DisciplineEvent from "../DisciplineEventContainer"
 import ProfileContainer from "../ProfileContainer"
+import NoFound from '../NoFound/index'
+import HomeOfficeContainer from '../HomeOfficeContainer/index'
 import CalendarContainer from "../EventCalendarContainer"
 
 class MainContainer extends React.Component {
@@ -44,6 +46,7 @@ class MainContainer extends React.Component {
               <Route component={NavbarContainer} />
               <Switch>
                 <Route exact path="/allowance/search" component={AllowancesListContainer}/>
+                <Route exact path="/home-office" component={HomeOfficeContainer} />
                 <Route exact path="/allowance/:name" component={AllowanceContainer}/>
                 <Route exact path="/login/expired" component={UpdatePassContainer}/>
                 <Route exact path="/admin/panel" component={AllowancesListContainer}/> 
