@@ -55,6 +55,13 @@ Router.get("/admin", function(req, res) {
 });
 
 Router.get("/book", function(req, res) {
+
+  console.log("soy req", req.query.adminPath)
+
+  let queryEmployee = req.query.adminPath == "true"
+    ? { id: { [Op.ne]: req.query.userId } } // Trae todos los usuarios excepto el propio
+    : { id: req.query.userId }; 
+
   Allowance.findOne({
     
     where: {
@@ -67,7 +74,13 @@ Router.get("/book", function(req, res) {
           model: Employee,
           as: "employeeDetail",
           attributes: ["name"],
+          queryEmployee
         },
+        {
+          model: Allowance,
+          as: "allowanceDetail",
+          attributes: ["name", "id"],
+        }
       ],
       // attributes: [
       //   "amount",
@@ -142,7 +155,7 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
               status: "pending"
             }).then(AllowanceDetail_Instance => {
               // Instancia de la creación del registro final Empleado
-              AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id, employeeInstance.name);
+              AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id);
               // Instancia de la creación del registro final Beneficio
               AllowanceDetail_Instance.setAllowanceDetail(allowanceInstance.id);
             });
@@ -176,7 +189,7 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
             status: "pending"
           }).then(AllowanceDetail_Instance => {
             // Instancia de la creación del registro final Empleado
-            AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id, employeeInstance.name);
+            AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id);
             // Instancia de la creación del registro final Beneficio
             AllowanceDetail_Instance.setAllowanceDetail(allowanceInstance.id);
           });

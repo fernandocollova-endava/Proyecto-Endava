@@ -2599,11 +2599,7 @@ exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height:
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-<<<<<<< HEAD
-exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n    .bannerAllowance{\n        margin-top: -30px;        \n    }\n    .HideMobile {\n        display: none;\n    }\n\n    /* == CALENDARIO == */\n    .classDay {\n        font-size: 20px;\n        padding: 4px 11px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .classToday {\n        font-size: 20px;\n        background-color: #d8d8e8;\n        padding: 10px 11px;\n        margin: 0 5px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n}", ""]);
-=======
-exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n    .bannerAllowance{\n        margin-top: -30px;        \n    }\n    .HideMobile {\n        display: none;\n    }\n    .timeline__year{\n        margin-bottom: 50px\n    \n      }\n}", ""]);
->>>>>>> 5f9351b52db5288b61d4ae9af4975c8b1a73a498
+exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n    .bannerAllowance{\n        margin-top: -30px;        \n    }\n    .HideMobile {\n        display: none;\n    }\n\n\n    /* == CALENDARIO == */\n    .classDay {\n        font-size: 20px;\n        padding: 4px 11px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .classToday {\n        font-size: 20px;\n        background-color: #d8d8e8;\n        padding: 10px 11px;\n        margin: 0 5px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .timeline__year{\n        margin-bottom: 50px\n    }\n}\n", ""]);
 
 
 /***/ }),
@@ -65540,68 +65536,6 @@ module.exports = {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "./src/auxFunctions/auxParser.js":
-/*!***************************************!*\
-  !*** ./src/auxFunctions/auxParser.js ***!
-  \***************************************/
-/*! exports provided: parserRow */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parserRow", function() { return parserRow; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-
-
-var parserRow = function parserRow(arr, deleteAllowance, viewDetails, allUser) {
-  var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return arr.map(function (a) {
-    var split = a.paymentDate.split('-');
-    return {
-      type: a.allowanceDetail.name.toUpperCase(),
-      name: a.employeeDetail.name.toUpperCase(),
-      amount: a.amount,
-      limitAmount: a.limitAmount,
-      employeeAmount: a.employeeAmount,
-      paymentDate: "".concat(Month[Number(split[1])], "-").concat(split[0]),
-      status: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: a.status
-      }, a.status),
-      file: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-        className: "mb-3 btnEv-red rounded mb-0 border-0",
-        onClick: function onClick() {
-          return viewDetails(a.id, a.allowanceDetail.id);
-        },
-        color: "default",
-        rounded: true,
-        size: "sm"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        key: "cell3",
-        className: "far fa-file-pdf",
-        size: "2x",
-        "aria-hidden": "true"
-      }), " Details "),
-      "delete": react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, a.status === 'pending' && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        onClick: function onClick() {
-          return deleteAllowance(a.id);
-        },
-        className: "greyColor cursorPointer"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        key: "cell1",
-        className: "far fa-trash-alt iconAllowance ",
-        style: {
-          fontSize: 20
-        }
-      }), " Delete ") : "-")
-    };
-  });
-};
-
-/***/ }),
-
 /***/ "./src/components/AdminBookContainer/adminBook.jsx":
 /*!*********************************************************!*\
   !*** ./src/components/AdminBookContainer/adminBook.jsx ***!
@@ -65615,8 +65549,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AllowancesListContainer/rowAllowance */ "./src/components/AllowancesListContainer/rowAllowance.jsx");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -65624,7 +65560,11 @@ function allowanceList(_ref) {
   var handleFilterStatus = _ref.handleFilterStatus,
       alertPending = _ref.alertPending,
       bookAllowances = _ref.bookAllowances,
-      allowanceStatus = _ref.allowanceStatus;
+      allowanceStatus = _ref.allowanceStatus,
+      deleteAllowance = _ref.deleteAllowance,
+      viewDetails = _ref.viewDetails,
+      allUser = _ref.allUser,
+      urlName = _ref.urlName;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -65681,23 +65621,23 @@ function allowanceList(_ref) {
     md: "12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
-  }, bookAllowances.length === 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
-    btn: true,
-    fixed: true,
-    responsive: true,
-    className: "paddingTable"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableHead"], {
-    columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__["columnsBook"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableBody"], {
-    rows: {
-      // name:bookAllowances.employeeDetail.name,
-      amount: bookAllowances.amount,
-      employeeAmount: bookAllowances.employeeAmount,
-      installments: bookAllowances.installments,
-      receiptPath: bookAllowances.receiptPath,
-      status: bookAllowances.status
-    }
-  })))))));
+  }, bookAllowances.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    "class": "table btn-table table-fixed paddingTable"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
+    "class": ""
+  }, console.log("soy el boooooook", urlName), urlName == "book" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    urlName: urlName,
+    deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
+    ,
+    viewDetails: viewDetails // Se envia la funcion para mostrar el modal (onClick)
+    ,
+    allUser: allUser // Si es admin o no
+    ,
+    allowanceList: bookAllowances // Listado de la consulta
+
+  }))))))));
 }
 
 /***/ }),
@@ -65719,8 +65659,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
 /* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
 /* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
-/* harmony import */ var _auxFunctions_auxParser__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../auxFunctions/auxParser */ "./src/auxFunctions/auxParser.js");
-/* harmony import */ var _AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AdminBookContainer/adminBook */ "./src/components/AdminBookContainer/adminBook.jsx");
+/* harmony import */ var _AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../AdminBookContainer/adminBook */ "./src/components/AdminBookContainer/adminBook.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65748,7 +65687,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
 var AdminBookContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -65766,11 +65704,11 @@ function (_React$Component) {
       modalBoolean: false,
       activeAllowance: {},
       history: [],
-      activeItem: '1',
-      allowanceType: '',
-      titleBoolean: '',
-      msjSave: '',
-      allowanceStatus: '',
+      activeItem: "1",
+      allowanceType: "",
+      titleBoolean: "",
+      msjSave: "",
+      allowanceStatus: "",
       alertPending: 0
     };
     _this.toggleDetails = _this.toggleDetails.bind(_assertThisInitialized(_this));
@@ -65792,11 +65730,11 @@ function (_React$Component) {
       this.props.fetchBookAllowances();
       this.props.openCloseNavBar(false); // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
 
-      if (this.props.user.isAdmin && this.props.allUser) {
+      if (this.props.user.isAdmin && this.props.adminPath) {
         this.props.fetchCountPending(this.props.user.id).then(function (count) {
           _this2.setState({
             alertPending: count.data
-          }); // Guarda cantidad de pendientes 
+          }); // Guarda cantidad de pendientes
 
         });
       }
@@ -65806,26 +65744,23 @@ function (_React$Component) {
     value: function componentDidUpdate(prevProps, prevState) {
       var _this3 = this;
 
-      if (prevProps.allUser !== this.props.allUser) {
+      if (prevProps.adminPath !== this.props.adminPath) {
         this.setState({
           alertPending: 0,
           // Resetea el estado a cero
-          allowanceType: '',
+          allowanceType: "",
           // Resetea el select de type
-          allowanceStatus: '' // Resetea el select de Status
+          allowanceStatus: "" // Resetea el select de Status
 
         }, function () {
-          _this3.props.fetchAllowances(_this3.props.user.id, _this3.state.allowanceType, _this3.state.allowanceStatus, _this3.props.allUser);
+          _this3.props.fetchBookAllowances(_this3.props.user.id, _this3.props.adminPath);
         }); // Si es admin y si esta en la ruta panel consulta la cantidad..
-
-        if (this.props.user.isAdmin && this.props.allUser) {
-          this.props.fetchCountPending(this.props.user.id).then(function (count) {
-            _this3.setState({
-              alertPending: count.data
-            }); // Guarda cantidad de pendientes para alert al admin
-
-          });
-        }
+        // if (this.props.user.isAdmin && this.props.adminPath) {
+        //   this.props.fetchCountPending(this.props.user.id)
+        //     .then(count => {
+        //       this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes para alert al admin
+        //     })
+        // }
       }
     } // FUNCION DE CONSULTA HISTORIAL / DETALLE
 
@@ -65834,6 +65769,7 @@ function (_React$Component) {
     value: function viewDetails(id, allowanceId) {
       var _this4 = this;
 
+      console.log("entreee al view", id, allowanceId);
       this.props.fetchAllowanceActive(id).then(function (data) {
         var idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
 
@@ -65851,7 +65787,7 @@ function (_React$Component) {
       this.setState({
         modal: !this.state.modal,
         activeItem: "1",
-        msjSave: ''
+        msjSave: ""
       });
     } // TOGGLE MODAL AVISO
 
@@ -65860,7 +65796,7 @@ function (_React$Component) {
     value: function toggleAviso() {
       this.setState({
         modalAviso: !this.state.modalAviso,
-        msjSave: ''
+        msjSave: ""
       });
     } // TOGGLE MODAL BOOLEAN
 
@@ -65905,7 +65841,7 @@ function (_React$Component) {
           titleMsj: "Success"
         });
 
-        _this5.props.fetchAllowances(_this5.props.user.id, _this5.state.allowanceType, _this5.state.allowanceStatus, _this5.props.allUser);
+        _this5.props.fetchBookAllowances(_this5.props.user.id, _this5.props.adminPath);
       })["catch"](function () {
         _this5.setState({
           modalBoolean: false,
@@ -65924,13 +65860,13 @@ function (_React$Component) {
       e.preventDefault();
       this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
         _this6.setState({
-          msjSave: 'Saved!'
+          msjSave: "Saved!"
         });
 
-        _this6.props.fetchAllowances(_this6.props.user.id, _this6.state.allowanceType, _this6.state.allowanceStatus, _this6.props.allUser);
+        _this6.props.fetchBookAllowances(_this6.props.user.id, _this6.props.adminPath);
       })["catch"](function () {
         _this6.setState({
-          msjSave: 'Ups!, an error occurred while processing the request...'
+          msjSave: "Ups!, an error occurred while processing the request..."
         });
       });
     }
@@ -65965,12 +65901,15 @@ function (_React$Component) {
         actionOk: this.actionOk,
         titleBoolean: this.state.titleBoolean,
         data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_7__["default"], {
         alertPending: this.state.alertPending,
         handleClick: this.handleClick,
         handleFilterStatus: this.handleFilterStatus,
         bookAllowances: this.props.bookAllowances,
-        allowanceStatus: this.state.allowanceStatus
+        allowanceStatus: this.state.allowanceStatus,
+        deleteAllowance: this.props.deleteAllowance,
+        viewDetails: this.viewDetails,
+        urlName: this.props.urlName
       }));
     }
   }]);
@@ -65978,22 +65917,24 @@ function (_React$Component) {
   return AdminBookContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(state, owner) {
+var mapStateToProps = function mapStateToProps(state, own) {
+  var urlName = own.match.url.substring(7, 11);
   return {
+    urlName: urlName,
     user: state.user.user,
     bookAllowances: state.allowance.bookAllowances,
     activeAllowance: state.allowance.activeAllowances,
     history: state.allowance.historyAllowances,
     // allUser => Consulta si la ruta ingresada es "/admin/panel", de ser correcto permite en el back mostrar u ocultar uno o todos los usuarios.
-    allUser: owner.match.path == "/admin/panel" // true o false
+    adminPath: own.match.path == "/admin/book" // true o false
 
   };
 };
 
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
-    fetchBookAllowances: function fetchBookAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchBookAllowances"])());
+    fetchBookAllowances: function fetchBookAllowances(user, adminPath) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchBookAllowances"])(user, adminPath));
     },
     openCloseNavBar: function openCloseNavBar(val) {
       return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_3__["openCloseNavBar"])(val));
@@ -66008,7 +65949,7 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     deleteAllowance: function deleteAllowance(id) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["deleteAllowance"])(id));
     },
-    // Elimina detalle 
+    // Elimina detalle
     editStatusAllowance: function editStatusAllowance(id, status, observation) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["editStatusAllowance"])(id, status, observation));
     },
@@ -66024,8 +65965,6 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
 
 /***/ }),
 
-=======
->>>>>>> f6e2a6a2a6279e8255a10825c3f71d833337e78a
 /***/ "./src/components/AllowanceContainer/index.jsx":
 /*!*****************************************************!*\
   !*** ./src/components/AllowanceContainer/index.jsx ***!
@@ -66424,31 +66363,15 @@ function allowanceList(_ref) {
     "class": "table btn-table table-fixed paddingTable"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
     "class": ""
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
-    "class": ""
-  }, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
-    "class": ""
-  }, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
-    "class": ""
-  }, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
-    "class": ""
-  }, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
-    "class": ""
-  }, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
-    "class": ""
-  }, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
-    "class": ""
-  }, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
-    "class": ""
-  }, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
-    "class": ""
-  }, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rowAllowance__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rowAllowance__WEBPACK_IMPORTED_MODULE_3__["default"], {
     deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
     ,
     viewDetails: viewDetails // Se envia la funcion para mostrar el modal (onClick)
     ,
-    allUser: allUser,
-    allowanceList: allowanceList
+    allUser: allUser // Si es admin o no
+    ,
+    allowanceList: allowanceList // Listado de la consulta
+
   }))))))));
 }
 
@@ -66708,12 +66631,6 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // Condicional para redefinir los objetos
-      var val = Object(_auxFunctions_auxParser__WEBPACK_IMPORTED_MODULE_8__["parserRow"])(this.props.allowanceList, // Se envia el listado a depurar
-      this.deleteAllowance, // Se envia la funcion para eliminar (onClick)
-      this.viewDetails, // Se envia la funcion para mostrar el modal (onClick)
-      this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
-      );
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
@@ -66737,12 +66654,24 @@ function (_React$Component) {
         data: this.state.data
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
         alertPending: this.state.alertPending,
-        handleClick: this.handleClick,
-        handleFilterStatus: this.handleFilterStatus,
-        allowanceList: val,
-        allowanceType: this.state.allowanceType,
-        allowanceStatus: this.state.allowanceStatus,
-        adminAllowances: this.props.adminAllowances
+        handleClick: this.handleClick // Filtro de tipo de beneficio
+        ,
+        handleFilterStatus: this.handleFilterStatus // Filtro de status
+        ,
+        allowanceList: this.props.allowanceList // Lista de los beneficios
+        ,
+        deleteAllowance: this.deleteAllowance // Se envia la funcion para eliminar (onClick)
+        ,
+        viewDetails: this.viewDetails // Se envia la funcion para mostrar el modal (onClick)
+        ,
+        allUser: this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
+        ,
+        allowanceType: this.state.allowanceType // valor de tipo de beneficio
+        ,
+        allowanceStatus: this.state.allowanceStatus // valor del status actual
+        ,
+        adminAllowances: this.props.adminAllowances // Boolean si es admin o no
+
       }));
     }
   }]);
@@ -66797,6 +66726,57 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AllowanceListContainer));
+
+/***/ }),
+
+/***/ "./src/components/AllowancesListContainer/rowAllowance.jsx":
+/*!*****************************************************************!*\
+  !*** ./src/components/AllowancesListContainer/rowAllowance.jsx ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rowAllowance; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function rowAllowance(_ref) {
+  var deleteAllowance = _ref.deleteAllowance,
+      viewDetails = _ref.viewDetails,
+      allUser = _ref.allUser,
+      allowanceList = _ref.allowanceList,
+      urlName = _ref.urlName;
+  var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, console.log("soy los books del roow", allowanceList), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, allowanceList && allowanceList.map(function (row) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, "    ", console.log(row.allowanceDetail.id, row.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.allowanceDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: row.status
+    }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      onClick: function onClick() {
+        return viewDetails(row.id, row.allowanceDetail.id);
+      },
+      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-file-pdf",
+      "aria-hidden": "true"
+    }), " Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Ripple "
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status === 'pending' && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      onClick: function onClick() {
+        return deleteAllowance(row.id);
+      },
+      className: "greyColor cursorPointer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-trash-alt iconAllowance "
+    }), " Delete ") : ''));
+  })));
+}
 
 /***/ }),
 
@@ -66945,21 +66925,16 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-<<<<<<< HEAD
       var _this3 = this;
 
       var maxAmount = this.props.listAllowance.find(function (allow) {
         return allow.name === _this3.props.nameUrl;
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__["default"], {
-=======
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
->>>>>>> f6e2a6a2a6279e8255a10825c3f71d833337e78a
         modal: this.state.modal,
         toggle: this.toggle,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-<<<<<<< HEAD
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "upperCaseFonts marginTextLeft"
       }, "Manage your ", this.props.nameUrl, " allowance."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBRow"], {
@@ -67033,35 +67008,6 @@ function (_React$Component) {
         height: "400px",
         type: "application/pdf"
       }))));
-=======
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        modalBoolean: this.state.modalBoolean,
-        toggleBoolean: this.toggleBoolean,
-        actionOk: this.actionOk,
-        titleBoolean: this.state.titleBoolean,
-        data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        alertPending: this.state.alertPending,
-        handleClick: this.handleClick // Filtro de tipo de beneficio
-        ,
-        handleFilterStatus: this.handleFilterStatus // Filtro de status
-        ,
-        allowanceList: this.props.allowanceList // Lista de los beneficios
-        ,
-        deleteAllowance: this.deleteAllowance // Se envia la funcion para eliminar (onClick)
-        ,
-        viewDetails: this.viewDetails // Se envia la funcion para mostrar el modal (onClick)
-        ,
-        allUser: this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
-        ,
-        allowanceType: this.state.allowanceType // valor de tipo de beneficio
-        ,
-        allowanceStatus: this.state.allowanceStatus // valor del status actual
-        ,
-        adminAllowances: this.props.adminAllowances // Boolean si es admin o no
-
-      }));
->>>>>>> f6e2a6a2a6279e8255a10825c3f71d833337e78a
     }
   }]);
 
@@ -67093,58 +67039,6 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(BookAllowanceContainer));
-
-/***/ }),
-
-/***/ "./src/components/AllowancesListContainer/rowAllowance.jsx":
-/*!*****************************************************************!*\
-  !*** ./src/components/AllowancesListContainer/rowAllowance.jsx ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rowAllowance; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-
-
-function rowAllowance(_ref) {
-  var deleteAllowance = _ref.deleteAllowance,
-      viewDetails = _ref.viewDetails,
-      allUser = _ref.allUser,
-      allowanceList = _ref.allowanceList;
-  var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, allowanceList && allowanceList.map(function (row) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-      className: "upperCaseFonts"
-    }, row.allowanceDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-      className: "upperCaseFonts"
-    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-      className: row.status
-    }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      type: "button",
-      onClick: function onClick() {
-        return viewDetails(row.id, row.allowanceDetail.id);
-      },
-      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "far fa-file-pdf",
-      "aria-hidden": "true"
-    }), " Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "Ripple "
-    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status === 'pending' && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      onClick: function onClick() {
-        return deleteAllowance(row.id);
-      },
-      className: "greyColor cursorPointer"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "far fa-trash-alt iconAllowance "
-    }), " Delete ") : ''));
-  })));
-}
 
 /***/ }),
 
@@ -68761,18 +68655,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _UpdatePassContainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../UpdatePassContainer */ "./src/components/UpdatePassContainer/index.jsx");
 /* harmony import */ var _DisciplineEventContainer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../DisciplineEventContainer */ "./src/components/DisciplineEventContainer/index.jsx");
 /* harmony import */ var _ProfileContainer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../ProfileContainer */ "./src/components/ProfileContainer/index.jsx");
-<<<<<<< HEAD
 /* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../NoFound/index */ "./src/components/NoFound/index.jsx");
 /* harmony import */ var _NoFound_index__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_NoFound_index__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var _HomeOfficeContainer_index__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../HomeOfficeContainer/index */ "./src/components/HomeOfficeContainer/index.jsx");
-=======
-/* harmony import */ var _EventCalendarContainer__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../EventCalendarContainer */ "./src/components/EventCalendarContainer/index.jsx");
-<<<<<<< HEAD
-/* harmony import */ var _BookAllowanceContainer__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../BookAllowanceContainer */ "./src/components/BookAllowanceContainer/index.jsx");
-/* harmony import */ var _AdminBookContainer__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../AdminBookContainer */ "./src/components/AdminBookContainer/index.jsx");
-=======
->>>>>>> 5f9351b52db5288b61d4ae9af4975c8b1a73a498
->>>>>>> f6e2a6a2a6279e8255a10825c3f71d833337e78a
+/* harmony import */ var _EventCalendarContainer__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../EventCalendarContainer */ "./src/components/EventCalendarContainer/index.jsx");
+/* harmony import */ var _BookAllowanceContainer__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../BookAllowanceContainer */ "./src/components/BookAllowanceContainer/index.jsx");
+/* harmony import */ var _AdminBookContainer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../AdminBookContainer */ "./src/components/AdminBookContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -68807,15 +68695,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 5f9351b52db5288b61d4ae9af4975c8b1a73a498
->>>>>>> f6e2a6a2a6279e8255a10825c3f71d833337e78a
+
 var MainContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -68859,13 +68742,12 @@ function (_React$Component) {
         component: _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_8__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
-<<<<<<< HEAD
         path: "/allowance/book",
-        component: _BookAllowanceContainer__WEBPACK_IMPORTED_MODULE_15__["default"]
-=======
+        component: _BookAllowanceContainer__WEBPACK_IMPORTED_MODULE_17__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
         path: "/home-office",
         component: _HomeOfficeContainer_index__WEBPACK_IMPORTED_MODULE_15__["default"]
->>>>>>> f6e2a6a2a6279e8255a10825c3f71d833337e78a
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/allowance/:name",
@@ -68881,7 +68763,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/admin/book",
-        component: _AdminBookContainer__WEBPACK_IMPORTED_MODULE_16__["default"]
+        component: _AdminBookContainer__WEBPACK_IMPORTED_MODULE_18__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/health-care",
@@ -68893,15 +68775,11 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/calendar",
-        component: _EventCalendarContainer__WEBPACK_IMPORTED_MODULE_14__["default"]
+        component: _EventCalendarContainer__WEBPACK_IMPORTED_MODULE_16__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/profile",
         component: _ProfileContainer__WEBPACK_IMPORTED_MODULE_13__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/test",
-        component: _NoFound_index__WEBPACK_IMPORTED_MODULE_14___default.a
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/",
@@ -69470,22 +69348,22 @@ function (_Component) {
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Event calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        className: "item ".concat(location == "/calendar" && "itemActive"),
+      }, " Event calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "item",
+        onClick: this.handleLogOut
+      }, " Logout "), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location == "/admin/book" && "itemActive"),
         to: "/admin/book",
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Admin Book Panel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "item",
-        onClick: this.handleLogOut
-      }, " Logout "), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      }, " Admin Book Panel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/admin/panel" && "itemActive"),
         to: "/admin/panel",
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Admin Panel ") : null));
+      }, " Admin Panel ")) : null));
     }
   }]);
 
@@ -70172,11 +70050,7 @@ function obraSocial(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-<<<<<<< HEAD
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR */
-=======
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST */
->>>>>>> f6e2a6a2a6279e8255a10825c3f71d833337e78a
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70298,6 +70172,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 var receiveAllowances = function receiveAllowances(allowanceList) {
@@ -70406,12 +70282,32 @@ var fetchCountPending = function fetchCountPending(userId) {
     });
   };
 };
-var fetchBookAllowances = function fetchBookAllowances() {
+var fetchBookAllowances = function fetchBookAllowances(user, adminPath) {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book").then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book", {
+      user: user,
+      adminPath: adminPath
+    }).then(function (res) {
       return res.data;
     }).then(function (bookAllowances) {
-      console.log("soy bookAlll del axios", bookAllowances);
+      var bookAllowancesList = [];
+
+      for (var i = 0; i < bookAllowances.length; i++) {
+        for (var j = i + 1; j < irray.length; j++) {
+          if (bookAllowances[i].employeeDetailId == bookAllowances[j].employeeDetailId) {
+            bookAllowancesList.push(_defineProperty({
+              id: bookAllowances[j].allowanceDetail.id,
+              type: bookAllowances[j].allowanceDetail.id
+            }, "type", bookAllowances[j].allowanceDetail.id));
+          }
+
+          bookAllowancesList.push({
+            id: bookAllowances.allowanceDetail.id,
+            type: bookAllowances[i].allowanceDetail.name
+          });
+        }
+      }
+
       dispatch(receiveBookAllowances(bookAllowances));
     });
   };

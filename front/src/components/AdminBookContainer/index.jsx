@@ -1,89 +1,94 @@
 import React from "react";
 import { connect } from "react-redux";
 import {
-  fetchBookAllowances, fetchAllowanceActive, fetchAllowanceHistory,
-  deleteAllowance, editStatusAllowance, fetchCountPending
-} from "../../redux/actions/allowanceActions"
-import { openCloseNavBar } from "../../redux/actions/navbar"
-import ModalDetails from '../ModalContainer/modalDetail'
-import ModalAviso from '../ModalContainer/modalAviso'
-import ModalBoolean from '../ModalContainer/modalBoolean'
-import { parserRow } from '../../auxFunctions/auxParser'
-import AdminBook from "../AdminBookContainer/adminBook"
+  fetchBookAllowances,
+  fetchAllowanceActive,
+  fetchAllowanceHistory,
+  deleteAllowance,
+  editStatusAllowance,
+  fetchCountPending
+} from "../../redux/actions/allowanceActions";
+import { openCloseNavBar } from "../../redux/actions/navbar";
+import ModalDetails from "../ModalContainer/modalDetail";
+import ModalAviso from "../ModalContainer/modalAviso";
+import ModalBoolean from "../ModalContainer/modalBoolean";
+import AdminBook from "../AdminBookContainer/adminBook";
 
 class AdminBookContainer extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
       modal: false,
       modalAviso: false,
       modalBoolean: false,
       activeAllowance: {},
       history: [],
-      activeItem: '1',
-      allowanceType: '',
-      titleBoolean: '',
-      msjSave: '',
-      allowanceStatus: '',
+      activeItem: "1",
+      allowanceType: "",
+      titleBoolean: "",
+      msjSave: "",
+      allowanceStatus: "",
       alertPending: 0
     };
 
-    this.toggleDetails = this.toggleDetails.bind(this)
-    this.toggleBoolean = this.toggleBoolean.bind(this)
-    this.togglePanel = this.togglePanel.bind(this)
-    this.viewDetails = this.viewDetails.bind(this)
-    this.toggleAviso = this.toggleAviso.bind(this)
-    this.deleteAllowance = this.deleteAllowance.bind(this)
-    this.actionOk = this.actionOk.bind(this)
-    this.handleSaveConfirm = this.handleSaveConfirm.bind(this)
- 
+    this.toggleDetails = this.toggleDetails.bind(this);
+    this.toggleBoolean = this.toggleBoolean.bind(this);
+    this.togglePanel = this.togglePanel.bind(this);
+    this.viewDetails = this.viewDetails.bind(this);
+    this.toggleAviso = this.toggleAviso.bind(this);
+    this.deleteAllowance = this.deleteAllowance.bind(this);
+    this.actionOk = this.actionOk.bind(this);
+    this.handleSaveConfirm = this.handleSaveConfirm.bind(this);
   }
 
   componentDidMount() {
-    this.props.fetchBookAllowances()
-    this.props.openCloseNavBar(false)
+    this.props.fetchBookAllowances();
+    this.props.openCloseNavBar(false);
     // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
-    if (this.props.user.isAdmin && this.props.allUser) {
-      this.props.fetchCountPending(this.props.user.id)
-        .then(count => {
-          this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes 
-        })
+    if (this.props.user.isAdmin && this.props.adminPath) {
+      this.props.fetchCountPending(this.props.user.id).then(count => {
+        this.setState({ alertPending: count.data }); // Guarda cantidad de pendientes
+      });
     }
   }
+
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.allUser !== this.props.allUser) {
-      
-      this.setState({ 
-        alertPending: 0, // Resetea el estado a cero
-        allowanceType:'', // Resetea el select de type
-        allowanceStatus:'' // Resetea el select de Status
-       },()=>{
-        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
-       }) 
+    if (prevProps.adminPath !== this.props.adminPath) {
+      this.setState(
+        {
+          alertPending: 0, // Resetea el estado a cero
+          allowanceType: "", // Resetea el select de type
+          allowanceStatus: "" // Resetea el select de Status
+        },
+        () => {
+          this.props.fetchBookAllowances(
+            this.props.user.id,
+            this.props.adminPath
+          );
+        }
+      );
 
       // Si es admin y si esta en la ruta panel consulta la cantidad..
-      if (this.props.user.isAdmin && this.props.allUser) {
-        this.props.fetchCountPending(this.props.user.id)
-          .then(count => {
-            this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes para alert al admin
-          })
-      }
+      // if (this.props.user.isAdmin && this.props.adminPath) {
+      //   this.props.fetchCountPending(this.props.user.id)
+      //     .then(count => {
+      //       this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes para alert al admin
+      //     })
+      // }
     }
   }
 
   // FUNCION DE CONSULTA HISTORIAL / DETALLE
   viewDetails(id, allowanceId) {
-    this.props.fetchAllowanceActive(id)
-      .then(data => {
-        let idUserHistory = data.activeAllowances.employeeDetail.id // Retorna el id del usuario del detalle seleccionado
-        this.props.fetchAllowanceHistory(idUserHistory, allowanceId)
-          .then(() => {
-            this.setState({
-              modal: true,
-            });
-          })
-      })
-
+    console.log("entreee al view", id, allowanceId);
+    this.props.fetchAllowanceActive(id).then(data => {
+      let idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
+      this.props.fetchAllowanceHistory(idUserHistory, allowanceId).then(() => {
+        this.setState({
+          modal: true
+        });
+      });
+    });
   }
 
   // TOGGLE MODAL HISTORIAL / DETALLE
@@ -91,7 +96,7 @@ class AdminBookContainer extends React.Component {
     this.setState({
       modal: !this.state.modal,
       activeItem: "1",
-      msjSave: ''
+      msjSave: ""
     });
   }
 
@@ -99,7 +104,7 @@ class AdminBookContainer extends React.Component {
   toggleAviso() {
     this.setState({
       modalAviso: !this.state.modalAviso,
-      msjSave: ''
+      msjSave: ""
     });
   }
 
@@ -125,19 +130,23 @@ class AdminBookContainer extends React.Component {
       data: {
         id
       }
-    })
+    });
   }
   // FUNCION PARA EJECUTAR LA ACCION GENERICA DEL MODAL BOOLEAN
   actionOk(data) {
-    this.props.deleteAllowance(data.id)
+    this.props
+      .deleteAllowance(data.id)
       .then(() => {
         this.setState({
           modalBoolean: false,
           modalAviso: true,
           textMsj: "The request has been successfully eliminated...",
           titleMsj: "Success"
-        })
-        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
+        });
+        this.props.fetchBookAllowances(
+          this.props.user.id,
+          this.props.adminPath
+        );
       })
       .catch(() => {
         this.setState({
@@ -145,28 +154,34 @@ class AdminBookContainer extends React.Component {
           modalAviso: true,
           textMsj: "Ups!, an error occurred while processing the request...",
           titleMsj: "Error"
-        })
-      })
+        });
+      });
   }
   // Funcion para updatear el status de los beneficios
   handleSaveConfirm(e) {
-    e.preventDefault()
-    this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value)
+    e.preventDefault();
+    this.props
+      .editStatusAllowance(
+        e.target.id.value,
+        e.target.status.value,
+        e.target.observation.value
+      )
       .then(() => {
         this.setState({
-          msjSave: 'Saved!'
-        })
-        this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
+          msjSave: "Saved!"
+        });
+        this.props.fetchBookAllowances(
+          this.props.user.id,
+          this.props.adminPath
+        );
       })
       .catch(() => {
         this.setState({
-          msjSave: 'Ups!, an error occurred while processing the request...'
-        })
-      })
-
+          msjSave: "Ups!, an error occurred while processing the request..."
+        });
+      });
   }
   render() {
-
     // Condicional para redefinir los objetos
     // let val = parserRow(
     //   this.props.bookAllowances, // Se envia el listado a depurar
@@ -207,36 +222,43 @@ class AdminBookContainer extends React.Component {
           handleFilterStatus={this.handleFilterStatus}
           bookAllowances={this.props.bookAllowances}
           allowanceStatus={this.state.allowanceStatus}
-        
+          deleteAllowance={this.props.deleteAllowance}
+          viewDetails={this.viewDetails}
+          urlName={this.props.urlName}
         />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state, owner) => {
-  return {
+const mapStateToProps = (state, own) => {
+  var urlName = own.match.url.substring(7, 11);
 
+  return {
+    urlName: urlName,
     user: state.user.user,
     bookAllowances: state.allowance.bookAllowances,
     activeAllowance: state.allowance.activeAllowances,
     history: state.allowance.historyAllowances,
     // allUser => Consulta si la ruta ingresada es "/admin/panel", de ser correcto permite en el back mostrar u ocultar uno o todos los usuarios.
-    allUser: (owner.match.path == "/admin/panel") // true o false
+    adminPath: own.match.path == "/admin/book" // true o false
   };
 };
 
 const MapDispatchToProps = dispatch => {
   return {
-    fetchBookAllowances: () => dispatch(fetchBookAllowances()),
-    openCloseNavBar: (val) => dispatch(openCloseNavBar(val)),
-    fetchAllowanceActive: (id) => dispatch(fetchAllowanceActive(id)),
-    fetchAllowanceHistory: (employeeId, allowanceId) => dispatch(fetchAllowanceHistory(employeeId, allowanceId)),//trae la data para el "history del detalle modal"
-    deleteAllowance: (id) => dispatch(deleteAllowance(id)), // Elimina detalle 
-    editStatusAllowance: (id, status, observation) => dispatch(editStatusAllowance(id, status, observation)), // Switch State
-    fetchCountPending: (userId) => dispatch(fetchCountPending(userId)) // Consulta cantidad de allowance pendientes
+    fetchBookAllowances: (user, adminPath) =>
+      dispatch(fetchBookAllowances(user, adminPath)),
+    openCloseNavBar: val => dispatch(openCloseNavBar(val)),
+    fetchAllowanceActive: id => dispatch(fetchAllowanceActive(id)),
+    fetchAllowanceHistory: (employeeId, allowanceId) =>
+      dispatch(fetchAllowanceHistory(employeeId, allowanceId)), //trae la data para el "history del detalle modal"
+    deleteAllowance: id => dispatch(deleteAllowance(id)), // Elimina detalle
+    editStatusAllowance: (id, status, observation) =>
+      dispatch(editStatusAllowance(id, status, observation)), // Switch State
+    fetchCountPending: userId => dispatch(fetchCountPending(userId)) // Consulta cantidad de allowance pendientes
   };
-}
+};
 export default connect(
   mapStateToProps,
   MapDispatchToProps

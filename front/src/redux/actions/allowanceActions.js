@@ -111,12 +111,32 @@ export const fetchCountPending = (userId) => dispatch => {
       }
     })
 };
-export const fetchBookAllowances = () => dispatch => {  
+export const fetchBookAllowances = (user, adminPath) => dispatch => {  
  
-return axios.get("/api/allowance/book")
+return axios.get("/api/allowance/book",{user:user,adminPath:adminPath})
 .then(res =>res.data)
 .then(bookAllowances=>{
-  console.log("soy bookAlll del axios", bookAllowances)
+
+  var bookAllowancesList=[]
+  for (let i = 0; i < bookAllowances.length; i++) {
+    for (let j = i+1; j < irray.length; j++){
+      if (bookAllowances[i].employeeDetailId == bookAllowances[j].employeeDetailId) {
+      bookAllowancesList.push({
+        id:bookAllowances[j].allowanceDetail.id,
+        type:bookAllowances[j].allowanceDetail.id,
+        type:bookAllowances[j].allowanceDetail.id,
+      }) 
+    }
+    
+        bookAllowancesList.push({
+          id:bookAllowances.allowanceDetail.id,
+          type:bookAllowances[i].allowanceDetail.name
+
+        }) 
+      
+    }
+    
+  }
   dispatch(receiveBookAllowances(bookAllowances))
 })
 }
