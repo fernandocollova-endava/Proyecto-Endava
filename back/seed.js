@@ -12,7 +12,8 @@ Employee.create(
     "isAdmin": true,
     password: '1234',
     passwordChanged: false,
-    birthdayDate: '2019-07-20'
+    birthDate: '2019-07-20',
+    proyect:'Proyect name 1'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -23,7 +24,8 @@ Employee.create({
     "isAdmin": true,
     password: '1234',
     passwordChanged: false,
-    birthdayDate: '2019-08-06'
+    birthDate: '2019-08-06',
+    proyect:'Proyect name 1'
     //salt: 'lkjljasda'
 })
 Employee.create(
@@ -35,7 +37,8 @@ Employee.create(
     "isAdmin": true,
     password: '123',
     passwordChanged: false,
-    birthdayDate: '2019-08-14'
+    birthDate: '2019-08-14',
+    proyect:'Proyect name 1'
 })
 Employee.create({
     name: 'Lucas',
@@ -45,7 +48,8 @@ Employee.create({
     "isAdmin": true,
     password: '123',
     passwordChanged: false,
-    birthdayDate: '2019-09-01'
+    birthDate: '2019-09-01',
+    proyect:'Proyect name 1'
 })
 Employee.create({
     name: 'Adrian',
@@ -55,7 +59,8 @@ Employee.create({
     "isAdmin": true,
     password: '1234',
     passwordChanged: false,
-    birthdayDate: '2019-07-05'
+    birthDate: '2019-07-05',
+    proyect:'Proyect name 1'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -66,7 +71,8 @@ Employee.create({
     "isAdmin": true,
     password: '1234',
     passwordChanged: false,
-    birthdayDate: '2019-03-20'
+    birthDate: '2019-03-20',
+    proyect:'Proyect name 2'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -77,7 +83,8 @@ Employee.create({
     "isAdmin": true,
     password: '1234',
     passwordChanged: false,
-    birthdayDate: '2019-07-20'
+    birthDate: '2019-07-20',
+    proyect:'Proyect name 2'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -88,7 +95,8 @@ Employee.create({
     "isAdmin": true,
     password: '1234',
     passwordChanged: false,
-    birthdayDate: '2019-09-20'
+    birthDate: '2019-09-20',
+    proyect:'Proyect name 2'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -99,7 +107,8 @@ Employee.create({
     "isAdmin": true,
     password: '1234',
     passwordChanged: false,
-    birthdayDate: '2019-07-20'
+    birthDate: '2019-07-20',
+    proyect:'Proyect name 3'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -110,7 +119,8 @@ Employee.create({
     "isAdmin": false,
     password: '1234',
     passwordChanged: true,
-    birthdayDate: '2019-07-20'
+    birthDate: '2019-07-20',
+    proyect:'Proyect name 3'
     //salt: 'lkjljasda'
 })
 

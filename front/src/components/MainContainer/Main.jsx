@@ -36,7 +36,7 @@ class MainContainer extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return 'loading'
+      return <h1>Ups! something went wrong.. Please, reload the web again</h1>
     }
     return (
       <div>

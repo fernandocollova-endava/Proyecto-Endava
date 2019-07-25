@@ -8,12 +8,12 @@ export const receiveHomeOffice = function (homeOfficeList) {
     };
 };
 
-export const fetchHomeOffice = (year, month, sector) => dispatch => {
+export const fetchHomeOffice = (year, month, proyect) => dispatch => {
     return axios.get("/api/homeOffice/", {
         params: {
             year,
             month,
-            sector
+            proyect
         }
     })
     .then(homeOfficeList => dispatch(receiveHomeOffice(homeOfficeList.data)))
