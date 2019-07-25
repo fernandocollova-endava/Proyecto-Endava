@@ -2,9 +2,9 @@ import axios from "axios";
 import {
   RECEIVE_ALLOWANCES,
   RECEIVE_ADMIN_ALLOWANCES,
-  RECEIVE_PENDING_ALLOWANCES,
   RECEIVE_ACTIVE_ALLOWANCES,
-  RECEIVE_HISTORY_ALLOWANCES
+  RECEIVE_HISTORY_ALLOWANCES,
+  RECEIVE_BOOK_ALLOWANCES
 } from "../../constants";
 
 export const receiveAllowances = function (allowanceList) {
@@ -13,6 +13,13 @@ export const receiveAllowances = function (allowanceList) {
     allowanceList
   };
 };
+export const receiveBookAllowances = function(bookAllowances) {
+  return {
+    type: RECEIVE_BOOK_ALLOWANCES,
+    bookAllowances
+  }
+}
+
 export const receiveAdminAllowances = function (adminAllowances) {
   return {
     type: RECEIVE_ADMIN_ALLOWANCES,
@@ -20,12 +27,7 @@ export const receiveAdminAllowances = function (adminAllowances) {
   };
 };
 
-export const receivePendingAllowances = function (pendingAllowances) {
-  return {
-    type: RECEIVE_PENDING_ALLOWANCES,
-    pendingAllowances
-  };
-}
+
 export const receiveActiveAllowances = (activeAllowances) => {
   return {
     type: RECEIVE_ACTIVE_ALLOWANCES,
@@ -71,14 +73,6 @@ export const fetchAdminAllowances = () => dispatch => {
     });
 };
 
-export const fetchPendingAllowances = () => dispatch => {
-  return axios
-    .get("/api/allowance/search/all")
-    .then(res => res.data)
-    .then(pendingAllowances => {
-      dispatch(receivePendingAllowances(pendingAllowances));
-    });
-};
 
 export const fetchAllowanceActive = (id) => dispatch => {
   return axios
@@ -117,6 +111,15 @@ export const fetchCountPending = (userId) => dispatch => {
       }
     })
 };
+export const fetchBookAllowances = () => dispatch => {  
+ 
+return axios.get("/api/allowance/book")
+.then(res =>res.data)
+.then(bookAllowances=>{
+  console.log("soy bookAlll del axios", bookAllowances)
+  dispatch(receiveBookAllowances(bookAllowances))
+})
+}
 
 export const sendEmailConfirm = (userData, allowanceName) => dispatch => {
   

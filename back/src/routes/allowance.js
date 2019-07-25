@@ -2,6 +2,7 @@
 const express = require("express");
 const Router = express.Router();
 const nodemailer = require("nodemailer");
+const moment = require("moment");
 
 // Funciones adicionales
 const MulterFn = require("../functions/multer");
@@ -15,8 +16,14 @@ const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
 Router.get("/", function(req, res) {
+  //trae las allowances generales
   Allowance.findAll({
-    where: { active: true },
+    where: {
+      active: true,
+      name: {
+        [Op.ne]: "book"
+      }
+    },
     order: [["id", "asc"]],
     attributes: ["name", "imgUrl", "completeName", "id", "fixedAmount"]
   }).then(allowanceList => {
@@ -25,6 +32,7 @@ Router.get("/", function(req, res) {
 });
 
 Router.get("/admin", function(req, res) {
+  //trae las allowances que se ven el admin panel
   AllowanceDetail.findAll({
     include: [
       {
@@ -33,7 +41,12 @@ Router.get("/admin", function(req, res) {
       },
       {
         model: Allowance,
-        as: "allowanceDetail"
+        as: "allowanceDetail",
+        where: {
+          name: {
+            [Op.ne]: "book"
+          }
+        }
       }
     ]
   }).then(allowanceList => {
@@ -41,63 +54,140 @@ Router.get("/admin", function(req, res) {
   });
 });
 
+Router.get("/book", function(req, res) {
+  Allowance.findOne({
+    
+    where: {
+      name: "book"
+    }
+  }).then(book => {
+    AllowanceDetail.findAll({
+      include: [
+        {
+          model: Employee,
+          as: "employeeDetail",
+          attributes: ["name"],
+        },
+      ],
+      // attributes: [
+      //   "amount",
+      //   "employeeAmount",
+      //   "limitAmount",
+      //   "paymentDate",
+      //   "installments",
+      //   "status",
+      //   "receiptPath",
+      
+      // ],
+      where: {
+        allowanceDetailId: book.id
+      }
+    }).then(bookAllowance => { 
+      res.send(bookAllowance)});
+  });
+});
+
 // Insert allowance
 Router.post("/", MulterFn.single("file"), (req, res) => {
-  // Obtengo el nombre del archivo
-
+  //crea todas las allowances, generales y book
   const fileName = req.file.filename;
 
   Allowance.findOne({
     where: {
       name: req.body.allowanceName.toLowerCase()
     }
-  })
-    .then(allowanceInstance => {
-      // Instancia de Reintegro
-      Employee.findOne({
-        where: {
-          id: req.body.userid
-        }
-      }).then(employeeInstance => {
+  }).then(allowanceInstance => {
+    // Instancia de Reintegro
+    Employee.findOne({
+      where: {
+        id: req.body.userid
+      }
+    })
+      .then(employeeInstance => {
         // Instancia del Empleado
         // Inserta en la instancia de allowance la instancia de employee
         // Genera la relacion empleado vs reintegro (Employee_Allowance)
+        if (req.body.allowanceName == "book") {
+          // si es book
+          let paymentDate = paymentDateFn(
+            allowanceInstance.dataValues.createdAt, //Fecha creacion
+            allowanceInstance.dataValues.limitDay
+          );
 
-        let paymentDate = paymentDateFn(
-          allowanceInstance.dataValues.createdAt, //Fecha creacion
-          allowanceInstance.dataValues.limitDay
-        );
+          // Calculo de total reintegro:
+          var totalAmountFixed = allowanceInstance.dataValues.fixedAmount;
+          var totalEmployeeAmount = req.body.employeeAmount;
+          var totalAmount =
+            totalEmployeeAmount > totalAmountFixed
+              ? totalAmountFixed
+              : totalEmployeeAmount;
+          var remainingBookAmount = totalEmployeeAmount; // calculo el remanente
+          var cant = Math.ceil(remainingBookAmount / totalAmountFixed); // calculo en cuantas "partes" se pagara ese remanente
 
-        // Calculo de total reintegro:
-        var totalAmountFixed = allowanceInstance.dataValues.fixedAmount;
-        var totalEmployeeAmount = req.body.employeeAmount;
-        var totalAmount =
-          totalEmployeeAmount > totalAmountFixed
-            ? totalAmountFixed
-            : totalEmployeeAmount;
+          for (let i = 0; i <= cant; i++) {
+            //itero esas "n" partes, por cada pasada creo
+            // un allowance de book
+            // evito el valor negativo
+            if (remainingBookAmount < 0) break;
 
-        // Genero un nuevo registro de detalle en la tabla final AllowanceDetail
-        AllowanceDetail.create({
-          amount: totalAmount,
-          employeeAmount: totalEmployeeAmount,
-          limitAmount: totalAmountFixed,
-          paymentDate: paymentDate,
-          observation: req.body.observation,
-          receiptPath: fileName,
-          status: "pending"
-        }).then(AllowanceDetail_Instance => {
-          // Instancia de la creación del registro final Empleado
-          AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id);
-          // Instancia de la creación del registro final Beneficio
-          AllowanceDetail_Instance.setAllowanceDetail(allowanceInstance.id);
-        });
-      });
-    })
-    .then(() => {
-      // Responde el nombre del archivo..
-      res.json(fileName);
-    })
-    .catch(err => res.json(err));
+            AllowanceDetail.create({
+              amount: totalAmount,
+              employeeAmount: totalEmployeeAmount,
+              installments: `${i + 1}/${cant}`,
+              limitAmount: totalAmountFixed,
+              paymentDate: moment(paymentDate, "DD-MM-YYYY").add(i, "months"),
+              remainingBookAmount: remainingBookAmount,
+              observation: req.body.observation,
+              receiptPath: fileName,
+              status: "pending"
+            }).then(AllowanceDetail_Instance => {
+              // Instancia de la creación del registro final Empleado
+              AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id, employeeInstance.name);
+              // Instancia de la creación del registro final Beneficio
+              AllowanceDetail_Instance.setAllowanceDetail(allowanceInstance.id);
+            });
+            remainingBookAmount = remainingBookAmount - totalAmountFixed; //actualizo el reiamning en cada pasada
+            remainingBookAmount >= totalAmountFixed //finalmente, si remaaining es mayor totalAmount, el valor
+              ? (totalAmount = totalAmountFixed) // se topea en el maximo (totalAmountFixed)
+              : (totalAmount = remainingBookAmount); //si es menor, igualo al valor remanente.
+          }
+        } else {
+          //si es un allawance normal
+          let paymentDate = paymentDateFn(
+            allowanceInstance.dataValues.createdAt, //Fecha creacion
+            allowanceInstance.dataValues.limitDay
+          );
+          var totalAmountFixed = allowanceInstance.dataValues.fixedAmount;
+          var totalEmployeeAmount = req.body.employeeAmount;
+          var totalAmount =
+            totalEmployeeAmount > totalAmountFixed
+              ? totalAmountFixed
+              : totalEmployeeAmount;
+
+          // Genero un nuevo registro de detalle en la tabla final AllowanceDetail
+          AllowanceDetail.create({
+            amount: totalAmount,
+            employeeAmount: totalEmployeeAmount,
+            installments: "1",
+            limitAmount: totalAmountFixed,
+            paymentDate: paymentDate,
+            observation: req.body.observation,
+            receiptPath: fileName,
+            status: "pending"
+          }).then(AllowanceDetail_Instance => {
+            // Instancia de la creación del registro final Empleado
+            AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id, employeeInstance.name);
+            // Instancia de la creación del registro final Beneficio
+            AllowanceDetail_Instance.setAllowanceDetail(allowanceInstance.id);
+          });
+        }
+      })
+      .then(data => {
+        // Responde el nombre del archivo..
+        res.json(fileName);
+      })
+      .catch(err => res.json(err));
+  });
 });
 
 //Ruta para busqueda + filtro de todos los beneficios de un empleado
@@ -148,6 +238,7 @@ Router.get("/history/:employeeId/:allowanceId", function(req, res) {
   AllowanceDetail.findAll({
     attributes: [
       "paymentDate",
+      "installments",
       "amount",
       "limitAmount",
       "employeeAmount",
@@ -261,13 +352,13 @@ Router.get("/count", function(req, res) {
     res.json(data.length);
   });
 });
+
 function paymentDateFn(date, limitDate) {
   let valDate = date.getDay() <= limitDate ? 1 : 2;
   return new Date(date.getFullYear(), date.getMonth() + valDate, 1);
 }
 
 Router.post("/emailConfirm", function(req, res) {
-
   var transporter = nodemailer.createTransport({
     //OBJETO TRANSPORTER DISPARA ENVIO DE MAIL
     host: "smtp.gmail.com",

@@ -15,6 +15,8 @@ import ProfileContainer from "../ProfileContainer"
 import NoFound from '../NoFound/index'
 import HomeOfficeContainer from '../HomeOfficeContainer/index'
 import CalendarContainer from "../EventCalendarContainer"
+import BookAllowanceContainer from "../BookAllowanceContainer"
+import AdminBookContainer from "../AdminBookContainer"
 
 class MainContainer extends React.Component {
   constructor() {
@@ -46,10 +48,12 @@ class MainContainer extends React.Component {
               <Route component={NavbarContainer} />
               <Switch>
                 <Route exact path="/allowance/search" component={AllowancesListContainer}/>
+                <Route exact path="/allowance/book" component={BookAllowanceContainer}/>
                 <Route exact path="/home-office" component={HomeOfficeContainer} />
                 <Route exact path="/allowance/:name" component={AllowanceContainer}/>
                 <Route exact path="/login/expired" component={UpdatePassContainer}/>
-                <Route exact path="/admin/panel" component={AllowancesListContainer}/> 
+                <Route exact path="/admin/panel" component={AllowancesListContainer}/>
+                <Route exact path="/admin/book" component={AdminBookContainer}/>  
                 <Route exact path="/health-care" component={HealthCareContainer }/>} 
                 <Route exact path="/discipline-event/new" component={DisciplineEvent}/> 
                 <Route exact path="/calendar" component={CalendarContainer}/> 
