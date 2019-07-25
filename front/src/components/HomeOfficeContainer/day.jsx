@@ -50,10 +50,10 @@ export default class Day extends React.Component {
         let list = this.props.listHomeOffice
         return <>
             {
-                list && list.map(item => (
+                list && list.map((item,i) => (
                     // Retorna si el dia coicide con el dia del home office cargado
                     (Number((item.date).split('-')[2]) == date) &&
-                    <p key={item.date} className="viewEvent">{`${item.employeeHomeOffice.name} ${item.employeeHomeOffice.surname[0]}.`}</p>
+                    <p key={i} className="viewEvent">{`${item.employeeHomeOffice.name} ${item.employeeHomeOffice.surname[0]}.`}</p>
                 )
                 )
             }

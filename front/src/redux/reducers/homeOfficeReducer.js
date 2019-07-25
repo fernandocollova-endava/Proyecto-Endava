@@ -1,7 +1,8 @@
-import { RECEIVE_HOME_OFFICE_LIST } from "../../constants";
+import { RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST } from "../../constants";
 
 const initialState = {
   list: [],
+  birtDayList:[]
 };
 
 export default (state = initialState, action) => {
@@ -9,6 +10,9 @@ export default (state = initialState, action) => {
   
     case RECEIVE_HOME_OFFICE_LIST:
       return {...state, list: [...action.homeOfficeList] };
+
+    case RECEIVE_HOME_OFFICE_BIRTHDAY_LIST:
+      return {...state, birtDayList: [...action.list] };
 
     default:
       return state;
