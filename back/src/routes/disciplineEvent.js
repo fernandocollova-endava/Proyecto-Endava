@@ -5,7 +5,7 @@ const Employee = require("../../db/models/").Employee;
 const Technologie = require("../../db/models/").Technologies;
 
 Router.post("/", function(req, res) {
-  console.log("soy el req", req.body.data);
+ 
   Employee.findOne({
     where: {
       id: req.body.user.id
@@ -38,40 +38,60 @@ Router.get("/technologies", function(req, res) {
   }).then(techList => res.send(techList));
 });
 
-Router.get("/:id", function(req, res) {
+Router.get("/", function(req, res) {
+ 
+  req.query.userId? //1)pregunto si el fech me viene con parametro userId o no
   Employee.findOne({
-    // 1) primero traigo el empleado
+    // 2) traigo el empleado
     where: {
-      id: req.params.id
+      id: req.query.userId
     }
   }).then(employee => {
-
+    
     
     DisciplineEvent.findAll({
-      //2) Luego busco todos los eventos, incluyendo el modelo Employee,
+      //3) Luego busco todos los eventos, incluyendo el modelo Employee,
       //donde el id de empleado coindida con que que me interesa (employee)
       include: [
         {
           model: Employee,
           as: "employee",
           where: {
-            id: employee.id //3) La tabla intermedia es virtual, ergo no uso mas que "include" y "where"
+            id: employee.id //4) La tabla intermedia es virtual, ergo no uso mas que "include" y "where"
           },
           attributes: []
         },
-        // {
-        //   model: Technologie,
-        //   as:"technologie",
-        //   where:{
-        //     id:
-        //   }
-
-        // }
+        {
+          model: Technologie, //5) traigo los datos que necesito de la tabla Technologie
+          as:"technologie",
+        },
+       
       ],
       attributes: ["topic", "status", "date", "time", "description"]
 
-    }).then(eventList => res.send(eventList));
-  });
+    }).then(eventList => {
+      console.log("soy event", eventList)
+      res.send(eventList)
+      
+    })
+     
+  }): // en caso de no haber userId
+  DisciplineEvent.findAll({
+
+    include: [
+      {
+        model: Technologie,
+        as:"technologie",
+      },
+    ],
+    attributes: ["topic", "status", "date", "time", "description"], // filtro datos que necesito
+    order: [["date", "ASC"]] //ordeno de forma ascendente, por fecha
+
+  }).then(eventList => {
+    console.log("soy event", eventList)
+    res.send(eventList)
+    
+  }); 
 });
 
 module.exports = Router;

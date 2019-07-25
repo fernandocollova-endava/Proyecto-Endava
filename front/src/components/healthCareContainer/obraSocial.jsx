@@ -111,7 +111,7 @@ export default function obraSocial({ toggleCollapse, collapseID, email }) {
                                             <MDBInput
                                                 type="textarea"
                                                 rows="2"
-                                                label="Your message"
+                                                label="I need more information..."
                                                 icon="pencil-alt"
                                             />
                                         </div>

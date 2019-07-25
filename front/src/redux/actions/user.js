@@ -39,10 +39,10 @@ export const logout = () => dispatch => {
       return answer;
     });
 };
-export const updatePass = (password, userId) => dispatch => {
+export const updatePass = (password, userId, oldPass) => dispatch => {
   
   return axios
-    .post("/api/employee/password/update", {password:password, userId:userId})
+    .post("/api/employee/password/update", {password:password, userId:userId, oldPass:oldPass})
     .then(res => res.data)
     .then(passConfirm =>{
       return passConfirm

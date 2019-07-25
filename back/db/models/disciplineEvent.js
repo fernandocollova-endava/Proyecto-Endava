@@ -29,7 +29,7 @@ const DisciplineEvent = db.define('disciplineEvent', {
       // }
   },
   description:{
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false,
   },
   status:{

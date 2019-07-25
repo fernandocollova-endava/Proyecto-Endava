@@ -39,9 +39,19 @@ const AllowanceDetail = db.define("AllowanceDetail",{
         type: Sequelize.INTEGER,
         allowNull: false,
     },
+    installments:{
+        type: Sequelize.STRING,
+        validate: {
+            notEmpty: true,
+        },
+    },
     limitAmount:{
         type: Sequelize.INTEGER,
         allowNull: false,
+    },
+    remainingBookAmount:{
+        type: Sequelize.INTEGER,
+        allowNull: true,
     },
     paymentDate:{
         type: Sequelize.DATEONLY,

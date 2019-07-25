@@ -1,8 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import AllowanceList from "./allowanceList";
 import {
-  fetchAdminAllowances, fetchAllowances, fetchAllowanceActive, fetchAllowanceHistory,
+  fetchBookAllowances, fetchAllowanceActive, fetchAllowanceHistory,
   deleteAllowance, editStatusAllowance, fetchCountPending
 } from "../../redux/actions/allowanceActions"
 import { openCloseNavBar } from "../../redux/actions/navbar"
@@ -10,8 +9,9 @@ import ModalDetails from '../ModalContainer/modalDetail'
 import ModalAviso from '../ModalContainer/modalAviso'
 import ModalBoolean from '../ModalContainer/modalBoolean'
 import { parserRow } from '../../auxFunctions/auxParser'
+import AdminBook from "../AdminBookContainer/adminBook"
 
-class AllowanceListContainer extends React.Component {
+class AdminBookContainer extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -32,17 +32,15 @@ class AllowanceListContainer extends React.Component {
     this.toggleBoolean = this.toggleBoolean.bind(this)
     this.togglePanel = this.togglePanel.bind(this)
     this.viewDetails = this.viewDetails.bind(this)
-    this.handleClick = this.handleClick.bind(this)
     this.toggleAviso = this.toggleAviso.bind(this)
     this.deleteAllowance = this.deleteAllowance.bind(this)
     this.actionOk = this.actionOk.bind(this)
     this.handleSaveConfirm = this.handleSaveConfirm.bind(this)
-    this.handleFilterStatus = this.handleFilterStatus.bind(this)
+ 
   }
 
   componentDidMount() {
-    this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
-    this.props.fetchAdminAllowances()
+    this.props.fetchBookAllowances()
     this.props.openCloseNavBar(false)
     // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
     if (this.props.user.isAdmin && this.props.allUser) {
@@ -71,21 +69,6 @@ class AllowanceListContainer extends React.Component {
           })
       }
     }
-  }
-  // FUNCION PARA FILTRAR POR ALLOWANCE
-  handleClick(e) {
-    this.props.fetchAllowances(this.props.user.id, e.target.value, this.state.allowanceStatus, this.props.allUser)
-    this.setState({
-      allowanceType: e.target.value
-    })
-  }
-
-  // FUNCION PARA FILTRAR POR STATUS
-  handleFilterStatus(e) {
-    this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, e.target.value, this.props.allUser)
-    this.setState({
-      allowanceStatus: e.target.value
-    })
   }
 
   // FUNCION DE CONSULTA HISTORIAL / DETALLE
@@ -185,12 +168,12 @@ class AllowanceListContainer extends React.Component {
   render() {
 
     // Condicional para redefinir los objetos
-    let val = parserRow(
-      this.props.allowanceList, // Se envia el listado a depurar
-      this.deleteAllowance, // Se envia la funcion para eliminar (onClick)
-      this.viewDetails,  // Se envia la funcion para mostrar el modal (onClick)
-      this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
-    )
+    // let val = parserRow(
+    //   this.props.bookAllowances, // Se envia el listado a depurar
+    //   this.deleteAllowance, // Se envia la funcion para eliminar (onClick)
+    //   this.viewDetails,  // Se envia la funcion para mostrar el modal (onClick)
+    //   this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
+    // )
 
     return (
       <div>
@@ -218,14 +201,13 @@ class AllowanceListContainer extends React.Component {
           titleBoolean={this.state.titleBoolean}
           data={this.state.data}
         />
-        <AllowanceList
+        <AdminBook
           alertPending={this.state.alertPending}
           handleClick={this.handleClick}
           handleFilterStatus={this.handleFilterStatus}
-          allowanceList={val}
-          allowanceType={this.state.allowanceType}
+          bookAllowances={this.props.bookAllowances}
           allowanceStatus={this.state.allowanceStatus}
-          adminAllowances={this.props.adminAllowances}
+        
         />
       </div>
     );
@@ -234,9 +216,9 @@ class AllowanceListContainer extends React.Component {
 
 const mapStateToProps = (state, owner) => {
   return {
-    allowanceList: state.allowance.allowanceList,
+
     user: state.user.user,
-    adminAllowances: state.allowance.adminAllowances,
+    bookAllowances: state.allowance.bookAllowances,
     activeAllowance: state.allowance.activeAllowances,
     history: state.allowance.historyAllowances,
     // allUser => Consulta si la ruta ingresada es "/admin/panel", de ser correcto permite en el back mostrar u ocultar uno o todos los usuarios.
@@ -246,17 +228,16 @@ const mapStateToProps = (state, owner) => {
 
 const MapDispatchToProps = dispatch => {
   return {
-    fetchAllowances: (userId, allowanceId, status, allUser) => dispatch(fetchAllowances(userId, allowanceId, status, allUser)),
+    fetchBookAllowances: () => dispatch(fetchBookAllowances()),
     openCloseNavBar: (val) => dispatch(openCloseNavBar(val)),
     fetchAllowanceActive: (id) => dispatch(fetchAllowanceActive(id)),
     fetchAllowanceHistory: (employeeId, allowanceId) => dispatch(fetchAllowanceHistory(employeeId, allowanceId)),//trae la data para el "history del detalle modal"
     deleteAllowance: (id) => dispatch(deleteAllowance(id)), // Elimina detalle 
     editStatusAllowance: (id, status, observation) => dispatch(editStatusAllowance(id, status, observation)), // Switch State
-    fetchAdminAllowances: () => dispatch(fetchAdminAllowances()),
     fetchCountPending: (userId) => dispatch(fetchCountPending(userId)) // Consulta cantidad de allowance pendientes
   };
 }
 export default connect(
   mapStateToProps,
   MapDispatchToProps
-)(AllowanceListContainer);
+)(AdminBookContainer);
