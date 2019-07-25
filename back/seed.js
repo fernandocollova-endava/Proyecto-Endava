@@ -9,10 +9,10 @@ Employee.create(
     surname: 'Gonzalez',
     email: 'm.gonzalez@endava.com',
     sector: 'fullStack',
-    "isAdmin": true,
+    isAdmin: true,
     password: '123',
-    passwordChanged: false
-    //salt: 'lkjljasda'
+    passwordChanged: false,
+    birthdayDate: '2019-07-20'
 })
 Employee.create({
     name: 'Juan',
@@ -21,8 +21,8 @@ Employee.create({
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
-    passwordChanged: false
-    //salt: 'lkjljasda'
+    passwordChanged: false,
+    birthdayDate: '2019-07-30'
 })
 Employee.create(
     {
@@ -32,8 +32,8 @@ Employee.create(
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
-    passwordChanged: false
-    //salt: 'lkjljasda'
+    passwordChanged: false,
+    birthdayDate: '2019-08-14'
 })
 Employee.create({
     name: 'Lucas',
@@ -42,8 +42,8 @@ Employee.create({
     sector: 'fullStack',
     "isAdmin": true,
     password: '123',
-    passwordChanged: false
-    //salt: 'lkjljasda'
+    passwordChanged: false,
+    birthdayDate: '2019-09-01'
 })
 Employee.create({
     name: 'Sebastian',
@@ -52,8 +52,8 @@ Employee.create({
     sector: 'front',
     "isAdmin": false,
     password: '123',
-    passwordChanged: false
-    //salt: 'lkjljasda'
+    passwordChanged: false,
+    birthdayDate: '2019-08-18'
 })
 Employee.create({
     name: 'Alejandro',
@@ -62,8 +62,8 @@ Employee.create({
     sector: 'backend',
     "isAdmin": false,
     password: '123',
-    passwordChanged: false
-    //salt: 'lkjljasda'
+    passwordChanged: false,
+    birthdayDate: '2019-10-20'
 })
 
 

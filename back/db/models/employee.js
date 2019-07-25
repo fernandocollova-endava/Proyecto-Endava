@@ -43,7 +43,11 @@ const Employee = db.define("employee", {
   },
   salt: {
     type: Sequelize.STRING
+  },
+  birthdayDate:{
+    type: Sequelize.STRING,
   }
+
 });
 
 Employee.generateSalt = function() {
