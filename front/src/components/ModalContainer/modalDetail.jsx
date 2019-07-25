@@ -70,6 +70,7 @@ export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfir
                                             <tr>
                                                 <th>Date</th>
                                                 <th>Amount</th>
+                                                <th>Installments</th>
                                                 <th>Limit</th>
                                                 <th>Emp. Amount</th>
                                                 <th>Status</th>
@@ -80,6 +81,7 @@ export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfir
                                                     <tr style={({height: 32})} key={i}>
                                                         <td>{item.paymentDate}</td>
                                                         <td>{item.amount}</td>
+                                                        <td>{item.installments}</td>
                                                         <td>{item.limitAmount}</td>
                                                         <td>{item.employeeAmount}</td>
                                                         <td className={item.status}>{item.status}</td>

@@ -29,6 +29,17 @@ export default function ModalUser({ modal, toggle, handleSubmit, user, handleCha
         <MDBModalBody>
           <label>Change your password</label>
           <form onSubmit={handleSubmit} /*Envio a data a updatear*/ >
+            <label>Please, enter your current password</label>
+          <MDBInput 
+              icon="lock"
+              group
+              name="oldPassword"
+              type="password"
+              validate
+              error="wrong"
+              success="right"
+              onChange = {handleChange}
+            />
             <MDBInput 
               icon="lock"
               group

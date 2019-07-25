@@ -66,7 +66,7 @@ class AllowanceListContainer extends React.Component {
       if (this.props.user.isAdmin && this.props.allUser) {
         this.props.fetchCountPending(this.props.user.id)
           .then(count => {
-            this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes
+            this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes para alert al admin
           })
       }
     }
@@ -243,7 +243,7 @@ const MapDispatchToProps = dispatch => {
     fetchAllowances: (userId, allowanceId, status, allUser) => dispatch(fetchAllowances(userId, allowanceId, status, allUser)),
     openCloseNavBar: (val) => dispatch(openCloseNavBar(val)),
     fetchAllowanceActive: (id) => dispatch(fetchAllowanceActive(id)),
-    fetchAllowanceHistory: (employeeId, allowanceId) => dispatch(fetchAllowanceHistory(employeeId, allowanceId)),
+    fetchAllowanceHistory: (employeeId, allowanceId) => dispatch(fetchAllowanceHistory(employeeId, allowanceId)),//trae la data para el "history del detalle modal"
     deleteAllowance: (id) => dispatch(deleteAllowance(id)), // Elimina detalle 
     editStatusAllowance: (id, status, observation) => dispatch(editStatusAllowance(id, status, observation)), // Switch State
     fetchAdminAllowances: () => dispatch(fetchAdminAllowances()),

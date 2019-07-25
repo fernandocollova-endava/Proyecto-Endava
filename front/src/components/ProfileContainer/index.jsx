@@ -13,7 +13,8 @@ class ProfileContainer extends React.Component {
       titleMsj: "",
       modalUser: false,
       modal: false,
-      newPassword: ""
+      newPassword: "",
+      oldPassword: ""
     };
     this.toggleModalUser = this.toggleModalUser.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +26,7 @@ class ProfileContainer extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     this.props
-      .updatePass(this.state.newPassword, this.props.user.id)
+      .updatePass(this.state.newPassword, this.props.user.id, this.state.oldPassword)
       .then(response => { //recibo data ok y despliego modal
         this.setState({
           modal:true,
@@ -86,7 +87,7 @@ const mapStateToProps = function(state) {
   };
 };
 const mapDispatchToProps = dispatch => ({
-  updatePass:(pass,userId)=> dispatch(updatePass(pass,userId))
+  updatePass:(pass,userId, oldPass)=> dispatch(updatePass(pass, userId, oldPass))
 
 });
 
