@@ -37,9 +37,9 @@ Router.get("/", function (req, res) {
         include: [{
             model: Employee,
             as: 'employeeHomeOffice',
-            attributes: ['name', 'surname'],
+            attributes: ['id', 'name', 'surname'],
             where: {
-                sector: req.query.sector
+                proyect: req.query.proyect
             }
         }]
     })

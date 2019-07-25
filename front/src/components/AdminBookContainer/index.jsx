@@ -8,7 +8,6 @@ import { openCloseNavBar } from "../../redux/actions/navbar"
 import ModalDetails from '../ModalContainer/modalDetail'
 import ModalAviso from '../ModalContainer/modalAviso'
 import ModalBoolean from '../ModalContainer/modalBoolean'
-import { parserRow } from '../../auxFunctions/auxParser'
 import AdminBook from "../AdminBookContainer/adminBook"
 
 class AdminBookContainer extends React.Component {

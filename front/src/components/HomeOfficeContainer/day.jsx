@@ -48,13 +48,12 @@ export default class Day extends React.Component {
     getUserEvents(date) {
         // Busca los eventos de cada dia
         let list = this.props.listHomeOffice
-
         return <>
             {
                 list && list.map(item => (
                     // Retorna si el dia coicide con el dia del home office cargado
                     (Number((item.date).split('-')[2]) == date) &&
-                    <p className="viewEvent">{`${item.employeeHomeOffice.name} ${item.employeeHomeOffice.surname[0]}.`}</p>
+                    <p key={item.date} className="viewEvent">{`${item.employeeHomeOffice.name} ${item.employeeHomeOffice.surname[0]}.`}</p>
                 )
                 )
             }
