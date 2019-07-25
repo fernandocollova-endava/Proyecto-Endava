@@ -2543,7 +2543,7 @@ module.exports = exports['default'];
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n\n\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-grey:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md {\n  background-color: #9bb4be !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #9bb4be !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}\n\n /* === CALENDAR === */\n .bg-info {\n  background-color: #17a2b8!important;\n}\n.viewEvent {\n  font-size: 12px;\n  background-color: #DE411B;\n  color: white;\n  border-radius: 8px;\n  margin-bottom: 0px;\n  margin-top: 2px;\n  border: 1px solid white;\n}\n.classDay {\n  font-size: 20px;\n  padding: 4px 11px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n.classToday {\n  font-size: 20px;\n  background-color: #d8d8e8;\n  padding: 10px 11px;\n  margin: 0 35px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n#calendar-body > tr {\n  height: 136px;\n}\n#calendar-body td:hover {\n  background-color: #f0f3f3;\n  cursor:pointer;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n.viewHB {\n    background: url(\"/assets/img/backgroundHB.png\") no-repeat center;\n   -webkit-background-size: cover;\n   -moz-background-size: cover;\n   -o-background-size: cover;\n   background-size: cover;\n   max-width: 100% ;\n   text-align: center;\n}\n.textCenter {\n  text-align: center;\n}\n.showHomeOffice {\n  width: 90px;\n  font-size: 10px;\n  padding: 2px 7px;\n  border-radius: 0px !important;\n  margin-left: 2px;\n  min-height: 43px;\n}", ""]);
+exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n\n\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-grey:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md {\n  background-color: #9bb4be !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #9bb4be !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}\n\n /* === CALENDAR === */\n .bg-info {\n  background-color: #17a2b8!important;\n}\n.viewEvent {\n  font-size: 12px;\n  background-color: #DE411B;\n  color: white;\n  border-radius: 8px;\n  margin-bottom: 0px;\n  margin-top: 2px;\n  border: 1px solid white;\n}\n.classDay {\n  font-size: 20px;\n  padding: 4px 11px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n.classToday {\n  font-size: 20px;\n  background-color: #d8d8e8;\n  padding: 10px 11px;\n  margin: 0 35px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n#calendar-body > tr {\n  height: 136px;\n}\n#calendar-body td:hover {\n  background-color: #f0f3f3;\n  cursor:pointer;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n.viewHB {\n    background: url(\"/assets/img/backgroundHB.png\") no-repeat center;\n   -webkit-background-size: cover;\n   -moz-background-size: cover;\n   -o-background-size: cover;\n   background-size: cover;\n   max-width: 100% ;\n   text-align: center;\n}\n.textCenter {\n  text-align: center;\n}\n.showHomeOffice {\n  width: 90px;\n  font-size: 10px;\n  padding: 2px 7px;\n  border-radius: 0px !important;\n  margin-left: 2px;\n  min-height: 43px;\n}\n.itemName {\n  font-size: 14px;\n  padding: 0px;\n  margin: 0px;\n  margin-left: 16px;\n}\n.divListAllowance {\n  min-height: 144px;\n  overflow: auto;\n}", ""]);
 
 
 /***/ }),
@@ -67902,9 +67902,14 @@ var Calendar = function Calendar(_ref) {
       listHomeOffice = _ref.listHomeOffice,
       next = _ref.next,
       previous = _ref.previous,
-      jump = _ref.jump,
+      changeYear = _ref.changeYear,
+      changeMonth = _ref.changeMonth,
       currentYear = _ref.currentYear,
-      currentMonth = _ref.currentMonth;
+      currentMonth = _ref.currentMonth,
+      proyectList = _ref.proyectList,
+      currentProyect = _ref.currentProyect,
+      employeProyectList = _ref.employeProyectList,
+      birthDayList = _ref.birthDayList;
   var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
@@ -67943,11 +67948,12 @@ var Calendar = function Calendar(_ref) {
   }, "Next ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-angle-right"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    className: "",
-    onSubmit: jump
+    className: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     className: "form-control",
-    name: "month"
+    name: "month",
+    value: currentMonth,
+    onChange: changeMonth
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "0"
   }, "Jan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
@@ -67974,7 +67980,9 @@ var Calendar = function Calendar(_ref) {
     value: "11"
   }, "Dec")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     className: "form-control",
-    name: "year"
+    name: "year",
+    value: currentYear,
+    onChange: changeYear
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "2019"
   }, "2019"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
@@ -68001,24 +68009,37 @@ var Calendar = function Calendar(_ref) {
     value: "2030"
   }, "2030"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     className: "form-control",
+    value: currentProyect,
     name: "proyect",
     onChange: handleProyect
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "Proyect name 1"
-  }, "Proyect name 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "Proyect name 2"
-  }, "Proyect name 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "Proyect name 3"
-  }, "Proyect name 3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, proyectList && proyectList.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      key: i,
+      value: item.proyect
+    }, item.proyect);
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btnEv-blue rounded-0 mb-0 border-0 showHomeOffice"
   }, "Show Allowance"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btnEv-blue rounded-0 mb-0 border-0 showHomeOffice"
-  }, "Show Birthday")), "Allowance:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
-    name: "proyectName",
-    className: "form-control",
-    cols: "1",
-    rows: "6"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, "Show Birthday")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-control divListAllowance"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Allowance:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), employeProyectList && employeProyectList.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      key: i,
+      className: "itemName"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-user"
+    }), " ", item.name + ' ' + item.surname[0] + '.');
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-control divListAllowance"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "BirthDay's:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), birthDayList && birthDayList.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      key: i,
+      className: "itemName"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-birthday-cake"
+    }), " ", '(' + item.birthdayDate.split('-')[2] + ') ' + item.name + ' ' + item.surname[0] + '.');
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "9"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
@@ -68035,7 +68056,8 @@ var Calendar = function Calendar(_ref) {
     currentMonth: currentMonth,
     currentYear: currentYear,
     handleAddHome: handleAddHome,
-    listHomeOffice: listHomeOffice
+    listHomeOffice: listHomeOffice,
+    birthDayList: birthDayList
   }))))))));
 };
 
@@ -68161,10 +68183,10 @@ function (_React$Component) {
     value: function getUserEvents(date) {
       // Busca los eventos de cada dia
       var list = this.props.listHomeOffice;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, list && list.map(function (item) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, list && list.map(function (item, i) {
         return (// Retorna si el dia coicide con el dia del home office cargado
           Number(item.date.split('-')[2]) == date && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-            key: item.date,
+            key: i,
             className: "viewEvent"
           }, "".concat(item.employeeHomeOffice.name, " ").concat(item.employeeHomeOffice.surname[0], "."))
         );
@@ -68243,12 +68265,20 @@ function (_React$Component) {
     _this.state = {
       buildRows: [],
       currentMonth: 0,
+      // Mes seleccionado actual
       currentYear: 0,
-      currentProyect: ''
+      // Año seleccionado actual
+      currentProyect: '',
+      // Proyecto seleccionado Actual
+      proyectList: [],
+      // Lista de proyectos actual
+      employeProyectList: [] // Lista de los empleados que componen el proyecto seleccionado
+
     };
     _this.next = _this.next.bind(_assertThisInitialized(_this));
     _this.previous = _this.previous.bind(_assertThisInitialized(_this));
-    _this.jump = _this.jump.bind(_assertThisInitialized(_this));
+    _this.changeMonth = _this.changeMonth.bind(_assertThisInitialized(_this));
+    _this.changeYear = _this.changeYear.bind(_assertThisInitialized(_this));
     _this.handleAddHome = _this.handleAddHome.bind(_assertThisInitialized(_this));
     _this.handleProyect = _this.handleProyect.bind(_assertThisInitialized(_this));
     return _this;
@@ -68257,6 +68287,8 @@ function (_React$Component) {
   _createClass(HomeOfficeContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       window.scrollTo(0, 0);
       this.props.openCloseNavBar(false); // POSICIONA AL CALENDARIO A LA FECHA ACTUAL
 
@@ -68265,14 +68297,34 @@ function (_React$Component) {
       var currentYear = today.getFullYear(); // Carga los eventos del mes y año enviado
 
       this.props.fetchHomeOffice(currentYear, currentMonth, this.props.proyectUser);
-      this.setStateLocal(currentMonth, currentYear);
+      this.setState({
+        currentProyect: this.props.proyectUser
+      }); // Setea el estado default de Proyecto al del usuario activo
+
+      this.setStateLocal(currentMonth, currentYear); // Consulta el listado de empleados que componen el proyecto
+
+      this.props.fetchHomeOfAllowanceProyect(this.props.proyectUser).then(function (employeList) {
+        // Setea localmente la lista
+        _this2.setState({
+          employeProyectList: employeList.data
+        });
+      }); // Carga el listado de proyectos actuales
+
+      this.props.fetchHomeOfficeProyect().then(function (proyectList) {
+        // Setea localmente la lista
+        _this2.setState({
+          proyectList: proyectList.data
+        });
+      }); // Carga los cumpleaños actuales
+
+      this.props.fetchHomeOfBirthDay(currentMonth);
     } // AVANZA UN MES
 
   }, {
     key: "next",
     value: function next() {
       var currentYear = this.state.currentMonth === 11 ? this.state.currentYear + 1 : this.state.currentYear;
-      var currentMonth = (this.state.currentMonth + 1) % 12;
+      var currentMonth = this.state.currentMonth === 11 ? Number(0) : this.state.currentMonth + 1;
       this.props.fetchHomeOffice(currentYear, currentMonth, this.state.currentProyect);
       this.setStateLocal(currentMonth, currentYear);
     } // RETROCEDE UN MES
@@ -68284,39 +68336,86 @@ function (_React$Component) {
       var currentMonth = this.state.currentMonth === 0 ? 11 : this.state.currentMonth - 1;
       this.props.fetchHomeOffice(currentYear, currentMonth, this.state.currentProyect);
       this.setStateLocal(currentMonth, currentYear);
-    } // MUESTRA EL MES / AÑO SELECCIONADO
+    } // MUESTRA EL MES SELECCIONADO
 
   }, {
-    key: "jump",
-    value: function jump() {
-      var currentYear = parseInt(selectYear.value);
-      var currentMonth = parseInt(selectMonth.value);
+    key: "changeMonth",
+    value: function changeMonth(e) {
+      var _this3 = this;
+
+      this.setState({
+        currentMonth: Number(e.target.value)
+      }, function () {
+        _this3.props.fetchHomeOffice(_this3.state.currentYear, _this3.state.currentMonth, _this3.state.currentProyect);
+      }); // Carga los cumpleaños actuales
+
+      this.props.fetchHomeOfBirthDay(Number(e.target.value));
+    } // MUESTRA EL AÑO SELECCIONADO
+
+  }, {
+    key: "changeYear",
+    value: function changeYear(e) {
+      var _this4 = this;
+
+      this.setState({
+        currentYear: e.target.value
+      }, function () {
+        _this4.props.fetchHomeOffice(_this4.state.currentYear, _this4.state.currentMonth, _this4.state.currentProyect);
+      });
     } // ONCHANGE PARA SELECCIONAR EL PROYECTO ACTUAL
 
   }, {
     key: "handleProyect",
     value: function handleProyect(e) {
+      var _this5 = this;
+
       this.props.fetchHomeOffice(this.state.currentYear, this.state.currentMonth, e.target.value); // Reenderiza calendario
+      // Setea el nuevo nombre de proyecto
 
       this.setState({
-        currentProyect: e.target.value // Setea el nuevo nombre de proyecto
-
+        currentProyect: e.target.value
+      });
+      this.props.fetchHomeOfAllowanceProyect(e.target.value).then(function (employeList) {
+        // Setea localmente la lista
+        _this5.setState({
+          employeProyectList: employeList.data
+        });
       });
     } //FUNCION PARA AGREGAR UN NUEVO HOME OFFICE
 
   }, {
     key: "handleAddHome",
     value: function handleAddHome(day) {
-      var _this2 = this;
+      var _this6 = this;
 
       // Setea el mes y dia a dos digitos
       var month = Number(this.state.currentMonth) + 1 < 10 ? '0' + (Number(this.state.currentMonth) + 1) : Number(this.state.currentMonth) + 1;
-      var newDay = day <= 9 ? '0' + day : day; // Construye la fecha
+      var newDay = day <= 9 ? '0' + day : day; // Construye el dia
 
-      var buildDate = "".concat(this.state.currentYear, "-").concat(month, "-").concat(newDay);
-      this.props.addHomeOffice(this.props.idUser, buildDate).then(function () {
-        _this2.props.fetchHomeOffice(_this2.state.currentYear, _this2.state.currentMonth, _this2.state.currentProyect);
-      });
+      var buildDate = "".concat(this.state.currentYear, "-").concat(month, "-").concat(newDay); // Construye la fecha
+
+      var idUser = this.props.idUser; // Guarda el id del usuario
+      // Consulta si ya agrego un evento, si lo agregó lo elimina. sino lo ingresa
+
+      function search(data) {
+        return data.date === buildDate && data.employeeHomeOffice.id == idUser;
+      }
+
+      var list = this.props.listHomeOffice; // Lista de eventos actual
+
+      if (this.state.currentProyect !== this.props.proyectUser) return; // Si el nombre del proyecto no es el del empleado, no le permitira ingresar / borrar el evento
+
+      if (list.find(search)) {
+        // si existe se elimina
+        this.props.deleteHomeOffice(idUser, buildDate).then(function () {
+          _this6.props.fetchHomeOffice(_this6.state.currentYear, _this6.state.currentMonth, _this6.state.currentProyect);
+        });
+      } else {
+        // si no existe, se crea
+        this.props.addHomeOffice(idUser, buildDate).then(function () {
+          _this6.props.fetchHomeOffice(_this6.state.currentYear, _this6.state.currentMonth, _this6.state.currentProyect);
+        });
+      }
     } // FUNCION REUTILIZADA PARA SETEAR LOS ESTADOS (NEXT, PREV, JUMP, CURRENT)
 
   }, {
@@ -68325,21 +68424,41 @@ function (_React$Component) {
       this.setState({
         currentMonth: currentMonth,
         currentYear: currentYear
-      });
+      }); // Carga los cumpleaños actuales
+
+      this.props.fetchHomeOfBirthDay(currentMonth);
     }
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Calendar__WEBPACK_IMPORTED_MODULE_1__["default"], {
         buildRows: this.state.buildRows,
-        next: this.next,
-        currentMonth: this.state.currentMonth,
-        currentYear: this.state.currentYear,
-        previous: this.previous,
-        jump: this.jump,
-        handleAddHome: this.handleAddHome,
-        listHomeOffice: this.props.listHomeOffice,
-        handleProyect: this.handleProyect
+        currentMonth: this.state.currentMonth // Visualiza el mes seleccionado
+        ,
+        currentYear: this.state.currentYear // Visualiza el año seleccionado
+        ,
+        next: this.next // Controla el mes siguiente
+        ,
+        previous: this.previous // Controla el mes anterior
+        ,
+        changeYear: this.changeYear // Modifica el año
+        ,
+        changeMonth: this.changeMonth // Modifica el mes
+        ,
+        handleAddHome: this.handleAddHome // Agrega el home office en la fecha seleccionada
+        ,
+        listHomeOffice: this.props.listHomeOffice // Lista de home office ya cargados
+        ,
+        handleProyect: this.handleProyect // Modifica los proyectos
+        ,
+        proyectList: this.state.proyectList // Lista los proyectos
+        ,
+        currentProyect: this.state.currentProyect // Visualiza el proyecto actual
+        ,
+        employeProyectList: this.state.employeProyectList // Lista de los empleados que componen el proyecto seleccionado
+        ,
+        birthDayList: this.props.birthDayList // Lista de cumpleaños del mes
+
       });
     }
   }]);
@@ -68348,14 +68467,14 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 var mapStateToProps = function mapStateToProps(state) {
-  console.log(state.homeOf);
   return {
     idUser: state.user.user.id,
     // Extrae el id del usuario conectado.
     proyectUser: state.user.user.proyect,
     // Extrae el id del usuario conectado.
-    listHomeOffice: state.homeOf.list // Extrae - Consulta los home-office del mes y año enviado
-
+    listHomeOffice: state.homeOf.list,
+    // Extrae - Consulta los home-office del mes y año enviado
+    birthDayList: state.homeOf.birtDayList
   };
 };
 
@@ -68371,6 +68490,22 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     // Consulta a la base de datos los eventos del mes y año
     fetchHomeOffice: function fetchHomeOffice(year, month, proyect) {
       return dispatch(Object(_redux_actions_homeOffice__WEBPACK_IMPORTED_MODULE_3__["fetchHomeOffice"])(year, month, proyect));
+    },
+    // Elimina un evento cargado
+    deleteHomeOffice: function deleteHomeOffice(idUser, date) {
+      return dispatch(Object(_redux_actions_homeOffice__WEBPACK_IMPORTED_MODULE_3__["deleteHomeOffice"])(idUser, date));
+    },
+    // Consulta el listado de proyectos actuales
+    fetchHomeOfficeProyect: function fetchHomeOfficeProyect() {
+      return dispatch(Object(_redux_actions_homeOffice__WEBPACK_IMPORTED_MODULE_3__["fetchHomeOfficeProyect"])());
+    },
+    // Consulta los integrantes del proyecto
+    fetchHomeOfAllowanceProyect: function fetchHomeOfAllowanceProyect(proyect) {
+      return dispatch(Object(_redux_actions_homeOffice__WEBPACK_IMPORTED_MODULE_3__["fetchHomeOfAllowanceProyect"])(proyect));
+    },
+    // Consulta los cumpleaños del mes
+    fetchHomeOfBirthDay: function fetchHomeOfBirthDay(month) {
+      return dispatch(Object(_redux_actions_homeOffice__WEBPACK_IMPORTED_MODULE_3__["fetchHomeOfBirthDay"])(month));
     }
   };
 };
@@ -70086,7 +70221,7 @@ function obraSocial(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70103,6 +70238,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TECH_LIST", function() { return RECEIVE_TECH_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_OPEN_CLOSE_NAVBAR", function() { return SET_OPEN_CLOSE_NAVBAR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HOME_OFFICE_LIST", function() { return RECEIVE_HOME_OFFICE_LIST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HOME_OFFICE_BIRTHDAY_LIST", function() { return RECEIVE_HOME_OFFICE_BIRTHDAY_LIST; });
 // Allowance ===>
 //export const ADD_ALLOWANCE_TO_DB = "ADD_ALLOWANCE_TO_DB";
 //User
@@ -70122,6 +70258,7 @@ var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST"; // NavBar
 var SET_OPEN_CLOSE_NAVBAR = "SET_OPEN_CLOSE_NAVBAR"; // Home office
 
 var RECEIVE_HOME_OFFICE_LIST = "RECEIVE_HOME_OFFICE_LIST";
+var RECEIVE_HOME_OFFICE_BIRTHDAY_LIST = "RECEIVE_HOME_OFFICE_BIRTHDAY_LIST";
 
 /***/ }),
 
@@ -70411,14 +70548,19 @@ var fetchTechonogies = function fetchTechonogies() {
 /*!*****************************************!*\
   !*** ./src/redux/actions/homeOffice.js ***!
   \*****************************************/
-/*! exports provided: receiveHomeOffice, fetchHomeOffice, addHomeOffice */
+/*! exports provided: receiveHomeOffice, receiveBirthDayHomeOffice, fetchHomeOffice, addHomeOffice, deleteHomeOffice, fetchHomeOfficeProyect, fetchHomeOfAllowanceProyect, fetchHomeOfBirthDay */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveHomeOffice", function() { return receiveHomeOffice; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveBirthDayHomeOffice", function() { return receiveBirthDayHomeOffice; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchHomeOffice", function() { return fetchHomeOffice; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addHomeOffice", function() { return addHomeOffice; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteHomeOffice", function() { return deleteHomeOffice; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchHomeOfficeProyect", function() { return fetchHomeOfficeProyect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchHomeOfAllowanceProyect", function() { return fetchHomeOfAllowanceProyect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchHomeOfBirthDay", function() { return fetchHomeOfBirthDay; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
@@ -70430,6 +70572,13 @@ var receiveHomeOffice = function receiveHomeOffice(homeOfficeList) {
     homeOfficeList: homeOfficeList
   };
 };
+var receiveBirthDayHomeOffice = function receiveBirthDayHomeOffice(list) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_HOME_OFFICE_BIRTHDAY_LIST"],
+    list: list
+  };
+}; // Consulta los eventos actuales
+
 var fetchHomeOffice = function fetchHomeOffice(year, month, proyect) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/homeOffice/", {
@@ -70442,12 +70591,39 @@ var fetchHomeOffice = function fetchHomeOffice(year, month, proyect) {
       return dispatch(receiveHomeOffice(homeOfficeList.data));
     });
   };
-};
+}; // CREA UN NUEVO EVENTO EN EL DIA Y USUARIO DADO
+
 var addHomeOffice = function addHomeOffice(idUser, date) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/homeOffice", {
       idUser: idUser,
       date: date
+    });
+  };
+}; // Elimina un evento en el dia y usuario dado
+
+var deleteHomeOffice = function deleteHomeOffice(idUser, date) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/homeOffice/".concat(idUser, "/").concat(date));
+  };
+}; // Busca todos los proyectos actuales
+
+var fetchHomeOfficeProyect = function fetchHomeOfficeProyect(idUser, date) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/homeOffice/fetchProyect");
+  };
+}; // Consulta los integrantes de cada proyecto
+
+var fetchHomeOfAllowanceProyect = function fetchHomeOfAllowanceProyect(proyectName) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/homeOffice/fetchAllowanceProyect/".concat(proyectName));
+  };
+}; // Consulta cumpleaños del mes
+
+var fetchHomeOfBirthDay = function fetchHomeOfBirthDay(month) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/homeOffice/birthDay/".concat(month)).then(function (list) {
+      return dispatch(receiveBirthDayHomeOffice(list.data));
     });
   };
 };
@@ -70704,7 +70880,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var initialState = {
-  list: []
+  list: [],
+  birtDayList: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -70714,6 +70891,11 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_HOME_OFFICE_LIST"]:
       return _objectSpread({}, state, {
         list: _toConsumableArray(action.homeOfficeList)
+      });
+
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_HOME_OFFICE_BIRTHDAY_LIST"]:
+      return _objectSpread({}, state, {
+        birtDayList: _toConsumableArray(action.list)
       });
 
     default:
