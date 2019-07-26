@@ -4,7 +4,7 @@ import {
     MDBNavLink, MDBNavItem, MDBTabContent, MDBTabPane, MDBNav, MDBAnimation
 } from 'mdbreact';
 
-export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfirm, toggleDetails, activeAllowance, history, togglePanel, activeItem }) {
+export default function ModalBookDetails({ modal, msjSave, allUser, handleSaveConfirm, toggleDetails, activeAllowance, history, togglePanel, activeItem }) {
     return (
         <MDBContainer>
             {/* MODAL */}
@@ -47,7 +47,38 @@ export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfir
                                 </p>
                                 <p className="parrafoModal"><strong className="textBold">Observation: </strong><span className="textForm">{activeAllowance.observation}</span></p>
                                 <p className="parrafoModal"><strong className="textBold">Admin Comment: </strong><span className="textForm">{activeAllowance.adminComment}</span></p>
+                                <form onSubmit={handleSaveConfirm}>
+                                    <input type="hidden" name="id" value={activeAllowance.id} /> {/* Contiene id del detalle actual */}
+                                    <span action="" className="modalForm">
+                                        {(activeAllowance.status === 'pending') ?
+                                            <div className="radio">
+                                                <label className="approvedBook radioBoton">
+                                                    <input type="radio" defaultChecked={(activeAllowance.status === 'approved')} name="status" value="approved" />
+                                                    &nbsp;APPROVED</label>
+                                                <label className="rejectedBook radioBoton">
+                                                    <input type="radio" defaultChecked={(activeAllowance.status === 'rejected')} name="status" value="rejected" />
+                                                    &nbsp;REJECTED</label>
+                                            </div> :
+                                            <>
+                                                <strong className="textBold">Status: </strong><span className={`textForm ${activeAllowance.status}`}>{activeAllowance.status}</span>
+                                                <br /><br /><br />
+                                            </>}
+                                    </span>
+                                    <div className="input-group" style={({ marginTop: -20 })}>
+                                        <div className="input-group-prepend">
+                                            <span className="input-group-text" id="basic-addon">
+                                                <i className="far fa-comment-alt prefix"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" autoComplete="off" name="observation" defaultValue={activeAllowance.adminComment} required className="form-control" placeholder="Observation..." aria-describedby="basic-addon" />
+                                    </div>
+                                    {(activeAllowance.status === 'pending') && <>
+                                        <br />
+                                        <button type="submit" className="mb-3 btnEv-blue rounded mb-0 border-0" ><i className="fas fa-edit"></i> Save</button>
+                                        <p><strong>{msjSave}</strong></p>
+                                    </>}
 
+                                </form>
                                 <hr />
                                 {/* Visualización de archivo cargado */}
 
@@ -77,7 +108,9 @@ export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfir
                                             </tr>
                                             </thead>
                                             <tbody>
+                                                {console.log("history", history)}
                                                 {history&&history.map((item,i)=>(
+                                                    
                                                     <tr style={({height: 32})} key={i}>
                                                         <td>{item.paymentDate}</td>
                                                         <td>{item.amount}</td>
@@ -95,46 +128,7 @@ export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfir
                             </div>
 
                         </MDBTabPane>
-                        <MDBTabPane tabId="3" role="tabpanel">
-                            <div className="mt-2">
-                                <p>
-                                    Please select the state to modify: <br />
-                                    User: {activeAllowance.employeeDetail.name}
-                                </p>
-                                <form onSubmit={handleSaveConfirm}>
-                                    <input type="hidden" name="id" value={activeAllowance.id} /> {/* Contiene id del detalle actual */}
-                                    <span action="" className="modalForm">
-                                        {(activeAllowance.status === 'pending') ?
-                                            <div className="radio">
-                                                <label className="approved radioBoton">
-                                                    <input type="radio" defaultChecked={(activeAllowance.status === 'approved')} name="status" value="approved" />
-                                                    &nbsp;APPROVED</label>
-                                                <label className="rejected radioBoton">
-                                                    <input type="radio" defaultChecked={(activeAllowance.status === 'rejected')} name="status" value="rejected" />
-                                                    &nbsp;REJECTED</label>
-                                            </div> :
-                                            <>
-                                                <strong className="textBold">Status: </strong><span className={`textForm ${activeAllowance.status}`}>{activeAllowance.status}</span>
-                                                <br /><br /><br />
-                                            </>}
-                                    </span>
-                                    <div className="input-group" style={({ marginTop: -20 })}>
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text" id="basic-addon">
-                                                <i className="far fa-comment-alt prefix"></i>
-                                            </span>
-                                        </div>
-                                        <input type="text" autoComplete="off" name="observation" defaultValue={activeAllowance.adminComment} required className="form-control" placeholder="Observation..." aria-describedby="basic-addon" />
-                                    </div>
-                                    {(activeAllowance.status === 'pending') && <>
-                                        <br />
-                                        <button type="submit" className="mb-3 btnEv-blue rounded mb-0 border-0" ><i className="fas fa-edit"></i> Save</button>
-                                        <p><strong>{msjSave}</strong></p>
-                                    </>}
-
-                                </form>
-                            </div>
-                        </MDBTabPane>
+                       
                     </MDBTabContent>
                 </MDBModalBody>
                 <MDBModalFooter>

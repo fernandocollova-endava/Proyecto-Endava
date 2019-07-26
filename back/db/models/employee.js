@@ -46,7 +46,11 @@ const Employee = db.define("employee", {
   },
   birthdayDate:{
     type: Sequelize.STRING,
+  },
+  proyect:{
+    type: Sequelize.STRING,
   }
+
 
 });
 

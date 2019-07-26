@@ -4,7 +4,7 @@ import RowAllowance from "../AllowancesListContainer/rowAllowance"
 
 import { columnsBook } from '../../auxFunctions/auxFunctions'
 
-export default function allowanceList({
+export default function adminBook({
 
   handleFilterStatus,
   alertPending,
@@ -17,7 +17,9 @@ export default function allowanceList({
 }) {
   return (
     <>
-      {/* LISTADO  */}
+      {/* LISTADO  */
+      
+     }
       <div>
         <MDBRow className="container-banner">
           <MDBCol md="2">
@@ -67,14 +69,17 @@ export default function allowanceList({
           <MDBCol md="12">
             <MDBAnimation type="fadeInUp">
             {(bookAllowances.length == 0) ? <label>Sorry, there aren't results for your selection... <br /><br /></label> :
-                
+                 
              
                 <div class="table-responsive">
+                 
                   <table class="table btn-table table-fixed paddingTable">
                     <thead class="">
-                      {console.log("soy el boooooook", urlName)}
+                    {console.log("entreeee", bookAllowances)}
                     {(urlName == "book")?
+                     
                       <tr>
+                       
                         <th>Type</th>
                         <th>Name</th>
                         <th>Amount</th>
@@ -98,6 +103,7 @@ export default function allowanceList({
                     }
                     </thead>
                     <RowAllowance
+                      
                       urlName = {urlName}
                       deleteAllowance={deleteAllowance} // Se envia la funcion para eliminar (onClick)
                       viewDetails={viewDetails}  // Se envia la funcion para mostrar el modal (onClick)
@@ -107,7 +113,7 @@ export default function allowanceList({
                        </table>
                 </div>
  
-              }
+               } 
               </MDBAnimation>
           </MDBCol>
         </MDBRow>

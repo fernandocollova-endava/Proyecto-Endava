@@ -2,7 +2,7 @@ import React from "react";
 import { MDBRow, MDBCol, MDBAnimation } from "mdbreact";
 import Day from './day'
 
-const Calendar = ({ handleAddHome, listHomeOffice, next, previous, jump, currentYear, currentMonth }) => {
+const Calendar = ({ handleAddHome, handleProyect, listHomeOffice, next, previous, jump, currentYear, currentMonth }) => {
   let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   return (
     <>
@@ -25,13 +25,14 @@ const Calendar = ({ handleAddHome, listHomeOffice, next, previous, jump, current
       {/* FICHAS / MODULOS */}
       <MDBRow className="container-banner marginDemo">
         <MDBCol md="2">
-          <div className="form-inline">
-            <button className="btn btn-primary btn-block" onClick={previous}>Previous</button><br />
-            <button className="btn btn-primary btn-block" onClick={next}>Next</button>
-          </div>
-          <br />
-          <form className="form-inline" onSubmit={jump}>
-            <label className="lead mr-2 ml-2">Jump To: </label> <br />
+        <MDBAnimation type="fadeInLeft">
+          <p>
+            <button className="btnEv-grey rounded-0 mb-0 border-0 showHomeOffice" style={({fontSize: 15})} onClick={previous}>
+                <i className="fas fa-angle-left"></i> Prev</button>
+            <button className="btnEv-grey rounded-0 mb-0 border-0 showHomeOffice" style={({fontSize: 15})} onClick={next}>
+                Next <i className="fas fa-angle-right"></i></button>
+          </p>
+          <form className="" onSubmit={jump}>
             <select className="form-control" name="month">
               <option value="0">Jan</option>
               <option value="1">Feb</option>
@@ -46,9 +47,6 @@ const Calendar = ({ handleAddHome, listHomeOffice, next, previous, jump, current
               <option value="10">Nov</option>
               <option value="11">Dec</option>
             </select>
-
-            <br />
-            <label></label>
             <select className="form-control" name="year">
               <option value="2019">2019</option>
               <option value="2020">2020</option>
@@ -62,7 +60,23 @@ const Calendar = ({ handleAddHome, listHomeOffice, next, previous, jump, current
               <option value="2028">2028</option>
               <option value="2029">2029</option>
               <option value="2030">2030</option>
-            </select></form>
+            </select>
+          </form>
+          <hr/>
+          <select className="form-control" name="proyect" onChange={handleProyect}>
+              <option value="Proyect name 1">Proyect name 1</option>
+              <option value="Proyect name 2">Proyect name 2</option>
+              <option value="Proyect name 3">Proyect name 3</option>
+            </select>
+          {/* visualiza los nombres de los integrantes de cada equipo */}
+          <br/>
+          <p>
+            <button className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Allowance</button>
+            <button className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Birthday</button>
+          </p>
+          Allowance:
+          <textarea name="proyectName" className="form-control" cols="1" rows="6"></textarea>
+          </MDBAnimation>
         </MDBCol>
         <MDBCol md="9">
           <MDBAnimation type="fadeInUp">

@@ -9,7 +9,7 @@ export default function rowAllowance({ deleteAllowance, viewDetails, allUser,
             <tbody>
                 {   
                     allowanceList && allowanceList.map(row => (
-                        <tr>    {console.log(row.allowanceDetail.id, row.id)}
+                        <tr>    
                             <td className="upperCaseFonts">{row.allowanceDetail.name}</td>
                             <td className="upperCaseFonts">{row.employeeDetail.name}</td>
                             <td>{row.amount}</td>
@@ -17,7 +17,7 @@ export default function rowAllowance({ deleteAllowance, viewDetails, allUser,
                             <td>{row.employeeAmount}</td><th>Date</th>
                             {urlName =="book"?null:<td>{(row.paymentDate)}</td>}
                             <td><label className={row.status}>{row.status}</label></td>
-                            <td><button type="button" onClick={() => viewDetails(row.id, row.allowanceDetail.id)} className="btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"><i className="far fa-file-pdf" aria-hidden="true"></i> Details <div className="Ripple "></div></button></td>
+                            <td><button type="button" onClick={() => viewDetails(row.id, row.allowanceDetail.id, row.receiptPath)} className="btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"><i className="far fa-file-pdf" aria-hidden="true"></i> Details <div className="Ripple "></div></button></td>
                             <td>
                                 {
                                     (row.status === 'pending' && !allUser)?
