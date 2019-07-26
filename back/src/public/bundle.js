@@ -2543,7 +2543,7 @@ module.exports = exports['default'];
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n\n\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-grey:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md {\n  background-color: #9bb4be !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #9bb4be !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}\n\n /* === CALENDAR === */\n .bg-info {\n  background-color: #17a2b8!important;\n}\n.viewEvent {\n  font-size: 12px;\n  background-color: #DE411B;\n  color: white;\n  border-radius: 8px;\n  margin-bottom: 0px;\n  margin-top: 2px;\n  border: 1px solid white;\n}\n.classDay {\n  font-size: 20px;\n  padding: 4px 11px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n.classToday {\n  font-size: 20px;\n  background-color: #d8d8e8;\n  padding: 10px 11px;\n  margin: 0 35px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n#calendar-body > tr {\n  height: 136px;\n}\n#calendar-body td:hover {\n  background-color: #f0f3f3;\n  cursor:pointer;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n.viewHB {\n    background: url(\"/assets/img/backgroundHB.png\") no-repeat center;\n   -webkit-background-size: cover;\n   -moz-background-size: cover;\n   -o-background-size: cover;\n   background-size: cover;\n   max-width: 100% ;\n   text-align: center;\n}\n.textCenter {\n  text-align: center;\n}\n.showHomeOffice {\n  width: 90px;\n  font-size: 10px;\n  padding: 2px 7px;\n  border-radius: 0px !important;\n  margin-left: 2px;\n  min-height: 43px;\n}\n.itemName {\n  font-size: 14px;\n  padding: 0px;\n  margin: 0px;\n  margin-left: 16px;\n}\n.divListAllowance {\n  min-height: 144px;\n  overflow: auto;\n}\n.hiddenDiv{\n  display: none;\n}", ""]);
+exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.rejectedBook {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 70px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.10rem 0.29rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.approvedBook {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.10rem 0.29rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n\n\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-grey:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md {\n  background-color: #9bb4be !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #9bb4be !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}\n\n /* === CALENDAR === */\n .bg-info {\n  background-color: #17a2b8!important;\n}\n.viewEvent {\n  font-size: 12px;\n  background-color: #DE411B;\n  color: white;\n  border-radius: 8px;\n  margin-bottom: 0px;\n  margin-top: 2px;\n  border: 1px solid white;\n}\n.classDay {\n  font-size: 20px;\n  padding: 4px 11px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n.classToday {\n  font-size: 20px;\n  background-color: #d8d8e8;\n  padding: 10px 11px;\n  margin: 0 35px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n#calendar-body > tr {\n  height: 136px;\n}\n#calendar-body td:hover {\n  background-color: #f0f3f3;\n  cursor:pointer;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n.viewHB {\n    background: url(\"/assets/img/backgroundHB.png\") no-repeat center;\n   -webkit-background-size: cover;\n   -moz-background-size: cover;\n   -o-background-size: cover;\n   background-size: cover;\n   max-width: 100% ;\n   text-align: center;\n}\n.textCenter {\n  text-align: center;\n}\n.showHomeOffice {\n  width: 90px;\n  font-size: 10px;\n  padding: 2px 7px;\n  border-radius: 0px !important;\n  margin-left: 2px;\n  min-height: 43px;\n}\n.itemName {\n  font-size: 14px;\n  padding: 0px;\n  margin: 0px;\n  margin-left: 16px;\n}\n.divListAllowance {\n  min-height: 144px;\n  overflow: auto;\n}\n.hiddenDiv{\n  display: none;\n}", ""]);
 
 
 /***/ }),
@@ -65545,20 +65545,26 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return allowanceList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return adminBook; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AllowancesListContainer/rowAllowance */ "./src/components/AllowancesListContainer/rowAllowance.jsx");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
-function allowanceList(_ref) {
+
+function adminBook(_ref) {
   var handleFilterStatus = _ref.handleFilterStatus,
       alertPending = _ref.alertPending,
       bookAllowances = _ref.bookAllowances,
-      allowanceStatus = _ref.allowanceStatus;
+      allowanceStatus = _ref.allowanceStatus,
+      deleteAllowance = _ref.deleteAllowance,
+      viewDetails = _ref.viewDetails,
+      allUser = _ref.allUser,
+      urlName = _ref.urlName;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -65615,23 +65621,23 @@ function allowanceList(_ref) {
     md: "12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
-  }, bookAllowances.length === 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
-    btn: true,
-    fixed: true,
-    responsive: true,
-    className: "paddingTable"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableHead"], {
-    columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__["columnsBook"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableBody"], {
-    rows: {
-      // name:bookAllowances.employeeDetail.name,
-      amount: bookAllowances.amount,
-      employeeAmount: bookAllowances.employeeAmount,
-      installments: bookAllowances.installments,
-      receiptPath: bookAllowances.receiptPath,
-      status: bookAllowances.status
-    }
-  })))))));
+  }, bookAllowances.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    "class": "table btn-table table-fixed paddingTable"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
+    "class": ""
+  }, console.log("entreeee", bookAllowances), urlName == "book" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    urlName: urlName,
+    deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
+    ,
+    viewDetails: viewDetails // Se envia la funcion para mostrar el modal (onClick)
+    ,
+    allUser: allUser // Si es admin o no
+    ,
+    allowanceList: bookAllowances // Listado de la consulta
+
+  }))))))));
 }
 
 /***/ }),
@@ -65648,12 +65654,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
-/* harmony import */ var _AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../AdminBookContainer/adminBook */ "./src/components/AdminBookContainer/adminBook.jsx");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_ModalBookDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/ModalBookDetail */ "./src/components/ModalContainer/ModalBookDetail.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
+/* harmony import */ var _AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AdminBookContainer/adminBook */ "./src/components/AdminBookContainer/adminBook.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65681,6 +65689,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var AdminBookContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -65698,12 +65707,13 @@ function (_React$Component) {
       modalBoolean: false,
       activeAllowance: {},
       history: [],
-      activeItem: '1',
-      allowanceType: '',
-      titleBoolean: '',
-      msjSave: '',
-      allowanceStatus: '',
-      alertPending: 0
+      activeItem: "1",
+      allowanceType: "book",
+      titleBoolean: "",
+      msjSave: "",
+      allowanceStatus: "",
+      alertPending: 0,
+      selectedMonth: 0
     };
     _this.toggleDetails = _this.toggleDetails.bind(_assertThisInitialized(_this));
     _this.toggleBoolean = _this.toggleBoolean.bind(_assertThisInitialized(_this));
@@ -65712,6 +65722,7 @@ function (_React$Component) {
     _this.toggleAviso = _this.toggleAviso.bind(_assertThisInitialized(_this));
     _this.deleteAllowance = _this.deleteAllowance.bind(_assertThisInitialized(_this));
     _this.actionOk = _this.actionOk.bind(_assertThisInitialized(_this));
+    _this.handleFilterStatus = _this.handleFilterStatus.bind(_assertThisInitialized(_this));
     _this.handleSaveConfirm = _this.handleSaveConfirm.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -65721,61 +65732,54 @@ function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      this.props.fetchBookAllowances();
-      this.props.openCloseNavBar(false); // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
+      this.props.openCloseNavBar(false);
+      var selectedMonth = moment__WEBPACK_IMPORTED_MODULE_2___default()().month() + 2;
+      this.props.fetchCurrentBookA(selectedMonth, this.props.adminPath, this.props.user.id);
+      this.setState({
+        selectedMonth: selectedMonth
+      }, function () {
+        _this2.props.fetchCurrentBookA(_this2.state.selectedMonth, _this2.props.adminPath, _this2.props.user.id); // this.props.fetchBookAllowances();
 
-      if (this.props.user.isAdmin && this.props.allUser) {
-        this.props.fetchCountPending(this.props.user.id).then(function (count) {
-          _this2.setState({
-            alertPending: count.data
-          }); // Guarda cantidad de pendientes 
-
-        });
-      }
+      });
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       var _this3 = this;
 
-      if (prevProps.allUser !== this.props.allUser) {
-        this.setState({
-          alertPending: 0,
-          // Resetea el estado a cero
-          allowanceType: '',
-          // Resetea el select de type
-          allowanceStatus: '' // Resetea el select de Status
-
-        }, function () {
-          _this3.props.fetchAllowances(_this3.props.user.id, _this3.state.allowanceType, _this3.state.allowanceStatus, _this3.props.allUser);
-        }); // Si es admin y si esta en la ruta panel consulta la cantidad..
-
-        if (this.props.user.isAdmin && this.props.allUser) {
-          this.props.fetchCountPending(this.props.user.id).then(function (count) {
-            _this3.setState({
-              alertPending: count.data
-            }); // Guarda cantidad de pendientes para alert al admin
-
-          });
-        }
+      if (prevProps.adminPath !== this.props.adminPath) {
+        this.props.fetchCurrentBookA(this.state.selectedMonth, this.props.adminPath, this.props.user.id).then(function () {
+          return _this3.props.fetchBookAllowances(_this3.props.user.id, _this3.props.adminPath);
+        });
       }
     } // FUNCION DE CONSULTA HISTORIAL / DETALLE
 
   }, {
     key: "viewDetails",
-    value: function viewDetails(id, allowanceId) {
+    value: function viewDetails(id, allowanceId, receiptPath) {
       var _this4 = this;
 
+      console.log("data del view", id, allowanceId, receiptPath);
       this.props.fetchAllowanceActive(id).then(function (data) {
-        var idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
-
-        _this4.props.fetchAllowanceHistory(idUserHistory, allowanceId).then(function () {
+        // let idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
+        _this4.props.fetchBookInstallments(receiptPath, allowanceId).then(function () {
           _this4.setState({
             modal: true
           });
         });
       });
-    } // TOGGLE MODAL HISTORIAL / DETALLE
+    }
+  }, {
+    key: "handleFilterStatus",
+    value: function handleFilterStatus(e) {
+      this.props.fetchCurrentBookA(this.state.selectedMonth, this.props.adminPath, this.props.user.id);
+      this.setState({
+        allowanceStatus: e.target.value
+      });
+    }
+  }, {
+    key: "handMonthChange",
+    value: function handMonthChange(e) {} // TOGGLE MODAL HISTORIAL / DETALLE
 
   }, {
     key: "toggleDetails",
@@ -65783,7 +65787,7 @@ function (_React$Component) {
       this.setState({
         modal: !this.state.modal,
         activeItem: "1",
-        msjSave: ''
+        msjSave: ""
       });
     } // TOGGLE MODAL AVISO
 
@@ -65792,7 +65796,7 @@ function (_React$Component) {
     value: function toggleAviso() {
       this.setState({
         modalAviso: !this.state.modalAviso,
-        msjSave: ''
+        msjSave: ""
       });
     } // TOGGLE MODAL BOOLEAN
 
@@ -65837,7 +65841,7 @@ function (_React$Component) {
           titleMsj: "Success"
         });
 
-        _this5.props.fetchAllowances(_this5.props.user.id, _this5.state.allowanceType, _this5.state.allowanceStatus, _this5.props.allUser);
+        _this5.props.fetchCurrentBookA(_this5.state.selectedMonth, _this5.props.adminPath, _this5.props.user.id);
       })["catch"](function () {
         _this5.setState({
           modalBoolean: false,
@@ -65846,7 +65850,10 @@ function (_React$Component) {
           titleMsj: "Error"
         });
       });
-    } // Funcion para updatear el status de los beneficios
+    }
+  }, {
+    key: "deleteBookAllowance",
+    value: function deleteBookAllowance() {} // Funcion para updatear el status de los beneficios
 
   }, {
     key: "handleSaveConfirm",
@@ -65856,53 +65863,49 @@ function (_React$Component) {
       e.preventDefault();
       this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
         _this6.setState({
-          msjSave: 'Saved!'
+          msjSave: "Saved!"
         });
 
-        _this6.props.fetchAllowances(_this6.props.user.id, _this6.state.allowanceType, _this6.state.allowanceStatus, _this6.props.allUser);
+        _this6.props.fetchBookAllowances(_this6.props.user.id, _this6.props.adminPath);
       })["catch"](function () {
         _this6.setState({
-          msjSave: 'Ups!, an error occurred while processing the request...'
+          msjSave: "Ups!, an error occurred while processing the request..."
         });
       });
     }
   }, {
     key: "render",
     value: function render() {
-      // Condicional para redefinir los objetos
-      // let val = parserRow(
-      //   this.props.bookAllowances, // Se envia el listado a depurar
-      //   this.deleteAllowance, // Se envia la funcion para eliminar (onClick)
-      //   this.viewDetails,  // Se envia la funcion para mostrar el modal (onClick)
-      //   this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
-      // )
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("soy current", this.props.bookInstallments), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalBookDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
         togglePanel: this.togglePanel,
         activeItem: this.state.activeItem,
         activeAllowance: this.props.activeAllowance,
-        history: this.props.history,
+        history: this.props.bookInstallments,
         handleSaveConfirm: this.handleSaveConfirm,
         msjSave: this.state.msjSave,
         allUser: this.props.allUser
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__["default"], {
         modal: this.state.modalAviso,
         toggle: this.toggleAviso,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__["default"], {
         modalBoolean: this.state.modalBoolean,
         toggleBoolean: this.toggleBoolean,
         actionOk: this.actionOk,
         titleBoolean: this.state.titleBoolean,
         data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_8__["default"], {
         alertPending: this.state.alertPending,
         handleClick: this.handleClick,
         handleFilterStatus: this.handleFilterStatus,
-        bookAllowances: this.props.bookAllowances,
-        allowanceStatus: this.state.allowanceStatus
+        bookAllowances: this.props.currentBookAllowances,
+        allowanceStatus: this.state.allowanceStatus,
+        deleteAllowance: this.props.deleteAllowance,
+        viewDetails: this.viewDetails,
+        urlName: this.props.urlName
       }));
     }
   }]);
@@ -65910,45 +65913,56 @@ function (_React$Component) {
   return AdminBookContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(state, owner) {
+var mapStateToProps = function mapStateToProps(state, own) {
+  var urlName = own.match.url.substring(7, 11);
   return {
+    urlName: urlName,
     user: state.user.user,
     bookAllowances: state.allowance.bookAllowances,
     activeAllowance: state.allowance.activeAllowances,
     history: state.allowance.historyAllowances,
-    // allUser => Consulta si la ruta ingresada es "/admin/panel", de ser correcto permite en el back mostrar u ocultar uno o todos los usuarios.
-    allUser: owner.match.path == "/admin/panel" // true o false
+    //
+    bookInstallments: state.allowance.bookInstallments,
+    adminPath: own.match.path == "/admin/book",
+    // adminPath => consulta que la ruta corresponda a admin
+    currentBookAllowances: state.allowance.currentBookAllowances //busco libros p/mes actual
 
   };
 };
 
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
-    fetchBookAllowances: function fetchBookAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchBookAllowances"])());
+    fetchBookAllowances: function fetchBookAllowances(user, adminPath) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchBookAllowances"])(user, adminPath));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_3__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__["openCloseNavBar"])(val));
     },
     fetchAllowanceActive: function fetchAllowanceActive(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchAllowanceActive"])(id));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceActive"])(id));
     },
     fetchAllowanceHistory: function fetchAllowanceHistory(employeeId, allowanceId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchAllowanceHistory"])(employeeId, allowanceId));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceHistory"])(employeeId, allowanceId));
     },
     //trae la data para el "history del detalle modal"
     deleteAllowance: function deleteAllowance(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["deleteAllowance"])(id));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["deleteAllowance"])(id));
     },
-    // Elimina detalle 
+    // Elimina detalle
     editStatusAllowance: function editStatusAllowance(id, status, observation) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["editStatusAllowance"])(id, status, observation));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["editStatusAllowance"])(id, status, observation));
     },
     // Switch State
     fetchCountPending: function fetchCountPending(userId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchCountPending"])(userId));
-    } // Consulta cantidad de allowance pendientes
-
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
+    },
+    // Consulta cantidad de allowance pendientes
+    fetchCurrentBookA: function fetchCurrentBookA(month, adminPath, userId) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCurrentBookA"])(month, adminPath, userId));
+    },
+    fetchBookInstallments: function fetchBookInstallments(receiptPath, allowanceId) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchBookInstallments"])(receiptPath, allowanceId));
+    }
   };
 };
 
@@ -66298,7 +66312,9 @@ function allowanceList(_ref) {
     value: ""
   }, "Choose your allowance..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: ""
-  }, "All"), adminAllowances && adminAllowances.map(function (item) {
+  }, "All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "4"
+  }, "Book"), adminAllowances && adminAllowances.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       className: "capitalizeName",
       key: item.id,
@@ -66380,12 +66396,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _allowanceList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _allowanceList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66403,6 +66421,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66455,7 +66474,8 @@ function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
+      var selectedMonth = moment__WEBPACK_IMPORTED_MODULE_2___default()().month() + 2;
+      this.props.fetchAllowances(selectedMonth, this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
       this.props.fetchAdminAllowances();
       this.props.openCloseNavBar(false); // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
 
@@ -66499,7 +66519,9 @@ function (_React$Component) {
   }, {
     key: "handleClick",
     value: function handleClick(e) {
-      this.props.fetchAllowances(this.props.user.id, e.target.value, this.state.allowanceStatus, this.props.allUser);
+      console.log(e.target.value);
+      var selectedMonth = moment__WEBPACK_IMPORTED_MODULE_2___default()().month() + 2;
+      this.props.fetchAllowances(selectedMonth, this.props.user.id, e.target.value, this.state.allowanceStatus, this.props.allUser);
       this.setState({
         allowanceType: e.target.value
       });
@@ -66508,7 +66530,8 @@ function (_React$Component) {
   }, {
     key: "handleFilterStatus",
     value: function handleFilterStatus(e) {
-      this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, e.target.value, this.props.allUser);
+      var selectedMonth = moment__WEBPACK_IMPORTED_MODULE_2___default()().month() + 2;
+      this.props.fetchAllowances(selectedMonth, this.props.user.id, this.state.allowanceType, e.target.value, this.props.allUser);
       this.setState({
         allowanceStatus: e.target.value
       });
@@ -66622,7 +66645,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
         togglePanel: this.togglePanel,
@@ -66632,18 +66655,18 @@ function (_React$Component) {
         handleSaveConfirm: this.handleSaveConfirm,
         msjSave: this.state.msjSave,
         allUser: this.props.allUser
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__["default"], {
         modal: this.state.modalAviso,
         toggle: this.toggleAviso,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__["default"], {
         modalBoolean: this.state.modalBoolean,
         toggleBoolean: this.toggleBoolean,
         actionOk: this.actionOk,
         titleBoolean: this.state.titleBoolean,
         data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_3__["default"], {
         alertPending: this.state.alertPending,
         handleClick: this.handleClick // Filtro de tipo de beneficio
         ,
@@ -66685,32 +66708,32 @@ var mapStateToProps = function mapStateToProps(state, owner) {
 
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
-    fetchAllowances: function fetchAllowances(userId, allowanceId, status, allUser) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowances"])(userId, allowanceId, status, allUser));
+    fetchAllowances: function fetchAllowances(month, userId, allowanceId, status, allUser) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAllowances"])(month, userId, allowanceId, status, allUser));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     },
     fetchAllowanceActive: function fetchAllowanceActive(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceActive"])(id));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAllowanceActive"])(id));
     },
     fetchAllowanceHistory: function fetchAllowanceHistory(employeeId, allowanceId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceHistory"])(employeeId, allowanceId));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAllowanceHistory"])(employeeId, allowanceId));
     },
     //trae la data para el "history del detalle modal"
     deleteAllowance: function deleteAllowance(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["deleteAllowance"])(id));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["deleteAllowance"])(id));
     },
     // Elimina detalle 
     editStatusAllowance: function editStatusAllowance(id, status, observation) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["editStatusAllowance"])(id, status, observation));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["editStatusAllowance"])(id, status, observation));
     },
     // Switch State
     fetchAdminAllowances: function fetchAdminAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAdminAllowances"])());
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAdminAllowances"])());
     },
     fetchCountPending: function fetchCountPending(userId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchCountPending"])(userId));
     } // Consulta cantidad de allowance pendientes
 
   };
@@ -66737,19 +66760,20 @@ function rowAllowance(_ref) {
   var deleteAllowance = _ref.deleteAllowance,
       viewDetails = _ref.viewDetails,
       allUser = _ref.allUser,
-      allowanceList = _ref.allowanceList;
+      allowanceList = _ref.allowanceList,
+      urlName = _ref.urlName;
   var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, allowanceList && allowanceList.map(function (row) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, console.log("soy los books del roow", allowanceList), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, allowanceList && allowanceList.map(function (row) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "upperCaseFonts"
     }, row.allowanceDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "upperCaseFonts"
-    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: row.status
     }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
       onClick: function onClick() {
-        return viewDetails(row.id, row.allowanceDetail.id);
+        return viewDetails(row.id, row.allowanceDetail.id, row.receiptPath);
       },
       className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -67394,7 +67418,7 @@ function eventCalendar(_ref) {
     "class": "page"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "upperCaseFonts"
-  }, "Schedule of events"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, " Events Schedule "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "page__demo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "main-container page__container"
@@ -68566,10 +68590,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./login */ "./src/components/LoginContainer/login.jsx");
 /* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _UpdatePassContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../UpdatePassContainer */ "./src/components/UpdatePassContainer/index.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -68589,9 +68610,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
 
 
 
@@ -68673,7 +68691,7 @@ function (_React$Component) {
     }
   }, {
     key: "onChangeRemember",
-    value: function onChangeRemember(e) {
+    value: function onChangeRemember() {
       this.setState(function (_ref) {
         var value = _ref.value;
         return {
@@ -68718,7 +68736,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__["default"], {
         modal: this.state.modal,
         toggle: this.toggle,
         textMsj: this.state.textMsj,
@@ -69031,6 +69049,197 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./src/components/ModalContainer/ModalBookDetail.jsx":
+/*!***********************************************************!*\
+  !*** ./src/components/ModalContainer/ModalBookDetail.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ModalBookDetails; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+function ModalBookDetails(_ref) {
+  var modal = _ref.modal,
+      msjSave = _ref.msjSave,
+      allUser = _ref.allUser,
+      handleSaveConfirm = _ref.handleSaveConfirm,
+      toggleDetails = _ref.toggleDetails,
+      activeAllowance = _ref.activeAllowance,
+      history = _ref.history,
+      togglePanel = _ref.togglePanel,
+      activeItem = _ref.activeItem;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
+    isOpen: modal,
+    toggle: toggleDetails,
+    size: "lg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
+    toggle: toggleDetails
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "upperCaseFonts"
+  }, activeAllowance.allowanceDetail.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNav"], {
+    className: "nav-tabs"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "1" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("1");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-list-alt"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "DETAILS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "2" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("2");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-history"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "HISTORY"))), allUser && // Si 
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "3" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("3");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-user-edit"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "ADMIN")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
+    activeItem: activeItem
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
+    tabId: "1",
+    role: "tabpanel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "User: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "marginTextLeft textBold"
+  }, "Actual payment date: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.paymentDate)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Amount: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, "$ ", activeAllowance.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "marginTextLeft textBold"
+  }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm ".concat(activeAllowance.status)
+  }, activeAllowance.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Observation: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.observation)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Admin Comment: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: handleSaveConfirm
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "hidden",
+    name: "id",
+    value: activeAllowance.id
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    action: "",
+    className: "modalForm"
+  }, activeAllowance.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "radio"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "approvedBook radioBoton"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    defaultChecked: activeAllowance.status === 'approved',
+    name: "status",
+    value: "approved"
+  }), "\xA0APPROVED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "rejectedBook radioBoton"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    defaultChecked: activeAllowance.status === 'rejected',
+    name: "status",
+    value: "rejected"
+  }), "\xA0REJECTED")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm ".concat(activeAllowance.status)
+  }, activeAllowance.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-group",
+    style: {
+      marginTop: -20
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-group-prepend"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "input-group-text",
+    id: "basic-addon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-comment-alt prefix"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    autoComplete: "off",
+    name: "observation",
+    defaultValue: activeAllowance.adminComment,
+    required: true,
+    className: "form-control",
+    placeholder: "Observation...",
+    "aria-describedby": "basic-addon"
+  })), activeAllowance.status === 'pending' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "mb-3 btnEv-blue rounded mb-0 border-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-edit"
+  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), activeAllowance.receiptPath.split('.')[1] !== 'pdf' && activeAllowance.receiptPath.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/assets/receipt/".concat(activeAllowance.receiptPath),
+    width: "100%"
+  }), activeAllowance.receiptPath.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
+    src: "/assets/receipt/".concat(activeAllowance.receiptPath),
+    width: "100%",
+    height: "400px",
+    type: "application/pdf"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
+    tabId: "2",
+    role: "tabpanel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    className: "table btn-table table-fixed"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Installments"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, console.log("history", history), history && history.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      style: {
+        height: 32
+      },
+      key: i
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.installments), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: item.status
+    }, item.status));
+  }))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    className: "mb-3 btnEv-red rounded mb-0 border-0",
+    onClick: toggleDetails
+  }, "Close"))));
+}
+
+/***/ }),
+
 /***/ "./src/components/ModalContainer/modalAviso.jsx":
 /*!******************************************************!*\
   !*** ./src/components/ModalContainer/modalAviso.jsx ***!
@@ -69190,7 +69399,7 @@ function ModalDetails(_ref) {
     className: "textForm"
   }, activeAllowance.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "marginTextLeft textBold"
-  }, "Payment Date: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Actual payment date: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
   }, activeAllowance.paymentDate)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "parrafoModal"
@@ -69557,22 +69766,22 @@ function (_Component) {
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Event calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        className: "item ".concat(location == "/calendar" && "itemActive"),
+      }, " Event calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "item",
+        onClick: this.handleLogOut
+      }, " Logout "), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location == "/admin/book" && "itemActive"),
         to: "/admin/book",
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Admin Book Panel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "item",
-        onClick: this.handleLogOut
-      }, " Logout "), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      }, " Admin Book Panel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/admin/panel" && "itemActive"),
         to: "/admin/panel",
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Admin Panel ") : null));
+      }, " Admin Panel ")) : null));
     }
   }]);
 
@@ -70259,7 +70468,7 @@ function obraSocial(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_BOOK_INSTALLMENTS, RECEIVE_CURRENT_BOOK_A, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70272,6 +70481,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ACTIVE_ALLOWANCES", function() { return RECEIVE_ACTIVE_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HISTORY_ALLOWANCES", function() { return RECEIVE_HISTORY_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_BOOK_ALLOWANCES", function() { return RECEIVE_BOOK_ALLOWANCES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_BOOK_INSTALLMENTS", function() { return RECEIVE_BOOK_INSTALLMENTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_CURRENT_BOOK_A", function() { return RECEIVE_CURRENT_BOOK_A; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_EVENT_LIST", function() { return RECEIVE_EVENT_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TECH_LIST", function() { return RECEIVE_TECH_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_OPEN_CLOSE_NAVBAR", function() { return SET_OPEN_CLOSE_NAVBAR; });
@@ -70288,7 +70499,9 @@ var RECEIVE_ADMIN_ALLOWANCES = "ECEIVE_ADMIN_ALLOWANCES";
 var RECEIVE_PENDING_ALLOWANCES = "RECEIVE_PENDING_ALLOWANCES";
 var RECEIVE_ACTIVE_ALLOWANCES = "RECEIVE_ACTIVE_ALLOWANCES";
 var RECEIVE_HISTORY_ALLOWANCES = "RECEIVE_HISTORY_ALLOWANCES";
-var RECEIVE_BOOK_ALLOWANCES = "RECEIVE_BOOK_ALLOWANCES"; // DisciplineEvents
+var RECEIVE_BOOK_ALLOWANCES = "RECEIVE_BOOK_ALLOWANCES";
+var RECEIVE_BOOK_INSTALLMENTS = "RECEIVE_BOOK_INSTALLMENTS";
+var RECEIVE_CURRENT_BOOK_A = "RECEIVE_CURRENT_BOOK_A"; // DisciplineEvents
 
 var RECEIVE_EVENT_LIST = "RECEIVE_EVENT_LIST";
 var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST"; // NavBar 
@@ -70360,7 +70573,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*!***********************************************!*\
   !*** ./src/redux/actions/allowanceActions.js ***!
   \***********************************************/
-/*! exports provided: receiveAllowances, receiveBookAllowances, receiveAdminAllowances, receiveActiveAllowances, receiveHistoryAllowances, createAllowance, fetchAllowances, fetchAdminAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance, fetchCountPending, fetchBookAllowances, sendEmailConfirm */
+/*! exports provided: receiveAllowances, receiveBookAllowances, receiveAdminAllowances, receiveActiveAllowances, receiveHistoryAllowances, receiveCurrentBookA, receiveBookInstallments, createAllowance, fetchAllowances, fetchAdminAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance, fetchCountPending, fetchCurrentBookA, fetchBookAllowances, fetchBookInstallments, sendEmailConfirm */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70370,6 +70583,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAdminAllowances", function() { return receiveAdminAllowances; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveActiveAllowances", function() { return receiveActiveAllowances; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveHistoryAllowances", function() { return receiveHistoryAllowances; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveCurrentBookA", function() { return receiveCurrentBookA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveBookInstallments", function() { return receiveBookInstallments; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createAllowance", function() { return createAllowance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllowances", function() { return fetchAllowances; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAdminAllowances", function() { return fetchAdminAllowances; });
@@ -70378,7 +70593,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteAllowance", function() { return deleteAllowance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editStatusAllowance", function() { return editStatusAllowance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCountPending", function() { return fetchCountPending; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCurrentBookA", function() { return fetchCurrentBookA; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchBookAllowances", function() { return fetchBookAllowances; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchBookInstallments", function() { return fetchBookInstallments; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sendEmailConfirm", function() { return sendEmailConfirm; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
@@ -70415,6 +70632,19 @@ var receiveHistoryAllowances = function receiveHistoryAllowances(historyAllowanc
     historyAllowances: historyAllowances
   };
 };
+var receiveCurrentBookA = function receiveCurrentBookA(currentBookAllowances) {
+  console.log("soy los currents antes de entrar al reducer", currentBookAllowances);
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_CURRENT_BOOK_A"],
+    currentBookAllowances: currentBookAllowances
+  };
+};
+var receiveBookInstallments = function receiveBookInstallments(bookInstallments) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_BOOK_INSTALLMENTS"],
+    bookInstallments: bookInstallments
+  };
+};
 var createAllowance = function createAllowance(formData) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default()({
@@ -70427,10 +70657,11 @@ var createAllowance = function createAllowance(formData) {
     });
   };
 };
-var fetchAllowances = function fetchAllowances(userId, allowanceId, status, allUser) {
+var fetchAllowances = function fetchAllowances(month, userId, allowanceId, status, allUser) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/search", {
       params: {
+        month: month,
         allowanceId: allowanceId,
         userId: userId,
         status: status,
@@ -70491,13 +70722,40 @@ var fetchCountPending = function fetchCountPending(userId) {
     });
   };
 };
-var fetchBookAllowances = function fetchBookAllowances() {
+var fetchCurrentBookA = function fetchCurrentBookA(month, adminPath, userId) {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book").then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book/current", {
+      params: {
+        month: month,
+        adminPath: adminPath,
+        userId: userId
+      }
+    }).then(function (res) {
+      return res.data;
+    }).then(function (currentBookAllowances) {
+      dispatch(receiveCurrentBookA(currentBookAllowances));
+    });
+  };
+};
+var fetchBookAllowances = function fetchBookAllowances(user, adminPath) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book", {
+      user: user,
+      adminPath: adminPath
+    }).then(function (res) {
       return res.data;
     }).then(function (bookAllowances) {
-      console.log("soy bookAlll del axios", bookAllowances);
       dispatch(receiveBookAllowances(bookAllowances));
+    });
+  };
+};
+var fetchBookInstallments = function fetchBookInstallments(receiptPath, allowanceId) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book/installments/".concat(receiptPath, "/").concat(allowanceId)).then(function (res) {
+      return res.data;
+    }).then(function (bookInstallments) {
+      console.log("soy bookInstall", bookInstallments);
+      dispatch(receiveBookInstallments(bookInstallments));
     });
   };
 };
@@ -70814,7 +71072,9 @@ var initialState = {
       name: ""
     }
   },
-  bookAllowances: []
+  bookAllowances: [],
+  currentBookAllowances: [],
+  bookInstallments: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -70839,6 +71099,16 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_BOOK_ALLOWANCES"]:
       return _objectSpread({}, state, {
         bookAllowances: _toConsumableArray(action.bookAllowances)
+      });
+
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_BOOK_A"]:
+      return _objectSpread({}, state, {
+        currentBookAllowances: _toConsumableArray(action.currentBookAllowances)
+      });
+
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_BOOK_INSTALLMENTS"]:
+      return _objectSpread({}, state, {
+        bookInstallments: _toConsumableArray(action.bookInstallments)
       });
 
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_HISTORY_ALLOWANCES"]:

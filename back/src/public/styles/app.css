@@ -238,6 +238,35 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     border-radius: 5px !important;
 }
+.rejectedBook {
+  background-color: #c31900 !important;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    min-width: 70px;
+    font-family: roboto_condensedbold,Arial,sans-serif;
+    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 0.10rem 0.29rem;
+    font-size: 0.81rem;
+    border: solid 1px #c31900 !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius: 5px !important;
+}
+.approvedBook {
+  background-color: #0AC3E6 !important;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    min-width: 100px;
+    font-family: roboto_condensedbold,Arial,sans-serif;
+    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 0.10rem 0.29rem;
+    font-size: 0.81rem;
+    border: solid 1px #0AC3E6 !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius: 5px !important;
+}
+
 
 .btnAllowance {
   margin-top: -50px;
