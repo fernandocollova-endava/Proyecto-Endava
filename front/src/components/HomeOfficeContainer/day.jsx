@@ -18,7 +18,10 @@ export default class Day extends React.Component {
                     let id = date; // Guarda el Scope de la instancia
                     // Los eventos consulta solo si this.props.listHome .length es mayor a 0
                     children.push(
-                        <td key={j} onClick={() => this.props.handleAddHome(id)} className={(this.isHappyBirthday(date) ? 'viewHB' : '')}>
+                        <td key={j} onClick={() => this.props.handleAddHome(id)}
+                            className={
+                                (this.props.birthDayList.length) && (this.isHappyBirthday(date) ? 'viewHB' : '') // Ejecuta el largo del arreglo es mayor a 0
+                            }>
                             <p className={(this.isToday(date, month, year)) ? "classToday" : "classDay"} >{date}</p>
                             {((this.props.listHomeOffice).length) ? this.getUserEvents(date) : ''}
                         </td>)
@@ -50,10 +53,10 @@ export default class Day extends React.Component {
         let list = this.props.listHomeOffice
         return <>
             {
-                list && list.map(item => (
+                list && list.map((item, i) => (
                     // Retorna si el dia coicide con el dia del home office cargado
                     (Number((item.date).split('-')[2]) == date) &&
-                    <p key={item.date} className="viewEvent">{`${item.employeeHomeOffice.name} ${item.employeeHomeOffice.surname[0]}.`}</p>
+                    <p key={i} className="viewEvent">{`${item.employeeHomeOffice.name} ${item.employeeHomeOffice.surname[0]}.`}</p>
                 )
                 )
             }
@@ -61,8 +64,15 @@ export default class Day extends React.Component {
         </>
     }
     isHappyBirthday(date) {
-        if (date == 14) return true
-        return false
+        // Guarda la lista de cumpleaños del mes
+        let list = this.props.birthDayList
+
+        // Funcion de find para comparar vs el dia actual que construye el for (calendario)
+        function search(data) {
+            return Number(data.birthdayDate.slice(8, 10)) === date;
+        }
+        if ((list.find(search)) ) return true // Si encuentra mas de un cumpleaños lo retorna true ( agrega la clase )
+        return false //Si no encuentra un cumpleaños lo retorna false ( no agrega la clase )
     }
 
     render() {
