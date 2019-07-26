@@ -65,7 +65,7 @@ class Navbar extends Component {
           </span>
           <span className="closebtn" onClick={() => this.closeCollapse()}> &times; </span>
           <hr />
-          <Link className={`item ${(location == "/") && "itemActive"}`} to="/" onClick={() => this.closeCollapse()}> Home </Link>
+          
           <Link className={`item ${(location == "/profile") && "itemActive"}`} to="/profile" onClick={() => this.closeCollapse()}> Profile </Link>
           <Link className={`item ${(location == "/allowance/search") && "itemActive"}`} to="/allowance/search" onClick={() => this.closeCollapse()}> My Allowances </Link>
           <Link className={`item ${(location == "/discipline-event/new") && "itemActive"}`} to="/discipline-event/new" onClick={() => this.closeCollapse()}> Discipline Event </Link>
@@ -73,11 +73,20 @@ class Navbar extends Component {
           <Link className={`item ${(location == "/health-care") && "itemActive"}`} to="/health-care" onClick={() => this.closeCollapse()}> Health care </Link>
           <Link className={`item ${(location == "/calendar") && "itemActive"}`} to="/calendar" onClick={() => this.closeCollapse()}> Event calendar</Link>
           <Link className={`item ${(location == "/calendar") && "itemActive"}`} to="/admin/book" onClick={() => this.closeCollapse()}> Admin Book Panel</Link>
-          <span className="item" onClick={this.handleLogOut}> Logout </span>
+          
           {this.props.user.isAdmin == true ?
             <Link className={`item ${(location == "/admin/panel") && "itemActive"}`} to="/admin/panel" onClick={() => this.closeCollapse()}> Admin Panel </Link>
             : null
           }
+
+          <table>
+            <tr>
+              <td><Link className={`item ${(location == "/") && "itemActive"}`} to="/" onClick={() => this.closeCollapse()} style={({fontSize:22})}><i className="fas fa-home"></i> Home </Link>
+              </td>
+              <td>&#124;</td>
+              <td><span className="item" onClick={this.handleLogOut} style={({fontSize:22})}><i className="fas fa-sign-out-alt"></i> Logout </span></td>
+            </tr>
+          </table>
         </div>
       </MDBNavbar>
     );

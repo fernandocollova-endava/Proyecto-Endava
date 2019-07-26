@@ -68283,7 +68283,6 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(HomeOfficeContainer).call(this));
     _this.state = {
-      buildRows: [],
       currentMonth: 0,
       // Mes seleccionado actual
       currentYear: 0,
@@ -68464,7 +68463,6 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Calendar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        buildRows: this.state.buildRows,
         currentMonth: this.state.currentMonth // Visualiza el mes seleccionado
         ,
         currentYear: this.state.currentYear // Visualiza el año seleccionado
@@ -69516,12 +69514,6 @@ function (_Component) {
           return _this3.closeCollapse();
         }
       }, " \xD7 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        className: "item ".concat(location == "/" && "itemActive"),
-        to: "/",
-        onClick: function onClick() {
-          return _this3.closeCollapse();
-        }
-      }, " Home "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/profile" && "itemActive"),
         to: "/profile",
         onClick: function onClick() {
@@ -69563,16 +69555,32 @@ function (_Component) {
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Admin Book Panel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "item",
-        onClick: this.handleLogOut
-      }, " Logout "), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      }, " Admin Book Panel"), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/admin/panel" && "itemActive"),
         to: "/admin/panel",
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Admin Panel ") : null));
+      }, " Admin Panel ") : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location == "/" && "itemActive"),
+        to: "/",
+        onClick: function onClick() {
+          return _this3.closeCollapse();
+        },
+        style: {
+          fontSize: 22
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-home"
+      }), " Home ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "item",
+        onClick: this.handleLogOut,
+        style: {
+          fontSize: 22
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-sign-out-alt"
+      }), " Logout "))))));
     }
   }]);
 
