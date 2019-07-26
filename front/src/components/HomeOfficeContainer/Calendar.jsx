@@ -3,7 +3,7 @@ import { MDBRow, MDBCol, MDBAnimation } from "mdbreact";
 import Day from './day'
 
 const Calendar = ({ handleAddHome, handleProyect, listHomeOffice, next, previous, changeYear, changeMonth,
-  currentYear, currentMonth, proyectList, currentProyect, employeProyectList, birthDayList }) => {
+  currentYear, currentMonth, proyectList, currentProyect, employeProyectList, birthDayList, isShowBirthDay, isShowAllowance,  showHide}) => {
   let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   return (
     <>
@@ -75,17 +75,17 @@ const Calendar = ({ handleAddHome, handleProyect, listHomeOffice, next, previous
             {/* visualiza los nombres de los integrantes de cada equipo */}
             <br />
             <p>
-              <button className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Allowance</button>
-              <button className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Birthday</button>
+              <button onClick={()=>showHide('isShowAllowance')} className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Allowance</button>
+              <button onClick={()=>showHide('isShowBirthDay')} className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Birthday</button>
             </p>
-            <div className="form-control divListAllowance" >
+            <div className={`form-control divListAllowance ${ (isShowAllowance)?'':'hiddenDiv'}`} >
               <strong>Allowance:</strong> <br />
               {employeProyectList && employeProyectList.map((item, i) => (
                 <p key={i} className="itemName">
                   <i className="fas fa-user"></i> {item.name + ' ' + item.surname[0] + '.'}</p>
               ))}
             </div>
-            <div className="form-control divListAllowance" >
+            <div className={`form-control divListAllowance ${ (isShowBirthDay)?'':'hiddenDiv'}`}>
               <strong>BirthDay's:</strong> <br />
               {birthDayList && birthDayList.map((item, i) => (
                 <p key={i} className="itemName">

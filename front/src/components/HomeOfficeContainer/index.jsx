@@ -18,6 +18,8 @@ class HomeOfficeContainer extends React.Component {
       currentProyect: '', // Proyecto seleccionado Actual
       proyectList: [], // Lista de proyectos actual
       employeProyectList: [], // Lista de los empleados que componen el proyecto seleccionado
+      isShowBirthDay:false, // True o false del botn toggle BirthDay
+      isShowAllowance:false // True o false del botn toggle BirthDay
     };
     this.next = this.next.bind(this)
     this.previous = this.previous.bind(this)
@@ -25,6 +27,7 @@ class HomeOfficeContainer extends React.Component {
     this.changeYear = this.changeYear.bind(this)
     this.handleAddHome = this.handleAddHome.bind(this)
     this.handleProyect = this.handleProyect.bind(this)
+    this.showHide = this.showHide.bind(this)
   }
   componentDidMount() {
     window.scrollTo(0, 0)
@@ -84,7 +87,13 @@ class HomeOfficeContainer extends React.Component {
       this.props.fetchHomeOffice(this.state.currentYear, this.state.currentMonth, this.state.currentProyect)
     })
   }
-
+  // Modifica el estado de los botones a true o false para mostrar u ocultar div de 
+  // Empleados del proyecto / Cumpleaños del mes
+  showHide(divName){
+    this.setState({
+      [divName]:!this.state[divName]
+    })
+  }
   // ONCHANGE PARA SELECCIONAR EL PROYECTO ACTUAL
   handleProyect(e) {
     this.props.fetchHomeOffice(this.state.currentYear, this.state.currentMonth, e.target.value) // Reenderiza calendario
@@ -154,6 +163,9 @@ class HomeOfficeContainer extends React.Component {
         currentProyect={this.state.currentProyect} // Visualiza el proyecto actual
         employeProyectList={this.state.employeProyectList} // Lista de los empleados que componen el proyecto seleccionado
         birthDayList={this.props.birthDayList} // Lista de cumpleaños del mes
+        isShowBirthDay = {this.state.isShowBirthDay} // True o false del botn toggle BirthDay
+        isShowAllowance = {this.state.isShowAllowance} // True o false del botn toggle Allowance
+        showHide={this.showHide} // Evento click para togglear true o false las visualizaciones de cumpleaños y allowance
       />
     );
   }

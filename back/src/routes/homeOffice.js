@@ -68,7 +68,6 @@ Router.get('/fetchAllowanceProyect/:proyectName', function (req, res) {
 // Consulta los integrantes de cada proyecto
 Router.get('/birthDay/:month', function (req, res) {
     let month = ((Number(req.params.month) + 1) < 10) ? '0' + (Number(req.params.month) + 1) : (Number(req.params.month) + 1);
-    console.log(month)
     Employee.findAll({
         where: {
             birthdayDate: {
