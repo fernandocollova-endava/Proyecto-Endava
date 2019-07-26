@@ -553,3 +553,6 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
   min-height: 144px;
   overflow: auto;
 }
+.hiddenDiv{
+  display: none;
+}
