@@ -11,7 +11,7 @@ export default function eventCalendar({eventList, handleClick, onKeyDown}) {
     <div>
     
       <div class="page">
-       <h3 className="upperCaseFonts">Schedule of events</h3>
+       <h3 className="upperCaseFonts"> Events Schedule </h3>
         <div class="page__demo">
           <div class="main-container page__container">
             <div class="timeline">

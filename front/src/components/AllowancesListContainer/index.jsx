@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import moment from "moment";
 import AllowanceList from "./allowanceList";
 import {
   fetchAdminAllowances, fetchAllowances, fetchAllowanceActive, fetchAllowanceHistory,
@@ -40,14 +41,16 @@ class AllowanceListContainer extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
+    const selectedMonth = moment().month() + 2;
+    this.props.fetchAllowances(selectedMonth, this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser)
     this.props.fetchAdminAllowances()
     this.props.openCloseNavBar(false)
     // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
     if (this.props.user.isAdmin && this.props.allUser) {
       this.props.fetchCountPending(this.props.user.id)
         .then(count => {
-          this.setState({ alertPending: count.data }) // Guarda cantidad de pendientes 
+          this.setState({ 
+            alertPending: count.data }) // Guarda cantidad de pendientes 
         })
     }
   }
@@ -73,7 +76,9 @@ class AllowanceListContainer extends React.Component {
   }
   // FUNCION PARA FILTRAR POR ALLOWANCE
   handleClick(e) {
-    this.props.fetchAllowances(this.props.user.id, e.target.value, this.state.allowanceStatus, this.props.allUser)
+    console.log(e.target.value)
+    const selectedMonth = moment().month() + 2;
+    this.props.fetchAllowances(selectedMonth, this.props.user.id, e.target.value, this.state.allowanceStatus, this.props.allUser)
     this.setState({
       allowanceType: e.target.value
     })
@@ -81,7 +86,8 @@ class AllowanceListContainer extends React.Component {
 
   // FUNCION PARA FILTRAR POR STATUS
   handleFilterStatus(e) {
-    this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, e.target.value, this.props.allUser)
+    const selectedMonth = moment().month() + 2;
+    this.props.fetchAllowances(selectedMonth,this.props.user.id, this.state.allowanceType, e.target.value, this.props.allUser)
     this.setState({
       allowanceStatus: e.target.value
     })
@@ -240,7 +246,7 @@ const mapStateToProps = (state, owner) => {
 
 const MapDispatchToProps = dispatch => {
   return {
-    fetchAllowances: (userId, allowanceId, status, allUser) => dispatch(fetchAllowances(userId, allowanceId, status, allUser)),
+    fetchAllowances: (month, userId, allowanceId, status, allUser) => dispatch(fetchAllowances(month, userId, allowanceId, status, allUser)),
     openCloseNavBar: (val) => dispatch(openCloseNavBar(val)),
     fetchAllowanceActive: (id) => dispatch(fetchAllowanceActive(id)),
     fetchAllowanceHistory: (employeeId, allowanceId) => dispatch(fetchAllowanceHistory(employeeId, allowanceId)),//trae la data para el "history del detalle modal"

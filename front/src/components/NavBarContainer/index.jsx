@@ -75,8 +75,12 @@ class Navbar extends Component {
           <Link className={`item ${(location == "/calendar") && "itemActive"}`} to="/admin/book" onClick={() => this.closeCollapse()}> Admin Book Panel</Link>
           
           {this.props.user.isAdmin == true ?
+          <>
+            <Link className={`item ${(location == "/admin/book") && "itemActive"}`} to="/admin/book" onClick={() => this.closeCollapse()}> Admin Book Panel</Link>
             <Link className={`item ${(location == "/admin/panel") && "itemActive"}`} to="/admin/panel" onClick={() => this.closeCollapse()}> Admin Panel </Link>
-            : null
+
+          </>
+          : null
           }
 
           <table>

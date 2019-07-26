@@ -32,6 +32,7 @@ export default function allowanceList({
               <select value={allowanceType} className="browser-default custom-select" name="allowance" onChange={handleClick}>
                 <option value="">Choose your allowance...</option>
                 <option value="">All</option>
+                <option value="4">Book</option>
                 {adminAllowances &&
                   adminAllowances.map(item => (
                     <option className="capitalizeName" key={item.id} value={item.id}>{item.name}</option>

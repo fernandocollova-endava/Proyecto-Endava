@@ -3,10 +3,8 @@ const express = require("express");
 const Router = express.Router();
 const nodemailer = require("nodemailer");
 const moment = require("moment");
-
 // Funciones adicionales
 const MulterFn = require("../functions/multer");
-
 // Import Models
 const Allowance = require("../../db/models").Allowance;
 const Employee = require("../../db/models").Employee;
@@ -27,6 +25,7 @@ Router.get("/", function(req, res) {
     order: [["id", "asc"]],
     attributes: ["name", "imgUrl", "completeName", "id", "fixedAmount"]
   }).then(allowanceList => {
+   
     res.send(allowanceList);
   });
 });
@@ -53,39 +52,106 @@ Router.get("/admin", function(req, res) {
     res.json(allowanceList);
   });
 });
+Router.get("/book/current", function(req, res) {
+  //trae los current books
 
-Router.get("/book", function(req, res) {
-  Allowance.findOne({
     
-    where: {
-      name: "book"
-    }
-  }).then(book => {
     AllowanceDetail.findAll({
-      include: [
-        {
-          model: Employee,
-          as: "employeeDetail",
-          attributes: ["name"],
-        },
-      ],
-      // attributes: [
-      //   "amount",
-      //   "employeeAmount",
-      //   "limitAmount",
-      //   "paymentDate",
-      //   "installments",
-      //   "status",
-      //   "receiptPath",
-      
-      // ],
-      where: {
-        allowanceDetailId: book.id
+      where: Sequelize.where(Sequelize.fn('date_part', 'month', Sequelize.col("paymentDate")), req.query.month),
+
+    include: [
+      {
+        model: Employee,
+        as: "employeeDetail",
+        attributes: ["name"],
+        where:{
+          id:{[Op.ne]:req.query.userId} //todos menos el req.user logueado
+        }
+        // queryEmployee
+      },
+      {
+        model: Allowance,
+        as: "allowanceDetail",
+        attributes: ["name", "id"],
+        where: {
+          name: "book",
+
+        }
       }
-    }).then(bookAllowance => { 
-      res.send(bookAllowance)});
+    ],
+  }).then(currentBookAllowances => {
+    console.log(currentBookAllowances)
+    
+    res.send(currentBookAllowances);
   });
 });
+
+Router.get("/book", function(req, res) {
+  // trae los "history books"
+
+  console.log("soy req", req.query.adminPath);
+
+  let queryEmployee =
+    req.query.adminPath == "true"
+      ? { id: { [Op.ne]: req.query.userId } } // Trae todos los usuarios excepto el propio
+      : { id: req.query.userId };
+
+  AllowanceDetail.findAll({
+ 
+    include: [
+      {
+        model: Employee,
+        as: "employeeDetail",
+        attributes: ["name"],
+        queryEmployee
+      },
+      {
+        model: Allowance,
+        as: "allowanceDetail",
+        attributes: ["name", "id"],
+        where: {
+          name: "book"
+        }
+      }
+    ]
+  }).then(bookAllowance => {
+    res.send(bookAllowance);
+  });
+});
+
+Router.get("/book/installments/:receiptPath/:allowanceId", function(req, res){
+  
+  AllowanceDetail.findAll({
+    attributes: [
+      "paymentDate",
+      "installments",
+      "amount",
+      "limitAmount",
+      "employeeAmount",
+      "status"
+    ],
+    where:{
+      receiptPath: req.params.receiptPath
+    },
+    include: [
+      {
+        model: Allowance,
+        as: "allowanceDetail",
+        where: {
+          id: req.params.allowanceId
+        },
+        attributes: []
+      }
+    ],
+    limit: 10,
+    order: [["id", "DESC"]]
+  }).then(allowanceList => {
+    console.log("soyyyyyyyyyyyyy", allowanceList)
+    res.json(allowanceList);
+  });
+
+})
+
 
 // Insert allowance
 Router.post("/", MulterFn.single("file"), (req, res) => {
@@ -142,7 +208,7 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
               status: "pending"
             }).then(AllowanceDetail_Instance => {
               // Instancia de la creación del registro final Empleado
-              AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id, employeeInstance.name);
+              AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id);
               // Instancia de la creación del registro final Beneficio
               AllowanceDetail_Instance.setAllowanceDetail(allowanceInstance.id);
             });
@@ -176,7 +242,7 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
             status: "pending"
           }).then(AllowanceDetail_Instance => {
             // Instancia de la creación del registro final Empleado
-            AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id, employeeInstance.name);
+            AllowanceDetail_Instance.setEmployeeDetail(employeeInstance.id);
             // Instancia de la creación del registro final Beneficio
             AllowanceDetail_Instance.setAllowanceDetail(allowanceInstance.id);
           });
@@ -202,6 +268,12 @@ Router.get("/search/", function(req, res) {
   let queryStatus = req.query.status ? { status: req.query.status } : {}; // Consulta si hay filtro de status
 
   AllowanceDetail.findAll({
+    where: 
+      Sequelize.where(Sequelize.fn('date_part', 'month', Sequelize.col("paymentDate")), req.query.month),
+    // where:{
+    //   queryStatus
+    // },
+
     attributes: [
       "amount",
       "employeeAmount",
@@ -212,7 +284,6 @@ Router.get("/search/", function(req, res) {
       "adminComment",
       "id"
     ],
-    where: queryStatus,
     include: [
       {
         model: Employee,
@@ -224,7 +295,12 @@ Router.get("/search/", function(req, res) {
       {
         model: Allowance,
         as: "allowanceDetail",
-        where: queryAllowance
+        where: queryAllowance,
+        // where: {
+        //   name: {
+        //     [Op.ne]: "book"
+        //   }
+        // }
       }
     ],
     order: [["id", "DESC"]]
@@ -336,15 +412,22 @@ Router.get("/count", function(req, res) {
   AllowanceDetail.findAll({
     attributes: [],
     where: {
-      status: "pending"
+      status: "pending",
+       where: {
+          name: {
+            [Op.ne]: "book"
+          }
+        }
     },
     include: [
       {
         model: Employee,
         as: "employeeDetail",
         attributes: [],
+        
         where: {
           id: { [Op.ne]: req.query.userId }
+          
         }
       }
     ]
