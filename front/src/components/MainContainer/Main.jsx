@@ -17,6 +17,7 @@ import HomeOfficeContainer from '../HomeOfficeContainer/index'
 import CalendarContainer from "../EventCalendarContainer"
 import BookAllowanceContainer from "../BookAllowanceContainer"
 import AdminBookContainer from "../AdminBookContainer"
+import HomeNewAllowance from "../HomeNewAllowance/index"
 
 class MainContainer extends React.Component {
   constructor() {
@@ -26,7 +27,7 @@ class MainContainer extends React.Component {
     }
   }
   componentDidMount() {
-  
+
     this.props.fetchLoggedUser()
       .then(() => {
 
@@ -47,19 +48,20 @@ class MainContainer extends React.Component {
             <div>
               <Route component={NavbarContainer} />
               <Switch>
-                <Route exact path="/allowance/search" component={AllowancesListContainer}/>
-                <Route exact path="/allowance/book" component={BookAllowanceContainer}/>
+                <Route exact path="/allowance/search" component={AllowancesListContainer} />
+                <Route exact path="/allowance/book" component={BookAllowanceContainer} />
                 <Route exact path="/home-office" component={HomeOfficeContainer} />
-                <Route exact path="/allowance/:name" component={AllowanceContainer}/>
-                <Route exact path="/login/expired" component={UpdatePassContainer}/>
-                <Route exact path="/admin/panel" component={AllowancesListContainer}/>
-                <Route exact path="/admin/book" component={AdminBookContainer}/>  
-                <Route exact path="/health-care" component={HealthCareContainer }/>} 
-                <Route exact path="/discipline-event/new" component={DisciplineEvent}/> 
-                <Route exact path="/calendar" component={CalendarContainer}/> 
-                <Route exact path="/profile" component={ProfileContainer}/> 
+                <Route exact path="/allowance/new-allowance" component={HomeNewAllowance} />
+                <Route exact path="/allowance/:name" component={AllowanceContainer} />
+                <Route exact path="/login/expired" component={UpdatePassContainer} />
+                <Route exact path="/admin/panel" component={AllowancesListContainer} />
+                <Route exact path="/admin/book" component={AdminBookContainer} />
+                <Route exact path="/health-care" component={HealthCareContainer} />}
+                <Route exact path="/discipline-event/new" component={DisciplineEvent} />
+                <Route exact path="/calendar" component={CalendarContainer} />
+                <Route exact path="/profile" component={ProfileContainer} />
 
-                <Route exact path="/" component={Home}/>
+                <Route exact path="/" component={Home} />
                 <Redirect from="/login" to="/" />
               </Switch>
               <Route component={FooterContainer} />

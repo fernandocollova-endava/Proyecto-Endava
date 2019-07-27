@@ -146,6 +146,39 @@ table.table td {
 }
 /* GENERAL  */
 /* ========================================== */
+.separationClass {
+  margin-top: -7px;
+    margin-bottom: 2px;
+    border-bottom: 2px solid #f7a1a1;
+}
+.title-container {
+  background-color: #F0f3f3;
+  border: 1px solid #dbdbdb;
+  padding: 6px;
+  margin: -20px -18px;
+  border-radius: 5px;
+}
+.md-form {
+  position: relative;
+  margin-top: 3px;
+  margin-bottom: 1px;
+}
+footer.page-footer {
+  bottom: -30px;
+  position: fixed;
+  width: 100%;
+}
+footer.page-footer .footer-copyright {
+  margin-top: -20px;
+}
+.newRequest {
+  padding: .375rem .75rem .375rem .75rem;
+  background: none;
+  position: absolute;
+  right: 0px;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+}
 .imgStyle {
   object-fit: cover;
     min-height: 192px;
@@ -383,7 +416,9 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
     margin-top:-40px;
     font-family: robotobold;  
 }
-
+.card {
+  background-color: #fdfdfd;
+}
 .card:hover{
   color:#48584B;
   box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -584,4 +619,22 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
 }
 .hiddenDiv{
   display: none;
+}
+.card-header {
+  background-color: #285078;
+  color: white;
+  border-bottom: 2px solid rgba(254, 254, 254, 1);
+}
+
+
+  .pRequest {
+    padding: 0;
+    background: none;
+    position: static;
+    right: 0;
+    height: 17px;
+    font-size: 15px;
+    margin-left: 27px;
+    background-color: #fcfcfc26;
+    border: none;
 }
