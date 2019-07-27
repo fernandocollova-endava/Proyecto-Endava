@@ -1,13 +1,32 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import {
     MDBCollapse, MDBBtn, MDBAnimation, MDBContainer, MDBCol, MDBCardBody, MDBCardTitle,
-    MDBCardText, MDBCard, MDBCardImage, MDBRow, MDBInput
+    MDBCardText, MDBCard, MDBCardImage, MDBRow, MDBInput, MDBFormInline
 } from 'mdbreact';
 
 export default function obraSocial({ toggleCollapse, collapseID, email }) {
     return (
         <>
             <MDBContainer fluid>
+                <MDBCol md="12">
+                    <p className="upperCaseFonts title-container">
+                        <span className="titleMain"><i className="fas fa-chart-bar"></i> HEALTH CARE</span>
+
+                        <MDBFormInline className="md-form">
+                            {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
+                            <br/>
+                            <Link className="browser-default custom-select newRequest"
+                                to="/health-care/#form">
+                                Send us your question
+                            </Link>
+                        </MDBFormInline>
+                    </p>
+
+
+
+                </MDBCol>
+                <br/>
                 <h3 className="upperCaseFonts">Find a health care plan built specially for you.</h3>
                 <span className="marginTextLeft" > Have the solutions on hand to manager health priorities. A health plan made for you and your requirements. </span> <br /><br />
                 <MDBAnimation type="fadeInUp">
@@ -80,9 +99,12 @@ export default function obraSocial({ toggleCollapse, collapseID, email }) {
 
                 <MDBAnimation type="fadeInLeft">
                     <MDBRow>
-                        <MDBCol md="8">
-                            <h3 className="upperCaseFonts">Find a health care plan built specially for you.</h3>
-                            <span className="marginTextLeft" > Have the solutions on hand to manager health priorities. A health plan made for you and your requirements. </span> <br /><br />
+                        <MDBCol md="8" id="form">
+                            
+                            <strong > Send us your question</strong> <br />
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque odio enim ducimus blanditiis nulla reprehenderit ea nesciunt, ratione porro, tempora quas? Provident reprehenderit fuga numquam odit perspiciatis soluta, ipsum omnis?
+                            <br />  
+                            <br />
                             <MDBCol md="7">
                                 <MDBCard>
                                     <form>
@@ -131,6 +153,7 @@ export default function obraSocial({ toggleCollapse, collapseID, email }) {
                     </MDBRow>
                 </MDBAnimation>
             </MDBContainer>
+            <br /><br />
         </>
     );
 }
