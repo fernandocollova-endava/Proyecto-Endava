@@ -7,7 +7,18 @@ body {
     margin-right: 10px; 
     margin-left: 10px;   
 }
-
+.title-container-fluid {
+  background-color: #F0f3f3;
+  border: 1px solid #dbdbdb;
+  padding: 6px;
+  margin: -20px -36px;
+  border-radius: 5px;
+}
+.topMarginLine {
+  /* position: relative; */
+  margin-top: 3px !important;
+  /* margin-bottom: 1px; */
+}
  /* LOGIN  */
  /* ============================ */
 .imageLogin {
@@ -178,6 +189,9 @@ footer.page-footer .footer-copyright {
   right: 0px;
   background-color: #fff;
   border: 1px solid #ced4da;
+}
+.fontDiscipline {
+  font-size: 15px;
 }
 .imgStyle {
   object-fit: cover;
@@ -405,19 +419,19 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     border-radius: 5px !important;
 }
-
-.transparenciaCard {
-    background-color: #ffffffcf;
-}
 .titleModule {
-    text-align: center;
-    font-size: 22px;
-    padding-bottom: 15px;
-    margin-top:-40px;
-    font-family: robotobold;  
+  text-align: center;
+  font-size: 22px;
+  padding-bottom: 15px;
+  margin-top:-40px;
+  font-family: robotobold;  
 }
 .card {
   background-color: #fdfdfd;
+}
+
+.transparenciaCard {
+    background-color: #ffffffcf;
 }
 .card:hover{
   color:#48584B;
@@ -627,7 +641,7 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
 }
 
 
-  .pRequest {
+.pRequest {
     padding: 0;
     background: none;
     position: static;
@@ -637,4 +651,10 @@ box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
     margin-left: 27px;
     background-color: #fcfcfc26;
     border: none;
+}
+.newRequestBtn {
+  padding: .375rem .75rem .375rem .75rem;
+    background: none;
+    background-color: #fff;
+    border: 1px solid #ced4da;
 }

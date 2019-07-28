@@ -38,12 +38,12 @@ const AnimationPage = ({ cardList }) => {
 
       {/* FICHAS / MODULOS */}
       <MDBRow className="container-banner marginDemo">
-      <MDBCol md="3" key={"book"}>
+      <MDBCol md="3" >
           {/* delay proporciona un delay multiplicado por i ( posicion del array )
             generando un efecto de cadena en la animacion.. reveal*/}
           <MDBAnimation delay={`${(1*100)}ms`} type='fadeInDownBig'>
             <MDBCard className="Card-Img">
-              <div className="container-IMG" key={"book"}>
+              <div className="container-IMG" >
                 <div className="div-img" >
                   <Link to={`/allowance/new-allowance`} >
                     <div className="ajustImg">
@@ -66,14 +66,14 @@ const AnimationPage = ({ cardList }) => {
             <br />
           </MDBAnimation>
         </MDBCol>
-        <MDBCol md="3" key={"book"}>
+        <MDBCol md="3" >
           {/* delay proporciona un delay multiplicado por i ( posicion del array )
             generando un efecto de cadena en la animacion.. reveal*/}
           <MDBAnimation delay={`${(2*100)}ms`} type='fadeInDownBig'>
             <MDBCard className="Card-Img">
-              <div className="container-IMG" key={"book"}>
+              <div className="container-IMG" >
                 <div className="div-img" >
-                  <Link to={`/allowance/healt-care`} >
+                  <Link to={`/health-care`} >
                     <div className="ajustImg">
                     <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/InsuranceAndHealthcare/make_a_difference-inner_desktop_650x650.ashx" //{card.imgUrl}
                       className="img-fluid margenBottomMobile img"
@@ -94,14 +94,14 @@ const AnimationPage = ({ cardList }) => {
             <br />
           </MDBAnimation>
         </MDBCol>
-        <MDBCol md="3" key={"book"}>
+        <MDBCol md="3" >
           {/* delay proporciona un delay multiplicado por i ( posicion del array )
             generando un efecto de cadena en la animacion.. reveal*/}
           <MDBAnimation delay={`${(3*100)}ms`} type='fadeInDownBig'>
             <MDBCard className="Card-Img">
-              <div className="container-IMG" key={"book"}>
+              <div className="container-IMG" >
                 <div className="div-img" >
-                  <Link to={`/allowance/calendar`} >
+                  <Link to={`/calendar`} >
                     <div className="ajustImg">
                     <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Complete-Investment-Management-Insights/650.ashx"
                       className="img-fluid margenBottomMobile img"
@@ -122,14 +122,14 @@ const AnimationPage = ({ cardList }) => {
             <br />
           </MDBAnimation>
         </MDBCol>
-         <MDBCol md="3" key={"book"}>
+         <MDBCol md="3" >
           {/* delay proporciona un delay multiplicado por i ( posicion del array )
             generando un efecto de cadena en la animacion.. reveal*/}
           <MDBAnimation delay={`${(4*100)}ms`} type='fadeInDownBig'>
             <MDBCard className="Card-Img">
-              <div className="container-IMG" key={"book"}>
+              <div className="container-IMG" >
                 <div className="div-img" >
-                  <Link to={`/allowance/book`} >
+                  <Link to={`/discipline-event/new`} >
                     <div className="ajustImg">
                     <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Retail-Enhancing/650.ashx"
                       className="img-fluid margenBottomMobile img"
@@ -145,7 +145,7 @@ const AnimationPage = ({ cardList }) => {
                 </div>
               </div>
 
-              <span className="titleModule upperCaseFonts">Book Allowance</span>
+              <span className="titleModule upperCaseFonts">Discipline Event</span>
             </MDBCard>
             <br />
           </MDBAnimation>
