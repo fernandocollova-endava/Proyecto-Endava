@@ -80,15 +80,15 @@ class Navbar extends Component {
           <Link className={`item ${(location == "/profile") && "itemActive"}`} to="/profile" onClick={() => this.closeCollapse()}> Profile </Link>
           <Link className={`item ${(location == "/allowance/new-allowance") && "itemActive"}`} to="/allowance/new-allowance" onClick={() => this.closeCollapse()}> New Allowance ! </Link>
           <Link className={`item ${(location == "/allowance/search") && "itemActive"}`} to="/allowance/search" onClick={() => this.closeCollapse()}> My Allowances </Link>
-          <Link className={`item ${(location == "/discipline-event/new") && "itemActive"}`} to="/discipline-event/new" onClick={() => this.closeCollapse()}> Discipline Event </Link>
           <Link className={`item ${(location == "/home-office") && "itemActive"}`} to="/home-office" onClick={() => this.closeCollapse()}> Home Office </Link>
           <Link className={`item ${(location == "/health-care") && "itemActive"}`} to="/health-care" onClick={() => this.closeCollapse()}> Health care </Link>
           <Link className={`item ${(location == "/calendar") && "itemActive"}`} to="/calendar" onClick={() => this.closeCollapse()}> Event calendar</Link>
+          <Link className={`item ${(location == "/discipline-event/new") && "itemActive"}`} to="/discipline-event/new" onClick={() => this.closeCollapse()}> Discipline Event </Link>
 
           {this.props.user.isAdmin == true ?
             <>
               {/* <Link className={`item ${(location == "/admin/book") && "itemActive"}`} to="/admin/book" onClick={() => this.closeCollapse()}> Admin Book Panel</Link> */}
-              <Link className={`item ${(location == "/admin/panel") && "itemActive"}`} to="/admin/panel" onClick={() => this.closeCollapse()}> Admin Panel </Link>
+              <Link className={`item ${(location.indexOf('/admin/') !== -1) && "itemActive"}`} to="/admin/panel" onClick={() => this.closeCollapse()}> Admin Panel </Link>
 
             </>
             : null

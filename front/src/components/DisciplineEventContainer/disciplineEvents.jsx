@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import {
   MDBCard,
   MDBInput,
@@ -7,14 +8,9 @@ import {
   MDBCol,
   MDBAnimation,
   MDBIcon,
-  MDBBtn,
-  MDBTable,
-  MDBTableHead,
-  MDBTableBody
+  MDBBtn, MDBFormInline
+
 } from "mdbreact";
-
-
-import { columnsEvents } from "../../auxFunctions/auxFunctions";
 
 export default function DisciplineEvent({
   onFormSubmit,
@@ -27,62 +23,52 @@ export default function DisciplineEvent({
 }) {
   return (
     <>
-      {/* {evenList && console.log("soy las events", evenList)} */}
       <MDBRow className="container-banner">
+        <MDBCol md="12">
+          <p className=" title-container">
+            <span className="titleMain upperCaseFonts"><i className="far fa-calendar-plus"></i> DISCIPLINE EVENT</span>
 
-        <MDBCol md="9">
-          <h1 className="upperCaseFonts">
-            Share your knowledge and empower your professional activity.
-          </h1>
-          <MDBAnimation type="fadeInUp">
-            <p className="TextParrafo">
-              We began our journey as a consulting firm delivering real
-              transformation through IT strategy and architecture services for
-              some of the world’s largest banks and payments companies. Over the
-              past 18 years, we marked important milestones towards becoming
-              global through opening delivery centres and offices in North and
-              Latin America, as well as Western and Central Europe. Our guiding
-              philosophy has always been the same: We focus on helping people to
-              be successful. The people who work for us, the people who engage
-              with us, and the people who use the systems and applications we
-              design, build, and operate.
-            </p>
-          </MDBAnimation>
+            <MDBFormInline className="md-form topMarginLine">
+              {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
+              
+              <Link className="browser-default custom-select newRequest"
+                to="/calendar"><i className="far fa-calendar-alt"></i> View Event Calendar
+                </Link>
+            </MDBFormInline>
+          </p>
         </MDBCol>
-        <MDBCol md="3">
-          <MDBAnimation type="fadeInDown">
-            <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Increasing-Efficiency-through-Digital-Evolution/480.ashx" width="100%" />
-          </MDBAnimation>
-        </MDBCol>
-
+        
       </MDBRow>
       <hr />
 
       {/* FORMULARIO  */}
       <MDBRow className="container-banner">
-        <MDBCol md="1" />
         <MDBCol md="4">
           <MDBAnimation type="fadeInUp">
             <MDBCard>
               <MDBCardBody>
                 <form onSubmit={onFormSubmit}>
-                  <p className="h4 text-center py-4">Send us your topic</p>
-                  <select required
-                    className="browser-default custom-select"
-                    name="techName"
-                    onChange={handleClick}
-                  >
-                    <option>Choose your Technologie...</option>
-                    {techList &&
-                      techList.map(tech => (
-                        <option className="capitalizeName" value={tech.name}>
-                          {tech.name}
-                        </option>
-                      ))}
-                    <option value="Otros">Other...</option>
-                  </select>
+                 <span className="fontDiscipline">
+                 Share your knowledge and empower your professional activity.
+                 </span>
 
                   <div className="grey-text" >
+                    <div class="md-form form-group">
+                      <select required
+                        className="form-control validate"
+                        name="techName"
+                        onChange={handleClick}
+                      >
+                        <option>Choose your Technologie...</option>
+                        {techList &&
+                          techList.map(tech => (
+                            <option className="capitalizeName" value={tech.name}>
+                              {tech.name}
+                            </option>
+                          ))}
+                        <option value="Otros">Other...</option>
+                      </select>
+                    </div>
                     <MDBInput
                       label="Event name"
                       icon="book"
@@ -94,6 +80,7 @@ export default function DisciplineEvent({
                       onChange={onChange}
                       error="wrong"
                       success="right"
+                      style={({marginTop: -32})}
                     />
                     <MDBInput
                       icon="calendar-alt"
@@ -102,6 +89,7 @@ export default function DisciplineEvent({
                       name="date"
                       onChange={onChange}
                       required
+                      style={({marginTop: -32})}
                     />
                     <MDBInput
                       icon="clock"
@@ -115,6 +103,7 @@ export default function DisciplineEvent({
                       onChange={onChange}
                       maxLength={5}
                       required
+                      
                     />
                     <MDBInput
                       label="Description..."
@@ -128,6 +117,7 @@ export default function DisciplineEvent({
                       validate
                       error="wrong"
                       success="right"
+                      
                     />
                   </div>
 
@@ -160,7 +150,7 @@ export default function DisciplineEvent({
                   <table className="table btn-table table-fixed">
                     <thead>
                       <tr>
-                        <th style={({width:240})}>Topic</th>
+                        <th style={({ width: 240 })}>Topic</th>
                         <th>Status</th>
                         <th>Date</th>
                         <th>Time</th>

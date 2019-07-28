@@ -51,8 +51,6 @@ class DisciplineEventContainer extends React.Component {
   render() {
     return (
       <div>
-        {console.log("soy eventList",this.props.eventList)}
-        {/* <h2>holaaaaaaaaaaaa</h2> */}
         <EventCalendar
           eventList={this.props.eventList}
           handleClick={this.onClick}
