@@ -70,34 +70,7 @@ const AnimationPage = ({ cardList }) => {
           ))
 
         }
-        <MDBCol md="3" key={"book"}>
-          {/* delay proporciona un delay multiplicado por i ( posicion del array )
-            generando un efecto de cadena en la animacion.. reveal*/}
-          <MDBAnimation delay={`${(2 * 100)}ms`} type='fadeInLeftBig'>
-            <MDBCard className="Card-Img">
-              <div className="container-IMG" key={"book"}>
-                <div className="div-img" >
-                  <Link to={`/allowance/book`} >
-                    <div className="ajustImg">
-                      <img src={`/assets/img/book_IMG_min.png`} //{card.imgUrl}
-                        className="img-fluid margenBottomMobile img"
-                        alt={`Imagen logo book`} />
-                    </div>
-                    <center >
-                      <span
-                        className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">
-                        {/* <img src={`/assets/img/${card.name}.png`} width="30px"/> */}
-                        Enter <i className="fas fa-angle-double-right"></i></span>
-                    </center>
-                  </Link>
-                </div>
-              </div>
-
-              <span className="titleModule">BookAllowance</span>
-            </MDBCard>
-            <br />
-          </MDBAnimation>
-        </MDBCol>
+        
       </MDBRow>
       <br /><br />
     </>

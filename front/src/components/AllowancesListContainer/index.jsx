@@ -1,8 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import moment from "moment";
 import AllowanceList from "./allowanceList";
-import {dateSetter} from "../../auxFunctions/auxFunctions"
+import { dateSetter } from "../../auxFunctions/auxFunctions"
 import {
   fetchAdminAllowances,
   fetchAllowances,
@@ -57,7 +56,7 @@ class AllowanceListContainer extends React.Component {
       this.state.allowanceStatus,
       this.props.allUser
     );
-      console.log(this.props.allUser, "all user")
+
     this.props.fetchAdminAllowances();
     this.props.openCloseNavBar(false);
     // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
@@ -71,7 +70,7 @@ class AllowanceListContainer extends React.Component {
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.allUser !== this.props.allUser) {
-     
+
       this.setState(
         {
           alertPending: 0, // Resetea el estado a cero
@@ -99,7 +98,6 @@ class AllowanceListContainer extends React.Component {
   }
   // FUNCION PARA FILTRAR POR ALLOWANCE
   handleClick(e) {
-  
     this.props.fetchAllowances(
       this.state.date,
       this.props.user.id,
@@ -114,7 +112,6 @@ class AllowanceListContainer extends React.Component {
 
   // FUNCION PARA FILTRAR POR STATUS
   handleFilterStatus(e) {
-
     this.props.fetchAllowances(
       this.state.date,
       this.props.user.id,
@@ -127,12 +124,20 @@ class AllowanceListContainer extends React.Component {
     });
   }
   handleFilterPeriod(e) {
-  
-    var date = dateSetter(e.target.value)
-    this.setState({
-      date: date
-    });
-   
+    var date
+    if (e.target.value == "") {
+      date = {}
+      this.setState({
+        date: {}
+      });
+    } else {
+      date = dateSetter(e.target.value)
+      console.log(date,"jj")
+      this.setState({
+        date: date
+      });
+    }
+    console.log(this.state.date)
     this.props.fetchAllowances(
       date,
       this.props.user.id,
@@ -236,9 +241,9 @@ class AllowanceListContainer extends React.Component {
         this.setState({
           msjSave: "Saved!"
         });
-        var date = dateSetter()
+        //var date = dateSetter()
         this.props.fetchAllowances(
-          date,
+          this.state.date,
           this.props.user.id,
           this.state.allowanceType,
           this.state.allowanceStatus,

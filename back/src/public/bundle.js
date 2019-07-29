@@ -66366,9 +66366,7 @@ function allowanceList(_ref) {
     value: ""
   }, "Choose your allowance..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: ""
-  }, "All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "4"
-  }, "Book"), adminAllowances && adminAllowances.map(function (item) {
+  }, "All"), adminAllowances && adminAllowances.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       className: "capitalizeName",
       key: item.id,
@@ -66450,16 +66448,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _allowanceList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
+/* harmony import */ var _allowanceList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66477,7 +66473,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -66534,7 +66529,6 @@ function (_React$Component) {
       var _this2 = this;
 
       this.props.fetchAllowances(this.state.date, this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
-      console.log(this.props.allUser, "all user");
       this.props.fetchAdminAllowances();
       this.props.openCloseNavBar(false); // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
 
@@ -66595,10 +66589,22 @@ function (_React$Component) {
   }, {
     key: "handleFilterPeriod",
     value: function handleFilterPeriod(e) {
-      var date = Object(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__["dateSetter"])(e.target.value);
-      this.setState({
-        date: date
-      });
+      var date;
+
+      if (e.target.value == "") {
+        date = {};
+        this.setState({
+          date: {}
+        });
+      } else {
+        date = Object(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__["dateSetter"])(e.target.value);
+        console.log(date, "jj");
+        this.setState({
+          date: date
+        });
+      }
+
+      console.log(this.state.date);
       this.props.fetchAllowances(date, this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
     } // FUNCION DE CONSULTA HISTORIAL / DETALLE
 
@@ -66698,11 +66704,10 @@ function (_React$Component) {
       this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
         _this6.setState({
           msjSave: "Saved!"
-        });
+        }); //var date = dateSetter()
 
-        var date = Object(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__["dateSetter"])();
 
-        _this6.props.fetchAllowances(date, _this6.props.user.id, _this6.state.allowanceType, _this6.state.allowanceStatus, _this6.props.allUser);
+        _this6.props.fetchAllowances(_this6.state.date, _this6.props.user.id, _this6.state.allowanceType, _this6.state.allowanceStatus, _this6.props.allUser);
       })["catch"](function () {
         _this6.setState({
           msjSave: "Ups!, an error occurred while processing the request..."
@@ -66712,7 +66717,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
         togglePanel: this.togglePanel,
@@ -66722,18 +66727,18 @@ function (_React$Component) {
         handleSaveConfirm: this.handleSaveConfirm,
         msjSave: this.state.msjSave,
         allUser: this.props.allUser
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__["default"], {
         modal: this.state.modalAviso,
         toggle: this.toggleAviso,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__["default"], {
         modalBoolean: this.state.modalBoolean,
         toggleBoolean: this.toggleBoolean,
         actionOk: this.actionOk,
         titleBoolean: this.state.titleBoolean,
         data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
         alertPending: this.state.alertPending,
         handleClick: this.handleClick // Filtro de tipo de beneficio
         ,
@@ -66777,31 +66782,31 @@ var mapStateToProps = function mapStateToProps(state, owner) {
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
     fetchAllowances: function fetchAllowances(month, userId, allowanceId, status, allUser) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["fetchAllowances"])(month, userId, allowanceId, status, allUser));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAllowances"])(month, userId, allowanceId, status, allUser));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     },
     fetchAllowanceActive: function fetchAllowanceActive(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["fetchAllowanceActive"])(id));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAllowanceActive"])(id));
     },
     fetchAllowanceHistory: function fetchAllowanceHistory(employeeId, allowanceId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["fetchAllowanceHistory"])(employeeId, allowanceId));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAllowanceHistory"])(employeeId, allowanceId));
     },
     //trae la data para el "history del detalle modal"
     deleteAllowance: function deleteAllowance(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["deleteAllowance"])(id));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["deleteAllowance"])(id));
     },
     // Elimina detalle
     editStatusAllowance: function editStatusAllowance(id, status, observation) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["editStatusAllowance"])(id, status, observation));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["editStatusAllowance"])(id, status, observation));
     },
     // Switch State
     fetchAdminAllowances: function fetchAdminAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["fetchAdminAllowances"])());
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAdminAllowances"])());
     },
     fetchCountPending: function fetchCountPending(userId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["fetchCountPending"])(userId));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchCountPending"])(userId));
     } // Consulta cantidad de allowance pendientes
 
   };
@@ -68419,35 +68424,7 @@ var AnimationPage = function AnimationPage(_ref) {
     }, card.completeName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "descriptionModule"
     }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
-    md: "3",
-    key: "book"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
-    delay: "".concat(2 * 100, "ms"),
-    type: "fadeInLeftBig"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
-    className: "Card-Img"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container-IMG",
-    key: "book"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "div-img"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/allowance/book"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "ajustImg"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/assets/img/book_IMG_min.png" //{card.imgUrl}
-    ,
-    className: "img-fluid margenBottomMobile img",
-    alt: "Imagen logo book"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
-  }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-angle-double-right"
-  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "titleModule"
-  }, "BookAllowance")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AnimationPage);
@@ -71388,6 +71365,7 @@ var createAllowance = function createAllowance(formData) {
 };
 var fetchAllowances = function fetchAllowances(date, userId, allowanceId, status, allUser) {
   return function (dispatch) {
+    console.log(date, "AGUS");
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/search", {
       params: {
         dateStart: date.start,
