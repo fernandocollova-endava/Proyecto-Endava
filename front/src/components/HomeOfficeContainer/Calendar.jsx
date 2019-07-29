@@ -12,7 +12,7 @@ const Calendar = ({ handleAddHome, handleProyect, listHomeOffice, MDBFormInline,
           <p className="upperCaseFonts title-container">
             <span className="titleMain"><i className="far fa-calendar-alt"></i> HOME OFFICE</span>
 
-            <div className="form-inline md-form">
+            <span className="form-inline md-form topMarginLine">
               {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
               <select className="browser-default custom-select" name="month" value={currentMonth} onChange={changeMonth}>
                 <option value="0">January</option>
@@ -50,8 +50,7 @@ const Calendar = ({ handleAddHome, handleProyect, listHomeOffice, MDBFormInline,
                 }
 
               </select>
-
-            </div>
+            </span>
           </p>
         </MDBCol>
       </MDBRow>
@@ -95,7 +94,7 @@ const Calendar = ({ handleAddHome, handleProyect, listHomeOffice, MDBFormInline,
               <button onClick={() => showHide('isShowAllowance')} className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Allowance</button>
               <button onClick={() => showHide('isShowBirthDay')} className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Birthday</button>
             </p> */}
-            <strong>Work Team:</strong> <br />
+            <strong>Workgroup:</strong> <br />
             <div className={`form-control divListAllowance ${(isShowAllowance) ? '' : ''}`} >
               {employeProyectList && employeProyectList.map((item, i) => (
                 <p key={i} className="itemName">

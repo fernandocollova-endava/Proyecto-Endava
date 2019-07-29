@@ -14,7 +14,7 @@ Employee.create(
     password: '1234',
     passwordChanged: false,
     birthdayDate: '2019-07-20',
-    proyect:'Proyect name 1'
+    proyect:'Project name 1'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -26,7 +26,7 @@ Employee.create({
     password: '1234',
     passwordChanged: false,
     birthdayDate: '2019-08-06',
-    proyect:'Proyect name 1'
+    proyect:'Project name 1'
     //salt: 'lkjljasda'
 })
 Employee.create(
@@ -39,7 +39,7 @@ Employee.create(
     password: '123',
     passwordChanged: false,
     birthdayDate: '2019-08-14',
-    proyect:'Proyect name 1'
+    proyect:'Project name 1'
 })
 Employee.create({
     name: 'Lucas',
@@ -50,7 +50,7 @@ Employee.create({
     password: '123',
     passwordChanged: false,
     birthdayDate: '2019-09-01',
-    proyect:'Proyect name 1'
+    proyect:'Project name 1'
 })
 Employee.create({
     name: 'Adrian',
@@ -61,7 +61,7 @@ Employee.create({
     password: '1234',
     passwordChanged: false,
     birthdayDate: '2019-07-05',
-    proyect:'Proyect name 1'
+    proyect:'Project name 1'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -73,7 +73,7 @@ Employee.create({
     password: '1234',
     passwordChanged: false,
     birthdayDate: '2019-03-20',
-    proyect:'Proyect name 2'
+    proyect:'Project name 2'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -85,7 +85,7 @@ Employee.create({
     password: '1234',
     passwordChanged: false,
     birthdayDate: '2019-07-20',
-    proyect:'Proyect name 2'
+    proyect:'Project name 2'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -97,7 +97,7 @@ Employee.create({
     password: '1234',
     passwordChanged: false,
     birthdayDate: '2019-09-20',
-    proyect:'Proyect name 2'
+    proyect:'Project name 2'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -109,7 +109,7 @@ Employee.create({
     password: '1234',
     passwordChanged: false,
     birthdayDate: '2019-07-20',
-    proyect:'Proyect name 3'
+    proyect:'Project name 3'
     //salt: 'lkjljasda'
 })
 Employee.create({
@@ -121,7 +121,7 @@ Employee.create({
     password: '1234',
     passwordChanged: true,
     birthdayDate: '2019-07-20',
-    proyect:'Proyect name 3'
+    proyect:'Project name 3'
     //salt: 'lkjljasda'
 })
 

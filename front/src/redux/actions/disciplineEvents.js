@@ -34,7 +34,6 @@ export const fetchDisciplineEvents = userId => dispatch => {
     })
     .then(res => res.data)
     .then(eventList => {
-      console.log("soy eventListAXIOS", eventList)
       dispatch(receiveEventList(eventList))
       return eventList
     

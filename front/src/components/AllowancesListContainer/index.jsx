@@ -132,7 +132,6 @@ class AllowanceListContainer extends React.Component {
     this.setState({
       date: date
     });
-     console.log("soy laa date entrando", date)
     this.props.fetchAllowances(
       date,
       this.props.user.id,
@@ -237,7 +236,6 @@ class AllowanceListContainer extends React.Component {
           msjSave: "Saved!"
         });
         var date = dateSetter()
-        console.log(this.state.date, "soy date del save")
         this.props.fetchAllowances(
           date,
           this.props.user.id,

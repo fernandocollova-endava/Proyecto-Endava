@@ -5,10 +5,12 @@ const nodemailer = require("nodemailer");
 const moment = require("moment");
 // Funciones adicionales
 const MulterFn = require("../functions/multer");
+
 // Import Models
 const Allowance = require("../../db/models").Allowance;
 const Employee = require("../../db/models").Employee;
 const AllowanceDetail = require("../../db/models").AllowanceDetail;
+
 // Import Sequilize
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
