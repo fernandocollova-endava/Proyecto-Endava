@@ -14,7 +14,8 @@ class ProfileContainer extends React.Component {
       modalUser: false,
       modal: false,
       newPassword: "",
-      oldPassword: ""
+      oldPassword: "",
+      profileImage:null
     };
     this.toggleModalUser = this.toggleModalUser.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,6 +29,7 @@ class ProfileContainer extends React.Component {
     this.props
       .updatePass(this.state.newPassword, this.props.user.id, this.state.oldPassword)
       .then(response => { //recibo data ok y despliego modal
+        console.log(response, "soy response")
         this.setState({
           modal:true,
           msjSave:"The password has been changed successfully.",
@@ -44,6 +46,18 @@ class ProfileContainer extends React.Component {
    
     this.setState({
       [e.target.name]: e.target.value
+    });
+  }
+  handleClickImage(){
+    const { file, ...rest } = this.state;
+    const formData = new FormData();
+    formData.append('file', file);
+    // this.props.userUpdate(){
+    // }
+  }
+  onChange(e) {
+    this.setState({
+      file: e.target.files[0]
     });
   }
 

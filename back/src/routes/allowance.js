@@ -25,7 +25,6 @@ Router.get("/", function(req, res) {
     order: [["id", "asc"]],
     attributes: ["name", "imgUrl", "completeName", "id", "fixedAmount"]
   }).then(allowanceList => {
-   
     res.send(allowanceList);
   });
 });
@@ -55,33 +54,33 @@ Router.get("/admin", function(req, res) {
 Router.get("/book/current", function(req, res) {
   //trae los current books
 
-    
-    AllowanceDetail.findAll({
-      where: Sequelize.where(Sequelize.fn('date_part', 'month', Sequelize.col("paymentDate")), req.query.month),
+  AllowanceDetail.findAll({
+    where: Sequelize.where(
+      Sequelize.fn("date_part", "month", Sequelize.col("paymentDate")),
+      req.query.month
+    ),
 
     include: [
       {
         model: Employee,
         as: "employeeDetail",
         attributes: ["name"],
-        where:{
-          id:{[Op.ne]:req.query.userId} //todos menos el req.user logueado
+        where: {
+          id: { [Op.ne]: req.query.userId } //todos menos el req.user logueado
         }
-        // queryEmployee
+        // employeeQuery
       },
       {
         model: Allowance,
         as: "allowanceDetail",
         attributes: ["name", "id"],
         where: {
-          name: "book",
-
+          name: "book"
         }
       }
-    ],
+    ]
   }).then(currentBookAllowances => {
-    console.log(currentBookAllowances)
-    
+
     res.send(currentBookAllowances);
   });
 });
@@ -89,21 +88,18 @@ Router.get("/book/current", function(req, res) {
 Router.get("/book", function(req, res) {
   // trae los "history books"
 
-  console.log("soy req", req.query.adminPath);
-
-  let queryEmployee =
+  let employeeQuery =
     req.query.adminPath == "true"
       ? { id: { [Op.ne]: req.query.userId } } // Trae todos los usuarios excepto el propio
       : { id: req.query.userId };
 
   AllowanceDetail.findAll({
- 
     include: [
       {
         model: Employee,
         as: "employeeDetail",
         attributes: ["name"],
-        queryEmployee
+        employeeQuery
       },
       {
         model: Allowance,
@@ -119,8 +115,7 @@ Router.get("/book", function(req, res) {
   });
 });
 
-Router.get("/book/installments/:receiptPath/:allowanceId", function(req, res){
-  
+Router.get("/book/installments/:receiptPath/:allowanceId", function(req, res) {
   AllowanceDetail.findAll({
     attributes: [
       "paymentDate",
@@ -130,7 +125,7 @@ Router.get("/book/installments/:receiptPath/:allowanceId", function(req, res){
       "employeeAmount",
       "status"
     ],
-    where:{
+    where: {
       receiptPath: req.params.receiptPath
     },
     include: [
@@ -146,12 +141,9 @@ Router.get("/book/installments/:receiptPath/:allowanceId", function(req, res){
     limit: 10,
     order: [["id", "DESC"]]
   }).then(allowanceList => {
-    console.log("soyyyyyyyyyyyyy", allowanceList)
     res.json(allowanceList);
   });
-
-})
-
+});
 
 // Insert allowance
 Router.post("/", MulterFn.single("file"), (req, res) => {
@@ -258,21 +250,21 @@ Router.post("/", MulterFn.single("file"), (req, res) => {
 
 //Ruta para busqueda + filtro de todos los beneficios de un empleado
 Router.get("/search/", function(req, res) {
-  let queryAllowance = req.query.allowanceId
-    ? { id: req.query.allowanceId }
-    : {}; // Consulta si hay filtro de beneficios
-  let queryEmployee =
-    req.query.allUser == "true"
-      ? { id: { [Op.ne]: req.query.userId } } // Trae todos los usuarios excepto el propio
-      : { id: req.query.userId }; // Consulta si hay filtro de empleados
-  let queryStatus = req.query.status ? { status: req.query.status } : {}; // Consulta si hay filtro de status
 
+  let allowanceQuery = req.query.allowanceId? { id: req.query.allowanceId }: {}; // Consulta si hay filtro de beneficios
+  let employeeQuery = req.query.allUser == "true"? { id: { [Op.ne]: req.query.userId } }: { id: req.query.userId };// Trae todos los usuarios excepto el propio
+  let bookQuery = req.query.allUser == "false" ? {} : { name: { [Op.ne]: "book" } };
+  let globalQuery = {}; // query general que define si se filtra con status, y con fechas
+  
+  if (req.query.dateEnd || req.query.status) {
+    req.query.dateEnd? (globalQuery.paymentDate = { [Op.between]: [req.query.dateStart, req.query.dateEnd] }): null //si hay fecha o status, seteo uno o los dos como filtros
+    req.query.status? (globalQuery.status = req.query.status) : null;
+  
+  } else globalQuery = Sequelize.where(Sequelize.fn("date_part", "month", Sequelize.col("paymentDate")), moment().month() + 2);
+  // primer estado por default, no tengo fecha ni estado. Ejecuto un where con consulta del mes en curso
+  
   AllowanceDetail.findAll({
-    where: 
-      Sequelize.where(Sequelize.fn('date_part', 'month', Sequelize.col("paymentDate")), req.query.month),
-    // where:{
-    //   queryStatus
-    // },
+    where: globalQuery, // setea el valor dependiendo de las condiciones dadas arriba
 
     attributes: [
       "amount",
@@ -289,24 +281,21 @@ Router.get("/search/", function(req, res) {
         model: Employee,
         as: "employeeDetail",
         attributes: ["name"],
-        where: queryEmployee
+        where: employeeQuery
         //[Op.in]: arraIds //ese filtro me busca esos id del array en mi tabla AllowanceDetail
       },
       {
         model: Allowance,
         as: "allowanceDetail",
-        where: queryAllowance,
-        // where: {
-        //   name: {
-        //     [Op.ne]: "book"
-        //   }
-        // }
+        where: allowanceQuery,
+        where: bookQuery
       }
     ],
-    order: [["id", "DESC"]]
+    order: [["paymentDate", "DESC"]]
   }).then(allowanceList => {
     res.json(allowanceList);
   });
+  // .catch(() => res.sendStatus(404));
 });
 
 // Ruta fetch history employee / allowance ( limit 10 )
@@ -412,22 +401,21 @@ Router.get("/count", function(req, res) {
   AllowanceDetail.findAll({
     attributes: [],
     where: {
-      status: "pending",
-       where: {
-          name: {
-            [Op.ne]: "book"
-          }
-        }
+      status: "pending"
+      //  where: {
+      //     name: {
+      //       [Op.ne]: "book"
+      //     }
+      //   }
     },
     include: [
       {
         model: Employee,
         as: "employeeDetail",
         attributes: [],
-        
+
         where: {
           id: { [Op.ne]: req.query.userId }
-          
         }
       }
     ]

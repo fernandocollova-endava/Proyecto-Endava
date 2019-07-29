@@ -9,14 +9,15 @@ var User = require('../db/models').Employee
 // Sequelize needs to serialize and deserialize the user
 // Just consider this part boilerplate needed to make it all work
 passport.serializeUser(function(user, done) {
-    
+    console.log("ENTRE AL SERIALIZE", user)
     done(null, user.id);
 });
 //
 passport.deserializeUser(function(id, done) {
-  
+    console.log("ENTRE AL DESERIALIZE")
     User.findByPk(id)
         .then(user => {
+            console.log(user)
             done(null, user);
         })
         .catch(done)
@@ -25,19 +26,22 @@ passport.deserializeUser(function(id, done) {
 // Telling passport we want to use a Local Strategy. In other words,
 //we want login with a username/email and password
 passport.use(new LocalStrategy(
+    
     // Our user will sign in using an email, rather than a "username"
     {
         usernameField: "email",
         passwordField: "password"
     },
+    
     function(email, password, done) {
+        console.log("soy el email y el passs", email, password)
         // When a user tries to sign in this code runs
         User.findOne({
             where: {
                 email: email
             }
         }).then(function(dbUser) {
-
+                // console.log(dbUser, "email")
             // If there's no user with the given email
             if (!dbUser) {
                 return done(null, false, {
@@ -51,6 +55,8 @@ passport.use(new LocalStrategy(
                 });
             }
             // If none of the above, return the user
+
+            
             return done(null, dbUser);
         });
     }

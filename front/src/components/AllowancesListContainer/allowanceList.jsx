@@ -16,7 +16,8 @@ export default function allowanceList({
   allowanceStatus,
   deleteAllowance,
   viewDetails,
-  allUser
+  allUser,
+  handleFilterPeriod
 }) {
   return (
     <>
@@ -44,6 +45,12 @@ export default function allowanceList({
                 <option value="pending">Pending</option>
                 <option value="approved">Approved</option>
                 <option value="rejected">Rejected</option>
+              </select>
+              <select className="browser-default custom-select" name="status" onChange={handleFilterPeriod}>
+                <option value="">Current month</option>
+                <option value="0">Last month</option>
+                <option value="1">Last two months</option>
+
               </select>
             </MDBFormInline>
 

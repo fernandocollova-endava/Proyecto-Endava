@@ -88,7 +88,7 @@ class AdminBookContainer extends React.Component {
 
   // FUNCION DE CONSULTA HISTORIAL / DETALLE
   viewDetails(id, allowanceId, receiptPath) {
-    console.log("data del view", id, allowanceId, receiptPath)
+  
     this.props.fetchAllowanceActive(id).then(data => {
        
       // let idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
@@ -164,8 +164,9 @@ class AdminBookContainer extends React.Component {
           textMsj: "The request has been successfully eliminated...",
           titleMsj: "Success"
         });
+        const selectedMonth = moment().month() + 2;
         this.props.fetchCurrentBookA(
-          this.state.selectedMonth,
+          selectedMonth,
           this.props.adminPath,
           this.props.user.id
         );
@@ -179,8 +180,7 @@ class AdminBookContainer extends React.Component {
         });
       });
   }
-  deleteBookAllowance() {}
-  // Funcion para updatear el status de los beneficios
+  
   handleSaveConfirm(e) {
     e.preventDefault();
     this.props
@@ -193,9 +193,11 @@ class AdminBookContainer extends React.Component {
         this.setState({
           msjSave: "Saved!"
         });
-        this.props.fetchBookAllowances(
-          this.props.user.id,
-          this.props.adminPath
+        const selectedMonth = moment().month() + 2;
+        this.props.fetchCurrentBookA(
+          selectedMonth,
+          this.props.adminPath,
+          this.props.user.id
         );
       })
       .catch(() => {
@@ -207,7 +209,7 @@ class AdminBookContainer extends React.Component {
   render() {
     return (
       <div>
-        {console.log("soy current", this.props.bookInstallments)}
+        {/* {console.log("soy current", this.props.bookInstallments)} */}
         <ModalBookDetails
           modal={this.state.modal}
           toggleDetails={this.toggleDetails}

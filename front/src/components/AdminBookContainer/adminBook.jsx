@@ -75,7 +75,7 @@ export default function adminBook({
                  
                   <table class="table btn-table table-fixed paddingTable">
                     <thead class="">
-                    {console.log("entreeee", bookAllowances)}
+                    {/* {console.log("entreeee", bookAllowances)} */}
                     {(urlName == "book")?
                      
                       <tr>

@@ -70,7 +70,6 @@ Router.get("/", function(req, res) {
       attributes: ["topic", "status", "date", "time", "description"]
 
     }).then(eventList => {
-      console.log("soy event", eventList)
       res.send(eventList)
       
     })
@@ -88,7 +87,6 @@ Router.get("/", function(req, res) {
     order: [["date", "ASC"]] //ordeno de forma ascendente, por fecha
 
   }).then(eventList => {
-    console.log("soy event", eventList)
     res.send(eventList)
     
   }); 
