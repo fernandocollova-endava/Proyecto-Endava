@@ -86,156 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../back/src/public/styles/app.css":
-/*!*****************************************!*\
-  !*** ../back/src/public/styles/app.css ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./app.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/app.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "../back/src/public/styles/eventCalendar.css":
-/*!***************************************************!*\
-  !*** ../back/src/public/styles/eventCalendar.css ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./eventCalendar.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/eventCalendar.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "../back/src/public/styles/fonts.css":
-/*!*******************************************!*\
-  !*** ../back/src/public/styles/fonts.css ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./fonts.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/fonts.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "../back/src/public/styles/sidebar.css":
-/*!*********************************************!*\
-  !*** ../back/src/public/styles/sidebar.css ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./sidebar.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/sidebar.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "../back/src/public/styles/smartphone.css":
-/*!************************************************!*\
-  !*** ../back/src/public/styles/smartphone.css ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./smartphone.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
@@ -2531,76 +2381,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = _react2.default.createContext || _implementation2.default;
 module.exports = exports['default'];
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/app.css":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/app.css ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n.title-container-fluid {\n  background-color: #F0f3f3;\n  border: 1px solid #dbdbdb;\n  padding: 6px;\n  margin: -20px -36px;\n  border-radius: 5px;\n}\n.topMarginLine {\n  /* position: relative; */\n  margin-top: 3px !important;\n  /* margin-bottom: 1px; */\n}\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.separationClass {\n  margin-top: -7px;\n    margin-bottom: 2px;\n    border-bottom: 2px solid #f7a1a1;\n}\n.title-container {\n  background-color: #F0f3f3;\n  border: 1px solid #dbdbdb;\n  padding: 6px;\n  margin: -20px -18px;\n  border-radius: 5px;\n}\n.md-form {\n  position: relative;\n  margin-top: 3px;\n  margin-bottom: 1px;\n}\nfooter.page-footer {\n  bottom: -30px;\n  position: fixed;\n  width: 100%;\n}\nfooter.page-footer .footer-copyright {\n  margin-top: -20px;\n}\n.newRequest {\n  padding: .375rem .75rem .375rem .75rem;\n  background: none;\n  position: absolute;\n  right: 0px;\n  background-color: #fff;\n  border: 1px solid #ced4da;\n}\n.fontDiscipline {\n  font-size: 15px;\n}\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.image-upload > input\n{\n    display: none;\n}\n\n.image-upload img\n{\n    width: 30px;\n    cursor: pointer;\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    font-size: 25px;\n    background-color: #f4eeee;\n    padding: 5px 11px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.rejectedBook {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 70px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.10rem 0.29rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.approvedBook {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.10rem 0.29rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n\n\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-grey:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md {\n  background-color: #9bb4be !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #9bb4be !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.titleModule {\n  text-align: center;\n  font-size: 22px;\n  padding-bottom: 15px;\n  margin-top:-40px;\n  font-family: robotobold;  \n}\n.card {\n  background-color: #fdfdfd;\n}\n\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n  }\n  .descriptionModule{\n    display: block;\n    text-align: center;\n    font-size: 14px;\n    margin-top: -10px;\n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}\n\n /* === CALENDAR === */\n .bg-info {\n  background-color: #17a2b8!important;\n}\n.viewEvent {\n  font-size: 12px;\n  background-color: #DE411B;\n  color: white;\n  border-radius: 8px;\n  margin-bottom: 0px;\n  margin-top: 2px;\n  border: 1px solid white;\n}\n.classDay {\n  font-size: 20px;\n  padding: 4px 11px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n.classToday {\n  font-size: 20px;\n  background-color: #d8d8e8;\n  padding: 10px 11px;\n  margin: 0 35px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n#calendar-body > tr {\n  height: 136px;\n}\n#calendar-body td:hover {\n  background-color: #f0f3f3;\n  cursor:pointer;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n.viewHB {\n    background: url(\"/assets/img/backgroundHB.png\") no-repeat center;\n   -webkit-background-size: cover;\n   -moz-background-size: cover;\n   -o-background-size: cover;\n   background-size: cover;\n   max-width: 100% ;\n   text-align: center;\n}\n.textCenter {\n  text-align: center;\n}\n.showHomeOffice {\n  width: 90px;\n  font-size: 10px;\n  padding: 2px 7px;\n  border-radius: 0px !important;\n  margin-left: 2px;\n  min-height: 43px;\n}\n.itemName {\n  font-size: 14px;\n  padding: 0px;\n  margin: 0px;\n  margin-left: 16px;\n}\n.divListAllowance {\n  min-height: 144px;\n  overflow: auto;\n}\n.hiddenDiv{\n  display: none;\n}\n.card-header {\n  background-color: #285078;\n  color: white;\n  border-bottom: 2px solid rgba(254, 254, 254, 1);\n}\n\n.pRequest {\n    padding: 0;\n    background: none;\n    position: static;\n    right: 0;\n    height: 17px;\n    font-size: 15px;\n    margin-left: 27px;\n    background-color: #fcfcfc26;\n    border: none;\n}\n.newRequestBtn {\n  padding: .375rem .75rem .375rem .75rem;\n    background: none;\n    background-color: #fff;\n    border: 1px solid #ced4da;\n}", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/eventCalendar.css":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/eventCalendar.css ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, ".timeline{\n  --uiTimelineMainColor: var(--timelineMainColor, #222);\n  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);\n  position: relative;\n  padding-top: 3rem;\n  padding-bottom: 3rem;\n  margin: -32px;\n}\n.imgCalendar {\n  float: right;\n  padding: 10px;\n}\n.textJustify {\n  text-align: justify\n}\n.timeline:before{\n  content: \"\";\n  width: 4px;\n  height: 100%;\n  background-color: var(--uiTimelineMainColor);\n\n  position: absolute;\n  top: 0;\n}\n\n.timeline__group{\n  position: relative;\n}\n\n.timeline__group:not(:first-of-type){\n  margin-top: 4rem;\n}\n\n.timeline__year{\n  padding: .5rem 1.5rem;\n  color: var(--uiTimelineSecondaryColor);\n  background-color: var(--uiTimelineMainColor);\n  position: absolute;\n  left: 0;\n  top: 0;\n  background-color: #353d73;\n  width: 120px;\n  font-size: 18px;\n  font-weight: bold;\n}\n\n\n.timeline__box{\n  position: relative;\n}\n\n.timeline__box:not(:last-of-type){\n  margin-bottom: 30px;\n}\n\n.timeline__box:before{\n  content: \"\";\n  width: 100%;\n  height: 2px;\n  background-color: var(--uiTimelineMainColor);\n\n  position: absolute;\n  left: 0;\n  z-index: -1;\n}\n\n.timeline__date{\n  min-width: 65px;\n  position: absolute;\n  left: 0;\n\n  box-sizing: border-box;\n  padding: .5rem 1.5rem;\n  text-align: center;\n\n  background-color: var(--uiTimelineMainColor);\n  color: var(--uiTimelineSecondaryColor);\n}\n\n.timeline__day{\n  font-size: 2rem;\n  font-weight: 700;\n  display: block;\n}\n\n.timeline__month{\n  display: block;\n  font-size: .8em;\n  text-transform: uppercase;\n}\n.hrEvent {\n  margin-top: 0;\n  margin-bottom: 8px;\n}\n.timeline__post{\n  padding: 1.5rem 2rem;\n  border-radius: 2px;\n  border-left: 3px solid var(--uiTimelineMainColor);\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);\n  background-color: var(--uiTimelineSecondaryColor);\n  min-height: 216px;\n}\n\n@media screen and (min-width: 641px){\n/* Desk */\n  .timeline:before{\n    left: 30px;\n  }\n\n  .timeline__group{\n    padding-top: 55px;\n  }\n\n  .timeline__box{\n    padding-left: 95px;\n    \n  }\n\n  .timeline__box:before{\n    top: 50%;\n    transform: translateY(-50%);  \n  }  \n\n  .timeline__date{\n    top: 50%;\n    margin-top: -27px;\n  }\n}\n\n@media screen and (max-width: 640px){\n  /* mobile */\n  .timeline:before{\n    left: 0;\n  }\n\n  .timeline__group{\n    padding-top: 40px;\n  }\n\n  .timeline__box{\n    padding-left: 20px;\n    padding-top: 70px;\n  }\n\n  .timeline__box:before{\n    top: 95px;\n  }    \n\n  .timeline__date{\n    top: 0;\n  }\n}\n\n.timeline{\n  --timelineMainColor: #4557bb;\n  font-size: 16px;\n}\n\n\n\np{\n  margin-top: 0;\n  margin-bottom: 1.5rem;\n  line-height: 1.5;\n}\n\np:last-child{\n  margin-bottom: 0;\n}\n\n.page{\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.page__demo{\n  flex-grow: 1;\n}\n\n.main-container{\n  max-width: 960px;\n  padding-left: 2rem;\n  padding-right: 2rem;\n\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.page__container{\n  padding-top: 30px;\n  padding-bottom: 30px;\n  max-width: 800px;\n}\n\n@media screen and (min-width: 361px){\n \n  .footer__container{\n    display: flex;\n    justify-content: space-between;\n  }\n}\n\n@media screen and (max-width: 360px){\n\n  .melnik909{\n    display: none;\n  } \n}", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/fonts.css":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/fonts.css ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "/* https://careers.endava.com/Design/styles/webfonts/ */\n@font-face{\n    font-family:robotobold;\n    src:url('/assets/styles/webfonts/roboto-bold-webfont.eot');\n    src:url('/assets/styles/webfonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.woff2') format('woff2'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.woff') format('woff'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.ttf') format('truetype')    \n}\n\n@font-face{\n    font-family:robotoregular;\n    src:url('/assets/styles/webfonts/Roboto-Condensed-Regular.woff2') format('woff2'),\n    url('/assets/styles/webfonts/Roboto-Condensed-Regular.woff') format('woff'),\n    url('/assets/styles/webfonts/roboto-Regular.ttf');\n    font-weight:400;font-style:normal\n}\n@font-face{\n    font-family:robotolight;\n    src:url('/assets/styles/webfonts/Roboto-Condensed-Light.woff2') format('woff2'),\n    url('/assets/styles/webfonts/Roboto-Condensed-Light.woff') format('woff'),\n    url('/assets/styles/webfonts/roboto-Light.ttf');\n    font-weight:400;font-style:normal\n}\n\n\n/* @font-face{font-family:roboto_condensedbold;src:url(webfonts/robotocondensed-bold-webfont.eot);src:url(webfonts/robotocondensed-bold-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/robotocondensed-bold-webfont.woff2) format('woff2'),url(webfonts/robotocondensed-bold-webfont.woff) format('woff'),url(webfonts/robotocondensed-bold-webfont.ttf) format('truetype'),url(webfonts/robotocondensed-bold-webfont.svg#roboto_condensedbold) format('svg');font-weight:700;font-style:normal}@font-face{font-family:robotolight;src:url(webfonts/roboto-light-webfont.eot);src:url(webfonts/roboto-light-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-light-webfont.woff2) format('woff2'),url(webfonts/roboto-light-webfont.woff) format('woff'),url(webfonts/roboto-light-webfont.ttf) format('truetype'),url(webfonts/roboto-light-webfont.svg#robotolight) format('svg');font-weight:400;font-style:normal}@font-face{font-family:robotomedium;src:url(webfonts/roboto-medium-webfont.eot);src:url(webfonts/roboto-medium-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-medium-webfont.woff2) format('woff2'),url(webfonts/roboto-medium-webfont.woff) format('woff'),url(webfonts/roboto-medium-webfont.ttf) format('truetype'),url(webfonts/roboto-medium-webfont.svg#robotomedium) format('svg');font-weight:400;font-style:normal}\n@font-face{font-family:robotolight_italic;src:url(webfonts/roboto-lightitalic-webfont.eot);src:url(webfonts/roboto-lightitalic-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-lightitalic-webfont.woff2) format('woff2'),url(webfonts/roboto-lightitalic-webfont.woff) format('woff'),url(webfonts/roboto-lightitalic-webfont.ttf) format('truetype'),url(webfonts/roboto-lightitalic-webfont.svg#robotolight_italic) format('svg');font-weight:400;font-style:normal}@font-face{font-family:fontendava;src:url(iconfonts/fontendava.eot?y6id76);src:url(iconfonts/fontendava.eot?y6id76#iefix) format('embedded-opentype'),url(iconfonts/fontendava.ttf?y6id76) format('truetype'),url(iconfonts/fontendava.woff?y6id76) format('woff'),url(iconfonts/fontendava.svg?y6id76#fontendava) format('svg');font-weight:400;font-style:normal}[class*=\" fe_\"],[class^=fe_]{font-family:fontendava!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale} */\n", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/sidebar.css":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/sidebar.css ***!
-  \***********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height: 100%; /* 100% Full-height */\n    width: 0; /* 0 width - change this with JavaScript */\n    position: fixed; /* Stay in place */\n    z-index: 100000; /* Stay on top */\n    top: 0;\n    right: 0;\n    background-color: #de411b;\n    overflow-x: hidden; /* Disable horizontal scroll */\n    padding-top: 60px; /* Place content 60px from the top */\n    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */\n}\n \n/* The navigation menu links */\n.sidenav a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s\n}\n.sidenav span {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s;\n    cursor:pointer;\n}\n \n/* When you mouse over the navigation links, change their color */\n.sidenav a:hover, .offcanvas a:focus{\n    color: #f1f1f1;\n}\n \n/* Position and style the close button (top right corner) */\n.sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n    cursor:pointer;\n}\n.nameFontSidebar {\n    font-size: 16px !important;\n    top: 9px;\n    left: -16px;\n    position: absolute;\n    color: #f3d3d39c !important\n}\n\nbody {\n  overflow-x: hidden;\n}\n \n/* Add a black background color to the top navigation */\n.topnav {\n    background-color: #DE411B;\n    overflow: hidden;\n}\n \n/* Style the links inside the navigation bar */\n.topnav a {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n.topnav span {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n    cursor:pointer;\n}\n \n/* Change the color of links on hover */\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n\n.topnav span:hover {\n    background-color: #ddd;\n    color: black;\n}\n/* Add a color to the active/current link */\n.topnav a.active {\n    background-color: #4CAF50;\n    color: white;\n}\n\n\n#sideNavigation {\n  padding-bottom: 25px;\n  font-family: robotobold,Arial,sans-serif;\n  font-weight: 400;\n  font-size: 26px;\n  color: #fff;\n}\n.item {\n    color:white\n  }\n\n.item:hover, .itemActive {\n  text-decoration: underline white;\n  opacity: .45; \n  transition: opacity .3s ease-out; \n}\n.imgProfileNav {\n    border-radius: 50%;\n    width: 40px;\n    height: 40px;\n    object-fit: cover;\n    margin-right: 12px;\n    z-index: 100001;\n    position: relative;\n}\n", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n    .bannerAllowance{\n        margin-top: -30px;        \n    }\n    .HideMobile {\n        display: none;\n    }\n\n\n    /* == CALENDARIO == */\n    .classDay {\n        font-size: 20px;\n        padding: 4px 11px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .classToday {\n        font-size: 20px;\n        background-color: #d8d8e8;\n        padding: 10px 11px;\n        margin: 0 5px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .timeline__year{\n        margin-bottom: 50px\n    }\n    .topMarginLine {\n        /* position: relative; */\n        margin-top: 18px !important;\n        /* margin-bottom: 1px; */\n    }\n    .newRequest {\n        position: relative;\n    }\n}\n", ""]);
-
 
 /***/ }),
 
@@ -58060,7 +57840,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66174,7 +65954,7 @@ function (_React$Component) {
     _this.togglePanel = _this.togglePanel.bind(_assertThisInitialized(_this));
     _this.viewDetails = _this.viewDetails.bind(_assertThisInitialized(_this));
     _this.toggleAviso = _this.toggleAviso.bind(_assertThisInitialized(_this));
-    _this.deleteEvent = _this.deleteEvent.bind(_assertThisInitialized(_this));
+    _this.deleteAllowance = _this.deleteAllowance.bind(_assertThisInitialized(_this));
     _this.actionOk = _this.actionOk.bind(_assertThisInitialized(_this));
     _this.handleFilterStatus = _this.handleFilterStatus.bind(_assertThisInitialized(_this));
     _this.handleSaveConfirm = _this.handleSaveConfirm.bind(_assertThisInitialized(_this));
@@ -66185,7 +65965,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.openCloseNavBar(false);
-      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath); // this.setState(
+      this.props.fetchDisciplineEvents(this.props.user.id); // this.setState(
       //   {
       //     selectedMonth: selectedMonth
       //   },
@@ -66198,7 +65978,7 @@ function (_React$Component) {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       if (prevProps.adminPath !== this.props.adminPath) {
-        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath); // .then(() =>
+        this.props.fetchDisciplineEvents(this.props.user.id); // .then(() =>
         //   this.props.fetchBookAllowances(
         //     this.props.user.id,
         //     this.props.adminPath
@@ -66209,14 +65989,12 @@ function (_React$Component) {
 
   }, {
     key: "viewDetails",
-    value: function viewDetails(id) {
+    value: function viewDetails(id, allowanceId, receiptPath) {
       var _this2 = this;
 
-      this.props.fetchActiveEvent(id).then(function (data) {
-        console.log("soy la rta", data);
-        var userEventId = data.activeEvent.employeeId; // Retorna el id del usuario del detalle seleccionado
-
-        _this2.props.fetchDisciplineEvents(userEventId).then(function () {
+      this.props.fetchAllowanceActive(id).then(function (data) {
+        // let idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
+        _this2.props.fetchBookInstallments(receiptPath, allowanceId).then(function () {
           _this2.setState({
             modal: true
           });
@@ -66226,7 +66004,7 @@ function (_React$Component) {
   }, {
     key: "handleFilterStatus",
     value: function handleFilterStatus(e) {
-      this.props.fetchDisciplineEvents(this.props.user.id, this.props.user.adminPath);
+      this.props.fetchDisciplineEvents(this.props.user.id);
       this.setState({
         allowanceStatus: e.target.value
       });
@@ -66271,9 +66049,8 @@ function (_React$Component) {
     } // FUNCION PARA ELIMINAR UN BENEFICIO ENVIADO ( SOLO SI AUN ESTA PENDIENTE)
 
   }, {
-    key: "deleteEvent",
-    value: function deleteEvent(id) {
-      console.log("iddddddddddddddd", id);
+    key: "deleteAllowance",
+    value: function deleteAllowance(id) {
       this.setState({
         titleBoolean: "Are you sure you want to delete the information?",
         modalBoolean: true,
@@ -66288,7 +66065,7 @@ function (_React$Component) {
     value: function actionOk(data) {
       var _this3 = this;
 
-      this.props.deleteEvent(data.id).then(function () {
+      this.props.deleteAllowance(data.id).then(function () {
         _this3.setState({
           modalBoolean: false,
           modalAviso: true,
@@ -66296,7 +66073,7 @@ function (_React$Component) {
           titleMsj: "Success"
         });
 
-        _this3.props.fetchDisciplineEvents(_this3.props.user.id, _this3.props.user.adminPath);
+        _this3.props.fetchDisciplineEvents(_this3.props.user.id);
       })["catch"](function () {
         _this3.setState({
           modalBoolean: false,
@@ -66312,13 +66089,12 @@ function (_React$Component) {
       var _this4 = this;
 
       e.preventDefault();
-      console.log(e.target.valie, "soy el value");
-      this.props.editEventStatus(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
+      this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
         _this4.setState({
           msjSave: "Saved!"
         });
 
-        _this4.props.fetchDisciplineEvents(_this4.props.user.id, _this4.props.user.adminPath);
+        _this4.props.fetchDisciplineEvents(_this4.props.user.id);
       })["catch"](function () {
         _this4.setState({
           msjSave: "Ups!, an error occurred while processing the request..."
@@ -66328,12 +66104,12 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("soy EVENT", this.props.activeEvent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("soy EVENT", this.props.eventList), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
         togglePanel: this.togglePanel,
         activeItem: this.state.activeItem,
-        activeEvent: this.props.activeEvent,
+        activeAllowance: this.props.activeAllowance,
         history: this.props.eventList,
         handleSaveConfirm: this.handleSaveConfirm,
         msjSave: this.state.msjSave,
@@ -66355,7 +66131,7 @@ function (_React$Component) {
         handleFilterStatus: this.handleFilterStatus,
         eventList: this.props.eventList,
         allowanceStatus: this.state.allowanceStatus,
-        deleteAllowance: this.props.deleteEvent,
+        deleteAllowance: this.props.deleteAllowance,
         viewDetails: this.viewDetails,
         urlName: this.props.urlName
       }));
@@ -66371,10 +66147,10 @@ var mapStateToProps = function mapStateToProps(state, own) {
     urlName: urlName,
     user: state.user.user,
     eventList: state.event.eventList,
-    activeEvent: state.event.activeEvent,
+    activeAllowance: state.allowance.activeAllowances,
     history: state.allowance.historyAllowances,
     //
-    adminPath: own.match.path == "/admin/event",
+    adminPath: own.match.path == "/admin/book",
     // adminPath => consulta que la ruta corresponda a admin
     currentBookAllowances: state.allowance.currentBookAllowances //busco libros p/mes actual
 
@@ -66389,27 +66165,27 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     openCloseNavBar: function openCloseNavBar(val) {
       return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     },
-    fetchActiveEvent: function fetchActiveEvent(id) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchActiveEvent"])(id));
+    fetchAllowanceActive: function fetchAllowanceActive(id) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceActive"])(id));
     },
     fetchAllowanceHistory: function fetchAllowanceHistory(employeeId, allowanceId) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceHistory"])(employeeId, allowanceId));
     },
     //trae la data para el "history del detalle modal"
-    deleteEvent: function deleteEvent(id) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["deleteEvent"])(id));
+    deleteAllowance: function deleteAllowance(id) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["deleteAllowance"])(id));
     },
     // Elimina detalle
-    editEventStatus: function editEventStatus(id, status, observation) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["editEventStatus"])(id, status, observation));
+    editStatusAllowance: function editStatusAllowance(id, status, observation) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["editStatusAllowance"])(id, status, observation));
     },
     // Switch State
     fetchCountPending: function fetchCountPending(userId) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
     },
     // Consulta cantidad de allowance pendientes
-    fetchDisciplineEvents: function fetchDisciplineEvents(userId, adminUrl) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchDisciplineEvents"])(userId, adminUrl));
+    fetchDisciplineEvents: function fetchDisciplineEvents(userId) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchDisciplineEvents"])(userId));
     }
   };
 };
@@ -66614,8 +66390,8 @@ function (_React$Component) {
         className: "titleMain upperCaseFonts"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-file-invoice-dollar"
-      }), " ", "MANAGE YOUR ".concat(this.props.nameUrl, " ALLOWANCE.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "form-inline md-form topMarginLine"
+      }), " ", "MANAGE YOUR ".concat(this.props.nameUrl, " ALLOWANCE.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBFormInline"], {
+        className: "md-form topMarginLine"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         className: "browser-default custom-select newRequestBtn",
         to: "/allowance/gym"
@@ -66784,8 +66560,8 @@ function allowanceList(_ref) {
     className: "titleMain"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-chart-bar"
-  }), " MY ALLOWANCE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "form-inline md-form topMarginLine"
+  }), " MY ALLOWANCE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBFormInline"], {
+    className: "md-form"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     value: allowanceType,
     className: "browser-default custom-select",
@@ -66848,12 +66624,12 @@ function allowanceList(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     type: "fadeInUp"
   }, allowanceList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "table-responsive"
+    "class": "table-responsive"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-    className: "table btn-table table-fixed paddingTable"
+    "class": "table btn-table table-fixed paddingTable"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
-    className: ""
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rowAllowance__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    "class": ""
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rowAllowance__WEBPACK_IMPORTED_MODULE_3__["default"], {
     deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
     ,
     viewDetails: viewDetails // Se envia la funcion para mostrar el modal (onClick)
@@ -67130,6 +66906,7 @@ function (_React$Component) {
         });
 
         var date = Object(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__["dateSetter"])();
+        console.log(_this6.state.date, "soy date del save");
 
         _this6.props.fetchAllowances(date, _this6.props.user.id, _this6.state.allowanceType, _this6.state.allowanceStatus, _this6.props.allUser);
       })["catch"](function () {
@@ -67245,9 +67022,71 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   !*** ./src/components/AllowancesListContainer/rowAllowance.jsx ***!
   \*****************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/agus/Escritorio/endava/front/src/components/AllowancesListContainer/rowAllowance.jsx: Unexpected token, expected \",\" (35:29)\n\n\u001b[0m \u001b[90m 33 | \u001b[39m                                }\u001b[0m\n\u001b[0m \u001b[90m 34 | \u001b[39m                            \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mtd\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 | \u001b[39m                        \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mtr\u001b[39m\u001b[33m>\u001b[39m\u001b[33m:\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 36 | \u001b[39m                         \u001b[33m<\u001b[39m\u001b[33mtr\u001b[39m\u001b[33m>\u001b[39m    \u001b[0m\n\u001b[0m \u001b[90m 37 | \u001b[39m                         \u001b[33m<\u001b[39m\u001b[33mtd\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"upperCaseFonts\"\u001b[39m\u001b[33m>\u001b[39m{row\u001b[33m.\u001b[39mallowanceDetail\u001b[33m.\u001b[39mname}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mtd\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 | \u001b[39m                         \u001b[33m<\u001b[39m\u001b[33mtd\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"upperCaseFonts\"\u001b[39m\u001b[33m>\u001b[39m{row\u001b[33m.\u001b[39memployeeDetail\u001b[33m.\u001b[39mname}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mtd\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object.raise (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:6325:17)\n    at Object.unexpected (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:7642:16)\n    at Object.expect (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:7628:28)\n    at Object.parseParenAndDistinguishExpression (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8962:14)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8762:21)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseFunctionBody (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:9406:24)\n    at Object.parseArrowExpression (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:9365:10)\n    at Object.parseParenAndDistinguishExpression (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:9002:12)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8762:21)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseExprListItem (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:9491:18)\n    at Object.parseCallExpressionArguments (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8621:22)\n    at Object.parseSubscript (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8514:29)\n    at Object.parseSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8433:19)\n    at Object.parseExprSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8422:17)\n    at Object.parseMaybeUnary (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOpBaseRightExpr (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8352:34)\n    at Object.parseExprOpRightExpr (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8345:21)\n    at Object.parseExprOp (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8317:27)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rowAllowance; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function rowAllowance(_ref) {
+  var deleteAllowance = _ref.deleteAllowance,
+      viewDetails = _ref.viewDetails,
+      allUser = _ref.allUser,
+      allowanceList = _ref.allowanceList,
+      urlName = _ref.urlName;
+  var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, allowanceList && allowanceList.map(function (row) {
+    return row.topic ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: row.status
+    }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      onClick: function onClick() {
+        return viewDetails(row.id, row.allowanceDetail.id, row.receiptPath);
+      },
+      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-file-pdf",
+      "aria-hidden": "true"
+    }), " Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Ripple "
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status === 'pending' && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      onClick: function onClick() {
+        return deleteAllowance(row.id);
+      },
+      className: "greyColor cursorPointer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-trash-alt iconAllowance "
+    }), " Delete ") : '')) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.allowanceDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: row.status
+    }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      onClick: function onClick() {
+        return viewDetails(row.id, row.allowanceDetail.id, row.receiptPath);
+      },
+      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-file-pdf",
+      "aria-hidden": "true"
+    }), " Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Ripple "
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status === 'pending' && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      onClick: function onClick() {
+        return deleteAllowance(row.id);
+      },
+      className: "greyColor cursorPointer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-trash-alt iconAllowance "
+    }), " Delete ") : ''));
+  })));
+}
 
 /***/ }),
 
@@ -67548,8 +67387,8 @@ function DisciplineEvent(_ref) {
     className: "titleMain upperCaseFonts"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "far fa-calendar-plus"
-  }), " DISCIPLINE EVENT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "form-inline md-form topMarginLine"
+  }), " DISCIPLINE EVENT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBFormInline"], {
+    className: "md-form topMarginLine"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "browser-default custom-select newRequest",
     to: "/calendar"
@@ -67568,17 +67407,16 @@ function DisciplineEvent(_ref) {
   }, "Share your knowledge and empower your professional activity."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grey-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "md-form form-group"
+    "class": "md-form form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     required: true,
     className: "form-control validate",
     name: "techName",
     onChange: handleClick
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Choose your Technologie..."), techList && techList.map(function (tech, i) {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Choose your Technologie..."), techList && techList.map(function (tech) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       className: "capitalizeName",
-      value: tech.name,
-      key: i
+      value: tech.name
     }, tech.name);
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "Otros"
@@ -67646,9 +67484,7 @@ function DisciplineEvent(_ref) {
     className: "table-responsive"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
     className: "table btn-table table-fixed"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
-    key: '0'
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
     style: {
       width: 240
     }
@@ -67659,7 +67495,6 @@ function DisciplineEvent(_ref) {
       },
       key: i
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-      key: "id_".concat(i),
       className: "upperCaseFonts"
     }, item.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "".concat(item.status, " whiteBorder")
@@ -67895,52 +67730,51 @@ function eventCalendar(_ref) {
     className: "titleMain"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "far fa-calendar-alt"
-  }), " Events SCHEDULE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "form-inline md-form topMarginLine"
+  }), " Events SCHEDULE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBFormInline"], {
+    className: "md-form topMarginLine"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     className: "browser-default custom-select newRequest",
     to: "/discipline-event/new"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-plus-circle"
-  }), " New Discipline event"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
+  }), " Discipline event"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
     md: "12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "page"
+    "class": "page"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "page__demo"
+    "class": "page__demo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "main-container page__container"
+    "class": "main-container page__container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "timeline"
+    "class": "timeline"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "timeline__group"
+    "class": "timeline__group"
   }, eventList.length && eventList.map(function (item, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBAnimation"], {
-      key: "id_".concat(i),
       type: "fadeInLeft",
       reveal: i > 1 ? true : false
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "timeline__year",
+      "class": "timeline__year",
       key: i
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_moment__WEBPACK_IMPORTED_MODULE_1___default.a, {
       format: "YYYY"
     }, item.date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "timeline__box",
+      "class": "timeline__box",
       key: "i".concat(i)
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "timeline__date"
+      "class": "timeline__date"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "timeline__day"
+      "class": "timeline__day"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_moment__WEBPACK_IMPORTED_MODULE_1___default.a, {
       format: "D"
     }, item.date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "timeline__month"
+      "class": "timeline__month"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_moment__WEBPACK_IMPORTED_MODULE_1___default.a, {
       format: "MMM"
     }, item.date))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "timeline__post"
+      "class": "timeline__post"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "timeline__content"
+      "class": "timeline__content"
     }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
       style: {
         fontWeight: "bold"
@@ -68162,8 +67996,8 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "titleMain upperCaseFonts"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-tools"
-  }), " ADMIN PANEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "form-inline md-form topMarginLine"
+  }), " ADMIN PANEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBFormInline"], {
+    className: "md-form"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "browser-default custom-select pRequest"
   }, "Hello! Please choose the option you want! :)"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
@@ -68470,9 +68304,7 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "fas fa-angle-double-right"
   })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "titleModule upperCaseFonts"
-  }, "New Allowance"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "descriptionModule"
-  }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+  }, "New Allowance")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     delay: "".concat(2 * 100, "ms"),
@@ -68498,9 +68330,7 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "fas fa-angle-double-right"
   })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "titleModule upperCaseFonts"
-  }, "Health Care"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "descriptionModule"
-  }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+  }, "Healt Care")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     delay: "".concat(3 * 100, "ms"),
@@ -68525,9 +68355,7 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "fas fa-angle-double-right"
   })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "titleModule upperCaseFonts"
-  }, "Event Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "descriptionModule"
-  }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+  }, "Event Calendar")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     delay: "".concat(4 * 100, "ms"),
@@ -68539,7 +68367,7 @@ var AnimationPage = function AnimationPage(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "div-img"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/home-office"
+    to: "/discipline-event/new"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "ajustImg"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -68552,9 +68380,7 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "fas fa-angle-double-right"
   })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "titleModule upperCaseFonts"
-  }, "Home Office"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "descriptionModule"
-  }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+  }, "Discipline Event")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AnimationPage);
@@ -68792,8 +68618,8 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "titleMain upperCaseFonts"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "far fa-calendar-plus"
-  }), " NEW ALLOWANCE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "form-inline md-form topMarginLine"
+  }), " NEW ALLOWANCE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBFormInline"], {
+    className: "md-form"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "browser-default custom-select pRequest"
   }, "Hello! Please choose the option you want! :)"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
@@ -68827,9 +68653,7 @@ var AnimationPage = function AnimationPage(_ref) {
       className: "fas fa-angle-double-right"
     })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "titleModule"
-    }, card.completeName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "descriptionModule"
-    }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
+    }, card.completeName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "3",
     key: "book"
@@ -68911,8 +68735,8 @@ var Calendar = function Calendar(_ref) {
     className: "titleMain"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "far fa-calendar-alt"
-  }), " HOME OFFICE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "form-inline md-form topMarginLine"
+  }), " HOME OFFICE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-inline md-form"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     className: "browser-default custom-select",
     name: "month",
@@ -69006,7 +68830,7 @@ var Calendar = function Calendar(_ref) {
     md: "2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInLeft"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Workgroup:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Work Team:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-control divListAllowance ".concat(isShowAllowance ? '' : '')
   }, employeProyectList && employeProyectList.map(function (item, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -69998,64 +69822,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
-/***/ "./src/components/ModalContainer/Avatar.jsx":
-/*!**************************************************!*\
-  !*** ./src/components/ModalContainer/Avatar.jsx ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ModalAvatar; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-
-
-function ModalAvatar(_ref) {
-  var modalAvatar = _ref.modalAvatar,
-      toggleModalAvatar = _ref.toggleModalAvatar,
-      handleSubmitAvatar = _ref.handleSubmitAvatar,
-      onChange = _ref.onChange;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
-    isOpen: modalAvatar,
-    toggle: toggleModalAvatar
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
-    toggle: toggleModalAvatar
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "tittleModalUser"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    far: true,
-    icon: "address-card"
-  }), " My Profile")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    onSubmit: handleSubmitAvatar
-    /*Envio a data a updatear*/
-
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Please, Change your new image"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
-    icon: "file-signature",
-    group: true,
-    type: "file",
-    name: "file",
-    onChange: onChange,
-    required: true,
-    validate: true,
-    error: "wrong",
-    success: "right"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    color: "light-blue",
-    className: "mb-3 btnEv-red rounded mb-0 border-0",
-    type: "submit",
-    onClick: toggleModalAvatar //llamo al boton de cierre de ese modal, a la vez que confirmo el submit
-
-  }, "Upload"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    color: "secondary",
-    onClick: toggleModalAvatar
-  }, "Close"))));
-}
-
-/***/ }),
-
 /***/ "./src/components/ModalContainer/ModalBookDetail.jsx":
 /*!***********************************************************!*\
   !*** ./src/components/ModalContainer/ModalBookDetail.jsx ***!
@@ -70268,7 +70034,7 @@ function ModalEventDetails(_ref) {
       allUser = _ref.allUser,
       handleSaveConfirm = _ref.handleSaveConfirm,
       toggleDetails = _ref.toggleDetails,
-      activeEvent = _ref.activeEvent,
+      activeAllowance = _ref.activeAllowance,
       history = _ref.history,
       togglePanel = _ref.togglePanel,
       activeItem = _ref.activeItem;
@@ -70280,7 +70046,7 @@ function ModalEventDetails(_ref) {
     toggle: toggleDetails
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "upperCaseFonts"
-  }, activeEvent.topic)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNav"], {
+  }, activeAllowance.allowanceDetail.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNav"], {
     className: "nav-tabs"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
     to: "#",
@@ -70291,73 +70057,92 @@ function ModalEventDetails(_ref) {
     role: "tab"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "far fa-list-alt"
-  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "DETAILS")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "DETAILS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "2" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("2");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-history"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "HISTORY"))), allUser && // Si 
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "3" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("3");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-user-edit"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "ADMIN")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
     activeItem: activeItem
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
     tabId: "1",
     role: "tabpanel"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mt-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "User: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "marginTextLeft textBold"
+  }, "Actual payment date: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.paymentDate)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "parrafoModal"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
-  }, "Employee: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Amount: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
-  }, " ", activeEvent.employee && activeEvent.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
-  }, "Topic: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm"
-  }, " ", activeEvent.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
-  }, "Time schelude: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm"
-  }, " ", activeEvent.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+  }, "$ ", activeAllowance.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "marginTextLeft textBold"
   }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm ".concat(activeEvent.status)
-  }, activeEvent.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "textForm ".concat(activeAllowance.status)
+  }, activeAllowance.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "parrafoModal"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
   }, "Observation: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
-  }, activeEvent.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, activeAllowance.observation)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "parrafoModal"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
   }, "Admin Comment: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
-  }, activeEvent.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }, activeAllowance.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: handleSaveConfirm
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "hidden",
     name: "id",
-    value: activeEvent.id
+    value: activeAllowance.id
   }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     action: "",
     className: "modalForm"
-  }, activeEvent.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, activeAllowance.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "radio"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "approvedBook radioBoton"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
-    defaultChecked: activeEvent.status === 'approved',
+    defaultChecked: activeAllowance.status === 'approved',
     name: "status",
     value: "approved"
   }), "\xA0APPROVED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "rejectedBook radioBoton"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
-    defaultChecked: activeEvent.status === 'rejected',
+    defaultChecked: activeAllowance.status === 'rejected',
     name: "status",
     value: "rejected"
   }), "\xA0REJECTED")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
   }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm ".concat(activeEvent.status)
-  }, activeEvent.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "textForm ".concat(activeAllowance.status)
+  }, activeAllowance.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group",
     style: {
       marginTop: -20
@@ -70373,17 +70158,45 @@ function ModalEventDetails(_ref) {
     type: "text",
     autoComplete: "off",
     name: "observation",
-    defaultValue: activeEvent.adminComment,
+    defaultValue: activeAllowance.adminComment,
     required: true,
     className: "form-control",
     placeholder: "Observation...",
     "aria-describedby": "basic-addon"
-  })), activeEvent.status === 'pending' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  })), activeAllowance.status === 'pending' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "mb-3 btnEv-blue rounded mb-0 border-0"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-edit"
-  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), activeAllowance.receiptPath.split('.')[1] !== 'pdf' && activeAllowance.receiptPath.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/assets/receipt/".concat(activeAllowance.receiptPath),
+    width: "100%"
+  }), activeAllowance.receiptPath.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
+    src: "/assets/receipt/".concat(activeAllowance.receiptPath),
+    width: "100%",
+    height: "400px",
+    type: "application/pdf"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
+    tabId: "2",
+    role: "tabpanel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    className: "table btn-table table-fixed"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Installments"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, console.log("history", history), history && history.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      style: {
+        height: 32
+      },
+      key: i
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.installments), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: item.status
+    }, item.status));
+  }))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     className: "mb-3 btnEv-red rounded mb-0 border-0",
     onClick: toggleDetails
   }, "Close"))));
@@ -70855,7 +70668,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
         type: "flipInY"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/assets/img/profile/".concat(this.props.avatar),
+        src: "/assets/img/profile/".concat(this.props.user.avatar),
         className: "float-left imgProfileNav",
         alt: "Avatar profile"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
@@ -70962,8 +70775,7 @@ var mapStateToProps = function mapStateToProps(state, own) {
   return {
     user: state.user.user,
     navWidth: state.nav.status,
-    location: own.location.pathname,
-    avatar: state.user.avatar
+    location: own.location.pathname
   };
 };
 
@@ -71012,14 +70824,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _profile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./profile */ "./src/components/ProfileContainer/profile.jsx");
 /* harmony import */ var _ModalContainer_modalUser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalUser */ "./src/components/ModalContainer/modalUser.jsx");
 /* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _ModalContainer_Avatar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/Avatar */ "./src/components/ModalContainer/Avatar.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -71044,7 +70855,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
 var ProfileContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -71060,21 +70870,16 @@ function (_React$Component) {
       msjSave: "",
       titleMsj: "",
       modalUser: false,
-      modalAvatar: false,
       modal: false,
       newPassword: "",
       oldPassword: "",
-      file: null
+      profileImage: null
     };
     _this.toggleModalUser = _this.toggleModalUser.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handClick = _this.handClick.bind(_assertThisInitialized(_this));
     _this.toggleModal = _this.toggleModal.bind(_assertThisInitialized(_this));
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
-    _this.handleImageChange = _this.handleImageChange.bind(_assertThisInitialized(_this));
-    _this.toggleModalAvatar = _this.toggleModalAvatar.bind(_assertThisInitialized(_this));
-    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
-    _this.handleSubmitAvatar = _this.handleSubmitAvatar.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -71086,6 +70891,8 @@ function (_React$Component) {
       e.preventDefault();
       this.props.updatePass(this.state.newPassword, this.props.user.id, this.state.oldPassword).then(function (response) {
         //recibo data ok y despliego modal
+        console.log(response, "soy response");
+
         _this2.setState({
           modal: true,
           msjSave: "The password has been changed successfully.",
@@ -71099,36 +70906,22 @@ function (_React$Component) {
       this.setState({
         modalUser: !this.state.modalUser
       });
-    } // Modal Avatar
-
-  }, {
-    key: "toggleModalAvatar",
-    value: function toggleModalAvatar() {
-      this.setState({
-        modalAvatar: !this.state.modalAvatar,
-        msjSave: ""
-      });
-    } // Submit avatar
-
-  }, {
-    key: "handleSubmitAvatar",
-    value: function handleSubmitAvatar(e) {
-      e.preventDefault();
-
-      var _this$state = this.state,
-          file = _this$state.file,
-          rest = _objectWithoutProperties(_this$state, ["file"]);
-
-      var formData = new FormData();
-      formData.append('file', file);
-      formData.append('userid', this.props.user.id); // Modifica el avatar
-
-      this.props.updateAvatar(formData);
     }
   }, {
     key: "handleChange",
     value: function handleChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: "handleClickImage",
+    value: function handleClickImage() {
+      var _this$state = this.state,
+          file = _this$state.file,
+          rest = _objectWithoutProperties(_this$state, ["file"]);
+
+      var formData = new FormData();
+      formData.append('file', file); // this.props.userUpdate(){
+      // }
     }
   }, {
     key: "onChange",
@@ -71153,21 +70946,11 @@ function (_React$Component) {
       });
     }
   }, {
-    key: "handleImageChange",
-    value: function handleImageChange(e) {
-      this.setState({
-        modalAvatar: !this.state.modalAvatar,
-        msjSave: ""
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_profile__WEBPACK_IMPORTED_MODULE_3__["default"], {
         user: this.props.user,
-        handClick: this.handClick,
-        handleImageChange: this.handleImageChange,
-        avatar: this.props.avatar
+        handClick: this.handClick
       }), ";", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalUser__WEBPACK_IMPORTED_MODULE_4__["default"] //Modal para visualizar/editar data del user
       , {
         modal: this.state.modalUser,
@@ -71181,12 +70964,6 @@ function (_React$Component) {
         modal: this.state.modal,
         textMsj: this.state.msjSave,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_Avatar__WEBPACK_IMPORTED_MODULE_6__["default"] //Modal para modificar la imagen de perfil
-      , {
-        toggleModalAvatar: this.toggleModalAvatar,
-        modalAvatar: this.state.modalAvatar,
-        handleSubmitAvatar: this.handleSubmitAvatar,
-        onChange: this.onChange
       }));
     }
   }]);
@@ -71196,8 +70973,7 @@ function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    user: state.user.user,
-    avatar: state.user.avatar
+    user: state.user.user
   };
 };
 
@@ -71205,9 +70981,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     updatePass: function updatePass(pass, userId, oldPass) {
       return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_2__["updatePass"])(pass, userId, oldPass));
-    },
-    updateAvatar: function updateAvatar(img, id) {
-      return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_2__["updateAvatar"])(img, id));
     }
   };
 };
@@ -71228,71 +71001,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Profile; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
 
 
 function Profile(_ref) {
   var user = _ref.user,
-      avatar = _ref.avatar,
       handClick = _ref.handClick,
       handleImageChange = _ref.handleImageChange;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
-    md: "12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "title-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "titleMain upperCaseFonts"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-user-circle"
-  }), " My profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "form-inline md-form topMarginLine"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "browser-default custom-select pRequest"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "browser-default custom-select newRequest",
-    to: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-home"
-  }), " Home"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "1"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "8"
+  }, "Profile:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
-    md: "9"
-  }, "Profile:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
-    className: "container-banner"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "imgProfile"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardImage"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardImage"], {
     className: "img-fluid z-depth-3 imgStyle",
-    src: "/assets/img/profile/".concat(avatar),
+    src: "/assets/img/profile/".concat(user.avatar),
     waves: true
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "iconEditImg",
     onClick: handleImageChange,
     type: "file"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "far fa-images"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    "class": "far fa-edit"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "9"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardTitle"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    style: {
-      fontSize: 30
-    }
-  }, " ", user.name, " ", user.surname)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    style: {
-      fontSize: 20
-    }
-  }, "Sector: ", user.sector), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardText"], null, "Some quick example text to build on the card title and make up the bulk of the card's content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBBtn"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardTitle"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, " ", user.name, " ", user.surname)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Sector: ", user.sector), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], null, "Some quick example text to build on the card title and make up the bulk of the card's content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     className: "mb-3 btnEv-blue rounded mb-0 border-0",
     onClick: handClick
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-key"
-  }), " Change password"))))))));
+  }, "Edit")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 }
 
 /***/ }),
@@ -71557,9 +71300,7 @@ function (_React$Component) {
     _this.state = {
       collapseID: ""
     };
-    _this.formId = Object(react__WEBPACK_IMPORTED_MODULE_0__["createRef"])();
     _this.toggleCollapse = _this.toggleCollapse.bind(_assertThisInitialized(_this));
-    _this.handleScrollToForm = _this.handleScrollToForm.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -71577,13 +71318,6 @@ function (_React$Component) {
           collapseID: prevState.collapseID !== collapseID ? collapseID : ""
         };
       });
-    } // Scroll hacia el formulario
-
-  }, {
-    key: "handleScrollToForm",
-    value: function handleScrollToForm(event) {
-      // efecto scroll
-      window.scrollTo(0, 1350);
     }
   }, {
     key: "render",
@@ -71592,9 +71326,7 @@ function (_React$Component) {
         toggleCollapse: this.toggleCollapse,
         collapseID: this.state.collapseID,
         user: this.props.user,
-        email: this.props.email,
-        formId: this.formId,
-        handleScrollToForm: this.handleScrollToForm
+        email: this.props.email
       });
     }
   }]);
@@ -71641,9 +71373,7 @@ __webpack_require__.r(__webpack_exports__);
 function obraSocial(_ref) {
   var toggleCollapse = _ref.toggleCollapse,
       collapseID = _ref.collapseID,
-      email = _ref.email,
-      formId = _ref.formId,
-      handleScrollToForm = _ref.handleScrollToForm;
+      email = _ref.email;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBContainer"], {
     fluid: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
@@ -71656,14 +71386,12 @@ function obraSocial(_ref) {
     className: "titleMain"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-briefcase-medical"
-  }), " HEALTH CARE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "form-inline md-form topMarginLine"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }), " HEALTH CARE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBFormInline"], {
+    className: "md-form topMarginLine"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "browser-default custom-select newRequest",
-    onClick: handleScrollToForm
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fab fa-wpforms"
-  }), " Go to the form"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    to: "/health-care/#form"
+  }, "Send us your question"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "upperCaseFonts"
   }, "Find a health care plan built specially for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "marginTextLeft"
@@ -71711,7 +71439,7 @@ function obraSocial(_ref) {
     type: "fadeInLeft"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "8",
-    ref: formId
+    id: "form"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, " Send us your question"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque odio enim ducimus blanditiis nulla reprehenderit ea nesciunt, ratione porro, tempora quas? Provident reprehenderit fuga numquam odit perspiciatis soluta, ipsum omnis?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "7"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -71757,14 +71485,13 @@ function obraSocial(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, SET_AVATAR, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_BOOK_INSTALLMENTS, RECEIVE_CURRENT_BOOK_A, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, RECEIVE_ACTIVE_EVENT, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_BOOK_INSTALLMENTS, RECEIVE_CURRENT_BOOK_A, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_LOGGED_USER", function() { return RECEIVE_LOGGED_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "USER_LOGOUT", function() { return USER_LOGOUT; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_AVATAR", function() { return SET_AVATAR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALLOWANCES", function() { return RECEIVE_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ADMIN_ALLOWANCES", function() { return RECEIVE_ADMIN_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PENDING_ALLOWANCES", function() { return RECEIVE_PENDING_ALLOWANCES; });
@@ -71775,7 +71502,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_CURRENT_BOOK_A", function() { return RECEIVE_CURRENT_BOOK_A; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_EVENT_LIST", function() { return RECEIVE_EVENT_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TECH_LIST", function() { return RECEIVE_TECH_LIST; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ACTIVE_EVENT", function() { return RECEIVE_ACTIVE_EVENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_OPEN_CLOSE_NAVBAR", function() { return SET_OPEN_CLOSE_NAVBAR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HOME_OFFICE_LIST", function() { return RECEIVE_HOME_OFFICE_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HOME_OFFICE_BIRTHDAY_LIST", function() { return RECEIVE_HOME_OFFICE_BIRTHDAY_LIST; });
@@ -71783,8 +71509,7 @@ __webpack_require__.r(__webpack_exports__);
 //export const ADD_ALLOWANCE_TO_DB = "ADD_ALLOWANCE_TO_DB";
 //User
 var RECEIVE_LOGGED_USER = "RECEIVE_LOGGED_USER";
-var USER_LOGOUT = " USER_LOGOUT";
-var SET_AVATAR = "SET_AVATAR"; //Allowances
+var USER_LOGOUT = " USER_LOGOUT"; //Allowances
 
 var RECEIVE_ALLOWANCES = "RECEIVE_ALLOWANCES";
 var RECEIVE_ADMIN_ALLOWANCES = "ECEIVE_ADMIN_ALLOWANCES";
@@ -71796,8 +71521,7 @@ var RECEIVE_BOOK_INSTALLMENTS = "RECEIVE_BOOK_INSTALLMENTS";
 var RECEIVE_CURRENT_BOOK_A = "RECEIVE_CURRENT_BOOK_A"; // DisciplineEvents
 
 var RECEIVE_EVENT_LIST = "RECEIVE_EVENT_LIST";
-var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST";
-var RECEIVE_ACTIVE_EVENT = "RECEIVE_ACTIVE_EVENT"; // NavBar 
+var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST"; // NavBar 
 
 var SET_OPEN_CLOSE_NAVBAR = "SET_OPEN_CLOSE_NAVBAR"; // Home office
 
@@ -71827,16 +71551,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_css_only_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(bootstrap_css_only_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! mdbreact/dist/css/mdb.css */ "./node_modules/mdbreact/dist/css/mdb.css");
 /* harmony import */ var mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../back/src/public/styles/fonts.css */ "../back/src/public/styles/fonts.css");
-/* harmony import */ var _back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../back/src/public/styles/app.css */ "../back/src/public/styles/app.css");
-/* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _back_src_public_styles_eventCalendar_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../back/src/public/styles/eventCalendar.css */ "../back/src/public/styles/eventCalendar.css");
-/* harmony import */ var _back_src_public_styles_eventCalendar_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_eventCalendar_css__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../back/src/public/styles/smartphone.css */ "../back/src/public/styles/smartphone.css");
-/* harmony import */ var _back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _back_src_public_styles_sidebar_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../back/src/public/styles/sidebar.css */ "../back/src/public/styles/sidebar.css");
-/* harmony import */ var _back_src_public_styles_sidebar_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_sidebar_css__WEBPACK_IMPORTED_MODULE_12__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../../back/src/public/styles/fonts.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../../back/src/public/styles/app.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../../back/src/public/styles/eventCalendar.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../../back/src/public/styles/smartphone.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../../back/src/public/styles/sidebar.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 // el inicio de la app
 
 
@@ -72047,6 +71766,7 @@ var fetchBookInstallments = function fetchBookInstallments(receiptPath, allowanc
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book/installments/".concat(receiptPath, "/").concat(allowanceId)).then(function (res) {
       return res.data;
     }).then(function (bookInstallments) {
+      console.log("soy bookInstall", bookInstallments);
       dispatch(receiveBookInstallments(bookInstallments));
     });
   };
@@ -72068,19 +71788,15 @@ var sendEmailConfirm = function sendEmailConfirm(userData, allowanceName) {
 /*!***********************************************!*\
   !*** ./src/redux/actions/disciplineEvents.js ***!
   \***********************************************/
-/*! exports provided: receiveEventList, receiveActiveEvent, receiveTechList, createDisciplineEvents, fetchDisciplineEvents, fetchActiveEvent, editEventStatus, deleteEvent, fetchTechonogies */
+/*! exports provided: receiveEventList, receiveTechList, createDisciplineEvents, fetchDisciplineEvents, fetchTechonogies */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveEventList", function() { return receiveEventList; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveActiveEvent", function() { return receiveActiveEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveTechList", function() { return receiveTechList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDisciplineEvents", function() { return createDisciplineEvents; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDisciplineEvents", function() { return fetchDisciplineEvents; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchActiveEvent", function() { return fetchActiveEvent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editEventStatus", function() { return editEventStatus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteEvent", function() { return deleteEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTechonogies", function() { return fetchTechonogies; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
@@ -72091,12 +71807,6 @@ var receiveEventList = function receiveEventList(eventList) {
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_EVENT_LIST"],
     eventList: eventList
-  };
-};
-var receiveActiveEvent = function receiveActiveEvent(activeEvent) {
-  return {
-    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_ACTIVE_EVENT"],
-    activeEvent: activeEvent
   };
 };
 var receiveTechList = function receiveTechList(techList) {
@@ -72115,43 +71825,39 @@ var createDisciplineEvents = function createDisciplineEvents(data, user) {
     }); //retorno el axios y el el container, realizado el ingreso vuelvo a ejecutar el fetch
   };
 };
-var fetchDisciplineEvents = function fetchDisciplineEvents(userId, adminUrl) {
+var fetchDisciplineEvents = function fetchDisciplineEvents(userId) {
   return function (dispatch) {
+    // console.log("sou user IF", userId)
+    // if (userId) {
+    //   console.log("sou user", userId)
+    //   return axios
+    //     .get(`/api/disciplineEvent/:userId`, {
+    //       params: {
+    //         userId
+    //       }
+    //     })
+    //     .then(res => res.data)
+    //     .then(eventList => {
+    //       console.log("soy eventListAXIOS", eventList);
+    //       dispatch(receiveEventList(eventList));
+    //       return eventList;
+    //     });
+    // } else {
+    //   console.log("sou user ELSE", userId)
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/", {
       params: {
-        userId: userId,
-        adminUrl: adminUrl
+        userId: userId
       }
     }).then(function (res) {
       return res.data;
     }).then(function (eventList) {
+      console.log("soy eventListAXIOS", eventList);
       dispatch(receiveEventList(eventList));
       return eventList;
     });
   };
-};
-var fetchActiveEvent = function fetchActiveEvent(userId) {
-  return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/findActive/".concat(userId)).then(function (res) {
-      return res.data;
-    }).then(function (activeEvent) {
-      return dispatch(receiveActiveEvent(activeEvent));
-    });
-  };
-};
-var editEventStatus = function editEventStatus(id, status, observation) {
-  return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/disciplineEvent/".concat(id, "/edit"), {
-      status: status,
-      observation: observation
-    });
-  };
-};
-var deleteEvent = function deleteEvent(id) {
-  return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/disciplineEvent/".concat(id, "/delete"));
-  };
-};
+}; // };
+
 var fetchTechonogies = function fetchTechonogies() {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/technologies").then(function (res) {
@@ -72281,19 +71987,17 @@ var openCloseNavBar = function openCloseNavBar(val) {
 /*!***********************************!*\
   !*** ./src/redux/actions/user.js ***!
   \***********************************/
-/*! exports provided: receiveLoggedUser, userLogout, setAvatar, loginUser, logout, updatePass, fetchLoggedUser, updateAvatar */
+/*! exports provided: receiveLoggedUser, userLogout, loginUser, logout, updatePass, fetchLoggedUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveLoggedUser", function() { return receiveLoggedUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userLogout", function() { return userLogout; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setAvatar", function() { return setAvatar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginUser", function() { return loginUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updatePass", function() { return updatePass; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchLoggedUser", function() { return fetchLoggedUser; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateAvatar", function() { return updateAvatar; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
@@ -72308,12 +72012,6 @@ var receiveLoggedUser = function receiveLoggedUser(loggedUser) {
 var userLogout = function userLogout() {
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_1__["USER_LOGOUT"]
-  };
-};
-var setAvatar = function setAvatar(data) {
-  return {
-    type: _constants__WEBPACK_IMPORTED_MODULE_1__["SET_AVATAR"],
-    data: data
   };
 };
 var loginUser = function loginUser(userData) {
@@ -72339,6 +72037,7 @@ var logout = function logout() {
 var updatePass = function updatePass(password, userId, oldPass) {
   return function (dispatch) {
     if (oldPass) {
+      console.log("hay oldPass", oldPass);
       return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/employee/password/profile/update", {
         password: password,
         userId: userId,
@@ -72370,20 +72069,6 @@ var fetchLoggedUser = function fetchLoggedUser() {
       return res.data;
     }).then(function (user) {
       return dispatch(receiveLoggedUser(user));
-    });
-  };
-};
-var updateAvatar = function updateAvatar(formData) {
-  return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default()({
-      method: "PUT",
-      data: formData,
-      url: "/api/employee/avatar",
-      headers: {
-        "content-type": "multipart/form-data"
-      }
-    }).then(function (data) {
-      return dispatch(setAvatar(data));
     });
   };
 };
@@ -72499,8 +72184,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = {
   eventList: [],
-  techList: [],
-  activeEvent: {}
+  techList: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -72515,11 +72199,6 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TECH_LIST"]:
       return _objectSpread({}, state, {
         techList: action.techList
-      });
-
-    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ACTIVE_EVENT"]:
-      return _objectSpread({}, state, {
-        activeEvent: action.activeEvent
       });
 
     default:
@@ -72656,8 +72335,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var initialState = {
-  user: {},
-  avatar: {} // userAdmin:{}
+  user: {} // userAdmin:{}
 
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
@@ -72667,13 +72345,7 @@ var initialState = {
   switch (action.type) {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_LOGGED_USER"]:
       return Object.assign({}, state, {
-        user: action.loggedUser,
-        avatar: action.loggedUser.avatar
-      });
-
-    case _constants__WEBPACK_IMPORTED_MODULE_0__["SET_AVATAR"]:
-      return Object.assign({}, state, {
-        avatar: action.data.data
+        user: action.loggedUser
       });
 
     case _constants__WEBPACK_IMPORTED_MODULE_0__["USER_LOGOUT"]:
