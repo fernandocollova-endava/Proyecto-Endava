@@ -57,7 +57,7 @@ class AllowanceListContainer extends React.Component {
       this.state.allowanceStatus,
       this.props.allUser
     );
-
+      console.log(this.props.allUser, "all user")
     this.props.fetchAdminAllowances();
     this.props.openCloseNavBar(false);
     // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
@@ -132,7 +132,7 @@ class AllowanceListContainer extends React.Component {
     this.setState({
       date: date
     });
-     console.log("soy laa date entrando", date)
+   
     this.props.fetchAllowances(
       date,
       this.props.user.id,
@@ -305,7 +305,7 @@ const mapStateToProps = (state, owner) => {
     activeAllowance: state.allowance.activeAllowances,
     history: state.allowance.historyAllowances,
     // allUser => Consulta si la ruta ingresada es "/admin/panel", de ser correcto permite en el back mostrar u ocultar uno o todos los usuarios.
-    allUser: owner.match.path == "/admin/panel" // true o false
+    allUser: owner.match.path == "/admin/allowance" // true o false
   };
 };
 
