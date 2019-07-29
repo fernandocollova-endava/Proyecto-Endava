@@ -28,13 +28,13 @@ export default function DisciplineEvent({
           <p className=" title-container">
             <span className="titleMain upperCaseFonts"><i className="far fa-calendar-plus"></i> DISCIPLINE EVENT</span>
 
-            <MDBFormInline className="md-form topMarginLine">
+            <span className="form-inline md-form topMarginLine">
               {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
               
               <Link className="browser-default custom-select newRequest"
                 to="/calendar"><i className="far fa-calendar-alt"></i> View Event Calendar
                 </Link>
-            </MDBFormInline>
+            </span>
           </p>
         </MDBCol>
         
@@ -53,7 +53,7 @@ export default function DisciplineEvent({
                  </span>
 
                   <div className="grey-text" >
-                    <div class="md-form form-group">
+                    <div className="md-form form-group">
                       <select required
                         className="form-control validate"
                         name="techName"
@@ -61,8 +61,8 @@ export default function DisciplineEvent({
                       >
                         <option>Choose your Technologie...</option>
                         {techList &&
-                          techList.map(tech => (
-                            <option className="capitalizeName" value={tech.name}>
+                          techList.map((tech,i) => (
+                            <option className="capitalizeName" value={tech.name} key={i}>
                               {tech.name}
                             </option>
                           ))}
@@ -149,7 +149,7 @@ export default function DisciplineEvent({
                 <div className="table-responsive">
                   <table className="table btn-table table-fixed">
                     <thead>
-                      <tr>
+                      <tr key={'0'}>
                         <th style={({ width: 240 })}>Topic</th>
                         <th>Status</th>
                         <th>Date</th>
@@ -159,7 +159,7 @@ export default function DisciplineEvent({
                     <tbody>
                       {eventList && eventList.map((item, i) => (
                         <tr style={({ height: 32 })} key={i}>
-                          <td className="upperCaseFonts">{item.topic}</td>
+                          <td key={`id_${i}`} className="upperCaseFonts">{item.topic}</td>
                           <td className={`${item.status} whiteBorder`}>{item.status}</td>
                           <td>{item.date}</td>
                           <td>{item.time}</td>

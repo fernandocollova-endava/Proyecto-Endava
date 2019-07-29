@@ -5,6 +5,7 @@
 //User
 export const RECEIVE_LOGGED_USER = "RECEIVE_LOGGED_USER"
 export const USER_LOGOUT = " USER_LOGOUT"
+export const SET_AVATAR = "SET_AVATAR"
 
 
 //Allowances
