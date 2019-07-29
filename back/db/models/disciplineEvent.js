@@ -17,21 +17,15 @@ const DisciplineEvent = db.define('disciplineEvent', {
   time:{
 
     type: Sequelize.TIME,
-      // get: function() {
-      //     let time = this.getDataValue('CreateTime')
-  
-      //     if (moment(time, moment.ISO_8601, true).isValid()) {
-      //       console.log("es time", time)
-      //         return moment(this.getDataValue('CreateTime')).format('HH:mm:ss')
-      //     } else {
-      //         return time
-      //     }
-      // }
+   
   },
   description:{
     type: Sequelize.TEXT,
     allowNull: false,
   },
+  adminComment:{
+    type: Sequelize.STRING,
+},
   status:{
     type: Sequelize.STRING,
     validate: {

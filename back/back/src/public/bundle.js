@@ -86,156 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../back/src/public/styles/app.css":
-/*!*****************************************!*\
-  !*** ../back/src/public/styles/app.css ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./app.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/app.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "../back/src/public/styles/eventCalendar.css":
-/*!***************************************************!*\
-  !*** ../back/src/public/styles/eventCalendar.css ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./eventCalendar.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/eventCalendar.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "../back/src/public/styles/fonts.css":
-/*!*******************************************!*\
-  !*** ../back/src/public/styles/fonts.css ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./fonts.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/fonts.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "../back/src/public/styles/sidebar.css":
-/*!*********************************************!*\
-  !*** ../back/src/public/styles/sidebar.css ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./sidebar.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/sidebar.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "../back/src/public/styles/smartphone.css":
-/*!************************************************!*\
-  !*** ../back/src/public/styles/smartphone.css ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../front/node_modules/css-loader/dist/cjs.js!./smartphone.css */ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../front/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
@@ -2531,76 +2381,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = _react2.default.createContext || _implementation2.default;
 module.exports = exports['default'];
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/app.css":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/app.css ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n.title-container-fluid {\n  background-color: #F0f3f3;\n  border: 1px solid #dbdbdb;\n  padding: 6px;\n  margin: -20px -36px;\n  border-radius: 5px;\n}\n.topMarginLine {\n  /* position: relative; */\n  margin-top: 3px !important;\n  /* margin-bottom: 1px; */\n}\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.separationClass {\n  margin-top: -7px;\n    margin-bottom: 2px;\n    border-bottom: 2px solid #f7a1a1;\n}\n.title-container {\n  background-color: #F0f3f3;\n  border: 1px solid #dbdbdb;\n  padding: 6px;\n  margin: -20px -18px;\n  border-radius: 5px;\n}\n.md-form {\n  position: relative;\n  margin-top: 3px;\n  margin-bottom: 1px;\n}\nfooter.page-footer {\n  bottom: -30px;\n  position: fixed;\n  width: 100%;\n}\nfooter.page-footer .footer-copyright {\n  margin-top: -20px;\n}\n.newRequest {\n  padding: .375rem .75rem .375rem .75rem;\n  background: none;\n  position: absolute;\n  right: 0px;\n  background-color: #fff;\n  border: 1px solid #ced4da;\n}\n.fontDiscipline {\n  font-size: 15px;\n}\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.image-upload > input\n{\n    display: none;\n}\n\n.image-upload img\n{\n    width: 30px;\n    cursor: pointer;\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.rejectedBook {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 70px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.10rem 0.29rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.approvedBook {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.10rem 0.29rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n\n\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-grey:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md {\n  background-color: #9bb4be !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #9bb4be !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.titleModule {\n  text-align: center;\n  font-size: 22px;\n  padding-bottom: 15px;\n  margin-top:-40px;\n  font-family: robotobold;  \n}\n.card {\n  background-color: #fdfdfd;\n}\n\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}\n\n /* === CALENDAR === */\n .bg-info {\n  background-color: #17a2b8!important;\n}\n.viewEvent {\n  font-size: 12px;\n  background-color: #DE411B;\n  color: white;\n  border-radius: 8px;\n  margin-bottom: 0px;\n  margin-top: 2px;\n  border: 1px solid white;\n}\n.classDay {\n  font-size: 20px;\n  padding: 4px 11px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n.classToday {\n  font-size: 20px;\n  background-color: #d8d8e8;\n  padding: 10px 11px;\n  margin: 0 35px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n#calendar-body > tr {\n  height: 136px;\n}\n#calendar-body td:hover {\n  background-color: #f0f3f3;\n  cursor:pointer;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n.viewHB {\n    background: url(\"/assets/img/backgroundHB.png\") no-repeat center;\n   -webkit-background-size: cover;\n   -moz-background-size: cover;\n   -o-background-size: cover;\n   background-size: cover;\n   max-width: 100% ;\n   text-align: center;\n}\n.textCenter {\n  text-align: center;\n}\n.showHomeOffice {\n  width: 90px;\n  font-size: 10px;\n  padding: 2px 7px;\n  border-radius: 0px !important;\n  margin-left: 2px;\n  min-height: 43px;\n}\n.itemName {\n  font-size: 14px;\n  padding: 0px;\n  margin: 0px;\n  margin-left: 16px;\n}\n.divListAllowance {\n  min-height: 144px;\n  overflow: auto;\n}\n.hiddenDiv{\n  display: none;\n}\n.card-header {\n  background-color: #285078;\n  color: white;\n  border-bottom: 2px solid rgba(254, 254, 254, 1);\n}\n\n\n.pRequest {\n    padding: 0;\n    background: none;\n    position: static;\n    right: 0;\n    height: 17px;\n    font-size: 15px;\n    margin-left: 27px;\n    background-color: #fcfcfc26;\n    border: none;\n}\n.newRequestBtn {\n  padding: .375rem .75rem .375rem .75rem;\n    background: none;\n    background-color: #fff;\n    border: 1px solid #ced4da;\n}", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/eventCalendar.css":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/eventCalendar.css ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, ".timeline{\n  --uiTimelineMainColor: var(--timelineMainColor, #222);\n  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);\n  position: relative;\n  padding-top: 3rem;\n  padding-bottom: 3rem;\n  margin: -32px;\n}\n.imgCalendar {\n  float: right;\n  padding: 10px;\n}\n.textJustify {\n  text-align: justify\n}\n.timeline:before{\n  content: \"\";\n  width: 4px;\n  height: 100%;\n  background-color: var(--uiTimelineMainColor);\n\n  position: absolute;\n  top: 0;\n}\n\n.timeline__group{\n  position: relative;\n}\n\n.timeline__group:not(:first-of-type){\n  margin-top: 4rem;\n}\n\n.timeline__year{\n  padding: .5rem 1.5rem;\n  color: var(--uiTimelineSecondaryColor);\n  background-color: var(--uiTimelineMainColor);\n  position: absolute;\n  left: 0;\n  top: 0;\n  background-color: #353d73;\n  width: 120px;\n  font-size: 18px;\n  font-weight: bold;\n}\n\n\n.timeline__box{\n  position: relative;\n}\n\n.timeline__box:not(:last-of-type){\n  margin-bottom: 30px;\n}\n\n.timeline__box:before{\n  content: \"\";\n  width: 100%;\n  height: 2px;\n  background-color: var(--uiTimelineMainColor);\n\n  position: absolute;\n  left: 0;\n  z-index: -1;\n}\n\n.timeline__date{\n  min-width: 65px;\n  position: absolute;\n  left: 0;\n\n  box-sizing: border-box;\n  padding: .5rem 1.5rem;\n  text-align: center;\n\n  background-color: var(--uiTimelineMainColor);\n  color: var(--uiTimelineSecondaryColor);\n}\n\n.timeline__day{\n  font-size: 2rem;\n  font-weight: 700;\n  display: block;\n}\n\n.timeline__month{\n  display: block;\n  font-size: .8em;\n  text-transform: uppercase;\n}\n.hrEvent {\n  margin-top: 0;\n  margin-bottom: 8px;\n}\n.timeline__post{\n  padding: 1.5rem 2rem;\n  border-radius: 2px;\n  border-left: 3px solid var(--uiTimelineMainColor);\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);\n  background-color: var(--uiTimelineSecondaryColor);\n  min-height: 216px;\n}\n\n@media screen and (min-width: 641px){\n/* Desk */\n  .timeline:before{\n    left: 30px;\n  }\n\n  .timeline__group{\n    padding-top: 55px;\n  }\n\n  .timeline__box{\n    padding-left: 95px;\n    \n  }\n\n  .timeline__box:before{\n    top: 50%;\n    transform: translateY(-50%);  \n  }  \n\n  .timeline__date{\n    top: 50%;\n    margin-top: -27px;\n  }\n}\n\n@media screen and (max-width: 640px){\n  /* mobile */\n  .timeline:before{\n    left: 0;\n  }\n\n  .timeline__group{\n    padding-top: 40px;\n  }\n\n  .timeline__box{\n    padding-left: 20px;\n    padding-top: 70px;\n  }\n\n  .timeline__box:before{\n    top: 95px;\n  }    \n\n  .timeline__date{\n    top: 0;\n  }\n}\n\n.timeline{\n  --timelineMainColor: #4557bb;\n  font-size: 16px;\n}\n\n\n\np{\n  margin-top: 0;\n  margin-bottom: 1.5rem;\n  line-height: 1.5;\n}\n\np:last-child{\n  margin-bottom: 0;\n}\n\n.page{\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.page__demo{\n  flex-grow: 1;\n}\n\n.main-container{\n  max-width: 960px;\n  padding-left: 2rem;\n  padding-right: 2rem;\n\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.page__container{\n  padding-top: 30px;\n  padding-bottom: 30px;\n  max-width: 800px;\n}\n\n@media screen and (min-width: 361px){\n \n  .footer__container{\n    display: flex;\n    justify-content: space-between;\n  }\n}\n\n@media screen and (max-width: 360px){\n\n  .melnik909{\n    display: none;\n  } \n}", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/fonts.css":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/fonts.css ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "/* https://careers.endava.com/Design/styles/webfonts/ */\n@font-face{\n    font-family:robotobold;\n    src:url('/assets/styles/webfonts/roboto-bold-webfont.eot');\n    src:url('/assets/styles/webfonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.woff2') format('woff2'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.woff') format('woff'),\n    url('/assets/styles/webfonts/roboto-bold-webfont.ttf') format('truetype')    \n}\n\n@font-face{\n    font-family:robotoregular;\n    src:url('/assets/styles/webfonts/Roboto-Condensed-Regular.woff2') format('woff2'),\n    url('/assets/styles/webfonts/Roboto-Condensed-Regular.woff') format('woff'),\n    url('/assets/styles/webfonts/roboto-Regular.ttf');\n    font-weight:400;font-style:normal\n}\n@font-face{\n    font-family:robotolight;\n    src:url('/assets/styles/webfonts/Roboto-Condensed-Light.woff2') format('woff2'),\n    url('/assets/styles/webfonts/Roboto-Condensed-Light.woff') format('woff'),\n    url('/assets/styles/webfonts/roboto-Light.ttf');\n    font-weight:400;font-style:normal\n}\n\n\n/* @font-face{font-family:roboto_condensedbold;src:url(webfonts/robotocondensed-bold-webfont.eot);src:url(webfonts/robotocondensed-bold-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/robotocondensed-bold-webfont.woff2) format('woff2'),url(webfonts/robotocondensed-bold-webfont.woff) format('woff'),url(webfonts/robotocondensed-bold-webfont.ttf) format('truetype'),url(webfonts/robotocondensed-bold-webfont.svg#roboto_condensedbold) format('svg');font-weight:700;font-style:normal}@font-face{font-family:robotolight;src:url(webfonts/roboto-light-webfont.eot);src:url(webfonts/roboto-light-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-light-webfont.woff2) format('woff2'),url(webfonts/roboto-light-webfont.woff) format('woff'),url(webfonts/roboto-light-webfont.ttf) format('truetype'),url(webfonts/roboto-light-webfont.svg#robotolight) format('svg');font-weight:400;font-style:normal}@font-face{font-family:robotomedium;src:url(webfonts/roboto-medium-webfont.eot);src:url(webfonts/roboto-medium-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-medium-webfont.woff2) format('woff2'),url(webfonts/roboto-medium-webfont.woff) format('woff'),url(webfonts/roboto-medium-webfont.ttf) format('truetype'),url(webfonts/roboto-medium-webfont.svg#robotomedium) format('svg');font-weight:400;font-style:normal}\n@font-face{font-family:robotolight_italic;src:url(webfonts/roboto-lightitalic-webfont.eot);src:url(webfonts/roboto-lightitalic-webfont.eot?#iefix) format('embedded-opentype'),url(webfonts/roboto-lightitalic-webfont.woff2) format('woff2'),url(webfonts/roboto-lightitalic-webfont.woff) format('woff'),url(webfonts/roboto-lightitalic-webfont.ttf) format('truetype'),url(webfonts/roboto-lightitalic-webfont.svg#robotolight_italic) format('svg');font-weight:400;font-style:normal}@font-face{font-family:fontendava;src:url(iconfonts/fontendava.eot?y6id76);src:url(iconfonts/fontendava.eot?y6id76#iefix) format('embedded-opentype'),url(iconfonts/fontendava.ttf?y6id76) format('truetype'),url(iconfonts/fontendava.woff?y6id76) format('woff'),url(iconfonts/fontendava.svg?y6id76#fontendava) format('svg');font-weight:400;font-style:normal}[class*=\" fe_\"],[class^=fe_]{font-family:fontendava!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale} */\n", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/sidebar.css":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/sidebar.css ***!
-  \***********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height: 100%; /* 100% Full-height */\n    width: 0; /* 0 width - change this with JavaScript */\n    position: fixed; /* Stay in place */\n    z-index: 100000; /* Stay on top */\n    top: 0;\n    right: 0;\n    background-color: #de411b;\n    overflow-x: hidden; /* Disable horizontal scroll */\n    padding-top: 60px; /* Place content 60px from the top */\n    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */\n}\n \n/* The navigation menu links */\n.sidenav a {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s\n}\n.sidenav span {\n    padding: 8px 8px 8px 32px;\n    text-decoration: none;\n    font-size: 25px;\n    color: #f3d3d3;\n    display: block;\n    transition: 0.3s;\n    cursor:pointer;\n}\n \n/* When you mouse over the navigation links, change their color */\n.sidenav a:hover, .offcanvas a:focus{\n    color: #f1f1f1;\n}\n \n/* Position and style the close button (top right corner) */\n.sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    font-size: 36px;\n    margin-left: 50px;\n    cursor:pointer;\n}\n.nameFontSidebar {\n    font-size: 16px !important;\n    top: 9px;\n    left: -16px;\n    position: absolute;\n    color: #f3d3d39c !important\n}\n\nbody {\n  overflow-x: hidden;\n}\n \n/* Add a black background color to the top navigation */\n.topnav {\n    background-color: #DE411B;\n    overflow: hidden;\n}\n \n/* Style the links inside the navigation bar */\n.topnav a {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n.topnav span {\n    float: left;\n    display: block;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n    cursor:pointer;\n}\n \n/* Change the color of links on hover */\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n\n.topnav span:hover {\n    background-color: #ddd;\n    color: black;\n}\n/* Add a color to the active/current link */\n.topnav a.active {\n    background-color: #4CAF50;\n    color: white;\n}\n\n\n#sideNavigation {\n  padding-bottom: 25px;\n  font-family: robotobold,Arial,sans-serif;\n  font-weight: 400;\n  font-size: 26px;\n  color: #fff;\n}\n.item {\n    color:white\n  }\n\n.item:hover, .itemActive {\n  text-decoration: underline white;\n  opacity: .45; \n  transition: opacity .3s ease-out; \n}\n.imgProfileNav {\n    border-radius: 50%;\n    width: 40px;\n    margin-right: 12px;\n    z-index: 100001;\n    position: relative;\n}\n", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!../back/src/public/styles/smartphone.css ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n    .bannerAllowance{\n        margin-top: -30px;        \n    }\n    .HideMobile {\n        display: none;\n    }\n\n\n    /* == CALENDARIO == */\n    .classDay {\n        font-size: 20px;\n        padding: 4px 11px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .classToday {\n        font-size: 20px;\n        background-color: #d8d8e8;\n        padding: 10px 11px;\n        margin: 0 5px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .timeline__year{\n        margin-bottom: 50px\n    }\n    .topMarginLine {\n        /* position: relative; */\n        margin-top: 18px !important;\n        /* margin-bottom: 1px; */\n    }\n    .newRequest {\n        position: relative;\n    }\n}\n", ""]);
-
 
 /***/ }),
 
@@ -58060,7 +57840,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66174,7 +65954,7 @@ function (_React$Component) {
     _this.togglePanel = _this.togglePanel.bind(_assertThisInitialized(_this));
     _this.viewDetails = _this.viewDetails.bind(_assertThisInitialized(_this));
     _this.toggleAviso = _this.toggleAviso.bind(_assertThisInitialized(_this));
-    _this.deleteEvent = _this.deleteEvent.bind(_assertThisInitialized(_this));
+    _this.deleteAllowance = _this.deleteAllowance.bind(_assertThisInitialized(_this));
     _this.actionOk = _this.actionOk.bind(_assertThisInitialized(_this));
     _this.handleFilterStatus = _this.handleFilterStatus.bind(_assertThisInitialized(_this));
     _this.handleSaveConfirm = _this.handleSaveConfirm.bind(_assertThisInitialized(_this));
@@ -66185,7 +65965,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.openCloseNavBar(false);
-      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath); // this.setState(
+      this.props.fetchDisciplineEvents(this.props.user.id); // this.setState(
       //   {
       //     selectedMonth: selectedMonth
       //   },
@@ -66198,7 +65978,7 @@ function (_React$Component) {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       if (prevProps.adminPath !== this.props.adminPath) {
-        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath); // .then(() =>
+        this.props.fetchDisciplineEvents(this.props.user.id); // .then(() =>
         //   this.props.fetchBookAllowances(
         //     this.props.user.id,
         //     this.props.adminPath
@@ -66209,14 +65989,12 @@ function (_React$Component) {
 
   }, {
     key: "viewDetails",
-    value: function viewDetails(id) {
+    value: function viewDetails(id, allowanceId, receiptPath) {
       var _this2 = this;
 
-      this.props.fetchActiveEvent(id).then(function (data) {
-        console.log("soy la rta", data);
-        var userEventId = data.activeEvent.employeeId; // Retorna el id del usuario del detalle seleccionado
-
-        _this2.props.fetchDisciplineEvents(userEventId).then(function () {
+      this.props.fetchAllowanceActive(id).then(function (data) {
+        // let idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
+        _this2.props.fetchBookInstallments(receiptPath, allowanceId).then(function () {
           _this2.setState({
             modal: true
           });
@@ -66226,7 +66004,7 @@ function (_React$Component) {
   }, {
     key: "handleFilterStatus",
     value: function handleFilterStatus(e) {
-      this.props.fetchDisciplineEvents(this.props.user.id, this.props.user.adminPath);
+      this.props.fetchDisciplineEvents(this.props.user.id);
       this.setState({
         allowanceStatus: e.target.value
       });
@@ -66271,9 +66049,8 @@ function (_React$Component) {
     } // FUNCION PARA ELIMINAR UN BENEFICIO ENVIADO ( SOLO SI AUN ESTA PENDIENTE)
 
   }, {
-    key: "deleteEvent",
-    value: function deleteEvent(id) {
-      console.log("iddddddddddddddd", id);
+    key: "deleteAllowance",
+    value: function deleteAllowance(id) {
       this.setState({
         titleBoolean: "Are you sure you want to delete the information?",
         modalBoolean: true,
@@ -66288,7 +66065,7 @@ function (_React$Component) {
     value: function actionOk(data) {
       var _this3 = this;
 
-      this.props.deleteEvent(data.id).then(function () {
+      this.props.deleteAllowance(data.id).then(function () {
         _this3.setState({
           modalBoolean: false,
           modalAviso: true,
@@ -66296,7 +66073,7 @@ function (_React$Component) {
           titleMsj: "Success"
         });
 
-        _this3.props.fetchDisciplineEvents(_this3.props.user.id, _this3.props.user.adminPath);
+        _this3.props.fetchDisciplineEvents(_this3.props.user.id);
       })["catch"](function () {
         _this3.setState({
           modalBoolean: false,
@@ -66312,13 +66089,12 @@ function (_React$Component) {
       var _this4 = this;
 
       e.preventDefault();
-      console.log(e.target.valie, "soy el value");
-      this.props.editEventStatus(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
+      this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
         _this4.setState({
           msjSave: "Saved!"
         });
 
-        _this4.props.fetchDisciplineEvents(_this4.props.user.id, _this4.props.user.adminPath);
+        _this4.props.fetchDisciplineEvents(_this4.props.user.id);
       })["catch"](function () {
         _this4.setState({
           msjSave: "Ups!, an error occurred while processing the request..."
@@ -66328,12 +66104,12 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("soy EVENT", this.props.activeEvent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("soy EVENT", this.props.eventList), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
         togglePanel: this.togglePanel,
         activeItem: this.state.activeItem,
-        activeEvent: this.props.activeEvent,
+        activeAllowance: this.props.activeAllowance,
         history: this.props.eventList,
         handleSaveConfirm: this.handleSaveConfirm,
         msjSave: this.state.msjSave,
@@ -66355,7 +66131,7 @@ function (_React$Component) {
         handleFilterStatus: this.handleFilterStatus,
         eventList: this.props.eventList,
         allowanceStatus: this.state.allowanceStatus,
-        deleteAllowance: this.props.deleteEvent,
+        deleteAllowance: this.props.deleteAllowance,
         viewDetails: this.viewDetails,
         urlName: this.props.urlName
       }));
@@ -66371,10 +66147,10 @@ var mapStateToProps = function mapStateToProps(state, own) {
     urlName: urlName,
     user: state.user.user,
     eventList: state.event.eventList,
-    activeEvent: state.event.activeEvent,
+    activeAllowance: state.allowance.activeAllowances,
     history: state.allowance.historyAllowances,
     //
-    adminPath: own.match.path == "/admin/event",
+    adminPath: own.match.path == "/admin/book",
     // adminPath => consulta que la ruta corresponda a admin
     currentBookAllowances: state.allowance.currentBookAllowances //busco libros p/mes actual
 
@@ -66389,27 +66165,27 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     openCloseNavBar: function openCloseNavBar(val) {
       return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
     },
-    fetchActiveEvent: function fetchActiveEvent(id) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchActiveEvent"])(id));
+    fetchAllowanceActive: function fetchAllowanceActive(id) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceActive"])(id));
     },
     fetchAllowanceHistory: function fetchAllowanceHistory(employeeId, allowanceId) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceHistory"])(employeeId, allowanceId));
     },
     //trae la data para el "history del detalle modal"
-    deleteEvent: function deleteEvent(id) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["deleteEvent"])(id));
+    deleteAllowance: function deleteAllowance(id) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["deleteAllowance"])(id));
     },
     // Elimina detalle
-    editEventStatus: function editEventStatus(id, status, observation) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["editEventStatus"])(id, status, observation));
+    editStatusAllowance: function editStatusAllowance(id, status, observation) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["editStatusAllowance"])(id, status, observation));
     },
     // Switch State
     fetchCountPending: function fetchCountPending(userId) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
     },
     // Consulta cantidad de allowance pendientes
-    fetchDisciplineEvents: function fetchDisciplineEvents(userId, adminUrl) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchDisciplineEvents"])(userId, adminUrl));
+    fetchDisciplineEvents: function fetchDisciplineEvents(userId) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchDisciplineEvents"])(userId));
     }
   };
 };
@@ -67266,21 +67042,10 @@ function rowAllowance(_ref) {
       className: "upperCaseFonts"
     }, row.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: row.status
-    }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.allowanceDetail ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
       onClick: function onClick() {
         return viewDetails(row.id, row.allowanceDetail.id, row.receiptPath);
-      },
-      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "far fa-file-pdf",
-      "aria-hidden": "true"
-    }), " Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "Ripple "
-    })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      type: "button",
-      onClick: function onClick() {
-        return viewDetails(row.employeeId);
       },
       className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -70269,7 +70034,7 @@ function ModalEventDetails(_ref) {
       allUser = _ref.allUser,
       handleSaveConfirm = _ref.handleSaveConfirm,
       toggleDetails = _ref.toggleDetails,
-      activeEvent = _ref.activeEvent,
+      activeAllowance = _ref.activeAllowance,
       history = _ref.history,
       togglePanel = _ref.togglePanel,
       activeItem = _ref.activeItem;
@@ -70281,7 +70046,7 @@ function ModalEventDetails(_ref) {
     toggle: toggleDetails
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "upperCaseFonts"
-  }, activeEvent.topic)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNav"], {
+  }, activeAllowance.allowanceDetail.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNav"], {
     className: "nav-tabs"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
     to: "#",
@@ -70292,73 +70057,92 @@ function ModalEventDetails(_ref) {
     role: "tab"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "far fa-list-alt"
-  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "DETAILS")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "DETAILS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "2" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("2");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-history"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "HISTORY"))), allUser && // Si 
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "3" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("3");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-user-edit"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "ADMIN")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
     activeItem: activeItem
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
     tabId: "1",
     role: "tabpanel"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mt-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "User: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "marginTextLeft textBold"
+  }, "Actual payment date: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.paymentDate)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "parrafoModal"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
-  }, "Employee: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Amount: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
-  }, " ", activeEvent.employee && activeEvent.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
-  }, "Topic: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm"
-  }, " ", activeEvent.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
-  }, "Time schelude: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm"
-  }, " ", activeEvent.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+  }, "$ ", activeAllowance.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "marginTextLeft textBold"
   }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm ".concat(activeEvent.status)
-  }, activeEvent.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "textForm ".concat(activeAllowance.status)
+  }, activeAllowance.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "parrafoModal"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
   }, "Observation: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
-  }, activeEvent.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, activeAllowance.observation)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "parrafoModal"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
   }, "Admin Comment: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
-  }, activeEvent.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }, activeAllowance.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: handleSaveConfirm
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "hidden",
     name: "id",
-    value: activeEvent.id
+    value: activeAllowance.id
   }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     action: "",
     className: "modalForm"
-  }, activeEvent.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, activeAllowance.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "radio"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "approvedBook radioBoton"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
-    defaultChecked: activeEvent.status === 'approved',
+    defaultChecked: activeAllowance.status === 'approved',
     name: "status",
     value: "approved"
   }), "\xA0APPROVED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "rejectedBook radioBoton"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
-    defaultChecked: activeEvent.status === 'rejected',
+    defaultChecked: activeAllowance.status === 'rejected',
     name: "status",
     value: "rejected"
   }), "\xA0REJECTED")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
   }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm ".concat(activeEvent.status)
-  }, activeEvent.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "textForm ".concat(activeAllowance.status)
+  }, activeAllowance.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group",
     style: {
       marginTop: -20
@@ -70374,17 +70158,45 @@ function ModalEventDetails(_ref) {
     type: "text",
     autoComplete: "off",
     name: "observation",
-    defaultValue: activeEvent.adminComment,
+    defaultValue: activeAllowance.adminComment,
     required: true,
     className: "form-control",
     placeholder: "Observation...",
     "aria-describedby": "basic-addon"
-  })), activeEvent.status === 'pending' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  })), activeAllowance.status === 'pending' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "mb-3 btnEv-blue rounded mb-0 border-0"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-edit"
-  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), activeAllowance.receiptPath.split('.')[1] !== 'pdf' && activeAllowance.receiptPath.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/assets/receipt/".concat(activeAllowance.receiptPath),
+    width: "100%"
+  }), activeAllowance.receiptPath.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
+    src: "/assets/receipt/".concat(activeAllowance.receiptPath),
+    width: "100%",
+    height: "400px",
+    type: "application/pdf"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
+    tabId: "2",
+    role: "tabpanel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    className: "table btn-table table-fixed"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Installments"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, console.log("history", history), history && history.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      style: {
+        height: 32
+      },
+      key: i
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.installments), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: item.status
+    }, item.status));
+  }))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     className: "mb-3 btnEv-red rounded mb-0 border-0",
     onClick: toggleDetails
   }, "Close"))));
@@ -71673,7 +71485,7 @@ function obraSocial(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_BOOK_INSTALLMENTS, RECEIVE_CURRENT_BOOK_A, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, RECEIVE_ACTIVE_EVENT, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_BOOK_INSTALLMENTS, RECEIVE_CURRENT_BOOK_A, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71690,7 +71502,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_CURRENT_BOOK_A", function() { return RECEIVE_CURRENT_BOOK_A; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_EVENT_LIST", function() { return RECEIVE_EVENT_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TECH_LIST", function() { return RECEIVE_TECH_LIST; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ACTIVE_EVENT", function() { return RECEIVE_ACTIVE_EVENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_OPEN_CLOSE_NAVBAR", function() { return SET_OPEN_CLOSE_NAVBAR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HOME_OFFICE_LIST", function() { return RECEIVE_HOME_OFFICE_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HOME_OFFICE_BIRTHDAY_LIST", function() { return RECEIVE_HOME_OFFICE_BIRTHDAY_LIST; });
@@ -71710,8 +71521,7 @@ var RECEIVE_BOOK_INSTALLMENTS = "RECEIVE_BOOK_INSTALLMENTS";
 var RECEIVE_CURRENT_BOOK_A = "RECEIVE_CURRENT_BOOK_A"; // DisciplineEvents
 
 var RECEIVE_EVENT_LIST = "RECEIVE_EVENT_LIST";
-var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST";
-var RECEIVE_ACTIVE_EVENT = "RECEIVE_ACTIVE_EVENT"; // NavBar 
+var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST"; // NavBar 
 
 var SET_OPEN_CLOSE_NAVBAR = "SET_OPEN_CLOSE_NAVBAR"; // Home office
 
@@ -71741,16 +71551,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_css_only_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(bootstrap_css_only_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! mdbreact/dist/css/mdb.css */ "./node_modules/mdbreact/dist/css/mdb.css");
 /* harmony import */ var mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../back/src/public/styles/fonts.css */ "../back/src/public/styles/fonts.css");
-/* harmony import */ var _back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_fonts_css__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../back/src/public/styles/app.css */ "../back/src/public/styles/app.css");
-/* harmony import */ var _back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_app_css__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _back_src_public_styles_eventCalendar_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../back/src/public/styles/eventCalendar.css */ "../back/src/public/styles/eventCalendar.css");
-/* harmony import */ var _back_src_public_styles_eventCalendar_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_eventCalendar_css__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../back/src/public/styles/smartphone.css */ "../back/src/public/styles/smartphone.css");
-/* harmony import */ var _back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_smartphone_css__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _back_src_public_styles_sidebar_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../back/src/public/styles/sidebar.css */ "../back/src/public/styles/sidebar.css");
-/* harmony import */ var _back_src_public_styles_sidebar_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_back_src_public_styles_sidebar_css__WEBPACK_IMPORTED_MODULE_12__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../../back/src/public/styles/fonts.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../../back/src/public/styles/app.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../../back/src/public/styles/eventCalendar.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../../back/src/public/styles/smartphone.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../../back/src/public/styles/sidebar.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 // el inicio de la app
 
 
@@ -71983,19 +71788,15 @@ var sendEmailConfirm = function sendEmailConfirm(userData, allowanceName) {
 /*!***********************************************!*\
   !*** ./src/redux/actions/disciplineEvents.js ***!
   \***********************************************/
-/*! exports provided: receiveEventList, receiveActiveEvent, receiveTechList, createDisciplineEvents, fetchDisciplineEvents, fetchActiveEvent, editEventStatus, deleteEvent, fetchTechonogies */
+/*! exports provided: receiveEventList, receiveTechList, createDisciplineEvents, fetchDisciplineEvents, fetchTechonogies */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveEventList", function() { return receiveEventList; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveActiveEvent", function() { return receiveActiveEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveTechList", function() { return receiveTechList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDisciplineEvents", function() { return createDisciplineEvents; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDisciplineEvents", function() { return fetchDisciplineEvents; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchActiveEvent", function() { return fetchActiveEvent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editEventStatus", function() { return editEventStatus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteEvent", function() { return deleteEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTechonogies", function() { return fetchTechonogies; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
@@ -72006,12 +71807,6 @@ var receiveEventList = function receiveEventList(eventList) {
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_EVENT_LIST"],
     eventList: eventList
-  };
-};
-var receiveActiveEvent = function receiveActiveEvent(activeEvent) {
-  return {
-    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_ACTIVE_EVENT"],
-    activeEvent: activeEvent
   };
 };
 var receiveTechList = function receiveTechList(techList) {
@@ -72030,45 +71825,39 @@ var createDisciplineEvents = function createDisciplineEvents(data, user) {
     }); //retorno el axios y el el container, realizado el ingreso vuelvo a ejecutar el fetch
   };
 };
-var fetchDisciplineEvents = function fetchDisciplineEvents(userId, adminUrl) {
+var fetchDisciplineEvents = function fetchDisciplineEvents(userId) {
   return function (dispatch) {
+    // console.log("sou user IF", userId)
+    // if (userId) {
+    //   console.log("sou user", userId)
+    //   return axios
+    //     .get(`/api/disciplineEvent/:userId`, {
+    //       params: {
+    //         userId
+    //       }
+    //     })
+    //     .then(res => res.data)
+    //     .then(eventList => {
+    //       console.log("soy eventListAXIOS", eventList);
+    //       dispatch(receiveEventList(eventList));
+    //       return eventList;
+    //     });
+    // } else {
+    //   console.log("sou user ELSE", userId)
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/", {
       params: {
-        userId: userId,
-        adminUrl: adminUrl
+        userId: userId
       }
     }).then(function (res) {
       return res.data;
     }).then(function (eventList) {
+      console.log("soy eventListAXIOS", eventList);
       dispatch(receiveEventList(eventList));
       return eventList;
     });
   };
-};
-var fetchActiveEvent = function fetchActiveEvent(userId) {
-  return function (dispatch) {
-    console.log("entreee al axios", userId);
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/findActive/".concat(userId)).then(function (res) {
-      return res.data;
-    }).then(function (activeEvent) {
-      console.log("activeeeeee", activeEvent);
-      return dispatch(receiveActiveEvent(activeEvent));
-    });
-  };
-};
-var editEventStatus = function editEventStatus(id, status, observation) {
-  return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/disciplineEvent/".concat(id, "/edit"), {
-      status: status,
-      observation: observation
-    });
-  };
-};
-var deleteEvent = function deleteEvent(id) {
-  return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/disciplineEvent/".concat(id, "/delete"));
-  };
-};
+}; // };
+
 var fetchTechonogies = function fetchTechonogies() {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/technologies").then(function (res) {
@@ -72395,8 +72184,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = {
   eventList: [],
-  techList: [],
-  activeEvent: {}
+  techList: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -72411,11 +72199,6 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TECH_LIST"]:
       return _objectSpread({}, state, {
         techList: action.techList
-      });
-
-    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ACTIVE_EVENT"]:
-      return _objectSpread({}, state, {
-        activeEvent: action.activeEvent
       });
 
     default:

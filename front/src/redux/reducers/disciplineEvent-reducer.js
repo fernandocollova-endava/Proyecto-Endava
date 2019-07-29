@@ -1,8 +1,9 @@
-import { RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST} from "../../constants"
+import { RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, RECEIVE_ACTIVE_EVENT} from "../../constants"
 
 const initialState ={
   eventList: [],
-  techList:[]
+  techList:[],
+  activeEvent: {}
 
 }
 
@@ -17,7 +18,9 @@ switch(action.type){
     case RECEIVE_TECH_LIST:
      
      return {...state, techList:action.techList}
+    case RECEIVE_ACTIVE_EVENT:
 
+        return {...state, activeEvent:action.activeEvent}
     default:
       return state
 }

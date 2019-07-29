@@ -12,12 +12,10 @@ const {
 AllowanceDetail.belongsTo(Allowance, { as: "allowanceDetail" })
 AllowanceDetail.belongsTo(Employee, { as: "employeeDetail" })
 
-Employee.belongsToMany(DisciplineEvent, {
-  through: "employee-discipline",
-  as: "disciplineEvent"
-});
-DisciplineEvent.belongsToMany(Employee, {
-  through: "employee-discipline",
+// Employee.belongsTo(DisciplineEvent, {
+//   as: "disciplineEvent"
+// });
+DisciplineEvent.belongsTo(Employee, {
   as: "employee"
 });
 DisciplineEvent.belongsTo(Technologies, {as: "technologie"})
