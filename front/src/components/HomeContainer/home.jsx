@@ -9,9 +9,6 @@ const AnimationPage = ({ cardList }) => {
     <>
       <MDBAnimation type="fadeInUp">
         <CarouselPage />
-        {/* <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/Be-Connected/FinalImages/InnerComunities/Hero_Desktop_ICTHub.ashx"
-          className="img-fluid bannerAllowance"
-          alt="Imagen endava" /> */}
       </MDBAnimation>
      
       <MDBRow className="container-banner">
@@ -60,8 +57,8 @@ const AnimationPage = ({ cardList }) => {
                   </Link>
                 </div>
               </div>
-
               <span className="titleModule upperCaseFonts">New Allowance</span>
+              <span className="descriptionModule"> Aqui podrás cargar tus solicitudes.</span>
             </MDBCard>
             <br />
           </MDBAnimation>
@@ -89,7 +86,8 @@ const AnimationPage = ({ cardList }) => {
                 </div>
               </div>
 
-              <span className="titleModule upperCaseFonts">Healt Care</span>
+              <span className="titleModule upperCaseFonts">Health Care</span>
+              <span className="descriptionModule"> Aqui podrás cargar tus solicitudes.</span>
             </MDBCard>
             <br />
           </MDBAnimation>
@@ -118,6 +116,7 @@ const AnimationPage = ({ cardList }) => {
               </div>
 
               <span className="titleModule upperCaseFonts">Event Calendar</span>
+              <span className="descriptionModule"> Aqui podrás cargar tus solicitudes.</span>
             </MDBCard>
             <br />
           </MDBAnimation>
@@ -129,7 +128,7 @@ const AnimationPage = ({ cardList }) => {
             <MDBCard className="Card-Img">
               <div className="container-IMG" >
                 <div className="div-img" >
-                  <Link to={`/discipline-event/new`} >
+                  <Link to={`/home-office`} >
                     <div className="ajustImg">
                     <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Retail-Enhancing/650.ashx"
                       className="img-fluid margenBottomMobile img"
@@ -145,7 +144,8 @@ const AnimationPage = ({ cardList }) => {
                 </div>
               </div>
 
-              <span className="titleModule upperCaseFonts">Discipline Event</span>
+              <span className="titleModule upperCaseFonts">Home Office</span>
+              <span className="descriptionModule"> Aqui podrás cargar tus solicitudes.</span>
             </MDBCard>
             <br />
           </MDBAnimation>

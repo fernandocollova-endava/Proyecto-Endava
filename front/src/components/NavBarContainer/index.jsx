@@ -49,7 +49,7 @@ class Navbar extends Component {
         </MDBNavbarBrand>
         <MDBNavbarToggler right onClick={() => this.openNavbar()}>
           <MDBAnimation type="flipInY">
-            <img src={`/assets/img/profile/${this.props.user.avatar}`} className="float-left imgProfileNav" alt="Avatar profile"></img>
+            <img src={`/assets/img/profile/${this.props.avatar}`} className="float-left imgProfileNav" alt="Avatar profile"></img>
             <MDBIcon icon="bars" size="2x" />
           </MDBAnimation>
         </MDBNavbarToggler>
@@ -105,6 +105,7 @@ const mapStateToProps = function (state, own) {
     user: state.user.user,
     navWidth: state.nav.status,
     location: own.location.pathname,
+    avatar: state.user.avatar
   };
 };
 const mapDispatchToProps = dispatch => ({
