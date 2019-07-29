@@ -9,14 +9,14 @@ export default function rowAllowance({ deleteAllowance, viewDetails, allUser,
 
             <tbody>
                 {   
-                    allowanceList && allowanceList.map(row => (
-                        
-                        row.topic?
-                        <tr>   
-                            <td className="upperCaseFonts">{row.topic}</td>
-                            {/* <td className="upperCaseFonts">{row.employeeDetail.topic}</td> */}
-                            <td>{row.date}</td>
-                            <td>{row.time}</td>
+                    allowanceList && allowanceList.map((row,i) => (
+                        <tr key={i}>    
+                            <td key={`id_${i}`}className="upperCaseFonts">{row.allowanceDetail.name}</td>
+                            <td className="upperCaseFonts">{row.employeeDetail.name}</td>
+                            <td>{row.amount}</td>
+                            <td>{row.limitAmount}</td>
+                            <td>{row.employeeAmount}</td>
+                            {urlName =="book"?null:<td>{(row.paymentDate)}</td>}
                             <td><label className={row.status}>{row.status}</label></td>
                             <td>
                             {row.allowanceDetail?

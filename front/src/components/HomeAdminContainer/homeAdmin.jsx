@@ -17,14 +17,14 @@ const AnimationPage = ({ cardList }) => {
             <p className="title-container">
               <span className="titleMain upperCaseFonts"><i className="fas fa-tools"></i> ADMIN PANEL</span>
 
-              <MDBFormInline className="md-form">
+              <span className="form-inline md-form topMarginLine">
                 {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
                 
                 <span className="browser-default custom-select pRequest">
                   Hello! Please choose the option you want! :)
                 </span>
                 
-              </MDBFormInline>
+              </span>
             </p>
 
 

@@ -131,7 +131,8 @@ class AllowanceContainer extends React.Component {
             <p className=" title-container">
               <span className="titleMain upperCaseFonts">
               <i className="fas fa-file-invoice-dollar"></i> {`MANAGE YOUR ${this.props.nameUrl} ALLOWANCE.`}</span>
-              <MDBFormInline className="md-form topMarginLine">
+              
+              <span className="form-inline md-form topMarginLine">
                 {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
                 <Link className="browser-default custom-select newRequestBtn"
                   to="/allowance/gym"><i className="fas fa-plus-circle"></i> New Gym
@@ -150,7 +151,7 @@ class AllowanceContainer extends React.Component {
                 <Link className="browser-default custom-select newRequest"
                   to="/allowance/search"><i className="fas fa-chart-bar"></i> View my allowance
                 </Link>
-              </MDBFormInline>
+              </span>
             </p>
           </MDBCol>
 

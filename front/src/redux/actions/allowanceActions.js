@@ -157,7 +157,6 @@ export const fetchBookInstallments = (receiptPath, allowanceId) => dispatch => {
     .get(`/api/allowance/book/installments/${receiptPath}/${allowanceId}`)
     .then(res =>res.data)
     .then(bookInstallments => {
-      console.log("soy bookInstall", bookInstallments)
       dispatch(receiveBookInstallments(bookInstallments));
     });
 };

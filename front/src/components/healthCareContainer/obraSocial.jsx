@@ -5,7 +5,7 @@ import {
     MDBCardText, MDBCard, MDBCardImage, MDBRow, MDBInput, MDBFormInline
 } from 'mdbreact';
 
-export default function obraSocial({ toggleCollapse, collapseID, email }) {
+export default function obraSocial({ toggleCollapse, collapseID, email, formId, handleScrollToForm }) {
     return (
         <>
             <MDBContainer fluid>
@@ -14,14 +14,14 @@ export default function obraSocial({ toggleCollapse, collapseID, email }) {
                         <p className="upperCaseFonts title-container-fluid">
                             <span className="titleMain"><i className="fas fa-briefcase-medical"></i> HEALTH CARE</span>
 
-                            <MDBFormInline className="md-form topMarginLine">
+                            <span className="form-inline md-form topMarginLine">
                                 {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
-                                
-                                <Link className="browser-default custom-select newRequest"
-                                    to="/health-care/#form">
-                                    Send us your question
-                            </Link>
-                            </MDBFormInline>
+
+                                <button className="browser-default custom-select newRequest"
+                                    onClick={handleScrollToForm}>
+                                    <i className="fab fa-wpforms"></i> Go to the form
+                                </button>
+                            </span>
                         </p>
                     </MDBCol>
                 </MDBRow>
@@ -101,8 +101,7 @@ export default function obraSocial({ toggleCollapse, collapseID, email }) {
 
                 <MDBAnimation type="fadeInLeft">
                     <MDBRow>
-                        <MDBCol md="8" id="form">
-
+                        <MDBCol md="8" ref={formId}>
                             <strong > Send us your question</strong> <br />
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque odio enim ducimus blanditiis nulla reprehenderit ea nesciunt, ratione porro, tempora quas? Provident reprehenderit fuga numquam odit perspiciatis soluta, ipsum omnis?
                             <br />

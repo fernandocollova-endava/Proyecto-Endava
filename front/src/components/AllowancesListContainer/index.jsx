@@ -237,7 +237,6 @@ class AllowanceListContainer extends React.Component {
           msjSave: "Saved!"
         });
         var date = dateSetter()
-        console.log(this.state.date, "soy date del save")
         this.props.fetchAllowances(
           date,
           this.props.user.id,

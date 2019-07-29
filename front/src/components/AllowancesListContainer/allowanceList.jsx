@@ -31,7 +31,7 @@ export default function allowanceList({
             <p className="upperCaseFonts title-container">
               <span className="titleMain"><i className="fas fa-chart-bar"></i> MY ALLOWANCE</span>
 
-              <MDBFormInline className="md-form">
+              <span className="form-inline md-form topMarginLine">
                 {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
                 <select value={allowanceType} className="browser-default custom-select" name="allowance" onChange={handleClick}>
                   <option value="">Choose your allowance...</option>
@@ -59,21 +59,13 @@ export default function allowanceList({
                 to="/allowance/new-allowance">
                   + New Allowance
               </Link>
-              </MDBFormInline>
+              </span>
             </p>
 
 
 
           </MDBCol>
-          {/* <MDBCol md="2">
-
-          </MDBCol>
-          <MDBCol md="3">
-            <MDBFormInline className="md-form">
-              <MDBIcon icon="search" />
-              <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search" />
-            </MDBFormInline>
-          </MDBCol> */}
+          
         </MDBRow>
 
         <hr />
@@ -95,16 +87,15 @@ export default function allowanceList({
           <MDBCol md="12">
             <MDBAnimation type="fadeInUp">
               {(allowanceList.length == 0) ? <label>Sorry, there aren't results for your selection... <br /><br /></label> :
-                <div class="table-responsive">
-                  <table class="table btn-table table-fixed paddingTable">
-                    <thead class="">
+                <div className="table-responsive">
+                  <table className="table btn-table table-fixed paddingTable">
+                    <thead className="">
                       <tr>
                         <th>Type</th>
                         <th>Name</th>
                         <th>Amount</th>
                         <th>Limit</th>
                         <th>Emp. Amount</th>
-                        <th>Date</th>
                         <th>Date</th>
                         <th>Status</th>
                         <th>Info</th>

@@ -45,12 +45,12 @@ export const fetchDisciplineEvents = (userId, adminUrl) => dispatch => {
   
 };
 export const fetchActiveEvent = (userId) => dispatch => { 
-  console.log("entreee al axios", userId)
+  
 return axios
 .get(`/api/disciplineEvent/findActive/${userId}`)
 .then(res => res.data)
 .then(activeEvent => {
-  console.log("activeeeeee", activeEvent)
+
  return dispatch(receiveActiveEvent(activeEvent));
 });
 }
