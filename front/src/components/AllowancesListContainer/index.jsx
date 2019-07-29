@@ -132,12 +132,11 @@ class AllowanceListContainer extends React.Component {
       });
     } else {
       date = dateSetter(e.target.value)
-      console.log(date,"jj")
       this.setState({
         date: date
       });
     }
-    console.log(this.state.date)
+    
     this.props.fetchAllowances(
       date,
       this.props.user.id,
