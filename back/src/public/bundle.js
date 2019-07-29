@@ -68078,7 +68078,7 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "fas fa-angle-double-right"
   })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "titleModule upperCaseFonts"
-  }, "Healt Care")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+  }, "Health Care")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     delay: "".concat(3 * 100, "ms"),
