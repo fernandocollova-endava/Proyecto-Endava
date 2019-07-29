@@ -44,7 +44,6 @@ export const receiveHistoryAllowances = (historyAllowances) => {
 }
 export const receiveCurrentBookA = (currentBookAllowances) =>{
    
-  console.log("soy los currents antes de entrar al reducer", currentBookAllowances)
   return {
     type: RECEIVE_CURRENT_BOOK_A,
     currentBookAllowances
@@ -68,13 +67,15 @@ export const createAllowance = formData => dispatch => {
     }
   });
 };
-export const fetchAllowances = (month, userId, allowanceId, status, allUser) => dispatch => {
+export const fetchAllowances = (date, userId, allowanceId, status, allUser) => dispatch => {
+    
   return axios
     .get("/api/allowance/search", {
       params: {
-        month,
-        allowanceId: allowanceId,
-        userId: userId,
+        dateStart:date.start,
+        dateEnd:date.end,
+        allowanceId,
+        userId,
         status,
         allUser
       }

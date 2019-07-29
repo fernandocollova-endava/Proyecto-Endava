@@ -209,6 +209,16 @@ footer.page-footer .footer-copyright {
 -moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);
 box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);
 }
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 30px;
+    cursor: pointer;
+}
 .imgProfile:hover {
   -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);
 -moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);

@@ -13,22 +13,23 @@ router.get("/logout", function(req, res) {
 router.get("/logged", function(req, res, next) {
   res.send(req.user);
 });
+router.get("/password/profile/update",passport.authenticate("local"), function(req, res, error) {
+
+if(req.user){
+
+  Employee.findByPk(req.body.userId).then(employee => {
+    res.send(employee.updatePassword(req.body.password)); //llamo a un metodo de instancia presente en el modelo
+  })
+}else {
+  console.log("entre acaaaaaaaaaaa else")
+  res.sendStatus(401)}
+
+});
+
 router.post("/password/update", function(req, res, error) {
-  console.log("soy req body", req.body);
-  req.body.oldPass
-    ? Employee.findOne({
-        where: {
-          password: req.body.oldPass
-        }
-      }).then(passOk => {
-        console.log("soy passsOk", passOk);
-        Employee.findByPk(req.body.userId).then(employee => {
-          res.send(employee.updatePassword(req.body.password)); //llamo a un metodo de instancia presente en el modelo
-        });
-      })
-    : Employee.findByPk(req.body.userId).then(employee => {
-        res.send(employee.updatePassword(req.body.password));
-      });
+  Employee.findByPk(req.body.userId).then(employee => {
+    res.send(employee.updatePassword(req.body.password)); //llamo a un metodo de instancia presente en el modelo
+  });
 });
 
 module.exports = router;

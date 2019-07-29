@@ -16,7 +16,8 @@ export default function allowanceList({
   allowanceStatus,
   deleteAllowance,
   viewDetails,
-  allUser
+  allUser,
+  handleFilterPeriod
 }) {
   return (
     <>
@@ -48,13 +49,12 @@ export default function allowanceList({
                   <option value="approved">Approved</option>
                   <option value="rejected">Rejected</option>
                 </select>
-                <select value={allowanceStatus} className="browser-default custom-select" name="status" onChange={handleFilterStatus}>
-                  <option value="">Last movements...</option>
-                  <option value="1">Last 30 days</option>
-                  <option value="2">From 30 to 60 days</option>
-                  <option value="3">From 60 to 90 days</option>
-                  <option value="4">From 90 to 120 days</option>
-                </select>
+                <select className="browser-default custom-select" name="status" onChange={handleFilterPeriod}>
+                <option value="">Current month</option>
+                <option value="0">Last month</option>
+                <option value="1">Last two months</option>
+
+              </select>
                 <Link className="browser-default custom-select newRequest"
                 to="/allowance/new-allowance">
                   + New Allowance

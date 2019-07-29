@@ -1,5 +1,7 @@
 // VARIABLES CONSTRUCTORAS DE ENCABEZADO DE TABLA:
 // *ALLOWANCE
+const moment = require("moment");
+
 const columnsAllowance = [
   {
     label: "Type",
@@ -98,10 +100,39 @@ const columnsEvents = [
   }
 ];
 
+function dateSetter(value) {
+  if (value) {
+    var date = {
+      start: moment()
+        .startOf("month")
+        .subtract(value, "months")
+        .format("YYYY-MM-DD"),
+      end: moment()
+        .endOf("month")
+        .add(1, "months")
+        .format("YYYY-MM-DD")
+    };
+  } else {
+    var date = {
+      start: moment()
+        .startOf("month")
+        .add(1, "M")
+        .format("YYYY-MM-DD"),
+      end: moment()
+        .endOf("month")
+        .add(1, "M")
+        .format("YYYY-MM-DD")
+    };
+  }
+
+  return date;
+}
+
 module.exports = {
   columnsAllowance,
   columnsEvents,
-  columnsBook
+  columnsBook,
+  dateSetter
 };
 
 // (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(values.email)
