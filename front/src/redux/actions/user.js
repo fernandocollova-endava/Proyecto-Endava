@@ -40,14 +40,26 @@ export const logout = () => dispatch => {
     });
 };
 export const updatePass = (password, userId, oldPass) => dispatch => {
-  
-  return axios
-    .post("/api/employee/password/update", {password:password, userId:userId, oldPass:oldPass})
+  if(oldPass){
+    console.log("hay oldPass", oldPass)
+    return axios
+      .post("/api/employee/password/profile/update", {password:password, userId:userId, oldPass:oldPass})
+      .then(res => res.data)
+      .then(passConfirm =>{
+        return passConfirm
+      })
+      .catch(error=>console.log(error))
+   
+  } else{
+    return axios
+    .post("/api/employee/password/update", {password:password, userId:userId})
     .then(res => res.data)
     .then(passConfirm =>{
       return passConfirm
     })
     .catch(error=>console.log(error))
+    
+  }
 
 };
 

@@ -5,7 +5,7 @@ export default function rowAllowance({ deleteAllowance, viewDetails, allUser,
     let Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     return (
         <>
-        {console.log("soy los books del roow", allowanceList)}
+        {/* {console.log("soy los books del roow", allowanceList)} */}
             <tbody>
                 {   
                     allowanceList && allowanceList.map(row => (
