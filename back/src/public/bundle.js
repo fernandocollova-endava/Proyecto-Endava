@@ -2543,7 +2543,7 @@ module.exports = exports['default'];
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n\n\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-grey:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md {\n  background-color: #9bb4be !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #9bb4be !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.titleModule {\n    text-align: center;\n    font-size: 22px;\n    padding-bottom: 15px;\n    margin-top:-40px;\n    font-family: robotobold;  \n}\n\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}\n\n /* === CALENDAR === */\n .bg-info {\n  background-color: #17a2b8!important;\n}\n.viewEvent {\n  font-size: 12px;\n  background-color: #DE411B;\n  color: white;\n  border-radius: 8px;\n  margin-bottom: 0px;\n  margin-top: 2px;\n  border: 1px solid white;\n}\n.classDay {\n  font-size: 20px;\n  padding: 4px 11px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n.classToday {\n  font-size: 20px;\n  background-color: #d8d8e8;\n  padding: 10px 11px;\n  margin: 0 35px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n#calendar-body > tr {\n  height: 136px;\n}\n#calendar-body td:hover {\n  background-color: #f0f3f3;\n  cursor:pointer;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n.viewHB {\n    background: url(\"/assets/img/backgroundHB.png\") no-repeat center;\n   -webkit-background-size: cover;\n   -moz-background-size: cover;\n   -o-background-size: cover;\n   background-size: cover;\n   max-width: 100% ;\n   text-align: center;\n}\n.textCenter {\n  text-align: center;\n}\n.showHomeOffice {\n  width: 90px;\n  font-size: 10px;\n  padding: 2px 7px;\n  border-radius: 0px !important;\n  margin-left: 2px;\n  min-height: 43px;\n}\n.itemName {\n  font-size: 14px;\n  padding: 0px;\n  margin: 0px;\n  margin-left: 16px;\n}\n.divListAllowance {\n  min-height: 144px;\n  overflow: auto;\n}\n.hiddenDiv{\n  display: none;\n}", ""]);
+exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    font-family: robotoregular,Arial,sans-serif;\n}\n.container-banner {\n    margin-right: 10px; \n    margin-left: 10px;   \n}\n.title-container-fluid {\n  background-color: #F0f3f3;\n  border: 1px solid #dbdbdb;\n  padding: 6px;\n  margin: -20px -36px;\n  border-radius: 5px;\n}\n.topMarginLine {\n  /* position: relative; */\n  margin-top: 3px !important;\n  /* margin-bottom: 1px; */\n}\n /* LOGIN  */\n /* ============================ */\n.imageLogin {\n  background-image: url('/assets/img/PeopleSocializing_min.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n    width: 100%; \n    height: 100vh;\n    margin-top: -110px;\n    /* filter: grayscale(90%); */\n}\n\n.grey-text{\n  padding: 0 30px; \n}\n\ntable.table td {\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n}\n.md-form .prefix {\n  top: 0.75rem;\n  font-size: 1.75rem;\n}\n\n/* FONTS */\n/* ======================================= */\n.eventFont{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 10px;\n\n}\n.tittleModalUser{\n  font-family: roboto_condensedbold,Arial,sans-serif;\n  font-size: 26px;\n  display: block\n}\n.emailModalUser{\n  font-family: robotolight,Arial,sans-serif;\n  font-size: 16px;\n  color:#233237;\n  position: relative;\n  top: -5px;\n  margin-left: 21 px\n}\n.upperCaseFonts {\n  text-transform: uppercase;\n}\n.fontLigth {\n  font-family: robotolight,Arial,sans-serif;\n  color: #000;\n  margin-top: 10px;\n}\n.marginTextLeft  {\n  margin-left: 50px;\n}\n.blue {\n  background-color: #285078 !important\n}\n.iconAllowance {\n  font-size: 20px;\n}\n.iconAllowance:hover {\n  cursor:pointer;\n}\n.textBold {\n  font-weight: 900;\n  font-size: 16px;\n}\n.textForm {\n  font-size: 15px;\n  color: #48545B\n}\n.textAlert {\n  font-size: 13px;\n}\n.fontEmphasis {\n  font-size: 26px;\n  color: #de411b;\n}\n.capitalizeName{\n  text-transform: capitalize;\n}\n.strongEmphasis {\n  font-size: 20px;\n  font-weight: 900;\n}\n.maxAmount {\n  font-size: 14px;\n  color: #48545B;\n  text-align: center;\n  margin-top: 5px;\n  display: block;\n}\n.greyColor {\n  color: #233237\n}\n.greyColor:hover {  \n  color: #48545B\n}\n\n.redColor {\n  color: #c31900\n}\n.redColor:hover {\n  color: #ec6861\n}\n\n.greenColor {\n  color: #28a745\n}\n.greenColor:hover {\n  color: #16cc40\n}\n.iconAvatar {\n  font-size: 22px;\n  margin-right: 7px;\n}\n/* TABLA  */\n/* ========================================== */\ntable.table th {\n  width: 108px;\n  text-align: center;\n  font-weight: bold;\n  font-family: roboto_condensedbold,Arial,sans-serif;\n}\ntable.table td {\n  padding: 0px !important;\n  text-align: center;\n}\n.widthTable {\n  width: 95%\n}\n.whiteBorder{\n  border: 1px solid white !important\n}\n/* GENERAL  */\n/* ========================================== */\n.separationClass {\n  margin-top: -7px;\n    margin-bottom: 2px;\n    border-bottom: 2px solid #f7a1a1;\n}\n.title-container {\n  background-color: #F0f3f3;\n  border: 1px solid #dbdbdb;\n  padding: 6px;\n  margin: -20px -18px;\n  border-radius: 5px;\n}\n.md-form {\n  position: relative;\n  margin-top: 3px;\n  margin-bottom: 1px;\n}\nfooter.page-footer {\n  bottom: -30px;\n  position: fixed;\n  width: 100%;\n}\nfooter.page-footer .footer-copyright {\n  margin-top: -20px;\n}\n.newRequest {\n  padding: .375rem .75rem .375rem .75rem;\n  background: none;\n  position: absolute;\n  right: 0px;\n  background-color: #fff;\n  border: 1px solid #ced4da;\n}\n.fontDiscipline {\n  font-size: 15px;\n}\n.imgStyle {\n  object-fit: cover;\n    min-height: 192px;\n    max-height: 100%;\n    background-color: grey;\n    width: 100%;\n    border-radius: 10px;\n}\n.imgProfile {\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid #9bb4be;\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n-moz-box-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\nbox-shadow: -1px 3px 23px -5px rgba(0,0,0,0.75);\n}\n.image-upload > input\n{\n    display: none;\n}\n\n.image-upload img\n{\n    width: 30px;\n    cursor: pointer;\n}\n.imgProfile:hover {\n  -webkit-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n-moz-box-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\nbox-shadow: -1px 3px 23px -5px rgba(232,60,232,1);\n}\n.iconEditImg{\n  /* con position absolute defino la posicion, en relacion al padre */\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    background-color: #ffaba6;\n    padding: 11px 16px;\n    border-radius: 5px;\n    border: 1px solid #ababab;\n}\n.iconEditImg:hover {\n  background-color: #ffe6e5;\n  cursor:pointer;\n}\n.parrafoModal {\n  margin-top:-10px;\n}\n.btnModalB {\n  padding: 12px 29px;\n  cursor:pointer;\n}\n.minHeight {\n  min-height: 240px;\n}\n.custom-select, .cursorPointer {\n  cursor:pointer;\n}\n.pending {\n  background-color: #9BB4BE !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    min-width: 100px;\n    border: solid 1px #9BB4BE !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.approved {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.rejected {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.3rem 0.54rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.rejectedBook {\n  background-color: #c31900 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 70px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.10rem 0.29rem;\n    font-size: 0.81rem;\n    border: solid 1px #c31900 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.approvedBook {\n  background-color: #0AC3E6 !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    min-width: 100px;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 12 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.10rem 0.29rem;\n    font-size: 0.81rem;\n    border: solid 1px #0AC3E6 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n\n.btnAllowance {\n  margin-top: -50px;\n}\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-red:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md:hover{\n  background-color: #c73a1d !important;\n}\n.btnEv-red-md {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n\n.btnEv-blue {\n  background-color: #379BD7!important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #379BD7 !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-blue:hover{\n  background-color: #285078 !important;\n}\n\n.btnEv-Transparent {\n  background-color: transparent!important;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: none;\n    padding: 0.1px 2.14rem;\n    font-size: 0.81rem;\n    border: none;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n    border-bottom: 1px solid #ced4da;\n}\n.btnEv-Transparent:hover{\n  border-bottom: 1px solid #379BD7;\n}\n\n\n.btnEv-red {\n  background-color: #DE411B !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.84rem 2.14rem;\n    font-size: 0.81rem;\n    border:solid 1px #DE411B !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.btnEv-grey:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md:hover{\n  background-color: #f0f3f3 !important;\n}\n.btnEv-grey-md {\n  background-color: #9bb4be !important;\n    color: white;\n    text-transform: uppercase;\n    font-weight: bold;\n    font-family: roboto_condensedbold,Arial,sans-serif;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    padding: 0.94rem 0.5rem;\n    font-size: 0.81rem;\n    border: solid 1px #9bb4be !important;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    border-radius: 5px !important;\n}\n.titleModule {\n  text-align: center;\n  font-size: 22px;\n  padding-bottom: 15px;\n  margin-top:-40px;\n  font-family: robotobold;  \n}\n.card {\n  background-color: #fdfdfd;\n}\n\n.transparenciaCard {\n    background-color: #ffffffcf;\n}\n.card:hover{\n  color:#48584B;\n  box-shadow: 0 2px 5px 0 rgba(37, 16, 16, 0.568), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n}\n.bannerAllowance{\n  margin-top: -70px;\n  margin-bottom: 10px;\n}\n.btnModule {\n    padding-bottom: 15px;\n    width: 80px;\n    border-radius: 10em;\n}\n\n.marginDemo {\n    margin-top:10px;\n}\n.TextParrafo {\n    text-align: left;\n    font-family: robotolight,Arial,sans-serif;\n}\n \n/* === MENU  === */\n  /* ========================================= */\n \n.navbar {\n    box-shadow:none;\n    margin-bottom: 10px;\n    background-color: rgba(250, 250, 250, 0.9);\n}\n.logo {\n    padding-left: 36px;\n    width: 182px;\n}\n.logoLogin{\n  width: 182px;\n}\n.nav-item:hover {\n    background-color: #ececec;\n    /* transition: all 0.05s ease-in-out */\n}\n\n.transparentMenu {\n  height: 1000px;\n  max-height: 100%;\n  background-color: #9e9e9e0a;\n}\n\n\n  /* === FICHA EFECT IMG + TEXT === */\n  /* ========================================= */\n  .Card-Img {\n    z-index: -2;\n    min-height: 396px;\n  }\n  .ajustImg {\n    min-height: 188px;\n  }\n  .container-IMG {\n    position: relative;\n    width: 100%;\n    padding: 10px;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    \n  }\n  .div-img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 0;\n  }\n  .div-img .img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 100%;\n    object-fit: cover;\n    min-height: 264px;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img .text {\n    /* font-family: 'Open Sans'; */\n    position: relative;\n    z-index: -1;\n    bottom: 72px;\n    width: 45%;\n    font-size: 1vw;\n    display: block;\n    text-align: center;\n    transform: translate(0px, 0px) scale(1);\n    -webkit-transform: translate(0px, 0px) scale(1);\n    -moz-transform: translate(0px, 0px) scale(1);\n    -o-transform: translate(0px, 0px) scale(1);\n    -ms-transform: translate(0px, 0px) scale(1);\n    -webkit-transition: all 500ms ease-in-out;\n    -moz-transition: all 500ms ease-in-out;\n    -ms-transition: all 500ms ease-in-out;\n    -o-transition: all 500ms ease-in-out;\n  }\n  .div-img:hover .img {\n    transform: translate(0px, -30px) scale(0.5);\n    -webkit-transform: translate(0px, -30px) scale(0.5);\n    -moz-transform: translate(0px, -30px) scale(0.5);\n    -o-transform: translate(0px, -30px) scale(0.5);\n    -ms-transform: translate(0px, -30px) scale(0.5);\n    border-radius: 50%;\n  }\n.radioBoton {\n  margin-bottom: 28px;\n  font-size: 18px;\n  margin-left: 10px;\n  cursor:pointer\n}\n.whiteFont {\n  color:white !important;\n}\n.whiteFont:hover {\n  color:white !important;\n}\n\n /* === CALENDAR === */\n .bg-info {\n  background-color: #17a2b8!important;\n}\n.viewEvent {\n  font-size: 12px;\n  background-color: #DE411B;\n  color: white;\n  border-radius: 8px;\n  margin-bottom: 0px;\n  margin-top: 2px;\n  border: 1px solid white;\n}\n.classDay {\n  font-size: 20px;\n  padding: 4px 11px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n.classToday {\n  font-size: 20px;\n  background-color: #d8d8e8;\n  padding: 10px 11px;\n  margin: 0 35px;\n  border-radius: 50%;\n  margin-top: 15px;\n  display: block;\n}\n#calendar-body > tr {\n  height: 136px;\n}\n#calendar-body td:hover {\n  background-color: #f0f3f3;\n  cursor:pointer;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n.viewHB {\n    background: url(\"/assets/img/backgroundHB.png\") no-repeat center;\n   -webkit-background-size: cover;\n   -moz-background-size: cover;\n   -o-background-size: cover;\n   background-size: cover;\n   max-width: 100% ;\n   text-align: center;\n}\n.textCenter {\n  text-align: center;\n}\n.showHomeOffice {\n  width: 90px;\n  font-size: 10px;\n  padding: 2px 7px;\n  border-radius: 0px !important;\n  margin-left: 2px;\n  min-height: 43px;\n}\n.itemName {\n  font-size: 14px;\n  padding: 0px;\n  margin: 0px;\n  margin-left: 16px;\n}\n.divListAllowance {\n  min-height: 144px;\n  overflow: auto;\n}\n.hiddenDiv{\n  display: none;\n}\n.card-header {\n  background-color: #285078;\n  color: white;\n  border-bottom: 2px solid rgba(254, 254, 254, 1);\n}\n\n\n.pRequest {\n    padding: 0;\n    background: none;\n    position: static;\n    right: 0;\n    height: 17px;\n    font-size: 15px;\n    margin-left: 27px;\n    background-color: #fcfcfc26;\n    border: none;\n}\n.newRequestBtn {\n  padding: .375rem .75rem .375rem .75rem;\n    background: none;\n    background-color: #fff;\n    border: 1px solid #ced4da;\n}", ""]);
 
 
 /***/ }),
@@ -2557,7 +2557,7 @@ exports.push([module.i, "/* Ajustes CSS */\nbody {\n    margin-top: 100px;\n    
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".timeline{\n  --uiTimelineMainColor: var(--timelineMainColor, #222);\n  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);\n\n  position: relative;\n  padding-top: 3rem;\n  padding-bottom: 3rem;\n}\n\n.timeline:before{\n  content: \"\";\n  width: 4px;\n  height: 100%;\n  background-color: var(--uiTimelineMainColor);\n\n  position: absolute;\n  top: 0;\n}\n\n.timeline__group{\n  position: relative;\n}\n\n.timeline__group:not(:first-of-type){\n  margin-top: 4rem;\n}\n\n.timeline__year{\n  padding: .5rem 1.5rem;\n  color: var(--uiTimelineSecondaryColor);\n  background-color: var(--uiTimelineMainColor);\n\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n\n.timeline__box{\n  position: relative;\n}\n\n.timeline__box:not(:last-of-type){\n  margin-bottom: 30px;\n}\n\n.timeline__box:before{\n  content: \"\";\n  width: 100%;\n  height: 2px;\n  background-color: var(--uiTimelineMainColor);\n\n  position: absolute;\n  left: 0;\n  z-index: -1;\n}\n\n.timeline__date{\n  min-width: 65px;\n  position: absolute;\n  left: 0;\n\n  box-sizing: border-box;\n  padding: .5rem 1.5rem;\n  text-align: center;\n\n  background-color: var(--uiTimelineMainColor);\n  color: var(--uiTimelineSecondaryColor);\n}\n\n.timeline__day{\n  font-size: 2rem;\n  font-weight: 700;\n  display: block;\n}\n\n.timeline__month{\n  display: block;\n  font-size: .8em;\n  text-transform: uppercase;\n}\n\n.timeline__post{\n  padding: 1.5rem 2rem;\n  border-radius: 2px;\n  border-left: 3px solid var(--uiTimelineMainColor);\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);\n  background-color: var(--uiTimelineSecondaryColor);\n}\n\n@media screen and (min-width: 641px){\n\n  .timeline:before{\n    left: 30px;\n  }\n\n  .timeline__group{\n    padding-top: 55px;\n  }\n\n  .timeline__box{\n    padding-left: 80px;\n  }\n\n  .timeline__box:before{\n    top: 50%;\n    transform: translateY(-50%);  \n  }  \n\n  .timeline__date{\n    top: 50%;\n    margin-top: -27px;\n  }\n}\n\n@media screen and (max-width: 640px){\n\n  .timeline:before{\n    left: 0;\n  }\n\n  .timeline__group{\n    padding-top: 40px;\n  }\n\n  .timeline__box{\n    padding-left: 20px;\n    padding-top: 70px;\n  }\n\n  .timeline__box:before{\n    top: 90px;\n  }    \n\n  .timeline__date{\n    top: 0;\n  }\n}\n\n.timeline{\n  --timelineMainColor: #4557bb;\n  font-size: 16px;\n}\n\n\n\np{\n  margin-top: 0;\n  margin-bottom: 1.5rem;\n  line-height: 1.5;\n}\n\np:last-child{\n  margin-bottom: 0;\n}\n\n.page{\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.page__demo{\n  flex-grow: 1;\n}\n\n.main-container{\n  max-width: 960px;\n  padding-left: 2rem;\n  padding-right: 2rem;\n\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.page__container{\n  padding-top: 30px;\n  padding-bottom: 30px;\n  max-width: 800px;\n}\n\n@media screen and (min-width: 361px){\n \n  .footer__container{\n    display: flex;\n    justify-content: space-between;\n  }\n}\n\n@media screen and (max-width: 360px){\n\n  .melnik909{\n    display: none;\n  } \n}", ""]);
+exports.push([module.i, ".timeline{\n  --uiTimelineMainColor: var(--timelineMainColor, #222);\n  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);\n  position: relative;\n  padding-top: 3rem;\n  padding-bottom: 3rem;\n  margin: -32px;\n}\n.imgCalendar {\n  float: right;\n  padding: 10px;\n}\n.textJustify {\n  text-align: justify\n}\n.timeline:before{\n  content: \"\";\n  width: 4px;\n  height: 100%;\n  background-color: var(--uiTimelineMainColor);\n\n  position: absolute;\n  top: 0;\n}\n\n.timeline__group{\n  position: relative;\n}\n\n.timeline__group:not(:first-of-type){\n  margin-top: 4rem;\n}\n\n.timeline__year{\n  padding: .5rem 1.5rem;\n  color: var(--uiTimelineSecondaryColor);\n  background-color: var(--uiTimelineMainColor);\n  position: absolute;\n  left: 0;\n  top: 0;\n  background-color: #353d73;\n  width: 120px;\n  font-size: 18px;\n  font-weight: bold;\n}\n\n\n.timeline__box{\n  position: relative;\n}\n\n.timeline__box:not(:last-of-type){\n  margin-bottom: 30px;\n}\n\n.timeline__box:before{\n  content: \"\";\n  width: 100%;\n  height: 2px;\n  background-color: var(--uiTimelineMainColor);\n\n  position: absolute;\n  left: 0;\n  z-index: -1;\n}\n\n.timeline__date{\n  min-width: 65px;\n  position: absolute;\n  left: 0;\n\n  box-sizing: border-box;\n  padding: .5rem 1.5rem;\n  text-align: center;\n\n  background-color: var(--uiTimelineMainColor);\n  color: var(--uiTimelineSecondaryColor);\n}\n\n.timeline__day{\n  font-size: 2rem;\n  font-weight: 700;\n  display: block;\n}\n\n.timeline__month{\n  display: block;\n  font-size: .8em;\n  text-transform: uppercase;\n}\n.hrEvent {\n  margin-top: 0;\n  margin-bottom: 8px;\n}\n.timeline__post{\n  padding: 1.5rem 2rem;\n  border-radius: 2px;\n  border-left: 3px solid var(--uiTimelineMainColor);\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);\n  background-color: var(--uiTimelineSecondaryColor);\n  min-height: 216px;\n}\n\n@media screen and (min-width: 641px){\n/* Desk */\n  .timeline:before{\n    left: 30px;\n  }\n\n  .timeline__group{\n    padding-top: 55px;\n  }\n\n  .timeline__box{\n    padding-left: 95px;\n    \n  }\n\n  .timeline__box:before{\n    top: 50%;\n    transform: translateY(-50%);  \n  }  \n\n  .timeline__date{\n    top: 50%;\n    margin-top: -27px;\n  }\n}\n\n@media screen and (max-width: 640px){\n  /* mobile */\n  .timeline:before{\n    left: 0;\n  }\n\n  .timeline__group{\n    padding-top: 40px;\n  }\n\n  .timeline__box{\n    padding-left: 20px;\n    padding-top: 70px;\n  }\n\n  .timeline__box:before{\n    top: 95px;\n  }    \n\n  .timeline__date{\n    top: 0;\n  }\n}\n\n.timeline{\n  --timelineMainColor: #4557bb;\n  font-size: 16px;\n}\n\n\n\np{\n  margin-top: 0;\n  margin-bottom: 1.5rem;\n  line-height: 1.5;\n}\n\np:last-child{\n  margin-bottom: 0;\n}\n\n.page{\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.page__demo{\n  flex-grow: 1;\n}\n\n.main-container{\n  max-width: 960px;\n  padding-left: 2rem;\n  padding-right: 2rem;\n\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.page__container{\n  padding-top: 30px;\n  padding-bottom: 30px;\n  max-width: 800px;\n}\n\n@media screen and (min-width: 361px){\n \n  .footer__container{\n    display: flex;\n    justify-content: space-between;\n  }\n}\n\n@media screen and (max-width: 360px){\n\n  .melnik909{\n    display: none;\n  } \n}", ""]);
 
 
 /***/ }),
@@ -2599,7 +2599,7 @@ exports.push([module.i, "/* The side navigation menu */\n.sidenav {\n    height:
 
 exports = module.exports = __webpack_require__(/*! ../../../../front/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n    .bannerAllowance{\n        margin-top: -30px;        \n    }\n    .HideMobile {\n        display: none;\n    }\n\n\n    /* == CALENDARIO == */\n    .classDay {\n        font-size: 20px;\n        padding: 4px 11px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .classToday {\n        font-size: 20px;\n        background-color: #d8d8e8;\n        padding: 10px 11px;\n        margin: 0 5px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .timeline__year{\n        margin-bottom: 50px\n    }\n}\n", ""]);
+exports.push([module.i, "@media screen and (max-device-width : 480px) {\n    .logo {\n        padding-left: 2px;\n        width: 122px;\n    }\n    .container-banner {\n        margin-right: 5px; \n        margin-left: 5px;   \n    }\n    .margenBottomMobile {\n        margin-bottom: 15px;\n    }\n    .marginDemo {\n        margin-top:4px;\n    }\n    .btnModule {\n        margin-top:-35px;\n    }\n    .titleModule {\n        padding-bottom: 15px;\n        margin-top:-30px;\n    }\n    .imageLogin {\n        background-image: url('/assets/img/PeopleSocializing_min.jpg');\n    }\n    .div-img .text {\n        font-size: 2.6vw;\n      }\n\n    .grey-text{\n        padding: 0 10px; \n    }\n      .maxHeigthNav{\n        max-height: none;\n    }\n    .widthTable {\n        width: 100%\n    }\n    .bannerAllowance{\n        margin-top: -30px;        \n    }\n    .HideMobile {\n        display: none;\n    }\n\n\n    /* == CALENDARIO == */\n    .classDay {\n        font-size: 20px;\n        padding: 4px 11px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .classToday {\n        font-size: 20px;\n        background-color: #d8d8e8;\n        padding: 10px 11px;\n        margin: 0 5px;\n        border-radius: 50%;\n        margin-top: 5px;\n        display: block;\n      }\n      .timeline__year{\n        margin-bottom: 50px\n    }\n    .topMarginLine {\n        /* position: relative; */\n        margin-top: 18px !important;\n        /* margin-bottom: 1px; */\n    }\n    .newRequest {\n        position: relative;\n    }\n}\n", ""]);
 
 
 /***/ }),
@@ -58060,7 +58060,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65453,10 +65453,12 @@ module.exports = function(module) {
   !*** ./src/auxFunctions/auxFunctions.js ***!
   \******************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 // VARIABLES CONSTRUCTORAS DE ENCABEZADO DE TABLA:
 // *ALLOWANCE
+var moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+
 var columnsAllowance = [{
   label: "Type",
   field: "type"
@@ -65528,10 +65530,28 @@ var columnsEvents = [{
   label: "Time",
   field: "time"
 }];
+
+function dateSetter(value) {
+  if (value) {
+    var date = {
+      start: moment().startOf("month").subtract(value, "months").format("YYYY-MM-DD"),
+      end: moment().endOf("month").add(1, "months").format("YYYY-MM-DD")
+    };
+  } else {
+    var date = {
+      start: moment().startOf("month").add(1, "M").format("YYYY-MM-DD"),
+      end: moment().endOf("month").add(1, "M").format("YYYY-MM-DD")
+    };
+  }
+
+  return date;
+}
+
 module.exports = {
   columnsAllowance: columnsAllowance,
   columnsEvents: columnsEvents,
-  columnsBook: columnsBook
+  columnsBook: columnsBook,
+  dateSetter: dateSetter
 }; // (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(values.email)
 
 /***/ }),
@@ -65545,20 +65565,26 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return allowanceList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return adminBook; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AllowancesListContainer/rowAllowance */ "./src/components/AllowancesListContainer/rowAllowance.jsx");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
-function allowanceList(_ref) {
+
+function adminBook(_ref) {
   var handleFilterStatus = _ref.handleFilterStatus,
       alertPending = _ref.alertPending,
       bookAllowances = _ref.bookAllowances,
-      allowanceStatus = _ref.allowanceStatus;
+      allowanceStatus = _ref.allowanceStatus,
+      deleteAllowance = _ref.deleteAllowance,
+      viewDetails = _ref.viewDetails,
+      allUser = _ref.allUser,
+      urlName = _ref.urlName;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -65615,23 +65641,23 @@ function allowanceList(_ref) {
     md: "12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
-  }, bookAllowances.length === 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTable"], {
-    btn: true,
-    fixed: true,
-    responsive: true,
-    className: "paddingTable"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableHead"], {
-    columns: _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__["columnsBook"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTableBody"], {
-    rows: {
-      // name:bookAllowances.employeeDetail.name,
-      amount: bookAllowances.amount,
-      employeeAmount: bookAllowances.employeeAmount,
-      installments: bookAllowances.installments,
-      receiptPath: bookAllowances.receiptPath,
-      status: bookAllowances.status
-    }
-  })))))));
+  }, bookAllowances.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    "class": "table btn-table table-fixed paddingTable"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
+    "class": ""
+  }, urlName == "book" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    urlName: urlName,
+    deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
+    ,
+    viewDetails: viewDetails // Se envia la funcion para mostrar el modal (onClick)
+    ,
+    allUser: allUser // Si es admin o no
+    ,
+    allowanceList: bookAllowances // Listado de la consulta
+
+  }))))))));
 }
 
 /***/ }),
@@ -65648,12 +65674,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
-/* harmony import */ var _AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../AdminBookContainer/adminBook */ "./src/components/AdminBookContainer/adminBook.jsx");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_ModalBookDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/ModalBookDetail */ "./src/components/ModalContainer/ModalBookDetail.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
+/* harmony import */ var _AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AdminBookContainer/adminBook */ "./src/components/AdminBookContainer/adminBook.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65681,6 +65709,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var AdminBookContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -65698,12 +65727,13 @@ function (_React$Component) {
       modalBoolean: false,
       activeAllowance: {},
       history: [],
-      activeItem: '1',
-      allowanceType: '',
-      titleBoolean: '',
-      msjSave: '',
-      allowanceStatus: '',
-      alertPending: 0
+      activeItem: "1",
+      allowanceType: "book",
+      titleBoolean: "",
+      msjSave: "",
+      allowanceStatus: "",
+      alertPending: 0,
+      selectedMonth: 0
     };
     _this.toggleDetails = _this.toggleDetails.bind(_assertThisInitialized(_this));
     _this.toggleBoolean = _this.toggleBoolean.bind(_assertThisInitialized(_this));
@@ -65712,6 +65742,7 @@ function (_React$Component) {
     _this.toggleAviso = _this.toggleAviso.bind(_assertThisInitialized(_this));
     _this.deleteAllowance = _this.deleteAllowance.bind(_assertThisInitialized(_this));
     _this.actionOk = _this.actionOk.bind(_assertThisInitialized(_this));
+    _this.handleFilterStatus = _this.handleFilterStatus.bind(_assertThisInitialized(_this));
     _this.handleSaveConfirm = _this.handleSaveConfirm.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -65721,61 +65752,53 @@ function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      this.props.fetchBookAllowances();
-      this.props.openCloseNavBar(false); // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
+      this.props.openCloseNavBar(false);
+      var selectedMonth = moment__WEBPACK_IMPORTED_MODULE_2___default()().month() + 2;
+      this.props.fetchCurrentBookA(selectedMonth, this.props.adminPath, this.props.user.id);
+      this.setState({
+        selectedMonth: selectedMonth
+      }, function () {
+        _this2.props.fetchCurrentBookA(_this2.state.selectedMonth, _this2.props.adminPath, _this2.props.user.id); // this.props.fetchBookAllowances();
 
-      if (this.props.user.isAdmin && this.props.allUser) {
-        this.props.fetchCountPending(this.props.user.id).then(function (count) {
-          _this2.setState({
-            alertPending: count.data
-          }); // Guarda cantidad de pendientes 
-
-        });
-      }
+      });
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       var _this3 = this;
 
-      if (prevProps.allUser !== this.props.allUser) {
-        this.setState({
-          alertPending: 0,
-          // Resetea el estado a cero
-          allowanceType: '',
-          // Resetea el select de type
-          allowanceStatus: '' // Resetea el select de Status
-
-        }, function () {
-          _this3.props.fetchAllowances(_this3.props.user.id, _this3.state.allowanceType, _this3.state.allowanceStatus, _this3.props.allUser);
-        }); // Si es admin y si esta en la ruta panel consulta la cantidad..
-
-        if (this.props.user.isAdmin && this.props.allUser) {
-          this.props.fetchCountPending(this.props.user.id).then(function (count) {
-            _this3.setState({
-              alertPending: count.data
-            }); // Guarda cantidad de pendientes para alert al admin
-
-          });
-        }
+      if (prevProps.adminPath !== this.props.adminPath) {
+        this.props.fetchCurrentBookA(this.state.selectedMonth, this.props.adminPath, this.props.user.id).then(function () {
+          return _this3.props.fetchBookAllowances(_this3.props.user.id, _this3.props.adminPath);
+        });
       }
     } // FUNCION DE CONSULTA HISTORIAL / DETALLE
 
   }, {
     key: "viewDetails",
-    value: function viewDetails(id, allowanceId) {
+    value: function viewDetails(id, allowanceId, receiptPath) {
       var _this4 = this;
 
       this.props.fetchAllowanceActive(id).then(function (data) {
-        var idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
-
-        _this4.props.fetchAllowanceHistory(idUserHistory, allowanceId).then(function () {
+        // let idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
+        _this4.props.fetchBookInstallments(receiptPath, allowanceId).then(function () {
           _this4.setState({
             modal: true
           });
         });
       });
-    } // TOGGLE MODAL HISTORIAL / DETALLE
+    }
+  }, {
+    key: "handleFilterStatus",
+    value: function handleFilterStatus(e) {
+      this.props.fetchCurrentBookA(this.state.selectedMonth, this.props.adminPath, this.props.user.id);
+      this.setState({
+        allowanceStatus: e.target.value
+      });
+    }
+  }, {
+    key: "handMonthChange",
+    value: function handMonthChange(e) {} // TOGGLE MODAL HISTORIAL / DETALLE
 
   }, {
     key: "toggleDetails",
@@ -65783,7 +65806,7 @@ function (_React$Component) {
       this.setState({
         modal: !this.state.modal,
         activeItem: "1",
-        msjSave: ''
+        msjSave: ""
       });
     } // TOGGLE MODAL AVISO
 
@@ -65792,7 +65815,7 @@ function (_React$Component) {
     value: function toggleAviso() {
       this.setState({
         modalAviso: !this.state.modalAviso,
-        msjSave: ''
+        msjSave: ""
       });
     } // TOGGLE MODAL BOOLEAN
 
@@ -65837,7 +65860,9 @@ function (_React$Component) {
           titleMsj: "Success"
         });
 
-        _this5.props.fetchAllowances(_this5.props.user.id, _this5.state.allowanceType, _this5.state.allowanceStatus, _this5.props.allUser);
+        var selectedMonth = moment__WEBPACK_IMPORTED_MODULE_2___default()().month() + 2;
+
+        _this5.props.fetchCurrentBookA(selectedMonth, _this5.props.adminPath, _this5.props.user.id);
       })["catch"](function () {
         _this5.setState({
           modalBoolean: false,
@@ -65846,8 +65871,7 @@ function (_React$Component) {
           titleMsj: "Error"
         });
       });
-    } // Funcion para updatear el status de los beneficios
-
+    }
   }, {
     key: "handleSaveConfirm",
     value: function handleSaveConfirm(e) {
@@ -65856,53 +65880,51 @@ function (_React$Component) {
       e.preventDefault();
       this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
         _this6.setState({
-          msjSave: 'Saved!'
+          msjSave: "Saved!"
         });
 
-        _this6.props.fetchAllowances(_this6.props.user.id, _this6.state.allowanceType, _this6.state.allowanceStatus, _this6.props.allUser);
+        var selectedMonth = moment__WEBPACK_IMPORTED_MODULE_2___default()().month() + 2;
+
+        _this6.props.fetchCurrentBookA(selectedMonth, _this6.props.adminPath, _this6.props.user.id);
       })["catch"](function () {
         _this6.setState({
-          msjSave: 'Ups!, an error occurred while processing the request...'
+          msjSave: "Ups!, an error occurred while processing the request..."
         });
       });
     }
   }, {
     key: "render",
     value: function render() {
-      // Condicional para redefinir los objetos
-      // let val = parserRow(
-      //   this.props.bookAllowances, // Se envia el listado a depurar
-      //   this.deleteAllowance, // Se envia la funcion para eliminar (onClick)
-      //   this.viewDetails,  // Se envia la funcion para mostrar el modal (onClick)
-      //   this.props.allUser // Se envia si la ruta ingresada es "Panel" ( Esto bloqueará la opcion de eliminar )
-      // )
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalBookDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
         togglePanel: this.togglePanel,
         activeItem: this.state.activeItem,
         activeAllowance: this.props.activeAllowance,
-        history: this.props.history,
+        history: this.props.bookInstallments,
         handleSaveConfirm: this.handleSaveConfirm,
         msjSave: this.state.msjSave,
         allUser: this.props.allUser
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__["default"], {
         modal: this.state.modalAviso,
         toggle: this.toggleAviso,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__["default"], {
         modalBoolean: this.state.modalBoolean,
         toggleBoolean: this.toggleBoolean,
         actionOk: this.actionOk,
         titleBoolean: this.state.titleBoolean,
         data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_8__["default"], {
         alertPending: this.state.alertPending,
         handleClick: this.handleClick,
         handleFilterStatus: this.handleFilterStatus,
-        bookAllowances: this.props.bookAllowances,
-        allowanceStatus: this.state.allowanceStatus
+        bookAllowances: this.props.currentBookAllowances,
+        allowanceStatus: this.state.allowanceStatus,
+        deleteAllowance: this.props.deleteAllowance,
+        viewDetails: this.viewDetails,
+        urlName: this.props.urlName
       }));
     }
   }]);
@@ -65910,45 +65932,56 @@ function (_React$Component) {
   return AdminBookContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(state, owner) {
+var mapStateToProps = function mapStateToProps(state, own) {
+  var urlName = own.match.url.substring(7, 11);
   return {
+    urlName: urlName,
     user: state.user.user,
     bookAllowances: state.allowance.bookAllowances,
     activeAllowance: state.allowance.activeAllowances,
     history: state.allowance.historyAllowances,
-    // allUser => Consulta si la ruta ingresada es "/admin/panel", de ser correcto permite en el back mostrar u ocultar uno o todos los usuarios.
-    allUser: owner.match.path == "/admin/panel" // true o false
+    //
+    bookInstallments: state.allowance.bookInstallments,
+    adminPath: own.match.path == "/admin/book",
+    // adminPath => consulta que la ruta corresponda a admin
+    currentBookAllowances: state.allowance.currentBookAllowances //busco libros p/mes actual
 
   };
 };
 
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
-    fetchBookAllowances: function fetchBookAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchBookAllowances"])());
+    fetchBookAllowances: function fetchBookAllowances(user, adminPath) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchBookAllowances"])(user, adminPath));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_3__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__["openCloseNavBar"])(val));
     },
     fetchAllowanceActive: function fetchAllowanceActive(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchAllowanceActive"])(id));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceActive"])(id));
     },
     fetchAllowanceHistory: function fetchAllowanceHistory(employeeId, allowanceId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchAllowanceHistory"])(employeeId, allowanceId));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceHistory"])(employeeId, allowanceId));
     },
     //trae la data para el "history del detalle modal"
     deleteAllowance: function deleteAllowance(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["deleteAllowance"])(id));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["deleteAllowance"])(id));
     },
-    // Elimina detalle 
+    // Elimina detalle
     editStatusAllowance: function editStatusAllowance(id, status, observation) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["editStatusAllowance"])(id, status, observation));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["editStatusAllowance"])(id, status, observation));
     },
     // Switch State
     fetchCountPending: function fetchCountPending(userId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchCountPending"])(userId));
-    } // Consulta cantidad de allowance pendientes
-
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
+    },
+    // Consulta cantidad de allowance pendientes
+    fetchCurrentBookA: function fetchCurrentBookA(month, adminPath, userId) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCurrentBookA"])(month, adminPath, userId));
+    },
+    fetchBookInstallments: function fetchBookInstallments(receiptPath, allowanceId) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchBookInstallments"])(receiptPath, allowanceId));
+    }
   };
 };
 
@@ -65968,10 +66001,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -65993,6 +66027,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66135,22 +66170,55 @@ function (_React$Component) {
       var maxAmount = this.props.listAllowance.find(function (allow) {
         return allow.name === _this3.props.nameUrl;
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
         modal: this.state.modal,
         toggle: this.toggle,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-        className: "upperCaseFonts marginTextLeft"
-      }, "Manage your ", this.props.nameUrl, " allowance."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBRow"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
         className: "container-banner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBCol"], {
-        md: "1"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBCol"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
+        md: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: " title-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "titleMain upperCaseFonts"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-file-invoice-dollar"
+      }), " ", "MANAGE YOUR ".concat(this.props.nameUrl, " ALLOWANCE.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBFormInline"], {
+        className: "md-form topMarginLine"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        className: "browser-default custom-select newRequestBtn",
+        to: "/allowance/gym"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-plus-circle"
+      }), " New Gym"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        className: "browser-default custom-select newRequestBtn",
+        to: "/allowance/training"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-plus-circle"
+      }), " New Training"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        className: "browser-default custom-select newRequestBtn",
+        to: "/allowance/child-care"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-plus-circle"
+      }), " New Child Care"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        className: "browser-default custom-select newRequestBtn",
+        to: "/allowance/book"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-plus-circle"
+      }), " New Book"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        className: "browser-default custom-select newRequest",
+        to: "/allowance/search"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-chart-bar"
+      }), " View my allowance"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
+        className: "container-banner"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
         md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBAnimation"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBAnimation"], {
         type: "fadeInUp"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.onFormSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "h4 text-center py-4"
@@ -66158,7 +66226,7 @@ function (_React$Component) {
         className: "maxAmount"
       }, " ", "(Max Amount $".concat(maxAmount.fixedAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "grey-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBInput"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
         label: "Amount allowance...",
         icon: "hand-holding-usd",
         group: true,
@@ -66170,7 +66238,7 @@ function (_React$Component) {
         onChange: this.onAmountChange,
         error: "wrong",
         success: "right"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBInput"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
         label: "Observation...",
         icon: "comment-alt",
         required: true,
@@ -66182,7 +66250,7 @@ function (_React$Component) {
         validate: true,
         error: "wrong",
         success: "right"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBInput"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
         icon: "file-signature",
         group: true,
         type: "file",
@@ -66194,16 +66262,16 @@ function (_React$Component) {
         success: "right"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text-center py-4 mt-3"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBBtn"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBBtn"], {
         color: "light-blue",
         className: "mb-3 btnEv-red rounded mb-0 border-0 btnAllowance",
         type: "submit"
-      }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBIcon"], {
+      }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBIcon"], {
         icon: "angle-right"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "textAlert"
-      }, "*Please note that only jpg, png and PDF files up to 10MB are accepted.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_3__["MDBCol"], {
-        md: "6"
+      }, "*Please note that only jpg, png and PDF files up to 10MB are accepted.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
+        md: "7"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "preview:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.active.split('.')[1] !== 'pdf' && this.state.active.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/assets/receipt/".concat(this.state.active),
         width: "100%"
@@ -66231,13 +66299,13 @@ var mapStateToProps = function mapStateToProps(state, owner) {
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
     createAllowance: function createAllowance(data) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["createAllowance"])(data));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["createAllowance"])(data));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__["openCloseNavBar"])(val));
     },
     sendEmailConfirm: function sendEmailConfirm(user, allowance) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["sendEmailConfirm"])(user, allowance));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["sendEmailConfirm"])(user, allowance));
     }
   };
 };
@@ -66258,9 +66326,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return allowanceList; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
 /* harmony import */ var _rowAllowance__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./rowAllowance */ "./src/components/AllowancesListContainer/rowAllowance.jsx");
 
 
@@ -66276,20 +66343,21 @@ function allowanceList(_ref) {
       allowanceStatus = _ref.allowanceStatus,
       deleteAllowance = _ref.deleteAllowance,
       viewDetails = _ref.viewDetails,
-      allUser = _ref.allUser;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+      allUser = _ref.allUser,
+      handleFilterPeriod = _ref.handleFilterPeriod;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
     className: "container-banner"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "upperCaseFonts"
-  }, "Requests")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "upperCaseFonts title-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleMain"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-chart-bar"
+  }), " MY ALLOWANCE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBFormInline"], {
     className: "md-form"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "angle-double-right"
-  }), " \xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     value: allowanceType,
     className: "browser-default custom-select",
     name: "allowance",
@@ -66298,7 +66366,9 @@ function allowanceList(_ref) {
     value: ""
   }, "Choose your allowance..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: ""
-  }, "All"), adminAllowances && adminAllowances.map(function (item) {
+  }, "All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "4"
+  }, "Book"), adminAllowances && adminAllowances.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       className: "capitalizeName",
       key: item.id,
@@ -66319,34 +66389,34 @@ function allowanceList(_ref) {
     value: "approved"
   }, "Approved"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "rejected"
-  }, "Rejected")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "2"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
-    className: "md-form"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "search"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "form-control form-control-sm ml-3 w-75",
-    type: "text",
-    placeholder: "Search",
-    "aria-label": "Search"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Rejected")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    className: "browser-default custom-select",
+    name: "status",
+    onChange: handleFilterPeriod
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: ""
+  }, "Current month"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "0"
+  }, "Last month"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1"
+  }, "Last two months")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: "browser-default custom-select newRequest",
+    to: "/allowance/new-allowance"
+  }, "+ New Allowance"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       maxWidth: 406,
       position: "fixed",
       bottom: 0
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     type: "heartBeat"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAlert"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAlert"], {
     color: "success"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Hello!"), " You have ", alertPending, " allowance pending response...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)))) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Hello!"), " You have ", alertPending, " allowance pending response...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)))) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
     className: "container-banner minHeight"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     type: "fadeInUp"
   }, allowanceList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "table-responsive"
@@ -66354,7 +66424,7 @@ function allowanceList(_ref) {
     "class": "table btn-table table-fixed paddingTable"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
     "class": ""
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rowAllowance__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rowAllowance__WEBPACK_IMPORTED_MODULE_3__["default"], {
     deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
     ,
     viewDetails: viewDetails // Se envia la funcion para mostrar el modal (onClick)
@@ -66380,12 +66450,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _allowanceList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _allowanceList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./allowanceList */ "./src/components/AllowancesListContainer/allowanceList.jsx");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalDetail */ "./src/components/ModalContainer/modalDetail.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66413,6 +66487,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
 var AllowanceListContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -66430,12 +66506,13 @@ function (_React$Component) {
       modalBoolean: false,
       activeAllowance: {},
       history: [],
-      activeItem: '1',
-      allowanceType: '',
-      titleBoolean: '',
-      msjSave: '',
-      allowanceStatus: '',
-      alertPending: 0
+      activeItem: "1",
+      allowanceType: "",
+      titleBoolean: "",
+      msjSave: "",
+      allowanceStatus: "",
+      alertPending: 0,
+      date: {}
     };
     _this.toggleDetails = _this.toggleDetails.bind(_assertThisInitialized(_this));
     _this.toggleBoolean = _this.toggleBoolean.bind(_assertThisInitialized(_this));
@@ -66447,6 +66524,7 @@ function (_React$Component) {
     _this.actionOk = _this.actionOk.bind(_assertThisInitialized(_this));
     _this.handleSaveConfirm = _this.handleSaveConfirm.bind(_assertThisInitialized(_this));
     _this.handleFilterStatus = _this.handleFilterStatus.bind(_assertThisInitialized(_this));
+    _this.handleFilterPeriod = _this.handleFilterPeriod.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -66455,7 +66533,8 @@ function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
+      this.props.fetchAllowances(this.state.date, this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
+      console.log(this.props.allUser, "all user");
       this.props.fetchAdminAllowances();
       this.props.openCloseNavBar(false); // Si es admin y si esta en la ruta panel consulta la cantidad.. (Repite abajo)
 
@@ -66463,7 +66542,7 @@ function (_React$Component) {
         this.props.fetchCountPending(this.props.user.id).then(function (count) {
           _this2.setState({
             alertPending: count.data
-          }); // Guarda cantidad de pendientes 
+          }); // Guarda cantidad de pendientes
 
         });
       }
@@ -66477,12 +66556,12 @@ function (_React$Component) {
         this.setState({
           alertPending: 0,
           // Resetea el estado a cero
-          allowanceType: '',
+          allowanceType: "",
           // Resetea el select de type
-          allowanceStatus: '' // Resetea el select de Status
+          allowanceStatus: "" // Resetea el select de Status
 
         }, function () {
-          _this3.props.fetchAllowances(_this3.props.user.id, _this3.state.allowanceType, _this3.state.allowanceStatus, _this3.props.allUser);
+          _this3.props.fetchAllowances(_this3.state.date, _this3.props.user.id, _this3.state.allowanceType, _this3.state.allowanceStatus, _this3.props.allUser);
         }); // Si es admin y si esta en la ruta panel consulta la cantidad..
 
         if (this.props.user.isAdmin && this.props.allUser) {
@@ -66499,7 +66578,7 @@ function (_React$Component) {
   }, {
     key: "handleClick",
     value: function handleClick(e) {
-      this.props.fetchAllowances(this.props.user.id, e.target.value, this.state.allowanceStatus, this.props.allUser);
+      this.props.fetchAllowances(this.state.date, this.props.user.id, e.target.value, this.state.allowanceStatus, this.props.allUser);
       this.setState({
         allowanceType: e.target.value
       });
@@ -66508,10 +66587,19 @@ function (_React$Component) {
   }, {
     key: "handleFilterStatus",
     value: function handleFilterStatus(e) {
-      this.props.fetchAllowances(this.props.user.id, this.state.allowanceType, e.target.value, this.props.allUser);
+      this.props.fetchAllowances(this.state.date, this.props.user.id, this.state.allowanceType, e.target.value, this.props.allUser);
       this.setState({
         allowanceStatus: e.target.value
       });
+    }
+  }, {
+    key: "handleFilterPeriod",
+    value: function handleFilterPeriod(e) {
+      var date = Object(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__["dateSetter"])(e.target.value);
+      this.setState({
+        date: date
+      });
+      this.props.fetchAllowances(date, this.props.user.id, this.state.allowanceType, this.state.allowanceStatus, this.props.allUser);
     } // FUNCION DE CONSULTA HISTORIAL / DETALLE
 
   }, {
@@ -66536,7 +66624,7 @@ function (_React$Component) {
       this.setState({
         modal: !this.state.modal,
         activeItem: "1",
-        msjSave: ''
+        msjSave: ""
       });
     } // TOGGLE MODAL AVISO
 
@@ -66545,7 +66633,7 @@ function (_React$Component) {
     value: function toggleAviso() {
       this.setState({
         modalAviso: !this.state.modalAviso,
-        msjSave: ''
+        msjSave: ""
       });
     } // TOGGLE MODAL BOOLEAN
 
@@ -66590,7 +66678,7 @@ function (_React$Component) {
           titleMsj: "Success"
         });
 
-        _this5.props.fetchAllowances(_this5.props.user.id, _this5.state.allowanceType, _this5.state.allowanceStatus, _this5.props.allUser);
+        _this5.props.fetchAllowances(_this5.state.date, _this5.props.user.id, _this5.state.allowanceType, _this5.state.allowanceStatus, _this5.props.allUser);
       })["catch"](function () {
         _this5.setState({
           modalBoolean: false,
@@ -66609,20 +66697,23 @@ function (_React$Component) {
       e.preventDefault();
       this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
         _this6.setState({
-          msjSave: 'Saved!'
+          msjSave: "Saved!"
         });
 
-        _this6.props.fetchAllowances(_this6.props.user.id, _this6.state.allowanceType, _this6.state.allowanceStatus, _this6.props.allUser);
+        var date = Object(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__["dateSetter"])();
+        console.log(_this6.state.date, "soy date del save");
+
+        _this6.props.fetchAllowances(date, _this6.props.user.id, _this6.state.allowanceType, _this6.state.allowanceStatus, _this6.props.allUser);
       })["catch"](function () {
         _this6.setState({
-          msjSave: 'Ups!, an error occurred while processing the request...'
+          msjSave: "Ups!, an error occurred while processing the request..."
         });
       });
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalDetail__WEBPACK_IMPORTED_MODULE_7__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
         togglePanel: this.togglePanel,
@@ -66632,18 +66723,18 @@ function (_React$Component) {
         handleSaveConfirm: this.handleSaveConfirm,
         msjSave: this.state.msjSave,
         allUser: this.props.allUser
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_8__["default"], {
         modal: this.state.modalAviso,
         toggle: this.toggleAviso,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_9__["default"], {
         modalBoolean: this.state.modalBoolean,
         toggleBoolean: this.toggleBoolean,
         actionOk: this.actionOk,
         titleBoolean: this.state.titleBoolean,
         data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_allowanceList__WEBPACK_IMPORTED_MODULE_3__["default"], {
         alertPending: this.state.alertPending,
         handleClick: this.handleClick // Filtro de tipo de beneficio
         ,
@@ -66662,7 +66753,8 @@ function (_React$Component) {
         allowanceStatus: this.state.allowanceStatus // valor del status actual
         ,
         adminAllowances: this.props.adminAllowances // Boolean si es admin o no
-
+        ,
+        handleFilterPeriod: this.handleFilterPeriod
       }));
     }
   }]);
@@ -66678,39 +66770,39 @@ var mapStateToProps = function mapStateToProps(state, owner) {
     activeAllowance: state.allowance.activeAllowances,
     history: state.allowance.historyAllowances,
     // allUser => Consulta si la ruta ingresada es "/admin/panel", de ser correcto permite en el back mostrar u ocultar uno o todos los usuarios.
-    allUser: owner.match.path == "/admin/panel" // true o false
+    allUser: owner.match.path == "/admin/allowance" // true o false
 
   };
 };
 
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
-    fetchAllowances: function fetchAllowances(userId, allowanceId, status, allUser) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowances"])(userId, allowanceId, status, allUser));
+    fetchAllowances: function fetchAllowances(month, userId, allowanceId, status, allUser) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["fetchAllowances"])(month, userId, allowanceId, status, allUser));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__["openCloseNavBar"])(val));
     },
     fetchAllowanceActive: function fetchAllowanceActive(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceActive"])(id));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["fetchAllowanceActive"])(id));
     },
     fetchAllowanceHistory: function fetchAllowanceHistory(employeeId, allowanceId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceHistory"])(employeeId, allowanceId));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["fetchAllowanceHistory"])(employeeId, allowanceId));
     },
     //trae la data para el "history del detalle modal"
     deleteAllowance: function deleteAllowance(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["deleteAllowance"])(id));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["deleteAllowance"])(id));
     },
-    // Elimina detalle 
+    // Elimina detalle
     editStatusAllowance: function editStatusAllowance(id, status, observation) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["editStatusAllowance"])(id, status, observation));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["editStatusAllowance"])(id, status, observation));
     },
     // Switch State
     fetchAdminAllowances: function fetchAdminAllowances() {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAdminAllowances"])());
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["fetchAdminAllowances"])());
     },
     fetchCountPending: function fetchCountPending(userId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_5__["fetchCountPending"])(userId));
     } // Consulta cantidad de allowance pendientes
 
   };
@@ -66737,19 +66829,20 @@ function rowAllowance(_ref) {
   var deleteAllowance = _ref.deleteAllowance,
       viewDetails = _ref.viewDetails,
       allUser = _ref.allUser,
-      allowanceList = _ref.allowanceList;
+      allowanceList = _ref.allowanceList,
+      urlName = _ref.urlName;
   var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, allowanceList && allowanceList.map(function (row) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "upperCaseFonts"
     }, row.allowanceDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "upperCaseFonts"
-    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: row.status
     }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
       onClick: function onClick() {
-        return viewDetails(row.id, row.allowanceDetail.id);
+        return viewDetails(row.id, row.allowanceDetail.id, row.receiptPath);
       },
       className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -67044,9 +67137,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DisciplineEvent; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
 
 
 
@@ -67058,38 +67150,40 @@ function DisciplineEvent(_ref) {
       techList = _ref.techList,
       clockValue = _ref.clockValue,
       onKeyDown = _ref.onKeyDown;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
     className: "container-banner"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "9"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "upperCaseFonts"
-  }, "Share your knowledge and empower your professional activity."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "TextParrafo"
-  }, "We began our journey as a consulting firm delivering real transformation through IT strategy and architecture services for some of the world\u2019s largest banks and payments companies. Over the past 18 years, we marked important milestones towards becoming global through opening delivery centres and offices in North and Latin America, as well as Western and Central Europe. Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us, and the people who use the systems and applications we design, build, and operate."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "fadeInDown"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Increasing-Efficiency-through-Digital-Evolution/480.ashx",
-    width: "100%"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+    className: " title-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleMain upperCaseFonts"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-calendar-plus"
+  }), " DISCIPLINE EVENT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBFormInline"], {
+    className: "md-form topMarginLine"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: "browser-default custom-select newRequest",
+    to: "/calendar"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-calendar-alt"
+  }), " View Event Calendar"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
     className: "container-banner"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "1"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: onFormSubmit
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "h4 text-center py-4"
-  }, "Send us your topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fontDiscipline"
+  }, "Share your knowledge and empower your professional activity."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "grey-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "md-form form-group"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     required: true,
-    className: "browser-default custom-select",
+    className: "form-control validate",
     name: "techName",
     onChange: handleClick
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Choose your Technologie..."), techList && techList.map(function (tech) {
@@ -67099,9 +67193,7 @@ function DisciplineEvent(_ref) {
     }, tech.name);
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "Otros"
-  }, "Other...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grey-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+  }, "Other..."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
     label: "Event name",
     icon: "book",
     group: true,
@@ -67111,15 +67203,21 @@ function DisciplineEvent(_ref) {
     name: "topic",
     onChange: onChange,
     error: "wrong",
-    success: "right"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    success: "right",
+    style: {
+      marginTop: -32
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
     icon: "calendar-alt",
     group: true,
     type: "date",
     name: "date",
     onChange: onChange,
-    required: true
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    required: true,
+    style: {
+      marginTop: -32
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
     icon: "clock",
     group: true,
     type: "text",
@@ -67131,7 +67229,7 @@ function DisciplineEvent(_ref) {
     onChange: onChange,
     maxLength: 5,
     required: true
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
     label: "Description...",
     icon: "comment-alt",
     required: true,
@@ -67145,15 +67243,15 @@ function DisciplineEvent(_ref) {
     success: "right"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center py-4 mt-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBBtn"], {
     color: "light-blue",
     className: "mb-3 btnEv-red rounded mb-0 border-0 btnAllowance",
     type: "submit"
-  }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
+  }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBIcon"], {
     icon: "angle-right"
-  })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "7"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     type: "fadeInUp"
   }, !eventList.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there are no results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "table-responsive"
@@ -67174,7 +67272,7 @@ function DisciplineEvent(_ref) {
     }, item.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "".concat(item.status, " whiteBorder")
     }, item.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.time));
-  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "1"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
 }
@@ -67382,6 +67480,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_moment__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
 
 
 
@@ -67389,12 +67491,30 @@ function eventCalendar(_ref) {
   var eventList = _ref.eventList,
       handleClick = _ref.handleClick,
       onKeyDown = _ref.onKeyDown;
-  console.log();
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBContainer"], {
+    fluid: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
+    className: "container-banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
+    md: "12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "upperCaseFonts title-container-fluid"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleMain"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-calendar-alt"
+  }), " Events SCHEDULE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBFormInline"], {
+    className: "md-form topMarginLine"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    className: "browser-default custom-select newRequest",
+    to: "/discipline-event/new"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-plus-circle"
+  }), " Discipline event"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
+    md: "12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "page"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "upperCaseFonts"
-  }, "Schedule of events"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "page__demo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "main-container page__container"
@@ -67402,13 +67522,18 @@ function eventCalendar(_ref) {
     "class": "timeline"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "timeline__group"
-  }, eventList.length && eventList.map(function (item) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      "class": "timeline__year"
+  }, eventList.length && eventList.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBAnimation"], {
+      type: "fadeInLeft",
+      reveal: i > 1 ? true : false
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      "class": "timeline__year",
+      key: i
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_moment__WEBPACK_IMPORTED_MODULE_1___default.a, {
       format: "YYYY"
-    }, item.date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      "class": "timeline__box"
+    }, item.date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      "class": "timeline__box",
+      key: "i".concat(i)
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       "class": "timeline__date"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -67423,12 +67548,21 @@ function eventCalendar(_ref) {
       "class": "timeline__post"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       "class": "timeline__content"
-    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Schelude: ", moment__WEBPACK_IMPORTED_MODULE_2___default()(item.time, 'HH:mm').format('HH:mm'), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+      style: {
+        fontWeight: "bold"
+      }
+    }, "SCHEDULE:"), " ", moment__WEBPACK_IMPORTED_MODULE_2___default()(item.time, 'HH:mm').format('HH:mm'), "Hs. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+      className: "hrEvent"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "/assets/img/events/".concat(item.technologie.image),
+      className: "imgCalendar",
       alt: "",
       width: "100px"
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, item.description)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
-  })))))));
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "textJustify"
+    }, item.description)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+  })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 }
 
 /***/ }),
@@ -67537,7 +67671,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("soy eventList", this.props.eventList), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EventCalendarContainer_eventCalendar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EventCalendarContainer_eventCalendar__WEBPACK_IMPORTED_MODULE_3__["default"], {
         eventList: this.props.eventList,
         handleClick: this.onClick,
         onKeyDown: this.onKeyDown
@@ -67595,27 +67729,206 @@ var FooterPage = function FooterPage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFooter"], {
     color: "blue",
     className: "font-small pt-4 mt-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
-    fluid: true,
-    className: "text-center text-md-left"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    className: "title"
-  }, "Footer Content"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Here you can use rows and columns here to organize your footer content.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    className: "title"
-  }, "Links")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-copyright text-center py-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
-    fluid: true
-  }, "\xA9 ", new Date().getFullYear(), " Copyright: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://www.MDBootstrap.com"
-  }, " MDBootstrap.com "))));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FooterPage);
+
+/***/ }),
+
+/***/ "./src/components/HomeAdminContainer/homeAdmin.jsx":
+/*!*********************************************************!*\
+  !*** ./src/components/HomeAdminContainer/homeAdmin.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+
+
+var AnimationPage = function AnimationPage(_ref) {
+  var cardList = _ref.cardList;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    type: "fadeInUp"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+    className: "container-banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "title-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleMain upperCaseFonts"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-tools"
+  }), " ADMIN PANEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBFormInline"], {
+    className: "md-form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "browser-default custom-select pRequest"
+  }, "Hello! Please choose the option you want! :)"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+    className: "container-banner marginDemo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    delay: "".concat(4 * 100, "ms"),
+    type: "fadeInDownBig"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
+    className: "Card-Img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-IMG"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "div-img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/admin/allowance"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ajustImg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Increasing-Customer-Value/480.ashx",
+    className: "img-fluid margenBottomMobile img",
+    alt: "Imagen logo book"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
+  }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-angle-double-right"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleModule upperCaseFonts"
+  }, "General Allowance")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    delay: "".concat(2 * 100, "ms"),
+    type: "fadeInDownBig"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
+    className: "Card-Img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-IMG"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "div-img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/admin/book"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ajustImg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Complete-Investment-Management-Insights/650.ashx",
+    className: "img-fluid margenBottomMobile img",
+    alt: "Imagen logo book"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
+  }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-angle-double-right"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleModule upperCaseFonts"
+  }, "Admin book")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AnimationPage);
+
+/***/ }),
+
+/***/ "./src/components/HomeAdminContainer/index.jsx":
+/*!*****************************************************!*\
+  !*** ./src/components/HomeAdminContainer/index.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _homeAdmin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homeAdmin */ "./src/components/HomeAdminContainer/homeAdmin.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+
+var PanelAdminContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(PanelAdminContainer, _React$Component);
+
+  function PanelAdminContainer() {
+    var _this;
+
+    _classCallCheck(this, PanelAdminContainer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(PanelAdminContainer).call(this));
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(PanelAdminContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+      this.props.openCloseNavBar(false);
+      this.props.fetchAdminAllowances();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homeAdmin__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        cardList: this.props.adminAllowances
+      }));
+    }
+  }]);
+
+  return PanelAdminContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    user: state.user.user,
+    adminAllowances: state.allowance.adminAllowances
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    logout: function logout() {
+      return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_3__["logout"])());
+    },
+    fetchAdminAllowances: function fetchAdminAllowances() {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAdminAllowances"])());
+    },
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(PanelAdminContainer));
 
 /***/ }),
 
@@ -67714,55 +68027,48 @@ var AnimationPage = function AnimationPage(_ref) {
     md: "1"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
     className: "container-banner marginDemo"
-  }, cardList && cardList.map(function (card, i) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
-      md: "3",
-      key: i
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
-      delay: "".concat(i * 100, "ms"),
-      type: "fadeInLeftBig"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
-      className: "Card-Img"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "container-IMG",
-      key: card.name
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "div-img"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/allowance/".concat(card.name)
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "ajustImg"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: "/assets/img/".concat(card.name, "_IMG_min.png") //{card.imgUrl}
-      ,
-      className: "img-fluid margenBottomMobile img",
-      alt: "Imagen logo ".concat(card.name)
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
-    }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-angle-double-right"
-    })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "titleModule"
-    }, card.completeName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
-    md: "3",
-    key: "book"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
-    delay: "".concat(2 * 100, "ms"),
-    type: "fadeInLeftBig"
+    delay: "".concat(1 * 100, "ms"),
+    type: "fadeInDownBig"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
     className: "Card-Img"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container-IMG",
-    key: "book"
+    className: "container-IMG"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "div-img"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/allowance/book"
+    to: "/allowance/new-allowance"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "ajustImg"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/assets/img/book_IMG_min.png" //{card.imgUrl}
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/StockImages/Desktop/SuccessStories/Inner_650x650_SS08_02.ashx",
+    className: "img-fluid margenBottomMobile img",
+    alt: "Imagen logo book"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
+  }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-angle-double-right"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleModule upperCaseFonts"
+  }, "New Allowance")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    delay: "".concat(2 * 100, "ms"),
+    type: "fadeInDownBig"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
+    className: "Card-Img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-IMG"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "div-img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/health-care"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ajustImg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/InsuranceAndHealthcare/make_a_difference-inner_desktop_650x650.ashx" //{card.imgUrl}
     ,
     className: "img-fluid margenBottomMobile img",
     alt: "Imagen logo book"
@@ -67771,8 +68077,58 @@ var AnimationPage = function AnimationPage(_ref) {
   }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-angle-double-right"
   })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "titleModule"
-  }, "BookAllowance")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))));
+    className: "titleModule upperCaseFonts"
+  }, "Health Care")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    delay: "".concat(3 * 100, "ms"),
+    type: "fadeInDownBig"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
+    className: "Card-Img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-IMG"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "div-img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/calendar"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ajustImg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Complete-Investment-Management-Insights/650.ashx",
+    className: "img-fluid margenBottomMobile img",
+    alt: "Imagen logo book"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
+  }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-angle-double-right"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleModule upperCaseFonts"
+  }, "Event Calendar")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    delay: "".concat(4 * 100, "ms"),
+    type: "fadeInDownBig"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
+    className: "Card-Img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-IMG"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "div-img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/discipline-event/new"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ajustImg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Retail-Enhancing/650.ashx",
+    className: "img-fluid margenBottomMobile img",
+    alt: "Imagen logo book"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
+  }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-angle-double-right"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleModule upperCaseFonts"
+  }, "Discipline Event")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AnimationPage);
@@ -67879,6 +68235,208 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./src/components/HomeNewAllowance/index.jsx":
+/*!***************************************************!*\
+  !*** ./src/components/HomeNewAllowance/index.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _newAllowance__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./newAllowance */ "./src/components/HomeNewAllowance/newAllowance.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+
+var HomeNewAllowance =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(HomeNewAllowance, _React$Component);
+
+  function HomeNewAllowance() {
+    var _this;
+
+    _classCallCheck(this, HomeNewAllowance);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(HomeNewAllowance).call(this));
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(HomeNewAllowance, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+      this.props.openCloseNavBar(false);
+      this.props.fetchAdminAllowances();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_newAllowance__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        cardList: this.props.adminAllowances
+      }));
+    }
+  }]);
+
+  return HomeNewAllowance;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    user: state.user.user,
+    adminAllowances: state.allowance.adminAllowances
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    logout: function logout() {
+      return dispatch(Object(_redux_actions_user__WEBPACK_IMPORTED_MODULE_3__["logout"])());
+    },
+    fetchAdminAllowances: function fetchAdminAllowances() {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_4__["fetchAdminAllowances"])());
+    },
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(HomeNewAllowance));
+
+/***/ }),
+
+/***/ "./src/components/HomeNewAllowance/newAllowance.jsx":
+/*!**********************************************************!*\
+  !*** ./src/components/HomeNewAllowance/newAllowance.jsx ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+
+
+var AnimationPage = function AnimationPage(_ref) {
+  var cardList = _ref.cardList;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    type: "fadeInUp"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+    className: "container-banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "title-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleMain upperCaseFonts"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-calendar-plus"
+  }), " NEW ALLOWANCE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBFormInline"], {
+    className: "md-form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "browser-default custom-select pRequest"
+  }, "Hello! Please choose the option you want! :)"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+    className: "container-banner marginDemo"
+  }, cardList && cardList.map(function (card, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+      md: "3",
+      key: i
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+      delay: "".concat(i * 100, "ms"),
+      type: "fadeInLeftBig"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
+      className: "Card-Img"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container-IMG",
+      key: card.name
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "div-img"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/allowance/".concat(card.name)
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "ajustImg"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: "/assets/img/".concat(card.name, "_IMG_min.png") //{card.imgUrl}
+      ,
+      className: "img-fluid margenBottomMobile img",
+      alt: "Imagen logo ".concat(card.name)
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
+    }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-angle-double-right"
+    })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "titleModule"
+    }, card.completeName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "3",
+    key: "book"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    delay: "".concat(2 * 100, "ms"),
+    type: "fadeInLeftBig"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
+    className: "Card-Img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-IMG",
+    key: "book"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "div-img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/allowance/book"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ajustImg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/assets/img/book_IMG_min.png" //{card.imgUrl}
+    ,
+    className: "img-fluid margenBottomMobile img",
+    alt: "Imagen logo book"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
+  }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-angle-double-right"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleModule"
+  }, "BookAllowance")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AnimationPage);
+
+/***/ }),
+
 /***/ "./src/components/HomeOfficeContainer/Calendar.jsx":
 /*!*********************************************************!*\
   !*** ./src/components/HomeOfficeContainer/Calendar.jsx ***!
@@ -67900,6 +68458,7 @@ var Calendar = function Calendar(_ref) {
   var handleAddHome = _ref.handleAddHome,
       handleProyect = _ref.handleProyect,
       listHomeOffice = _ref.listHomeOffice,
+      MDBFormInline = _ref.MDBFormInline,
       next = _ref.next,
       previous = _ref.previous,
       changeYear = _ref.changeYear,
@@ -67917,72 +68476,46 @@ var Calendar = function Calendar(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "1"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "10"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "fontLight upperCaseFonts"
-  }, "Allowance Management Site"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "TextParrafo"
-  }, "Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "1"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "container-banner marginDemo"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "fadeInLeft"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btnEv-grey rounded-0 mb-0 border-0 showHomeOffice",
-    style: {
-      fontSize: 15
-    },
-    onClick: previous
+    md: "12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "upperCaseFonts title-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleMain"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-angle-left"
-  }), " Prev"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btnEv-grey rounded-0 mb-0 border-0 showHomeOffice",
-    style: {
-      fontSize: 15
-    },
-    onClick: next
-  }, "Next ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-angle-right"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    className: ""
+    className: "far fa-calendar-alt"
+  }), " HOME OFFICE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-inline md-form"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    className: "form-control",
+    className: "browser-default custom-select",
     name: "month",
     value: currentMonth,
     onChange: changeMonth
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "0"
-  }, "Jan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "January"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "1"
-  }, "Feb"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "February"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "2"
-  }, "Mar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "March"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "3"
-  }, "Apr"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "April"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "4"
   }, "May"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "5"
-  }, "Jun"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "June"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "6"
-  }, "Jul"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "July"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "7"
-  }, "Aug"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "August"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "8"
-  }, "Sep"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "September"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "9"
-  }, "Oct"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "October"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "10"
-  }, "Nov"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "November"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "11"
-  }, "Dec")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    className: "form-control",
+  }, "December")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    className: "browser-default custom-select",
     name: "year",
     value: currentYear,
     onChange: changeYear
@@ -68010,8 +68543,8 @@ var Calendar = function Calendar(_ref) {
     value: "2029"
   }, "2029"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "2030"
-  }, "2030"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    className: "form-control",
+  }, "2030")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    className: "browser-default custom-select",
     value: currentProyect,
     name: "proyect",
     onChange: handleProyect
@@ -68020,35 +68553,9 @@ var Calendar = function Calendar(_ref) {
       key: i,
       value: item.proyect
     }, item.proyect);
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: function onClick() {
-      return showHide('isShowAllowance');
-    },
-    className: "btnEv-blue rounded-0 mb-0 border-0 showHomeOffice"
-  }, "Show Allowance"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: function onClick() {
-      return showHide('isShowBirthDay');
-    },
-    className: "btnEv-blue rounded-0 mb-0 border-0 showHomeOffice"
-  }, "Show Birthday")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-control divListAllowance ".concat(isShowAllowance ? '' : 'hiddenDiv')
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Allowance:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), employeProyectList && employeProyectList.map(function (item, i) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      key: i,
-      className: "itemName"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-user"
-    }), " ", item.name + ' ' + item.surname[0] + '.');
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-control divListAllowance ".concat(isShowBirthDay ? '' : 'hiddenDiv')
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "BirthDay's:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), birthDayList && birthDayList.map(function (item, i) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      key: i,
-      className: "itemName"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-birthday-cake"
-    }), " ", '(' + item.birthdayDate.split('-')[2] + ') ' + item.name + ' ' + item.surname[0] + '.');
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+    className: "container-banner marginDemo"
+  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore harum id, eum vitae corporis obcaecati delectus nostrum reiciendis dicta ipsa. Commodi dicta, dignissimos magni rem adipisci laborum in at minus!", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
     md: "9"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
@@ -68067,7 +68574,29 @@ var Calendar = function Calendar(_ref) {
     handleAddHome: handleAddHome,
     listHomeOffice: listHomeOffice,
     birthDayList: birthDayList
-  }))))))));
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInLeft"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Work Team:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-control divListAllowance ".concat(isShowAllowance ? '' : '')
+  }, employeProyectList && employeProyectList.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      key: i,
+      className: "itemName"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-user"
+    }), " ", item.name + ' ' + item.surname[0] + '.');
+  })), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "BirthDay's:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-control divListAllowance ".concat(isShowBirthDay ? '' : '')
+  }, birthDayList && birthDayList.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      key: i,
+      className: "itemName"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-birthday-cake"
+    }), " ", '(' + item.birthdayDate.split('-')[2] + ') ' + item.name + ' ' + item.surname[0] + '.');
+  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Calendar);
@@ -68283,7 +68812,6 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(HomeOfficeContainer).call(this));
     _this.state = {
-      buildRows: [],
       currentMonth: 0,
       // Mes seleccionado actual
       currentYear: 0,
@@ -68464,7 +68992,6 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Calendar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        buildRows: this.state.buildRows,
         currentMonth: this.state.currentMonth // Visualiza el mes seleccionado
         ,
         currentYear: this.state.currentYear // Visualiza el año seleccionado
@@ -68566,10 +69093,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./login */ "./src/components/LoginContainer/login.jsx");
 /* harmony import */ var _redux_actions_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/user */ "./src/redux/actions/user.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _UpdatePassContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../UpdatePassContainer */ "./src/components/UpdatePassContainer/index.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -68589,9 +69113,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
 
 
 
@@ -68673,7 +69194,7 @@ function (_React$Component) {
     }
   }, {
     key: "onChangeRemember",
-    value: function onChangeRemember(e) {
+    value: function onChangeRemember() {
       this.setState(function (_ref) {
         var value = _ref.value;
         return {
@@ -68718,7 +69239,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_4__["default"], {
         modal: this.state.modal,
         toggle: this.toggle,
         textMsj: this.state.textMsj,
@@ -68869,7 +69390,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HomeOfficeContainer_index__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../HomeOfficeContainer/index */ "./src/components/HomeOfficeContainer/index.jsx");
 /* harmony import */ var _EventCalendarContainer__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../EventCalendarContainer */ "./src/components/EventCalendarContainer/index.jsx");
 /* harmony import */ var _BookAllowanceContainer__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../BookAllowanceContainer */ "./src/components/BookAllowanceContainer/index.jsx");
-/* harmony import */ var _AdminBookContainer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../AdminBookContainer */ "./src/components/AdminBookContainer/index.jsx");
+/* harmony import */ var _HomeAdminContainer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../HomeAdminContainer */ "./src/components/HomeAdminContainer/index.jsx");
+/* harmony import */ var _HomeNewAllowance_index__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../HomeNewAllowance/index */ "./src/components/HomeNewAllowance/index.jsx");
+/* harmony import */ var _AdminBookContainer__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../AdminBookContainer */ "./src/components/AdminBookContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -68887,6 +69410,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
 
 
 
@@ -68959,6 +69484,10 @@ function (_React$Component) {
         component: _HomeOfficeContainer_index__WEBPACK_IMPORTED_MODULE_15__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
+        path: "/allowance/new-allowance",
+        component: _HomeNewAllowance_index__WEBPACK_IMPORTED_MODULE_19__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
         path: "/allowance/:name",
         component: _AllowanceContainer_index__WEBPACK_IMPORTED_MODULE_4__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
@@ -68968,11 +69497,15 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/admin/panel",
-        component: _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_8__["default"]
+        component: _HomeAdminContainer__WEBPACK_IMPORTED_MODULE_18__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/admin/book",
-        component: _AdminBookContainer__WEBPACK_IMPORTED_MODULE_18__["default"]
+        component: _AdminBookContainer__WEBPACK_IMPORTED_MODULE_20__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/admin/allowance",
+        component: _AllowancesListContainer_index__WEBPACK_IMPORTED_MODULE_8__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/health-care",
@@ -69028,6 +69561,197 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(MainContainer));
+
+/***/ }),
+
+/***/ "./src/components/ModalContainer/ModalBookDetail.jsx":
+/*!***********************************************************!*\
+  !*** ./src/components/ModalContainer/ModalBookDetail.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ModalBookDetails; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+function ModalBookDetails(_ref) {
+  var modal = _ref.modal,
+      msjSave = _ref.msjSave,
+      allUser = _ref.allUser,
+      handleSaveConfirm = _ref.handleSaveConfirm,
+      toggleDetails = _ref.toggleDetails,
+      activeAllowance = _ref.activeAllowance,
+      history = _ref.history,
+      togglePanel = _ref.togglePanel,
+      activeItem = _ref.activeItem;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
+    isOpen: modal,
+    toggle: toggleDetails,
+    size: "lg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
+    toggle: toggleDetails
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "upperCaseFonts"
+  }, activeAllowance.allowanceDetail.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNav"], {
+    className: "nav-tabs"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "1" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("1");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-list-alt"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "DETAILS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "2" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("2");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-history"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "HISTORY"))), allUser && // Si 
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "3" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("3");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-user-edit"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "ADMIN")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
+    activeItem: activeItem
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
+    tabId: "1",
+    role: "tabpanel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "User: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "marginTextLeft textBold"
+  }, "Actual payment date: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.paymentDate)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Amount: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, "$ ", activeAllowance.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "marginTextLeft textBold"
+  }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm ".concat(activeAllowance.status)
+  }, activeAllowance.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Observation: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.observation)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Admin Comment: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeAllowance.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: handleSaveConfirm
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "hidden",
+    name: "id",
+    value: activeAllowance.id
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    action: "",
+    className: "modalForm"
+  }, activeAllowance.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "radio"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "approvedBook radioBoton"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    defaultChecked: activeAllowance.status === 'approved',
+    name: "status",
+    value: "approved"
+  }), "\xA0APPROVED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "rejectedBook radioBoton"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    defaultChecked: activeAllowance.status === 'rejected',
+    name: "status",
+    value: "rejected"
+  }), "\xA0REJECTED")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm ".concat(activeAllowance.status)
+  }, activeAllowance.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-group",
+    style: {
+      marginTop: -20
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-group-prepend"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "input-group-text",
+    id: "basic-addon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-comment-alt prefix"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    autoComplete: "off",
+    name: "observation",
+    defaultValue: activeAllowance.adminComment,
+    required: true,
+    className: "form-control",
+    placeholder: "Observation...",
+    "aria-describedby": "basic-addon"
+  })), activeAllowance.status === 'pending' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "mb-3 btnEv-blue rounded mb-0 border-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-edit"
+  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), activeAllowance.receiptPath.split('.')[1] !== 'pdf' && activeAllowance.receiptPath.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/assets/receipt/".concat(activeAllowance.receiptPath),
+    width: "100%"
+  }), activeAllowance.receiptPath.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
+    src: "/assets/receipt/".concat(activeAllowance.receiptPath),
+    width: "100%",
+    height: "400px",
+    type: "application/pdf"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
+    tabId: "2",
+    role: "tabpanel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    className: "table btn-table table-fixed"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Installments"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, console.log("history", history), history && history.map(function (item, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      style: {
+        height: 32
+      },
+      key: i
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.installments), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: item.status
+    }, item.status));
+  }))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    className: "mb-3 btnEv-red rounded mb-0 border-0",
+    onClick: toggleDetails
+  }, "Close"))));
+}
 
 /***/ }),
 
@@ -69089,6 +69813,9 @@ function ModalAviso(_ref) {
     isOpen: modalBoolean,
     toggle: toggleBoolean,
     size: "md"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "flipInX",
+    delay: "500ms"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
     toggle: toggleBoolean
   }, "Confirm"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -69109,7 +69836,7 @@ function ModalAviso(_ref) {
       padding: "12px 29px"
     },
     onClick: toggleBoolean
-  }, "NO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))));
+  }, "NO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))))));
 }
 
 /***/ }),
@@ -69190,7 +69917,7 @@ function ModalDetails(_ref) {
     className: "textForm"
   }, activeAllowance.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "marginTextLeft textBold"
-  }, "Payment Date: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Actual payment date: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
   }, activeAllowance.paymentDate)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "parrafoModal"
@@ -69515,31 +70242,50 @@ function (_Component) {
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " \xD7 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      }, " \xD7 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        style: {
+          marginTop: -21
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/" && "itemActive"),
         to: "/",
         onClick: function onClick() {
           return _this3.closeCollapse();
+        },
+        style: {
+          fontSize: 22
         }
-      }, " Home "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-home"
+      }), " Home ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "item",
+        onClick: this.handleLogOut,
+        style: {
+          fontSize: 22
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-sign-out-alt"
+      }), " Logout "))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+        className: "separationClass"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/profile" && "itemActive"),
         to: "/profile",
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
       }, " Profile "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location == "/allowance/new-allowance" && "itemActive"),
+        to: "/allowance/new-allowance",
+        onClick: function onClick() {
+          return _this3.closeCollapse();
+        }
+      }, " New Allowance ! "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/allowance/search" && "itemActive"),
         to: "/allowance/search",
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
       }, " My Allowances "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        className: "item ".concat(location == "/discipline-event/new" && "itemActive"),
-        to: "/discipline-event/new",
-        onClick: function onClick() {
-          return _this3.closeCollapse();
-        }
-      }, " Discipline Event "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "item ".concat(location == "/home-office" && "itemActive"),
         to: "/home-office",
         onClick: function onClick() {
@@ -69558,21 +70304,18 @@ function (_Component) {
           return _this3.closeCollapse();
         }
       }, " Event calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        className: "item ".concat(location == "/calendar" && "itemActive"),
-        to: "/admin/book",
+        className: "item ".concat(location == "/discipline-event/new" && "itemActive"),
+        to: "/discipline-event/new",
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Admin Book Panel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "item",
-        onClick: this.handleLogOut
-      }, " Logout "), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        className: "item ".concat(location == "/admin/panel" && "itemActive"),
+      }, " Discipline Event "), this.props.user.isAdmin == true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "item ".concat(location.indexOf('/admin/') !== -1 && "itemActive"),
         to: "/admin/panel",
         onClick: function onClick() {
           return _this3.closeCollapse();
         }
-      }, " Admin Panel ") : null));
+      }, " Admin Panel ")) : null));
     }
   }]);
 
@@ -69634,6 +70377,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69676,7 +70423,8 @@ function (_React$Component) {
       modalUser: false,
       modal: false,
       newPassword: "",
-      oldPassword: ""
+      oldPassword: "",
+      profileImage: null
     };
     _this.toggleModalUser = _this.toggleModalUser.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -69694,6 +70442,8 @@ function (_React$Component) {
       e.preventDefault();
       this.props.updatePass(this.state.newPassword, this.props.user.id, this.state.oldPassword).then(function (response) {
         //recibo data ok y despliego modal
+        console.log(response, "soy response");
+
         _this2.setState({
           modal: true,
           msjSave: "The password has been changed successfully.",
@@ -69712,6 +70462,24 @@ function (_React$Component) {
     key: "handleChange",
     value: function handleChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: "handleClickImage",
+    value: function handleClickImage() {
+      var _this$state = this.state,
+          file = _this$state.file,
+          rest = _objectWithoutProperties(_this$state, ["file"]);
+
+      var formData = new FormData();
+      formData.append('file', file); // this.props.userUpdate(){
+      // }
+    }
+  }, {
+    key: "onChange",
+    value: function onChange(e) {
+      this.setState({
+        file: e.target.files[0]
+      });
     }
   }, {
     key: "toggleModalUser",
@@ -69789,7 +70557,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function Profile(_ref) {
   var user = _ref.user,
-      handClick = _ref.handClick;
+      handClick = _ref.handClick,
+      handleImageChange = _ref.handleImageChange;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -69807,7 +70576,9 @@ function Profile(_ref) {
     src: "/assets/img/profile/".concat(user.avatar),
     waves: true
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "iconEditImg"
+    className: "iconEditImg",
+    onClick: handleImageChange,
+    type: "file"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     "class": "far fa-edit"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
@@ -70145,78 +70916,84 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return obraSocial; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
 
 
 function obraSocial(_ref) {
   var toggleCollapse = _ref.toggleCollapse,
       collapseID = _ref.collapseID,
       email = _ref.email;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBContainer"], {
     fluid: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+    className: "container-banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "upperCaseFonts title-container-fluid"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleMain"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-briefcase-medical"
+  }), " HEALTH CARE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBFormInline"], {
+    className: "md-form topMarginLine"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: "browser-default custom-select newRequest",
+    to: "/health-care/#form"
+  }, "Send us your question"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "upperCaseFonts"
   }, "Find a health care plan built specially for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "marginTextLeft"
-  }, " Have the solutions on hand to manager health priorities. A health plan made for you and your requirements. "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+  }, " Have the solutions on hand to manager health priorities. A health plan made for you and your requirements. "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "1"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardImage"], {
-    className: "img-fluid img-fluid z-depth-2",
-    src: "https://www.telediariodigital.net/wp-content/uploads/2013/10/OSDE.jpg",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardImage"], {
+    className: "img-fluid img-fluid z-depth-1",
+    src: "/assets/img/osde.png",
     waves: true
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardTitle"], {
-    style: {
-      minHeight: 62
-    }
-  }, "OSDE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], null, "Some quick example text to build on the card title and make up the bulk of the card's content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardTitle"], null, "OSDE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardText"], null, "Some quick example text to build on the card title and make up the bulk of the card's content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBBtn"], {
     onClick: function onClick() {
       return toggleCollapse("leftCollapse");
     }
-  }, "More..")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCollapse"], {
+  }, "More..")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCollapse"], {
     id: "leftCollapse",
     isOpen: collapseID
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardImage"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardImage"], {
     className: "img-fluid img-fluid z-depth-1",
-    src: "https://www.gmkfreelogos.com/logos/S/img/swiss_medical.gif",
+    src: "/assets/img/swiss.png",
     waves: true
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardTitle"], {
-    style: {
-      minHeight: 62
-    }
-  }, "SWISS MEDICAL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCardText"], null, "Some quick example text to build on the card title and make."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardTitle"], null, "SWISS MEDICAL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCardText"], null, "Some quick example text to build on the card title and make."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBBtn"], {
     onClick: function onClick() {
       return toggleCollapse("rightCollapse");
     }
-  }, "More..")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCollapse"], {
+  }, "More..")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCollapse"], {
     id: "rightCollapse",
     isOpen: collapseID
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "hola Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "hola Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "1"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     type: "fadeInLeft"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "upperCaseFonts"
-  }, "Find a health care plan built specially for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "marginTextLeft"
-  }, " Have the solutions on hand to manager health priorities. A health plan made for you and your requirements. "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "8",
+    id: "form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, " Send us your question"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque odio enim ducimus blanditiis nulla reprehenderit ea nesciunt, ratione porro, tempora quas? Provident reprehenderit fuga numquam odit perspiciatis soluta, ipsum omnis?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "7"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grey-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     className: "browser-default custom-select"
@@ -70226,7 +71003,7 @@ function obraSocial(_ref) {
     value: "2"
   }, "Option 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "3"
-  }, "Option 3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+  }, "Option 3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
     readOnly: true,
     label: "Your email",
     icon: "envelope",
@@ -70235,22 +71012,22 @@ function obraSocial(_ref) {
     value: email,
     error: "wrong",
     success: "right"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
     type: "textarea",
     rows: "2",
     label: "I need more information...",
     icon: "pencil-alt"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBBtn"], {
     outline: true,
     className: "mb-3 btnEv-blue rounded mb-0 border-0 whiteFont"
-  }, "Send")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+  }, "Send")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/InsuranceAndHealthcare/make_a_difference-inner_desktop_650x650.ashx",
     width: "100%"
-  }))))));
+  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 }
 
 /***/ }),
@@ -70259,7 +71036,7 @@ function obraSocial(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_BOOK_INSTALLMENTS, RECEIVE_CURRENT_BOOK_A, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70272,6 +71049,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ACTIVE_ALLOWANCES", function() { return RECEIVE_ACTIVE_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HISTORY_ALLOWANCES", function() { return RECEIVE_HISTORY_ALLOWANCES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_BOOK_ALLOWANCES", function() { return RECEIVE_BOOK_ALLOWANCES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_BOOK_INSTALLMENTS", function() { return RECEIVE_BOOK_INSTALLMENTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_CURRENT_BOOK_A", function() { return RECEIVE_CURRENT_BOOK_A; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_EVENT_LIST", function() { return RECEIVE_EVENT_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TECH_LIST", function() { return RECEIVE_TECH_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_OPEN_CLOSE_NAVBAR", function() { return SET_OPEN_CLOSE_NAVBAR; });
@@ -70288,7 +71067,9 @@ var RECEIVE_ADMIN_ALLOWANCES = "ECEIVE_ADMIN_ALLOWANCES";
 var RECEIVE_PENDING_ALLOWANCES = "RECEIVE_PENDING_ALLOWANCES";
 var RECEIVE_ACTIVE_ALLOWANCES = "RECEIVE_ACTIVE_ALLOWANCES";
 var RECEIVE_HISTORY_ALLOWANCES = "RECEIVE_HISTORY_ALLOWANCES";
-var RECEIVE_BOOK_ALLOWANCES = "RECEIVE_BOOK_ALLOWANCES"; // DisciplineEvents
+var RECEIVE_BOOK_ALLOWANCES = "RECEIVE_BOOK_ALLOWANCES";
+var RECEIVE_BOOK_INSTALLMENTS = "RECEIVE_BOOK_INSTALLMENTS";
+var RECEIVE_CURRENT_BOOK_A = "RECEIVE_CURRENT_BOOK_A"; // DisciplineEvents
 
 var RECEIVE_EVENT_LIST = "RECEIVE_EVENT_LIST";
 var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST"; // NavBar 
@@ -70360,7 +71141,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*!***********************************************!*\
   !*** ./src/redux/actions/allowanceActions.js ***!
   \***********************************************/
-/*! exports provided: receiveAllowances, receiveBookAllowances, receiveAdminAllowances, receiveActiveAllowances, receiveHistoryAllowances, createAllowance, fetchAllowances, fetchAdminAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance, fetchCountPending, fetchBookAllowances, sendEmailConfirm */
+/*! exports provided: receiveAllowances, receiveBookAllowances, receiveAdminAllowances, receiveActiveAllowances, receiveHistoryAllowances, receiveCurrentBookA, receiveBookInstallments, createAllowance, fetchAllowances, fetchAdminAllowances, fetchAllowanceActive, fetchAllowanceHistory, deleteAllowance, editStatusAllowance, fetchCountPending, fetchCurrentBookA, fetchBookAllowances, fetchBookInstallments, sendEmailConfirm */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70370,6 +71151,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAdminAllowances", function() { return receiveAdminAllowances; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveActiveAllowances", function() { return receiveActiveAllowances; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveHistoryAllowances", function() { return receiveHistoryAllowances; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveCurrentBookA", function() { return receiveCurrentBookA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveBookInstallments", function() { return receiveBookInstallments; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createAllowance", function() { return createAllowance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllowances", function() { return fetchAllowances; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAdminAllowances", function() { return fetchAdminAllowances; });
@@ -70378,7 +71161,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteAllowance", function() { return deleteAllowance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editStatusAllowance", function() { return editStatusAllowance; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCountPending", function() { return fetchCountPending; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCurrentBookA", function() { return fetchCurrentBookA; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchBookAllowances", function() { return fetchBookAllowances; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchBookInstallments", function() { return fetchBookInstallments; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sendEmailConfirm", function() { return sendEmailConfirm; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
@@ -70415,6 +71200,18 @@ var receiveHistoryAllowances = function receiveHistoryAllowances(historyAllowanc
     historyAllowances: historyAllowances
   };
 };
+var receiveCurrentBookA = function receiveCurrentBookA(currentBookAllowances) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_CURRENT_BOOK_A"],
+    currentBookAllowances: currentBookAllowances
+  };
+};
+var receiveBookInstallments = function receiveBookInstallments(bookInstallments) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_BOOK_INSTALLMENTS"],
+    bookInstallments: bookInstallments
+  };
+};
 var createAllowance = function createAllowance(formData) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default()({
@@ -70427,10 +71224,12 @@ var createAllowance = function createAllowance(formData) {
     });
   };
 };
-var fetchAllowances = function fetchAllowances(userId, allowanceId, status, allUser) {
+var fetchAllowances = function fetchAllowances(date, userId, allowanceId, status, allUser) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/search", {
       params: {
+        dateStart: date.start,
+        dateEnd: date.end,
         allowanceId: allowanceId,
         userId: userId,
         status: status,
@@ -70491,13 +71290,40 @@ var fetchCountPending = function fetchCountPending(userId) {
     });
   };
 };
-var fetchBookAllowances = function fetchBookAllowances() {
+var fetchCurrentBookA = function fetchCurrentBookA(month, adminPath, userId) {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book").then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book/current", {
+      params: {
+        month: month,
+        adminPath: adminPath,
+        userId: userId
+      }
+    }).then(function (res) {
+      return res.data;
+    }).then(function (currentBookAllowances) {
+      dispatch(receiveCurrentBookA(currentBookAllowances));
+    });
+  };
+};
+var fetchBookAllowances = function fetchBookAllowances(user, adminPath) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book", {
+      user: user,
+      adminPath: adminPath
+    }).then(function (res) {
       return res.data;
     }).then(function (bookAllowances) {
-      console.log("soy bookAlll del axios", bookAllowances);
       dispatch(receiveBookAllowances(bookAllowances));
+    });
+  };
+};
+var fetchBookInstallments = function fetchBookInstallments(receiptPath, allowanceId) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/book/installments/".concat(receiptPath, "/").concat(allowanceId)).then(function (res) {
+      return res.data;
+    }).then(function (bookInstallments) {
+      console.log("soy bookInstall", bookInstallments);
+      dispatch(receiveBookInstallments(bookInstallments));
     });
   };
 };
@@ -70748,17 +71574,31 @@ var logout = function logout() {
 };
 var updatePass = function updatePass(password, userId, oldPass) {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/employee/password/update", {
-      password: password,
-      userId: userId,
-      oldPass: oldPass
-    }).then(function (res) {
-      return res.data;
-    }).then(function (passConfirm) {
-      return passConfirm;
-    })["catch"](function (error) {
-      return console.log(error);
-    });
+    if (oldPass) {
+      console.log("hay oldPass", oldPass);
+      return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/employee/password/profile/update", {
+        password: password,
+        userId: userId,
+        oldPass: oldPass
+      }).then(function (res) {
+        return res.data;
+      }).then(function (passConfirm) {
+        return passConfirm;
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    } else {
+      return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/employee/password/update", {
+        password: password,
+        userId: userId
+      }).then(function (res) {
+        return res.data;
+      }).then(function (passConfirm) {
+        return passConfirm;
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    }
   };
 };
 var fetchLoggedUser = function fetchLoggedUser() {
@@ -70814,7 +71654,9 @@ var initialState = {
       name: ""
     }
   },
-  bookAllowances: []
+  bookAllowances: [],
+  currentBookAllowances: [],
+  bookInstallments: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -70839,6 +71681,16 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_BOOK_ALLOWANCES"]:
       return _objectSpread({}, state, {
         bookAllowances: _toConsumableArray(action.bookAllowances)
+      });
+
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_BOOK_A"]:
+      return _objectSpread({}, state, {
+        currentBookAllowances: _toConsumableArray(action.currentBookAllowances)
+      });
+
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_BOOK_INSTALLMENTS"]:
+      return _objectSpread({}, state, {
+        bookInstallments: _toConsumableArray(action.bookInstallments)
       });
 
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_HISTORY_ALLOWANCES"]:

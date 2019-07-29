@@ -1,21 +1,25 @@
 import React from 'react'
-import {
- MDBTableBody, MDBTableHead, MDBIcon, MDBFormInline,
-   MDBTable, MDBAnimation, MDBRow, MDBCol, MDBAlert
-} from "mdbreact";
+import {MDBIcon, MDBFormInline, MDBAnimation, MDBRow, MDBCol, MDBAlert} from "mdbreact";
+import RowAllowance from "../AllowancesListContainer/rowAllowance"
 
 import { columnsBook } from '../../auxFunctions/auxFunctions'
 
-export default function allowanceList({
+export default function adminBook({
 
   handleFilterStatus,
   alertPending,
   bookAllowances,
-  allowanceStatus
+  allowanceStatus,
+  deleteAllowance,
+  viewDetails,
+  allUser,
+  urlName
 }) {
   return (
     <>
-      {/* LISTADO  */}
+      {/* LISTADO  */
+      
+     }
       <div>
         <MDBRow className="container-banner">
           <MDBCol md="2">
@@ -64,20 +68,53 @@ export default function allowanceList({
          
           <MDBCol md="12">
             <MDBAnimation type="fadeInUp">
-              {(bookAllowances.length === 0) ? <label>Sorry, there aren't results for your selection... <br /><br /></label> :
-                <MDBTable btn fixed responsive className="paddingTable">
-                  <MDBTableHead columns={columnsBook} />
-                  <MDBTableBody rows={{
-                    // name:bookAllowances.employeeDetail.name,
-                    amount:bookAllowances.amount,
-                    employeeAmount:bookAllowances.employeeAmount,
-                    installments: bookAllowances.installments,
-                    receiptPath: bookAllowances.receiptPath,
-                    status:bookAllowances.status
-
-                  }} />
-                </MDBTable>}
-            </MDBAnimation>
+            {(bookAllowances.length == 0) ? <label>Sorry, there aren't results for your selection... <br /><br /></label> :
+                 
+             
+                <div class="table-responsive">
+                 
+                  <table class="table btn-table table-fixed paddingTable">
+                    <thead class="">
+                    {/* {console.log("entreeee", bookAllowances)} */}
+                    {(urlName == "book")?
+                     
+                      <tr>
+                       
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Limit</th>
+                        <th>Emp. Amount</th>
+                        <th>Status</th>
+                        <th>Info</th>
+                        <th>Option</th>
+                      </tr>:
+                      <tr>
+                      <th>Type</th>
+                      <th>Name</th>
+                      <th>Amount</th>
+                      <th>Limit</th>
+                      <th>Emp. Amount</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Info</th>
+                      <th>Option</th>
+                    </tr>
+                    }
+                    </thead>
+                    <RowAllowance
+                      
+                      urlName = {urlName}
+                      deleteAllowance={deleteAllowance} // Se envia la funcion para eliminar (onClick)
+                      viewDetails={viewDetails}  // Se envia la funcion para mostrar el modal (onClick)
+                      allUser={allUser} // Si es admin o no
+                      allowanceList={bookAllowances} // Listado de la consulta
+                      />
+                       </table>
+                </div>
+ 
+               } 
+              </MDBAnimation>
           </MDBCol>
         </MDBRow>
       </div>

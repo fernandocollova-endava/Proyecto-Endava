@@ -12,7 +12,6 @@ class HomeOfficeContainer extends React.Component {
   constructor() {
     super();
     this.state = {
-      buildRows: [],
       currentMonth: 0, // Mes seleccionado actual
       currentYear: 0, // Año seleccionado actual
       currentProyect: '', // Proyecto seleccionado Actual
@@ -149,7 +148,6 @@ class HomeOfficeContainer extends React.Component {
   render() {
     return (
       <Calendar
-        buildRows={this.state.buildRows}
         currentMonth={this.state.currentMonth} // Visualiza el mes seleccionado
         currentYear={this.state.currentYear} // Visualiza el año seleccionado
         next={this.next} // Controla el mes siguiente

@@ -2,9 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import Login from "./login";
 import { loginUser } from "../../redux/actions/user";
-import validate from "../../auxFunctions/auxFunctions";
-import UpdatePassContainer from "../UpdatePassContainer";
-import { logginUser } from "../../redux/actions/user";
 import ModalAviso from "../ModalContainer/modalAviso";
 
 class LoginContainer extends React.Component {
@@ -68,7 +65,7 @@ class LoginContainer extends React.Component {
     // }
   }
 
-  onChangeRemember(e) {
+  onChangeRemember() {
     this.setState(
       ({ value }) => ({ value: !value }) // siempre que quiero usar cambios de estados dentro de un set state, se usa asi
     );

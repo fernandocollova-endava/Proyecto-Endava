@@ -57,27 +57,44 @@ class Navbar extends Component {
           <span className="nameFontSidebar">
             Welcome <br />
             {
-              (this.props.user.isAdmin)?
-              <i className="fas fa-user-tie iconAvatar"></i>:
-              <i className="far fa-user iconAvatar"></i>
+              (this.props.user.isAdmin) ?
+                <i className="fas fa-user-tie iconAvatar"></i> :
+                <i className="far fa-user iconAvatar"></i>
             }
             {this.props.user.name}
           </span>
           <span className="closebtn" onClick={() => this.closeCollapse()}> &times; </span>
           <hr />
-          <Link className={`item ${(location == "/") && "itemActive"}`} to="/" onClick={() => this.closeCollapse()}> Home </Link>
+          <table style={({ marginTop: -21 })}>
+            <tbody>
+              <tr>
+                <td><Link className={`item ${(location == "/") && "itemActive"}`} to="/" onClick={() => this.closeCollapse()} style={({ fontSize: 22 })}><i className="fas fa-home"></i> Home </Link>
+                </td>
+                <td>&#124;</td>
+                <td><span className="item" onClick={this.handleLogOut} style={({ fontSize: 22 })}><i className="fas fa-sign-out-alt"></i> Logout </span></td>
+              </tr>
+            </tbody>
+          </table>
+          <hr className="separationClass" />
+
           <Link className={`item ${(location == "/profile") && "itemActive"}`} to="/profile" onClick={() => this.closeCollapse()}> Profile </Link>
+          <Link className={`item ${(location == "/allowance/new-allowance") && "itemActive"}`} to="/allowance/new-allowance" onClick={() => this.closeCollapse()}> New Allowance ! </Link>
           <Link className={`item ${(location == "/allowance/search") && "itemActive"}`} to="/allowance/search" onClick={() => this.closeCollapse()}> My Allowances </Link>
-          <Link className={`item ${(location == "/discipline-event/new") && "itemActive"}`} to="/discipline-event/new" onClick={() => this.closeCollapse()}> Discipline Event </Link>
           <Link className={`item ${(location == "/home-office") && "itemActive"}`} to="/home-office" onClick={() => this.closeCollapse()}> Home Office </Link>
           <Link className={`item ${(location == "/health-care") && "itemActive"}`} to="/health-care" onClick={() => this.closeCollapse()}> Health care </Link>
           <Link className={`item ${(location == "/calendar") && "itemActive"}`} to="/calendar" onClick={() => this.closeCollapse()}> Event calendar</Link>
-          <Link className={`item ${(location == "/calendar") && "itemActive"}`} to="/admin/book" onClick={() => this.closeCollapse()}> Admin Book Panel</Link>
-          <span className="item" onClick={this.handleLogOut}> Logout </span>
+          <Link className={`item ${(location == "/discipline-event/new") && "itemActive"}`} to="/discipline-event/new" onClick={() => this.closeCollapse()}> Discipline Event </Link>
+
           {this.props.user.isAdmin == true ?
-            <Link className={`item ${(location == "/admin/panel") && "itemActive"}`} to="/admin/panel" onClick={() => this.closeCollapse()}> Admin Panel </Link>
+            <>
+              {/* <Link className={`item ${(location == "/admin/book") && "itemActive"}`} to="/admin/book" onClick={() => this.closeCollapse()}> Admin Book Panel</Link> */}
+              <Link className={`item ${(location.indexOf('/admin/') !== -1) && "itemActive"}`} to="/admin/panel" onClick={() => this.closeCollapse()}> Admin Panel </Link>
+
+            </>
             : null
           }
+
+
         </div>
       </MDBNavbar>
     );

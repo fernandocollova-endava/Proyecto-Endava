@@ -39,7 +39,7 @@ export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfir
                             <div className="mt-2">
                                 <p>
                                     <strong className="textBold">User: </strong><span className="textForm">{activeAllowance.employeeDetail.name}</span>
-                                    <strong className="marginTextLeft textBold">Payment Date: </strong><span className="textForm">{activeAllowance.paymentDate}</span>
+                                    <strong className="marginTextLeft textBold">Actual payment date: </strong><span className="textForm">{activeAllowance.paymentDate}</span>
                                 </p>
                                 <p className="parrafoModal">
                                     <strong className="textBold">Amount: </strong><span className="textForm">$ {activeAllowance.amount}</span>
