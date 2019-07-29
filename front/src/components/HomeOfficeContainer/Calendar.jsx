@@ -2,53 +2,33 @@ import React from "react";
 import { MDBRow, MDBCol, MDBAnimation } from "mdbreact";
 import Day from './day'
 
-const Calendar = ({ handleAddHome, handleProyect, listHomeOffice, next, previous, changeYear, changeMonth,
-  currentYear, currentMonth, proyectList, currentProyect, employeProyectList, birthDayList, isShowBirthDay, isShowAllowance,  showHide}) => {
+const Calendar = ({ handleAddHome, handleProyect, listHomeOffice, MDBFormInline, next, previous, changeYear, changeMonth,
+  currentYear, currentMonth, proyectList, currentProyect, employeProyectList, birthDayList, isShowBirthDay, isShowAllowance, showHide }) => {
   let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   return (
     <>
       <MDBRow className="container-banner">
-        <MDBCol md="1">
+        <MDBCol md="12">
+          <p className="upperCaseFonts title-container">
+            <span className="titleMain"><i className="far fa-calendar-alt"></i> HOME OFFICE</span>
 
-        </MDBCol>
-        <MDBCol md="10">
-          <MDBAnimation type="fadeInUp">
-            <h1 className="fontLight upperCaseFonts">Allowance Management Site</h1>
-            <p className="TextParrafo">
-              Our guiding philosophy has always been the same: We focus on helping people to be successful. The people who work for us, the people who engage with us.
-            </p>
-          </MDBAnimation>
-        </MDBCol>
-        <MDBCol md="1">
-        </MDBCol>
-      </MDBRow>
-
-      {/* FICHAS / MODULOS */}
-      <MDBRow className="container-banner marginDemo">
-        <MDBCol md="2">
-          <MDBAnimation type="fadeInLeft">
-            <p>
-              <button className="btnEv-grey rounded-0 mb-0 border-0 showHomeOffice" style={({ fontSize: 15 })} onClick={previous}>
-                <i className="fas fa-angle-left"></i> Prev</button>
-              <button className="btnEv-grey rounded-0 mb-0 border-0 showHomeOffice" style={({ fontSize: 15 })} onClick={next}>
-                Next <i className="fas fa-angle-right"></i></button>
-            </p>
-            <form className="" >
-              <select className="form-control" name="month" value={currentMonth} onChange={changeMonth}>
-                <option value="0">Jan</option>
-                <option value="1">Feb</option>
-                <option value="2">Mar</option>
-                <option value="3">Apr</option>
+            <div className="form-inline md-form">
+              {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
+              <select className="browser-default custom-select" name="month" value={currentMonth} onChange={changeMonth}>
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
                 <option value="4">May</option>
-                <option value="5">Jun</option>
-                <option value="6">Jul</option>
-                <option value="7">Aug</option>
-                <option value="8">Sep</option>
-                <option value="9">Oct</option>
-                <option value="10">Nov</option>
-                <option value="11">Dec</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
               </select>
-              <select className="form-control" name="year" value={currentYear} onChange={changeYear}>
+              <select className="browser-default custom-select" name="year" value={currentYear} onChange={changeYear}>
                 <option value="2019">2019</option>
                 <option value="2020">2020</option>
                 <option value="2021">2021</option>
@@ -62,38 +42,23 @@ const Calendar = ({ handleAddHome, handleProyect, listHomeOffice, next, previous
                 <option value="2029">2029</option>
                 <option value="2030">2030</option>
               </select>
-            </form>
-            <hr />
-            <select className="form-control" value={currentProyect} name="proyect" onChange={handleProyect}>
-              {
-                proyectList && proyectList.map((item, i) => (
-                  <option key={i} value={item.proyect}>{item.proyect}</option>
-                ))
-              }
+              <select className="browser-default custom-select" value={currentProyect} name="proyect" onChange={handleProyect}>
+                {
+                  proyectList && proyectList.map((item, i) => (
+                    <option key={i} value={item.proyect}>{item.proyect}</option>
+                  ))
+                }
 
-            </select>
-            {/* visualiza los nombres de los integrantes de cada equipo */}
-            <br />
-            <p>
-              <button onClick={()=>showHide('isShowAllowance')} className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Allowance</button>
-              <button onClick={()=>showHide('isShowBirthDay')} className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Birthday</button>
-            </p>
-            <div className={`form-control divListAllowance ${ (isShowAllowance)?'':'hiddenDiv'}`} >
-              <strong>Allowance:</strong> <br />
-              {employeProyectList && employeProyectList.map((item, i) => (
-                <p key={i} className="itemName">
-                  <i className="fas fa-user"></i> {item.name + ' ' + item.surname[0] + '.'}</p>
-              ))}
+              </select>
+
             </div>
-            <div className={`form-control divListAllowance ${ (isShowBirthDay)?'':'hiddenDiv'}`}>
-              <strong>BirthDay's:</strong> <br />
-              {birthDayList && birthDayList.map((item, i) => (
-                <p key={i} className="itemName">
-                  <i className="fas fa-birthday-cake"></i> {'(' + (item.birthdayDate).split('-')[2] + ') ' + item.name + ' ' + item.surname[0] + '.'}</p>
-              ))}
-            </div>
-          </MDBAnimation>
+          </p>
         </MDBCol>
+      </MDBRow>
+
+      {/* FICHAS / MODULOS */}
+      <MDBRow className="container-banner marginDemo">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore harum id, eum vitae corporis obcaecati delectus nostrum reiciendis dicta ipsa. Commodi dicta, dignissimos magni rem adipisci laborum in at minus!
         <MDBCol md="9">
           <MDBAnimation type="fadeInUp">
             <div className="card">
@@ -124,7 +89,29 @@ const Calendar = ({ handleAddHome, handleProyect, listHomeOffice, next, previous
             </div>
           </MDBAnimation>
         </MDBCol>
-      </MDBRow>
+        <MDBCol md="2">
+          <MDBAnimation type="fadeInLeft">
+            {/* <p>
+              <button onClick={() => showHide('isShowAllowance')} className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Allowance</button>
+              <button onClick={() => showHide('isShowBirthDay')} className="btnEv-blue rounded-0 mb-0 border-0 showHomeOffice">Show Birthday</button>
+            </p> */}
+            <strong>Work Team:</strong> <br />
+            <div className={`form-control divListAllowance ${(isShowAllowance) ? '' : ''}`} >
+              {employeProyectList && employeProyectList.map((item, i) => (
+                <p key={i} className="itemName">
+                  <i className="fas fa-user"></i> {item.name + ' ' + item.surname[0] + '.'}</p>
+              ))}
+            </div> <br/>
+            <strong>BirthDay's:</strong> <br />
+            <div className={`form-control divListAllowance ${(isShowBirthDay) ? '' : ''}`}>
+              {birthDayList && birthDayList.map((item, i) => (
+                <p key={i} className="itemName">
+                  <i className="fas fa-birthday-cake"></i> {'(' + (item.birthdayDate).split('-')[2] + ') ' + item.name + ' ' + item.surname[0] + '.'}</p>
+              ))}
+            </div>
+          </MDBAnimation>
+        </MDBCol>
+      </MDBRow><br/><br/>
     </>
   );
 };

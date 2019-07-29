@@ -64,4 +64,12 @@
       .timeline__year{
         margin-bottom: 50px
     }
+    .topMarginLine {
+        /* position: relative; */
+        margin-top: 18px !important;
+        /* margin-bottom: 1px; */
+    }
+    .newRequest {
+        position: relative;
+    }
 }

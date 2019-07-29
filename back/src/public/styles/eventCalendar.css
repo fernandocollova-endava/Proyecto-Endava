@@ -1,12 +1,18 @@
 .timeline{
   --uiTimelineMainColor: var(--timelineMainColor, #222);
   --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
-
   position: relative;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  margin: -32px;
 }
-
+.imgCalendar {
+  float: right;
+  padding: 10px;
+}
+.textJustify {
+  text-align: justify
+}
 .timeline:before{
   content: "";
   width: 4px;
@@ -29,11 +35,15 @@
   padding: .5rem 1.5rem;
   color: var(--uiTimelineSecondaryColor);
   background-color: var(--uiTimelineMainColor);
-
   position: absolute;
   left: 0;
   top: 0;
+  background-color: #353d73;
+  width: 120px;
+  font-size: 18px;
+  font-weight: bold;
 }
+
 
 .timeline__box{
   position: relative;
@@ -78,17 +88,21 @@
   font-size: .8em;
   text-transform: uppercase;
 }
-
+.hrEvent {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
 .timeline__post{
   padding: 1.5rem 2rem;
   border-radius: 2px;
   border-left: 3px solid var(--uiTimelineMainColor);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
   background-color: var(--uiTimelineSecondaryColor);
+  min-height: 216px;
 }
 
 @media screen and (min-width: 641px){
-
+/* Desk */
   .timeline:before{
     left: 30px;
   }
@@ -98,7 +112,8 @@
   }
 
   .timeline__box{
-    padding-left: 80px;
+    padding-left: 95px;
+    
   }
 
   .timeline__box:before{
@@ -113,7 +128,7 @@
 }
 
 @media screen and (max-width: 640px){
-
+  /* mobile */
   .timeline:before{
     left: 0;
   }
@@ -128,7 +143,7 @@
   }
 
   .timeline__box:before{
-    top: 90px;
+    top: 95px;
   }    
 
   .timeline__date{

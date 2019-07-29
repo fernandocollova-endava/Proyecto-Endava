@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom"
 import { createAllowance, sendEmailConfirm } from "../../redux/actions/allowanceActions";
 import {
   MDBCard,
@@ -9,7 +10,7 @@ import {
   MDBCol,
   MDBAnimation,
   MDBIcon,
-  MDBBtn
+  MDBBtn, MDBFormInline
 } from "mdbreact";
 // import { TesseractWorker } from "tesseract.js";
 import ModalAviso from "../ModalContainer/modalAviso";
@@ -58,7 +59,7 @@ class AllowanceContainer extends React.Component {
 
     //     for (let i = 0; i < numbers.length; i++) {
     //       // if (parseInt(numbers[i]) == this.state.employeeAmount) {
-  
+
     //       // }
     //       worker.terminate();
     //     }
@@ -125,11 +126,38 @@ class AllowanceContainer extends React.Component {
           textMsj={this.state.textMsj}
           titleMsj={this.state.titleMsj}
         />
-        <h3 className="upperCaseFonts marginTextLeft" >Manage your {this.props.nameUrl} allowance.</h3>
+        <MDBRow className="container-banner">
+          <MDBCol md="12">
+            <p className=" title-container">
+              <span className="titleMain upperCaseFonts">
+              <i className="fas fa-file-invoice-dollar"></i> {`MANAGE YOUR ${this.props.nameUrl} ALLOWANCE.`}</span>
+              <MDBFormInline className="md-form topMarginLine">
+                {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
+                <Link className="browser-default custom-select newRequestBtn"
+                  to="/allowance/gym"><i className="fas fa-plus-circle"></i> New Gym
+                </Link>
+                <Link className="browser-default custom-select newRequestBtn"
+                  to="/allowance/training"><i className="fas fa-plus-circle"></i> New Training
+                </Link>
+                <Link className="browser-default custom-select newRequestBtn"
+                  to="/allowance/child-care"><i className="fas fa-plus-circle"></i> New Child Care
+                </Link>
+                <Link className="browser-default custom-select newRequestBtn"
+                  to="/allowance/book"><i className="fas fa-plus-circle"></i> New Book
+                </Link>
+
+
+                <Link className="browser-default custom-select newRequest"
+                  to="/allowance/search"><i className="fas fa-chart-bar"></i> View my allowance
+                </Link>
+              </MDBFormInline>
+            </p>
+          </MDBCol>
+
+        </MDBRow>
+        <hr />
         {/* FORMULARIO  */}
         <MDBRow className="container-banner">
-          <MDBCol md="1">
-          </MDBCol>
           <MDBCol md="4">
             <MDBAnimation type="fadeInUp">
               <MDBCard>
@@ -192,7 +220,7 @@ class AllowanceContainer extends React.Component {
               </MDBCard>
             </MDBAnimation>
           </MDBCol>
-          <MDBCol md="6">
+          <MDBCol md="7">
             <label>preview:</label>
             {/* Visualización de archivo cargado */}
             <p>
@@ -200,7 +228,7 @@ class AllowanceContainer extends React.Component {
                 (this.state.active).split('.')[1] !== undefined) &&
                 <img src={`/assets/receipt/${this.state.active}`} width="100%" />}
             </p>
-          
+
             {
               ((this.state.active).split('.')[1] === 'pdf') &&
               <embed src={`/assets/receipt/${this.state.active}`} width="100%" height="400px"
@@ -224,7 +252,7 @@ const MapDispatchToProps = (dispatch) => {
   return {
     createAllowance: (data) => dispatch(createAllowance(data)),
     openCloseNavBar: (val) => dispatch(openCloseNavBar(val)),
-    sendEmailConfirm: (user,allowance) => dispatch(sendEmailConfirm(user, allowance))
+    sendEmailConfirm: (user, allowance) => dispatch(sendEmailConfirm(user, allowance))
   }
 }
 

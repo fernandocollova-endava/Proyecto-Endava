@@ -1,13 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import {
     MDBCollapse, MDBBtn, MDBAnimation, MDBContainer, MDBCol, MDBCardBody, MDBCardTitle,
-    MDBCardText, MDBCard, MDBCardImage, MDBRow, MDBInput
+    MDBCardText, MDBCard, MDBCardImage, MDBRow, MDBInput, MDBFormInline
 } from 'mdbreact';
 
 export default function obraSocial({ toggleCollapse, collapseID, email }) {
     return (
         <>
             <MDBContainer fluid>
+                <MDBRow className="container-banner">
+                    <MDBCol md="12">
+                        <p className="upperCaseFonts title-container-fluid">
+                            <span className="titleMain"><i className="fas fa-briefcase-medical"></i> HEALTH CARE</span>
+
+                            <MDBFormInline className="md-form topMarginLine">
+                                {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
+                                
+                                <Link className="browser-default custom-select newRequest"
+                                    to="/health-care/#form">
+                                    Send us your question
+                            </Link>
+                            </MDBFormInline>
+                        </p>
+                    </MDBCol>
+                </MDBRow>
+                <br />
                 <h3 className="upperCaseFonts">Find a health care plan built specially for you.</h3>
                 <span className="marginTextLeft" > Have the solutions on hand to manager health priorities. A health plan made for you and your requirements. </span> <br /><br />
                 <MDBAnimation type="fadeInUp">
@@ -17,9 +35,11 @@ export default function obraSocial({ toggleCollapse, collapseID, email }) {
                             <MDBCard>
                                 <MDBCardBody>
                                     <MDBRow>
-                                        <MDBCol md="4"><MDBCardImage className="img-fluid img-fluid z-depth-2" src="https://www.telediariodigital.net/wp-content/uploads/2013/10/OSDE.jpg" waves /></MDBCol>
+                                        <MDBCol md="4"><MDBCardImage className="img-fluid img-fluid z-depth-1"
+                                            src="/assets/img/osde.png" waves /></MDBCol>
+
                                         <MDBCol md="8">
-                                            <MDBCardTitle style={({ minHeight: 62 })}>OSDE</MDBCardTitle>
+                                            <MDBCardTitle>OSDE</MDBCardTitle>
                                             <MDBCardText>
                                                 Some quick example text to build on the card title and make
                                                 up the bulk of the card&apos;s content.
@@ -45,9 +65,10 @@ export default function obraSocial({ toggleCollapse, collapseID, email }) {
                             <MDBCard>
                                 <MDBCardBody>
                                     <MDBRow>
-                                        <MDBCol md="4"><MDBCardImage className="img-fluid img-fluid z-depth-1" src="https://www.gmkfreelogos.com/logos/S/img/swiss_medical.gif" waves /></MDBCol>
+                                        <MDBCol md="4"><MDBCardImage className="img-fluid img-fluid z-depth-1"
+                                            src="/assets/img/swiss.png" waves /></MDBCol>
                                         <MDBCol md="8">
-                                            <MDBCardTitle style={({ minHeight: 62 })}>SWISS MEDICAL</MDBCardTitle>
+                                            <MDBCardTitle>SWISS MEDICAL</MDBCardTitle>
                                             <MDBCardText>
                                                 Some quick example text to build on the card title and make.
                                         </MDBCardText>
@@ -80,9 +101,12 @@ export default function obraSocial({ toggleCollapse, collapseID, email }) {
 
                 <MDBAnimation type="fadeInLeft">
                     <MDBRow>
-                        <MDBCol md="8">
-                            <h3 className="upperCaseFonts">Find a health care plan built specially for you.</h3>
-                            <span className="marginTextLeft" > Have the solutions on hand to manager health priorities. A health plan made for you and your requirements. </span> <br /><br />
+                        <MDBCol md="8" id="form">
+
+                            <strong > Send us your question</strong> <br />
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque odio enim ducimus blanditiis nulla reprehenderit ea nesciunt, ratione porro, tempora quas? Provident reprehenderit fuga numquam odit perspiciatis soluta, ipsum omnis?
+                            <br />
+                            <br />
                             <MDBCol md="7">
                                 <MDBCard>
                                     <form>
@@ -131,6 +155,7 @@ export default function obraSocial({ toggleCollapse, collapseID, email }) {
                     </MDBRow>
                 </MDBAnimation>
             </MDBContainer>
+            <br /><br />
         </>
     );
 }

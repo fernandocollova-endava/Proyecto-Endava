@@ -84,7 +84,7 @@ Router.get("/", function(req, res) {
       },
     ],
     attributes: ["topic", "status", "date", "time", "description"], // filtro datos que necesito
-    order: [["date", "ASC"]] //ordeno de forma ascendente, por fecha
+    order: [["date", "DESC"]] //ordeno de forma ascendente, por fecha
 
   }).then(eventList => {
     res.send(eventList)

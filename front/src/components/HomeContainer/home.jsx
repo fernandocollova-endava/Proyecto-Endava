@@ -38,50 +38,16 @@ const AnimationPage = ({ cardList }) => {
 
       {/* FICHAS / MODULOS */}
       <MDBRow className="container-banner marginDemo">
-        {
-          cardList && cardList.map((card, i) => (
-            <MDBCol md="3" key={i}>
-              {/* delay proporciona un delay multiplicado por i ( posicion del array )
-                generando un efecto de cadena en la animacion.. reveal*/}
-              <MDBAnimation delay={`${(i*100)}ms`} type='fadeInLeftBig'>
-                <MDBCard className="Card-Img">
-                  <div className="container-IMG" key={card.name}>
-                    <div className="div-img" >
-                      <Link to={`/allowance/${card.name}`} >
-                        <div className="ajustImg">
-                        <img src={`/assets/img/${card.name}_IMG_min.png`} //{card.imgUrl}
-                          className="img-fluid margenBottomMobile img"
-                          alt={`Imagen logo ${card.name}`} />
-                        </div>
-                        <center >
-                          <span 
-                            className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">
-                            {/* <img src={`/assets/img/${card.name}.png`} width="30px"/> */}
-                            Enter <i className="fas fa-angle-double-right"></i></span>
-                        </center>
-                      </Link>
-                    </div>
-                  </div>
-
-                  <span className="titleModule">{card.completeName}</span>
-                </MDBCard>
-                <br />
-              </MDBAnimation>
-            </MDBCol>
-            
-          ))
-         
-        }
-         <MDBCol md="3" key={"book"}>
+      <MDBCol md="3" >
           {/* delay proporciona un delay multiplicado por i ( posicion del array )
             generando un efecto de cadena en la animacion.. reveal*/}
-          <MDBAnimation delay={`${(2*100)}ms`} type='fadeInLeftBig'>
+          <MDBAnimation delay={`${(1*100)}ms`} type='fadeInDownBig'>
             <MDBCard className="Card-Img">
-              <div className="container-IMG" key={"book"}>
+              <div className="container-IMG" >
                 <div className="div-img" >
-                  <Link to={`/allowance/book`} >
+                  <Link to={`/allowance/new-allowance`} >
                     <div className="ajustImg">
-                    <img src={`/assets/img/book_IMG_min.png`} //{card.imgUrl}
+                    <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/StockImages/Desktop/SuccessStories/Inner_650x650_SS08_02.ashx"
                       className="img-fluid margenBottomMobile img"
                       alt={`Imagen logo book`} />
                     </div>
@@ -95,12 +61,97 @@ const AnimationPage = ({ cardList }) => {
                 </div>
               </div>
 
-              <span className="titleModule">BookAllowance</span>
+              <span className="titleModule upperCaseFonts">New Allowance</span>
+            </MDBCard>
+            <br />
+          </MDBAnimation>
+        </MDBCol>
+        <MDBCol md="3" >
+          {/* delay proporciona un delay multiplicado por i ( posicion del array )
+            generando un efecto de cadena en la animacion.. reveal*/}
+          <MDBAnimation delay={`${(2*100)}ms`} type='fadeInDownBig'>
+            <MDBCard className="Card-Img">
+              <div className="container-IMG" >
+                <div className="div-img" >
+                  <Link to={`/health-care`} >
+                    <div className="ajustImg">
+                    <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/InsuranceAndHealthcare/make_a_difference-inner_desktop_650x650.ashx" //{card.imgUrl}
+                      className="img-fluid margenBottomMobile img"
+                      alt={`Imagen logo book`} />
+                    </div>
+                    <center >
+                      <span 
+                        className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">
+                        {/* <img src={`/assets/img/${card.name}.png`} width="30px"/> */}
+                        Enter <i className="fas fa-angle-double-right"></i></span>
+                    </center>
+                  </Link>
+                </div>
+              </div>
+
+              <span className="titleModule upperCaseFonts">Healt Care</span>
+            </MDBCard>
+            <br />
+          </MDBAnimation>
+        </MDBCol>
+        <MDBCol md="3" >
+          {/* delay proporciona un delay multiplicado por i ( posicion del array )
+            generando un efecto de cadena en la animacion.. reveal*/}
+          <MDBAnimation delay={`${(3*100)}ms`} type='fadeInDownBig'>
+            <MDBCard className="Card-Img">
+              <div className="container-IMG" >
+                <div className="div-img" >
+                  <Link to={`/calendar`} >
+                    <div className="ajustImg">
+                    <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Complete-Investment-Management-Insights/650.ashx"
+                      className="img-fluid margenBottomMobile img"
+                      alt={`Imagen logo book`} />
+                    </div>
+                    <center >
+                      <span 
+                        className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">
+                        {/* <img src={`/assets/img/${card.name}.png`} width="30px"/> */}
+                        Enter <i className="fas fa-angle-double-right"></i></span>
+                    </center>
+                  </Link>
+                </div>
+              </div>
+
+              <span className="titleModule upperCaseFonts">Event Calendar</span>
+            </MDBCard>
+            <br />
+          </MDBAnimation>
+        </MDBCol>
+         <MDBCol md="3" >
+          {/* delay proporciona un delay multiplicado por i ( posicion del array )
+            generando un efecto de cadena en la animacion.. reveal*/}
+          <MDBAnimation delay={`${(4*100)}ms`} type='fadeInDownBig'>
+            <MDBCard className="Card-Img">
+              <div className="container-IMG" >
+                <div className="div-img" >
+                  <Link to={`/discipline-event/new`} >
+                    <div className="ajustImg">
+                    <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Retail-Enhancing/650.ashx"
+                      className="img-fluid margenBottomMobile img"
+                      alt={`Imagen logo book`} />
+                    </div>
+                    <center >
+                      <span 
+                        className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">
+                        {/* <img src={`/assets/img/${card.name}.png`} width="30px"/> */}
+                        Enter <i className="fas fa-angle-double-right"></i></span>
+                    </center>
+                  </Link>
+                </div>
+              </div>
+
+              <span className="titleModule upperCaseFonts">Discipline Event</span>
             </MDBCard>
             <br />
           </MDBAnimation>
         </MDBCol>
       </MDBRow>
+      <br/><br/>
     </>
   );
 };
