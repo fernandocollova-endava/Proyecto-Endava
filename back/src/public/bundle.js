@@ -68014,7 +68014,7 @@ var AnimationPage = function AnimationPage(_ref) {
     type: "fadeInUp"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "fontLight upperCaseFonts"
-  }, "Allowance Management Site"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Benefits Management Site"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "TextParrafo"
   }, "Now you can ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "fontEmphasis"
@@ -68055,7 +68055,7 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "titleModule upperCaseFonts"
   }, "New Allowance"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "descriptionModule"
-  }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+  }, " You can upload any allowance from here.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     delay: "".concat(2 * 100, "ms"),
@@ -68083,7 +68083,7 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "titleModule upperCaseFonts"
   }, "Health Care"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "descriptionModule"
-  }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+  }, " Get more info about your health care.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     delay: "".concat(3 * 100, "ms"),
@@ -68110,7 +68110,7 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "titleModule upperCaseFonts"
   }, "Event Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "descriptionModule"
-  }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+  }, "Check out every day's important events. ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
     delay: "".concat(4 * 100, "ms"),
@@ -68137,7 +68137,7 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "titleModule upperCaseFonts"
   }, "Home Office"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "descriptionModule"
-  }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+  }, " Manage easily your home office days.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AnimationPage);
@@ -68412,7 +68412,7 @@ var AnimationPage = function AnimationPage(_ref) {
       className: "titleModule"
     }, card.completeName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "descriptionModule"
-    }, " Aqui podr\xE1s cargar tus solicitudes.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
+    }, " Click here and upload your allowance.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 

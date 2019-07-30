@@ -61,7 +61,7 @@ const AnimationPage = ({ cardList }) => {
                   </div>
 
                   <span className="titleModule">{card.completeName}</span>
-                  <span className="descriptionModule"> Aqui podrás cargar tus solicitudes.</span>
+                  <span className="descriptionModule"> Click here and upload your allowance.</span>
                 </MDBCard>
                 <br />
               </MDBAnimation>

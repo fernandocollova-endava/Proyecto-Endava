@@ -17,7 +17,7 @@ const AnimationPage = ({ cardList }) => {
         </MDBCol>
         <MDBCol md="10">
           <MDBAnimation type="fadeInUp">
-          <h1 className="fontLight upperCaseFonts">Allowance Management Site</h1>
+          <h1 className="fontLight upperCaseFonts">Benefits Management Site</h1>
             <p className="TextParrafo">
               Now you can <strong className="fontEmphasis">manage the benefits </strong>you already knew from 
               this agile and easy going 
@@ -58,7 +58,7 @@ const AnimationPage = ({ cardList }) => {
                 </div>
               </div>
               <span className="titleModule upperCaseFonts">New Allowance</span>
-              <span className="descriptionModule"> Aqui podrás cargar tus solicitudes.</span>
+              <span className="descriptionModule"> You can upload any allowance from here.</span>
             </MDBCard>
             <br />
           </MDBAnimation>
@@ -87,7 +87,7 @@ const AnimationPage = ({ cardList }) => {
               </div>
 
               <span className="titleModule upperCaseFonts">Health Care</span>
-              <span className="descriptionModule"> Aqui podrás cargar tus solicitudes.</span>
+              <span className="descriptionModule"> Get more info about your health care.</span>
             </MDBCard>
             <br />
           </MDBAnimation>
@@ -116,7 +116,7 @@ const AnimationPage = ({ cardList }) => {
               </div>
 
               <span className="titleModule upperCaseFonts">Event Calendar</span>
-              <span className="descriptionModule"> Aqui podrás cargar tus solicitudes.</span>
+              <span className="descriptionModule">Check out every day's important events. </span>
             </MDBCard>
             <br />
           </MDBAnimation>
@@ -145,7 +145,7 @@ const AnimationPage = ({ cardList }) => {
               </div>
 
               <span className="titleModule upperCaseFonts">Home Office</span>
-              <span className="descriptionModule"> Aqui podrás cargar tus solicitudes.</span>
+              <span className="descriptionModule"> Manage easily your home office days.</span>
             </MDBCard>
             <br />
           </MDBAnimation>
