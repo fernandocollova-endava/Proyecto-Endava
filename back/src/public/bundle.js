@@ -66350,12 +66350,15 @@ function allowanceList(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "upperCaseFonts title-container"
+    className: "upperCaseFonts title-container",
+    style: allUser ? {
+      backgroundColor: "#9bb4be"
+    } : {}
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "titleMain"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-chart-bar"
-  }), " MY ALLOWANCE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }), " ", allUser ? "PANEL ADMIN!!" : "MY ALLOWANCE", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "form-inline md-form topMarginLine"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     value: allowanceType,
@@ -67122,7 +67125,7 @@ function (_React$Component) {
         className: "textAlert"
       }, "*Please note that only jpg, png and PDF files up to 10MB are accepted.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
         md: "6"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "preview:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, console.log("soy stateActive", this.state.active), this.state.active.split('.')[1] !== 'pdf' && this.state.active.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "preview:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.active.split('.')[1] !== 'pdf' && this.state.active.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/assets/receipt/".concat(this.state.active),
         width: "100%"
       })), this.state.active.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
@@ -70001,7 +70004,10 @@ function ModalDetails(_ref) {
     className: "textBold"
   }, "Admin Comment: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
-  }, activeAllowance.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), activeAllowance.receiptPath.split('.')[1] !== 'pdf' && activeAllowance.receiptPath.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, activeAllowance.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "flipInX",
+    delay: "500ms"
+  }, activeAllowance.receiptPath.split('.')[1] !== 'pdf' && activeAllowance.receiptPath.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "/assets/receipt/".concat(activeAllowance.receiptPath),
     width: "100%"
   }), activeAllowance.receiptPath.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
@@ -70009,7 +70015,7 @@ function ModalDetails(_ref) {
     width: "100%",
     height: "400px",
     type: "application/pdf"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
     tabId: "2",
     role: "tabpanel"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -71373,7 +71379,6 @@ var createAllowance = function createAllowance(formData) {
 };
 var fetchAllowances = function fetchAllowances(date, userId, allowanceId, status, allUser) {
   return function (dispatch) {
-    console.log(date, "AGUS");
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/allowance/search", {
       params: {
         dateStart: date.start,

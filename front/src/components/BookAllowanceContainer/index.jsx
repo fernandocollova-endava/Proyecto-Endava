@@ -191,7 +191,6 @@ class BookAllowanceContainer extends React.Component {
             <label>preview:</label>
             {/* Visualización de archivo cargado */}
             <p>
-              {console.log("soy stateActive", this.state.active)}
               {((this.state.active).split('.')[1] !== 'pdf' &&
                 (this.state.active).split('.')[1] !== undefined) &&
                 <img src={`/assets/receipt/${this.state.active}`} width="100%" />}
