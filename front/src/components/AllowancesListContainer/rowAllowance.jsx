@@ -24,24 +24,18 @@ export default function rowAllowance({
   ];
   return (
     <>
-      {/* {console.log("soy los books del roow", allowanceList)} */}
-
       <tbody>
-      {console.log(allowanceList)}
         {allowanceList &&
-          allowanceList.map((row, i) =>
-          
-            row.topic ? (
-                
-              <tr key={i}>
-              
-                <td className="upperCaseFonts">{row.topic}</td>
-                <td className="upperCaseFonts">{row.employee.name}</td> 
+          allowanceList.map((row, i) =>          
+            row.topic ? (                
+              <tr key={i}>              
+                <td key={`idClass_${i}`} className="upperCaseFonts">{row.topic}</td>
+                <td key={`idClassName_${i}`} className="upperCaseFonts">{row.employee.name}</td> 
                 <td>{row.date}</td>
                 <td>{row.time}</td>
-                <td>{row.status}</td>
+                {/* <td>{row.status}</td>
                 <td key={`id_${i}`} className="upperCaseFonts">
-                </td>
+                </td> */}
                 <td>
                   <label className={row.status}>{row.status}</label>
                 </td>
@@ -98,7 +92,7 @@ export default function rowAllowance({
                 <td>{row.amount}</td>
                 <td>{row.limitAmount}</td>
                 <td>{row.employeeAmount}</td>
-                <th>Date</th>
+                
                 {urlName == "book" ? null : <td>{row.paymentDate}</td>}
                 <td>
                   <label className={row.status}>{row.status}</label>
