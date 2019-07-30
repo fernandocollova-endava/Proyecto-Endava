@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import { MDBCard, MDBCardBody, MDBRow, MDBCol, MDBAnimation, MDBFormInline } from "mdbreact";
+import { MDBCard, MDBRow, MDBCol, MDBAnimation } from "mdbreact";
 
 const AnimationPage = ({ cardList }) => {
   return (
@@ -26,9 +26,6 @@ const AnimationPage = ({ cardList }) => {
                 
               </span>
             </p>
-
-
-
           </MDBCol>
       </MDBRow>
 

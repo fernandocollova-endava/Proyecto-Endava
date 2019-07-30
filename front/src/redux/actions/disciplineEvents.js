@@ -29,7 +29,6 @@ export const createDisciplineEvents = (data, user) => dispatch => {
 };
 
 export const fetchDisciplineEvents = (userId, adminUrl, status) => dispatch => {
-  
     return axios
     .get(`/api/disciplineEvent/`, {
       params: {
@@ -58,12 +57,10 @@ return axios.get(`/api/disciplineEvent/${userId}`, {
 }
 
 export const fetchActiveEvent = (id) => dispatch => { 
-  console.log("entreee al axios", id)
 return axios
 .get(`/api/disciplineEvent/findActive/${id}`)
 .then(res => res.data)
 .then(activeEvent => {
-  console.log("activeeeeee", activeEvent)
  return dispatch(receiveActiveEvent(activeEvent));
 });
 }

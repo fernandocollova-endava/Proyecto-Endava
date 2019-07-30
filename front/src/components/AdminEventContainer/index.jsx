@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import moment from "moment";
 import {
   fetchBookAllowances,
   fetchAllowanceHistory,
@@ -44,32 +43,16 @@ class AdminEventContainer extends React.Component {
   componentDidMount() {
     this.props.openCloseNavBar(false);
     this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus);
-    // this.setState(
-    //   {
-    //     selectedMonth: selectedMonth
-    //   },
-    //   () => {
-    //     this.props.fetchDisciplineEvents();
-       
-    //   }
-    // );
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.adminPath !== this.props.adminPath) {
       this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus)
-        // .then(() =>
-        //   this.props.fetchBookAllowances(
-        //     this.props.user.id,
-        //     this.props.adminPath
-        //   )
-        // );
     }
   }
 
   // FUNCION DE CONSULTA HISTORIAL / DETALLE
   viewDetails(id) {
-    console.log(id, "ID")
     this.props.fetchActiveEvent(id).then(data => {
     
         this.setState({
@@ -79,7 +62,6 @@ class AdminEventContainer extends React.Component {
     });
   }
   handleFilterStatus(e) {
-    console.log("soy e", e.target.value)
     this.props.fetchDisciplineEvents(this.props.user.id,this.props.adminPath, e.target.value);
     this.setState({
       allowanceStatus: e.target.value
@@ -144,7 +126,6 @@ class AdminEventContainer extends React.Component {
   render() {
     return (
       <div>
-        {console.log("soy EVENT", this.props.activeEvent)}
         <ModalEventDetails
           modal={this.state.modal}
           toggleDetails={this.toggleDetails}

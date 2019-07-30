@@ -66003,9 +66003,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
 /* harmony import */ var _AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AllowancesListContainer/rowAllowance */ "./src/components/AllowancesListContainer/rowAllowance.jsx");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__);
-
 
 
 
@@ -66018,26 +66015,26 @@ function adminEvent(_ref) {
       viewDetails = _ref.viewDetails,
       allUser = _ref.allUser,
       urlName = _ref.urlName;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "upperCaseFonts"
-  }, "Requests")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
-    className: "md-form"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "angle-double-right"
-  }), " \xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    md: "12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "upperCaseFonts title-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleMain"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-user-check"
+  }), " EVENT ADMIN PANEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "form-inline md-form topMarginLine"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     value: allowanceStatus,
     className: "browser-default custom-select",
     name: "status",
     onChange: handleFilterStatus
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: ""
-  }, "Status..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "Please, select status..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: ""
   }, "All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "pending"
@@ -66045,20 +66042,7 @@ function adminEvent(_ref) {
     value: "approved"
   }, "Approved"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "rejected"
-  }, "Rejected")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "2"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
-    className: "md-form"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "search"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "form-control form-control-sm ml-3 w-75",
-    type: "text",
-    placeholder: "Search",
-    "aria-label": "Search"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Rejected")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       maxWidth: 406,
       position: "fixed",
@@ -66075,12 +66059,12 @@ function adminEvent(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
   }, eventList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "table-responsive"
+    className: "table-responsive"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-    "class": "table btn-table table-fixed paddingTable"
+    className: "table btn-table table-fixed paddingTable"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
-    "class": ""
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Schelude"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    className: ""
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Schelude"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
     urlName: urlName,
     deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
     ,
@@ -66107,15 +66091,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/disciplineEvents */ "./src/redux/actions/disciplineEvents.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/ModalEventDetail */ "./src/components/ModalContainer/ModalEventDetail.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
-/* harmony import */ var _AdminEventContainer_adminEvent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../AdminEventContainer/adminEvent */ "./src/components/AdminEventContainer/adminEvent.jsx");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/disciplineEvents */ "./src/redux/actions/disciplineEvents.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/ModalEventDetail */ "./src/components/ModalContainer/ModalEventDetail.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
+/* harmony import */ var _AdminEventContainer_adminEvent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AdminEventContainer/adminEvent */ "./src/components/AdminEventContainer/adminEvent.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66133,7 +66115,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -66183,25 +66164,13 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.openCloseNavBar(false);
-      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus); // this.setState(
-      //   {
-      //     selectedMonth: selectedMonth
-      //   },
-      //   () => {
-      //     this.props.fetchDisciplineEvents();
-      //   }
-      // );
+      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus);
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       if (prevProps.adminPath !== this.props.adminPath) {
-        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus); // .then(() =>
-        //   this.props.fetchBookAllowances(
-        //     this.props.user.id,
-        //     this.props.adminPath
-        //   )
-        // );
+        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus);
       }
     } // FUNCION DE CONSULTA HISTORIAL / DETALLE
 
@@ -66210,7 +66179,6 @@ function (_React$Component) {
     value: function viewDetails(id) {
       var _this2 = this;
 
-      console.log(id, "ID");
       this.props.fetchActiveEvent(id).then(function (data) {
         _this2.setState({
           modal: true
@@ -66220,7 +66188,6 @@ function (_React$Component) {
   }, {
     key: "handleFilterStatus",
     value: function handleFilterStatus(e) {
-      console.log("soy e", e.target.value);
       this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, e.target.value);
       this.setState({
         allowanceStatus: e.target.value
@@ -66285,7 +66252,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("soy EVENT", this.props.activeEvent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
         togglePanel: this.togglePanel,
@@ -66295,18 +66262,18 @@ function (_React$Component) {
         handleSaveConfirm: this.handleSaveConfirm,
         msjSave: this.state.msjSave,
         allUser: this.props.allUser
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__["default"], {
         modal: this.state.modalAviso,
         toggle: this.toggleAviso,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__["default"], {
         modalBoolean: this.state.modalBoolean,
         toggleBoolean: this.toggleBoolean,
         actionOk: this.actionOk,
         titleBoolean: this.state.titleBoolean,
         data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminEventContainer_adminEvent__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminEventContainer_adminEvent__WEBPACK_IMPORTED_MODULE_8__["default"], {
         alertPending: this.state.alertPending,
         handleClick: this.handleClick,
         handleFilterStatus: this.handleFilterStatus,
@@ -66340,28 +66307,28 @@ var mapStateToProps = function mapStateToProps(state, own) {
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
     fetchBookAllowances: function fetchBookAllowances(user, adminPath) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchBookAllowances"])(user, adminPath));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchBookAllowances"])(user, adminPath));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__["openCloseNavBar"])(val));
     },
     fetchActiveEvent: function fetchActiveEvent(id) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchActiveEvent"])(id));
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__["fetchActiveEvent"])(id));
     },
     deleteEvent: function deleteEvent(id) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["deleteEvent"])(id));
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__["deleteEvent"])(id));
     },
     // Elimina detalle
     editEventStatus: function editEventStatus(id, status, observation) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["editEventStatus"])(id, status, observation));
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__["editEventStatus"])(id, status, observation));
     },
     // Switch State
     fetchCountPending: function fetchCountPending(userId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchCountPending"])(userId));
     },
     // Consulta cantidad de allowance pendientes
     fetchDisciplineEvents: function fetchDisciplineEvents(userId, adminUrl, status) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchDisciplineEvents"])(userId, adminUrl, status));
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__["fetchDisciplineEvents"])(userId, adminUrl, status));
     }
   };
 };
@@ -66491,6 +66458,7 @@ function (_React$Component) {
       //       this.state.employeeAmount
       //     );
       //   } else console.log("odo bieeeeeen");
+      // Agustin estuvo aca 
 
       formData.append('file', file);
       formData.append('userid', this.props.user.id);
@@ -66504,7 +66472,9 @@ function (_React$Component) {
           active: response.data,
           modal: true,
           textMsj: 'The file has been successfully sent',
-          titleMsj: 'Success'
+          titleMsj: 'Success',
+          employeeAmount: 0,
+          observation: ""
         });
       })["catch"](function (error) {
         _this2.setState({
@@ -66603,7 +66573,7 @@ function (_React$Component) {
         onSubmit: this.onFormSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "h4 text-center py-4"
-      }, "Submit your receipt", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }, "Submit your ", this.props.nameUrl, " receipt", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "maxAmount"
       }, " ", "(Max Amount $".concat(maxAmount.fixedAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "grey-text"
@@ -66615,9 +66585,11 @@ function (_React$Component) {
         autoComplete: "off",
         type: "number",
         validate: true,
+        value: this.state.employeeAmount != 0 && this.state.employeeAmount,
         name: "employeeAmount",
         onChange: this.onAmountChange,
         error: "wrong",
+        autoFocus: true,
         success: "right"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
         label: "Observation...",
@@ -66627,6 +66599,7 @@ function (_React$Component) {
         autoComplete: "off",
         type: "text",
         name: "observation",
+        value: this.state.observation,
         onChange: this.onObservationChange,
         validate: true,
         error: "wrong",
@@ -66784,17 +66757,7 @@ function allowanceList(_ref) {
   }, "Last two months")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "browser-default custom-select newRequest",
     to: "/allowance/new-allowance"
-  }, "+ New Allowance"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      maxWidth: 406,
-      position: "fixed",
-      bottom: 0
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
-    type: "heartBeat"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAlert"], {
-    color: "success"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Hello!"), " You have ", alertPending, " allowance pending response...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)))) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+  }, "+ New Allowance"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
     className: "container-banner minHeight"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "12"
@@ -67218,17 +67181,16 @@ function rowAllowance(_ref) {
       allowanceList = _ref.allowanceList,
       urlName = _ref.urlName;
   var Month = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, console.log(allowanceList), allowanceList && allowanceList.map(function (row, i) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, allowanceList && allowanceList.map(function (row, i) {
     return row.topic ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: i
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      key: "idClass_".concat(i),
       className: "upperCaseFonts"
     }, row.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      key: "idClassName_".concat(i),
       className: "upperCaseFonts"
-    }, row.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-      key: "id_".concat(i),
-      className: "upperCaseFonts"
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    }, row.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: row.status
     }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.allowanceDetail ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
@@ -67263,7 +67225,7 @@ function rowAllowance(_ref) {
       className: "upperCaseFonts"
     }, row.allowanceDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "upperCaseFonts"
-    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: row.status
     }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
@@ -67956,9 +67918,6 @@ function eventCalendar(_ref) {
   var eventList = _ref.eventList,
       handleClick = _ref.handleClick,
       onKeyDown = _ref.onKeyDown;
-  {
-    console.log(eventList);
-  }
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBContainer"], {
     fluid: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
@@ -70330,10 +70289,12 @@ function ModalEventDetails(_ref) {
   }, "Employee: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
   }, " ", activeEvent.employee && activeEvent.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
+    className: "marginTextLeft textBold"
   }, "Topic: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
-  }, " ", activeEvent.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+  }, " ", activeEvent.topic)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
   }, "Time schelude: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
@@ -70603,7 +70564,7 @@ function ModalDetails(_ref) {
   }, "Admin Comment: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
   }, activeAllowance.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "flipInX",
+    type: "fadeIn",
     delay: "500ms"
   }, activeAllowance.receiptPath.split('.')[1] !== 'pdf' && activeAllowance.receiptPath.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "/assets/receipt/".concat(activeAllowance.receiptPath),
@@ -72172,11 +72133,9 @@ var fetchEmployeeEvents = function fetchEmployeeEvents(userId) {
 };
 var fetchActiveEvent = function fetchActiveEvent(id) {
   return function (dispatch) {
-    console.log("entreee al axios", id);
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/findActive/".concat(id)).then(function (res) {
       return res.data;
     }).then(function (activeEvent) {
-      console.log("activeeeeee", activeEvent);
       return dispatch(receiveActiveEvent(activeEvent));
     });
   };

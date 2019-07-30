@@ -28,7 +28,8 @@ class AllowanceContainer extends React.Component {
       active: "",
       modal: false,
       textMsj: "",
-      titleMsj: ""
+      titleMsj: "",
+  
     };
     this.onFormSubmit = this.onFormSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -77,6 +78,7 @@ class AllowanceContainer extends React.Component {
     //       this.state.employeeAmount
     //     );
     //   } else console.log("odo bieeeeeen");
+    // Agustin estuvo aca 
 
     formData.append('file', file);
     formData.append('userid', this.props.user.id);
@@ -87,14 +89,20 @@ class AllowanceContainer extends React.Component {
     this.props.createAllowance(formData)
       .then((response) => {
         this.props.sendEmailConfirm(this.props.user, this.props.nameUrl)
-        this.setState({ active: response.data, modal: true, textMsj: 'The file has been successfully sent', titleMsj: 'Success' });
+        this.setState({ 
+          active: response.data, 
+          modal: true, 
+          textMsj: 'The file has been successfully sent', 
+          titleMsj: 'Success',
+          employeeAmount: 0,
+          observation: "", });
       }).catch((error) => {
         this.setState({ modal: true, textMsj: 'An error occurred while sending the file..', titleMsj: 'Error' });
       });
   }
   onChange(e) {
     this.setState({
-      file: e.target.files[0]
+      file: e.target.files[0],
     });
   }
   onObservationChange(e) {
@@ -131,7 +139,6 @@ class AllowanceContainer extends React.Component {
             <p className=" title-container">
               <span className="titleMain upperCaseFonts">
               <i className="fas fa-file-invoice-dollar"></i> {`MANAGE YOUR ${this.props.nameUrl} ALLOWANCE.`}</span>
-              
               <span className="form-inline md-form topMarginLine">
                 {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
                 <Link className="browser-default custom-select newRequestBtn"
@@ -164,7 +171,7 @@ class AllowanceContainer extends React.Component {
               <MDBCard>
                 <MDBCardBody>
                   <form onSubmit={this.onFormSubmit}>
-                    <p className="h4 text-center py-4">Submit your receipt
+                    <p className="h4 text-center py-4">Submit your {this.props.nameUrl} receipt
                         <label className="maxAmount"> {`(Max Amount $${maxAmount.fixedAmount})`}</label></p>
                     <div className="grey-text">
                       <MDBInput
@@ -174,9 +181,11 @@ class AllowanceContainer extends React.Component {
                         autoComplete="off"
                         type="number"
                         validate
+                        value={(this.state.employeeAmount!=0)&&this.state.employeeAmount}
                         name="employeeAmount"
                         onChange={this.onAmountChange}
                         error="wrong"
+                        autoFocus
                         success="right"
                       />
                       <MDBInput
@@ -187,6 +196,7 @@ class AllowanceContainer extends React.Component {
                         autoComplete="off"
                         type="text"
                         name="observation"
+                        value={this.state.observation}
                         onChange={this.onObservationChange}
                         validate
                         error="wrong"
