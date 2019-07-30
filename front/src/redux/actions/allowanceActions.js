@@ -68,9 +68,9 @@ export const createAllowance = formData => dispatch => {
   });
 };
 export const fetchAllowances = (date, userId, allowanceId, status, allUser) => dispatch => {
-    
   return axios
     .get("/api/allowance/search", {
+      
       params: {
         dateStart:date.start,
         dateEnd:date.end,

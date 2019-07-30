@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import { connect } from "react-redux";
 import { createAllowance, sendEmailConfirm } from "../../redux/actions/allowanceActions";
 import {
@@ -42,7 +43,7 @@ class BookAllowanceContainer extends React.Component {
     e.preventDefault();
     const { file, ...rest } = this.state;
     const formData = new FormData();
-    
+
     formData.append('file', file);
     formData.append('userid', this.props.user.id);
     formData.append('allowanceName', this.props.nameUrl);
@@ -91,11 +92,39 @@ class BookAllowanceContainer extends React.Component {
           textMsj={this.state.textMsj}
           titleMsj={this.state.titleMsj}
         />
-        <h3 className="upperCaseFonts marginTextLeft" >Manage your {this.props.nameUrl} allowance.</h3>
-        {/* FORMULARIO  */}
         <MDBRow className="container-banner">
-          <MDBCol md="1">
+          <MDBCol md="12">
+            <p className=" title-container">
+              <span className="titleMain upperCaseFonts">
+                <i className="fas fa-file-invoice-dollar"></i> {`MANAGE YOUR BOOK ALLOWANCE.`}</span>
+
+              <span className="form-inline md-form topMarginLine">
+                {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
+                <Link className="browser-default custom-select newRequestBtn"
+                  to="/allowance/gym"><i className="fas fa-plus-circle"></i> New Gym
+                </Link>
+                <Link className="browser-default custom-select newRequestBtn"
+                  to="/allowance/training"><i className="fas fa-plus-circle"></i> New Training
+                </Link>
+                <Link className="browser-default custom-select newRequestBtn"
+                  to="/allowance/child-care"><i className="fas fa-plus-circle"></i> New Child Care
+                </Link>
+                <Link className="browser-default custom-select newRequestBtn"
+                  to="/allowance/book"><i className="fas fa-plus-circle"></i> New Book
+                </Link>
+
+
+                <Link className="browser-default custom-select newRequest"
+                  to="/allowance/search"><i className="fas fa-chart-bar"></i> View my allowance
+                </Link>
+              </span>
+            </p>
           </MDBCol>
+
+        </MDBRow>
+        <hr />
+        <MDBRow className="container-banner">
+         
           <MDBCol md="4">
             <MDBAnimation type="fadeInUp">
               <MDBCard>
@@ -162,12 +191,11 @@ class BookAllowanceContainer extends React.Component {
             <label>preview:</label>
             {/* Visualización de archivo cargado */}
             <p>
-              {console.log("soy stateActive", this.state.active)}
               {((this.state.active).split('.')[1] !== 'pdf' &&
                 (this.state.active).split('.')[1] !== undefined) &&
                 <img src={`/assets/receipt/${this.state.active}`} width="100%" />}
             </p>
-          
+
             {
               ((this.state.active).split('.')[1] === 'pdf') &&
               <embed src={`/assets/receipt/${this.state.active}`} width="100%" height="400px"
@@ -181,7 +209,7 @@ class BookAllowanceContainer extends React.Component {
 }
 const mapStateToProps = (state, owner) => {
 
-  var nameUrl= owner.match.url.substring(11,17)
+  var nameUrl = owner.match.url.substring(11, 17)
   return {
     user: state.user.user,
     nameUrl: nameUrl, // A diferencia de aquellos mapeados, traigo el nombre del path/url
@@ -193,7 +221,7 @@ const MapDispatchToProps = (dispatch) => {
   return {
     createAllowance: (data) => dispatch(createAllowance(data)),
     openCloseNavBar: (val) => dispatch(openCloseNavBar(val)),
-    sendEmailConfirm: (user,allowance) => dispatch(sendEmailConfirm(user, allowance))
+    sendEmailConfirm: (user, allowance) => dispatch(sendEmailConfirm(user, allowance))
   }
 }
 
