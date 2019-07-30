@@ -8,6 +8,8 @@ import {
 
 
 export default function eventCalendar({ eventList, handleClick, onKeyDown }) {
+  
+  {console.log(eventList)}
   return (
     <MDBContainer fluid>
       <MDBRow className="container-banner">
@@ -33,6 +35,7 @@ export default function eventCalendar({ eventList, handleClick, onKeyDown }) {
                 <div className="timeline">
                   <div className="timeline__group">
                     {eventList.length && eventList.map((item, i) => (
+                      
                       <MDBAnimation key={`id_${i}`} type="fadeInLeft" reveal={((i > 1) ? true : false)}>
                         <span className="timeline__year" key={i}><Moment format="YYYY">{item.date}</Moment></span>
                         <br/><br/>

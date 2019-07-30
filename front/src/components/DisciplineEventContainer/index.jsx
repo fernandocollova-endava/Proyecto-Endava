@@ -2,8 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import {
   createDisciplineEvents,
-  fetchDisciplineEvents,
-  fetchTechonogies
+  fetchTechonogies,
+  fetchEmployeeEvents
 } from "../../redux/actions/disciplineEvents";
 import DisciplineEvent from "../DisciplineEventContainer/disciplineEvents";
 import ModalAviso from "../ModalContainer/modalAviso";
@@ -32,13 +32,13 @@ class DisciplineEventContainer extends React.Component {
   }
   componentDidMount() {
     window.scrollTo(0, 0);
-    this.props.fetchDisciplineEvents(this.props.user.id);
+    this.props.fetchEmployeeEvents(this.props.user.id);
     this.props.fetchTechonogies();
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.eventList.length != this.props.eventList.length) {
-      this.props.fetchDisciplineEvents(this.props.user.id);
+      this.props.fetchEmployeeEvents(this.props.user.id);
     }
   }
 
@@ -53,7 +53,7 @@ class DisciplineEventContainer extends React.Component {
             textMsj: "The event has been successfully sent",
             titleMsj: "Success"
           })
-          this.props.fetchDisciplineEvents(this.props.user.id)
+          this.props.fetchEmployeeEvents(this.props.user.id)
         }
       );
   }
@@ -90,6 +90,7 @@ class DisciplineEventContainer extends React.Component {
   render() {
     return (
       <div>
+       
         <DisciplineEvent
           onChange={this.onChange}
           onFormSubmit={this.onFormSubmit}
@@ -124,7 +125,7 @@ const MapDispatchToProps = dispatch => {
   return {
     createDisciplineEvents: (data, user) =>
       dispatch(createDisciplineEvents(data, user)),
-    fetchDisciplineEvents: user => dispatch(fetchDisciplineEvents(user)),
+    fetchEmployeeEvents: user => dispatch(fetchEmployeeEvents(user)),
     fetchTechonogies: () => dispatch(fetchTechonogies())
   };
 };

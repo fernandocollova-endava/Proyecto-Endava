@@ -58060,7 +58060,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66080,7 +66080,7 @@ function adminEvent(_ref) {
     "class": "table btn-table table-fixed paddingTable"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
     "class": ""
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Schelude"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Schelude"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
     urlName: urlName,
     deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
     ,
@@ -66174,8 +66174,6 @@ function (_React$Component) {
     _this.togglePanel = _this.togglePanel.bind(_assertThisInitialized(_this));
     _this.viewDetails = _this.viewDetails.bind(_assertThisInitialized(_this));
     _this.toggleAviso = _this.toggleAviso.bind(_assertThisInitialized(_this));
-    _this.deleteEvent = _this.deleteEvent.bind(_assertThisInitialized(_this));
-    _this.actionOk = _this.actionOk.bind(_assertThisInitialized(_this));
     _this.handleFilterStatus = _this.handleFilterStatus.bind(_assertThisInitialized(_this));
     _this.handleSaveConfirm = _this.handleSaveConfirm.bind(_assertThisInitialized(_this));
     return _this;
@@ -66185,7 +66183,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.openCloseNavBar(false);
-      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath); // this.setState(
+      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus); // this.setState(
       //   {
       //     selectedMonth: selectedMonth
       //   },
@@ -66198,7 +66196,7 @@ function (_React$Component) {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       if (prevProps.adminPath !== this.props.adminPath) {
-        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath); // .then(() =>
+        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus); // .then(() =>
         //   this.props.fetchBookAllowances(
         //     this.props.user.id,
         //     this.props.adminPath
@@ -66212,21 +66210,18 @@ function (_React$Component) {
     value: function viewDetails(id) {
       var _this2 = this;
 
+      console.log(id, "ID");
       this.props.fetchActiveEvent(id).then(function (data) {
-        console.log("soy la rta", data);
-        var userEventId = data.activeEvent.employeeId; // Retorna el id del usuario del detalle seleccionado
-
-        _this2.props.fetchDisciplineEvents(userEventId).then(function () {
-          _this2.setState({
-            modal: true
-          });
+        _this2.setState({
+          modal: true
         });
       });
     }
   }, {
     key: "handleFilterStatus",
     value: function handleFilterStatus(e) {
-      this.props.fetchDisciplineEvents(this.props.user.id, this.props.user.adminPath);
+      console.log("soy e", e.target.value);
+      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, e.target.value);
       this.setState({
         allowanceStatus: e.target.value
       });
@@ -66268,59 +66263,21 @@ function (_React$Component) {
       this.setState({
         activeItem: id
       });
-    } // FUNCION PARA ELIMINAR UN BENEFICIO ENVIADO ( SOLO SI AUN ESTA PENDIENTE)
-
-  }, {
-    key: "deleteEvent",
-    value: function deleteEvent(id) {
-      console.log("iddddddddddddddd", id);
-      this.setState({
-        titleBoolean: "Are you sure you want to delete the information?",
-        modalBoolean: true,
-        data: {
-          id: id
-        }
-      });
-    } // FUNCION PARA EJECUTAR LA ACCION GENERICA DEL MODAL BOOLEAN
-
-  }, {
-    key: "actionOk",
-    value: function actionOk(data) {
-      var _this3 = this;
-
-      this.props.deleteEvent(data.id).then(function () {
-        _this3.setState({
-          modalBoolean: false,
-          modalAviso: true,
-          textMsj: "The request has been successfully eliminated...",
-          titleMsj: "Success"
-        });
-
-        _this3.props.fetchDisciplineEvents(_this3.props.user.id, _this3.props.user.adminPath);
-      })["catch"](function () {
-        _this3.setState({
-          modalBoolean: false,
-          modalAviso: true,
-          textMsj: "Ups!, an error occurred while processing the request...",
-          titleMsj: "Error"
-        });
-      });
     }
   }, {
     key: "handleSaveConfirm",
     value: function handleSaveConfirm(e) {
-      var _this4 = this;
+      var _this3 = this;
 
       e.preventDefault();
-      console.log(e.target.valie, "soy el value");
       this.props.editEventStatus(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
-        _this4.setState({
+        _this3.setState({
           msjSave: "Saved!"
         });
 
-        _this4.props.fetchDisciplineEvents(_this4.props.user.id, _this4.props.user.adminPath);
+        _this3.props.fetchDisciplineEvents(_this3.props.user.id, _this3.props.adminPath, _this3.state.allowanceStatus);
       })["catch"](function () {
-        _this4.setState({
+        _this3.setState({
           msjSave: "Ups!, an error occurred while processing the request..."
         });
       });
@@ -66355,7 +66312,6 @@ function (_React$Component) {
         handleFilterStatus: this.handleFilterStatus,
         eventList: this.props.eventList,
         allowanceStatus: this.state.allowanceStatus,
-        deleteAllowance: this.props.deleteEvent,
         viewDetails: this.viewDetails,
         urlName: this.props.urlName
       }));
@@ -66392,10 +66348,6 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     fetchActiveEvent: function fetchActiveEvent(id) {
       return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchActiveEvent"])(id));
     },
-    fetchAllowanceHistory: function fetchAllowanceHistory(employeeId, allowanceId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceHistory"])(employeeId, allowanceId));
-    },
-    //trae la data para el "history del detalle modal"
     deleteEvent: function deleteEvent(id) {
       return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["deleteEvent"])(id));
     },
@@ -66408,8 +66360,8 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
       return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
     },
     // Consulta cantidad de allowance pendientes
-    fetchDisciplineEvents: function fetchDisciplineEvents(userId, adminUrl) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchDisciplineEvents"])(userId, adminUrl));
+    fetchDisciplineEvents: function fetchDisciplineEvents(userId, adminUrl, status) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchDisciplineEvents"])(userId, adminUrl, status));
     }
   };
 };
@@ -67245,9 +67197,89 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   !*** ./src/components/AllowancesListContainer/rowAllowance.jsx ***!
   \*****************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/agus/Escritorio/endava/front/src/components/AllowancesListContainer/rowAllowance.jsx: Unexpected token, expected \",\" (35:29)\n\n\u001b[0m \u001b[90m 33 | \u001b[39m                                }\u001b[0m\n\u001b[0m \u001b[90m 34 | \u001b[39m                            \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mtd\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 | \u001b[39m                        \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mtr\u001b[39m\u001b[33m>\u001b[39m\u001b[33m:\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 36 | \u001b[39m                         \u001b[33m<\u001b[39m\u001b[33mtr\u001b[39m\u001b[33m>\u001b[39m    \u001b[0m\n\u001b[0m \u001b[90m 37 | \u001b[39m                         \u001b[33m<\u001b[39m\u001b[33mtd\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"upperCaseFonts\"\u001b[39m\u001b[33m>\u001b[39m{row\u001b[33m.\u001b[39mallowanceDetail\u001b[33m.\u001b[39mname}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mtd\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 | \u001b[39m                         \u001b[33m<\u001b[39m\u001b[33mtd\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"upperCaseFonts\"\u001b[39m\u001b[33m>\u001b[39m{row\u001b[33m.\u001b[39memployeeDetail\u001b[33m.\u001b[39mname}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mtd\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object.raise (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:6325:17)\n    at Object.unexpected (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:7642:16)\n    at Object.expect (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:7628:28)\n    at Object.parseParenAndDistinguishExpression (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8962:14)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8762:21)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseFunctionBody (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:9406:24)\n    at Object.parseArrowExpression (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:9365:10)\n    at Object.parseParenAndDistinguishExpression (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:9002:12)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8762:21)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseExprListItem (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:9491:18)\n    at Object.parseCallExpressionArguments (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8621:22)\n    at Object.parseSubscript (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8514:29)\n    at Object.parseSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8433:19)\n    at Object.parseExprSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8422:17)\n    at Object.parseMaybeUnary (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOpBaseRightExpr (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8352:34)\n    at Object.parseExprOpRightExpr (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8345:21)\n    at Object.parseExprOp (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8317:27)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rowAllowance; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function rowAllowance(_ref) {
+  var deleteAllowance = _ref.deleteAllowance,
+      viewDetails = _ref.viewDetails,
+      allUser = _ref.allUser,
+      allowanceList = _ref.allowanceList,
+      urlName = _ref.urlName;
+  var Month = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, console.log(allowanceList), allowanceList && allowanceList.map(function (row, i) {
+    return row.topic ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      key: i
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      key: "id_".concat(i),
+      className: "upperCaseFonts"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: row.status
+    }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.allowanceDetail ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      onClick: function onClick() {
+        return viewDetails(row.id, row.allowanceDetail.id, row.receiptPath);
+      },
+      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-file-pdf",
+      "aria-hidden": "true"
+    }), " ", "Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Ripple "
+    })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      onClick: function onClick() {
+        return viewDetails(row.id);
+      },
+      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-file-pdf",
+      "aria-hidden": "true"
+    }), " ", "Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Ripple "
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status === "pending" && !allUser ? row.topic ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      onClick: function onClick() {
+        return deleteAllowance(row.id);
+      },
+      className: "greyColor cursorPointer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-trash-alt iconAllowance "
+    }), " Delete", " ") : "")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.allowanceDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: row.status
+    }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      onClick: function onClick() {
+        return viewDetails(row.id, row.allowanceDetail.id, row.receiptPath);
+      },
+      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-file-pdf",
+      "aria-hidden": "true"
+    }), " Details", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Ripple "
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status === "pending" && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      onClick: function onClick() {
+        return deleteAllowance(row.id);
+      },
+      className: "greyColor cursorPointer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-trash-alt iconAllowance "
+    }), " Delete", " ") : ""));
+  })));
+}
 
 /***/ }),
 
@@ -67581,7 +67613,7 @@ function DisciplineEvent(_ref) {
       key: i
     }, tech.name);
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "Otros"
+    value: "Other"
   }, "Other..."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
     label: "Event name",
     icon: "book",
@@ -67746,14 +67778,14 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       window.scrollTo(0, 0);
-      this.props.fetchDisciplineEvents(this.props.user.id);
+      this.props.fetchEmployeeEvents(this.props.user.id);
       this.props.fetchTechonogies();
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
       if (prevProps.eventList.length != this.props.eventList.length) {
-        this.props.fetchDisciplineEvents(this.props.user.id);
+        this.props.fetchEmployeeEvents(this.props.user.id);
       }
     }
   }, {
@@ -67769,7 +67801,7 @@ function (_React$Component) {
           titleMsj: "Success"
         });
 
-        _this2.props.fetchDisciplineEvents(_this2.props.user.id);
+        _this2.props.fetchEmployeeEvents(_this2.props.user.id);
       });
     }
   }, {
@@ -67843,8 +67875,8 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     createDisciplineEvents: function createDisciplineEvents(data, user) {
       return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["createDisciplineEvents"])(data, user));
     },
-    fetchDisciplineEvents: function fetchDisciplineEvents(user) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchDisciplineEvents"])(user));
+    fetchEmployeeEvents: function fetchEmployeeEvents(user) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchEmployeeEvents"])(user));
     },
     fetchTechonogies: function fetchTechonogies() {
       return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchTechonogies"])());
@@ -67883,6 +67915,9 @@ function eventCalendar(_ref) {
   var eventList = _ref.eventList,
       handleClick = _ref.handleClick,
       onKeyDown = _ref.onKeyDown;
+  {
+    console.log(eventList);
+  }
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBContainer"], {
     fluid: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
@@ -68014,7 +68049,8 @@ function (_React$Component) {
       eventList: [],
       modal: false,
       textMsj: "",
-      titleMsj: ""
+      titleMsj: "",
+      status: "approved"
     };
     _this.onClick = _this.onClick.bind(_assertThisInitialized(_this));
     _this.onKeyDown = _this.onKeyDown.bind(_assertThisInitialized(_this));
@@ -68026,13 +68062,13 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       window.scrollTo(0, 0);
-      this.props.fetchDisciplineEvents();
+      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.status);
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
       if (prevProps.eventList.length != this.props.eventList.length) {
-        this.props.fetchDisciplineEvents();
+        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.status);
       }
     }
   }, {
@@ -68087,14 +68123,15 @@ var mapStateToProps = function mapStateToProps(state, owner) {
     // Extrae la url dinamica
     listAllowance: state.allowance.adminAllowances,
     eventList: state.event.eventList,
-    techList: state.event.techList
+    techList: state.event.techList,
+    adminPath: owner.match.path == "/admin/event"
   };
 };
 
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
-    fetchDisciplineEvents: function fetchDisciplineEvents(user) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchDisciplineEvents"])(user));
+    fetchDisciplineEvents: function fetchDisciplineEvents(userId, adminUrl, status) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchDisciplineEvents"])(userId, adminUrl, status));
     }
   };
 };
@@ -72068,7 +72105,7 @@ var sendEmailConfirm = function sendEmailConfirm(userData, allowanceName) {
 /*!***********************************************!*\
   !*** ./src/redux/actions/disciplineEvents.js ***!
   \***********************************************/
-/*! exports provided: receiveEventList, receiveActiveEvent, receiveTechList, createDisciplineEvents, fetchDisciplineEvents, fetchActiveEvent, editEventStatus, deleteEvent, fetchTechonogies */
+/*! exports provided: receiveEventList, receiveActiveEvent, receiveTechList, createDisciplineEvents, fetchDisciplineEvents, fetchEmployeeEvents, fetchActiveEvent, editEventStatus, deleteEvent, fetchTechonogies */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72078,6 +72115,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveTechList", function() { return receiveTechList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDisciplineEvents", function() { return createDisciplineEvents; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDisciplineEvents", function() { return fetchDisciplineEvents; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchEmployeeEvents", function() { return fetchEmployeeEvents; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchActiveEvent", function() { return fetchActiveEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editEventStatus", function() { return editEventStatus; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteEvent", function() { return deleteEvent; });
@@ -72115,12 +72153,13 @@ var createDisciplineEvents = function createDisciplineEvents(data, user) {
     }); //retorno el axios y el el container, realizado el ingreso vuelvo a ejecutar el fetch
   };
 };
-var fetchDisciplineEvents = function fetchDisciplineEvents(userId, adminUrl) {
+var fetchDisciplineEvents = function fetchDisciplineEvents(userId, adminUrl, status) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/", {
       params: {
         userId: userId,
-        adminUrl: adminUrl
+        adminUrl: adminUrl,
+        status: status
       }
     }).then(function (res) {
       return res.data;
@@ -72130,11 +72169,23 @@ var fetchDisciplineEvents = function fetchDisciplineEvents(userId, adminUrl) {
     });
   };
 };
-var fetchActiveEvent = function fetchActiveEvent(userId) {
+var fetchEmployeeEvents = function fetchEmployeeEvents(userId) {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/findActive/".concat(userId)).then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/".concat(userId), {}).then(function (res) {
+      return res.data;
+    }).then(function (eventList) {
+      dispatch(receiveEventList(eventList));
+      return eventList;
+    });
+  };
+};
+var fetchActiveEvent = function fetchActiveEvent(id) {
+  return function (dispatch) {
+    console.log("entreee al axios", id);
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/findActive/".concat(id)).then(function (res) {
       return res.data;
     }).then(function (activeEvent) {
+      console.log("activeeeeee", activeEvent);
       return dispatch(receiveActiveEvent(activeEvent));
     });
   };
