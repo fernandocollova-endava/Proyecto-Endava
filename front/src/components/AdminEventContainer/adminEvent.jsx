@@ -91,15 +91,14 @@ export default function adminEvent({
                 <div class="table-responsive">
                   <table class="table btn-table table-fixed paddingTable">
                     <thead class="">
-                      {/* {console.log("entreeee", eventList)} */}
-
+                     
                       <tr>
                         <th>Topic</th>
                         <th>User</th>
                         <th>Date</th>
                         <th>Schelude</th>
                         <th>Status</th>
-                        <th>Info</th>
+                        <th></th>
                         <th>Option</th>
                       </tr>
                     </thead>

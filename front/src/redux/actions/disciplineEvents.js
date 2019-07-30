@@ -28,29 +28,42 @@ export const createDisciplineEvents = (data, user) => dispatch => {
     .then(eventList => eventList); //retorno el axios y el el container, realizado el ingreso vuelvo a ejecutar el fetch
 };
 
-export const fetchDisciplineEvents = (userId, adminUrl) => dispatch => {
-
+export const fetchDisciplineEvents = (userId, adminUrl, status) => dispatch => {
+  
     return axios
-      .get(`/api/disciplineEvent/`, {
-        params: {
-          userId,
-          adminUrl
-        }
-      })
-      .then(res => res.data)
-      .then(eventList => {
-        dispatch(receiveEventList(eventList));
-        return eventList;
-      });
+    .get(`/api/disciplineEvent/`, {
+      params: {
+        userId,
+        adminUrl,
+        status
+      }
+    })
+    .then(res => res.data)
+    .then(eventList => {
+      dispatch(receiveEventList(eventList));
+      return eventList;
+    });
+
   
 };
-export const fetchActiveEvent = (userId) => dispatch => { 
-  
+
+export const fetchEmployeeEvents = (userId) => dispatch => {
+return axios.get(`/api/disciplineEvent/${userId}`, {
+})
+.then(res => res.data)
+.then(eventList => {
+  dispatch(receiveEventList(eventList));
+  return eventList;
+});
+}
+
+export const fetchActiveEvent = (id) => dispatch => { 
+  console.log("entreee al axios", id)
 return axios
-.get(`/api/disciplineEvent/findActive/${userId}`)
+.get(`/api/disciplineEvent/findActive/${id}`)
 .then(res => res.data)
 .then(activeEvent => {
-
+  console.log("activeeeeee", activeEvent)
  return dispatch(receiveActiveEvent(activeEvent));
 });
 }

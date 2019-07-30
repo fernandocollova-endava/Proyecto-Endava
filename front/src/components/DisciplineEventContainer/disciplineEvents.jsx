@@ -66,7 +66,7 @@ export default function DisciplineEvent({
                               {tech.name}
                             </option>
                           ))}
-                        <option value="Otros">Other...</option>
+                        <option value="Other">Other...</option>
                       </select>
                     </div>
                     <MDBInput

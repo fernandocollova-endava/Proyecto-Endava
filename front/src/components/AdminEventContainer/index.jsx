@@ -37,15 +37,13 @@ class AdminEventContainer extends React.Component {
     this.togglePanel = this.togglePanel.bind(this);
     this.viewDetails = this.viewDetails.bind(this);
     this.toggleAviso = this.toggleAviso.bind(this);
-    this.deleteEvent = this.deleteEvent.bind(this);
-    this.actionOk = this.actionOk.bind(this);
     this.handleFilterStatus = this.handleFilterStatus.bind(this);
     this.handleSaveConfirm = this.handleSaveConfirm.bind(this);
   }
 
   componentDidMount() {
     this.props.openCloseNavBar(false);
-    this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath);
+    this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus);
     // this.setState(
     //   {
     //     selectedMonth: selectedMonth
@@ -59,7 +57,7 @@ class AdminEventContainer extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.adminPath !== this.props.adminPath) {
-      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath)
+      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus)
         // .then(() =>
         //   this.props.fetchBookAllowances(
         //     this.props.user.id,
@@ -71,20 +69,18 @@ class AdminEventContainer extends React.Component {
 
   // FUNCION DE CONSULTA HISTORIAL / DETALLE
   viewDetails(id) {
-   
+    console.log(id, "ID")
     this.props.fetchActiveEvent(id).then(data => {
-      console.log("soy la rta", data)
-      let userEventId = data.activeEvent.employeeId; // Retorna el id del usuario del detalle seleccionado
-      this.props.fetchDisciplineEvents(userEventId).then(() => {
-        
+    
         this.setState({
           modal: true
-        });
+        
       });
     });
   }
   handleFilterStatus(e) {
-    this.props.fetchDisciplineEvents(this.props.user.id,this.props.user.adminPath);
+    console.log("soy e", e.target.value)
+    this.props.fetchDisciplineEvents(this.props.user.id,this.props.adminPath, e.target.value);
     this.setState({
       allowanceStatus: e.target.value
     });
@@ -122,43 +118,10 @@ class AdminEventContainer extends React.Component {
     });
   }
 
-  // FUNCION PARA ELIMINAR UN BENEFICIO ENVIADO ( SOLO SI AUN ESTA PENDIENTE)
-  deleteEvent(id) {
-    console.log("iddddddddddddddd", id)
-    this.setState({
-      titleBoolean: "Are you sure you want to delete the information?",
-      modalBoolean: true,
-      data: {
-        id
-      }
-    });
-  }
-  // FUNCION PARA EJECUTAR LA ACCION GENERICA DEL MODAL BOOLEAN
-  actionOk(data) {
-    this.props
-      .deleteEvent(data.id)
-      .then(() => {
-        this.setState({
-          modalBoolean: false,
-          modalAviso: true,
-          textMsj: "The request has been successfully eliminated...",
-          titleMsj: "Success"
-        });
-        this.props.fetchDisciplineEvents(this.props.user.id,this.props.user.adminPath);
-      })
-      .catch(() => {
-        this.setState({
-          modalBoolean: false,
-          modalAviso: true,
-          textMsj: "Ups!, an error occurred while processing the request...",
-          titleMsj: "Error"
-        });
-      });
-  }
   
   handleSaveConfirm(e) {
     e.preventDefault();
-    console.log(e.target.valie, "soy el value")
+  
     this.props
       .editEventStatus(
         e.target.id.value,
@@ -170,7 +133,7 @@ class AdminEventContainer extends React.Component {
           msjSave: "Saved!"
         });
        
-        this.props.fetchDisciplineEvents(this.props.user.id,this.props.user.adminPath);
+        this.props.fetchDisciplineEvents(this.props.user.id,this.props.adminPath, this.state.allowanceStatus);
       })
       .catch(() => {
         this.setState({
@@ -212,7 +175,6 @@ class AdminEventContainer extends React.Component {
           handleFilterStatus={this.handleFilterStatus}
           eventList={this.props.eventList}
           allowanceStatus={this.state.allowanceStatus}
-          deleteAllowance={this.props.deleteEvent}
           viewDetails={this.viewDetails}
           urlName={this.props.urlName}
         />
@@ -240,11 +202,10 @@ const MapDispatchToProps = dispatch => {
     fetchBookAllowances: (user, adminPath) =>dispatch(fetchBookAllowances(user, adminPath)),
     openCloseNavBar: val => dispatch(openCloseNavBar(val)),
     fetchActiveEvent: id => dispatch(fetchActiveEvent(id)),
-    fetchAllowanceHistory: (employeeId, allowanceId) => dispatch(fetchAllowanceHistory(employeeId, allowanceId)), //trae la data para el "history del detalle modal"
     deleteEvent: id => dispatch(deleteEvent(id)), // Elimina detalle
     editEventStatus: (id, status, observation) => dispatch(editEventStatus(id, status, observation)), // Switch State
     fetchCountPending: userId => dispatch(fetchCountPending(userId)), // Consulta cantidad de allowance pendientes
-    fetchDisciplineEvents: (userId, adminUrl) => dispatch(fetchDisciplineEvents(userId, adminUrl)),
+    fetchDisciplineEvents: (userId, adminUrl, status) => dispatch(fetchDisciplineEvents(userId, adminUrl, status)),
   };
 };
 export default connect(

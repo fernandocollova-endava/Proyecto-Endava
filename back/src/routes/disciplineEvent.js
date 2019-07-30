@@ -44,7 +44,7 @@ Router.delete("/:id/delete", function(req, res) {
 });
 
 Router.put ("/:id/edit", function(req, res){
-  console.log(req.query, "soy req.query", req.param, "soy req.params")
+
 
   DisciplineEvent.update(
     {
@@ -68,7 +68,7 @@ Router.get("/findActive/:id", function(req, res) {
   
   DisciplineEvent.findOne({
     where: {
-      employeeId: req.params.id
+      id: req.params.id
     },
     include: [
       {
@@ -94,21 +94,21 @@ Router.get("/technologies", function(req, res) {
 });
 
 Router.get("/", function(req, res) {
-  let adminQuery = req.query.adminUrl ? {} : { employeeId: req.query.userId };
-  let employeeQuery = req.query.adminUrl
-    ? { id: { [Op.ne]: req.query.userId } }
-    : {};
+  console.log(req.query, "QUERYYYYYYYYYY")
+
+  let employeeQuery = req.query.adminUrl ? { id: { [Op.ne]: req.query.userId } }: {};
+  let statusQuery = req.query.status ?{status:req.query.status}:{}  
 
   DisciplineEvent.findAll({
     //3) Luego busco todos los eventos, incluyendo el modelo Employee,
     //donde el id de empleado coindida con que que me interesa (employee)
-    where: adminQuery, //4) La tabla intermedia es virtual, ergo no uso mas que "include" y "where"
+    where: statusQuery, //4) La tabla intermedia es virtual, ergo no uso mas que "include" y "where"
 
     include: [
       {
         model: Employee,
         as: "employee",
-        attributes: [],
+        attributes: ["name", "id"],
         where: employeeQuery
       },
 
@@ -116,15 +116,22 @@ Router.get("/", function(req, res) {
         model: Technologie, //5) traigo los datos que necesito de la tabla Technologie
         as: "technologie"
       }
-    ]
-    // attributes: ["topic", "status", "date", "time", "description"]
+    ],
+    attributes: ["topic", "status", "date", "time", "description", "id"]
   }).then(eventList => {
+   
     res.send(eventList);
   });
 });
 
-Router.get("/all", function(req, res) {
+Router.get("/:id", function(req, res) {
+ 
   DisciplineEvent.findAll({
+
+    where:{
+      employeeId:req.params.id
+    },
+
     include: [
       {
         model: Technologie,
