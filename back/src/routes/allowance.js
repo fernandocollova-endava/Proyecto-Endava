@@ -20,11 +20,11 @@ Router.get("/", function(req, res) {
   Allowance.findAll({
     where: {
       active: true,
-      name: {
-        [Op.ne]: "book"
-      }
+      // name: {
+      //   [Op.ne]: "book"
+      // }
     },
-    order: [["id", "asc"]],
+    order: [["name", "asc"]],
     attributes: ["name", "imgUrl", "completeName", "id", "fixedAmount"]
   }).then(allowanceList => {
     res.send(allowanceList);
@@ -256,24 +256,40 @@ Router.get("/search/", function(req, res) {
     req.query.allUser == "true"
       ? { id: { [Op.ne]: req.query.userId } }
       : { id: req.query.userId }; // Trae todos los usuarios excepto el propio
+      
   let globalQuery = {}; // query general que define si se filtra con status, y con fechas
   let filterQuery = {}; // query para definir si asigno propiedades del "where" en la query
 
-  if (req.query.dateEnd || req.query.status) {
-    req.query.dateEnd
-      ? (globalQuery.paymentDate = {
-          [Op.between]: [req.query.dateStart, req.query.dateEnd]
-        })
-      : null; //si hay fecha o status, seteo uno o los dos como filtros
     req.query.status ? (globalQuery.status = req.query.status) : null;
-  } else globalQuery = Sequelize.where(Sequelize.fn("date_part", "month", Sequelize.col("paymentDate")), moment().month() + 2);
+   
+    if(!((req.query).hasOwnProperty("dateEnd"))){ // si no lo pasan
+      
+      var date = {
+        start: moment()
+          .startOf("month")
+          .add(1, "M")
+          .format("YYYY-MM-DD"),
+        end: moment()
+          .endOf("month")
+          .add(1, "M")
+          .format("YYYY-MM-DD")
+      };
+      globalQuery.paymentDate = {
+        [Op.between]: [date.start, date.end]
+      }
+     // globalQuery = Sequelize.where(Sequelize.fn("date_part", "month", Sequelize.col("paymentDate")), moment().month() + 2);
+    }else{
+      
+      globalQuery.paymentDate = {
+        [Op.between]: [req.query.dateStart, req.query.dateEnd]
+      }
+    }
+ 
   // primer estado por default, no tengo fecha ni estado. Ejecuto un where con consulta del mes en curso
 
-  if (req.query.allUser == "true") { // manejo de vistas admin / user, 
-    filterQuery.name = { [Op.ne]: "book" };  // indico que no quiero books en vista admin
-    req.query.allowanceId ? (filterQuery.id = req.query.allowanceId) : null; // permito que si hay otros allwances se puedan ver
-  } else req.query.allowanceId ? (filterQuery.name = null) : req.query.allowanceId;
-      //en su defecto, vista employee (my alowances) no aplica filtro directamente. 
+  if (req.query.allowanceId){
+    filterQuery.id = req.query.allowanceId // Si no trae filtro visualiza todos
+  }
 
   AllowanceDetail.findAll({
     where: globalQuery, // setea el valor dependiendo de las condiciones dadas arriba
@@ -302,7 +318,7 @@ Router.get("/search/", function(req, res) {
         where: filterQuery
       }
     ],
-    order: [["paymentDate", "DESC"]]
+    order: [["paymentDate", "DESC"],["id", "ASC"]]
   }).then(allowanceList => {
     res.json(allowanceList);
   });

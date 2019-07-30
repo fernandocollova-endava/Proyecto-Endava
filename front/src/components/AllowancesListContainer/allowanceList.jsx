@@ -28,15 +28,16 @@ export default function allowanceList({
             <h1 className="upperCaseFonts">Requests</h1>
           </MDBCol> */}
           <MDBCol md="12">
-            <p className="upperCaseFonts title-container">
-              <span className="titleMain"><i className="fas fa-chart-bar"></i> MY ALLOWANCE</span>
+            <p className="upperCaseFonts title-container" style={(allUser)?({backgroundColor: "#9bb4be"}):({})}>
+              <span className="titleMain"><i className="fas fa-chart-bar"></i> {
+                (allUser) ? "PANEL ADMIN!!" : "MY ALLOWANCE"
+              } </span>
 
               <span className="form-inline md-form topMarginLine">
                 {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
                 <select value={allowanceType} className="browser-default custom-select" name="allowance" onChange={handleClick}>
                   <option value="">Choose your allowance...</option>
                   <option value="">All</option>
-                  <option value="4">Book</option>
                   {adminAllowances &&
                     adminAllowances.map(item => (
                       <option className="capitalizeName" key={item.id} value={item.id}>{item.name}</option>
@@ -50,13 +51,13 @@ export default function allowanceList({
                   <option value="rejected">Rejected</option>
                 </select>
                 <select className="browser-default custom-select" name="status" onChange={handleFilterPeriod}>
-                <option value="">Current month</option>
-                <option value="0">Last month</option>
-                <option value="1">Last two months</option>
+                  <option value="">Current month</option>
+                  <option value="0">Last month</option>
+                  <option value="1">Last two months</option>
 
-              </select>
+                </select>
                 <Link className="browser-default custom-select newRequest"
-                to="/allowance/new-allowance">
+                  to="/allowance/new-allowance">
                   + New Allowance
               </Link>
               </span>
@@ -65,7 +66,7 @@ export default function allowanceList({
 
 
           </MDBCol>
-          
+
         </MDBRow>
 
         <hr />

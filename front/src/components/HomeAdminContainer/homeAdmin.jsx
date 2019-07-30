@@ -57,35 +57,7 @@ const AnimationPage = ({ cardList }) => {
                 </div>
               </div>
 
-              <span className="titleModule upperCaseFonts">General Allowance</span>
-            </MDBCard>
-            <br />
-          </MDBAnimation>
-        </MDBCol>
-        <MDBCol md="3" >
-          {/* delay proporciona un delay multiplicado por i ( posicion del array )
-            generando un efecto de cadena en la animacion.. reveal*/}
-          <MDBAnimation delay={`${(2*100)}ms`} type='fadeInDownBig'>
-            <MDBCard className="Card-Img">
-              <div className="container-IMG" >
-                <div className="div-img" >
-                  <Link to={`/admin/book`} >
-                    <div className="ajustImg">
-                    <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Complete-Investment-Management-Insights/650.ashx"
-                      className="img-fluid margenBottomMobile img"
-                      alt={`Imagen logo book`} />
-                    </div>
-                    <center >
-                      <span 
-                        className="btn-md rounded mb-0 border-0 btnModule text btnEv-red-md">
-                        {/* <img src={`/assets/img/${card.name}.png`} width="30px"/> */}
-                        Enter <i className="fas fa-angle-double-right"></i></span>
-                    </center>
-                  </Link>
-                </div>
-              </div>
-
-              <span className="titleModule upperCaseFonts">Admin book</span>
+              <span className="titleModule upperCaseFonts">Admin Allowance</span>
             </MDBCard>
             <br />
           </MDBAnimation>

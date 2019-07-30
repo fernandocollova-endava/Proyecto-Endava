@@ -50,7 +50,7 @@ export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfir
 
                                 <hr />
                                 {/* Visualización de archivo cargado */}
-
+                                <MDBAnimation type="flipInX" delay="500ms">
                                 {((activeAllowance.receiptPath).split('.')[1] !== 'pdf' &&
                                     (activeAllowance.receiptPath).split('.')[1] !== undefined) &&
                                     <img src={`/assets/receipt/${activeAllowance.receiptPath}`} width="100%" />}
@@ -59,6 +59,7 @@ export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfir
                                     <embed src={`/assets/receipt/${activeAllowance.receiptPath}`} width="100%" height="400px"
                                         type="application/pdf"></embed>
                                 }
+                                </MDBAnimation>
                             </div>
                         </MDBTabPane>
                         <MDBTabPane tabId="2" role="tabpanel">
