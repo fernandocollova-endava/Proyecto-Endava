@@ -122,7 +122,7 @@ class AllowanceContainer extends React.Component {
     });
   }
   render() {
-    let maxAmount = this.props.listAllowance.find(allow => {
+    let allowance = this.props.listAllowance.find(allow => {
       return allow.name === this.props.nameUrl;
     });
 
@@ -171,8 +171,13 @@ class AllowanceContainer extends React.Component {
               <MDBCard>
                 <MDBCardBody>
                   <form onSubmit={this.onFormSubmit}>
+<<<<<<< HEAD
+                    <p className="h4 text-center py-4">Submit your receipt
+                        <label className="maxAmount"> {`(Max Amount $${allowance.fixedAmount})`}</label></p>
+=======
                     <p className="h4 text-center py-4">Submit your {this.props.nameUrl} receipt
                         <label className="maxAmount"> {`(Max Amount $${maxAmount.fixedAmount})`}</label></p>
+>>>>>>> 2d90c0539bc58916135515f39c86b15b006bc93a
                     <div className="grey-text">
                       <MDBInput
                         label="Amount allowance..." icon="hand-holding-usd"

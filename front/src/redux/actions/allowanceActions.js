@@ -9,7 +9,7 @@ import {
   RECEIVE_BOOK_INSTALLMENTS
 } from "../../constants";
 
-export const receiveAllowances = function (allowanceList) {
+export const receiveAllowances = function(allowanceList) {
   return {
     type: RECEIVE_ALLOWANCES,
     allowanceList
@@ -19,43 +19,40 @@ export const receiveBookAllowances = function(bookAllowances) {
   return {
     type: RECEIVE_BOOK_ALLOWANCES,
     bookAllowances
-  }
-}
+  };
+};
 
-export const receiveAdminAllowances = function (adminAllowances) {
+export const receiveAdminAllowances = function(adminAllowances) {
   return {
     type: RECEIVE_ADMIN_ALLOWANCES,
     adminAllowances
   };
 };
 
-
-export const receiveActiveAllowances = (activeAllowances) => {
+export const receiveActiveAllowances = activeAllowances => {
   return {
     type: RECEIVE_ACTIVE_ALLOWANCES,
     activeAllowances
   };
-}
-export const receiveHistoryAllowances = (historyAllowances) => {
+};
+export const receiveHistoryAllowances = historyAllowances => {
   return {
     type: RECEIVE_HISTORY_ALLOWANCES,
     historyAllowances
   };
-}
-export const receiveCurrentBookA = (currentBookAllowances) =>{
-   
+};
+export const receiveCurrentBookA = currentBookAllowances => {
   return {
     type: RECEIVE_CURRENT_BOOK_A,
     currentBookAllowances
-  }
-}
-export const receiveBookInstallments = (bookInstallments) => {
+  };
+};
+export const receiveBookInstallments = bookInstallments => {
   return {
     type: RECEIVE_BOOK_INSTALLMENTS,
     bookInstallments
   };
-}
-
+};
 
 export const createAllowance = formData => dispatch => {
   return axios({
@@ -67,13 +64,18 @@ export const createAllowance = formData => dispatch => {
     }
   });
 };
-export const fetchAllowances = (date, userId, allowanceId, status, allUser) => dispatch => {
+export const fetchAllowances = (
+  date,
+  userId,
+  allowanceId,
+  status,
+  allUser
+) => dispatch => {
   return axios
     .get("/api/allowance/search", {
-      
       params: {
-        dateStart:date.start,
-        dateEnd:date.end,
+        dateStart: date.start,
+        dateEnd: date.end,
         allowanceId,
         userId,
         status,
@@ -92,12 +94,10 @@ export const fetchAdminAllowances = () => dispatch => {
     });
 };
 
-export const fetchAllowanceActive = (id) => dispatch => {
-  return axios
-    .get(`/api/allowance/findActive/${id}`)
-    .then(activeAllowances => {
-     return dispatch(receiveActiveAllowances(activeAllowances.data));
-    });
+export const fetchAllowanceActive = id => dispatch => {
+  return axios.get(`/api/allowance/findActive/${id}`).then(activeAllowances => {
+    return dispatch(receiveActiveAllowances(activeAllowances.data));
+  });
 };
 
 export const fetchAllowanceHistory = (employeeId, allowanceId) => dispatch => {
@@ -109,61 +109,70 @@ export const fetchAllowanceHistory = (employeeId, allowanceId) => dispatch => {
 };
 
 // Elimina allowance (Si se encuentra Pendiente)
-export const deleteAllowance = (id) => dispatch => {
-  return axios
-    .delete(`/api/allowance/${id}/delete`)
+export const deleteAllowance = id => dispatch => {
+  return axios.delete(`/api/allowance/${id}/delete`);
 };
 
 // Modifica estado (ADMIN)
 export const editStatusAllowance = (id, status, observation) => dispatch => {
-  return axios
-    .put(`/api/allowance/${id}/edit`, { status, observation })
+  return axios.put(`/api/allowance/${id}/edit`, { status, observation });
 };
 
-// 
-export const fetchCountPending = (userId) => dispatch => {
+//
+export const fetchCountPending = userId => dispatch => {
+  return axios.get(`/api/allowance/count`, {
+    params: {
+      userId
+    }
+  });
+};
+
+export const fetchCurrentBookA = (month, adminPath, userId) => dispatch => {
   return axios
-    .get(`/api/allowance/count`,{
+    .get("/api/allowance/book/current", {
       params: {
+        month,
+        adminPath,
         userId
       }
     })
+    .then(res => res.data)
+    .then(currentBookAllowances => {
+      dispatch(receiveCurrentBookA(currentBookAllowances));
+    });
 };
-
-export const fetchCurrentBookA = (month, adminPath, userId) => dispatch => {  
-
-  return axios.get("/api/allowance/book/current",{
-    params:{
-      month,
-      adminPath,
-      userId,
-    }})
-  .then(res =>res.data)
-  .then(currentBookAllowances=>{
- 
-    dispatch(receiveCurrentBookA(currentBookAllowances))
-  })
-}
-export const fetchBookAllowances = (user, adminPath) => dispatch => {  
- 
-return axios.get("/api/allowance/book",{user:user,adminPath:adminPath})
-.then(res =>res.data)
-.then(bookAllowances=>{dispatch(receiveBookAllowances(bookAllowances))
-})
-}
+export const fetchBookAllowances = (user, adminPath) => dispatch => {
+  return axios
+    .get("/api/allowance/book", { user: user, adminPath: adminPath })
+    .then(res => res.data)
+    .then(bookAllowances => {
+      dispatch(receiveBookAllowances(bookAllowances));
+    });
+};
 
 export const fetchBookInstallments = (receiptPath, allowanceId) => dispatch => {
   return axios
     .get(`/api/allowance/book/installments/${receiptPath}/${allowanceId}`)
-    .then(res =>res.data)
+    .then(res => res.data)
     .then(bookInstallments => {
       dispatch(receiveBookInstallments(bookInstallments));
     });
 };
 
+export const sendEmailConfirm = (
 
-export const sendEmailConfirm = (userData, allowanceName) => dispatch => {
-  
-  return axios.post("/api/allowance/emailConfirm", { userData: userData, allowanceName: allowanceName })
-      .then(emailConfirm => emailConfirm);
+  userData,
+  allowanceName,
+  email,
+  observation
+) => dispatch => {
+  console.log("entre al axiossssss")
+  return axios
+    .post("/api/allowance/emailConfirm", {
+      userData: userData,
+      allowanceName: allowanceName,
+      email:email,
+      observation:observation
+    })
+    .then(emailConfirm => emailConfirm);
 };

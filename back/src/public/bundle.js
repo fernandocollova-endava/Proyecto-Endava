@@ -65909,329 +65909,9 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   !*** ./src/components/AllowanceContainer/index.jsx ***!
   \*****************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
- // import { TesseractWorker } from "tesseract.js";
-
-
- // const worker = new TesseractWorker();
-
-var AllowanceContainer =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(AllowanceContainer, _React$Component);
-
-  function AllowanceContainer(props) {
-    var _this;
-
-    _classCallCheck(this, AllowanceContainer);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(AllowanceContainer).call(this, props));
-    _this.state = {
-      file: null,
-      employeeAmount: 0,
-      observation: "",
-      active: "",
-      modal: false,
-      textMsj: "",
-      titleMsj: ""
-    };
-    _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
-    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
-    _this.onObservationChange = _this.onObservationChange.bind(_assertThisInitialized(_this));
-    _this.onAmountChange = _this.onAmountChange.bind(_assertThisInitialized(_this));
-    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(AllowanceContainer, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      window.scrollTo(0, 0);
-      this.props.openCloseNavBar(false);
-    }
-  }, {
-    key: "onFormSubmit",
-    value: function onFormSubmit(e) {
-      var _this2 = this;
-
-      e.preventDefault();
-
-      var _this$state = this.state,
-          file = _this$state.file,
-          rest = _objectWithoutProperties(_this$state, ["file"]);
-
-      var formData = new FormData(); // worker
-      //   .recognize(this.state.file)
-      //   .progress(p => {
-      //   })
-      //   .then(({ text }) => {
-      //     var textLow = text
-      //     textLow.toUpperCase()
-      //     var index = text.indexOf("TOTAL" || "Total");
-      //     var regex = /(\d+)/g;
-      //     var firstString = text.substring(index, (index + 60));
-      //     var numbers = firstString.match(regex);
-      //     for (let i = 0; i < numbers.length; i++) {
-      //       // if (parseInt(numbers[i]) == this.state.employeeAmount) {
-      //       // }
-      //       worker.terminate();
-      //     }
-      //   });
-      // }
-      // var finalNumber = stringResult.match(regex)[0];
-      // if (finalNumber.length) {
-      //   if (parseInt(finalNumber) != this.state.employeeAmount) {
-      //     console.log(
-      //       "el impore no es correc",
-      //       parseInt(finalNumber),
-      //       " el sae",
-      //       this.state.employeeAmount
-      //     );
-      //   } else console.log("odo bieeeeeen");
-      // Agustin estuvo aca 
-
-      formData.append('file', file);
-      formData.append('userid', this.props.user.id);
-      formData.append('allowanceName', this.props.nameUrl);
-      formData.append('employeeAmount', this.state.employeeAmount);
-      formData.append('observation', this.state.observation);
-      this.props.createAllowance(formData).then(function (response) {
-        _this2.props.sendEmailConfirm(_this2.props.user, _this2.props.nameUrl);
-
-        _this2.setState({
-          active: response.data,
-          modal: true,
-          textMsj: 'The file has been successfully sent',
-          titleMsj: 'Success',
-          employeeAmount: 0,
-          observation: ""
-        });
-      })["catch"](function (error) {
-        _this2.setState({
-          modal: true,
-          textMsj: 'An error occurred while sending the file..',
-          titleMsj: 'Error'
-        });
-      });
-    }
-  }, {
-    key: "onChange",
-    value: function onChange(e) {
-      this.setState({
-        file: e.target.files[0]
-      });
-    }
-  }, {
-    key: "onObservationChange",
-    value: function onObservationChange(e) {
-      this.setState({
-        observation: e.target.value
-      });
-    }
-  }, {
-    key: "onAmountChange",
-    value: function onAmountChange(e) {
-      this.setState({
-        employeeAmount: e.target.value
-      });
-    } // TOGGLE de MODAL
-
-  }, {
-    key: "toggle",
-    value: function toggle() {
-      this.setState({
-        modal: !this.state.modal
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this3 = this;
-
-      var maxAmount = this.props.listAllowance.find(function (allow) {
-        return allow.name === _this3.props.nameUrl;
-      });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        modal: this.state.modal,
-        toggle: this.toggle,
-        textMsj: this.state.textMsj,
-        titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
-        className: "container-banner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
-        md: "12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: " title-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "titleMain upperCaseFonts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-file-invoice-dollar"
-      }), " ", "MANAGE YOUR ".concat(this.props.nameUrl, " ALLOWANCE.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "form-inline md-form topMarginLine"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "browser-default custom-select newRequestBtn",
-        to: "/allowance/gym"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-plus-circle"
-      }), " New Gym"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "browser-default custom-select newRequestBtn",
-        to: "/allowance/training"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-plus-circle"
-      }), " New Training"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "browser-default custom-select newRequestBtn",
-        to: "/allowance/child-care"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-plus-circle"
-      }), " New Child Care"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "browser-default custom-select newRequestBtn",
-        to: "/allowance/book"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-plus-circle"
-      }), " New Book"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "browser-default custom-select newRequest",
-        to: "/allowance/search"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-chart-bar"
-      }), " View my allowance"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
-        className: "container-banner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
-        md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBAnimation"], {
-        type: "fadeInUp"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onSubmit: this.onFormSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "h4 text-center py-4"
-      }, "Submit your ", this.props.nameUrl, " receipt", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "maxAmount"
-      }, " ", "(Max Amount $".concat(maxAmount.fixedAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "grey-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
-        label: "Amount allowance...",
-        icon: "hand-holding-usd",
-        group: true,
-        required: true,
-        autoComplete: "off",
-        type: "number",
-        validate: true,
-        value: this.state.employeeAmount != 0 && this.state.employeeAmount,
-        name: "employeeAmount",
-        onChange: this.onAmountChange,
-        error: "wrong",
-        autoFocus: true,
-        success: "right"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
-        label: "Observation...",
-        icon: "comment-alt",
-        required: true,
-        group: true,
-        autoComplete: "off",
-        type: "text",
-        name: "observation",
-        value: this.state.observation,
-        onChange: this.onObservationChange,
-        validate: true,
-        error: "wrong",
-        success: "right"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
-        icon: "file-signature",
-        group: true,
-        type: "file",
-        name: "file",
-        onChange: this.onChange,
-        required: true,
-        validate: true,
-        error: "wrong",
-        success: "right"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "text-center py-4 mt-3"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBBtn"], {
-        color: "light-blue",
-        className: "mb-3 btnEv-red rounded mb-0 border-0 btnAllowance",
-        type: "submit"
-      }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBIcon"], {
-        icon: "angle-right"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "textAlert"
-      }, "*Please note that only jpg, png and PDF files up to 10MB are accepted.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
-        md: "7"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "preview:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.active.split('.')[1] !== 'pdf' && this.state.active.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/assets/receipt/".concat(this.state.active),
-        width: "100%"
-      })), this.state.active.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
-        src: "/assets/receipt/".concat(this.state.active),
-        width: "100%",
-        height: "400px",
-        type: "application/pdf"
-      }))));
-    }
-  }]);
-
-  return AllowanceContainer;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-var mapStateToProps = function mapStateToProps(state, owner) {
-  return {
-    user: state.user.user,
-    nameUrl: owner.match.params.name,
-    // Extrae la url dinamica
-    listAllowance: state.allowance.adminAllowances
-  };
-};
-
-var MapDispatchToProps = function MapDispatchToProps(dispatch) {
-  return {
-    createAllowance: function createAllowance(data) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["createAllowance"])(data));
-    },
-    openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__["openCloseNavBar"])(val));
-    },
-    sendEmailConfirm: function sendEmailConfirm(user, allowance) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["sendEmailConfirm"])(user, allowance));
-    }
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AllowanceContainer));
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/agus/Escritorio/endava/front/src/components/AllowanceContainer/index.jsx: Unexpected token (174:1)\n\n\u001b[0m \u001b[90m 172 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mMDBCardBody\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 173 | \u001b[39m                  \u001b[33m<\u001b[39m\u001b[33mform\u001b[39m onSubmit\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39monFormSubmit}\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 175 | \u001b[39m                    \u001b[33m<\u001b[39m\u001b[33mp\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"h4 text-center py-4\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33mSubmit\u001b[39m your receipt\u001b[0m\n\u001b[0m \u001b[90m 176 | \u001b[39m                        \u001b[33m<\u001b[39m\u001b[33mlabel\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"maxAmount\"\u001b[39m\u001b[33m>\u001b[39m {\u001b[32m`(Max Amount $${allowance.fixedAmount})`\u001b[39m}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mlabel\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mp\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 177 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n    at Object.raise (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:6325:17)\n    at Object.unexpected (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:7642:16)\n    at Object.jsxParseIdentifier (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3379:12)\n    at Object.jsxParseNamespacedName (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3389:23)\n    at Object.jsxParseElementName (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3400:21)\n    at Object.jsxParseOpeningElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3482:22)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3515:33)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElement (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3589:17)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3596:19)\n    at Object.parseExprSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseParenAndDistinguishExpression (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8978:28)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8762:21)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseExpression (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8135:23)");
 
 /***/ }),
 
@@ -66971,7 +66651,7 @@ function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      var maxAmount = this.props.listAllowance.find(function (allow) {
+      var allowance = this.props.listAllowance.find(function (allow) {
         return allow.name === _this3.props.nameUrl;
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -67028,7 +66708,7 @@ function (_React$Component) {
         className: "h4 text-center py-4"
       }, "Submit your receipt", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "maxAmount"
-      }, " ", "(Max Amount $".concat(maxAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, " ", "(Max Amount $".concat(allowance.fixedAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "grey-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
         label: "Amount allowance...",
@@ -70076,7 +69756,8 @@ function ModalUser(_ref) {
     onSubmit: handleSubmit
     /*Envio a data a updatear*/
 
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Please, enter your current password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    label: "Please enter your current password",
     icon: "lock",
     group: true,
     name: "oldPassword",
@@ -70086,9 +69767,20 @@ function ModalUser(_ref) {
     success: "right",
     onChange: handleChange
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    label: "Please enter your new password",
     icon: "lock",
     group: true,
     name: "newPassword",
+    type: "password",
+    validate: true,
+    error: "wrong",
+    success: "right",
+    onChange: handleChange
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    label: "Please confirm your new password",
+    icon: "lock",
+    group: true,
+    name: "passwordConfirm",
     type: "password",
     validate: true,
     error: "wrong",
@@ -70427,6 +70119,7 @@ function (_React$Component) {
       modal: false,
       newPassword: "",
       oldPassword: "",
+      passwordConfirm: "",
       file: null
     };
     _this.toggleModalUser = _this.toggleModalUser.bind(_assertThisInitialized(_this));
@@ -70447,14 +70140,33 @@ function (_React$Component) {
       var _this2 = this;
 
       e.preventDefault();
-      this.props.updatePass(this.state.newPassword, this.props.user.id, this.state.oldPassword).then(function (response) {
-        //recibo data ok y despliego modal
-        _this2.setState({
+
+      if (this.state.passwordConfirm != this.state.newPassword) {
+        this.setState({
+          //pregunto si coinciden los pass nuevos
+          error: true,
           modal: true,
-          msjSave: "The password has been changed successfully.",
-          titleMsj: 'Success'
+          msjSave: "Your password/confirm password fields do not match",
+          titleMsj: "Error"
         });
-      });
+      } else {
+        this.props.updatePass(this.state.newPassword, this.props.user.id, this.state.oldPassword).then(function (response) {
+          //recibo data ok y despliego modal
+          if (response == "ok") {
+            _this2.setState({
+              modal: true,
+              msjSave: "The password has been changed successfully.",
+              titleMsj: "Success"
+            });
+          } else {
+            _this2.setState({
+              modal: true,
+              msjSave: "Please verify your password..",
+              titleMsj: "Error"
+            });
+          }
+        });
+      }
     }
   }, {
     key: "handClick",
@@ -70483,8 +70195,8 @@ function (_React$Component) {
           rest = _objectWithoutProperties(_this$state, ["file"]);
 
       var formData = new FormData();
-      formData.append('file', file);
-      formData.append('userid', this.props.user.id); // Modifica el avatar
+      formData.append("file", file);
+      formData.append("userid", this.props.user.id); // Modifica el avatar
 
       this.props.updateAvatar(formData);
     }
@@ -70881,8 +70593,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _obraSocial__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./obraSocial */ "./src/components/healthCareContainer/obraSocial.jsx");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _obraSocial__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./obraSocial */ "./src/components/healthCareContainer/obraSocial.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -70906,6 +70620,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
 var ObraSocialContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -70918,11 +70634,23 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ObraSocialContainer).call(this));
     _this.state = {
-      collapseID: ""
+      collapseID: "",
+      email: "",
+      observation: "",
+      healthOption: "",
+      active: "",
+      modal: false,
+      textMsj: "",
+      titleMsj: ""
     };
     _this.formId = Object(react__WEBPACK_IMPORTED_MODULE_0__["createRef"])();
     _this.toggleCollapse = _this.toggleCollapse.bind(_assertThisInitialized(_this));
     _this.handleScrollToForm = _this.handleScrollToForm.bind(_assertThisInitialized(_this));
+    _this.onObservationChange = _this.onObservationChange.bind(_assertThisInitialized(_this));
+    _this.onhealthOptionChange = _this.onhealthOptionChange.bind(_assertThisInitialized(_this));
+    _this.onEmailChange = _this.onEmailChange.bind(_assertThisInitialized(_this));
+    _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -70949,16 +70677,68 @@ function (_React$Component) {
       window.scrollTo(0, 1350);
     }
   }, {
+    key: "onObservationChange",
+    value: function onObservationChange(e) {
+      console.log("observ", e.target.value);
+      this.setState({
+        observation: e.target.value
+      });
+    }
+  }, {
+    key: "onhealthOptionChange",
+    value: function onhealthOptionChange(e) {
+      console.log("healt", e.target.value);
+      this.setState({
+        healthOption: e.target.value
+      });
+    }
+  }, {
+    key: "onEmailChange",
+    value: function onEmailChange(e) {
+      console.log("email", e.target.value);
+      this.setState({
+        email: e.target.value
+      });
+    }
+  }, {
+    key: "onFormSubmit",
+    value: function onFormSubmit(e) {
+      e.preventDefault(e);
+      this.props.sendEmailConfirm(this.props.user, this.state.healthOption, this.state.email, this.state.observation);
+      this.setState({
+        active: "",
+        modal: true,
+        textMsj: "Your message has been successfully sent",
+        titleMsj: "Success"
+      });
+    }
+  }, {
+    key: "toggle",
+    value: function toggle() {
+      this.setState({
+        modal: !this.state.modal
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_obraSocial__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        modal: this.state.modal,
+        toggle: this.toggle,
+        textMsj: this.state.textMsj,
+        titleMsj: this.state.titleMsj
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_obraSocial__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        onObservationChange: this.onObservationChange,
+        onhealthOptionChange: this.onhealthOptionChange,
+        onEmailChange: this.onEmailChange,
+        onFormSubmit: this.onFormSubmit,
         toggleCollapse: this.toggleCollapse,
-        collapseID: this.state.collapseID,
-        user: this.props.user,
-        email: this.props.email,
+        collapseID: this.state.collapseID // user={this.props.user}
+        // email={this.props.email}
+        ,
         formId: this.formId,
         handleScrollToForm: this.handleScrollToForm
-      });
+      }));
     }
   }]);
 
@@ -70968,15 +70748,17 @@ function (_React$Component) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_2__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_3__["openCloseNavBar"])(val));
+    },
+    sendEmailConfirm: function sendEmailConfirm(user, allowance, email, observation) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["sendEmailConfirm"])(user, allowance, email, observation));
     }
   };
 };
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    user: "".concat(state.user.user.name, " ").concat(state.user.user.surname),
-    email: state.user.user.email
+    user: state.user.user
   };
 };
 
@@ -71006,7 +70788,11 @@ function obraSocial(_ref) {
       collapseID = _ref.collapseID,
       email = _ref.email,
       formId = _ref.formId,
-      handleScrollToForm = _ref.handleScrollToForm;
+      handleScrollToForm = _ref.handleScrollToForm,
+      onFormSubmit = _ref.onFormSubmit,
+      onEmailChange = _ref.onEmailChange,
+      onhealthOptionChange = _ref.onhealthOptionChange,
+      onObservationChange = _ref.onObservationChange;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBContainer"], {
     fluid: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
@@ -71077,35 +70863,41 @@ function obraSocial(_ref) {
     ref: formId
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, " Send us your question"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque odio enim ducimus blanditiis nulla reprehenderit ea nesciunt, ratione porro, tempora quas? Provident reprehenderit fuga numquam odit perspiciatis soluta, ipsum omnis?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "7"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: onFormSubmit
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grey-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    className: "browser-default custom-select"
+    className: "browser-default custom-select",
+    onChange: onhealthOptionChange,
+    name: "healthOption"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Choose a subject..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "1"
-  }, "Option 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "2"
-  }, "Option 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "3"
-  }, "Option 3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
-    readOnly: true,
-    label: "Your email",
+    value: "Swiss Medical"
+  }, "Swiss Medical"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "OSDE"
+  }, "OSDE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
+    label: "Your emails",
     icon: "envelope",
     group: true,
-    type: "email",
-    value: email,
+    name: "email",
+    type: "email" // value={email}
+    ,
     error: "wrong",
-    success: "right"
+    success: "right",
+    onChange: onEmailChange
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
+    name: "observation",
     type: "textarea",
     rows: "2",
     label: "I need more information...",
-    icon: "pencil-alt"
+    icon: "pencil-alt",
+    onChange: onObservationChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBBtn"], {
     outline: true,
-    className: "mb-3 btnEv-blue rounded mb-0 border-0 whiteFont"
+    className: "mb-3 btnEv-blue rounded mb-0 border-0 whiteFont",
+    type: "submit"
   }, "Send")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -71367,7 +71159,7 @@ var editStatusAllowance = function editStatusAllowance(id, status, observation) 
       observation: observation
     });
   };
-}; // 
+}; //
 
 var fetchCountPending = function fetchCountPending(userId) {
   return function (dispatch) {
@@ -71414,11 +71206,14 @@ var fetchBookInstallments = function fetchBookInstallments(receiptPath, allowanc
     });
   };
 };
-var sendEmailConfirm = function sendEmailConfirm(userData, allowanceName) {
+var sendEmailConfirm = function sendEmailConfirm(userData, allowanceName, email, observation) {
   return function (dispatch) {
+    console.log("entre al axiossssss");
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/allowance/emailConfirm", {
       userData: userData,
-      allowanceName: allowanceName
+      allowanceName: allowanceName,
+      email: email,
+      observation: observation
     }).then(function (emailConfirm) {
       return emailConfirm;
     });
@@ -71714,6 +71509,7 @@ var logout = function logout() {
 var updatePass = function updatePass(password, userId, oldPass) {
   return function (dispatch) {
     if (oldPass) {
+      console.log("soy old passs", oldPass);
       return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/employee/password/profile/update", {
         password: password,
         userId: userId,

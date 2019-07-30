@@ -5,7 +5,7 @@ import {
     MDBCardText, MDBCard, MDBCardImage, MDBRow, MDBInput, MDBFormInline
 } from 'mdbreact';
 
-export default function obraSocial({ toggleCollapse, collapseID, email, formId, handleScrollToForm }) {
+export default function obraSocial({ toggleCollapse, collapseID, email, formId, handleScrollToForm, onFormSubmit, onEmailChange, onhealthOptionChange, onObservationChange }) {
     return (
         <>
             <MDBContainer fluid>
@@ -108,38 +108,42 @@ export default function obraSocial({ toggleCollapse, collapseID, email, formId, 
                             <br />
                             <MDBCol md="7">
                                 <MDBCard>
-                                    <form>
+                                    <form onSubmit={onFormSubmit}>
                                         <br />
                                         <div className="grey-text">
 
-                                            <select className="browser-default custom-select">
+                                            <select className="browser-default custom-select" onChange={onhealthOptionChange} name = "healthOption">
                                                 <option>Choose a subject...</option>
-                                                <option value="1">Option 1</option>
-                                                <option value="2">Option 2</option>
-                                                <option value="3">Option 3</option>
+                                                <option value="Swiss Medical">Swiss Medical</option>
+                                                <option value="OSDE">OSDE</option>
                                             </select>
                                             <hr />
 
                                             <MDBInput
-                                                readOnly
-                                                label="Your email"
+                                           
+                                                label="Your emails"
                                                 icon="envelope"
                                                 group
+                                                name= "email"
                                                 type="email"
-                                                value={email}
+                                                // value={email}
                                                 error="wrong"
                                                 success="right"
+                                                onChange={onEmailChange}
                                             />
 
                                             <MDBInput
+                                                name="observation"
                                                 type="textarea"
                                                 rows="2"
                                                 label="I need more information..."
                                                 icon="pencil-alt"
+                                                onChange={onObservationChange}
+                                                
                                             />
                                         </div>
                                         <div className="text-center">
-                                            <MDBBtn outline className="mb-3 btnEv-blue rounded mb-0 border-0 whiteFont">
+                                            <MDBBtn outline className="mb-3 btnEv-blue rounded mb-0 border-0 whiteFont" type="submit">
                                                 Send
                                             </MDBBtn>
 
