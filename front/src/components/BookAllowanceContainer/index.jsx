@@ -130,7 +130,7 @@ class BookAllowanceContainer extends React.Component {
               <MDBCard>
                 <MDBCardBody>
                   <form onSubmit={this.onFormSubmit}>
-                    <p className="h4 text-center py-4">Submit your receipt
+                    <p className="h4 text-center py-4">Submit your book receipt
                         <label className="maxAmount"> {`(Max Amount $${allowance.fixedAmount})`}</label></p>
                     <div className="grey-text">
                       <MDBInput

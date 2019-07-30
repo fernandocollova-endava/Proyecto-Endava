@@ -46,40 +46,6 @@ class AllowanceContainer extends React.Component {
     const { file, ...rest } = this.state;
     const formData = new FormData();
 
-    // worker
-    //   .recognize(this.state.file)
-    //   .progress(p => {
-    //   })
-    //   .then(({ text }) => {
-    //     var textLow = text
-    //     textLow.toUpperCase()
-    //     var index = text.indexOf("TOTAL" || "Total");
-    //     var regex = /(\d+)/g;
-    //     var firstString = text.substring(index, (index + 60));
-    //     var numbers = firstString.match(regex);
-
-    //     for (let i = 0; i < numbers.length; i++) {
-    //       // if (parseInt(numbers[i]) == this.state.employeeAmount) {
-
-    //       // }
-    //       worker.terminate();
-    //     }
-
-    //   });
-    // }
-    // var finalNumber = stringResult.match(regex)[0];
-
-    // if (finalNumber.length) {
-    //   if (parseInt(finalNumber) != this.state.employeeAmount) {
-    //     console.log(
-    //       "el impore no es correc",
-    //       parseInt(finalNumber),
-    //       " el sae",
-    //       this.state.employeeAmount
-    //     );
-    //   } else console.log("odo bieeeeeen");
-    // Agustin estuvo aca 
-
     formData.append('file', file);
     formData.append('userid', this.props.user.id);
     formData.append('allowanceName', this.props.nameUrl);
@@ -171,13 +137,8 @@ class AllowanceContainer extends React.Component {
               <MDBCard>
                 <MDBCardBody>
                   <form onSubmit={this.onFormSubmit}>
-<<<<<<< HEAD
                     <p className="h4 text-center py-4">Submit your receipt
                         <label className="maxAmount"> {`(Max Amount $${allowance.fixedAmount})`}</label></p>
-=======
-                    <p className="h4 text-center py-4">Submit your {this.props.nameUrl} receipt
-                        <label className="maxAmount"> {`(Max Amount $${maxAmount.fixedAmount})`}</label></p>
->>>>>>> 2d90c0539bc58916135515f39c86b15b006bc93a
                     <div className="grey-text">
                       <MDBInput
                         label="Amount allowance..." icon="hand-holding-usd"
