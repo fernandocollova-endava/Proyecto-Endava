@@ -9,8 +9,6 @@ import {
 } from "mdbreact";
 import RowAllowance from "../AllowancesListContainer/rowAllowance";
 
-import { columnsBook } from "../../auxFunctions/auxFunctions";
-
 export default function adminEvent({
   handleFilterStatus,
   alertPending,
@@ -23,43 +21,32 @@ export default function adminEvent({
 }) {
   return (
     <>
-      {/* LISTADO  */}
-      <div>
-        <MDBRow className="container-banner">
-          <MDBCol md="2">
-            <h1 className="upperCaseFonts">Requests</h1>
-          </MDBCol>
-          <MDBCol md="5">
-            <MDBFormInline className="md-form">
-              <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp;
+    <MDBRow className="container-banner">
+        <MDBCol md="12">
+          <p className="upperCaseFonts title-container">
+            <span className="titleMain"><i className="fas fa-user-check"></i> EVENT ADMIN PANEL</span>
+
+            <span className="form-inline md-form topMarginLine">
+              {/* <MDBIcon icon="angle-double-right" /> &nbsp;&nbsp; */}
               <select
                 value={allowanceStatus}
                 className="browser-default custom-select"
                 name="status"
                 onChange={handleFilterStatus}
               >
-                <option value="">Status...</option>
+                <option value="">Please, select status...</option>
                 <option value="">All</option>
                 <option value="pending">Pending</option>
                 <option value="approved">Approved</option>
                 <option value="rejected">Rejected</option>
               </select>
-            </MDBFormInline>
-          </MDBCol>
-          <MDBCol md="2" />
-          <MDBCol md="3">
-            <MDBFormInline className="md-form">
-              <MDBIcon icon="search" />
-              <input
-                className="form-control form-control-sm ml-3 w-75"
-                type="text"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </MDBFormInline>
-          </MDBCol>
-        </MDBRow>
-
+              
+            </span>
+          </p>
+        </MDBCol>
+      </MDBRow>
+      {/* LISTADO  */}
+      <div>
         <hr />
         {alertPending ? (
           <>
@@ -88,9 +75,9 @@ export default function adminEvent({
                   <br />
                 </label>
               ) : (
-                <div class="table-responsive">
-                  <table class="table btn-table table-fixed paddingTable">
-                    <thead class="">
+                <div className="table-responsive">
+                  <table className="table btn-table table-fixed paddingTable">
+                    <thead className="">
                      
                       <tr>
                         <th>Topic</th>
@@ -98,7 +85,6 @@ export default function adminEvent({
                         <th>Date</th>
                         <th>Schelude</th>
                         <th>Status</th>
-                        <th></th>
                         <th>Option</th>
                       </tr>
                     </thead>

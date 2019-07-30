@@ -65556,439 +65556,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./src/components/AdminBookContainer/adminBook.jsx":
-/*!*********************************************************!*\
-  !*** ./src/components/AdminBookContainer/adminBook.jsx ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return adminBook; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AllowancesListContainer/rowAllowance */ "./src/components/AllowancesListContainer/rowAllowance.jsx");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-function adminBook(_ref) {
-  var handleFilterStatus = _ref.handleFilterStatus,
-      alertPending = _ref.alertPending,
-      bookAllowances = _ref.bookAllowances,
-      allowanceStatus = _ref.allowanceStatus,
-      deleteAllowance = _ref.deleteAllowance,
-      viewDetails = _ref.viewDetails,
-      allUser = _ref.allUser,
-      urlName = _ref.urlName;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "container-banner"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "upperCaseFonts"
-  }, "Requests")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
-    className: "md-form"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "angle-double-right"
-  }), " \xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    value: allowanceStatus,
-    className: "browser-default custom-select",
-    name: "status",
-    onChange: handleFilterStatus
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: ""
-  }, "Status..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: ""
-  }, "All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "pending"
-  }, "Pending"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "approved"
-  }, "Approved"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "rejected"
-  }, "Rejected")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "2"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
-    className: "md-form"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "search"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "form-control form-control-sm ml-3 w-75",
-    type: "text",
-    placeholder: "Search",
-    "aria-label": "Search"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      maxWidth: 406,
-      position: "fixed",
-      bottom: 0
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "heartBeat"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAlert"], {
-    color: "success"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Hello!"), " You have ", alertPending, " allowance pending response...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)))) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
-    className: "container-banner minHeight"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "fadeInUp"
-  }, bookAllowances.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "table-responsive"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-    "class": "table btn-table table-fixed paddingTable"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
-    "class": ""
-  }, urlName == "book" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Type"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Info"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    urlName: urlName,
-    deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
-    ,
-    viewDetails: viewDetails // Se envia la funcion para mostrar el modal (onClick)
-    ,
-    allUser: allUser // Si es admin o no
-    ,
-    allowanceList: bookAllowances // Listado de la consulta
-
-  }))))))));
-}
-
-/***/ }),
-
-/***/ "./src/components/AdminBookContainer/index.jsx":
-/*!*****************************************************!*\
-  !*** ./src/components/AdminBookContainer/index.jsx ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _ModalContainer_ModalBookDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/ModalBookDetail */ "./src/components/ModalContainer/ModalBookDetail.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
-/* harmony import */ var _AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AdminBookContainer/adminBook */ "./src/components/AdminBookContainer/adminBook.jsx");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-
-
-
-
-
-
-var AdminBookContainer =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(AdminBookContainer, _React$Component);
-
-  function AdminBookContainer() {
-    var _this;
-
-    _classCallCheck(this, AdminBookContainer);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminBookContainer).call(this));
-    _this.state = {
-      modal: false,
-      modalAviso: false,
-      modalBoolean: false,
-      activeAllowance: {},
-      history: [],
-      activeItem: "1",
-      allowanceType: "book",
-      titleBoolean: "",
-      msjSave: "",
-      allowanceStatus: "",
-      alertPending: 0,
-      selectedMonth: 0
-    };
-    _this.toggleDetails = _this.toggleDetails.bind(_assertThisInitialized(_this));
-    _this.toggleBoolean = _this.toggleBoolean.bind(_assertThisInitialized(_this));
-    _this.togglePanel = _this.togglePanel.bind(_assertThisInitialized(_this));
-    _this.viewDetails = _this.viewDetails.bind(_assertThisInitialized(_this));
-    _this.toggleAviso = _this.toggleAviso.bind(_assertThisInitialized(_this));
-    _this.deleteAllowance = _this.deleteAllowance.bind(_assertThisInitialized(_this));
-    _this.actionOk = _this.actionOk.bind(_assertThisInitialized(_this));
-    _this.handleFilterStatus = _this.handleFilterStatus.bind(_assertThisInitialized(_this));
-    _this.handleSaveConfirm = _this.handleSaveConfirm.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(AdminBookContainer, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      this.props.openCloseNavBar(false);
-      var selectedMonth = moment__WEBPACK_IMPORTED_MODULE_2___default()().month() + 2;
-      this.props.fetchCurrentBookA(selectedMonth, this.props.adminPath, this.props.user.id);
-      this.setState({
-        selectedMonth: selectedMonth
-      }, function () {
-        _this2.props.fetchCurrentBookA(_this2.state.selectedMonth, _this2.props.adminPath, _this2.props.user.id); // this.props.fetchBookAllowances();
-
-      });
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps, prevState) {
-      var _this3 = this;
-
-      if (prevProps.adminPath !== this.props.adminPath) {
-        this.props.fetchCurrentBookA(this.state.selectedMonth, this.props.adminPath, this.props.user.id).then(function () {
-          return _this3.props.fetchBookAllowances(_this3.props.user.id, _this3.props.adminPath);
-        });
-      }
-    } // FUNCION DE CONSULTA HISTORIAL / DETALLE
-
-  }, {
-    key: "viewDetails",
-    value: function viewDetails(id, allowanceId, receiptPath) {
-      var _this4 = this;
-
-      this.props.fetchAllowanceActive(id).then(function (data) {
-        // let idUserHistory = data.activeAllowances.employeeDetail.id; // Retorna el id del usuario del detalle seleccionado
-        _this4.props.fetchBookInstallments(receiptPath, allowanceId).then(function () {
-          _this4.setState({
-            modal: true
-          });
-        });
-      });
-    }
-  }, {
-    key: "handleFilterStatus",
-    value: function handleFilterStatus(e) {
-      this.props.fetchCurrentBookA(this.state.selectedMonth, this.props.adminPath, this.props.user.id);
-      this.setState({
-        allowanceStatus: e.target.value
-      });
-    }
-  }, {
-    key: "handMonthChange",
-    value: function handMonthChange(e) {} // TOGGLE MODAL HISTORIAL / DETALLE
-
-  }, {
-    key: "toggleDetails",
-    value: function toggleDetails() {
-      this.setState({
-        modal: !this.state.modal,
-        activeItem: "1",
-        msjSave: ""
-      });
-    } // TOGGLE MODAL AVISO
-
-  }, {
-    key: "toggleAviso",
-    value: function toggleAviso() {
-      this.setState({
-        modalAviso: !this.state.modalAviso,
-        msjSave: ""
-      });
-    } // TOGGLE MODAL BOOLEAN
-
-  }, {
-    key: "toggleBoolean",
-    value: function toggleBoolean() {
-      this.setState({
-        modalBoolean: !this.state.modalBoolean
-      });
-    } // TOGGLE PARA NAVEGAR ENTRE EL PANEL DEL MODAL
-
-  }, {
-    key: "togglePanel",
-    value: function togglePanel(id) {
-      this.setState({
-        activeItem: id
-      });
-    } // FUNCION PARA ELIMINAR UN BENEFICIO ENVIADO ( SOLO SI AUN ESTA PENDIENTE)
-
-  }, {
-    key: "deleteAllowance",
-    value: function deleteAllowance(id) {
-      this.setState({
-        titleBoolean: "Are you sure you want to delete the information?",
-        modalBoolean: true,
-        data: {
-          id: id
-        }
-      });
-    } // FUNCION PARA EJECUTAR LA ACCION GENERICA DEL MODAL BOOLEAN
-
-  }, {
-    key: "actionOk",
-    value: function actionOk(data) {
-      var _this5 = this;
-
-      this.props.deleteAllowance(data.id).then(function () {
-        _this5.setState({
-          modalBoolean: false,
-          modalAviso: true,
-          textMsj: "The request has been successfully eliminated...",
-          titleMsj: "Success"
-        });
-
-        var selectedMonth = moment__WEBPACK_IMPORTED_MODULE_2___default()().month() + 2;
-
-        _this5.props.fetchCurrentBookA(selectedMonth, _this5.props.adminPath, _this5.props.user.id);
-      })["catch"](function () {
-        _this5.setState({
-          modalBoolean: false,
-          modalAviso: true,
-          textMsj: "Ups!, an error occurred while processing the request...",
-          titleMsj: "Error"
-        });
-      });
-    }
-  }, {
-    key: "handleSaveConfirm",
-    value: function handleSaveConfirm(e) {
-      var _this6 = this;
-
-      e.preventDefault();
-      this.props.editStatusAllowance(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
-        _this6.setState({
-          msjSave: "Saved!"
-        });
-
-        var selectedMonth = moment__WEBPACK_IMPORTED_MODULE_2___default()().month() + 2;
-
-        _this6.props.fetchCurrentBookA(selectedMonth, _this6.props.adminPath, _this6.props.user.id);
-      })["catch"](function () {
-        _this6.setState({
-          msjSave: "Ups!, an error occurred while processing the request..."
-        });
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalBookDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        modal: this.state.modal,
-        toggleDetails: this.toggleDetails,
-        togglePanel: this.togglePanel,
-        activeItem: this.state.activeItem,
-        activeAllowance: this.props.activeAllowance,
-        history: this.props.bookInstallments,
-        handleSaveConfirm: this.handleSaveConfirm,
-        msjSave: this.state.msjSave,
-        allUser: this.props.allUser
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        modal: this.state.modalAviso,
-        toggle: this.toggleAviso,
-        textMsj: this.state.textMsj,
-        titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        modalBoolean: this.state.modalBoolean,
-        toggleBoolean: this.toggleBoolean,
-        actionOk: this.actionOk,
-        titleBoolean: this.state.titleBoolean,
-        data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminBookContainer_adminBook__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        alertPending: this.state.alertPending,
-        handleClick: this.handleClick,
-        handleFilterStatus: this.handleFilterStatus,
-        bookAllowances: this.props.currentBookAllowances,
-        allowanceStatus: this.state.allowanceStatus,
-        deleteAllowance: this.props.deleteAllowance,
-        viewDetails: this.viewDetails,
-        urlName: this.props.urlName
-      }));
-    }
-  }]);
-
-  return AdminBookContainer;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-var mapStateToProps = function mapStateToProps(state, own) {
-  var urlName = own.match.url.substring(7, 11);
-  return {
-    urlName: urlName,
-    user: state.user.user,
-    bookAllowances: state.allowance.bookAllowances,
-    activeAllowance: state.allowance.activeAllowances,
-    history: state.allowance.historyAllowances,
-    //
-    bookInstallments: state.allowance.bookInstallments,
-    adminPath: own.match.path == "/admin/book",
-    // adminPath => consulta que la ruta corresponda a admin
-    currentBookAllowances: state.allowance.currentBookAllowances //busco libros p/mes actual
-
-  };
-};
-
-var MapDispatchToProps = function MapDispatchToProps(dispatch) {
-  return {
-    fetchBookAllowances: function fetchBookAllowances(user, adminPath) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchBookAllowances"])(user, adminPath));
-    },
-    openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__["openCloseNavBar"])(val));
-    },
-    fetchAllowanceActive: function fetchAllowanceActive(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceActive"])(id));
-    },
-    fetchAllowanceHistory: function fetchAllowanceHistory(employeeId, allowanceId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchAllowanceHistory"])(employeeId, allowanceId));
-    },
-    //trae la data para el "history del detalle modal"
-    deleteAllowance: function deleteAllowance(id) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["deleteAllowance"])(id));
-    },
-    // Elimina detalle
-    editStatusAllowance: function editStatusAllowance(id, status, observation) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["editStatusAllowance"])(id, status, observation));
-    },
-    // Switch State
-    fetchCountPending: function fetchCountPending(userId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
-    },
-    // Consulta cantidad de allowance pendientes
-    fetchCurrentBookA: function fetchCurrentBookA(month, adminPath, userId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCurrentBookA"])(month, adminPath, userId));
-    },
-    fetchBookInstallments: function fetchBookInstallments(receiptPath, allowanceId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchBookInstallments"])(receiptPath, allowanceId));
-    }
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AdminBookContainer));
-
-/***/ }),
-
 /***/ "./src/components/AdminEventContainer/adminEvent.jsx":
 /*!***********************************************************!*\
   !*** ./src/components/AdminEventContainer/adminEvent.jsx ***!
@@ -66003,9 +65570,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
 /* harmony import */ var _AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AllowancesListContainer/rowAllowance */ "./src/components/AllowancesListContainer/rowAllowance.jsx");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
-/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__);
-
 
 
 
@@ -66018,26 +65582,26 @@ function adminEvent(_ref) {
       viewDetails = _ref.viewDetails,
       allUser = _ref.allUser,
       urlName = _ref.urlName;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
     className: "container-banner"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "upperCaseFonts"
-  }, "Requests")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
-    className: "md-form"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "angle-double-right"
-  }), " \xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    md: "12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "upperCaseFonts title-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleMain"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-user-check"
+  }), " EVENT ADMIN PANEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "form-inline md-form topMarginLine"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     value: allowanceStatus,
     className: "browser-default custom-select",
     name: "status",
     onChange: handleFilterStatus
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: ""
-  }, "Status..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+  }, "Please, select status..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: ""
   }, "All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "pending"
@@ -66045,20 +65609,7 @@ function adminEvent(_ref) {
     value: "approved"
   }, "Approved"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "rejected"
-  }, "Rejected")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "2"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
-    md: "3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
-    className: "md-form"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
-    icon: "search"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "form-control form-control-sm ml-3 w-75",
-    type: "text",
-    placeholder: "Search",
-    "aria-label": "Search"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Rejected")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       maxWidth: 406,
       position: "fixed",
@@ -66075,12 +65626,12 @@ function adminEvent(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
     type: "fadeInUp"
   }, eventList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "table-responsive"
+    className: "table-responsive"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-    "class": "table btn-table table-fixed paddingTable"
+    className: "table btn-table table-fixed paddingTable"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
-    "class": ""
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Schelude"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    className: ""
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Schelude"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
     urlName: urlName,
     deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
     ,
@@ -66107,15 +65658,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var _redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/disciplineEvents */ "./src/redux/actions/disciplineEvents.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/ModalEventDetail */ "./src/components/ModalContainer/ModalEventDetail.jsx");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
-/* harmony import */ var _AdminEventContainer_adminEvent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../AdminEventContainer/adminEvent */ "./src/components/AdminEventContainer/adminEvent.jsx");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/disciplineEvents */ "./src/redux/actions/disciplineEvents.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/ModalEventDetail */ "./src/components/ModalContainer/ModalEventDetail.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
+/* harmony import */ var _AdminEventContainer_adminEvent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../AdminEventContainer/adminEvent */ "./src/components/AdminEventContainer/adminEvent.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66133,7 +65682,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -66183,25 +65731,13 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.openCloseNavBar(false);
-      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus); // this.setState(
-      //   {
-      //     selectedMonth: selectedMonth
-      //   },
-      //   () => {
-      //     this.props.fetchDisciplineEvents();
-      //   }
-      // );
+      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus);
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
       if (prevProps.adminPath !== this.props.adminPath) {
-        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus); // .then(() =>
-        //   this.props.fetchBookAllowances(
-        //     this.props.user.id,
-        //     this.props.adminPath
-        //   )
-        // );
+        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus);
       }
     } // FUNCION DE CONSULTA HISTORIAL / DETALLE
 
@@ -66210,7 +65746,6 @@ function (_React$Component) {
     value: function viewDetails(id) {
       var _this2 = this;
 
-      console.log(id, "ID");
       this.props.fetchActiveEvent(id).then(function (data) {
         _this2.setState({
           modal: true
@@ -66220,7 +65755,6 @@ function (_React$Component) {
   }, {
     key: "handleFilterStatus",
     value: function handleFilterStatus(e) {
-      console.log("soy e", e.target.value);
       this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, e.target.value);
       this.setState({
         allowanceStatus: e.target.value
@@ -66285,7 +65819,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("soy EVENT", this.props.activeEvent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
         modal: this.state.modal,
         toggleDetails: this.toggleDetails,
         togglePanel: this.togglePanel,
@@ -66295,18 +65829,18 @@ function (_React$Component) {
         handleSaveConfirm: this.handleSaveConfirm,
         msjSave: this.state.msjSave,
         allUser: this.props.allUser
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_6__["default"], {
         modal: this.state.modalAviso,
         toggle: this.toggleAviso,
         textMsj: this.state.textMsj,
         titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_7__["default"], {
         modalBoolean: this.state.modalBoolean,
         toggleBoolean: this.toggleBoolean,
         actionOk: this.actionOk,
         titleBoolean: this.state.titleBoolean,
         data: this.state.data
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminEventContainer_adminEvent__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminEventContainer_adminEvent__WEBPACK_IMPORTED_MODULE_8__["default"], {
         alertPending: this.state.alertPending,
         handleClick: this.handleClick,
         handleFilterStatus: this.handleFilterStatus,
@@ -66340,28 +65874,28 @@ var mapStateToProps = function mapStateToProps(state, own) {
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
     fetchBookAllowances: function fetchBookAllowances(user, adminPath) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchBookAllowances"])(user, adminPath));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchBookAllowances"])(user, adminPath));
     },
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_4__["openCloseNavBar"])(val));
     },
     fetchActiveEvent: function fetchActiveEvent(id) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchActiveEvent"])(id));
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__["fetchActiveEvent"])(id));
     },
     deleteEvent: function deleteEvent(id) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["deleteEvent"])(id));
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__["deleteEvent"])(id));
     },
     // Elimina detalle
     editEventStatus: function editEventStatus(id, status, observation) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["editEventStatus"])(id, status, observation));
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__["editEventStatus"])(id, status, observation));
     },
     // Switch State
     fetchCountPending: function fetchCountPending(userId) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["fetchCountPending"])(userId));
     },
     // Consulta cantidad de allowance pendientes
     fetchDisciplineEvents: function fetchDisciplineEvents(userId, adminUrl, status) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchDisciplineEvents"])(userId, adminUrl, status));
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_3__["fetchDisciplineEvents"])(userId, adminUrl, status));
     }
   };
 };
@@ -66375,323 +65909,9 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   !*** ./src/components/AllowanceContainer/index.jsx ***!
   \*****************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
- // import { TesseractWorker } from "tesseract.js";
-
-
- // const worker = new TesseractWorker();
-
-var AllowanceContainer =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(AllowanceContainer, _React$Component);
-
-  function AllowanceContainer(props) {
-    var _this;
-
-    _classCallCheck(this, AllowanceContainer);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(AllowanceContainer).call(this, props));
-    _this.state = {
-      file: null,
-      employeeAmount: 0,
-      observation: "",
-      active: "",
-      modal: false,
-      textMsj: "",
-      titleMsj: ""
-    };
-    _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
-    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
-    _this.onObservationChange = _this.onObservationChange.bind(_assertThisInitialized(_this));
-    _this.onAmountChange = _this.onAmountChange.bind(_assertThisInitialized(_this));
-    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(AllowanceContainer, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      window.scrollTo(0, 0);
-      this.props.openCloseNavBar(false);
-    }
-  }, {
-    key: "onFormSubmit",
-    value: function onFormSubmit(e) {
-      var _this2 = this;
-
-      e.preventDefault();
-
-      var _this$state = this.state,
-          file = _this$state.file,
-          rest = _objectWithoutProperties(_this$state, ["file"]);
-
-      var formData = new FormData(); // worker
-      //   .recognize(this.state.file)
-      //   .progress(p => {
-      //   })
-      //   .then(({ text }) => {
-      //     var textLow = text
-      //     textLow.toUpperCase()
-      //     var index = text.indexOf("TOTAL" || "Total");
-      //     var regex = /(\d+)/g;
-      //     var firstString = text.substring(index, (index + 60));
-      //     var numbers = firstString.match(regex);
-      //     for (let i = 0; i < numbers.length; i++) {
-      //       // if (parseInt(numbers[i]) == this.state.employeeAmount) {
-      //       // }
-      //       worker.terminate();
-      //     }
-      //   });
-      // }
-      // var finalNumber = stringResult.match(regex)[0];
-      // if (finalNumber.length) {
-      //   if (parseInt(finalNumber) != this.state.employeeAmount) {
-      //     console.log(
-      //       "el impore no es correc",
-      //       parseInt(finalNumber),
-      //       " el sae",
-      //       this.state.employeeAmount
-      //     );
-      //   } else console.log("odo bieeeeeen");
-
-      formData.append('file', file);
-      formData.append('userid', this.props.user.id);
-      formData.append('allowanceName', this.props.nameUrl);
-      formData.append('employeeAmount', this.state.employeeAmount);
-      formData.append('observation', this.state.observation);
-      this.props.createAllowance(formData).then(function (response) {
-        _this2.props.sendEmailConfirm(_this2.props.user, _this2.props.nameUrl);
-
-        _this2.setState({
-          active: response.data,
-          modal: true,
-          textMsj: 'The file has been successfully sent',
-          titleMsj: 'Success'
-        });
-      })["catch"](function (error) {
-        _this2.setState({
-          modal: true,
-          textMsj: 'An error occurred while sending the file..',
-          titleMsj: 'Error'
-        });
-      });
-    }
-  }, {
-    key: "onChange",
-    value: function onChange(e) {
-      this.setState({
-        file: e.target.files[0]
-      });
-    }
-  }, {
-    key: "onObservationChange",
-    value: function onObservationChange(e) {
-      this.setState({
-        observation: e.target.value
-      });
-    }
-  }, {
-    key: "onAmountChange",
-    value: function onAmountChange(e) {
-      this.setState({
-        employeeAmount: e.target.value
-      });
-    } // TOGGLE de MODAL
-
-  }, {
-    key: "toggle",
-    value: function toggle() {
-      this.setState({
-        modal: !this.state.modal
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this3 = this;
-
-      var allowance = this.props.listAllowance.find(function (allow) {
-        return allow.name === _this3.props.nameUrl;
-      });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        modal: this.state.modal,
-        toggle: this.toggle,
-        textMsj: this.state.textMsj,
-        titleMsj: this.state.titleMsj
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
-        className: "container-banner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
-        md: "12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: " title-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "titleMain upperCaseFonts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-file-invoice-dollar"
-      }), " ", "MANAGE YOUR ".concat(this.props.nameUrl, " ALLOWANCE.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "form-inline md-form topMarginLine"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "browser-default custom-select newRequestBtn",
-        to: "/allowance/gym"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-plus-circle"
-      }), " New Gym"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "browser-default custom-select newRequestBtn",
-        to: "/allowance/training"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-plus-circle"
-      }), " New Training"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "browser-default custom-select newRequestBtn",
-        to: "/allowance/child-care"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-plus-circle"
-      }), " New Child Care"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "browser-default custom-select newRequestBtn",
-        to: "/allowance/book"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-plus-circle"
-      }), " New Book"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        className: "browser-default custom-select newRequest",
-        to: "/allowance/search"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-chart-bar"
-      }), " View my allowance"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
-        className: "container-banner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
-        md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBAnimation"], {
-        type: "fadeInUp"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onSubmit: this.onFormSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "h4 text-center py-4"
-      }, "Submit your receipt", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "maxAmount"
-      }, " ", "(Max Amount $".concat(allowance.fixedAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "grey-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
-        label: "Amount allowance...",
-        icon: "hand-holding-usd",
-        group: true,
-        required: true,
-        autoComplete: "off",
-        type: "number",
-        validate: true,
-        name: "employeeAmount",
-        onChange: this.onAmountChange,
-        error: "wrong",
-        success: "right"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
-        label: "Observation...",
-        icon: "comment-alt",
-        required: true,
-        group: true,
-        autoComplete: "off",
-        type: "text",
-        name: "observation",
-        onChange: this.onObservationChange,
-        validate: true,
-        error: "wrong",
-        success: "right"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
-        icon: "file-signature",
-        group: true,
-        type: "file",
-        name: "file",
-        onChange: this.onChange,
-        required: true,
-        validate: true,
-        error: "wrong",
-        success: "right"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "text-center py-4 mt-3"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBBtn"], {
-        color: "light-blue",
-        className: "mb-3 btnEv-red rounded mb-0 border-0 btnAllowance",
-        type: "submit"
-      }, "Send form ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBIcon"], {
-        icon: "angle-right"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "textAlert"
-      }, "*Please note that only jpg, png and PDF files up to 10MB are accepted.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBCol"], {
-        md: "7"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "preview:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.active.split('.')[1] !== 'pdf' && this.state.active.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/assets/receipt/".concat(this.state.active),
-        width: "100%"
-      })), this.state.active.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
-        src: "/assets/receipt/".concat(this.state.active),
-        width: "100%",
-        height: "400px",
-        type: "application/pdf"
-      }))));
-    }
-  }]);
-
-  return AllowanceContainer;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-var mapStateToProps = function mapStateToProps(state, owner) {
-  return {
-    user: state.user.user,
-    nameUrl: owner.match.params.name,
-    // Extrae la url dinamica
-    listAllowance: state.allowance.adminAllowances
-  };
-};
-
-var MapDispatchToProps = function MapDispatchToProps(dispatch) {
-  return {
-    createAllowance: function createAllowance(data) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["createAllowance"])(data));
-    },
-    openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_6__["openCloseNavBar"])(val));
-    },
-    sendEmailConfirm: function sendEmailConfirm(user, allowance) {
-      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["sendEmailConfirm"])(user, allowance));
-    }
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AllowanceContainer));
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/agus/Escritorio/endava/front/src/components/AllowanceContainer/index.jsx: Unexpected token (174:1)\n\n\u001b[0m \u001b[90m 172 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mMDBCardBody\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 173 | \u001b[39m                  \u001b[33m<\u001b[39m\u001b[33mform\u001b[39m onSubmit\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39monFormSubmit}\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 175 | \u001b[39m                    \u001b[33m<\u001b[39m\u001b[33mp\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"h4 text-center py-4\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33mSubmit\u001b[39m your receipt\u001b[0m\n\u001b[0m \u001b[90m 176 | \u001b[39m                        \u001b[33m<\u001b[39m\u001b[33mlabel\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"maxAmount\"\u001b[39m\u001b[33m>\u001b[39m {\u001b[32m`(Max Amount $${allowance.fixedAmount})`\u001b[39m}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mlabel\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mp\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 177 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n    at Object.raise (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:6325:17)\n    at Object.unexpected (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:7642:16)\n    at Object.jsxParseIdentifier (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3379:12)\n    at Object.jsxParseNamespacedName (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3389:23)\n    at Object.jsxParseElementName (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3400:21)\n    at Object.jsxParseOpeningElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3482:22)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3515:33)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElementAt (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElement (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3589:17)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3596:19)\n    at Object.parseExprSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseParenAndDistinguishExpression (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8978:28)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8762:21)\n    at Object.parseExprAtom (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseExpression (/home/agus/Escritorio/endava/front/node_modules/@babel/parser/lib/index.js:8135:23)");
 
 /***/ }),
 
@@ -66784,17 +66004,7 @@ function allowanceList(_ref) {
   }, "Last two months")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "browser-default custom-select newRequest",
     to: "/allowance/new-allowance"
-  }, "+ New Allowance"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      maxWidth: 406,
-      position: "fixed",
-      bottom: 0
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
-    type: "heartBeat"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAlert"], {
-    color: "success"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Hello!"), " You have ", alertPending, " allowance pending response...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)))) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
+  }, "+ New Allowance"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
     className: "container-banner minHeight"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "12"
@@ -67218,17 +66428,16 @@ function rowAllowance(_ref) {
       allowanceList = _ref.allowanceList,
       urlName = _ref.urlName;
   var Month = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, console.log(allowanceList), allowanceList && allowanceList.map(function (row, i) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, allowanceList && allowanceList.map(function (row, i) {
     return row.topic ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: i
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      key: "idClass_".concat(i),
       className: "upperCaseFonts"
     }, row.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      key: "idClassName_".concat(i),
       className: "upperCaseFonts"
-    }, row.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-      key: "id_".concat(i),
-      className: "upperCaseFonts"
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    }, row.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: row.status
     }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.allowanceDetail ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
@@ -67259,11 +66468,15 @@ function rowAllowance(_ref) {
       className: "greyColor cursorPointer"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "far fa-trash-alt iconAllowance "
-    }), " Delete", " ") : "")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    }), " Delete", " ") : "")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      key: "".concat(i)
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      key: "idClass_".concat(i),
       className: "upperCaseFonts"
     }, row.allowanceDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      key: "idClassName_".concat(i),
       className: "upperCaseFonts"
-    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: row.status
     }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
@@ -67956,9 +67169,6 @@ function eventCalendar(_ref) {
   var eventList = _ref.eventList,
       handleClick = _ref.handleClick,
       onKeyDown = _ref.onKeyDown;
-  {
-    console.log(eventList);
-  }
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBContainer"], {
     fluid: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
@@ -69845,8 +69055,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _BookAllowanceContainer__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../BookAllowanceContainer */ "./src/components/BookAllowanceContainer/index.jsx");
 /* harmony import */ var _HomeAdminContainer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../HomeAdminContainer */ "./src/components/HomeAdminContainer/index.jsx");
 /* harmony import */ var _HomeNewAllowance_index__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../HomeNewAllowance/index */ "./src/components/HomeNewAllowance/index.jsx");
-/* harmony import */ var _AdminBookContainer__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../AdminBookContainer */ "./src/components/AdminBookContainer/index.jsx");
-/* harmony import */ var _AdminEventContainer__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../AdminEventContainer */ "./src/components/AdminEventContainer/index.jsx");
+/* harmony import */ var _AdminEventContainer__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../AdminEventContainer */ "./src/components/AdminEventContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69864,7 +69073,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -69955,12 +69163,8 @@ function (_React$Component) {
         component: _HomeAdminContainer__WEBPACK_IMPORTED_MODULE_18__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
-        path: "/admin/book",
-        component: _AdminBookContainer__WEBPACK_IMPORTED_MODULE_20__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
         path: "/admin/event",
-        component: _AdminEventContainer__WEBPACK_IMPORTED_MODULE_21__["default"]
+        component: _AdminEventContainer__WEBPACK_IMPORTED_MODULE_20__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/admin/allowance",
@@ -70081,197 +69285,6 @@ function ModalAvatar(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/ModalContainer/ModalBookDetail.jsx":
-/*!***********************************************************!*\
-  !*** ./src/components/ModalContainer/ModalBookDetail.jsx ***!
-  \***********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ModalBookDetails; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-
-
-function ModalBookDetails(_ref) {
-  var modal = _ref.modal,
-      msjSave = _ref.msjSave,
-      allUser = _ref.allUser,
-      handleSaveConfirm = _ref.handleSaveConfirm,
-      toggleDetails = _ref.toggleDetails,
-      activeAllowance = _ref.activeAllowance,
-      history = _ref.history,
-      togglePanel = _ref.togglePanel,
-      activeItem = _ref.activeItem;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
-    isOpen: modal,
-    toggle: toggleDetails,
-    size: "lg"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
-    toggle: toggleDetails
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "upperCaseFonts"
-  }, activeAllowance.allowanceDetail.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNav"], {
-    className: "nav-tabs"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
-    to: "#",
-    className: activeItem === "1" ? "active" : "",
-    onClick: function onClick() {
-      return togglePanel("1");
-    },
-    role: "tab"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "far fa-list-alt"
-  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "DETAILS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
-    to: "#",
-    className: activeItem === "2" ? "active" : "",
-    onClick: function onClick() {
-      return togglePanel("2");
-    },
-    role: "tab"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-history"
-  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "HISTORY"))), allUser && // Si 
-  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
-    to: "#",
-    className: activeItem === "3" ? "active" : "",
-    onClick: function onClick() {
-      return togglePanel("3");
-    },
-    role: "tab"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-user-edit"
-  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "ADMIN")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
-    activeItem: activeItem
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
-    tabId: "1",
-    role: "tabpanel"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mt-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
-  }, "User: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm"
-  }, activeAllowance.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "marginTextLeft textBold"
-  }, "Actual payment date: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm"
-  }, activeAllowance.paymentDate)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "parrafoModal"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
-  }, "Amount: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm"
-  }, "$ ", activeAllowance.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "marginTextLeft textBold"
-  }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm ".concat(activeAllowance.status)
-  }, activeAllowance.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "parrafoModal"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
-  }, "Observation: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm"
-  }, activeAllowance.observation)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "parrafoModal"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
-  }, "Admin Comment: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm"
-  }, activeAllowance.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    onSubmit: handleSaveConfirm
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "hidden",
-    name: "id",
-    value: activeAllowance.id
-  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    action: "",
-    className: "modalForm"
-  }, activeAllowance.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "radio"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "approvedBook radioBoton"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "radio",
-    defaultChecked: activeAllowance.status === 'approved',
-    name: "status",
-    value: "approved"
-  }), "\xA0APPROVED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "rejectedBook radioBoton"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "radio",
-    defaultChecked: activeAllowance.status === 'rejected',
-    name: "status",
-    value: "rejected"
-  }), "\xA0REJECTED")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
-  }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "textForm ".concat(activeAllowance.status)
-  }, activeAllowance.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "input-group",
-    style: {
-      marginTop: -20
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "input-group-prepend"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "input-group-text",
-    id: "basic-addon"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "far fa-comment-alt prefix"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "text",
-    autoComplete: "off",
-    name: "observation",
-    defaultValue: activeAllowance.adminComment,
-    required: true,
-    className: "form-control",
-    placeholder: "Observation...",
-    "aria-describedby": "basic-addon"
-  })), activeAllowance.status === 'pending' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "submit",
-    className: "mb-3 btnEv-blue rounded mb-0 border-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-edit"
-  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), activeAllowance.receiptPath.split('.')[1] !== 'pdf' && activeAllowance.receiptPath.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/assets/receipt/".concat(activeAllowance.receiptPath),
-    width: "100%"
-  }), activeAllowance.receiptPath.split('.')[1] === 'pdf' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("embed", {
-    src: "/assets/receipt/".concat(activeAllowance.receiptPath),
-    width: "100%",
-    height: "400px",
-    type: "application/pdf"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
-    tabId: "2",
-    role: "tabpanel"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mt-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "fadeInUp"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "table-responsive"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-    className: "table btn-table table-fixed"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Installments"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Limit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Emp. Amount"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, console.log("history", history), history && history.map(function (item, i) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
-      style: {
-        height: 32
-      },
-      key: i
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.installments), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-      className: item.status
-    }, item.status));
-  }))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-    className: "mb-3 btnEv-red rounded mb-0 border-0",
-    onClick: toggleDetails
-  }, "Close"))));
-}
-
-/***/ }),
-
 /***/ "./src/components/ModalContainer/ModalEventDetail.jsx":
 /*!************************************************************!*\
   !*** ./src/components/ModalContainer/ModalEventDetail.jsx ***!
@@ -70330,10 +69343,12 @@ function ModalEventDetails(_ref) {
   }, "Employee: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
   }, " ", activeEvent.employee && activeEvent.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    className: "textBold"
+    className: "marginTextLeft textBold"
   }, "Topic: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
-  }, " ", activeEvent.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+  }, " ", activeEvent.topic)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     className: "textBold"
   }, "Time schelude: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
@@ -70603,7 +69618,7 @@ function ModalDetails(_ref) {
   }, "Admin Comment: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "textForm"
   }, activeAllowance.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
-    type: "flipInX",
+    type: "fadeIn",
     delay: "500ms"
   }, activeAllowance.receiptPath.split('.')[1] !== 'pdf' && activeAllowance.receiptPath.split('.')[1] !== undefined && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "/assets/receipt/".concat(activeAllowance.receiptPath),
@@ -72287,11 +71302,9 @@ var fetchEmployeeEvents = function fetchEmployeeEvents(userId) {
 };
 var fetchActiveEvent = function fetchActiveEvent(id) {
   return function (dispatch) {
-    console.log("entreee al axios", id);
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/findActive/".concat(id)).then(function (res) {
       return res.data;
     }).then(function (activeEvent) {
-      console.log("activeeeeee", activeEvent);
       return dispatch(receiveActiveEvent(activeEvent));
     });
   };

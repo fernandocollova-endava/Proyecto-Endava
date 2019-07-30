@@ -50,7 +50,7 @@ export default function ModalDetails({ modal, msjSave, allUser, handleSaveConfir
 
                                 <hr />
                                 {/* Visualización de archivo cargado */}
-                                <MDBAnimation type="flipInX" delay="500ms">
+                                <MDBAnimation type="fadeIn" delay="500ms">
                                 {((activeAllowance.receiptPath).split('.')[1] !== 'pdf' &&
                                     (activeAllowance.receiptPath).split('.')[1] !== undefined) &&
                                     <img src={`/assets/receipt/${activeAllowance.receiptPath}`} width="100%" />}

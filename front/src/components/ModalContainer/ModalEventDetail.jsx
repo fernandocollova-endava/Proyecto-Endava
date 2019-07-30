@@ -31,7 +31,10 @@ export default function ModalEventDetails({ modal, msjSave, allUser, handleSaveC
                                 <p className="parrafoModal">
                                     
                                     <strong className="textBold">Employee: </strong><span className="textForm"> { activeEvent.employee && activeEvent.employee.name}</span>
-                                    <strong className="textBold">Topic: </strong><span className="textForm"> {activeEvent.topic}</span>
+                                    <strong className="marginTextLeft textBold">Topic: </strong><span className="textForm"> {activeEvent.topic}</span>
+                                    
+                                </p>
+                                <p className="parrafoModal">
                                     <strong className="textBold">Time schelude: </strong><span className="textForm"> {activeEvent.time}</span>
                                     <strong className="marginTextLeft textBold">Status: </strong><span className={`textForm ${activeEvent.status}`}>{activeEvent.status}</span>
                                 </p>

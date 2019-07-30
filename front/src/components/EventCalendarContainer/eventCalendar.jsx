@@ -8,8 +8,6 @@ import {
 
 
 export default function eventCalendar({ eventList, handleClick, onKeyDown }) {
-  
-  {console.log(eventList)}
   return (
     <MDBContainer fluid>
       <MDBRow className="container-banner">

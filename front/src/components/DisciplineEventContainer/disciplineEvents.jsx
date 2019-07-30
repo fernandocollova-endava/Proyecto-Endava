@@ -8,7 +8,7 @@ import {
   MDBCol,
   MDBAnimation,
   MDBIcon,
-  MDBBtn, MDBFormInline
+  MDBBtn,
 
 } from "mdbreact";
 

@@ -70,7 +70,7 @@ export default function allowanceList({
         </MDBRow>
 
         <hr />
-        {(alertPending) ? <>
+        {/* {(alertPending) ? <>
           <div style={({ maxWidth: 406, position: "fixed", bottom: 0 })}>
             <MDBAnimation type="heartBeat">
               <MDBAlert color="success" >
@@ -82,7 +82,7 @@ export default function allowanceList({
               <hr />
             </MDBAnimation>
           </div>
-        </> : ''}
+        </> : ''} */}
         <MDBRow className="container-banner minHeight">
 
           <MDBCol md="12">
