@@ -5,6 +5,7 @@ import { MDBCard, MDBCardBody, MDBRow, MDBCol, MDBAnimation, MDBFormInline } fro
 const AnimationPage = ({ cardList }) => {
   return (
     <>
+
       <MDBAnimation type="fadeInUp">
 
         {/* <img src="https://www.endava.com/en/Digital/-/media/EndavaDigital/Careers/Images/Be-Connected/FinalImages/InnerComunities/Hero_Desktop_ICTHub.ashx"

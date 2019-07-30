@@ -94,7 +94,7 @@ Router.get("/technologies", function(req, res) {
 });
 
 Router.get("/", function(req, res) {
-  console.log(req.query, "QUERYYYYYYYYYY")
+  
 
   let employeeQuery = req.query.adminUrl ? { id: { [Op.ne]: req.query.userId } }: {};
   let statusQuery = req.query.status ?{status:req.query.status}:{}  

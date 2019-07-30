@@ -21,10 +21,10 @@ const Employee = db.define("employee", {
     },
     unique: true
   },
-  avatar:{
+  avatar: {
     type: Sequelize.TEXT,
-    defaultValue:"avatarDefault.jpg"
-},
+    defaultValue: "avatarDefault.jpg"
+  },
   sector: {
     type: Sequelize.STRING,
     allowNull: false
@@ -44,14 +44,12 @@ const Employee = db.define("employee", {
   salt: {
     type: Sequelize.STRING
   },
-  birthdayDate:{
+  birthdayDate: {
     type: Sequelize.STRING(10)
   },
-  proyect:{
-    type: Sequelize.STRING,
+  proyect: {
+    type: Sequelize.STRING
   }
-
-
 });
 
 Employee.generateSalt = function() {
@@ -72,18 +70,41 @@ Employee.prototype.validatePassword = function(password) {
 
   return this.password === hash;
 };
-Employee.prototype.updatePassword = function(password) { //creo un nuevo meodo de instancia, para el empleado que esto queriendo actualizar
-  var newPass = crypto
-    .createHmac("sha1", this.salt)
-    .update(password)
-    .digest("hex");
-  Employee.update(
-    { password: newPass, passwordChanged: true }, // el update lo realizo aca, no en la ruta. 
-    { where: { id: this.id } }                  //
-  )
-  return 'ok'
-};
+Employee.prototype.updatePassword = function(password, newPassword) {
+  //creo un nuevo meodo de instancia, para el empleado que esto queriendo actualizar
 
+  if (password) {
+    var oldPass = crypto
+      .createHmac("sha1", this.salt)
+      .update(password)
+      .digest("hex");   // si el cambio se hace teniendo password vieja
+
+    if (oldPass == this.password) {
+      var newPass = crypto
+        .createHmac("sha1", this.salt)
+        .update(newPassword)
+        .digest("hex");
+      Employee.update(
+        { password: newPass, passwordChanged: true }, // el update lo realizo aca, no en la ruta.
+        { where: { id: this.id } } //
+      );
+      return "ok";
+    }else{
+      return "error"
+    }
+  }else{
+    var newPass = crypto
+        .createHmac("sha1", this.salt)
+        .update(newPassword)
+        .digest("hex");   //primer cambio de password
+      Employee.update(
+        { password: newPass, passwordChanged: true }, // el update lo realizo aca, no en la ruta.
+        { where: { id: this.id } } //
+      );
+      return "ok";
+    
+  }
+};
 
 Employee.addHook("beforeCreate", employee => {
   employee.salt = Employee.generateSalt();

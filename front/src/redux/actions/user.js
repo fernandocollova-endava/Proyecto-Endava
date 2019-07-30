@@ -46,7 +46,9 @@ export const logout = () => dispatch => {
     });
 };
 export const updatePass = (password, userId, oldPass) => dispatch => {
+
   if (oldPass) {
+    console.log("soy old passs", oldPass)
     return axios
       .post("/api/employee/password/profile/update", { password: password, userId: userId, oldPass: oldPass })
       .then(res => res.data)
@@ -56,6 +58,7 @@ export const updatePass = (password, userId, oldPass) => dispatch => {
       .catch(error => console.log(error))
 
   } else {
+    
     return axios
       .post("/api/employee/password/update", { password: password, userId: userId })
       .then(res => res.data)
