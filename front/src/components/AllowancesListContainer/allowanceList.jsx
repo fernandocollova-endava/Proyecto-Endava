@@ -21,7 +21,7 @@ export default function allowanceList({
 }) {
   return (
     <>
-      {/* LISTADO  */}
+    
       <div>
         <MDBRow className="container-banner">
           {/* <MDBCol md="2">

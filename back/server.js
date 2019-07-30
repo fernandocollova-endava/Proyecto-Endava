@@ -30,7 +30,7 @@ app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname + '/src/public', 'index.html'))
 })
 
-db.sync({ force: false })
+db.sync({ force: true })
     .then(() => {
         app.listen(3000)
         console.log('Your server available at http://localhost:3000')

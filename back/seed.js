@@ -244,6 +244,10 @@ Technologies.create({
   name: "Scrum",
   image: "Scrum.png"
 });
+Technologies.create({
+  name: "Other",
+  image: "descarga.png"
+});
 ///
 DisciplineEvent.create({
   topic: "Java",
@@ -251,7 +255,7 @@ DisciplineEvent.create({
   time: "10:30",
   description:
     "Aprende a construir aplicaciones con Java y domina por completo una de las tecnologías más utilizadas del mercado. Aprendé a desarrollar poderosas aplicaciones Orientadas a Objetos con integración con Base de Datos y en cualquier sistema opera",
-  status: "pending",
+  status: "approved",
   technologieId: "9"
 });
 DisciplineEvent.create({
@@ -261,7 +265,7 @@ DisciplineEvent.create({
     time: "11:30",
     description:
       "Te contamos sobre Phyton. Desarrolla tu perfil técnico en Inteligencia artificial. Introdúcete al mundo de Machine Learning.Comprende los desafíos sociales e industriales que plantea la Inteligencia Artificial que ya está entre nosotros. Únete a la revolución de la Inteligencia Artificial.",
-    status: "pending",
+    status: "approved",
     technologieId: "14"
 });
 DisciplineEvent.create({
