@@ -86,9 +86,9 @@ export default function rowAllowance({
                 </td>
               </tr>
             ) : (
-              <tr>
-                <td className="upperCaseFonts">{row.allowanceDetail.name}</td>
-                <td className="upperCaseFonts">{row.employeeDetail.name}</td>
+              <tr key={`${i}`} >
+                <td  key={`idClass_${i}`} className="upperCaseFonts">{row.allowanceDetail.name}</td>
+                <td key={`idClassName_${i}`}  className="upperCaseFonts">{row.employeeDetail.name}</td>
                 <td>{row.amount}</td>
                 <td>{row.limitAmount}</td>
                 <td>{row.employeeAmount}</td>
