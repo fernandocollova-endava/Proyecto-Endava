@@ -16,21 +16,17 @@ router.get("/logout", function (req, res) {
 router.get("/logged", function (req, res, next) {
   res.send(req.user);
 });
-router.get("/password/profile/update", passport.authenticate("local"), function (req, res, error) {
-
-  if (req.user) {
+router.post("/password/profile/update", function (req, res, error) {
 
     Employee.findByPk(req.body.userId).then(employee => {
-      res.send(employee.updatePassword(req.body.password)); //llamo a un metodo de instancia presente en el modelo
+      res.send(employee.updatePassword(req.body.oldPass, req.body.password)); //llamo a un metodo de instancia presente en el modelo
     })
-  } else {
-    res.sendStatus(401)
-  }
+
 });
 
 router.post("/password/update", function (req, res, error) {
   Employee.findByPk(req.body.userId).then(employee => {
-    res.send(employee.updatePassword(req.body.password)); //llamo a un metodo de instancia presente en el modelo
+    res.send(employee.updatePassword(null, req.body.password)); //llamo a un metodo de instancia presente en el modelo
   });
 });
 
@@ -43,15 +39,7 @@ router.put("/avatar", MulterFn.single("file"), function (req, res, error) {
   )
     .then(resp => {
       res.json(fileName)
-       // Find data employee
-    //    Employee.findOne({
-    //     where:{
-    //       id:req.body.userid
-    //     },
-    //     attributes:['avatar']
-    //   })
-    //   .then(resp=>res.json(resp))      
-    // })
+
     })
     
 });

@@ -66548,7 +66548,7 @@ function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      var maxAmount = this.props.listAllowance.find(function (allow) {
+      var allowance = this.props.listAllowance.find(function (allow) {
         return allow.name === _this3.props.nameUrl;
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -66605,7 +66605,7 @@ function (_React$Component) {
         className: "h4 text-center py-4"
       }, "Submit your receipt", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "maxAmount"
-      }, " ", "(Max Amount $".concat(maxAmount.fixedAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, " ", "(Max Amount $".concat(allowance.fixedAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "grey-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
         label: "Amount allowance...",
@@ -67438,7 +67438,7 @@ function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      var maxAmount = this.props.listAllowance.find(function (allow) {
+      var allowance = this.props.listAllowance.find(function (allow) {
         return allow.name === _this3.props.nameUrl;
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -67495,7 +67495,7 @@ function (_React$Component) {
         className: "h4 text-center py-4"
       }, "Submit your receipt", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "maxAmount"
-      }, " ", "(Max Amount $".concat(maxAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, " ", "(Max Amount $".concat(allowance.fixedAmount, ")"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "grey-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBInput"], {
         label: "Amount allowance...",
@@ -70741,7 +70741,8 @@ function ModalUser(_ref) {
     onSubmit: handleSubmit
     /*Envio a data a updatear*/
 
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Please, enter your current password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    label: "Please enter your current password",
     icon: "lock",
     group: true,
     name: "oldPassword",
@@ -70751,9 +70752,20 @@ function ModalUser(_ref) {
     success: "right",
     onChange: handleChange
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    label: "Please enter your new password",
     icon: "lock",
     group: true,
     name: "newPassword",
+    type: "password",
+    validate: true,
+    error: "wrong",
+    success: "right",
+    onChange: handleChange
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBInput"], {
+    label: "Please confirm your new password",
+    icon: "lock",
+    group: true,
+    name: "passwordConfirm",
     type: "password",
     validate: true,
     error: "wrong",
@@ -71092,6 +71104,7 @@ function (_React$Component) {
       modal: false,
       newPassword: "",
       oldPassword: "",
+      passwordConfirm: "",
       file: null
     };
     _this.toggleModalUser = _this.toggleModalUser.bind(_assertThisInitialized(_this));
@@ -71112,14 +71125,33 @@ function (_React$Component) {
       var _this2 = this;
 
       e.preventDefault();
-      this.props.updatePass(this.state.newPassword, this.props.user.id, this.state.oldPassword).then(function (response) {
-        //recibo data ok y despliego modal
-        _this2.setState({
+
+      if (this.state.passwordConfirm != this.state.newPassword) {
+        this.setState({
+          //pregunto si coinciden los pass nuevos
+          error: true,
           modal: true,
-          msjSave: "The password has been changed successfully.",
-          titleMsj: 'Success'
+          msjSave: "Your password/confirm password fields do not match",
+          titleMsj: "Error"
         });
-      });
+      } else {
+        this.props.updatePass(this.state.newPassword, this.props.user.id, this.state.oldPassword).then(function (response) {
+          //recibo data ok y despliego modal
+          if (response == "ok") {
+            _this2.setState({
+              modal: true,
+              msjSave: "The password has been changed successfully.",
+              titleMsj: "Success"
+            });
+          } else {
+            _this2.setState({
+              modal: true,
+              msjSave: "Please verify your password..",
+              titleMsj: "Error"
+            });
+          }
+        });
+      }
     }
   }, {
     key: "handClick",
@@ -71148,8 +71180,8 @@ function (_React$Component) {
           rest = _objectWithoutProperties(_this$state, ["file"]);
 
       var formData = new FormData();
-      formData.append('file', file);
-      formData.append('userid', this.props.user.id); // Modifica el avatar
+      formData.append("file", file);
+      formData.append("userid", this.props.user.id); // Modifica el avatar
 
       this.props.updateAvatar(formData);
     }
@@ -71546,8 +71578,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
-/* harmony import */ var _obraSocial__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./obraSocial */ "./src/components/healthCareContainer/obraSocial.jsx");
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _obraSocial__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./obraSocial */ "./src/components/healthCareContainer/obraSocial.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -71571,6 +71605,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
 var ObraSocialContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -71583,11 +71619,23 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ObraSocialContainer).call(this));
     _this.state = {
-      collapseID: ""
+      collapseID: "",
+      email: "",
+      observation: "",
+      healthOption: "",
+      active: "",
+      modal: false,
+      textMsj: "",
+      titleMsj: ""
     };
     _this.formId = Object(react__WEBPACK_IMPORTED_MODULE_0__["createRef"])();
     _this.toggleCollapse = _this.toggleCollapse.bind(_assertThisInitialized(_this));
     _this.handleScrollToForm = _this.handleScrollToForm.bind(_assertThisInitialized(_this));
+    _this.onObservationChange = _this.onObservationChange.bind(_assertThisInitialized(_this));
+    _this.onhealthOptionChange = _this.onhealthOptionChange.bind(_assertThisInitialized(_this));
+    _this.onEmailChange = _this.onEmailChange.bind(_assertThisInitialized(_this));
+    _this.onFormSubmit = _this.onFormSubmit.bind(_assertThisInitialized(_this));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -71614,16 +71662,68 @@ function (_React$Component) {
       window.scrollTo(0, 1350);
     }
   }, {
+    key: "onObservationChange",
+    value: function onObservationChange(e) {
+      console.log("observ", e.target.value);
+      this.setState({
+        observation: e.target.value
+      });
+    }
+  }, {
+    key: "onhealthOptionChange",
+    value: function onhealthOptionChange(e) {
+      console.log("healt", e.target.value);
+      this.setState({
+        healthOption: e.target.value
+      });
+    }
+  }, {
+    key: "onEmailChange",
+    value: function onEmailChange(e) {
+      console.log("email", e.target.value);
+      this.setState({
+        email: e.target.value
+      });
+    }
+  }, {
+    key: "onFormSubmit",
+    value: function onFormSubmit(e) {
+      e.preventDefault(e);
+      this.props.sendEmailConfirm(this.props.user, this.state.healthOption, this.state.email, this.state.observation);
+      this.setState({
+        active: "",
+        modal: true,
+        textMsj: "Your message has been successfully sent",
+        titleMsj: "Success"
+      });
+    }
+  }, {
+    key: "toggle",
+    value: function toggle() {
+      this.setState({
+        modal: !this.state.modal
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_obraSocial__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        modal: this.state.modal,
+        toggle: this.toggle,
+        textMsj: this.state.textMsj,
+        titleMsj: this.state.titleMsj
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_obraSocial__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        onObservationChange: this.onObservationChange,
+        onhealthOptionChange: this.onhealthOptionChange,
+        onEmailChange: this.onEmailChange,
+        onFormSubmit: this.onFormSubmit,
         toggleCollapse: this.toggleCollapse,
-        collapseID: this.state.collapseID,
-        user: this.props.user,
-        email: this.props.email,
+        collapseID: this.state.collapseID // user={this.props.user}
+        // email={this.props.email}
+        ,
         formId: this.formId,
         handleScrollToForm: this.handleScrollToForm
-      });
+      }));
     }
   }]);
 
@@ -71633,15 +71733,17 @@ function (_React$Component) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     openCloseNavBar: function openCloseNavBar(val) {
-      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_2__["openCloseNavBar"])(val));
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_3__["openCloseNavBar"])(val));
+    },
+    sendEmailConfirm: function sendEmailConfirm(user, allowance, email, observation) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_2__["sendEmailConfirm"])(user, allowance, email, observation));
     }
   };
 };
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    user: "".concat(state.user.user.name, " ").concat(state.user.user.surname),
-    email: state.user.user.email
+    user: state.user.user
   };
 };
 
@@ -71671,7 +71773,11 @@ function obraSocial(_ref) {
       collapseID = _ref.collapseID,
       email = _ref.email,
       formId = _ref.formId,
-      handleScrollToForm = _ref.handleScrollToForm;
+      handleScrollToForm = _ref.handleScrollToForm,
+      onFormSubmit = _ref.onFormSubmit,
+      onEmailChange = _ref.onEmailChange,
+      onhealthOptionChange = _ref.onhealthOptionChange,
+      onObservationChange = _ref.onObservationChange;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBContainer"], {
     fluid: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBRow"], {
@@ -71742,35 +71848,41 @@ function obraSocial(_ref) {
     ref: formId
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, " Send us your question"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque odio enim ducimus blanditiis nulla reprehenderit ea nesciunt, ratione porro, tempora quas? Provident reprehenderit fuga numquam odit perspiciatis soluta, ipsum omnis?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "7"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: onFormSubmit
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grey-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    className: "browser-default custom-select"
+    className: "browser-default custom-select",
+    onChange: onhealthOptionChange,
+    name: "healthOption"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Choose a subject..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "1"
-  }, "Option 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "2"
-  }, "Option 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "3"
-  }, "Option 3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
-    readOnly: true,
-    label: "Your email",
+    value: "Swiss Medical"
+  }, "Swiss Medical"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "OSDE"
+  }, "OSDE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
+    label: "Your emails",
     icon: "envelope",
     group: true,
-    type: "email",
-    value: email,
+    name: "email",
+    type: "email" // value={email}
+    ,
     error: "wrong",
-    success: "right"
+    success: "right",
+    onChange: onEmailChange
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
+    name: "observation",
     type: "textarea",
     rows: "2",
     label: "I need more information...",
-    icon: "pencil-alt"
+    icon: "pencil-alt",
+    onChange: onObservationChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBBtn"], {
     outline: true,
-    className: "mb-3 btnEv-blue rounded mb-0 border-0 whiteFont"
+    className: "mb-3 btnEv-blue rounded mb-0 border-0 whiteFont",
+    type: "submit"
   }, "Send")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
     md: "4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -72032,7 +72144,7 @@ var editStatusAllowance = function editStatusAllowance(id, status, observation) 
       observation: observation
     });
   };
-}; // 
+}; //
 
 var fetchCountPending = function fetchCountPending(userId) {
   return function (dispatch) {
@@ -72079,11 +72191,14 @@ var fetchBookInstallments = function fetchBookInstallments(receiptPath, allowanc
     });
   };
 };
-var sendEmailConfirm = function sendEmailConfirm(userData, allowanceName) {
+var sendEmailConfirm = function sendEmailConfirm(userData, allowanceName, email, observation) {
   return function (dispatch) {
+    console.log("entre al axiossssss");
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/allowance/emailConfirm", {
       userData: userData,
-      allowanceName: allowanceName
+      allowanceName: allowanceName,
+      email: email,
+      observation: observation
     }).then(function (emailConfirm) {
       return emailConfirm;
     });
@@ -72381,6 +72496,7 @@ var logout = function logout() {
 var updatePass = function updatePass(password, userId, oldPass) {
   return function (dispatch) {
     if (oldPass) {
+      console.log("soy old passs", oldPass);
       return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/employee/password/profile/update", {
         password: password,
         userId: userId,

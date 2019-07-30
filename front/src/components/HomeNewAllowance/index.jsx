@@ -19,6 +19,7 @@ class HomeNewAllowance extends React.Component {
   render() {
     return (
       <div>
+         
         <AnimationPage 
         cardList = {this.props.adminAllowances}
         />

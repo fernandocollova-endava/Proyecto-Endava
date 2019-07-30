@@ -457,6 +457,9 @@ function paymentDateFn(date, limitDate) {
 }
 
 Router.post("/emailConfirm", function(req, res) {
+  
+  
+ 
   var transporter = nodemailer.createTransport({
     //OBJETO TRANSPORTER DISPARA ENVIO DE MAIL
     host: "smtp.gmail.com",
@@ -467,8 +470,40 @@ Router.post("/emailConfirm", function(req, res) {
       pass: "bootcamp2019" //
     }
   });
+  let mailOptions
 
-  var mailOptions = {
+  req.body.email?
+   mailOptions = {
+    from: "automaticEmailConfirm@gmail.com", //DATOS DEL MAIL QUE RECIVE
+    to: "admProjectPlataforma5@gmail.com", // DATOS DEL MAIL QUE RECIVE
+    subject: `You have a new health care enquiry!
+       `,
+    html: `
+    <img
+    src="https://careers.endava.com/en/-/media/EndavaDigital/Endava/Images/MetaDataImages/preview-image.ashx"
+    alt="Endava" width = 200px />
+      <p style= "font-size:18px">
+      You have a new health care enquiry!
+     
+      </p>
+
+          <h3> Details:</h3>
+          <ul style= "font-size:16px">
+              <li>
+              UserName: ${req.body.userData.name}
+              </li>
+              <li>
+              AllowanceName:  ${req.body.allowanceName}
+              </li>
+              <p style= "font-size:16px">
+              Please, send an email response to ${req.body.email} 
+             
+              </p>
+          </ul>
+          
+      `
+  }:
+  mailOptions = {
     from: "automaticEmailConfirm@gmail.com", //DATOS DEL MAIL QUE RECIVE
     to: "admProjectPlataforma5@gmail.com", // DATOS DEL MAIL QUE RECIVE
     subject: `You have received a new allowance requirement, pre-authorisation is required.
@@ -490,11 +525,11 @@ Router.post("/emailConfirm", function(req, res) {
               <li>
               AllowanceName:  ${req.body.allowanceName}
               </li>
-            
+           
           </ul>
           <h3>  Please, follow this link http://40.117.118.106:3000/ to authorize </h3>
       `
-  };
+  }
   console.log("sending email", mailOptions);
   transporter.sendMail(mailOptions, function(error, info) {
     console.log("senMail returned!");
