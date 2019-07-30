@@ -65989,6 +65989,387 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./src/components/AdminEventContainer/adminEvent.jsx":
+/*!***********************************************************!*\
+  !*** ./src/components/AdminEventContainer/adminEvent.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return adminEvent; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var _AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AllowancesListContainer/rowAllowance */ "./src/components/AllowancesListContainer/rowAllowance.jsx");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auxFunctions/auxFunctions */ "./src/auxFunctions/auxFunctions.js");
+/* harmony import */ var _auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_auxFunctions_auxFunctions__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function adminEvent(_ref) {
+  var handleFilterStatus = _ref.handleFilterStatus,
+      alertPending = _ref.alertPending,
+      eventList = _ref.eventList,
+      allowanceStatus = _ref.allowanceStatus,
+      deleteAllowance = _ref.deleteAllowance,
+      viewDetails = _ref.viewDetails,
+      allUser = _ref.allUser,
+      urlName = _ref.urlName;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+    className: "container-banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "upperCaseFonts"
+  }, "Requests")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "5"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
+    className: "md-form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
+    icon: "angle-double-right"
+  }), " \xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    value: allowanceStatus,
+    className: "browser-default custom-select",
+    name: "status",
+    onChange: handleFilterStatus
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: ""
+  }, "Status..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: ""
+  }, "All"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "pending"
+  }, "Pending"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "approved"
+  }, "Approved"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "rejected"
+  }, "Rejected")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "2"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBFormInline"], {
+    className: "md-form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBIcon"], {
+    icon: "search"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "form-control form-control-sm ml-3 w-75",
+    type: "text",
+    placeholder: "Search",
+    "aria-label": "Search"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), alertPending ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      maxWidth: 406,
+      position: "fixed",
+      bottom: 0
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "heartBeat"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAlert"], {
+    color: "success"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Hello!"), " You have ", alertPending, " allowance pending response...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)))) : "", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBRow"], {
+    className: "container-banner minHeight"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBCol"], {
+    md: "12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBAnimation"], {
+    type: "fadeInUp"
+  }, eventList.length == 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sorry, there aren't results for your selection... ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "table-responsive"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    "class": "table btn-table table-fixed paddingTable"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
+    "class": ""
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Schelude"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Status"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Option"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllowancesListContainer_rowAllowance__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    urlName: urlName,
+    deleteAllowance: deleteAllowance // Se envia la funcion para eliminar (onClick)
+    ,
+    viewDetails: viewDetails // Se envia la funcion para mostrar el modal (onClick)
+    ,
+    allUser: allUser // Si es admin o no
+    ,
+    allowanceList: eventList // Listado de la consulta
+
+  }))))))));
+}
+
+/***/ }),
+
+/***/ "./src/components/AdminEventContainer/index.jsx":
+/*!******************************************************!*\
+  !*** ./src/components/AdminEventContainer/index.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/allowanceActions */ "./src/redux/actions/allowanceActions.js");
+/* harmony import */ var _redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/disciplineEvents */ "./src/redux/actions/disciplineEvents.js");
+/* harmony import */ var _redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/navbar */ "./src/redux/actions/navbar.js");
+/* harmony import */ var _ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ModalContainer/ModalEventDetail */ "./src/components/ModalContainer/ModalEventDetail.jsx");
+/* harmony import */ var _ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ModalContainer/modalAviso */ "./src/components/ModalContainer/modalAviso.jsx");
+/* harmony import */ var _ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ModalContainer/modalBoolean */ "./src/components/ModalContainer/modalBoolean.jsx");
+/* harmony import */ var _AdminEventContainer_adminEvent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../AdminEventContainer/adminEvent */ "./src/components/AdminEventContainer/adminEvent.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+
+
+
+
+
+var AdminEventContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(AdminEventContainer, _React$Component);
+
+  function AdminEventContainer() {
+    var _this;
+
+    _classCallCheck(this, AdminEventContainer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminEventContainer).call(this));
+    _this.state = {
+      modal: false,
+      modalAviso: false,
+      modalBoolean: false,
+      activeAllowance: {},
+      history: [],
+      activeItem: "1",
+      allowanceType: "",
+      titleBoolean: "",
+      msjSave: "",
+      allowanceStatus: "",
+      alertPending: 0
+    };
+    _this.toggleDetails = _this.toggleDetails.bind(_assertThisInitialized(_this));
+    _this.toggleBoolean = _this.toggleBoolean.bind(_assertThisInitialized(_this));
+    _this.togglePanel = _this.togglePanel.bind(_assertThisInitialized(_this));
+    _this.viewDetails = _this.viewDetails.bind(_assertThisInitialized(_this));
+    _this.toggleAviso = _this.toggleAviso.bind(_assertThisInitialized(_this));
+    _this.handleFilterStatus = _this.handleFilterStatus.bind(_assertThisInitialized(_this));
+    _this.handleSaveConfirm = _this.handleSaveConfirm.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(AdminEventContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.openCloseNavBar(false);
+      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus); // this.setState(
+      //   {
+      //     selectedMonth: selectedMonth
+      //   },
+      //   () => {
+      //     this.props.fetchDisciplineEvents();
+      //   }
+      // );
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (prevProps.adminPath !== this.props.adminPath) {
+        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.allowanceStatus); // .then(() =>
+        //   this.props.fetchBookAllowances(
+        //     this.props.user.id,
+        //     this.props.adminPath
+        //   )
+        // );
+      }
+    } // FUNCION DE CONSULTA HISTORIAL / DETALLE
+
+  }, {
+    key: "viewDetails",
+    value: function viewDetails(id) {
+      var _this2 = this;
+
+      console.log(id, "ID");
+      this.props.fetchActiveEvent(id).then(function (data) {
+        _this2.setState({
+          modal: true
+        });
+      });
+    }
+  }, {
+    key: "handleFilterStatus",
+    value: function handleFilterStatus(e) {
+      console.log("soy e", e.target.value);
+      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, e.target.value);
+      this.setState({
+        allowanceStatus: e.target.value
+      });
+    }
+  }, {
+    key: "handMonthChange",
+    value: function handMonthChange(e) {} // TOGGLE MODAL HISTORIAL / DETALLE
+
+  }, {
+    key: "toggleDetails",
+    value: function toggleDetails() {
+      this.setState({
+        modal: !this.state.modal,
+        activeItem: "1",
+        msjSave: ""
+      });
+    } // TOGGLE MODAL AVISO
+
+  }, {
+    key: "toggleAviso",
+    value: function toggleAviso() {
+      this.setState({
+        modalAviso: !this.state.modalAviso,
+        msjSave: ""
+      });
+    } // TOGGLE MODAL BOOLEAN
+
+  }, {
+    key: "toggleBoolean",
+    value: function toggleBoolean() {
+      this.setState({
+        modalBoolean: !this.state.modalBoolean
+      });
+    } // TOGGLE PARA NAVEGAR ENTRE EL PANEL DEL MODAL
+
+  }, {
+    key: "togglePanel",
+    value: function togglePanel(id) {
+      this.setState({
+        activeItem: id
+      });
+    }
+  }, {
+    key: "handleSaveConfirm",
+    value: function handleSaveConfirm(e) {
+      var _this3 = this;
+
+      e.preventDefault();
+      this.props.editEventStatus(e.target.id.value, e.target.status.value, e.target.observation.value).then(function () {
+        _this3.setState({
+          msjSave: "Saved!"
+        });
+
+        _this3.props.fetchDisciplineEvents(_this3.props.user.id, _this3.props.adminPath, _this3.state.allowanceStatus);
+      })["catch"](function () {
+        _this3.setState({
+          msjSave: "Ups!, an error occurred while processing the request..."
+        });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, console.log("soy EVENT", this.props.activeEvent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_ModalEventDetail__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        modal: this.state.modal,
+        toggleDetails: this.toggleDetails,
+        togglePanel: this.togglePanel,
+        activeItem: this.state.activeItem,
+        activeEvent: this.props.activeEvent,
+        history: this.props.eventList,
+        handleSaveConfirm: this.handleSaveConfirm,
+        msjSave: this.state.msjSave,
+        allUser: this.props.allUser
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalAviso__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        modal: this.state.modalAviso,
+        toggle: this.toggleAviso,
+        textMsj: this.state.textMsj,
+        titleMsj: this.state.titleMsj
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContainer_modalBoolean__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        modalBoolean: this.state.modalBoolean,
+        toggleBoolean: this.toggleBoolean,
+        actionOk: this.actionOk,
+        titleBoolean: this.state.titleBoolean,
+        data: this.state.data
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminEventContainer_adminEvent__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        alertPending: this.state.alertPending,
+        handleClick: this.handleClick,
+        handleFilterStatus: this.handleFilterStatus,
+        eventList: this.props.eventList,
+        allowanceStatus: this.state.allowanceStatus,
+        viewDetails: this.viewDetails,
+        urlName: this.props.urlName
+      }));
+    }
+  }]);
+
+  return AdminEventContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state, own) {
+  var urlName = own.match.url.substring(7, 11);
+  return {
+    urlName: urlName,
+    user: state.user.user,
+    eventList: state.event.eventList,
+    activeEvent: state.event.activeEvent,
+    history: state.allowance.historyAllowances,
+    //
+    adminPath: own.match.path == "/admin/event",
+    // adminPath => consulta que la ruta corresponda a admin
+    currentBookAllowances: state.allowance.currentBookAllowances //busco libros p/mes actual
+
+  };
+};
+
+var MapDispatchToProps = function MapDispatchToProps(dispatch) {
+  return {
+    fetchBookAllowances: function fetchBookAllowances(user, adminPath) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchBookAllowances"])(user, adminPath));
+    },
+    openCloseNavBar: function openCloseNavBar(val) {
+      return dispatch(Object(_redux_actions_navbar__WEBPACK_IMPORTED_MODULE_5__["openCloseNavBar"])(val));
+    },
+    fetchActiveEvent: function fetchActiveEvent(id) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchActiveEvent"])(id));
+    },
+    deleteEvent: function deleteEvent(id) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["deleteEvent"])(id));
+    },
+    // Elimina detalle
+    editEventStatus: function editEventStatus(id, status, observation) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["editEventStatus"])(id, status, observation));
+    },
+    // Switch State
+    fetchCountPending: function fetchCountPending(userId) {
+      return dispatch(Object(_redux_actions_allowanceActions__WEBPACK_IMPORTED_MODULE_3__["fetchCountPending"])(userId));
+    },
+    // Consulta cantidad de allowance pendientes
+    fetchDisciplineEvents: function fetchDisciplineEvents(userId, adminUrl, status) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_4__["fetchDisciplineEvents"])(userId, adminUrl, status));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, MapDispatchToProps)(AdminEventContainer));
+
+/***/ }),
+
 /***/ "./src/components/AllowanceContainer/index.jsx":
 /*!*****************************************************!*\
   !*** ./src/components/AllowanceContainer/index.jsx ***!
@@ -66836,16 +67217,53 @@ function rowAllowance(_ref) {
       allUser = _ref.allUser,
       allowanceList = _ref.allowanceList,
       urlName = _ref.urlName;
-  var Month = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, allowanceList && allowanceList.map(function (row, i) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+  var Month = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, console.log(allowanceList), allowanceList && allowanceList.map(function (row, i) {
+    return row.topic ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: i
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "upperCaseFonts"
+    }, row.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.date), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       key: "id_".concat(i),
+      className: "upperCaseFonts"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: row.status
+    }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.allowanceDetail ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      onClick: function onClick() {
+        return viewDetails(row.id, row.allowanceDetail.id, row.receiptPath);
+      },
+      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-file-pdf",
+      "aria-hidden": "true"
+    }), " ", "Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Ripple "
+    })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      onClick: function onClick() {
+        return viewDetails(row.id);
+      },
+      className: "btn btn-default btn-sm btn-rounded Ripple-parent mb-3 btnEv-red rounded mb-0 border-0"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-file-pdf",
+      "aria-hidden": "true"
+    }), " ", "Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Ripple "
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status === "pending" && !allUser ? row.topic ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      onClick: function onClick() {
+        return deleteAllowance(row.id);
+      },
+      className: "greyColor cursorPointer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "far fa-trash-alt iconAllowance "
+    }), " Delete", " ") : "")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "upperCaseFonts"
     }, row.allowanceDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "upperCaseFonts"
-    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    }, row.employeeDetail.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.amount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.limitAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.employeeAmount), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date"), urlName == "book" ? null : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.paymentDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: row.status
     }, row.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
@@ -66856,16 +67274,16 @@ function rowAllowance(_ref) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "far fa-file-pdf",
       "aria-hidden": "true"
-    }), " Details ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), " Details", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "Ripple "
-    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status === 'pending' && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, row.status === "pending" && !allUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       onClick: function onClick() {
         return deleteAllowance(row.id);
       },
       className: "greyColor cursorPointer"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "far fa-trash-alt iconAllowance "
-    }), " Delete ") : ''));
+    }), " Delete", " ") : ""));
   })));
 }
 
@@ -67236,7 +67654,7 @@ function DisciplineEvent(_ref) {
       key: i
     }, tech.name);
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "Otros"
+    value: "Other"
   }, "Other..."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBInput"], {
     label: "Event name",
     icon: "book",
@@ -67401,14 +67819,14 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       window.scrollTo(0, 0);
-      this.props.fetchDisciplineEvents(this.props.user.id);
+      this.props.fetchEmployeeEvents(this.props.user.id);
       this.props.fetchTechonogies();
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
       if (prevProps.eventList.length != this.props.eventList.length) {
-        this.props.fetchDisciplineEvents(this.props.user.id);
+        this.props.fetchEmployeeEvents(this.props.user.id);
       }
     }
   }, {
@@ -67424,7 +67842,7 @@ function (_React$Component) {
           titleMsj: "Success"
         });
 
-        _this2.props.fetchDisciplineEvents(_this2.props.user.id);
+        _this2.props.fetchEmployeeEvents(_this2.props.user.id);
       });
     }
   }, {
@@ -67498,8 +67916,8 @@ var MapDispatchToProps = function MapDispatchToProps(dispatch) {
     createDisciplineEvents: function createDisciplineEvents(data, user) {
       return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["createDisciplineEvents"])(data, user));
     },
-    fetchDisciplineEvents: function fetchDisciplineEvents(user) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchDisciplineEvents"])(user));
+    fetchEmployeeEvents: function fetchEmployeeEvents(user) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchEmployeeEvents"])(user));
     },
     fetchTechonogies: function fetchTechonogies() {
       return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchTechonogies"])());
@@ -67538,6 +67956,9 @@ function eventCalendar(_ref) {
   var eventList = _ref.eventList,
       handleClick = _ref.handleClick,
       onKeyDown = _ref.onKeyDown;
+  {
+    console.log(eventList);
+  }
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBContainer"], {
     fluid: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_4__["MDBRow"], {
@@ -67669,7 +68090,8 @@ function (_React$Component) {
       eventList: [],
       modal: false,
       textMsj: "",
-      titleMsj: ""
+      titleMsj: "",
+      status: "approved"
     };
     _this.onClick = _this.onClick.bind(_assertThisInitialized(_this));
     _this.onKeyDown = _this.onKeyDown.bind(_assertThisInitialized(_this));
@@ -67681,13 +68103,13 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       window.scrollTo(0, 0);
-      this.props.fetchDisciplineEvents();
+      this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.status);
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
       if (prevProps.eventList.length != this.props.eventList.length) {
-        this.props.fetchDisciplineEvents();
+        this.props.fetchDisciplineEvents(this.props.user.id, this.props.adminPath, this.state.status);
       }
     }
   }, {
@@ -67742,14 +68164,15 @@ var mapStateToProps = function mapStateToProps(state, owner) {
     // Extrae la url dinamica
     listAllowance: state.allowance.adminAllowances,
     eventList: state.event.eventList,
-    techList: state.event.techList
+    techList: state.event.techList,
+    adminPath: owner.match.path == "/admin/event"
   };
 };
 
 var MapDispatchToProps = function MapDispatchToProps(dispatch) {
   return {
-    fetchDisciplineEvents: function fetchDisciplineEvents(user) {
-      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchDisciplineEvents"])(user));
+    fetchDisciplineEvents: function fetchDisciplineEvents(userId, adminUrl, status) {
+      return dispatch(Object(_redux_actions_disciplineEvents__WEBPACK_IMPORTED_MODULE_2__["fetchDisciplineEvents"])(userId, adminUrl, status));
     }
   };
 };
@@ -67848,7 +68271,32 @@ var AnimationPage = function AnimationPage(_ref) {
     className: "fas fa-angle-double-right"
   })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "titleModule upperCaseFonts"
-  }, "Admin Allowance")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+  }, "Admin Allowance")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCol"], {
+    md: "3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBAnimation"], {
+    delay: "".concat(2 * 100, "ms"),
+    type: "fadeInDownBig"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_2__["MDBCard"], {
+    className: "Card-Img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-IMG"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "div-img"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/admin/event"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ajustImg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://www.endava.com/en/Digital/-/media/EndavaDigital/Endava/Images/Expert-Insights/Success-Stories/Complete-Investment-Management-Insights/650.ashx",
+    className: "img-fluid margenBottomMobile img",
+    alt: "Imagen logo book"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "btn-md rounded mb-0 border-0 btnModule text btnEv-red-md"
+  }, "Enter ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-angle-double-right"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "titleModule upperCaseFonts"
+  }, "Event Admin panel")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AnimationPage);
@@ -69398,6 +69846,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HomeAdminContainer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../HomeAdminContainer */ "./src/components/HomeAdminContainer/index.jsx");
 /* harmony import */ var _HomeNewAllowance_index__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../HomeNewAllowance/index */ "./src/components/HomeNewAllowance/index.jsx");
 /* harmony import */ var _AdminBookContainer__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../AdminBookContainer */ "./src/components/AdminBookContainer/index.jsx");
+/* harmony import */ var _AdminEventContainer__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../AdminEventContainer */ "./src/components/AdminEventContainer/index.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69415,6 +69864,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -69507,6 +69957,10 @@ function (_React$Component) {
         exact: true,
         path: "/admin/book",
         component: _AdminBookContainer__WEBPACK_IMPORTED_MODULE_20__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/admin/event",
+        component: _AdminEventContainer__WEBPACK_IMPORTED_MODULE_21__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/admin/allowance",
@@ -69811,6 +70265,150 @@ function ModalBookDetails(_ref) {
       className: item.status
     }, item.status));
   }))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
+    className: "mb-3 btnEv-red rounded mb-0 border-0",
+    onClick: toggleDetails
+  }, "Close"))));
+}
+
+/***/ }),
+
+/***/ "./src/components/ModalContainer/ModalEventDetail.jsx":
+/*!************************************************************!*\
+  !*** ./src/components/ModalContainer/ModalEventDetail.jsx ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ModalEventDetails; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+
+
+function ModalEventDetails(_ref) {
+  var modal = _ref.modal,
+      msjSave = _ref.msjSave,
+      allUser = _ref.allUser,
+      handleSaveConfirm = _ref.handleSaveConfirm,
+      toggleDetails = _ref.toggleDetails,
+      activeEvent = _ref.activeEvent,
+      history = _ref.history,
+      togglePanel = _ref.togglePanel,
+      activeItem = _ref.activeItem;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
+    isOpen: modal,
+    toggle: toggleDetails,
+    size: "lg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
+    toggle: toggleDetails
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "upperCaseFonts"
+  }, activeEvent.topic)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNav"], {
+    className: "nav-tabs"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBNavLink"], {
+    to: "#",
+    className: activeItem === "1" ? "active" : "",
+    onClick: function onClick() {
+      return togglePanel("1");
+    },
+    role: "tab"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-list-alt"
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "DETAILS")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabContent"], {
+    activeItem: activeItem
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBTabPane"], {
+    tabId: "1",
+    role: "tabpanel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Employee: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, " ", activeEvent.employee && activeEvent.employee.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Topic: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, " ", activeEvent.topic), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Time schelude: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, " ", activeEvent.time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "marginTextLeft textBold"
+  }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm ".concat(activeEvent.status)
+  }, activeEvent.status)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Observation: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeEvent.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "parrafoModal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Admin Comment: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm"
+  }, activeEvent.adminComment)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: handleSaveConfirm
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "hidden",
+    name: "id",
+    value: activeEvent.id
+  }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    action: "",
+    className: "modalForm"
+  }, activeEvent.status === 'pending' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "radio"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "approvedBook radioBoton"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    defaultChecked: activeEvent.status === 'approved',
+    name: "status",
+    value: "approved"
+  }), "\xA0APPROVED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "rejectedBook radioBoton"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    defaultChecked: activeEvent.status === 'rejected',
+    name: "status",
+    value: "rejected"
+  }), "\xA0REJECTED")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+    className: "textBold"
+  }, "Status: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "textForm ".concat(activeEvent.status)
+  }, activeEvent.status), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-group",
+    style: {
+      marginTop: -20
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-group-prepend"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "input-group-text",
+    id: "basic-addon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "far fa-comment-alt prefix"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    autoComplete: "off",
+    name: "observation",
+    defaultValue: activeEvent.adminComment,
+    required: true,
+    className: "form-control",
+    placeholder: "Observation...",
+    "aria-describedby": "basic-addon"
+  })), activeEvent.status === 'pending' && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "mb-3 btnEv-blue rounded mb-0 border-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-edit"
+  }), " Save"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, msjSave)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
     className: "mb-3 btnEv-red rounded mb-0 border-0",
     onClick: toggleDetails
   }, "Close"))));
@@ -71187,7 +71785,7 @@ function obraSocial(_ref) {
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, SET_AVATAR, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_BOOK_INSTALLMENTS, RECEIVE_CURRENT_BOOK_A, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
+/*! exports provided: RECEIVE_LOGGED_USER, USER_LOGOUT, SET_AVATAR, RECEIVE_ALLOWANCES, RECEIVE_ADMIN_ALLOWANCES, RECEIVE_PENDING_ALLOWANCES, RECEIVE_ACTIVE_ALLOWANCES, RECEIVE_HISTORY_ALLOWANCES, RECEIVE_BOOK_ALLOWANCES, RECEIVE_BOOK_INSTALLMENTS, RECEIVE_CURRENT_BOOK_A, RECEIVE_EVENT_LIST, RECEIVE_TECH_LIST, RECEIVE_ACTIVE_EVENT, SET_OPEN_CLOSE_NAVBAR, RECEIVE_HOME_OFFICE_LIST, RECEIVE_HOME_OFFICE_BIRTHDAY_LIST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71205,6 +71803,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_CURRENT_BOOK_A", function() { return RECEIVE_CURRENT_BOOK_A; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_EVENT_LIST", function() { return RECEIVE_EVENT_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TECH_LIST", function() { return RECEIVE_TECH_LIST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ACTIVE_EVENT", function() { return RECEIVE_ACTIVE_EVENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_OPEN_CLOSE_NAVBAR", function() { return SET_OPEN_CLOSE_NAVBAR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HOME_OFFICE_LIST", function() { return RECEIVE_HOME_OFFICE_LIST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_HOME_OFFICE_BIRTHDAY_LIST", function() { return RECEIVE_HOME_OFFICE_BIRTHDAY_LIST; });
@@ -71225,7 +71824,8 @@ var RECEIVE_BOOK_INSTALLMENTS = "RECEIVE_BOOK_INSTALLMENTS";
 var RECEIVE_CURRENT_BOOK_A = "RECEIVE_CURRENT_BOOK_A"; // DisciplineEvents
 
 var RECEIVE_EVENT_LIST = "RECEIVE_EVENT_LIST";
-var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST"; // NavBar 
+var RECEIVE_TECH_LIST = "RECEIVE_TECH_LIST";
+var RECEIVE_ACTIVE_EVENT = "RECEIVE_ACTIVE_EVENT"; // NavBar 
 
 var SET_OPEN_CLOSE_NAVBAR = "SET_OPEN_CLOSE_NAVBAR"; // Home office
 
@@ -71496,15 +72096,20 @@ var sendEmailConfirm = function sendEmailConfirm(userData, allowanceName) {
 /*!***********************************************!*\
   !*** ./src/redux/actions/disciplineEvents.js ***!
   \***********************************************/
-/*! exports provided: receiveEventList, receiveTechList, createDisciplineEvents, fetchDisciplineEvents, fetchTechonogies */
+/*! exports provided: receiveEventList, receiveActiveEvent, receiveTechList, createDisciplineEvents, fetchDisciplineEvents, fetchEmployeeEvents, fetchActiveEvent, editEventStatus, deleteEvent, fetchTechonogies */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveEventList", function() { return receiveEventList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveActiveEvent", function() { return receiveActiveEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveTechList", function() { return receiveTechList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDisciplineEvents", function() { return createDisciplineEvents; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchDisciplineEvents", function() { return fetchDisciplineEvents; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchEmployeeEvents", function() { return fetchEmployeeEvents; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchActiveEvent", function() { return fetchActiveEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editEventStatus", function() { return editEventStatus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteEvent", function() { return deleteEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTechonogies", function() { return fetchTechonogies; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
@@ -71515,6 +72120,12 @@ var receiveEventList = function receiveEventList(eventList) {
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_EVENT_LIST"],
     eventList: eventList
+  };
+};
+var receiveActiveEvent = function receiveActiveEvent(activeEvent) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_ACTIVE_EVENT"],
+    activeEvent: activeEvent
   };
 };
 var receiveTechList = function receiveTechList(techList) {
@@ -71533,11 +72144,13 @@ var createDisciplineEvents = function createDisciplineEvents(data, user) {
     }); //retorno el axios y el el container, realizado el ingreso vuelvo a ejecutar el fetch
   };
 };
-var fetchDisciplineEvents = function fetchDisciplineEvents(userId) {
+var fetchDisciplineEvents = function fetchDisciplineEvents(userId, adminUrl, status) {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/", {
       params: {
-        userId: userId
+        userId: userId,
+        adminUrl: adminUrl,
+        status: status
       }
     }).then(function (res) {
       return res.data;
@@ -71545,6 +72158,40 @@ var fetchDisciplineEvents = function fetchDisciplineEvents(userId) {
       dispatch(receiveEventList(eventList));
       return eventList;
     });
+  };
+};
+var fetchEmployeeEvents = function fetchEmployeeEvents(userId) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/".concat(userId), {}).then(function (res) {
+      return res.data;
+    }).then(function (eventList) {
+      dispatch(receiveEventList(eventList));
+      return eventList;
+    });
+  };
+};
+var fetchActiveEvent = function fetchActiveEvent(id) {
+  return function (dispatch) {
+    console.log("entreee al axios", id);
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/disciplineEvent/findActive/".concat(id)).then(function (res) {
+      return res.data;
+    }).then(function (activeEvent) {
+      console.log("activeeeeee", activeEvent);
+      return dispatch(receiveActiveEvent(activeEvent));
+    });
+  };
+};
+var editEventStatus = function editEventStatus(id, status, observation) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/disciplineEvent/".concat(id, "/edit"), {
+      status: status,
+      observation: observation
+    });
+  };
+};
+var deleteEvent = function deleteEvent(id) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/disciplineEvent/".concat(id, "/delete"));
   };
 };
 var fetchTechonogies = function fetchTechonogies() {
@@ -71894,7 +72541,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = {
   eventList: [],
-  techList: []
+  techList: [],
+  activeEvent: {}
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -71909,6 +72557,11 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TECH_LIST"]:
       return _objectSpread({}, state, {
         techList: action.techList
+      });
+
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ACTIVE_EVENT"]:
+      return _objectSpread({}, state, {
+        activeEvent: action.activeEvent
       });
 
     default:

@@ -12,6 +12,8 @@ class DisciplineEventContainer extends React.Component {
       modal: false,
       textMsj: "",
       titleMsj: "",
+      status: "approved",
+      
     };
 
     this.onClick = this.onClick.bind(this)
@@ -20,12 +22,12 @@ class DisciplineEventContainer extends React.Component {
   }
   componentDidMount() {
     window.scrollTo(0, 0);
-    this.props.fetchDisciplineEvents();
+    this.props.fetchDisciplineEvents(this.props.user.id,this.props.adminPath, this.state.status);
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.eventList.length != this.props.eventList.length) {
-      this.props.fetchDisciplineEvents();
+      this.props.fetchDisciplineEvents(this.props.user.id,this.props.adminPath, this.state.status);
     }
   }
   onClick(e) {
@@ -73,13 +75,14 @@ const mapStateToProps = (state, owner) => {
     nameUrl: owner.match.params.name, // Extrae la url dinamica
     listAllowance: state.allowance.adminAllowances,
     eventList: state.event.eventList,
-    techList: state.event.techList
+    techList: state.event.techList,
+    adminPath: owner.match.path == "/admin/event",
   };
 };
 
 const MapDispatchToProps = dispatch => {
   return {
-    fetchDisciplineEvents: user => dispatch(fetchDisciplineEvents(user)),
+    fetchDisciplineEvents: (userId,adminUrl, status) => dispatch(fetchDisciplineEvents(userId,adminUrl, status)),
   
   };
 };

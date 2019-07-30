@@ -19,6 +19,7 @@ import BookAllowanceContainer from "../BookAllowanceContainer"
 import PanelAdminContainer from "../HomeAdminContainer"
 import HomeNewAllowance from "../HomeNewAllowance/index"
 import AdminBookContainer from "../AdminBookContainer"
+import AdminEventContainer from "../AdminEventContainer"
 
 class MainContainer extends React.Component {
   constructor() {
@@ -37,7 +38,6 @@ class MainContainer extends React.Component {
         })
       })
   }
-
   render() {
     if (this.state.loading) {
       return <h1>Ups! something went wrong.. Please, reload the web again</h1>
@@ -57,6 +57,7 @@ class MainContainer extends React.Component {
                 <Route exact path="/login/expired" component={UpdatePassContainer} />
                 <Route exact path="/admin/panel" component={PanelAdminContainer} />
                 <Route exact path="/admin/book" component={AdminBookContainer} />
+                <Route exact path="/admin/event" component={AdminEventContainer} />
                 <Route exact path="/admin/allowance" component={AllowancesListContainer} />
                 <Route exact path="/health-care" component={HealthCareContainer} />}
                 <Route exact path="/discipline-event/new" component={DisciplineEvent} />
