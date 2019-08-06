@@ -113,13 +113,13 @@ Employee.create({
     //salt: 'lkjljasda'
 })
 Employee.create({
-    name: 'Empleado',
-    surname: 'Empleado',
-    email: 'empleado@endava.com',
+    name: 'Test',
+    surname: 'Employee',
+    email: 'employee@endava.com',
     sector: 'Full Stack',
     "isAdmin": false,
     password: '1234',
-    passwordChanged: true,
+    passwordChanged: false,
     birthdayDate: '2019-07-20',
     proyect:'Project name 3'
     //salt: 'lkjljasda'
